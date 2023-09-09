@@ -1,0 +1,1420 @@
+1
+00:00:22,110 --> 00:00:22,840
+He's in there?
+
+2
+00:00:24,375 --> 00:00:24,980
+He's not good now.
+
+3
+00:00:27,380 --> 00:00:27,820
+What's up, guys.
+
+4
+00:00:30,170 --> 00:00:30,570
+I'm over there at the [] city, DJ [] is in there, it's not good,
+
+5
+00:00:35,680 --> 00:00:37,125
+whatever, he's behind on child support,
+
+6
+00:00:37,125 --> 00:00:38,640
+so let's just go through this.
+
+7
+00:00:38,640 --> 00:00:40,455
+So again the purpose of this lecture is,
+
+8
+00:00:40,455 --> 00:00:42,560
+we want to discuss the logistics for the course,
+
+9
+00:00:43,030 --> 00:00:46,340
+now you know online rather than in person,
+
+10
+00:00:46,690 --> 00:00:49,220
+and so that way in the first day of class next week,
+
+11
+00:00:49,420 --> 00:00:51,435
+we can just jump into all the daily stuff right away.
+
+12
+00:00:51,435 --> 00:00:52,760
+All right, so let let's go through this.
+
+13
+00:00:53,200 --> 00:00:57,050
+The reason again, why, why am I down here at the county [],
+
+14
+00:00:57,190 --> 00:00:59,205
+well, because, because of databases, right,
+
+15
+00:00:59,205 --> 00:01:01,160
+and this is what this course is really all about,
+
+16
+00:01:01,510 --> 00:01:05,300
+about we focusing on the like the most important things in your in your life
+
+17
+00:01:05,590 --> 00:01:07,160
+and yeah sometimes bad things happen,
+
+18
+00:01:07,480 --> 00:01:10,520
+so for me, the the two most important things in my life,
+
+19
+00:01:10,920 --> 00:01:13,070
+are my wife and my biological daughter,
+
+20
+00:01:13,420 --> 00:01:16,550
+first their number one, and then after that is databases,
+
+21
+00:01:16,690 --> 00:01:19,910
+that's really, you know what you should be getting out of this course,
+
+22
+00:01:19,910 --> 00:01:21,730
+the databases is all consuming,
+
+23
+00:01:22,170 --> 00:01:23,560
+everything in the world, the database problem,
+
+24
+00:01:23,940 --> 00:01:26,860
+and you have think of a better appreciation for kind of stuff.
+
+25
+00:01:26,940 --> 00:01:30,130
+So again, we'll cover this in class next week.
+
+26
+00:01:30,950 --> 00:01:35,820
+All right, the another thing, important thing to point out for this lecture this semester this semester is,
+
+27
+00:01:36,170 --> 00:01:38,340
+we're griously sponsored by SingleStore
+
+28
+00:01:39,020 --> 00:01:40,710
+and they're helping out with with course development,
+
+29
+00:01:41,090 --> 00:01:46,390
+so SingleStore is a in-memory column store distributed database system,
+
+30
+00:01:46,390 --> 00:01:48,510
+that supports just in time, great compilation,
+
+31
+00:01:48,950 --> 00:01:52,660
+now if none of that makes sense for you right now, that's, that's fine,
+
+32
+00:01:52,660 --> 00:01:54,510
+because we cover all these things throughout semester,
+
+33
+00:01:55,060 --> 00:01:57,570
+and so we're grateful for them helping helping us out,
+
+34
+00:01:57,740 --> 00:02:02,610
+and they'll become giving a guest lecture at the at the end of the semester,
+
+35
+00:02:03,440 --> 00:02:05,100
+some more that as we go along.
+
+36
+00:02:06,040 --> 00:02:07,760
+Alright, so today's lecture real quickly,
+
+37
+00:02:08,050 --> 00:02:09,765
+we're just first obviously discuss the waitlist,
+
+38
+00:02:09,765 --> 00:02:11,150
+that's what a lot of you guys care about,
+
+39
+00:02:11,440 --> 00:02:14,025
+then we'll talk about the rules we have for lectures
+
+40
+00:02:14,025 --> 00:02:15,525
+and then go through all the course logistics,
+
+41
+00:02:15,525 --> 00:02:17,390
+including homework and projects.
+
+42
+00:02:18,730 --> 00:02:20,750
+So the first thing to obviously to deal with is the wait list,
+
+43
+00:02:21,010 --> 00:02:25,760
+as you're probably aware of, you're a senior student, the wait list is quite long,
+
+44
+00:02:26,290 --> 00:02:30,435
+and you know, there's more people that can take want to take the course than we can actually accommodate,
+
+45
+00:02:30,435 --> 00:02:36,320
+so at this point the, the CS department has taken over the wait list from from us,
+
+46
+00:02:37,150 --> 00:02:41,210
+because they they need to make sure that certain students need to graduate
+
+47
+00:02:41,290 --> 00:02:45,140
+and you know, take our source of collectives and all that
+
+48
+00:02:45,160 --> 00:02:46,365
+and they all get preference,
+
+49
+00:02:46,365 --> 00:02:49,460
+so we the professors have no control over the wait list,
+
+50
+00:02:49,720 --> 00:02:54,230
+so if you send us emails there's there's not much, there's nothing we can we can do,
+
+51
+00:02:54,700 --> 00:02:56,850
+and the admins will then move students off the wait list,
+
+52
+00:02:56,850 --> 00:03:02,000
+but they're not always gonna go in the order that that you you're ranked in the wait list,
+
+53
+00:03:02,140 --> 00:03:04,670
+because multiple sections undergrad message,
+
+54
+00:03:05,140 --> 00:03:07,910
+so just because you're some low on wait list,
+
+55
+00:03:08,350 --> 00:03:10,250
+there's no guarantee that we can get you in the semester,
+
+56
+00:03:11,200 --> 00:03:12,380
+the good news is that,
+
+57
+00:03:12,400 --> 00:03:17,060
+since we've hired Jignesh Patel as the new data professor with me here at Carnegie Mellon,
+
+58
+00:03:17,650 --> 00:03:21,560
+we can now offer 15-445/645 every semester,
+
+59
+00:03:22,330 --> 00:03:26,540
+so it'll be offered again in in Spring 2024 in addition to this semester.
+
+60
+00:03:28,110 --> 00:03:29,500
+All right, so the other thing,
+
+61
+00:03:30,300 --> 00:03:31,780
+when we have the in class lectures,
+
+62
+00:03:32,010 --> 00:03:33,280
+it's really important that,
+
+63
+00:03:33,390 --> 00:03:35,590
+I wanted to be interactive,
+
+64
+00:03:35,730 --> 00:03:38,800
+we don't just stand up there for, you know, an hour
+
+65
+00:03:39,120 --> 00:03:41,260
+and paddle on about databases,
+
+66
+00:03:41,730 --> 00:03:42,455
+it's always helpful,
+
+67
+00:03:42,455 --> 00:03:44,260
+it's always fun, when students ask questions
+
+68
+00:03:45,060 --> 00:03:46,360
+and these questions be either because,
+
+69
+00:03:47,000 --> 00:03:49,450
+we're talking too fast and he wants to slow down,
+
+70
+00:03:49,740 --> 00:03:51,290
+I get excited when I talk about databases,
+
+71
+00:03:51,290 --> 00:03:53,980
+so I'm going too fast, tell me to shut up and slow down,
+
+72
+00:03:54,930 --> 00:03:56,930
+and certainly if you don't understand what we're talking about,
+
+73
+00:03:56,930 --> 00:03:58,000
+it's a good time to interrupt,
+
+74
+00:03:58,290 --> 00:03:59,410
+to ask clarifying questions,
+
+75
+00:03:59,820 --> 00:04:04,090
+because maybe there's something about, you know, in the slides or the discussion that that makes sense,
+
+76
+00:04:04,230 --> 00:04:05,830
+and often times too, if you have questions,
+
+77
+00:04:07,320 --> 00:04:09,880
+other people have a have same questions as well,
+
+78
+00:04:10,340 --> 00:04:12,325
+so please, anytime during the lectures,
+
+79
+00:04:12,325 --> 00:04:14,550
+please interrupt us with anything that stated it's related,
+
+80
+00:04:14,990 --> 00:04:18,450
+what we don't want interrupted about is whether or not you can go to the bathroom,
+
+81
+00:04:18,590 --> 00:04:22,350
+because, you're an adult, you don't have to ask permissions,
+
+82
+00:04:22,970 --> 00:04:24,780
+we also don't want be interrupted about blockchains,
+
+83
+00:04:25,040 --> 00:04:26,550
+blockchain for databases are stupid,
+
+84
+00:04:27,260 --> 00:04:28,920
+we're not going to cover them, there's no need to cover,
+
+85
+00:04:32,260 --> 00:04:34,620
+we we're not covering these ends.
+
+86
+00:04:35,690 --> 00:04:39,660
+So now because I want you to interrupt us while we're giving the lectures,
+
+87
+00:04:39,680 --> 00:04:46,350
+that means that we don't want you to come at the end of the end of the lecture and say,
+
+88
+00:04:46,430 --> 00:04:49,770
+oh, you know what about slide three, I did this didn't make sense it over, right,
+
+89
+00:04:49,880 --> 00:04:52,405
+because in the past we we've always finished lectures,
+
+90
+00:04:52,405 --> 00:04:56,050
+and you know, several students lined up asking the same question over and over again
+
+91
+00:04:57,180 --> 00:04:58,535
+and again, so that's why I'm saying,
+
+92
+00:04:58,535 --> 00:05:00,100
+if you interrupt us as we're going along,
+
+93
+00:05:00,420 --> 00:05:02,590
+you know, it help everyone at the same time,
+
+94
+00:05:02,670 --> 00:05:05,890
+so please, we won't answer any questions about the slides immediately after class.
+
+95
+00:05:08,000 --> 00:05:09,510
+So what is this course,
+
+96
+00:05:10,070 --> 00:05:18,610
+so 15-445/645 is a course about the design and implementation of of the database management systems,
+
+97
+00:05:19,110 --> 00:05:21,940
+now we we're going to discuss relational database management systems
+
+98
+00:05:22,380 --> 00:05:24,250
+and we'll cover that in the next lecture,
+
+99
+00:05:24,600 --> 00:05:27,160
+but it's really about how you should have to build these systems,
+
+100
+00:05:27,690 --> 00:05:30,130
+so this isn't, this isn't of course how to use one,
+
+101
+00:05:30,330 --> 00:05:33,305
+this isn't going how to put an application that that uses an ORM
+
+102
+00:05:33,305 --> 00:05:34,870
+to make calls to the database or whatever,
+
+103
+00:05:34,980 --> 00:05:38,110
+is really how you build the internals of these systems.
+
+104
+00:05:38,680 --> 00:05:40,840
+The reason why this you want to focus on this topic,
+
+105
+00:05:40,840 --> 00:05:44,070
+because no matter where you go in in your life,
+
+106
+00:05:44,300 --> 00:05:45,715
+in any aspect of computer science,
+
+107
+00:05:45,715 --> 00:05:47,010
+where even outside of computer science,
+
+108
+00:05:47,630 --> 00:05:50,490
+there'll be times, where you're always gonna be interacting with the database
+
+109
+00:05:50,990 --> 00:05:53,160
+and therefore you need to know how these things are actually running,
+
+110
+00:05:53,270 --> 00:05:55,945
+so if you don't go off and go to SingleStore
+
+111
+00:05:55,945 --> 00:05:57,780
+and work on actually the internal of the data system,
+
+112
+00:05:58,010 --> 00:05:59,460
+you need to know what's actually going on
+
+113
+00:05:59,570 --> 00:06:03,330
+to help you understand, you know, why the system behaving a certain way,
+
+114
+00:06:03,700 --> 00:06:06,270
+I actually had people email me and tell me that,
+
+115
+00:06:06,770 --> 00:06:10,620
+a lot of the concepts they databases are applicable to other things,
+
+116
+00:06:11,510 --> 00:06:12,775
+like queuing systems and what not,
+
+117
+00:06:12,775 --> 00:06:14,850
+so like, the things were coming this semester,
+
+118
+00:06:15,170 --> 00:06:17,550
+I think will be super useful throughout your entire career.
+
+119
+00:06:18,380 --> 00:06:21,490
+So if you want to learn about how to use a database system
+
+120
+00:06:21,490 --> 00:06:24,570
+or how to administrate administer a database system, like being a DBA,
+
+121
+00:06:25,280 --> 00:06:28,410
+there's a couple courses in Heinz college that you should probably take instead,
+
+122
+00:06:28,880 --> 00:06:33,270
+this is really about like people want to get their hands dirty on the internals of these systems.
+
+123
+00:06:35,110 --> 00:06:36,650
+All right, so the logistics of the course,
+
+124
+00:06:36,670 --> 00:06:37,700
+everything will be on the course website,
+
+125
+00:06:38,560 --> 00:06:40,700
+we'll be publishing that very soon,
+
+126
+00:06:41,620 --> 00:06:46,260
+the all the discussions and announcements throughout the semester will be done through Piazza,
+
+127
+00:06:46,260 --> 00:06:48,860
+all the homework and projects will be submitted through Gradescope,
+
+128
+00:06:49,210 --> 00:06:51,080
+everything will be autograded,
+
+129
+00:06:51,490 --> 00:06:54,770
+and then the final grades will be posted on on Canvas,
+
+130
+00:06:55,270 --> 00:06:57,380
+again if you're enrolled in the course,
+
+131
+00:06:58,880 --> 00:07:01,470
+officially, you should have access to all these things right now.
+
+132
+00:07:03,630 --> 00:07:05,375
+So if you're a non-CMU student,
+
+133
+00:07:05,375 --> 00:07:06,545
+because I know a lot of you outside,
+
+134
+00:07:06,545 --> 00:07:08,525
+you like watch lectures and project,
+
+135
+00:07:08,525 --> 00:07:13,325
+well, we have a separate Gradescope account set up for the course,
+
+136
+00:07:13,325 --> 00:07:15,790
+that will mirror what the official CMU one does
+
+137
+00:07:16,800 --> 00:07:20,225
+and you can use this code to to log in and and get access to it
+
+138
+00:07:20,225 --> 00:07:22,505
+and this will allow you to submit your projects and get graded,
+
+139
+00:07:22,505 --> 00:07:25,420
+the same way that the CMU students do,
+
+140
+00:07:25,800 --> 00:07:27,425
+so again, if you're non-CMU student,
+
+141
+00:07:27,425 --> 00:07:32,350
+we ask you since we're providing this, this materials for you for your charge,
+
+142
+00:07:32,880 --> 00:07:36,000
+please don't post your solutions on Github,
+
+143
+00:07:36,000 --> 00:07:39,180
+please don't email myself or Jignesh or TAs for help,
+
+144
+00:07:39,180 --> 00:07:40,800
+we have so many people we need help here at CMU,
+
+145
+00:07:40,800 --> 00:07:41,690
+we can't help everyone,
+
+146
+00:07:42,370 --> 00:07:45,320
+there is a Discord Channel that actually is not run by CMU,
+
+147
+00:07:45,670 --> 00:07:47,990
+somebody outside of it has set this up,
+
+148
+00:07:48,310 --> 00:07:53,550
+this sort of become the de facto location for discussing various aspects before,
+
+149
+00:07:53,550 --> 00:07:55,130
+so I encourage you to sign and check that out.
+
+150
+00:07:55,640 --> 00:07:59,870
+And again, in in exchange for helping us out with this
+
+151
+00:07:59,870 --> 00:08:02,860
+or you us helping everyone with these these materials,
+
+152
+00:08:04,050 --> 00:08:06,280
+I ask if someone please finish my Wikipedia article,
+
+153
+00:08:09,990 --> 00:08:13,030
+you know, there was some stuff that was sort of true, not true, whatever,
+
+154
+00:08:13,230 --> 00:08:14,740
+someone could fix that for me, that would be great.
+
+155
+00:08:16,130 --> 00:08:17,250
+There's a textbook for the course,
+
+156
+00:08:17,840 --> 00:08:21,900
+database systems concepts from Silberschatz Korth Sudarshan,
+
+157
+00:08:22,490 --> 00:08:23,970
+it's not required,
+
+158
+00:08:24,080 --> 00:08:25,740
+like there's no homework that are based on it,
+
+159
+00:08:25,940 --> 00:08:27,745
+but if you want supplemental reading beyond,
+
+160
+00:08:27,745 --> 00:08:31,600
+we discuss in the class you be reading,
+
+161
+00:08:31,600 --> 00:08:34,890
+you can go and dive deeper into various topics,
+
+162
+00:08:35,120 --> 00:08:39,630
+now there are gonna be some things that we discuss that the textbook doesn't cover,
+
+163
+00:08:39,830 --> 00:08:41,430
+I don't covers as well as they should,
+
+164
+00:08:42,700 --> 00:08:46,380
+and that's what we'll provide lecture notes as PDF files that are available there,
+
+165
+00:08:48,500 --> 00:08:50,190
+whether you need to buy this textbook or not,
+
+166
+00:08:52,040 --> 00:08:52,705
+it's up to you,
+
+167
+00:08:52,705 --> 00:08:55,440
+it depends on how up you really want to go into this.
+
+168
+00:08:58,140 --> 00:09:01,180
+All right, so the grading rubric for this semester is me falling,
+
+169
+00:09:01,380 --> 00:09:02,750
+so this is a project heavy course,
+
+170
+00:09:02,750 --> 00:09:05,680
+so the 45% of the grade will be based on your projects,
+
+171
+00:09:06,090 --> 00:09:07,390
+and I discuss what these are in a second,
+
+172
+00:09:08,490 --> 00:09:14,680
+the be five assignments, four projects, then a midterm exam and a final,
+
+173
+00:09:14,940 --> 00:09:16,150
+You see the breakdown here.
+
+174
+00:09:17,510 --> 00:09:23,700
+All right, so all the homework will be based on the material we cover in, in class and in the assign readings,
+
+175
+00:09:24,470 --> 00:09:27,780
+the first homework assignment will be a SQL assignment or SQL project,
+
+176
+00:09:28,040 --> 00:09:33,540
+where you write some SQL queries against the data set and see correct answer,
+
+177
+00:09:34,790 --> 00:09:37,020
+everything after that homework will be all pencil paper,
+
+178
+00:09:37,220 --> 00:09:39,870
+but you'll still see and code in and the autograded it there,
+
+179
+00:09:40,390 --> 00:09:42,615
+again, it CMU everyone knows that,
+
+180
+00:09:42,615 --> 00:09:47,000
+all your homework should be done individually and you shouldn't copy each other.
+
+181
+00:09:48,800 --> 00:09:51,990
+All the projects will be based on a system we've been building for several years, called BusTub,
+
+182
+00:09:52,280 --> 00:10:00,330
+we discuss in the class, what the name actually means, came from,
+
+183
+00:10:00,860 --> 00:10:03,430
+but the idea here is that,
+
+184
+00:10:03,810 --> 00:10:08,200
+it's a, it's educational test database system,
+
+185
+00:10:08,520 --> 00:10:10,505
+where you do all your projects
+
+186
+00:10:10,505 --> 00:10:12,215
+on and you'll see over time,
+
+187
+00:10:12,215 --> 00:10:14,080
+as you add more features to the system,
+
+188
+00:10:14,370 --> 00:10:15,320
+you'll get a better understanding,
+
+189
+00:10:15,320 --> 00:10:18,295
+how, how the, all the there layers fit together
+
+190
+00:10:18,295 --> 00:10:22,770
+and you can run queries and results based on stuff you actually go.
+
+191
+00:10:23,320 --> 00:10:26,180
+So it's very important that you don't fall behind on the projects,
+
+192
+00:10:26,230 --> 00:10:28,040
+because every project is going to build on the previous,
+
+193
+00:10:28,420 --> 00:10:30,320
+like in project one, you're going to build a buffer manager,
+
+194
+00:10:30,670 --> 00:10:33,045
+then in project two, you're going to build an index,
+
+195
+00:10:33,045 --> 00:10:35,330
+that that gets pages or gets gets empty,
+
+196
+00:10:36,730 --> 00:10:37,515
+so it's really important,
+
+197
+00:10:37,515 --> 00:10:38,270
+that you stay on track,
+
+198
+00:10:38,410 --> 00:10:41,150
+start projects early and and don't fall behind.
+
+199
+00:10:42,520 --> 00:10:47,840
+BusTub is written in C++, I think 2017,
+
+200
+00:10:48,490 --> 00:10:49,340
+we don't use all the advanced features,
+
+201
+00:10:51,100 --> 00:10:52,010
+but the,
+
+202
+00:10:53,200 --> 00:10:55,140
+the assumptions that you're coming into this class
+
+203
+00:10:55,140 --> 00:10:59,720
+with the familiarity and and being comfortable with writing and debugging C++,
+
+204
+00:11:00,070 --> 00:11:02,760
+and so I think it was a post on Piazza,
+
+205
+00:11:02,760 --> 00:11:05,780
+whether 213 513 was, was enough of this,
+
+206
+00:11:05,920 --> 00:11:06,740
+the answer's no,
+
+207
+00:11:08,500 --> 00:11:11,400
+some of the things you'll be able to pick up as you go along,
+
+208
+00:11:11,400 --> 00:11:14,420
+but it's, it's a little I little more than 213.
+
+209
+00:11:15,860 --> 00:11:17,270
+I'll cover later days in a second,
+
+210
+00:11:17,270 --> 00:11:17,980
+but there,
+
+211
+00:11:18,660 --> 00:11:20,560
+well, the late days are only allowed for projects and the homework
+
+212
+00:11:20,940 --> 00:11:23,630
+and you're given four late days, that you can use for any project,
+
+213
+00:11:23,630 --> 00:11:24,580
+as as we go along,
+
+214
+00:11:25,080 --> 00:11:26,330
+and as we release each project,
+
+215
+00:11:26,330 --> 00:11:27,520
+there'll be an online presentation,
+
+216
+00:11:27,720 --> 00:11:29,060
+that will hold where you can come ask,
+
+217
+00:11:29,060 --> 00:11:31,240
+you a week after the project released,
+
+218
+00:11:31,530 --> 00:11:32,870
+after you've sort of looked at the code,
+
+219
+00:11:32,870 --> 00:11:34,910
+you can come ask questions about it with the TAs
+
+220
+00:11:34,910 --> 00:11:36,580
+and before that make that available for everone.
+
+221
+00:11:38,350 --> 00:11:40,560
+So as posted in the, in the email,
+
+222
+00:11:40,560 --> 00:11:41,720
+and I'll post that again,
+
+223
+00:11:41,860 --> 00:11:42,975
+there is a project zero,
+
+224
+00:11:42,975 --> 00:11:46,130
+that require all students that want to take the class have to complete,
+
+225
+00:11:46,480 --> 00:11:48,855
+and this is really a safety mechanism,
+
+226
+00:11:48,855 --> 00:11:52,910
+to make sure that you're coming to this class prepared to write C++ code,
+
+227
+00:11:54,010 --> 00:11:55,965
+and so it's not graded in that,
+
+228
+00:11:55,965 --> 00:11:57,740
+it doesn't affect your final score in the class,
+
+229
+00:11:58,060 --> 00:11:59,600
+which you required to complete it,
+
+230
+00:11:59,980 --> 00:12:03,575
+because again, we don't want people who don't know C++,
+
+231
+00:12:03,575 --> 00:12:05,620
+I think they're gonna pick it up as they go along throughout the semester
+
+232
+00:12:06,000 --> 00:12:06,785
+and then realize,
+
+233
+00:12:06,785 --> 00:12:10,510
+oh, I have to know C++ learn C++ and learn [] the same time,
+
+234
+00:12:10,740 --> 00:12:12,875
+it, it does not end well,
+
+235
+00:12:12,875 --> 00:12:14,510
+trust me, we've done this up that,
+
+236
+00:12:14,510 --> 00:12:16,840
+we realize that this really, really help you
+
+237
+00:12:17,160 --> 00:12:18,730
+rather than make your life,
+
+238
+00:12:19,140 --> 00:12:23,950
+so if you do not complete this, this project zero by the deadline of september tenth,
+
+239
+00:12:24,900 --> 00:12:26,020
+we're going to ask you to drop,
+
+240
+00:12:26,700 --> 00:12:28,310
+and, and zero exceptions we made,
+
+241
+00:12:28,810 --> 00:12:31,560
+I don't care that your brother took 513 ten years ago,
+
+242
+00:12:31,560 --> 00:12:33,300
+and you and you saw what he did back then,
+
+243
+00:12:33,300 --> 00:12:34,280
+like, it doesn't matter,
+
+244
+00:12:35,260 --> 00:12:36,135
+you have to complete this,
+
+245
+00:12:36,135 --> 00:12:37,350
+it shouldn't take that much time, right,
+
+246
+00:12:37,350 --> 00:12:38,690
+it's a pretty basic trial.
+
+247
+00:12:40,760 --> 00:12:41,610
+For office hours,
+
+248
+00:12:42,080 --> 00:12:48,100
+the myself Jignesh and the TAs will hold office hours at various times throughout the week,
+
+249
+00:12:48,100 --> 00:12:50,100
+but between Monday and Friday
+
+250
+00:12:50,750 --> 00:12:55,320
+and then there won't be any office hours regularly on Saturdays,
+
+251
+00:12:55,520 --> 00:12:58,110
+but the day before the every project is due,
+
+252
+00:12:58,310 --> 00:13:00,000
+we'll have that sort of power session,
+
+253
+00:13:00,320 --> 00:13:05,310
+we have multiple for multiple hours available for you, ask questions for,
+
+254
+00:13:05,700 --> 00:13:09,530
+but this means that there won't be any office hours on the Sunday,
+
+255
+00:13:10,600 --> 00:13:11,595
+when projects are due,
+
+256
+00:13:11,595 --> 00:13:14,745
+because we don't want people wait to the last minute to try,
+
+257
+00:13:14,745 --> 00:13:16,170
+you know, to try to work on something
+
+258
+00:13:16,170 --> 00:13:19,640
+and then, you know, hoping that TAs will help them figure things out right,
+
+259
+00:13:19,810 --> 00:13:24,945
+Again, this is a forcing function to make sure that, you are making progress, you know, soon,
+
+260
+00:13:24,945 --> 00:13:26,660
+you start working projects as soon as they released,
+
+261
+00:13:26,920 --> 00:13:29,630
+you're not trying to do as much as you can at the last, last day,
+
+262
+00:13:30,550 --> 00:13:31,790
+system programming is not easy,
+
+263
+00:13:32,650 --> 00:13:35,900
+and you will make mistakes and you have time to figure out.
+
+264
+00:13:37,490 --> 00:13:41,580
+For this semester, we're actually offering the course to, to CMU-Q students,
+
+265
+00:13:42,140 --> 00:13:43,380
+so welcome, thank you joining us,
+
+266
+00:13:44,060 --> 00:13:45,540
+and I realize there's timezone difference
+
+267
+00:13:45,560 --> 00:13:52,060
+and so we will have A A regularly scheduled office hour,
+
+268
+00:13:52,200 --> 00:13:55,090
+that lines up with your you your working hours,
+
+269
+00:13:55,740 --> 00:13:57,580
+with a different TA each week,
+
+270
+00:13:57,780 --> 00:13:59,240
+I'll announce this Piazza,
+
+271
+00:13:59,240 --> 00:14:02,350
+when will be, that we these to,
+
+272
+00:14:03,030 --> 00:14:04,300
+talk to somebody if you need to
+
+273
+00:14:04,440 --> 00:14:06,340
+and then if you need to talk to myself,
+
+274
+00:14:06,420 --> 00:14:11,620
+it will post how to schedule calls us at different times as needed,
+
+275
+00:14:12,200 --> 00:14:15,820
+again, so this this morning session, or it will be, will be for the CMU-Q students,
+
+276
+00:14:15,930 --> 00:14:20,140
+we ask the regular, the Pittsburgh CMU students not to use that,
+
+277
+00:14:20,160 --> 00:14:22,565
+and by all means, please always questions post on Piazza,
+
+278
+00:14:22,565 --> 00:14:22,810
+we'll answer it sooner.
+
+279
+00:14:27,180 --> 00:14:31,255
+I guess, delay policy for homework,
+
+280
+00:14:31,255 --> 00:14:34,890
+to lose 10% every 24 hour is late
+
+281
+00:14:35,180 --> 00:14:41,140
+and then before they I'm talking about will be only be applicable to for projects,
+
+282
+00:14:42,170 --> 00:14:43,380
+if there's a medical emergency,
+
+283
+00:14:44,240 --> 00:14:51,000
+if there's some kind of the term medical emergency,
+
+284
+00:14:53,450 --> 00:14:57,180
+if you need an extension email as soon as possible
+
+285
+00:14:57,860 --> 00:15:04,020
+and that way we make sure we make the appropriate necessary you to go medical thing the,
+
+286
+00:15:07,880 --> 00:15:09,690
+but emails sooner rather than later,
+
+287
+00:15:12,700 --> 00:15:14,655
+it's not ten years, ten weaks,
+
+288
+00:15:14,655 --> 00:15:19,220
+and you come here to help. Let us know,
+
+289
+00:15:21,250 --> 00:15:24,350
+All right, I got say every year, do not plagiarize,
+
+290
+00:15:24,490 --> 00:15:27,530
+so all the homework, all the projects must be your own original work,
+
+291
+00:15:27,700 --> 00:15:28,905
+are not group assignments,
+
+292
+00:15:28,905 --> 00:15:31,880
+you can discuss your projects with students, that's fine,
+
+293
+00:15:32,590 --> 00:15:34,370
+you can mean flesh out ideas on the whiteboard,
+
+294
+00:15:34,480 --> 00:15:36,440
+but do not copy source code from other people,
+
+295
+00:15:36,850 --> 00:15:38,690
+do not copy source code from Github,
+
+296
+00:15:39,080 --> 00:15:43,090
+so again, because we make this public to people outside CMU,
+
+297
+00:15:43,260 --> 00:15:47,140
+there's a lot of implementations from previous semesters from that are available on Github,
+
+298
+00:15:48,540 --> 00:15:50,650
+Chatgpt might be able to even do earlier projects,
+
+299
+00:15:52,670 --> 00:15:53,530
+do not copy them,
+
+300
+00:15:53,530 --> 00:15:56,390
+because we the we use Gradescope now
+
+301
+00:15:56,390 --> 00:15:58,960
+and Gradescope has a [] checker
+
+302
+00:15:59,040 --> 00:15:59,960
+and basically what we do is,
+
+303
+00:15:59,960 --> 00:16:02,380
+we find all the Github implementations from non-CMU students,
+
+304
+00:16:02,730 --> 00:16:05,890
+load them up into Github, into Gradescope but fake students
+
+305
+00:16:06,210 --> 00:16:07,750
+and then see whether you match against them,
+
+306
+00:16:08,040 --> 00:16:11,105
+do not, do not copy your source code from other students,
+
+307
+00:16:11,105 --> 00:16:12,610
+do not copy source code from Github,
+
+308
+00:16:13,800 --> 00:16:15,770
+the Github source code is usually pretty crappy,
+
+309
+00:16:15,770 --> 00:16:17,590
+we've done experience before she has done this,
+
+310
+00:16:17,790 --> 00:16:20,390
+the CMU students crush the non-CMU students,
+
+311
+00:16:20,390 --> 00:16:22,630
+so it's actually in your best interest not to copy now.
+
+312
+00:16:23,920 --> 00:16:27,445
+Again, there won't be any exceptions, oh, I didn't know,
+
+313
+00:16:27,445 --> 00:16:30,750
+yeah, the fact that this is recorded lecture,
+
+314
+00:16:31,130 --> 00:16:32,875
+if we have to report you to Warner hall,
+
+315
+00:16:32,875 --> 00:16:35,350
+we point to this timestamp in in the lecture and say
+
+316
+00:16:35,350 --> 00:16:36,630
+where I'm warning you enough to plagiarize
+
+317
+00:16:36,920 --> 00:16:39,690
+and then you plagiarize. Yeah, and if not, you're screwed, right,
+
+318
+00:16:39,950 --> 00:16:43,975
+if there's something you want to do that seems kind of like grey zone
+
+319
+00:16:43,975 --> 00:16:45,240
+and you don't know if it's okay,
+
+320
+00:16:45,440 --> 00:16:47,460
+like using Chatgpt or something like that, right,
+
+321
+00:16:48,440 --> 00:16:51,390
+please, you know, email myself and Jignesh not the TAs
+
+322
+00:16:51,410 --> 00:16:54,880
+to see whether you know, and see whether we want to discuss it,
+
+323
+00:16:55,740 --> 00:16:58,750
+and then the link there would be CMU's policy or academic integrity,
+
+324
+00:16:58,920 --> 00:17:01,870
+again, we take this very seriously, don't around.
+
+325
+00:17:03,830 --> 00:17:05,430
+All right, one of the last thing is that,
+
+326
+00:17:05,570 --> 00:17:07,435
+if you love as much as I do
+
+327
+00:17:07,435 --> 00:17:08,940
+and you go beyond the course material,
+
+328
+00:17:09,650 --> 00:17:11,380
+we are offering a seminar series this semester,
+
+329
+00:17:11,380 --> 00:17:13,020
+it's entirely optional,
+
+330
+00:17:13,430 --> 00:17:15,360
+where every Monday starting in September,
+
+331
+00:17:15,800 --> 00:17:19,320
+we having a different outside speaker come
+
+332
+00:17:19,340 --> 00:17:23,340
+give a talk about the various database company or project,
+
+333
+00:17:23,660 --> 00:17:27,150
+so this semester of the theme is machine learning for databases and databaseases machine learning,
+
+334
+00:17:28,310 --> 00:17:32,995
+and so we have people that are building a lot of these hot thing now,
+
+335
+00:17:32,995 --> 00:17:33,835
+these vector databases,
+
+336
+00:17:33,835 --> 00:17:35,130
+but discuss next class,
+
+337
+00:17:35,360 --> 00:17:38,335
+but we're having them talked about their systems,
+
+338
+00:17:38,335 --> 00:17:41,250
+how to support ML like stuff inside of data systems,
+
+339
+00:17:41,630 --> 00:17:46,260
+and then we'll have people talk about how they're using machine learning to optimize data systems,
+
+340
+00:17:46,400 --> 00:17:49,260
+sort of like using to make the system actually faster,
+
+341
+00:17:49,610 --> 00:17:50,820
+so again this is optional,
+
+342
+00:17:51,230 --> 00:17:53,880
+everything will be on Zoom on Monday at four thirty
+
+343
+00:17:53,900 --> 00:17:57,360
+and then they will post it on Youtube afterwardswards,
+
+344
+00:17:57,470 --> 00:17:58,945
+again, in this one, you don't have to be a senior,
+
+345
+00:17:58,945 --> 00:18:03,490
+neither you can join it, if you you can see the list of the full schedule.
+
+346
+00:18:04,450 --> 00:18:06,470
+Alright, so that's it for the legislative class,
+
+347
+00:18:07,300 --> 00:18:08,960
+I gotta figure out what about,
+
+348
+00:18:11,560 --> 00:18:12,840
+he's not getting now, anytime soon,
+
+349
+00:18:12,840 --> 00:18:15,470
+that's about, but it's okay.
+
+350
+00:18:15,640 --> 00:18:17,295
+So next class on Monday,
+
+351
+00:18:17,295 --> 00:18:18,260
+we'll have the in class lecture
+
+352
+00:18:19,000 --> 00:18:20,925
+and then we'll begin right out of the gate,
+
+353
+00:18:20,925 --> 00:18:22,500
+not talking any logistics, but the course,
+
+354
+00:18:22,500 --> 00:18:25,850
+we'll just immediately talk about the relational model and databases.
+
+355
+00:18:26,760 --> 00:18:28,010
+All right, guys, see you next week.
+
