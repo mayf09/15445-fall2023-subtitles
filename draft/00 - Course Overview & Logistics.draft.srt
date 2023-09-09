@@ -1,52 +1,62 @@
 1
 00:00:22,110 --> 00:00:24,180
 0,305 305,440 440,730
-He's in there.|
+He's in there?|
+他在里面吗？|
 
 2
 00:00:24,375 --> 00:00:27,020
 0,60 60,180 180,330 330,605
 He's not good now.|
+他现在不太好。|
 
 3
 00:00:27,380 --> 00:00:29,560
 0,60 60,165 165,440
-What's up, guys?|
+What's up, guys.|
+大家好。|
 
 4
 00:00:30,170 --> 00:00:35,640
 0,400
-The.|
+{I'm,over,there,at,the,[],city\,,DJ,[],is,in,there\,,it's,not,good},|
+我在[]城， DJ[]在那里，不太好，|
 
 5
 00:00:35,680 --> 00:00:36,840
 0,305 305,635 635,800 800,935 935,1160
-Whatever he's behind on child
+whatever, he's behind on child
+不管怎样，他在[孩子支持]后面，
 
 6
 00:00:36,840 --> 00:00:38,325
 0,285 285,620 910,1245 1245,1335 1335,1485
-support. So let's just go
+support,| so let's just go
+|所以让我们先来看看这个，
 
 7
 00:00:38,325 --> 00:00:39,315
 0,135 135,315 315,510 510,705 705,990
-through this. So again the
+through this.| So again the
+|所以，这门课的目的是，
 
 8
 00:00:39,315 --> 00:00:40,455
 0,270 270,420 420,570 570,855 855,1140
-purpose of this lecture is
+purpose of this lecture is,|
+|
 
 9
 00:00:40,455 --> 00:00:41,535
 0,180 180,330 330,525 525,795 795,1080
 we want to discuss the
+我们想要讨论课程的后勤，
 
 10
 00:00:41,535 --> 00:00:43,430
 0,510 510,660 660,765 765,1025 1495,1895
-logistics for the course now
+logistics for the course,| now
+|现在是在线的，而不是面对面的，
 
 11
 00:00:44,350 --> 00:00:45,870
@@ -56,7 +66,8 @@ you know online rather than
 12
 00:00:45,870 --> 00:00:47,430
 0,180 180,470 820,1220 1240,1485 1485,1560
-in person. Ah and so
+in person,| {} and so
+|这样的话，下周第一天上课的时候，
 
 13
 00:00:47,430 --> 00:00:48,135
@@ -66,12 +77,14 @@ that way in the first
 14
 00:00:48,135 --> 00:00:49,220
 0,105 105,210 210,485 505,795 795,1085
-day of class next week
+day of class next week,|
+|
 
 15
 00:00:49,420 --> 00:00:50,310
 0,260 260,350 350,515 515,725 725,890
 we can just jump into
+我们就可以直接跳到日常工作中去了。
 
 16
 00:00:50,310 --> 00:00:51,165
@@ -81,17 +94,19 @@ all the daily stuff right
 17
 00:00:51,165 --> 00:00:52,320
 0,270 270,660 660,885 885,975 975,1155
-away. Right so let let's
+away.| {All,right}, so let let's
+|好的，让我们来看看这个。
 
 18
 00:00:52,320 --> 00:00:54,390
 0,90 90,195 195,440 880,1280 1810,2070
-go through this. Ah the
+go through this.| {} The
+|再说一遍为什么我会在县[监狱]，
 
 19
 00:00:54,390 --> 00:00:55,410
 0,180 180,405 405,690 690,930 930,1020
-reason again why why am
+reason again, why, why am
 
 20
 00:00:55,410 --> 00:00:56,550
@@ -101,12 +116,14 @@ I down here at the
 21
 00:00:56,550 --> 00:00:57,990
 0,180 180,500 640,975 975,1245 1245,1440
-county jail? Well because because
+county [],| well, because, because
+|这是因为数据库，
 
 22
 00:00:57,990 --> 00:00:59,895
 0,105 105,710 850,1215 1215,1580 1630,1905
-of databases right. And this
+of databases, right,| and this
+|这就是这门课程的真正意义所在，
 
 23
 00:00:59,895 --> 00:01:00,570
@@ -116,7 +133,8 @@ is what this course is
 24
 00:01:00,570 --> 00:01:03,210
 0,150 150,300 300,590 940,1290 1290,2640
-really all about. About reocusing
+really all about,| about {we,focusing}
+|关于我们关注你生命中最重要的事情，
 
 25
 00:01:03,210 --> 00:01:04,185
@@ -131,32 +149,37 @@ important things in your in
 27
 00:01:04,920 --> 00:01:06,390
 0,120 120,380 670,960 960,1170 1170,1470
-your life and yeah sometimes
+your life| and yeah sometimes
+|是的，有时不好的事情会发生，
 
 28
 00:01:06,390 --> 00:01:07,905
 0,270 270,465 465,770 1090,1365 1365,1515
-bad things happen so for
+bad things happen,| so for
+|所以对我来说，这是我生命中最重要的两件事，
 
 29
 00:01:07,905 --> 00:01:09,555
 0,275 475,875 925,1260 1260,1470 1470,1650
-me the the two most
+me, the the two most
 
 30
 00:01:09,555 --> 00:01:10,520
 0,195 195,345 345,465 465,645 645,965
-important things in my life.|
+important things in my life,|
+|
 
 31
 00:01:10,920 --> 00:01:12,345
 0,300 300,570 570,860 940,1245 1245,1425
-Are my wife and my
+are my wife and my
+是我的妻子和我的亲生女儿，
 
 32
 00:01:12,345 --> 00:01:14,115
 0,275 325,725 1075,1410 1410,1605 1605,1770
-biological daughter first their number
+biological daughter,| first their number
+|首先是她们是第一的，然后是数据库，
 
 33
 00:01:14,115 --> 00:01:15,570
@@ -166,27 +189,30 @@ one, and then after that
 34
 00:01:15,570 --> 00:01:17,745
 0,240 240,980 1120,1530 1530,1820 1930,2175
-is databases? That's really, you
+is databases,| that's really, you
+|那是你应该从这门课程中学到的，
 
 35
 00:01:17,745 --> 00:01:18,500
 0,245
-know.|
+know
 
 36
 00:01:18,510 --> 00:01:19,340
 0,335 335,515 515,605 605,695 695,830
-What you should be getting
+what you should be getting
 
 37
 00:01:19,340 --> 00:01:20,120
 0,120 120,180 180,330 330,570 570,780
-out of this course, the
+out of this course,| the
+|数据库在消耗，
 
 38
 00:01:20,120 --> 00:01:22,475
 0,555 555,735 735,1040 1060,1610 2050,2355
-databases is all consuming everything
+databases is all consuming,| everything
+|世界上的一切数据库的问题，
 
 39
 00:01:22,475 --> 00:01:23,210
@@ -196,7 +222,8 @@ in the world, the database
 40
 00:01:23,210 --> 00:01:25,085
 0,350 730,1130 1270,1545 1545,1710 1710,1875
-problem, and you have think
+problem,| and you have think
+|你已经想出了更好的欣赏这类东西的方法。
 
 41
 00:01:25,085 --> 00:01:26,255
@@ -206,7 +233,8 @@ of a better appreciation for
 42
 00:01:26,255 --> 00:01:27,485
 0,165 165,315 315,605 685,960 960,1230
-kind of stuff. So again,
+kind of stuff.| So again,
+|所以，我们将在下周的课堂上讨论这一点。
 
 43
 00:01:27,485 --> 00:01:29,530
@@ -217,11 +245,13 @@ we'll cover this in class
 00:01:29,550 --> 00:01:30,760
 0,290 290,580
 next week.|
+|
 
 45
 00:01:30,950 --> 00:01:33,115
 0,400 750,1150 1500,1790 1790,1985 1985,2165
-But the another thing, important
+{All,right}, the another thing, important
+好的，本学期这门课要指出的另一件重要的事情是，
 
 46
 00:01:33,115 --> 00:01:33,655
@@ -236,12 +266,14 @@ this lecture this semester this
 48
 00:01:35,215 --> 00:01:37,270
 0,255 255,605 955,1355 1375,1710 1710,2055
-semester is, uh, we're griously
+semester is,| {} we're griously
+|我们得到了 SingleStore 的大力赞助，
 
 49
 00:01:37,270 --> 00:01:39,265
 0,315 315,465 465,720 720,1070 1750,1995
-sponsored by single store and
+sponsored by {SingleStore -}| and
+|他们帮助我们进行课程开发，
 
 50
 00:01:39,265 --> 00:01:40,180
@@ -251,17 +283,19 @@ they're helping out with with
 51
 00:01:40,180 --> 00:01:42,270
 0,210 210,530 910,1310 1330,1710 1710,2090
-first development. So single store
+course development,| so {SingleStore -}
+|SingleStore 是一个内存中列存储分布式数据库系统，
 
 52
 00:01:42,290 --> 00:01:44,770
 0,380 380,760 1110,1445 1445,1780 2100,2480
-is a in memory column
+is a {in-memory -} column
 
 53
 00:01:44,770 --> 00:01:46,735
 0,380 430,825 825,1220 1240,1620 1620,1965
-store distributed database system that
+store distributed database system,| that
+|它支持即时、强大的编译，
 
 54
 00:01:46,735 --> 00:01:47,965
@@ -271,7 +305,8 @@ supports just in time, great
 55
 00:01:47,965 --> 00:01:50,080
 0,545 985,1385 1465,1815 1815,2025 2025,2115
-compilation. Now if none of
+compilation,| now if none of
+|如果你现在觉得这些都不理解，也没问题，
 
 56
 00:01:50,080 --> 00:01:50,830
@@ -281,7 +316,8 @@ that makes sense for you
 57
 00:01:50,830 --> 00:01:52,660
 0,150 150,440 610,1160 1270,1635 1635,1830
-right now that's, that's fine
+right now, that's, that's fine,|
+|因为我们整个学期都在讲这些东西，
 
 58
 00:01:52,660 --> 00:01:53,680
@@ -291,22 +327,26 @@ because we cover all these
 59
 00:01:53,680 --> 00:01:55,060
 0,195 195,435 435,830
-things throughout semester.|
+things throughout semester,|
+|
 
 60
 00:01:55,060 --> 00:01:56,335
 0,165 165,435 435,840 840,1095 1095,1275
-And so we're grateful for
+and so we're grateful for
+所以我们很感激他们帮助我们，
 
 61
 00:01:56,335 --> 00:01:57,570
 0,105 105,365 505,810 810,975 975,1235
-them helping helping us out,
+them helping helping us out,|
+|
 
 62
 00:01:57,740 --> 00:01:58,765
 0,260 260,470 470,665 665,875 875,1025
 and they'll become giving a
+他们将在学期末的时候给我们做客座演讲，
 
 63
 00:01:58,765 --> 00:02:01,110
@@ -316,32 +356,38 @@ guest lecture at the at
 64
 00:02:01,280 --> 00:02:02,610
 0,320 320,640 660,905 905,1010 1010,1330
-the end of the semester.|
+the end of the semester,|
+|
 
 65
 00:02:03,440 --> 00:02:04,705
 0,275 275,440 440,730 900,1160 1160,1265
-Some more that as we
+some more that as we
+在我们前进的过程中，还有更多这样的东西。
 
 66
 00:02:04,705 --> 00:02:05,640
 0,120 120,395
 go along.|
+|
 
 67
 00:02:06,040 --> 00:02:07,500
 0,320 320,640 720,1160 1160,1295 1295,1460
 Alright, so today's lecture real
+好的，所以今天的课讲得很快，
 
 68
 00:02:07,500 --> 00:02:09,090
 0,260 550,870 870,1035 1035,1305 1305,1590
-quickly. We're just first obviously
+quickly,| we're just first obviously
+|我们首先明确讨论等候名单，
 
 69
 00:02:09,090 --> 00:02:10,020
 0,225 225,330 330,450 450,675 675,930
-discuss the wait list. That's
+discuss the {waitlist -},| that's
+|这是你们很多人所关心的，
 
 70
 00:02:10,020 --> 00:02:10,530
@@ -351,7 +397,8 @@ what a lot of you
 71
 00:02:10,530 --> 00:02:11,835
 0,165 165,345 345,620 910,1155 1155,1305
-guys care about. Then we'll
+guys care about,| then we'll
+|然后我们将讨论课程的规则，
 
 72
 00:02:11,835 --> 00:02:12,660
@@ -361,7 +408,8 @@ talk about the rules we
 73
 00:02:12,660 --> 00:02:14,295
 0,260 760,1035 1035,1365 1365,1515 1515,1635
-have for lectures and then
+have for lectures| and then
+|然后讨论所有课程的后勤工作，
 
 74
 00:02:14,295 --> 00:02:15,015
@@ -371,12 +419,14 @@ go through all the course
 75
 00:02:15,015 --> 00:02:17,390
 0,510 510,750 750,1055 1105,1505 1975,2375
-logistics, including homework and projects.|
+logistics,| including homework and projects.|
+|包括家庭作业和项目。|
 
 76
 00:02:18,730 --> 00:02:19,485
 0,245 245,335 335,455 455,590 590,755
 So the first thing to
+所以，首先要处理的是等候名单，
 
 77
 00:02:19,485 --> 00:02:20,190
@@ -386,7 +436,8 @@ obviously to deal with is
 78
 00:02:20,190 --> 00:02:22,575
 0,105 105,255 255,560 820,1220 2110,2385
-the wait list. Ah, as
+the wait list,| {} as
+|如你所知，你是一名大四学生，等候名单相当长，
 
 79
 00:02:22,575 --> 00:02:23,415
@@ -396,17 +447,19 @@ you're probably aware of, you're
 80
 00:02:23,415 --> 00:02:24,180
 0,60 60,255 255,495 495,630 630,765
-a senior student. The wait
+a senior student, the wait
 
 81
 00:02:24,180 --> 00:02:25,760
 0,165 165,330 330,525 525,830 1180,1580
-list is quite long. Ah,
+list is quite long, {}|
+|
 
 82
 00:02:26,290 --> 00:02:28,050
 0,400 630,860 860,1090 1290,1640 1640,1760
 and you know, there's more
+想参加这门课程的人比我们实际能容纳的人多，
 
 83
 00:02:28,050 --> 00:02:28,905
@@ -421,7 +474,8 @@ to take the course than
 85
 00:02:29,520 --> 00:02:30,830
 0,105 105,240 240,420 420,915 915,1310
-we can actually accommodate. So
+we can actually accommodate,| so
+|所以，在这一点上， CS 系已经从我们手中接管了等待名单，
 
 86
 00:02:31,330 --> 00:02:33,240
@@ -441,7 +495,8 @@ the wait list from from
 89
 00:02:36,060 --> 00:02:39,765
 0,260 1090,1490 2440,2840 3340,3600 3600,3705
-us because they they need
+us,| because they they need
+|因为他们需要确保某些学生需要毕业，
 
 90
 00:02:39,765 --> 00:02:40,425
@@ -451,27 +506,31 @@ to make sure that certain
 91
 00:02:40,425 --> 00:02:41,690
 0,270 270,450 450,540 540,785 865,1265
-students need to graduate and.|
+students need to graduate| and
+|拿我们的集体来源和所有这些东西来说，
 
 92
 00:02:42,250 --> 00:02:44,235
 0,365 365,730 1170,1445 1445,1715 1715,1985
-You know, take our source
+you know, take our source
 
 93
 00:02:44,235 --> 00:02:45,140
 0,150 150,435 435,525 525,630 630,905
-of collectives and all that
+of collectives and all that|
+|
 
 94
 00:02:45,160 --> 00:02:46,365
 0,365 365,590 590,740 740,905 905,1205
-and they all get preference.
+and they all get preference,|
+他们都有优先权，|
 
 95
 00:02:46,365 --> 00:02:48,255
 0,275 535,935 1195,1470 1470,1755 1755,1890
-So we the professors have
+so we the professors have
+所以我们这些教授无法控制等待名单，
 
 96
 00:02:48,255 --> 00:02:49,170
@@ -481,7 +540,8 @@ no control over the wait
 97
 00:02:49,170 --> 00:02:50,760
 0,290 550,950 1090,1365 1365,1485 1485,1590
-list. Uh, so if you
+list,| {} so if you
+|所以如果你给我们发邮件，我们就无能为力了，
 
 98
 00:02:50,760 --> 00:02:51,735
@@ -496,12 +556,14 @@ not much, there's nothing we
 100
 00:02:52,890 --> 00:02:54,230
 0,120 120,240 240,360 360,620 940,1340
-can we can do. Um
+can we can do, {}|
+|
 
 101
 00:02:54,700 --> 00:02:55,800
 0,320 320,500 500,800 800,920 920,1100
 and the admins will then
+然后管理员会把学生从等待名单上移走，
 
 102
 00:02:55,800 --> 00:02:56,640
@@ -511,7 +573,8 @@ move students off the wait
 103
 00:02:56,640 --> 00:02:57,585
 0,210 210,375 375,510 510,720 720,945
-list but they're not always
+list,| but they're not always
+|但他们不会总是按照你在等待名单中的排名顺序，
 
 104
 00:02:57,585 --> 00:02:58,430
@@ -526,27 +589,32 @@ that that you you're ranked
 106
 00:03:00,885 --> 00:03:02,000
 0,75 75,150 150,270 270,545 715,1115
-in the wait list, um,
+in the wait list, {}|
+|
 
 107
 00:03:02,140 --> 00:03:04,670
 0,350 350,635 635,970 1530,2135 2135,2530
-because multiple sections undergrad message.
+because multiple sections undergrad message,|
+因为多个部分都会导致信息不合格，|
 
 108
 00:03:05,140 --> 00:03:07,110
 0,400 630,950 950,1220 1220,1685 1685,1970
-So just because you're some
+so just because you're some
+所以不能因为你在等待名单上排名低，
 
 109
 00:03:07,110 --> 00:03:08,340
 0,210 210,390 390,525 525,800
-low on wait list.|
+low on wait list,|
+|
 
 110
 00:03:08,350 --> 00:03:09,480
 0,305 305,425 425,665 665,965 965,1130
-There's no guarantee that we
+there's no guarantee that we
+不能保证我们能在这学期录取到你，
 
 111
 00:03:09,480 --> 00:03:09,930
@@ -556,12 +624,14 @@ can get you in the
 112
 00:03:09,930 --> 00:03:12,075
 0,320 1270,1545 1545,1725 1725,1935 1935,2145
-semester. The good news is
+semester,| the good news is
+|好消息是，
 
 113
 00:03:12,075 --> 00:03:13,350
 0,305 325,615 615,825 825,960 960,1275
-that since we've hired jesh
+that,| since we've hired Jignesh
+|由于我们聘请了 Jignesh Patel 作为卡内基梅隆大学的新数据教授，
 
 114
 00:03:13,350 --> 00:03:15,240
@@ -576,57 +646,65 @@ professor with me here at
 116
 00:03:16,410 --> 00:03:18,075
 0,270 270,650 1240,1485 1485,1560 1560,1665
-Carnegie Mellon, we can now
+Carnegie Mellon,| we can now
+|我们现在每学期可以提供 15-445/645 ，
 
 117
 00:03:18,075 --> 00:03:19,920
 0,275 415,765 765,1115 1195,1575 1575,1845
-offer fifteen forty, forty five
+offer {15-445/645 - - -
 
 118
 00:03:19,920 --> 00:03:21,180
 0,150 150,270 270,405 405,680 940,1260
-and six forty five every
+- - - -} every
 
 119
 00:03:21,180 --> 00:03:23,370
 0,380 1150,1550 1630,1905 1905,1980 1980,2190
-semester. So it'll be offered
+semester,| so it'll be offered
+|所以，除了本学期外，它还将在 2024 年春季再次提供。
 
 120
 00:03:23,370 --> 00:03:25,460
 0,300 300,615 615,930 930,1260 1260,2090
-again in in spring 2024
+again in in Spring 2024
 
 121
 00:03:25,570 --> 00:03:26,540
 0,290 290,455 455,560 560,650 650,970
 in addition to this semester.|
+|
 
 122
 00:03:28,110 --> 00:03:29,500
 0,350 350,700 750,980 980,1100 1100,1390
-But so the other thing
+{All,right}, so the other thing,|
+好的，另一件事，|
 
 123
 00:03:30,300 --> 00:03:31,055
 0,260 260,380 380,500 500,605 605,755
 when we have the in
+当我们在课堂上讲课时，
 
 124
 00:03:31,055 --> 00:03:32,830
 0,210 210,725 955,1275 1275,1440 1440,1775
-class lectures, it's really important
+class lectures,| it's really important
+|很重要的一点是，
 
 125
 00:03:32,880 --> 00:03:34,880
 0,400 510,910 1470,1730 1730,1880 1880,2000
-that, ah, I wanted to
+that,| {} I wanted to
+|我想要互动，
 
 126
 00:03:34,880 --> 00:03:36,460
 0,165 165,710 850,1110 1110,1320 1320,1580
-be interactive. We don't just
+be interactive,| we don't just
+|我们不会只是站在那里一个小时，
 
 127
 00:03:37,110 --> 00:03:38,405
@@ -636,52 +714,61 @@ stand up there for, you
 128
 00:03:38,405 --> 00:03:40,130
 0,75 75,150 150,395 715,1115 1315,1725
-know, an hour and paddle
+know, an hour| and paddle
+|然后在数据库上喋喋不休，
 
 129
 00:03:40,130 --> 00:03:42,230
 0,165 165,435 435,1130 1600,1980 1980,2100
-on about databases. It's always
+on about databases,| it's always
+|这总是有帮助的，
 
 130
 00:03:42,230 --> 00:03:43,535
 0,225 225,510 510,765 765,1080 1080,1305
-helpful. It's always fun when
+helpful,| it's always fun, when
+|当学生问问题时总是很有趣的，
 
 131
 00:03:43,535 --> 00:03:45,425
 0,210 210,420 420,725 1525,1770 1770,1890
-students ask questions and these
+students ask questions| and these
+|这些问题要么是因为，
 
 132
 00:03:45,425 --> 00:03:47,000
 0,240 240,450 450,615 615,935
-questions be either because.|
+questions be either because,|
+|
 
 133
 00:03:47,000 --> 00:03:48,695
 0,315 315,495 495,705 705,980 1450,1695
-We're talking too fast and
+we're talking too fast and
+我们说得太快了，他想放慢语速，
 
 134
 00:03:48,695 --> 00:03:49,450
 0,90 90,210 210,345 345,480 480,755
-he wants to slow down.
+he wants to slow down,|
+|
 
 135
 00:03:49,740 --> 00:03:50,615
 0,260 260,440 440,665 665,800 800,875
 I get excited when I
+当我谈到数据库时，我会很兴奋，
 
 136
 00:03:50,615 --> 00:03:52,520
 0,105 105,210 210,675 675,965 1615,1905
-talk about databases. So I'm
+talk about databases,| so I'm
+|所以我说得太快了，告诉我闭嘴，慢点说，
 
 137
 00:03:52,520 --> 00:03:53,270
 0,105 105,225 225,450 450,675 675,750
-going too fast. Tell me
+going too fast, tell me
 
 138
 00:03:53,270 --> 00:03:53,720
@@ -691,7 +778,8 @@ to shut up and slow
 139
 00:03:53,720 --> 00:03:55,595
 0,260 1210,1485 1485,1650 1650,1785 1785,1875
-down. And certainly if you
+down,| and certainly if you
+|当然，如果你不明白我们在说什么，
 
 140
 00:03:55,595 --> 00:03:56,615
@@ -701,17 +789,20 @@ don't understand what we're talking
 141
 00:03:56,615 --> 00:03:57,515
 0,315 315,615 615,675 675,780 780,900
-about, it's a good time
+about,| it's a good time
+|这是一个很好的时间来打断我们，
 
 142
 00:03:57,515 --> 00:03:59,105
 0,165 165,485 775,1020 1020,1170 1170,1590
-to interrupt, to ask clarifying
+to interrupt,| to ask clarifying
+|问一些澄清的问题，
 
 143
 00:03:59,105 --> 00:04:00,680
 0,305 715,990 990,1170 1170,1395 1395,1575
-questions because maybe there's something
+questions,| because maybe there's something
+|因为也许在幻灯片或讨论中有一些东西，这是有意义的，
 
 144
 00:04:00,680 --> 00:04:01,940
@@ -726,32 +817,37 @@ slides or the discussion that
 146
 00:04:03,425 --> 00:04:04,670
 0,195 195,375 375,665 805,1065 1065,1245
-that makes sense. And often
+that makes sense,| and often
+|通常情况下，如果你有问题，
 
 147
 00:04:04,670 --> 00:04:05,540
 0,225 225,375 375,510 510,690 690,870
-times too if you have
+times too, if you have
 
 148
 00:04:05,540 --> 00:04:08,560
 0,290 1780,2100 2100,2325 2325,2625 2625,3020
-questions, other people have a
+questions,| other people have a
+|其他人也会有同样的问题，
 
 149
 00:04:08,790 --> 00:04:09,880
 0,275 275,425 425,620 620,815 815,1090
-have same questions as well.|
+have same questions as well,|
+|
 
 150
 00:04:10,340 --> 00:04:11,920
 0,290 290,545 545,905 905,1430 1430,1580
-Um, so please, anytime during
+{} so please, anytime during
+所以请在课程期间的任何时间，
 
 151
 00:04:11,920 --> 00:04:13,015
 0,90 90,405 405,660 660,885 885,1095
-the lectures, please interrupt us
+the lectures,| please interrupt us
+|请打断我们，说任何与此相关的事情，
 
 152
 00:04:13,015 --> 00:04:14,275
@@ -761,7 +857,8 @@ with anything that stated it's
 153
 00:04:14,275 --> 00:04:16,090
 0,275 715,960 960,1080 1080,1485 1485,1815
-related. What we don't want
+related,| what we don't want
+|我们不想被打扰的是你能不能上厕所，
 
 154
 00:04:16,090 --> 00:04:17,695
@@ -776,17 +873,19 @@ not you can go to
 156
 00:04:18,160 --> 00:04:19,680
 0,60 60,290 430,830
-the bathroom because.|
+the bathroom,| because,
+|因为，你是成人，不需要得到许可，
 
 157
 00:04:19,970 --> 00:04:21,775
 0,260 260,520 1350,1595 1595,1730 1730,1805
-You know, you don't have
+you're {an,adult}, you don't have
 
 158
 00:04:21,775 --> 00:04:23,500
 0,75 75,195 195,575 1195,1545 1545,1725
-to ask permissions. We also
+to ask permissions,| we also
+|我们也不想被区块链打断，
 
 159
 00:04:23,500 --> 00:04:24,250
@@ -796,32 +895,37 @@ don't want be interrupted about
 160
 00:04:24,250 --> 00:04:26,260
 0,530 790,1305 1305,1500 1500,1875 1875,2010
-blockchains blockchain for databases are
+blockchains,| blockchain for databases are
+|数据库的区块链是愚蠢的，
 
 161
 00:04:26,260 --> 00:04:27,820
 0,290 1000,1305 1305,1380 1380,1470 1470,1560
-stupid. We're not going to
+stupid,| we're not going to
+|我们不打算包括它们，没有必要包括，
 
 162
 00:04:27,820 --> 00:04:28,555
 0,150 150,330 330,510 510,615 615,735
-cover them. There's no need
+cover them, there's no need
 
 163
 00:04:28,555 --> 00:04:32,260
 0,105 105,365
-to cover.|
+to cover,|
+|
 
 164
 00:04:32,260 --> 00:04:34,360
 0,270 270,1635 1635,1740 1740,1935 1935,2100
-We we're not covering these
+we we're not covering these
+我们不会涉及这些方面的。
 
 165
 00:04:34,360 --> 00:04:36,850
 0,260 1330,1575 1575,1820 2080,2355 2355,2490
-ends. So now because I
+ends.| So now because I
+|现在，因为我想让你们在我们讲课的时候打断我们，
 
 166
 00:04:36,850 --> 00:04:37,830
@@ -831,12 +935,14 @@ want you to interrupt us
 167
 00:04:38,630 --> 00:04:39,660
 0,260 260,425 425,515 515,635 635,1030
-while we're giving the lectures,
+while we're giving the lectures,|
+|
 
 168
 00:04:39,680 --> 00:04:42,055
 0,305 305,575 575,940 1740,2030 2030,2375
 that means that we don't
+这意味着我们不想让你们在课程结束时说，
 
 169
 00:04:42,055 --> 00:04:44,530
@@ -851,42 +957,47 @@ the end of the end
 171
 00:04:45,235 --> 00:04:46,350
 0,90 90,180 180,425 475,795 795,1115
-of the lecture and say,
+of the lecture and say,|
+|
 
 172
 00:04:46,430 --> 00:04:47,470
 0,395 395,635 635,740 740,860 860,1040
 oh, you know what about
+你知道第三张幻灯片，我没有理解，
 
 173
 00:04:47,470 --> 00:04:48,625
 0,285 285,645 645,900 900,1020 1020,1155
-slide three? I did this
+slide three, I did this
 
 174
 00:04:48,625 --> 00:04:49,435
 0,180 180,285 285,465 465,615 615,810
-didn't make sense it over
+didn't make sense it over,
 
 175
 00:04:49,435 --> 00:04:50,980
 0,335 445,845 865,1125 1125,1275 1275,1545
-right because in the past
+right,| because in the past
+|因为在过去，我们总是完成讲座，
 
 176
 00:04:50,980 --> 00:04:52,405
 0,390 390,675 675,840 840,1050 1050,1425
-we we've always finished lectures
+we we've always finished lectures,|
+|
 
 177
 00:04:52,405 --> 00:04:53,300
 0,275
-and.|
+and
+几个学生排队一遍又一遍地问同样的问题，
 
 178
 00:04:53,300 --> 00:04:54,425
 0,90 90,320 340,690 690,930 930,1125
-You know, several students lined
+you know, several students lined
 
 179
 00:04:54,425 --> 00:04:55,340
@@ -896,12 +1007,14 @@ up asking the same question
 180
 00:04:55,340 --> 00:04:57,455
 0,165 165,240 240,390 390,710 1840,2115
-over and over again and
+over and over again| and
+|所以我就是为什么我说，
 
 181
 00:04:57,455 --> 00:04:58,805
 0,180 180,485 745,1080 1080,1200 1200,1350
-again. So I'm if you
+again, so {that's,why,I'm,saying},| if you
+|如果你在我们进行的过程中打断我们，
 
 182
 00:04:58,805 --> 00:04:59,780
@@ -911,17 +1024,20 @@ interrupt us as we're going
 183
 00:04:59,780 --> 00:05:01,685
 0,320 640,870 870,1100 1330,1620 1620,1905
-along, you know, it help
+along,| you know, it help
+|这同时对每个人都有帮助，
 
 184
 00:05:01,685 --> 00:05:02,590
 0,240 240,345 345,465 465,615 615,905
-everyone at the same time.
+everyone at the same time,|
+|
 
 185
 00:05:02,670 --> 00:05:04,370
 0,260 260,520 1110,1400 1400,1520 1520,1700
-So please won't answer any
+so please, {we,won't} answer any
+所以，我们不会在下课后立即回答任何关于幻灯片的问题。
 
 186
 00:05:04,370 --> 00:05:05,360
@@ -932,21 +1048,24 @@ questions about the slides immediately
 00:05:05,360 --> 00:05:06,460
 0,210 210,530
 after class.|
+|
 
 188
 00:05:08,000 --> 00:05:09,510
 0,400 750,995 995,1085 1085,1220 1220,1510
-So what is this course?
+So what is this course,|
+那么，这是什么课程呢，|
 
 189
 00:05:10,070 --> 00:05:11,440
 0,400 480,815 815,1025 1025,1175 1175,1370
-So fifteen four hundred five,
+so {15-445/645 - - -
+所以， 15-445/645 是一门关于设计和实现数据库管理系统的课程，
 
 190
 00:05:11,440 --> 00:05:13,120
 0,180 180,330 330,620 850,1250 1360,1680
-six forty five is a
+- - -} is a
 
 191
 00:05:13,120 --> 00:05:15,100
@@ -956,32 +1075,37 @@ course about the design and
 192
 00:05:15,100 --> 00:05:16,820
 0,320 580,980
-implementation of.|
+implementation of
 
 193
 00:05:16,820 --> 00:05:18,610
 0,260 490,765 765,1035 1035,1410 1410,1790
-Of the database management systems.
+of the database management systems,|
+|
 
 194
 00:05:19,110 --> 00:05:20,480
 0,260 260,550 810,1100 1100,1190 1190,1370
-Now we we're going to
+now we we're going to
+我们将讨论关系数据库管理系统，
 
 195
 00:05:20,480 --> 00:05:21,940
 0,210 210,570 570,870 870,1140 1140,1460
-discuss relational database management systems
+discuss relational database management systems|
+|
 
 196
 00:05:22,380 --> 00:05:23,615
 0,335 335,560 560,680 680,935 935,1235
 and we'll cover that in
+我们将在下一节课中讨论这一点，
 
 197
 00:05:23,615 --> 00:05:25,325
 0,180 180,330 330,635 985,1380 1380,1710
-the next lecture. But it's
+the next lecture,| but it's
+|但这实际上是关于你如何构建这些系统的，
 
 198
 00:05:25,325 --> 00:05:26,195
@@ -991,12 +1115,14 @@ really about how you should
 199
 00:05:26,195 --> 00:05:27,160
 0,150 150,300 300,480 480,675 675,965
-have to build these systems.
+have to build these systems,|
+|
 
 200
 00:05:27,690 --> 00:05:28,940
 0,245 245,365 365,640 810,1085 1085,1250
-So this is, this is
+so this isn't, this isn't
+所以，这不是如何使用一个，
 
 201
 00:05:28,940 --> 00:05:29,810
@@ -1006,7 +1132,8 @@ of course how to use
 202
 00:05:29,810 --> 00:05:30,920
 0,320 520,780 780,900 900,1020 1020,1110
-one, this is going how
+one,| this isn't going how
+|这不是如何让一个应用使用 ORM ，
 
 203
 00:05:30,920 --> 00:05:32,180
@@ -1016,7 +1143,8 @@ to put an application that
 204
 00:05:32,180 --> 00:05:33,515
 0,270 270,510 510,810 810,1125 1125,1335
-that uses an m to
+that uses an ORM| to
+|来调用数据库等等，
 
 205
 00:05:33,515 --> 00:05:34,325
@@ -1026,7 +1154,8 @@ make calls to the database
 206
 00:05:34,325 --> 00:05:35,615
 0,255 255,545 655,945 945,1125 1125,1290
-or whatever is really how
+or whatever,| is really how
+|而是如何构建这些系统内部的东西。
 
 207
 00:05:35,615 --> 00:05:37,480
@@ -1037,11 +1166,13 @@ you build the internals of
 00:05:37,530 --> 00:05:38,680
 0,290 290,580
 these systems.|
+|
 
 209
 00:05:38,680 --> 00:05:39,895
 0,210 210,330 330,510 510,800 970,1215
 The reason why this you
+之所以要关注这个话题，
 
 210
 00:05:39,895 --> 00:05:40,585
@@ -1051,32 +1182,37 @@ want to focus on this
 211
 00:05:40,585 --> 00:05:41,980
 0,255 255,635
-topic because.|
+topic,| because
+|因为无论你在生活的哪个方面，
 
 212
 00:05:42,020 --> 00:05:43,210
 0,260 260,485 485,755 755,935 935,1190
-No matter where you go
+no matter where you go
 
 213
 00:05:43,210 --> 00:05:44,590
 0,285 285,435 435,570 570,860 1090,1380
-in in your life, in
+in in your life,| in
+|在计算机科学的任何方面，
 
 214
 00:05:44,590 --> 00:05:45,715
 0,270 270,510 510,660 660,870 870,1125
-any aspect of computer science,
+any aspect of computer science,|
+|
 
 215
 00:05:45,715 --> 00:05:46,705
 0,180 180,425 475,705 705,810 810,990
 where even outside of computer
+甚至在计算机科学之外，
 
 216
 00:05:46,705 --> 00:05:48,640
 0,305 925,1215 1215,1350 1350,1620 1620,1935
-science, there'll be times where
+science,| there'll be times, where
+|你总是与数据库交互，
 
 217
 00:05:48,640 --> 00:05:50,080
@@ -1086,7 +1222,8 @@ you're always gonna be interacting
 218
 00:05:50,080 --> 00:05:51,520
 0,60 60,150 150,410 910,1245 1245,1440
-with the database and therefore
+with the database| and therefore
+|所以你需要知道这些东西是如何运行的，
 
 219
 00:05:51,520 --> 00:05:52,255
@@ -1096,22 +1233,25 @@ you need to know how
 220
 00:05:52,255 --> 00:05:53,160
 0,135 135,270 270,435 435,615 615,905
-these things are actually running.
+these things are actually running,|
+|
 
 221
 00:05:53,270 --> 00:05:54,115
 0,290 290,425 425,515 515,695 695,845
-So if you don't go
+so if you don't go
+所以，如果你去 SingleStore ，
 
 222
 00:05:54,115 --> 00:05:55,705
 0,210 210,515 985,1260 1260,1395 1395,1590
-off and go to single
+off and go to {SingleStore
 
 223
 00:05:55,705 --> 00:05:56,830
 0,240 240,495 495,735 735,945 945,1125
-store and work on actually
+-}| and work on actually
+|去研究数据系统的内部，
 
 224
 00:05:56,830 --> 00:05:57,475
@@ -1121,12 +1261,14 @@ the internal of the data
 225
 00:05:57,475 --> 00:05:58,600
 0,305 535,780 780,885 885,1005 1005,1125
-system, you need to know
+system,| you need to know
+|你需要知道实际发生了什么，
 
 226
 00:05:58,600 --> 00:05:59,815
 0,240 240,390 390,555 555,860 970,1215
-what's actually going on to
+what's actually going on| to
+|以帮助你理解为什么系统是某种行为，
 
 227
 00:05:59,815 --> 00:06:01,390
@@ -1136,27 +1278,31 @@ help you understand, you know,
 228
 00:06:01,390 --> 00:06:03,025
 0,290 460,860 1000,1290 1290,1455 1455,1635
-why the hitting a certain
+why the {system,behaving} a certain
 
 229
 00:06:03,025 --> 00:06:03,700
 0,305
-play.|
+way,|
+|
 
 230
 00:06:03,700 --> 00:06:04,945
 0,285 285,495 495,630 630,920 970,1245
 I actually had people email
+实际上，人们给我发电子邮件，告诉我，
 
 231
 00:06:04,945 --> 00:06:06,270
 0,120 120,225 225,375 375,665 925,1325
-me and tell me that
+me and tell me that,|
+|
 
 232
 00:06:06,770 --> 00:06:08,095
 0,400 660,950 950,1100 1100,1205 1205,1325
-you a lot of the
+{} a lot of the
+数据库中的许多概念适用于其他事情，
 
 233
 00:06:08,095 --> 00:06:10,030
@@ -1166,22 +1312,25 @@ concepts they databases are applicable
 234
 00:06:10,030 --> 00:06:12,085
 0,105 105,270 270,590 1480,1785 1785,2055
-to other things like queuing
+to other things,| like queuing
+|比如排队系统等等，
 
 235
 00:06:12,085 --> 00:06:12,895
 0,210 210,405 405,540 540,690 690,810
-systems and what not. So
+systems and what not,| so
+|所以，这学期将要发生的事情，
 
 236
 00:06:12,895 --> 00:06:14,170
 0,245 295,660 660,915 915,1110 1110,1275
-like you, the things were
+like {}, the things were
 
 237
 00:06:14,170 --> 00:06:15,640
 0,165 165,330 330,680 1000,1305 1305,1470
-coming this semester I think
+coming this semester,| I think
+|我认为在你的整个职业生涯中都会非常有用。
 
 238
 00:06:15,640 --> 00:06:16,795
@@ -1192,11 +1341,13 @@ will be super useful throughout
 00:06:16,795 --> 00:06:18,140
 0,180 180,405 405,755
 your entire career.|
+|
 
 240
 00:06:18,380 --> 00:06:20,050
 0,400 570,875 875,1085 1085,1390 1410,1670
 So if you want to
+所以，如果你想学习如何使用数据库系统，
 
 241
 00:06:20,050 --> 00:06:20,905
@@ -1206,7 +1357,8 @@ learn about how to use
 242
 00:06:20,905 --> 00:06:21,790
 0,120 120,315 315,585 585,765 765,885
-a database system or how
+a database system| or how
+|或如何管理数据库系统，比如成为一名 DBA ，
 
 243
 00:06:21,790 --> 00:06:23,335
@@ -1216,12 +1368,14 @@ to administrate administer a database
 244
 00:06:23,335 --> 00:06:24,570
 0,270 270,450 450,615 615,765 765,1235
-system, like being a dba,
+system, like being a DBA,|
+|
 
 245
 00:06:25,280 --> 00:06:26,545
 0,410 410,590 590,755 755,1025 1025,1265
 there's a couple courses in
+Heinz 学院有几门课程你可能应该选择，
 
 246
 00:06:26,545 --> 00:06:27,610
@@ -1231,7 +1385,8 @@ Heinz college that you should
 247
 00:06:27,610 --> 00:06:29,260
 0,150 150,420 420,800 1270,1515 1515,1650
-probably take instead. This is
+probably take instead,| this is
+|这是关于人们想要对这些系统的内部结构动手。
 
 248
 00:06:29,260 --> 00:06:30,685
@@ -1252,31 +1407,37 @@ on the internals of these
 00:06:32,995 --> 00:06:33,880
 0,275
 systems.|
+|
 
 252
 00:06:35,110 --> 00:06:36,300
 0,350 350,590 590,725 725,1100 1100,1190
-Right. So the logistics of
+{All,right}, so the logistics of
+好的，所以课程的后勤，
 
 253
 00:06:36,300 --> 00:06:37,095
 0,90 90,350 370,630 630,720 720,795
-the course, everything will be
+the course,| everything will be
+|一切都会在课程网站上，
 
 254
 00:06:37,095 --> 00:06:39,050
 0,75 75,165 165,315 315,605 1465,1955
-on the course website. We'll
+on the course website,| we'll
+|我们很快就会发布，
 
 255
 00:06:39,400 --> 00:06:40,700
 0,275 275,575 575,770 770,980 980,1300
-be publishing that very soon.
+be publishing that very soon,|
+|
 
 256
 00:06:41,620 --> 00:06:43,245
 0,400 420,770 770,1025 1025,1325 1325,1625
-The all the discussions and
+the all the discussions and
+整个学期的所有讨论和公告都将通过 Piazza 完成，
 
 257
 00:06:43,245 --> 00:06:44,415
@@ -1286,27 +1447,32 @@ announcements throughout the semester will
 258
 00:06:44,415 --> 00:06:46,260
 0,105 105,300 300,540 540,1115 1465,1845
-be done through piazza. Um,
+be done through Piazza, {}|
+|
 
 259
 00:06:46,260 --> 00:06:47,505
 0,285 285,495 495,750 750,990 990,1245
 all the homework and projects
+所有的作业和项目都是通过 Gradescope 提交，
 
 260
 00:06:47,505 --> 00:06:48,860
 0,225 225,360 360,630 630,840 840,1355
-will be submitted through grope.
+will be submitted through Gradescope,|
+|
 
 261
 00:06:49,210 --> 00:06:51,080
 0,320 320,500 500,620 620,1120 1470,1870
-Everything will be autaded, um,
+everything will be autograded, {}|
+一切都将自动打分，|
 
 262
 00:06:51,490 --> 00:06:52,640
 0,260 260,380 380,500 500,740 740,1150
 and then the final grades
+然后最后的成绩将再次发布在 Canvas 上，
 
 263
 00:06:52,900 --> 00:06:54,420
@@ -1316,17 +1482,20 @@ will be posted on on
 264
 00:06:54,420 --> 00:06:56,205
 0,350 850,1095 1095,1200 1200,1365 1365,1785
-campus again if you're enrolled
+Canvas,| again if you're enrolled
+|如果你报名参加了这门课程，
 
 265
 00:06:56,205 --> 00:06:58,080
 0,120 120,285 285,575 775,1175
-in the course. Ah.|
+in the course, {}|
+|
 
 266
 00:06:58,880 --> 00:07:00,505
 0,575 575,785 785,1025 1025,1385 1385,1625
-Officially, you should have access
+officially, you should have access
+按照官方说法，你现在应该可以接触到所有这些东西。
 
 267
 00:07:00,505 --> 00:07:01,210
@@ -1337,16 +1506,19 @@ to all these things right
 00:07:01,210 --> 00:07:02,080
 0,260
 now.|
+|
 
 269
 00:07:03,630 --> 00:07:04,600
 0,275 275,410 410,575 575,680 680,970
-So if you're a non
+So if you're a {non-CMU
+如果你不是 CMU 大学的学生，
 
 270
 00:07:04,620 --> 00:07:05,675
 0,290 290,485 485,755 755,965 965,1055
-C U student because I
+- -} student,| because I
+|因为我知道你们很多外面的人，
 
 271
 00:07:05,675 --> 00:07:06,230
@@ -1356,37 +1528,43 @@ know a lot of you
 272
 00:07:06,230 --> 00:07:07,850
 0,315 315,570 570,860 940,1245 1245,1620
-outside, you like watch lectures
+outside,| you like watch lectures
+|你喜欢看讲座和项目，
 
 273
 00:07:07,850 --> 00:07:09,605
 0,290 310,675 675,1040 1330,1605 1605,1755
-and project well we have
+and project,| well, we have
+|我们为这门课程设立了一个单独的 Gradescope 账户，
 
 274
 00:07:09,605 --> 00:07:12,590
 0,165 165,435 435,780 780,1145 2665,2985
-a separate grade scope account
+a separate {Gradescope -} account
 
 275
 00:07:12,590 --> 00:07:13,325
 0,165 165,270 270,375 375,495 495,735
-set up for the course
+set up for the course,|
+|
 
 276
 00:07:13,325 --> 00:07:14,590
 0,240 240,420 420,720 720,990 990,1265
 that will mirror what the
+它将镜像 CMU 官方所做的事情，
 
 277
 00:07:14,670 --> 00:07:15,790
 0,335 335,545 545,680 680,830 830,1120
-official C U one does
+official {CMU -} one does|
+|
 
 278
 00:07:16,800 --> 00:07:17,585
 0,260 260,365 365,470 470,605 605,785
 and you can use this
+你可以使用这个代码登录并访问它，
 
 279
 00:07:17,585 --> 00:07:18,920
@@ -1401,7 +1579,8 @@ and and get access to
 281
 00:07:20,030 --> 00:07:20,855
 0,195 195,405 405,510 510,645 645,825
-it and this will allow
+it| and this will allow
+|这将允许你提交你的项目，并获得评分，
 
 282
 00:07:20,855 --> 00:07:21,800
@@ -1411,22 +1590,25 @@ you to submit your projects
 283
 00:07:21,800 --> 00:07:22,835
 0,225 225,390 390,705 705,855 855,1035
-and get graded the same
+and get graded,| the same
+|就像 CMU 学生一样，
 
 284
 00:07:22,835 --> 00:07:25,100
 0,305 1135,1515 1515,1770 1770,1995 1995,2265
-way that the senior students
+way that the CMU students
 
 285
 00:07:25,100 --> 00:07:26,675
 0,320 700,1080 1080,1305 1305,1410 1410,1575
-do. So again, if you're
+do,| so again, if you're
+|所以再说一次，如果你不是 CMU 学生，
 
 286
 00:07:26,675 --> 00:07:27,875
 0,195 195,480 480,750 750,960 960,1200
-non senior student, we ask
+{non-CMU -} student,| we ask
+|我们为你提供了这个来为你评分，
 
 287
 00:07:27,875 --> 00:07:29,180
@@ -1441,17 +1623,20 @@ this materials for you for
 289
 00:07:31,955 --> 00:07:32,880
 0,120 120,395
-your charge.|
+your charge,|
+|
 
 290
 00:07:32,880 --> 00:07:39,180
-0,200
-Please.|
+0,3120 3120,6300
+{please,don't,post,your,solutions,on,Github},| {please,don't,email,myself,or,Jignesh,or,TAs,for,help},|
+请不要把你的答案放在 Github ，|请不要给我或者 Jignesh 或助教发邮件寻求帮助，|
 
 291
 00:07:39,180 --> 00:07:39,810
 0,135 135,255 255,360 360,465 465,630
-We have so many people
+we have so many people
+我们在 CMU 有太多的人需要帮助，
 
 292
 00:07:39,810 --> 00:07:40,470
@@ -1461,12 +1646,14 @@ we need help here at
 293
 00:07:40,470 --> 00:07:41,690
 0,330 330,465 465,630 630,840 840,1220
-cmu. We can't help everyone.
+CMU,| we can't help everyone,|
+|我们不可能帮助所有人，|
 
 294
 00:07:42,370 --> 00:07:43,620
 0,275 275,440 440,620 620,995 995,1250
-There is a discord channel
+there is a Discord Channel
+有一个 Discord 频道不是由 CMU 运营的，
 
 295
 00:07:43,620 --> 00:07:44,685
@@ -1476,17 +1663,20 @@ that actually is not run
 296
 00:07:44,685 --> 00:07:46,365
 0,165 165,635 985,1350 1350,1575 1575,1680
-by cmu. Somebody outside of
+by CMU,| somebody outside of
+|它之外的某个人策划了这件事，
 
 297
 00:07:46,365 --> 00:07:47,990
 0,245 715,1050 1050,1245 1245,1365 1365,1625
-it has set this up.
+it has set this up,|
+|
 
 298
 00:07:48,310 --> 00:07:49,125
 0,275 275,395 395,530 530,695 695,815
-This sort of become the
+this sort of become the
+这是以前讨论各种方面的实际位置，
 
 299
 00:07:49,125 --> 00:07:52,010
@@ -1496,7 +1686,8 @@ de facto location for discussing
 300
 00:07:52,510 --> 00:07:53,805
 0,400 420,785 785,1040 1040,1175 1175,1295
-various aspects before, so I
+various aspects before,| so I
+|所以我鼓励你注册并查看。
 
 301
 00:07:53,805 --> 00:07:54,660
@@ -1507,11 +1698,13 @@ encourage you to sign and
 00:07:54,660 --> 00:07:55,640
 0,120 120,225 225,470
 check that out.|
+|
 
 303
 00:07:55,640 --> 00:07:57,070
 0,240 240,435 435,740 760,1095 1095,1430
 And again, in in exchange
+再次，作为帮助我们的交换，
 
 304
 00:07:57,090 --> 00:07:59,705
@@ -1521,27 +1714,32 @@ for helping us out with
 305
 00:07:59,705 --> 00:08:01,270
 0,165 165,420 420,755 985,1275 1275,1565
-this or you us helping
+this| or you us helping
+|或者帮助每个人这些材料，
 
 306
 00:08:01,380 --> 00:08:02,860
 0,335 335,530 530,755 755,1100 1100,1480
-everyone with these these materials,
+everyone with these these materials,|
+|
 
 307
 00:08:04,050 --> 00:08:05,390
 0,275 275,425 425,695 695,1070 1070,1340
 I ask if someone please
+我请求谁来完成我的维基百科文章，
 
 308
 00:08:05,390 --> 00:08:09,760
 0,195 195,360 360,890
-finish my wikiped.|
+finish my {Wikipedia,article},|
+|
 
 309
 00:08:09,990 --> 00:08:10,970
 0,215 215,430 450,695 695,800 800,980
-You know, there was some
+you know, there was some
+有些事情是真的，但不是真的，
 
 310
 00:08:10,970 --> 00:08:12,035
@@ -1551,7 +1749,8 @@ stuff that was sort of
 311
 00:08:12,035 --> 00:08:13,520
 0,270 270,510 510,705 705,995 1195,1485
-true, not true. Whatever. Someone
+true, not true, whatever,| someone
+|有人能帮我修好，那就太好了。
 
 312
 00:08:13,520 --> 00:08:14,165
@@ -1562,26 +1761,31 @@ could fix that for me,
 00:08:14,165 --> 00:08:15,340
 0,60 60,120 120,270 270,575
 that would be great.|
+|
 
 314
 00:08:16,130 --> 00:08:16,990
 0,320 320,395 395,650 650,755 755,860
 There's a textbook for the
+有一本教科书，
 
 315
 00:08:16,990 --> 00:08:19,240
 0,260 850,1185 1185,1455 1455,1995 1995,2250
-course database systems concepts from
+course,| database systems concepts from
+|来自 Silberschatz Korth Sudarshan 的数据库系统概念，
 
 316
 00:08:19,240 --> 00:08:21,900
 0,270 270,560 1030,1430 1510,1910 2260,2660
-server shots or generation. Um,
+{Silberschatz -} Korth Sudarshan, {}|
+|
 
 317
 00:08:22,490 --> 00:08:24,535
 0,580 780,1130 1130,1480 1590,1865 1865,2045
-it's not required like there's
+it's not required,| like there's
+这不是必须的，|没有基于它的作业，
 
 318
 00:08:24,535 --> 00:08:25,330
@@ -1591,12 +1795,14 @@ no homework that are based
 319
 00:08:25,330 --> 00:08:26,380
 0,150 150,410 610,855 855,945 945,1050
-on it. But if you
+on it,| but if you
+|但如果你想要补充阅读以外的内容，
 
 320
 00:08:26,380 --> 00:08:28,105
 0,195 195,705 705,950 970,1365 1365,1725
-want supplemental reading beyond, we
+want supplemental reading beyond,| we
+|我们会在课堂上讨论你正在阅读的内容，
 
 321
 00:08:28,105 --> 00:08:31,105
@@ -1606,7 +1812,8 @@ discuss in the class you
 322
 00:08:31,105 --> 00:08:32,275
 0,195 195,495 495,765 765,945 945,1170
-be reading, you can go
+be reading,| you can go
+|你可以深入探讨各种主题，
 
 323
 00:08:32,275 --> 00:08:34,570
@@ -1616,7 +1823,8 @@ and dive deeper into various
 324
 00:08:34,570 --> 00:08:35,965
 0,320 550,950 1030,1245 1245,1305 1305,1395
-topics. Now there are gonna
+topics,| now there are gonna
+|现在我们要讨论一些课本上没有讲到的东西，
 
 325
 00:08:35,965 --> 00:08:37,225
@@ -1631,17 +1839,20 @@ discuss that the textbook doesn't
 327
 00:08:39,370 --> 00:08:40,660
 0,260 460,705 705,900 900,1095 1095,1290
-cover. I don't covers as
+cover,| I don't covers as
+|我没有讲到他们应有的，
 
 328
 00:08:40,660 --> 00:08:42,700
 0,165 165,315 315,480 480,770
-well as they should.|
+well as they should,|
+|
 
 329
 00:08:42,700 --> 00:08:44,275
 0,255 255,570 570,800 1060,1395 1395,1575
-And that's what we'll provide
+and that's what we'll provide
+这就是我们将提供的课堂讲稿 PDF 文件，
 
 330
 00:08:44,275 --> 00:08:45,445
@@ -1651,7 +1862,8 @@ lecture notes as PDF files
 331
 00:08:45,445 --> 00:08:48,790
 0,210 210,330 330,570 570,935 3055,3345
-that are available there, whether
+that are available there,| whether
+|无论你是否需要购买这本教科书，
 
 332
 00:08:48,790 --> 00:08:49,405
@@ -1661,12 +1873,14 @@ you need to buy this
 333
 00:08:49,405 --> 00:08:50,820
 0,360 360,510 510,785
-textbook or not.|
+textbook or not,|
+|
 
 334
 00:08:52,040 --> 00:08:52,930
 0,305 305,395 395,500 500,665 665,890
-It's up to you. It
+it's up to you,| it
+由你决定，|这取决于你想要进入这一领域的程度。
 
 335
 00:08:52,930 --> 00:08:54,300
@@ -1682,11 +1896,13 @@ really want to go into
 00:08:55,150 --> 00:08:56,600
 0,290
 this.|
+|
 
 338
 00:08:58,140 --> 00:08:59,315
 0,335 335,545 545,695 695,950 950,1175
-Ah, so the grading rubric
+{All,right}, so the grading rubric
+好的，这学期的评分题目是[这样的]，
 
 339
 00:08:59,315 --> 00:09:00,905
@@ -1696,12 +1912,14 @@ for this semester is me
 340
 00:09:00,905 --> 00:09:01,910
 0,275 475,720 720,810 810,885 885,1005
-falling. So this is a
+falling,| so this is a
+|这是一门重工程的课程，
 
 341
 00:09:01,910 --> 00:09:03,050
 0,240 240,525 525,840 840,1050 1050,1140
-project heavy course. So the
+project heavy course,| so the
+|所以， 45% 的分数将基于你的项目，
 
 342
 00:09:03,050 --> 00:09:04,775
@@ -1711,17 +1929,20 @@ project heavy course. So the
 343
 00:09:04,775 --> 00:09:05,680
 0,105 105,285 285,480 480,630 630,905
-be based on your projects.
+be based on your projects,|
+|
 
 344
 00:09:06,090 --> 00:09:06,830
 0,245 245,380 380,530 530,635 635,740
-And I discuss what these
+and I discuss what these
+我马上就会讨论这些是什么，
 
 345
 00:09:06,830 --> 00:09:08,890
 0,105 105,180 180,285 285,560 1660,2060
-are in a second. The
+are in a second,| the
+|这是五个作业，四个项目，然后是期中考试和期末考试，
 
 346
 00:09:10,020 --> 00:09:12,190
@@ -1736,17 +1957,20 @@ then a midterm exam and
 348
 00:09:14,015 --> 00:09:15,440
 0,315 315,665 925,1200 1200,1320 1320,1425
-a final. You see the
+a final,| You see the
+|你可以看到这里的细目。
 
 349
 00:09:15,440 --> 00:09:16,560
 0,375 375,710
 breakdown here.|
+|
 
 350
 00:09:17,510 --> 00:09:18,510
 0,305 305,470 470,635 635,770 770,1000
-Right, so all the homework
+{All,right}, so all the homework
+好的，所以所有的家庭作业都是基于我们在课堂上和指定阅读材料上所学到的材料，
 
 351
 00:09:18,530 --> 00:09:19,950
@@ -1766,22 +1990,24 @@ class and in the assign
 354
 00:09:23,290 --> 00:09:25,600
 0,410 1180,1485 1485,1755 1755,2055 2055,2310
-readings. The first homework assignment
+readings,| the first homework assignment
+|第一个家庭作业将是一个 SQL 作业或 SQL 项目，
 
 355
 00:09:25,600 --> 00:09:26,860
 0,90 90,240 240,435 435,855 855,1260
-will be a sql assignment
+will be a SQL assignment
 
 356
 00:09:26,860 --> 00:09:28,480
 0,290 310,660 660,920 1180,1455 1455,1620
-or sl project where you
+or SQL project,| where you
+|你将编写一些针对数据集的 SQL 查询，并看到所有问题的正确答案，
 
 357
 00:09:28,480 --> 00:09:31,255
 0,165 165,315 315,495 495,980 2500,2775
-write some s queries against
+write some SQL queries against
 
 358
 00:09:31,255 --> 00:09:33,025
@@ -1791,7 +2017,8 @@ the data set and see
 359
 00:09:33,025 --> 00:09:35,580
 0,210 210,515 1765,2025 2025,2220 2220,2555
-correct answer everything. After that
+correct answer,| everything after that
+|在那之后，家庭作业将全部是笔纸，
 
 360
 00:09:35,660 --> 00:09:36,685
@@ -1801,27 +2028,31 @@ homework will be all pencil
 361
 00:09:36,685 --> 00:09:38,140
 0,335 535,795 795,960 960,1095 1095,1455
-paper but you'll still sniffers
+paper,| but you'll still see
+|但你仍然会看到，代码自动评分，
 
 362
 00:09:38,140 --> 00:09:39,055
 0,150 150,315 315,525 525,735 735,915
-and gr code in and
+and {} code in and
 
 363
 00:09:39,055 --> 00:09:40,380
 0,105 105,435 435,555 555,815
-the autograph it there.|
+the autograded it there,|
+|
 
 364
 00:09:40,390 --> 00:09:42,120
 0,400 540,875 875,1100 1100,1390 1410,1730
-Again, it c you everyone
+again, it {CMU -} everyone
+再说一次，你们每个人都知道，
 
 365
 00:09:42,120 --> 00:09:43,280
 0,210 210,495 495,765 765,900 900,1160
-knows that all your homework
+knows that,| all your homework
+|你们所有的家庭作业都应该独立完成，不应该互相抄袭。
 
 366
 00:09:43,300 --> 00:09:45,495
@@ -1832,11 +2063,13 @@ should be done individually and
 00:09:45,495 --> 00:09:47,000
 0,210 210,555 555,875 985,1245 1245,1505
 you shouldn't copy each other.|
+|
 
 368
 00:09:48,800 --> 00:09:50,095
 0,290 290,500 500,820 870,1145 1145,1295
 All the projects will be
+所有的项目都将基于我们在这里建造了几年的系统， BusTub ，
 
 369
 00:09:50,095 --> 00:09:50,920
@@ -1846,72 +2079,84 @@ based on a system we've
 370
 00:09:50,920 --> 00:09:51,990
 0,90 90,300 300,555 555,765 765,1070
-been building for several years
+been building for several {years\,,called,BusTub},|
+|
 
 371
 00:09:52,280 --> 00:09:57,150
 0,400 4020,4355 4355,4535 4535,4625 4625,4870
-here class. What the name
+{we,discuss,in,the} class, what the name
+在课程种，我们将讨论这个名字的含义，来自于什么，
 
 372
 00:09:57,320 --> 00:10:00,860
 0,335 335,670 2430,2720 2720,3010
-actually means came from.|
+actually means, came from,|
+|
 
 373
 00:10:00,860 --> 00:10:02,870
 0,290 730,1095 1095,1455 1455,1800 1800,2010
-Ah, but the idea here
+{} but the idea here
+但这里的想法是，
 
 374
 00:10:02,870 --> 00:10:06,250
 0,210 210,560 940,1260 1260,1490 2020,3380
-is that it's a it's
+is that,| it's a, it's
+|这是一个教育试验数据系统，
 
 375
 00:10:06,900 --> 00:10:08,920
 0,350 350,755 755,965 965,1300 1620,2020
-educational testbed data system where
+educational test database system,| where
+|你在上面做所有的项目，
 
 376
 00:10:09,390 --> 00:10:10,505
 0,395 395,560 560,740 740,905 905,1115
-you do all your projects
+you do all your projects|
+|
 
 377
 00:10:10,505 --> 00:10:11,855
 0,255 255,420 420,690 690,1005 1005,1350
 on and you'll see over
+随着时间的推移，你会看到，
 
 378
 00:10:11,855 --> 00:10:13,070
 0,360 360,615 615,735 735,945 945,1215
-time as you add more
+time,| as you add more
+|随着你给系统增加更多的功能，
 
 379
 00:10:13,070 --> 00:10:14,660
 0,285 285,480 480,660 660,1010 1300,1590
-features to the system, you'll
+features to the system,| you'll
+|你会更好地理解如何，
 
 380
 00:10:14,660 --> 00:10:15,635
 0,75 75,165 165,375 375,660 660,975
-get a better understanding how,
+get a better understanding,| how,
+|所有这三个层可以放在一起，
 
 381
 00:10:15,635 --> 00:10:16,840
 0,330 330,665
-how the.|
+how the,
 
 382
 00:10:16,840 --> 00:10:18,040
 0,270 270,420 420,600 600,975 975,1200
-All the there layers fit
+all the there layers fit
 
 383
 00:10:18,040 --> 00:10:19,990
 0,255 255,560 730,990 990,1250 1630,1950
-together and you can run
+together| and you can run
+|你可以根据你实际的东西来运行查询和结果。
 
 384
 00:10:19,990 --> 00:10:21,880
@@ -1922,11 +2167,13 @@ queries and results based on
 00:10:21,880 --> 00:10:23,220
 0,255 255,435 435,615 615,890
 stuff you actually go.|
+|
 
 386
 00:10:23,320 --> 00:10:25,035
 0,400 720,1085 1085,1325 1325,1580 1580,1715
 So it's very important that
+所以，重要的是不要在项目上落后，
 
 387
 00:10:25,035 --> 00:10:25,830
@@ -1936,7 +2183,8 @@ you don't fall behind on
 388
 00:10:25,830 --> 00:10:27,045
 0,90 90,350 400,705 705,945 945,1215
-the projects because every project
+the projects,| because every project
+|因为每个项目都将建立在先前项目的基础上，
 
 389
 00:10:27,045 --> 00:10:27,675
@@ -1946,7 +2194,8 @@ is going to build on
 390
 00:10:27,675 --> 00:10:28,995
 0,105 105,365 745,1005 1005,1125 1125,1320
-the previous, like in project
+the previous,| like in project
+|比如在项目一中，你将构建一个缓冲区管理器，
 
 391
 00:10:28,995 --> 00:10:29,565
@@ -1956,7 +2205,8 @@ one, you're going to build
 392
 00:10:29,565 --> 00:10:31,035
 0,105 105,360 360,755 1105,1350 1350,1470
-a buff manager. Then in
+a buffer manager,| then in
+|然后，在项目二中，你将构建一个索引，
 
 393
 00:10:31,035 --> 00:10:31,845
@@ -1966,7 +2216,8 @@ project two, you're going to
 394
 00:10:31,845 --> 00:10:33,690
 0,245 595,930 930,1200 1200,1530 1530,1845
-build an index that that
+build an index,| that that
+|获取页面或获取空类型，
 
 395
 00:10:33,690 --> 00:10:34,860
@@ -1976,47 +2227,56 @@ gets pages or gets gets
 396
 00:10:34,860 --> 00:10:37,515
 0,470 1870,2130 2130,2295 2295,2460 2460,2655
-emptypy. So it's really important
+empty,| so it's really important,|
+|所以，这一点非常重要，|
 
 397
 00:10:37,515 --> 00:10:38,270
 0,120 120,240 240,375 375,495 495,755
-that you stay on track,
+that you stay on track,|
+你要保持跟上，|
 
 398
 00:10:38,410 --> 00:10:40,380
 0,305 305,575 575,940 1260,1660 1680,1970
 start projects early and and
+尽早开始项目，不要落后，
 
 399
 00:10:40,380 --> 00:10:41,660
 0,225 225,420 420,770
 don't fall behind.|
+|
 
 400
 00:10:42,520 --> 00:10:44,840
 0,275 275,550 1290,1690 1770,2045 2045,2320
-Is written specifically, I {think2017
+{BusTub,is} written {in,C++}, I {think,2017
+BusTub 是用 C++17 编写的，
 
 401
 00:10:46,000 --> 00:10:49,340
 0,1840 2490,2735 2735,2900 2900,3050 3050,3340
--} we don't use all
+-},| we don't use {all,the,advanced,features},|
+|我们没有使用所有先进特性，|
 
 402
 00:10:51,100 --> 00:10:52,860
 0,400 510,910
-but the.|
+but the,|
+但是，|
 
 403
 00:10:53,200 --> 00:10:54,270
 0,275 275,515 515,725 725,905 905,1070
-The assumptions that you're coming
+the assumptions that you're coming
+假设你进入这门课的时候，
 
 404
 00:10:54,270 --> 00:10:55,440
 0,320 340,630 630,870 870,1065 1065,1170
-into this class with the
+into this class| with the
+|熟悉 C++ 的编写和调试，
 
 405
 00:10:55,440 --> 00:10:57,570
@@ -2026,12 +2286,13 @@ familiarity and and being comfortable
 406
 00:10:57,570 --> 00:10:59,295
 0,180 180,440 610,885 885,1485 1485,1725
-with writing and debugging c
+with writing and debugging {C++
 
 407
 00:10:59,295 --> 00:11:01,545
 0,135 135,425 775,1175 1705,2055 2055,2250
-plus plus, um and so
+- -},| {} and so
+|我认为在 Piazza 上的一个帖子，
 
 408
 00:11:01,545 --> 00:11:01,995
@@ -2041,22 +2302,25 @@ I think it was a
 409
 00:11:01,995 --> 00:11:03,900
 0,150 150,315 315,765 765,1055 1645,1905
-post on piazza whether two,
+post on Piazza,| whether {213
+|213 513 是否足够了，
 
 410
 00:11:03,900 --> 00:11:05,145
 0,210 210,435 435,645 645,915 915,1245
-thirteen, five, thirteen was was
+-} {513 -} was, was
 
 411
 00:11:05,145 --> 00:11:06,465
 0,270 270,390 390,635 775,1005 1005,1320
-enough of this. The answer's
+enough of this,| the answer's
+|答案是否定的，
 
 412
 00:11:06,465 --> 00:11:09,075
 0,275 2035,2280 2280,2355 2355,2430 2430,2610
-no, some of the things
+no,| some of the things
+|有些东西你可以边走边学，
 
 413
 00:11:09,075 --> 00:11:09,720
@@ -2066,37 +2330,43 @@ you'll be able to pick
 414
 00:11:09,720 --> 00:11:11,400
 0,260 880,1140 1140,1245 1245,1395 1395,1680
-up as you go along
+up as you go along,|
+|
 
 415
 00:11:11,400 --> 00:11:12,630
 0,285 285,630 630,930 930,1095 1095,1230
 but it's, it's a little
+但它比 213 多一点。
 
 416
 00:11:12,630 --> 00:11:14,160
 0,290 400,690 690,980 1090,1380 1380,1530
-I little more than two
+I little more than {213
 
 417
 00:11:14,160 --> 00:11:14,940
 0,260
-thirteen.|
+-}.|
+|
 
 418
 00:11:15,860 --> 00:11:17,120
 0,75 75,320 790,1065 1065,1170 1170,1260
-I'll cover days in a
+I'll cover {later,days} in a
+我会花点时间讲一下晚些时候，
 
 419
 00:11:17,120 --> 00:11:18,540
 0,150 150,390 390,860
-second, but there.|
+second,| but there,|
+|但是，|
 
 420
 00:11:18,660 --> 00:11:19,340
 0,245 245,320 320,425 425,575 575,680
-Well, the late days are
+well, the late days are
+好的，只有项目和家庭作业才允许晚些时候，
 
 421
 00:11:19,340 --> 00:11:20,240
@@ -2106,97 +2376,114 @@ only allowed for projects and
 422
 00:11:20,240 --> 00:11:21,560
 0,75 75,320 700,975 975,1155 1155,1320
-the homework and you're given
+the homework| and you're given
+|你有四个晚些天的时间，你可以用来做任何项目，
 
 423
 00:11:21,560 --> 00:11:22,805
 0,210 210,390 390,680 850,1125 1125,1245
-four late days that you
+four late days, that you
 
 424
 00:11:22,805 --> 00:11:23,630
 0,105 105,285 285,435 435,585 585,825
-can use for any project
+can use for any project,|
+|
 
 425
 00:11:23,630 --> 00:11:24,580
 0,210 210,375 375,510 510,660 660,950
-as as we go along
+as as we go along,|
+只要我们继续进行，|
 
 426
 00:11:25,080 --> 00:11:26,030
 0,260 260,395 395,560 560,740 740,950
 and as we release each
+当我们发布每个项目时，
 
 427
 00:11:26,030 --> 00:11:27,170
 0,300 300,570 570,750 750,945 945,1140
-project, there'll be an online
+project,| there'll be an online
+|会有一个在线演示文稿，
 
 428
 00:11:27,170 --> 00:11:28,535
 0,350 550,825 825,960 960,1170 1170,1365
-presentation that will hold where
+presentation,| that will hold where
+|你可以来问，
 
 429
 00:11:28,535 --> 00:11:29,380
 0,75 75,165 165,315 315,525 525,845
-you can come ask you
+you can come ask,| you
+|在项目发布一周后，
 
 430
 00:11:29,640 --> 00:11:30,575
 0,290 290,455 455,635 635,785 785,935
-a week after the paid
+a week after the {}
 
 431
 00:11:30,575 --> 00:11:32,225
 0,285 285,665 955,1230 1230,1500 1500,1650
-project released. After you've sort
+project released,| after you've sort
+|在你看了代码之后，
 
 432
 00:11:32,225 --> 00:11:32,870
 0,90 90,210 210,345 345,465 465,645
-of looked at the code,
+of looked at the code,|
+|
 
 433
 00:11:32,870 --> 00:11:33,725
 0,150 150,255 255,420 420,600 600,855
 you can come ask questions
+你可以通过助教来询问问题，
 
 434
 00:11:33,725 --> 00:11:34,910
 0,255 255,545 595,840 840,960 960,1185
-about it with the tas
+about it with the TAs|
+|
 
 435
 00:11:34,910 --> 00:11:35,960
 0,350 370,630 630,750 750,885 885,1050
 and before that make that
+在它发布给所有人之前。
 
 436
 00:11:35,960 --> 00:11:37,040
 0,255 255,620
-available forever.|
+available {for,everone}.|
+|
 
 437
 00:11:38,350 --> 00:11:39,810
 0,305 305,530 530,845 845,1160 1160,1460
 So as posted in the,
+所以，正如在电子邮件中发布的，
 
 438
 00:11:39,810 --> 00:11:40,950
 0,255 255,450 450,750 750,990 990,1140
-in the email, and I'll
+in the email,| and I'll
+|我将再次发布，
 
 439
 00:11:40,950 --> 00:11:42,225
 0,165 165,435 435,770 910,1170 1170,1275
-post that again, there is
+post that again,| there is
+|有一个项目0，
 
 440
 00:11:42,225 --> 00:11:43,545
 0,120 120,395 415,750 750,1035 1035,1320
-a project zero that require
+a project zero,| that require
+|要求所有想要选修这门课的学生必须完成，
 
 441
 00:11:43,545 --> 00:11:44,535
@@ -2211,12 +2498,14 @@ take the class have to
 443
 00:11:45,810 --> 00:11:47,360
 0,320 670,945 945,1095 1095,1260 1260,1550
-complete. And this is really
+complete,| and this is really
+|这实际上是一种安全机制，
 
 444
 00:11:47,590 --> 00:11:49,095
 0,395 395,680 680,920 920,1265 1265,1505
-A A safety mechanism to
+{} a safety mechanism,| to
+|确保你来这门课的时候准备好写 C++ 代码，
 
 445
 00:11:49,095 --> 00:11:50,355
@@ -2231,17 +2520,20 @@ to this class prepared to
 447
 00:11:51,840 --> 00:11:52,910
 0,225 225,450 450,585 585,765 765,1070
-write c plus plus code
+write {C++ - -} code,|
+|
 
 448
 00:11:54,010 --> 00:11:55,695
 0,290 290,575 575,980 980,1250 1250,1685
 and so it's not graded
+所以它不会评分，
 
 449
 00:11:55,695 --> 00:11:56,610
 0,135 135,270 270,405 405,690 690,915
-in that it doesn't affect
+in that,| it doesn't affect
+|因为它不会影响你在这门课上的最终分数，
 
 450
 00:11:56,610 --> 00:11:57,465
@@ -2251,22 +2543,25 @@ your final score in the
 451
 00:11:57,465 --> 00:11:59,085
 0,275 595,840 840,1035 1035,1320 1320,1620
-class which you required to
+class,| which you required to
+|你需要完成它，
 
 452
 00:11:59,085 --> 00:12:01,125
 0,240 240,515 895,1295 1555,1860 1860,2040
-complete it because again, we
+complete it,| because again, we
+|因为，我们不想要不懂 C++ 的人，
 
 453
 00:12:01,125 --> 00:12:03,020
 0,285 285,450 450,755 925,1325
-don't want people who.|
+don't want people who
 
 454
 00:12:03,020 --> 00:12:03,920
 0,180 180,285 285,555 555,795 795,900
-Don't know C I think
+don't know C++,| I think
+|我想他们会在整个学期学习的时候学起来，
 
 455
 00:12:03,920 --> 00:12:04,475
@@ -2281,37 +2576,43 @@ as they go along throughout
 457
 00:12:05,195 --> 00:12:06,785
 0,120 120,425 805,1065 1065,1275 1275,1590
-the semester and then realize,
+the semester| and then realize,|
+|然后意识到，|
 
 458
 00:12:06,785 --> 00:12:08,375
 0,365 655,915 915,1080 1080,1335 1335,1590
-oh, I have know c
+oh, I {have,to} know {C++
+我必须懂 C++ ，同时学习 C++ 和[]，
 
 459
 00:12:08,375 --> 00:12:09,455
 0,255 255,495 495,675 675,870 870,1080
-plus learn c plus and
+-} learn {C++ -} and
 
 460
 00:12:09,455 --> 00:12:10,510
 0,180 180,420 420,630 630,765 765,1055
-learn Davis the same time.
+learn [] the same time,|
+|
 
 461
 00:12:10,740 --> 00:12:12,620
 0,320 320,640 1260,1550 1550,1715 1715,1880
-It it does not end
+it, it does not end
+它不会有好的结局，
 
 462
 00:12:12,620 --> 00:12:13,955
 0,255 255,495 495,770 970,1260 1260,1335
-well. Trust me, we've done
+well,| trust me, we've done
+|相信我，我们已经做了这件事，
 
 463
 00:12:13,955 --> 00:12:14,990
 0,135 135,315 315,555 555,825 825,1035
-this up that we realize
+this up that,| we realize
+|我们意识到这真的帮助了你，
 
 464
 00:12:14,990 --> 00:12:16,535
@@ -2321,12 +2622,14 @@ that this really, really help
 465
 00:12:16,535 --> 00:12:18,485
 0,305 625,915 915,1205 1585,1845 1845,1950
-you rather than make your
+you| rather than make your
+|而不是改变了你的生活，
 
 466
 00:12:18,485 --> 00:12:20,075
 0,245 655,1055 1075,1335 1335,1455 1455,1590
-life. So if you do
+life,| so if you do
+|所以，如果你不在 9 月 10 日的最后期限前完成这个项目0，
 
 467
 00:12:20,075 --> 00:12:21,530
@@ -2341,32 +2644,37 @@ zero by the deadline of
 469
 00:12:23,240 --> 00:12:25,310
 0,330 330,710 1660,1980 1980,2025 2025,2070
-september tenth, we're going to
+september tenth,| we're going to
+|我们将要求你放弃，
 
 470
 00:12:25,310 --> 00:12:26,700
 0,120 120,240 240,390 390,710
-ask you to drop.|
+ask you to drop,|
+|
 
 471
 00:12:26,700 --> 00:12:28,050
 0,285 285,615 615,900 900,1245 1245,1350
-And, and zero exceptions we
+and, and zero exceptions we
+而且，没有任何例外，
 
 472
 00:12:28,050 --> 00:12:29,580
 0,260 760,1005 1005,1185 1185,1350 1350,1530
-made. I don't care that
+made,| I don't care that
+|我不在乎你哥哥是不是十年前学了 513 ，
 
 473
 00:12:29,580 --> 00:12:30,770
 0,150 150,435 435,720 720,900 900,1190
-your brother took five, thirteen,
+your brother took 513
 
 474
 00:12:30,850 --> 00:12:31,890
 0,275 275,470 470,710 710,890 890,1040
-ten years ago. And you
+ten years ago,| and you
+|你也看到了他当时的所作所为，
 
 475
 00:12:31,890 --> 00:12:32,820
@@ -2376,37 +2684,43 @@ and you saw what he
 476
 00:12:32,820 --> 00:12:33,765
 0,150 150,315 315,480 480,735 735,945
-did back then. Like, it
+did back then,| like, it
+|这并不重要，
 
 477
 00:12:33,765 --> 00:12:35,820
 0,255 255,515 1495,1755 1755,1890 1890,2055
-doesn't matter. You have to
+doesn't matter,| you have to
+|你必须完成这项工作，
 
 478
 00:12:35,820 --> 00:12:36,675
 0,165 165,315 315,465 465,720 720,855
-complete this. It shouldn't take
+complete this,| it shouldn't take
+|它应该不会花那么多时间，
 
 479
 00:12:36,675 --> 00:12:37,725
 0,120 120,240 240,435 435,675 675,1050
-that much time, right? It's
+that much time, right,| it's
+|这是一个非常基本的试验。
 
 480
 00:12:37,725 --> 00:12:39,180
 0,210 210,345 345,600 600,965
 a pretty basic trial.|
+|
 
 481
 00:12:40,760 --> 00:12:43,500
 0,365 365,590 590,850 1320,1720 2340,2740
-For office hours be myself
+For office hours,| the myself
+对于办公时间，|我和 Jignesh 和助教将在整个星期的不同时间，
 
 482
 00:12:43,580 --> 00:12:44,710
 0,515 515,755 755,875 875,995 995,1130
-desh and the T A
+Jignesh and the {TAs -}
 
 483
 00:12:44,710 --> 00:12:47,140
@@ -2416,17 +2730,20 @@ will hold office hours at
 484
 00:12:47,140 --> 00:12:48,100
 0,195 195,435 435,645 645,780 780,960
-various times throughout the week
+various times throughout the week,|
+|
 
 485
 00:12:48,100 --> 00:12:50,100
 0,320 850,1140 1140,1380 1380,1665 1665,2000
-but between monday and friday
+but between Monday and Friday|
+但在周一到周五之间，|
 
 486
 00:12:50,750 --> 00:12:52,165
 0,275 275,550 720,995 995,1265 1265,1415
 and then there won't be
+周六将不会有任何常规的办公时间，
 
 487
 00:12:52,165 --> 00:12:54,430
@@ -2436,22 +2753,26 @@ any office hours regularly on
 488
 00:12:54,430 --> 00:12:56,730
 0,890 1090,1425 1425,1680 1680,1950 1950,2300
-saturdays, but the day before
+Saturdays,| but the day before
+|但在每个项目到期的前一天，
 
 489
 00:12:56,780 --> 00:12:58,110
 0,305 305,545 545,800 800,1025 1025,1330
-the every project is due,
+the every project is due,|
+|
 
 490
 00:12:58,310 --> 00:12:59,425
 0,275 275,490 600,875 875,980 980,1115
 we'll have that sort of
+我们将为你提供[电力]会议，
 
 491
 00:12:59,425 --> 00:13:00,960
 0,240 240,575 895,1140 1140,1260 1260,1535
-power session we have multiple
+power session,| we have multiple
+|我们有多个助教多个小时来让你问问题，
 
 492
 00:13:01,430 --> 00:13:04,240
@@ -2461,12 +2782,14 @@ for multiple hours available for
 493
 00:13:04,240 --> 00:13:05,700
 0,290 370,720 720,1070
-you, special for.|
+you, {ask,questions} for,|
+|
 
 494
 00:13:05,700 --> 00:13:07,065
 0,320 490,735 735,900 900,1140 1140,1365
-Um, but this means that
+{} but this means that
+但这意味着周日不会有任何办公时间，
 
 495
 00:13:07,065 --> 00:13:08,100
@@ -2476,12 +2799,14 @@ there won't be any office
 496
 00:13:08,100 --> 00:13:10,890
 0,260 400,800 820,1125 1125,1430 2500,2790
-hours on the sunday when
+hours on the Sunday,| when
+|在项目到期之前，
 
 497
 00:13:10,890 --> 00:13:12,480
 0,225 225,435 435,705 705,1100 1300,1590
-projects are due because we
+projects are due,| because we
+|因为我们不想让人们等到最后一刻才尝试，
 
 498
 00:13:12,480 --> 00:13:13,710
@@ -2491,22 +2816,25 @@ don't want people wait to
 499
 00:13:13,710 --> 00:13:14,745
 0,75 75,270 270,555 555,780 780,1035
-the last minute to try,
+the last minute to try,|
+|
 
 500
 00:13:14,745 --> 00:13:15,690
 0,210 210,435 435,690 690,825 825,945
 you know, to try to
+试图做某事，
 
 501
 00:13:15,690 --> 00:13:16,580
 0,135 135,285 285,480 480,645 645,890
-work on something and then,
+work on something| and then,
+|然后，希望助教能帮助他们解决问题，
 
 502
 00:13:16,720 --> 00:13:17,970
 0,230 230,460 510,815 815,1025 1025,1250
-you know, hoping that tas
+you know, hoping that TAs
 
 503
 00:13:17,970 --> 00:13:18,765
@@ -2516,7 +2844,8 @@ will help them figure things
 504
 00:13:18,765 --> 00:13:20,325
 0,275 475,875 1045,1320 1320,1455 1455,1560
-out right. Again, this is
+out right,| Again, this is
+|同样，这是一个强制功能，以确保你取得进展，
 
 505
 00:13:20,325 --> 00:13:21,330
@@ -2526,12 +2855,13 @@ a forcing function to make
 506
 00:13:21,330 --> 00:13:22,845
 0,150 150,270 270,480 480,830 1150,1515
-sure that you are making
+sure that, you are making
 
 507
 00:13:22,845 --> 00:13:25,215
 0,365 1525,1770 1770,1890 1890,2100 2100,2370
-progress. You know, soon you
+progress, you know, soon,| you
+|你在项目一发布就开始工作，
 
 508
 00:13:25,215 --> 00:13:26,115
@@ -2541,7 +2871,8 @@ start working projects as soon
 509
 00:13:26,115 --> 00:13:27,360
 0,90 90,240 240,545 805,1125 1125,1245
-as they released. You're not
+as they released,| you're not
+|你不会尽可能晚的去做，
 
 510
 00:13:27,360 --> 00:13:27,960
@@ -2556,17 +2887,20 @@ as you can at the
 512
 00:13:28,605 --> 00:13:31,155
 0,245 385,705 705,1025 1945,2280 2280,2550
-last last day. System programming
+last, last day,| system programming
+|系统编程并不容易，
 
 513
 00:13:31,155 --> 00:13:32,280
 0,210 210,360 360,635
-is not easy.|
+is not easy,|
+|
 
 514
 00:13:32,650 --> 00:13:33,825
 0,380 380,605 605,710 710,920 920,1175
-And you will make mistakes
+and you will make mistakes
+你会犯错，你有时间弄清楚。
 
 515
 00:13:33,825 --> 00:13:35,205
@@ -2577,11 +2911,13 @@ and you have time to
 00:13:35,205 --> 00:13:36,540
 0,315 315,695
 figure out.|
+|
 
 517
 00:13:37,490 --> 00:13:38,995
 0,275 275,550 660,1070 1070,1370 1370,1505
 For this semester, we're actually
+在本学期，我们为 CMU-Q 学生开设这门课程，
 
 518
 00:13:38,995 --> 00:13:40,795
@@ -2591,72 +2927,85 @@ offering the course to, to
 519
 00:13:40,795 --> 00:13:42,400
 0,150 150,300 300,480 480,785 1345,1605
-see new q students. So
+{CMU-Q - -} students,| so
+|谢谢加入我们，
 
 520
 00:13:42,400 --> 00:13:43,380
 0,195 195,405 405,540 540,690 690,980
-welcome. Thank you joining us,
+welcome, thank you joining us,|
+|
 
 521
 00:13:44,060 --> 00:13:45,100
 0,245 245,395 395,590 590,860 860,1040
-and I realize there's time
+and I realize there's {timezone
+我意识到这里有时差，
 
 522
 00:13:45,100 --> 00:13:46,760
 0,165 165,440 460,735 735,1010
-zone difference and so.|
+-} difference| and so
+|所以，我们将有一个定期安排的办公时间，
 
 523
 00:13:46,760 --> 00:13:49,655
 0,300 300,555 555,890 1000,1400 2620,2895
-We will have A A
+we will have A A
 
 524
 00:13:49,655 --> 00:13:52,060
 0,275 355,755 955,1230 1230,1505 2005,2405
-regularly scheduled office hour, um,
+regularly scheduled office hour, {}|
+|
 
 525
 00:13:52,200 --> 00:13:53,600
 0,290 290,500 500,695 695,970 1050,1400
 that lines up with your
+与你的工作时间相一致，
 
 526
 00:13:53,600 --> 00:13:56,135
 0,350 670,945 945,1155 1155,1490 2140,2535
-you your working hours with
+you your working hours,| with
+|每周有不同的助教，
 
 527
 00:13:56,135 --> 00:13:57,580
 0,270 270,495 495,840 840,1140 1140,1445
-a different ta each week.
+a different TA each week,|
+|
 
 528
 00:13:57,780 --> 00:13:58,820
 0,215 215,290 290,590 590,830 830,1040
-I Don know announce this
+{I'll - -} announce this
+我会发布在 Piazza 上，
 
 529
 00:13:58,820 --> 00:14:01,685
 0,420 420,600 600,780 780,1040 2620,2865
-piazza when will be that
+Piazza,| when will be, that
+|当我们准备好，
 
 530
 00:14:01,685 --> 00:14:02,820
 0,150 150,360 360,665
-we these two.|
+we these to,|
+|
 
 531
 00:14:03,030 --> 00:14:03,860
 0,260 260,350 350,530 530,725 725,830
-Talk to somebody if you
+talk to somebody if you
+如果你需要和某人交谈，
 
 532
 00:14:03,860 --> 00:14:04,925
 0,150 150,440 580,855 855,975 975,1065
-need to and then if
+need to| and then if
+|然后如果你需要和我交谈，
 
 533
 00:14:04,925 --> 00:14:05,650
@@ -2666,7 +3015,8 @@ you need to talk to
 534
 00:14:05,940 --> 00:14:07,430
 0,400 480,770 770,1040 1040,1325 1325,1490
-myself it will post how
+myself,| it will post how
+|它会发布如何根据需要在不同的时间安排[]给我们，
 
 535
 00:14:07,430 --> 00:14:09,650
@@ -2676,12 +3026,14 @@ to schedule calls us at
 536
 00:14:09,650 --> 00:14:12,200
 0,165 165,470 1060,1460 1570,1970
-different times as needed.|
+different times as needed,|
+|
 
 537
 00:14:12,200 --> 00:14:13,505
 0,240 240,375 375,525 525,830 940,1305
-Again, so this this morning
+again, so this this morning
+再次，这个上午的时间是为 CMU-Q 学生开设的，
 
 538
 00:14:13,505 --> 00:14:14,780
@@ -2691,52 +3043,60 @@ session, or it will be,
 539
 00:14:14,780 --> 00:14:15,455
 0,120 120,255 255,360 360,450 450,675
-will be for the senior
+will be for the CMU-Q
 
 540
 00:14:15,455 --> 00:14:17,440
 0,365 475,875 1045,1445 1465,1725 1725,1985
-students. We ask the regular,
+students,| we ask the regular,
+|我们要求普通的匹兹堡的 CMU 学生不要使用它，
 
 541
 00:14:17,880 --> 00:14:20,140
 0,275 275,605 605,800 800,1120 1860,2260
-the Pittsburgh senior students that.
+the Pittsburgh CMU students {not,to,use,that},|
+|
 
 542
 00:14:20,160 --> 00:14:21,095
 0,230 230,320 320,440 440,620 620,935
-And by all means, please
+and by all means, please
+当然，请务必把问题贴在 Piazza 上，
 
 543
 00:14:21,095 --> 00:14:22,565
 0,360 360,725 745,1020 1020,1155 1155,1470
-always questions post on piazza,
+always questions post on Piazza,|
+|
 
 544
 00:14:22,565 --> 00:14:26,700
 0,245
-right?|
+{we'll,answer,it,sooner}.|
+我们将尽快回答。|
 
 545
 00:14:27,180 --> 00:14:28,210
 0,245 245,335 335,515 515,740 740,1030
-I guess I delay policy.|
+I guess, {} delay policy
+我想对于家庭作业的延迟策略，
 
 546
 00:14:30,050 --> 00:14:31,690
 0,400 660,935 935,1205 1205,1460 1460,1640
-Um, for homework, to use
+{} for homework,| to lose
+|每晚 24 小时减 10% ，
 
 547
 00:14:31,690 --> 00:14:33,210
 0,210 210,390 390,585 585,890 1120,1520
-ten points every hour is
+{10% -} every {24,hour} is
 
 548
 00:14:34,490 --> 00:14:36,325
 0,400 690,965 965,1240 1260,1565 1565,1835
-late and then before they
+late| and then before they
+|然后在我说之前说的，只适用于项目，
 
 549
 00:14:36,325 --> 00:14:37,410
@@ -2746,27 +3106,31 @@ I'm talking about will be
 550
 00:14:37,760 --> 00:14:40,220
 0,335 335,635 635,1100 1100,1420
-only be applicable to.|
+only be applicable to
 
 551
 00:14:40,560 --> 00:14:41,900
 0,290 290,580
-For projects.|
+for projects,|
+|
 
 552
 00:14:42,170 --> 00:14:43,380
 0,290 290,500 500,575 575,815 815,1210
-If there's a medical emergency,
+if there's a medical emergency,|
+如果有医疗紧急情况，|
 
 553
 00:14:44,240 --> 00:14:45,300
 0,275 275,515 515,665 665,800 800,1060
 if there's some kind of
+如果有某种医疗紧急情况，
 
 554
 00:14:48,710 --> 00:14:53,850
 0,260 260,520 1650,1970 1970,2290 4740,5140
-the term medical emergency, if
+the term medical emergency,| if
+|你需要尽快发送一封延期电子邮件，
 
 555
 00:14:54,110 --> 00:14:56,220
@@ -2776,7 +3140,8 @@ you need an extension email
 556
 00:14:56,330 --> 00:14:58,105
 0,290 290,425 425,560 560,850 1530,1775
-as soon as possible and
+as soon as possible| and
+|这样我们就会确保我们为你提供适当的必要医疗服务，
 
 557
 00:14:58,105 --> 00:14:58,780
@@ -2796,22 +3161,26 @@ you to go medical thing
 560
 00:15:03,620 --> 00:15:04,440
 0,400
-the.|
+the,|
+|
 
 561
 00:15:07,880 --> 00:15:09,430
 0,400 630,995 995,1265 1265,1430 1430,1550
-But emails sooner rather than
+but emails sooner rather than
+但电子邮件越早越好，
 
 562
 00:15:09,430 --> 00:15:10,480
 0,260
-later.|
+later,|
+|
 
 563
 00:15:12,700 --> 00:15:14,910
 0,320 320,550 1020,1420 1620,1955 1955,2210
-It's not ten weeks and
+it's not {ten,years\,,ten,weaks -},| and
+不要是十年，十周，|你请求帮助，让我们知道，
 
 564
 00:15:14,910 --> 00:15:18,500
@@ -2821,17 +3190,20 @@ you come here to help.
 565
 00:15:18,610 --> 00:15:20,280
 0,245 245,350 350,610
-Let us know.|
+Let us know,|
+|
 
 566
 00:15:21,250 --> 00:15:23,180
 0,395 395,770 770,1040 1040,1330 1530,1930
-I got every year, ah,
+{All,right\,,I} {got,say} every year, {}
+好的，我每年都要说，不要抄袭，
 
 567
 00:15:23,320 --> 00:15:25,010
 0,260 260,455 455,1030 1170,1430 1430,1690
-do not plagiarize. So all
+do not plagiarize,| so all
+|所有的家庭作业，所有的项目都必须是你自己的原创工作，
 
 568
 00:15:25,030 --> 00:15:26,235
@@ -2841,22 +3213,25 @@ the homework, all the projects
 569
 00:15:26,235 --> 00:15:27,180
 0,225 225,330 330,450 450,660 660,945
-must be your own. Original
+must be your own original
 
 570
 00:15:27,180 --> 00:15:28,905
 0,350 520,810 810,1020 1020,1260 1260,1725
-work are not group assignments.
+work,| are not group assignments,|
+|不是小组作业，|
 
 571
 00:15:28,905 --> 00:15:30,560
 0,255 255,465 465,815 1105,1380 1380,1655
-You can discuss your projects
+you can discuss your projects
+你可以和学生讨论你的项目，那很好，
 
 572
 00:15:30,580 --> 00:15:32,835
 0,320 320,640 660,1040 1040,1300 2010,2255
-with students. That's fine. You
+with students, that's fine,| you
+|你可以在白板上充实想法，
 
 573
 00:15:32,835 --> 00:15:33,750
@@ -2866,7 +3241,8 @@ can mean flesh out ideas
 574
 00:15:33,750 --> 00:15:34,845
 0,135 135,225 225,620 730,990 990,1095
-on the whiteboard, but do
+on the whiteboard,| but do
+|但不要抄袭他人的源代码，
 
 575
 00:15:34,845 --> 00:15:36,000
@@ -2876,17 +3252,20 @@ not copy source code from
 576
 00:15:36,000 --> 00:15:37,650
 0,135 135,440 850,1095 1095,1335 1335,1650
-other people. Do not copy
+other people,| do not copy
+|不要复制 GitHub 的源代码，
 
 577
 00:15:37,650 --> 00:15:39,080
 0,210 210,390 390,585 585,1040
-source code from github.|
+source code from Github,|
+|
 
 578
 00:15:39,080 --> 00:15:41,135
 0,350 880,1215 1215,1545 1545,1860 1860,2055
-Ah, so again, because we
+{} so again, because we
+再说一次，因为我们向 CMU 以外的人公开了这个，
 
 579
 00:15:41,135 --> 00:15:42,275
@@ -2896,7 +3275,8 @@ make this public to people
 580
 00:15:42,275 --> 00:15:43,760
 0,315 315,815 985,1305 1305,1365 1365,1485
-outside cmu, there's a lot
+outside CMU,| there's a lot
+|在 GitHub 上有很多前一个学期的实现，
 
 581
 00:15:43,760 --> 00:15:45,320
@@ -2911,72 +3291,83 @@ from that are available on
 583
 00:15:46,730 --> 00:15:49,430
 0,410 1810,2355 2355,2535 2535,2625 2625,2700
-github, gb might be able
+Github,| Chatgpt might be able
+|Chatgpt 甚至可以做更早的项目，
 
 584
 00:15:49,430 --> 00:15:50,650
 0,135 135,330 330,585 585,870 870,1220
-to even do earlier projects.|
+to even do earlier projects,|
+|
 
 585
 00:15:52,670 --> 00:15:53,910
 0,245 245,380 380,575 575,860 860,1240
-Do not copy them because.|
+do not copy them,| because
+不要复制它们，|因为现在使用 Gradescope ，
 
 586
 00:15:54,780 --> 00:15:56,075
 0,350 350,700 750,995 995,1115 1115,1295
-We the we use grade
+we the we use {Gradescope
 
 587
 00:15:56,075 --> 00:15:56,885
 0,180 180,315 315,450 450,630 630,810
-scope now and grade scope
+-} now| and {Gradescope -}
+|Gradescope 有一个[]检查器，
 
 588
 00:15:56,885 --> 00:15:58,960
 0,225 225,575 1135,1410 1410,1605 1605,2075
-has a play manager checker
+has a {[] -} checker|
+|
 
 589
 00:15:59,040 --> 00:15:59,855
 0,260 260,455 455,635 635,725 725,815
 and basically what we do
+我们要做的是，
 
 590
 00:15:59,855 --> 00:16:00,620
 0,105 105,240 240,405 405,600 600,765
-is we find all the
+is,| we find all the
+|我们从非 CMU 学生那里找到所有 GitHub 的实现，
 
 591
 00:16:00,620 --> 00:16:02,045
 0,255 255,735 735,975 975,1170 1170,1425
-github implications from non senior
+Github implementations from {non-CMU -}
 
 592
 00:16:02,045 --> 00:16:03,800
 0,335 685,975 975,1125 1125,1380 1380,1755
-students, load them up into
+students,| load them up into
+|将它们加载到 GitHub 中， Gradescope 中，然后假的学生，
 
 593
 00:16:03,800 --> 00:16:05,390
 0,530 730,1050 1050,1275 1275,1440 1440,1590
-github into great code but
+Github, into {Gradescope -} but
 
 594
 00:16:05,390 --> 00:16:06,770
 0,195 195,500 820,1065 1065,1215 1215,1380
-take students and then see
+fake students| and then see
+|然后看看你是否与他们匹配，
 
 595
 00:16:06,770 --> 00:16:07,750
 0,135 135,255 255,435 435,675 675,980
-whether you match against them.
+whether you match against them,|
+|
 
 596
 00:16:08,040 --> 00:16:10,055
 0,400 780,1025 1025,1270 1620,1865 1865,2015
-Ah, do not do not
+{} do not, do not
+不要从其他学生那里抄袭代码，
 
 597
 00:16:10,055 --> 00:16:10,880
@@ -2986,37 +3377,43 @@ copy your source code from
 598
 00:16:10,880 --> 00:16:12,065
 0,225 225,360 360,590 730,1020 1020,1185
-students. Do not source code
+{other,students},| do {not,copy} source code
+|不要使用 GitHub 的源代码，
 
 599
 00:16:12,065 --> 00:16:14,675
 0,150 150,545 1735,2025 2025,2400 2400,2610
-from github. The github source
+from Github,| the Github source
+|GitHub 的源代码通常非常糟糕，
 
 600
 00:16:14,675 --> 00:16:15,770
 0,165 165,285 285,480 480,720 720,1095
-code is usually pretty crappy.
+code is usually pretty crappy,|
+|
 
 601
 00:16:15,770 --> 00:16:17,045
 0,225 225,390 390,615 615,920 1030,1275
-We've done experience before she
+we've done experience before she
+在她做这件事之前，我们已经有过经验，
 
 602
 00:16:17,045 --> 00:16:18,590
 0,120 120,270 270,545 745,1145 1255,1545
-has done this. Ah, the
+has done this,| {} the
+|CMU 的学生压倒了非 CMU 的学生，
 
 603
 00:16:18,590 --> 00:16:19,850
 0,330 330,600 600,915 915,1095 1095,1260
-cu students crush the non
+CMU students crush the {non-CMU
 
 604
 00:16:19,850 --> 00:16:21,155
 0,180 180,330 330,540 540,840 840,1305
-C U students so it's
+- -} students,| so it's
+|所以现在不抄袭是为了你们的最大利益。
 
 605
 00:16:21,155 --> 00:16:21,890
@@ -3027,21 +3424,24 @@ actually in your best interest
 00:16:21,890 --> 00:16:22,880
 0,150 150,255 255,420 420,740
 not to copy now.|
+|
 
 607
 00:16:23,920 --> 00:16:25,480
 0,400
-Again.|
+Again,
+再次，不会有任何例外，我不知道，
 
 608
 00:16:25,480 --> 00:16:26,635
 0,180 180,390 390,465 465,660 660,1155
-There won't be any exceptions.
+there won't be any exceptions,
 
 609
 00:16:26,635 --> 00:16:27,780
 0,255 255,420 420,630 630,810 810,1145
-Oh, I didn't know. Yeah,
+oh, I didn't know,| yeah,
+|这是录像的课程，
 
 610
 00:16:27,950 --> 00:16:28,780
@@ -3051,7 +3451,8 @@ the fact that this is
 611
 00:16:28,780 --> 00:16:31,530
 0,350 610,1010 1480,1725 1725,1970 2350,2750
-recorded, uh, a lecture. If
+recorded { -} lecture,| if
+|如果我们必须向华纳音乐厅举报你，
 
 612
 00:16:31,550 --> 00:16:32,335
@@ -3061,27 +3462,31 @@ we have to report you
 613
 00:16:32,335 --> 00:16:33,340
 0,105 105,330 330,540 540,810 810,1005
-to Warner hall, we point
+to Warner hall,| we point
+|我们指着讲座中的时间戳说，
 
 614
 00:16:33,340 --> 00:16:34,690
 0,135 135,380 610,930 930,1155 1155,1350
-to this time stamp in
+to this {timestamp -} in
 
 615
 00:16:34,690 --> 00:16:35,350
 0,150 150,255 255,390 390,540 540,660
-in the lecture and say
+in the lecture and say|
+|
 
 616
 00:16:35,350 --> 00:16:36,070
 0,90 90,225 225,375 375,570 570,720
 where I'm warning you enough
+我警告你抄袭，
 
 617
 00:16:36,070 --> 00:16:37,330
 0,105 105,560 850,1095 1095,1170 1170,1260
-to plagiarize and then you
+to plagiarize| and then you
+|然后你抄袭了，是的，你就完了，
 
 618
 00:16:37,330 --> 00:16:38,950
@@ -3091,7 +3496,8 @@ plagiarize. Yeah, and if not,
 619
 00:16:38,950 --> 00:16:41,040
 0,180 180,435 435,740 1000,1400 1690,2090
-you're screwed, right? Um, if
+you're screwed, right,| {} if
+|如果你想做的事情看起来像是灰色地带，
 
 620
 00:16:41,090 --> 00:16:42,070
@@ -3106,47 +3512,53 @@ do that seems kind of
 622
 00:16:43,390 --> 00:16:44,425
 0,150 150,375 375,585 585,840 840,1035
-like grey zone and you
+like grey zone| and you
+|你不知道，是否可以，
 
 623
 00:16:44,425 --> 00:16:45,240
 0,135 135,225 225,315 315,525 525,815
-don't know if it's okay
+don't know if it's okay,|
+|
 
 624
 00:16:45,440 --> 00:16:46,840
 0,290 290,580 660,1025 1025,1250 1250,1400
-like using t or something
+like using Chatgpt or something
+使用 Chatgpt 或类似的东西，
 
 625
 00:16:46,840 --> 00:16:49,345
 0,150 150,315 315,620 1600,2000 2260,2505
-like that, right? Please. You
+like that, right,| please, you
+|请发邮件给我和 Jignesh ，而不是助教，
 
 626
 00:16:49,345 --> 00:16:50,980
 0,180 180,495 495,750 750,1025 1345,1635
-know, email myself in not
+know, email myself {and,Jignesh} not
 
 627
 00:16:50,980 --> 00:16:52,050
 0,150 150,410 430,690 690,810 810,1070
-the t to see whether
+the TAs| to see whether
+|看看看看我们是否想讨论这个问题，
 
 628
 00:16:52,460 --> 00:16:53,300
 0,230 230,460
-you know.|
+you know,
 
 629
 00:16:53,520 --> 00:16:54,350
 0,335 335,515 515,635 635,755 755,830
-And see whether we want
+and see whether we want
 
 630
 00:16:54,350 --> 00:16:56,180
 0,105 105,255 255,530 1390,1650 1650,1830
-to discuss it. And then
+to discuss it,| and then
+|然后，这里的链接是 CMU 的学术诚信政策，
 
 631
 00:16:56,180 --> 00:16:56,885
@@ -3156,27 +3568,31 @@ the link there would be
 632
 00:16:56,885 --> 00:16:58,235
 0,315 315,480 480,735 735,1065 1065,1350
-foreseen use policy or academic
+{CMU's -} policy or academic
 
 633
 00:16:58,235 --> 00:16:59,555
 0,515 685,945 945,1065 1065,1185 1185,1320
-integrity. Again, we take this
+integrity,| again, we take this
+|再说一次，我们非常认真地对待这件事，不要越界。
 
 634
 00:16:59,555 --> 00:17:02,400
 0,180 180,485 1585,1980 1980,2315
 very seriously, don't around.|
+|
 
 635
 00:17:03,830 --> 00:17:04,690
 0,350 350,560 560,635 635,695 695,860
-But one of the last
+{All,right}, one of the last
+好的，最后一件事是，
 
 636
 00:17:04,690 --> 00:17:06,270
 0,255 255,465 465,740 880,1230 1230,1580
-thing is that if you
+thing is that,| if you
+|如果你像我一样热爱，
 
 637
 00:17:06,290 --> 00:17:07,285
@@ -3186,12 +3602,14 @@ love as much as I
 638
 00:17:07,285 --> 00:17:08,155
 0,150 150,255 255,390 390,615 615,870
-do and you go beyond
+do| and you go beyond
+|而且你超越了课程材料的范围，
 
 639
 00:17:08,155 --> 00:17:09,985
 0,210 210,435 435,785 1495,1740 1740,1830
-the course material, we are
+the course material,| we are
+|我们本学期将提供一个系列研讨会，
 
 640
 00:17:09,985 --> 00:17:11,110
@@ -3201,22 +3619,26 @@ offering a seminar series this
 641
 00:17:11,110 --> 00:17:13,020
 0,270 270,585 585,795 795,1340 1510,1910
-semester. It's entirely optional, um,
+semester,| it's entirely optional, {}|
+|这完全是可选的，|
 
 642
 00:17:13,430 --> 00:17:15,040
 0,305 305,545 545,880 900,1295 1295,1610
-where every monday starting in
+where every Monday starting in
+从 9 月份开始的每个星期一，
 
 643
 00:17:15,040 --> 00:17:17,980
 0,320 760,1020 1020,1275 1275,1670
-september, we having a.|
+September,| we having a
+|我们都有一个不同的外部演讲者，
 
 644
 00:17:17,980 --> 00:17:19,600
 0,320 340,660 660,960 960,1340 1360,1620
-Different outside speaker come give
+different outside speaker come| give
+|来做关于各种数据公司或项目的演讲，
 
 645
 00:17:19,600 --> 00:17:21,760
@@ -3226,7 +3648,8 @@ a talk about the various
 646
 00:17:21,760 --> 00:17:23,920
 0,320 760,1080 1080,1290 1290,1580 1900,2160
-datab company or project. So
+database company or project,| so
+|本学期的主题是针对数据库的机器学习和数据库机器学习，
 
 647
 00:17:23,920 --> 00:17:24,745
@@ -3241,7 +3664,8 @@ is machine learning for databases
 649
 00:17:25,960 --> 00:17:28,615
 0,135 135,645 645,900 900,1190 2350,2655
-and databaseases machine learning. And
+and databaseases machine learning,| and
+|所以我们现在有很多人正在构建很多热门的东西，
 
 650
 00:17:28,615 --> 00:17:30,445
@@ -3256,32 +3680,37 @@ are building a lot of
 652
 00:17:32,125 --> 00:17:33,175
 0,215 265,540 540,690 690,870 870,1050
-these hot thing now, these
+these hot thing now,| these
+|这些矢量数据库，
 
 653
 00:17:33,175 --> 00:17:34,825
 0,210 210,660 660,935 1195,1470 1470,1650
-vector databases, but discuss next
+vector databases,| but discuss next
+|但我们讨论下一节课，
 
 654
 00:17:34,825 --> 00:17:37,165
 0,305 535,935 1675,1965 1965,2115 2115,2340
-class, but we're having them
+class,| but we're having them
+|但我们让他们谈论他们的系统，
 
 655
 00:17:37,165 --> 00:17:38,515
 0,240 240,465 465,755 835,1170 1170,1350
-talked about their systems, how
+talked about their systems,| how
+|如何在数据系统中支持 ML 之类的东西，
 
 656
 00:17:38,515 --> 00:17:40,230
 0,210 210,555 555,1125 1125,1395 1395,1715
-to support lm like stuff
+to support ML like stuff
 
 657
 00:17:40,460 --> 00:17:41,905
 0,245 245,335 335,485 485,790 1170,1445
-inside of data systems. And
+inside of data systems,| and
+|然后我们会让人们谈论他们是如何使用机器学习来优化数据系统的，
 
 658
 00:17:41,905 --> 00:17:43,090
@@ -3296,37 +3725,42 @@ about how they're using machine
 660
 00:17:44,350 --> 00:17:46,260
 0,260 580,975 975,1320 1320,1560 1560,1910
-learning to optimize data systems,
+learning to optimize data systems,|
+|
 
 661
 00:17:46,400 --> 00:17:47,320
 0,245 245,350 350,610
-sort of like.|
+sort of like
+比如用来使系统更快，
 
 662
 00:17:47,630 --> 00:17:48,625
 0,365 365,575 575,680 680,800 800,995
-Using to make the system
+using to make the system
 
 663
 00:17:48,625 --> 00:17:50,140
 0,285 285,635 985,1230 1230,1365 1365,1515
-actually faster. So again this
+actually faster,| so again this
+|再次，这是可选的，
 
 664
 00:17:50,140 --> 00:17:51,790
 0,120 120,680 1090,1350 1350,1470 1470,1650
-is optional. Everything will be
+is optional,| everything will be
+|每周一四点半在 Zoom 上，
 
 665
 00:17:51,790 --> 00:17:53,455
 0,270 270,650 1060,1320 1320,1575 1575,1665
-on zoom on mondays at
+on Zoom on Monday at
 
 666
 00:17:53,455 --> 00:17:55,795
 0,150 150,425 445,720 720,995 2095,2340
-four thirty and then they
+four thirty| and then they
+|然后他们会再次把它发布到 YouTube 上，
 
 667
 00:17:55,795 --> 00:17:56,875
@@ -3336,7 +3770,8 @@ will post it on Youtube
 668
 00:17:56,875 --> 00:17:58,210
 0,485 595,900 900,1065 1065,1200 1200,1335
-afterwardswards again. In this one
+afterwardswards,| again, in this one,
+|在这个项目中，你不一定非得是大四学生，
 
 669
 00:17:58,210 --> 00:17:58,630
@@ -3346,62 +3781,72 @@ you don't have to be
 670
 00:17:58,630 --> 00:17:59,830
 0,90 90,315 315,660 660,990 990,1200
-a senior, neither you can
+a senior,| neither you can
+|你可以参加，如果你看到全部的计划表。
 
 671
 00:17:59,830 --> 00:18:01,280
 0,135 135,285 285,435 435,710
-join it if you.|
+join it, if you
 
 672
 00:18:01,380 --> 00:18:02,090
 0,230 230,320 320,440 440,545 545,710
-You can see the list
+you can see the list
 
 673
 00:18:02,090 --> 00:18:03,490
 0,150 150,315 315,540 540,830 1000,1400
-of the football full schedule.|
+of the {} full schedule.|
+|
 
 674
 00:18:04,450 --> 00:18:05,655
 0,350 350,695 695,1025 1025,1100 1100,1205
 Alright, so that's it for
+好的，这就是后勤课程，
 
 675
 00:18:05,655 --> 00:18:07,710
 0,105 105,365 415,815 1645,1905 1905,2055
-the log class. I gotta
+the legislative class,| I gotta
+|我得弄清楚是关于什么的，
 
 676
 00:18:07,710 --> 00:18:10,860
 0,150 150,410 520,885 885,1250
-figure out what about?|
+figure out what about,|
+|
 
 677
 00:18:11,560 --> 00:18:12,705
 0,305 305,410 410,575 575,770 770,1145
-He's not getting now anytime
+he's not getting now, anytime
+他在短期内不会变成现在这样，
 
 678
 00:18:12,705 --> 00:18:15,180
 0,135 135,345 345,635 1585,1985 2125,2475
-soon. That's about, but it's
+soon,| that's about, but it's
+|差不多了，不过没关系。
 
 679
 00:18:15,180 --> 00:18:17,055
 0,290 460,840 840,1140 1140,1460 1600,1875
-okay. So next class on
+okay.| So next class on
+|所以，周一的下一节课，
 
 680
 00:18:17,055 --> 00:18:17,790
 0,240 240,480 480,555 555,630 630,735
-monday we'll have the in
+Monday,| we'll have the in
+|我们将进行课堂讲课，
 
 681
 00:18:17,790 --> 00:18:19,680
 0,180 180,470 1210,1485 1485,1650 1650,1890
-class lecture and then we'll
+class lecture| and then we'll
+|然后我们就走出大门，
 
 682
 00:18:19,680 --> 00:18:20,745
@@ -3411,30 +3856,33 @@ begin right out of the
 683
 00:18:20,745 --> 00:18:22,035
 0,180 180,405 405,585 585,765 765,1290
-gate. Not talking any logistics,
+gate,| not talking any logistics,
+|不是说任何后勤，而是课程，
 
 684
 00:18:22,035 --> 00:18:22,890
 0,195 195,285 285,465 465,690 690,855
-but the course. We'll just
+but the course,| we'll just
+|我们将直接讨论关系型模型和数据库。
 
 685
 00:18:22,890 --> 00:18:23,775
 0,225 225,420 420,555 555,645 645,885
-immediately talk about the racial
+immediately talk about the relational
 
 686
 00:18:23,775 --> 00:18:26,760
 0,245 535,935 1195,1470 1470,2075
-model and end databases.|
+model and {} databases.|
+|
 
 687
 00:18:26,760 --> 00:18:27,735
 0,135 135,410 580,810 810,870 870,975
-Hi guys. See you next
+{All,right}, guys, see you next
+好的，大家，我们下周见。
 
 688
 00:18:27,735 --> 00:18:33,466
 0,275
-week.|
-
+week.
