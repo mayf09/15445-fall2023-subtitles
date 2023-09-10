@@ -8,7 +8,7 @@ Clearly violating fire code here.|
 00:00:29,420 --> 00:00:30,310
 0,290 290,485 485,635 635,755 755,890
 I guess you can kind
-我想你可以坐在前面，也可以坐在地板上，对吗？所以有很多话要说。首先，我们又有了一位DJ。第二，你们是最凶猛的JJ，你们想不想做个快速预览？做。
+我想你可以坐在前面，也可以坐在地板上，
 
 3
 00:00:30,310 --> 00:00:30,970
@@ -23,49 +23,56 @@ up front or you sit
 5
 00:00:33,025 --> 00:00:35,610
 0,75 75,195 195,485 1855,2220 2220,2585
-on the floor, right? So
+on the floor.| Right, so
+|好的，所以有很多话要说，
 
 6
 00:00:36,350 --> 00:00:37,150
 0,260 260,410 410,545 545,650 650,800
-a lot to talk about.
+a lot to talk about,|
+|
 
 7
 00:00:37,150 --> 00:00:37,930
 0,150 150,225 225,435 435,675 675,780
-First of all, we have
+first of all, we have
+首先，我们又有了一位 DJ ， 2PL ，
 
 8
 00:00:37,930 --> 00:00:45,835
 0,120 120,435 435,2295 2295,2570 7600,7905
-a DJ againj. Two, you're
+a DJ again, {DJ,2PL},| your
+|你们凶猛的 DJ 现在在监狱里，
 
 9
 00:00:45,835 --> 00:00:49,705
 0,90 90,2105 3505,3735 3735,3795 3795,3870
-the fiercestjjs do you want
+the {fiercest,DJ,is,in,jail,right,now},| do you want
+|你想不想做个快速演示，
 
 10
 00:00:49,705 --> 00:00:50,580
 0,90 90,180 180,285 285,450 450,875
-to do a quick preview?
+to do a quick preview,|
+|
 
 11
 00:00:50,930 --> 00:00:54,620
 0,400
-Do.|
-|
+{do,it,everyone}.|
+为大家来一个。|
 
 12
 00:00:59,020 --> 00:01:00,285
 0,320 320,545 545,830 830,1100 1100,1265
-The big announcement, too, is
-另一个重要的宣布是，我们第一次有了两名教员。杰什·帕特尔坐在这里的前排。
+{All,right\,,another} big announcement too is
+另一个重要的宣布是，
 
 13
 00:01:00,285 --> 00:01:01,250
 0,210 210,375 375,465 465,645 645,965
-that for the first time
+that,| for the first time
+|我们第一次有了两名导师，
 
 14
 00:01:01,270 --> 00:01:02,540
@@ -75,65 +82,68 @@ we now have two faculty
 15
 00:01:02,590 --> 00:01:05,385
 0,400 1800,2210 2210,2555 2555,2705 2705,2795
-teaching. Jesh Patel is in
+teaching,| Jignesh Patel is in
+|Jingnesh Patel 坐在这里的前排，
 
 16
 00:01:05,385 --> 00:01:08,640
 0,105 105,255 255,435 435,725
-the front row here.|
+the front row here,|
 |
 
 17
 00:01:12,070 --> 00:01:16,260
 0,850 930,1330 3480,3815 3815,4010 4010,4190
-Wisconsin. Ah, we're happy that
-威斯康星州。啊，我们很高兴他在这里，所以他将在整个讲座中帮助我。好的，所以。
+Wisconsin,| {} we're happy that
+威斯康星州，|我们很高兴他在这里，
 
 18
 00:01:16,260 --> 00:01:16,935
 0,165 165,330 330,495 495,615 615,675
-he's here, so he'll be
+he's here,| so he'll be
+|所以他将在整个讲座中帮助我。
 
 19
 00:01:16,935 --> 00:01:18,590
 0,120 120,395 985,1260 1260,1395 1395,1655
-help me throughout the lecture.
+help me throughout the lecture.|
+|
 
 20
 00:01:18,910 --> 00:01:21,060
 0,400 750,1150
-Okay, so.|
-|
+Okay, so,
+好的，正如我在 Piazza 上发布的那样，
 
 21
 00:01:21,320 --> 00:01:23,130
 0,260 260,425 425,730 780,1115 1115,1810
-As I post on piazza,
-正如我在Piazza上发布的那样，我们还有另一门课程。
+as I post on Piazza,|
+|
 
 22
 00:01:23,210 --> 00:01:25,440
 0,520 540,940 960,1360 1440,1835 1835,2230
-there's another course lecture we.|
-|
+there's another course lecture, {}|
+我们还有另一门课程，|
 
 23
 00:01:26,680 --> 00:01:27,520
 0,225 225,330 330,525 525,720 720,840
-They get m out of
-他们让我出狱了。
+they get Mooshoo out of
+他们让 Mooshoo 出狱，
 
 24
 00:01:27,520 --> 00:01:28,640
 0,260
-jail.|
+jail,|
 |
 
 25
 00:01:29,450 --> 00:01:30,895
 0,260 260,395 395,670 1110,1340 1340,1445
-Of the course. So we're
-当然了。所以我们不会像一堆这样的事情再来一次。我只想报道一些你可能会错过的事情。
+of the course,| so we're
+当然，|所以我们不会像一堆这样的事情再来一次，
 
 26
 00:01:30,895 --> 00:01:31,450
@@ -148,7 +158,8 @@ like a bunch of those
 28
 00:01:32,200 --> 00:01:33,565
 0,285 285,555 555,750 750,1070 1120,1365
-things all over again. I
+things all over again,| I
+|我只想覆盖一些你可能会错过的事情，
 
 29
 00:01:33,565 --> 00:01:34,105
@@ -163,19 +174,20 @@ things that if you might
 31
 00:01:34,945 --> 00:01:35,820
 0,90 90,335
-have missed.|
+have missed,|
 |
 
 32
 00:01:35,820 --> 00:01:36,570
 0,90 90,210 210,360 360,525 525,750
-That are important to understand
-在整堂课中要理解的重要内容，然后我们将直接进入材料。
+that are important to understand
+在整门课中要理解的重要内容，
 
 33
 00:01:36,570 --> 00:01:37,470
 0,210 210,375 375,600 600,810 810,900
-throughout this lecture, and then
+throughout this lecture,| and then
+|然后我们将直接进入材料。
 
 34
 00:01:37,470 --> 00:01:38,745
@@ -192,24 +204,25 @@ material.|
 00:01:39,840 --> 00:01:40,610
 0,275 275,440 440,560 560,635 635,770
 All right, so the first
-好的，那么第一件事，我们有一个课程赞助商，单一商店。
+好的，那么第一件事，
 
 37
 00:01:40,610 --> 00:01:41,270
 0,165 165,285 285,375 375,480 480,660
-thing, we have a course
+thing,| we have a course
+|我们有一个课程赞助商 SingleStore ，
 
 38
 00:01:41,270 --> 00:01:43,860
 0,560 790,1170 1170,1550
-sponsor, single store.|
+sponsor {SingleStore -},|
 |
 
 39
 00:01:44,700 --> 00:01:46,115
 0,305 305,515 515,785 785,1115 1115,1415
-Cloud based database system that
-基于云的数据库系统支持混合工作负载事务分析，正如我在第一节课中所说，它是一个内存中的列存储，使用跳过列表和即时查询。
+cloud based database system,| that
+基于云的数据库系统，|支持混合工作负载事务分析，
 
 40
 00:01:46,115 --> 00:01:47,570
@@ -219,12 +232,14 @@ supports sort of hybrid workloads
 41
 00:01:47,570 --> 00:01:49,490
 0,290 430,1160 1420,1665 1665,1800 1800,1920
-transactions analytics as I said
+transactions analytics,| as I said
+|正如我在第一节课中所说，
 
 42
 00:01:49,490 --> 00:01:50,705
 0,75 75,165 165,330 330,650 970,1215
-in the first lecture, it
+in the first lecture,| it
+|它是一个内存中的列存储，
 
 43
 00:01:50,705 --> 00:01:52,040
@@ -234,19 +249,20 @@ is a in memory column
 44
 00:01:52,040 --> 00:01:53,180
 0,270 270,420 420,660 660,960 960,1140
-store that uses skip list
+store,| that uses skip list
+|使用跳过列表和即时查询，
 
 45
 00:01:53,180 --> 00:01:54,700
 0,225 225,435 435,570 570,830 1090,1520
-with just in time query.|
+with just in time query,|
 |
 
 46
 00:01:56,245 --> 00:01:57,925
 0,420 420,630 630,905 1285,1560 1560,1680
-Distribute, share nothing. If none
-分发，什么都不分享。如果现在这些对你来说没有任何意义，那也没关系。
+distribute, share nothing,| if none
+分发，什么都不分享，|如果现在这些对你来说没有任何意义，那也没关系，
 
 47
 00:01:57,925 --> 00:01:58,660
@@ -256,14 +272,13 @@ of that means anything to
 48
 00:01:58,660 --> 00:01:59,880
 0,90 90,225 225,500 580,960 960,1220
-you right now, that's fine.|
-|
+you right now, that's fine
 
 49
 00:02:00,590 --> 00:02:02,650
 0,400 1500,1790 1790,1925 1925,2000 2000,2060
-Things coming at the end
-本学期末有一场客座讲座。
+things,| coming at the end
+|本学期末有一场客座讲座，
 
 50
 00:02:02,650 --> 00:02:03,295
@@ -273,34 +288,36 @@ of the semester to give
 51
 00:02:03,295 --> 00:02:04,840
 0,105 105,270 270,575
-a guest lecture.|
+a guest lecture,|
 |
 
 52
 00:02:05,410 --> 00:02:07,100
 0,230 230,460 840,1130 1130,1355 1355,1690
-For ah, a long time.
-啊，很久了。你可以称它为Man SQL，然后他们将其更名为Single Store。因此，这是一个最先进的数据库系统，它将涵盖我们将在整个学期讨论的大量图像。
+for {} a long time,
+很长时间，你可以称它为 MemSQL ，
 
 53
 00:02:08,230 --> 00:02:09,780
 0,400 870,1130 1130,1250 1250,1355 1355,1550
-The, you can call it
+the, you can call it
 
 54
 00:02:09,780 --> 00:02:10,800
 0,285 285,660 660,765 765,870 870,1020
-men sql and then they
+{MemSQL -}| and then they
+|然后他们将其更名为 SingleStore ，
 
 55
 00:02:10,800 --> 00:02:11,565
 0,165 165,285 285,405 405,555 555,765
-change the name to single
+change the name to {SingleStore
 
 56
 00:02:11,565 --> 00:02:13,155
 0,335 715,1005 1005,1095 1095,1350 1350,1590
-store it. So it's, it's
+-},| it, so it's, it's
+|这是一个最先进的数据库系统，
 
 57
 00:02:13,155 --> 00:02:13,620
@@ -310,17 +327,19 @@ a state of the art
 58
 00:02:13,620 --> 00:02:14,460
 0,195 195,450 450,690 690,750 750,840
-database system that's going to
+database system,| that's going to
+|它将涵盖，
 
 59
 00:02:14,460 --> 00:02:15,600
 0,260 370,690 690,765 765,885 885,1140
-cover that's going to incorporate
+cover,| that's going to incorporate
+|将与我们在整个学期讨论的大量想法有关。
 
 60
 00:02:15,600 --> 00:02:16,190
 0,90 90,180 180,285 285,360 360,590
-a lot of the images
+a lot of the ideas
 
 61
 00:02:16,390 --> 00:02:18,300
@@ -337,12 +356,13 @@ semester.|
 00:02:19,850 --> 00:02:21,085
 0,260 260,410 410,575 575,850 900,1235
 The crowd is huge, obviously
-人群很多，显然不是每个人。如果你听说你想要得到等待名单，坏消息是，等待名单太大了，部门把它从我们手中拿走了，我们无法控制它。
+人群很多，显然不是每个人，
 
 64
 00:02:21,085 --> 00:02:22,950
 0,255 255,575 1285,1530 1530,1620 1620,1865
-not everyone. If you hear
+not everyone,| if you hear
+|如果你听说，你想要得到等待名单，
 
 65
 00:02:23,030 --> 00:02:23,635
@@ -352,44 +372,49 @@ you're trying to got the
 66
 00:02:23,635 --> 00:02:25,315
 0,425 805,1065 1065,1245 1245,1455 1455,1680
-waitlist, the bad news is
+{wait,list},| the bad news is
+|坏消息是，等待名单太大了，
 
 67
 00:02:25,315 --> 00:02:26,275
 0,270 270,450 450,690 690,795 795,960
-because the waitlist is so
+because the {wait,list} is so
 
 68
 00:02:26,275 --> 00:02:28,090
 0,305 805,1205 1255,1560 1560,1710 1710,1815
-huge, the department took it
+huge,| the department took it
+|部门把它从我们手中拿走了，
 
 69
 00:02:28,090 --> 00:02:29,110
 0,135 135,255 255,500 670,930 930,1020
-away from us and we
+away from us| and we
+|我们无法控制它，
 
 70
 00:02:29,110 --> 00:02:30,270
 0,105 105,375 375,660 660,855 855,1160
-have no control over it.|
+have no control over it,|
 |
 
 71
 00:02:31,230 --> 00:02:32,225
 0,335 335,440 440,575 575,755 755,995
-They're trying to figure out
-他们正在试图弄清楚，比如谁需要毕业，谁将获得系统选修课，以及所有这些新兴市场的东西。所以如果你来问我们，嘿，他们能从等待名单上除名吗？坏消息是我们我们不再控制它了。好消息是，因为我们现在有了jesh，它将每学期教一次这门课。因此，如果你这学期进不去，下个学期你就能拿到，然后管理员会把人们从等待名单上移走，因为人们下降了。
+they're trying to figure out,|
+他们试图弄清楚，|
 
 72
 00:02:32,225 --> 00:02:33,340
 0,285 285,525 525,690 690,840 840,1115
-like who needs to graduate,
+like who needs to graduate,|
+比如谁需要毕业，|
 
 73
 00:02:33,390 --> 00:02:34,040
 0,230 230,320 320,425 425,530 530,650
 who is to get the
+谁将获得系统选修课，以及所有这些东西，
 
 74
 00:02:34,040 --> 00:02:35,000
@@ -399,12 +424,14 @@ system elective and all that
 75
 00:02:35,000 --> 00:02:36,815
 0,290 490,890 1180,1515 1515,1695 1695,1815
-stuff EM. So if you
+stuff,| {} so if you
+| 所以如果你来问我们，
 
 76
 00:02:36,815 --> 00:02:37,565
 0,165 165,285 285,405 405,585 585,750
-come and ask us, hey,
+come and ask us,| hey,
+|嘿，他们能从等待名单上除名吗，
 
 77
 00:02:37,565 --> 00:02:38,030
@@ -414,7 +441,8 @@ can they get off the
 78
 00:02:38,030 --> 00:02:38,780
 0,105 105,285 285,450 450,600 600,750
-wait list? The bad news
+wait list,| the bad news
+|坏消息是，我们我们不再控制它了，
 
 79
 00:02:38,780 --> 00:02:39,965
@@ -424,17 +452,19 @@ is that we we don't
 80
 00:02:39,965 --> 00:02:41,930
 0,165 165,360 360,695 1585,1845 1845,1965
-control it anymore. The good
+control it anymore,| the good
+|好消息是，因为我们现在有了 Jignesh ，
 
 81
 00:02:41,930 --> 00:02:42,905
 0,135 135,345 345,615 615,810 810,975
-news is because we have
+news is, because we have
 
 82
 00:02:42,905 --> 00:02:44,570
 0,375 375,695 1045,1365 1365,1530 1530,1665
-jesh now, that will be
+Jignesh now,| that will be
+|他将每学期教一次这门课，
 
 83
 00:02:44,570 --> 00:02:46,160
@@ -444,22 +474,26 @@ teaching this class once every
 84
 00:02:46,160 --> 00:02:47,150
 0,270 270,630 630,840 840,900 900,990
-every semester. So if you
+every semester,| so if you
+|所以，如果你这学期进不去，
 
 85
 00:02:47,150 --> 00:02:48,130
 0,225 225,330 330,435 435,585 585,980
-can't get in this semester,
+can't get in this semester,|
+|
 
 86
 00:02:48,870 --> 00:02:49,430
 0,305 305,335 335,395 395,485 485,560
 you'll be able to get
+下个学期你就能拿到，
 
 87
 00:02:49,430 --> 00:02:50,690
 0,135 135,330 330,650 880,1140 1140,1260
-it next semester and then
+it next semester| and then
+|然后管理员会把人们从等待名单上移走，
 
 88
 00:02:50,690 --> 00:02:51,695
@@ -469,36 +503,35 @@ the admins will move people
 89
 00:02:51,695 --> 00:02:52,690
 0,135 135,255 255,420 420,660 660,995
-off the wait list as
+off the wait list| as
+|因为人们下降了，这个可以了。
 
 90
 00:02:52,830 --> 00:02:54,700
 0,305 305,530 530,800 800,1150
-as people drop and.|
-|
+as people drop and
 
 91
 00:02:55,330 --> 00:02:58,540
 0,275 275,455 455,760
-S become available.|
-S可以上场了。|
+that's become available.|
+|
 
 92
 00:03:08,320 --> 00:03:10,320
 0,400 990,1390
-Different where?|
-不同的地方？|
 
 93
 00:03:11,640 --> 00:03:13,490
 0,550 1140,1415 1415,1565 1565,1715 1715,1850
-Apartments, things I found out
-公寓，我从维京教员那里发现的东西。因此，第一个坏消息是，如果你现在没有注册，你就会再次变得不同。
+apartments,| things I found out
+地方，|我从[]教员那里发现的东西。
 
 94
 00:03:13,490 --> 00:03:14,780
 0,120 120,210 210,435 435,710 1000,1290
-since the viking faculty. So
+since the [] faculty.| So
+|所以，第一个坏消息是，
 
 95
 00:03:14,780 --> 00:03:15,665
@@ -508,60 +541,65 @@ again, the first of the
 96
 00:03:15,665 --> 00:03:16,295
 0,120 120,270 270,420 420,525 525,630
-bad news is if you're
+bad news is,| if you're
+|如果你现在没有注册，
 
 97
 00:03:16,295 --> 00:03:17,705
 0,75 75,330 330,575 865,1230 1230,1410
-not enrolled now, you're unlike
+not enrolled now,| you're unlike
+|你会在春天变得不同。
 
 98
 00:03:17,705 --> 00:03:18,740
 0,210 210,545
-it again.|
-|
+it again
 
 99
 00:03:19,160 --> 00:03:20,700
 0,260 260,410 410,700
-In the spring.|
-在春天。|
+in the Spring.|
+|
 
 100
 00:03:21,430 --> 00:03:23,025
 0,400 570,815 815,980 980,1250 1250,1595
-Right, for all this, the
-是的，尽管如此，重要的公告，一切都将在零号广场项目中。我们应该在第一堂课中少讲一些，现在可以在年级范围和网站上看到。我们通过画布展示的期末成绩。嗯，所有的东西都将再次通过研究生的范围提交，因为人们在外面观看这些不在CMU的讲座。
+{All,right}, for all this, the
+好的，尽管如此，重要的公告，
 
 101
 00:03:23,025 --> 00:03:24,750
 0,395 505,840 840,1425 1425,1650 1650,1725
-the important announcements, everything will
+the important announcements,| everything will
+|一切都将在 Piazza 上，
 
 102
 00:03:24,750 --> 00:03:26,720
 0,60 60,165 165,740 1240,1605 1605,1970
-be in piazza project zero.
+be in Piazza,| project zero,
+|项目0 ，我们应该在第一堂课中少讲一些，
 
 103
 00:03:27,310 --> 00:03:28,110
 0,260 260,365 365,485 485,620 620,800
-We should talk about less
+we should talk about less
 
 104
 00:03:28,110 --> 00:03:29,565
 0,210 210,405 405,600 600,890 1060,1455
-in the first lecture that's
+in the first lecture,| that's
+|现在可以在 Gradescope 和网站上看到，
 
 105
 00:03:29,565 --> 00:03:31,170
 0,245 535,885 885,1140 1140,1365 1365,1605
-now available on grade scope
+now available on {Gradescope -}
 
 106
 00:03:31,170 --> 00:03:32,640
 0,240 240,420 420,525 525,770 1210,1470
-and on the website. The
+and on the website,| the
+|我们通过 Canvas 展示的期末成绩，
 
 107
 00:03:32,640 --> 00:03:33,660
@@ -571,34 +609,38 @@ final grades we show through
 108
 00:03:33,660 --> 00:03:36,360
 0,500 790,1190 1690,2090 2320,2580 2580,2700
-canvas. Um, and everything will
+Canvas,| {} and everything will
+|所有的东西都将通过 Gradescope 提交，
 
 109
 00:03:36,360 --> 00:03:37,490
 0,120 120,390 390,630 630,825 825,1130
-be submitted through grad scope
+be submitted through {Gradescope -},|
+|
 
 110
 00:03:37,720 --> 00:03:39,480
 0,400 720,1010 1010,1175 1175,1450 1470,1760
 again because people watch these
+再次，因为人们在 CMU 外面观看这些课程，
 
 111
 00:03:39,480 --> 00:03:40,850
 0,360 360,525 525,720 720,855 855,1370
-lectures that aren't at cmu
+lectures that aren't at CMU,|
+|
 
 112
 00:03:40,930 --> 00:03:42,940
 0,400 1110,1510
-they outside.|
-|
+they outside
+他们在我们的大学外面，
 
 113
 00:03:43,130 --> 00:03:45,535
 0,400 630,980 980,1330 2010,2285 2285,2405
-Of our university, if you
-在我们大学，如果你想用和CU学生一样的方式测试你的项目，你可以去一个单独的年级范围账户，使用那里的代码，你可以开始测试，然后测试，我们会发布这些项目。
+of our university,| if you
+|如果你想用和 CMU 学生一样的方式测试你的项目，
 
 114
 00:03:45,535 --> 00:03:46,320
@@ -613,12 +655,14 @@ beyond the same way that
 116
 00:03:48,200 --> 00:03:49,500
 0,245 245,425 425,815 815,1010 1010,1300
-the way cu students are,
+the way CMU students are,|
+|
 
 117
 00:03:49,700 --> 00:03:50,880
 0,290 290,395 395,605 605,860 860,1180
-there's a separate grade scope
+there's a separate {Gradescope -}
+你可以去一个单独的 Gradescope 账户，使用那里的代码，
 
 118
 00:03:51,320 --> 00:03:52,255
@@ -628,7 +672,8 @@ account you can go to
 119
 00:03:52,255 --> 00:03:54,100
 0,195 195,420 420,630 630,935 1585,1845
-using that code there and
+using that code there| and
+|你可以开始测试，然后测试，
 
 120
 00:03:54,100 --> 00:03:54,870
@@ -638,7 +683,8 @@ you can start them and,
 121
 00:03:54,920 --> 00:03:56,425
 0,400 420,695 695,860 860,1150 1260,1505
-and test things out and
+and test things out| and
+|我们会发布这些项目。
 
 122
 00:03:56,425 --> 00:03:57,780
@@ -649,52 +695,55 @@ we'll release those projects as.|
 123
 00:04:01,350 --> 00:04:04,100
 0,260 260,485 485,850 930,1330
-So in exchange for.|
-所以作为交换。|
+So in exchange for,
+作为看到这些的人们的交换，
 
 124
 00:04:04,840 --> 00:04:06,120
 0,245 245,335 335,470 470,760
-He would watch this.|
-他会看这个。|
+people to watch this,|
+|
 
 125
 00:04:06,510 --> 00:04:08,255
 0,400 870,1175 1175,1325 1325,1475 1475,1745
-In making this all available
-在向您提供这一切的过程中，我们需要一些。
+in making this all available
+在向你提供这一切的过程中，
 
 126
 00:04:08,255 --> 00:04:10,150
 0,195 195,425 1165,1440 1440,1605 1605,1895
-to you, we need some.|
-|
+to you,| we need some,|
+|我们需要一些，|
 
 127
 00:04:11,360 --> 00:04:12,040
 0,230 230,365 365,440 440,560 560,680
 I don't think you have
-我想你还没有，是吗？妈妈被禁了，因为孩子在那里。这在某种程度上是真的。但他们说我出生在巴尔的摩的街头。我来自巴尔的摩。
+我想你还没有，
 
 128
 00:04:12,040 --> 00:04:13,330
 0,135 135,285 285,405 405,650 970,1290
-one yet, do you? Mom
+one yet, do you,| mine
+|我的被禁了，
 
 129
 00:04:13,330 --> 00:04:15,100
 0,240 240,690 690,1010 1330,1620 1620,1770
-got banned because kid about
+got banned,| because {the,first} about
+|因为第一个在某种程度上是真的，
 
 130
 00:04:15,100 --> 00:04:16,045
 0,165 165,345 345,540 540,750 750,945
-there. That is sort of
+there, that is sort of
 
 131
 00:04:16,045 --> 00:04:18,355
 0,305 1735,1980 1980,2100 2100,2220 2220,2310
-true. But they said I
+true,| but they said I
+|但他们说我出生在巴尔的摩的街头，
 
 132
 00:04:18,355 --> 00:04:19,045
@@ -704,39 +753,43 @@ was born in the streets
 133
 00:04:19,045 --> 00:04:20,350
 0,135 135,585 585,870 870,1095 1095,1305
-of Baltimore. I am from
+of Baltimore,| I am from
+|我来自巴尔的摩，
 
 134
 00:04:20,350 --> 00:04:24,940
 0,590
-Baltimore.|
+Baltimore,|
 |
 
 135
 00:04:27,350 --> 00:04:31,480
 0,400 870,1270 1500,1900 2130,2530 3840,4130
-Um, so whatever, and someone
-嗯，不管怎样，总有人能把它做完。那太好了。我做到了，对吧？我评论说，嘿，我是我不是从街头来的。
+{} so whatever, and someone
+不管怎样，总有人能把它做完，
 
 136
 00:04:31,480 --> 00:04:32,290
 0,180 180,390 390,600 600,735 735,810
-could finish that. That would
+could finish that,| that would
+|那太好了。
 
 137
 00:04:32,290 --> 00:04:34,090
 0,120 120,410 1300,1545 1545,1650 1650,1800
-be great. And I did,
+be great.| And I did,
+|我做了，
 
 138
 00:04:34,090 --> 00:04:35,140
 0,210 210,450 450,705 705,915 915,1050
-right? I comment, hey, I
+right,| I comment, hey, I
+|我评论说，嘿，我不是从街头来的。
 
 139
 00:04:35,140 --> 00:04:36,790
 0,180 180,330 330,420 420,680 1390,1650
-am. I am from just
+am, I {am,not} from just
 
 140
 00:04:36,790 --> 00:04:38,340
@@ -747,19 +800,20 @@ not from the streets.|
 141
 00:04:38,710 --> 00:04:39,880
 0,400
-So.|
-所以。|
+So,
+所以，为了覆盖后勤，
 
 142
 00:04:40,250 --> 00:04:42,460
 0,245 245,455 455,680 680,1210 1950,2210
-To cover for logistics, this
-为了掩饰后勤，这是一个大班。显然，这里有很多人可能有不同的背景。所以我们希望你们能打断我们，因为我们整个学期都在学习。
+to cover for logistics,| this
+|这是一个大班，
 
 143
 00:04:42,460 --> 00:04:43,720
 0,90 90,180 180,375 375,710 940,1260
-is a big class. Obviously,
+is a big class,| obviously,
+|显然，这里有很多人可能有不同的背景，
 
 144
 00:04:43,720 --> 00:04:44,260
@@ -774,30 +828,32 @@ here that may have different
 146
 00:04:45,685 --> 00:04:47,215
 0,725 805,1080 1080,1230 1230,1380 1380,1530
-backgrounds. And so we want
+backgrounds,| and so we want
+|所以我们希望你们能打断我们，
 
 147
 00:04:47,215 --> 00:04:48,085
 0,120 120,300 300,510 510,690 690,870
-you to interrupt us as
+you to interrupt us| as
+|因为我们整个学期都在，
 
 148
 00:04:48,085 --> 00:04:49,050
 0,165 165,300 300,480 480,630 630,965
-we're going throughout the semester.|
+we're going throughout the semester,|
 |
 
 149
 00:04:50,430 --> 00:04:52,810
 0,400 480,880 900,1300 1740,2060 2060,2380
-If questions about talking about.|
-如果有关于谈论的问题。|
+if questions about talking about,
+如果谈论关于[]的问题，那是很好的问题。
 
 150
 00:04:56,820 --> 00:04:58,970
 0,455 455,760 1170,1570 1650,1985 1985,2150
-Terrififying question. Um, I also
-令人毛骨悚然的问题。嗯，再谈到我的生活，我的生活，我的亲生女儿，我也很兴奋。首先是数据库，然后什么都不做。就像我不谈论爱好一样。从字面上看，这只是一只数据库鸡。确认这只是数据库。是的，我的父母是特朗普的支持者。我们与他们交谈时，不会把这当做是生意。你觉得很好笑，对吧？
+{that's,a,fine} question.| {} I also
+|我也很兴奋谈到这个，
 
 151
 00:04:58,970 --> 00:04:59,810
@@ -807,64 +863,73 @@ get very excited when I
 152
 00:04:59,810 --> 00:05:01,540
 0,105 105,350 970,1260 1260,1440 1440,1730
-talk about again, my life,
+talk about again,| my life,
+|我的生活，我的妻子，我的亲生女儿，是第一的，
 
 153
 00:05:01,830 --> 00:05:03,760
 0,400 660,1055 1055,1385 1385,1625 1625,1930
-life, biological daughter. Number one
+wife, biological daughter, number one,|
+|
 
 154
 00:05:04,020 --> 00:05:05,540
 0,275 275,860 860,1055 1055,1250 1250,1520
 is databases and then nothing
+还有数据库，然后什么都没有，
 
 155
 00:05:05,540 --> 00:05:06,800
 0,320 370,720 720,930 930,1125 1125,1260
-else. Like I don't talk
+else,| like I don't talk
+|比如我不谈论爱好，
 
 156
 00:05:06,800 --> 00:05:09,080
 0,290 910,1380 1380,1670 1810,2115 2115,2280
-about hobbies. It literally is
+about hobbies,| it literally is
+|从字面上看，这只是数据库，确认这只是数据库，
 
 157
 00:05:09,080 --> 00:05:11,780
 0,120 120,680 700,1100 1360,1760 2440,2700
-just databases chicken. Confirm it
+just databases, {} confirm, it
 
 158
 00:05:11,780 --> 00:05:13,310
 0,135 135,270 270,705 705,980 1210,1530
-is just databases. Yes, my
+is just databases,| yes, my
+|是的，我的父母是特朗普的支持者，
 
 159
 00:05:13,310 --> 00:05:14,435
 0,240 240,420 420,570 570,930 930,1125
-parents are Trump supporters. We
+parents are Trump supporters,| we
+|我们不讨论这个，
 
 160
 00:05:14,435 --> 00:05:15,200
 0,150 150,300 300,435 435,555 555,765
-don't talk to them like
+don't talk to them,| like
+|它只是数据库，
 
 161
 00:05:15,200 --> 00:05:17,320
 0,320 1030,1305 1305,1485 1485,1755 1755,2120
-like it is just business.
+like it is just databases,|
+|
 
 162
 00:05:19,790 --> 00:05:21,070
 0,105 105,315 315,495 495,740 880,1280
-It's funny to you, right?|
-|
+it's funny to you, right.|
+你们觉得很好笑。|
 
 163
 00:05:22,360 --> 00:05:24,830
 0,260 260,440 440,710 710,1060 2070,2470
 So again, so if fast
-再说一次，如果速度快，或者如果你有问题打断我们，我们不会做的是，在课程结束时，让大家排成一排，问，幻灯片5怎么样？
+再说一次，如果速度快，或者如果你有问题，打断我们，
 
 164
 00:05:25,150 --> 00:05:26,300
@@ -874,22 +939,26 @@ or if you have questions
 165
 00:05:27,010 --> 00:05:28,440
 0,275 275,550 840,1100 1100,1265 1265,1430
-interrupt us, what we're not
+interrupt us,| what we're not
+|我们不会做的是，
 
 166
 00:05:28,440 --> 00:05:29,715
 0,165 165,270 270,530 670,1020 1020,1275
-going to do is that
+going to do is that,|
+|
 
 167
 00:05:29,715 --> 00:05:30,660
 0,255 255,480 480,630 630,795 795,945
 at at the end of
+在课程结束时，
 
 168
 00:05:30,660 --> 00:05:32,115
 0,150 150,440 730,1005 1005,1215 1215,1455
-the class, have people line
+the class,| have people line
+|让大家排成一排，问幻灯片 5 怎么样，
 
 169
 00:05:32,115 --> 00:05:32,940
@@ -899,14 +968,14 @@ up and say, what about
 170
 00:05:32,940 --> 00:05:35,060
 0,320 1030,1430
-slide five?|
+slide five,|
 |
 
 171
 00:05:36,670 --> 00:05:37,605
 0,305 305,470 470,620 620,785 785,935
-The material we discussed during
-我们在讲课中讨论的材料，因为我想让你们打断我们，因为如果你们有问题，其他人也可能有问题，让我们来讨论这些事情。从教育学的角度来看，这对我们也更好，因为我会回去看。
+the material we discussed during
+我们在讲课中讨论的材料，
 
 172
 00:05:37,605 --> 00:05:38,490
@@ -916,7 +985,8 @@ the lecture as we go
 173
 00:05:38,490 --> 00:05:40,305
 0,270 270,650 1300,1575 1575,1680 1680,1815
-along because want you to
+along,| because want you to
+|因为我想让你们打断我们，
 
 174
 00:05:40,305 --> 00:05:41,520
@@ -926,7 +996,8 @@ interrupt as, as, as we're
 175
 00:05:41,520 --> 00:05:42,810
 0,350 670,915 915,1020 1020,1140 1140,1290
-talking, because if you have
+talking,| because if you have
+|因为如果你们有问题，其他人也可能有问题，
 
 176
 00:05:42,810 --> 00:05:43,725
@@ -936,7 +1007,8 @@ questions and somebody else is
 177
 00:05:43,725 --> 00:05:45,765
 0,195 195,390 390,630 630,995 1795,2040
-likely have questions too for
+likely have questions too,| for
+|让我们来讨论这些事情，
 
 178
 00:05:45,765 --> 00:05:47,685
@@ -946,34 +1018,38 @@ us to these things and
 179
 00:05:47,685 --> 00:05:48,840
 0,240 240,515 655,930 930,1050 1050,1155
-discuss it. And from a
+discuss it,| and from a
+|从教育学的角度来看，
 
 180
 00:05:48,840 --> 00:05:50,505
 0,675 675,1005 1005,1320 1320,1500 1500,1665
-pedagogical standpoint, it's better for
+pedagogical standpoint,| it's better for
+|这对我们也更好，
 
 181
 00:05:50,505 --> 00:05:51,810
 0,120 120,285 285,525 525,875 1015,1305
-us as well because I
+us as well,| because I
+|因为我会回去看，
 
 182
 00:05:51,810 --> 00:05:53,000
 0,165 165,345 345,495 495,740
-go back and watch.|
+go back and watch|
 |
 
 183
 00:05:53,000 --> 00:05:53,690
 0,150 150,255 255,405 405,540 540,690
-And I see where people
-我看到人们在哪里提问，我看到，哦，这不太对劲，去解决问题，所以有问题。
+and I see where people
+我看到人们在哪里提问，
 
 184
 00:05:53,690 --> 00:05:55,160
 0,195 195,500 1030,1260 1260,1350 1350,1470
-ask questions and I see,
+ask questions| and I see,
+|我看到，哦，这不太对劲，去解决问题，
 
 185
 00:05:55,160 --> 00:05:56,510
@@ -983,19 +1059,20 @@ oh, that didn't get quite
 186
 00:05:56,510 --> 00:05:57,790
 0,290 430,690 690,840 840,1005 1005,1280
-right, go fix the lot,
+right, go fix the slot,|
+|
 
 187
 00:05:57,900 --> 00:06:01,740
 0,245 245,425 425,620 620,880
 so having the questions.|
-|
+所以有问题。|
 
 188
 00:06:03,420 --> 00:06:04,595
 0,275 275,470 470,695 695,905 905,1175
-All right. Any questions about
-好的。对这些后勤有什么问题吗？
+All right, any questions about
+好的，对这些后勤有什么问题吗？
 
 189
 00:06:04,595 --> 00:06:06,140
@@ -1006,67 +1083,74 @@ these logistics?|
 190
 00:06:08,390 --> 00:06:09,625
 0,400 690,935 935,1055 1055,1145 1145,1235
-Boom. So let go right
-砰的一声。所以，让我们直奔主题吧。好的，所以我们要谈的是。
+{} So let go right
+所以，让我们直奔主题。
 
 191
 00:06:09,625 --> 00:06:11,770
 0,120 120,315 315,635 1165,1565 1855,2145
-into it. Okay, so we
+into it.| Okay, so we
+|好的，所以我们要谈的是，
 
 192
 00:06:11,770 --> 00:06:12,810
 0,75 75,300 300,630 630,810 810,1040
-gonna talk about sort of.|
+gonna talk about sort of,|
 |
 
 193
 00:06:13,660 --> 00:06:14,955
 0,305 305,485 485,920 920,1130 1130,1295
-Around what databaseases are, why
-围绕什么是数据库，为什么它很重要，为什么我们需要数据库分钟系统。为什么这门课会存在，嗯，不仅仅是因为我们做了愚蠢的利基课程，这是一个非常重要的话题，然后我们会讨论。
+around what databases are, why
+围绕什么是数据库，为什么它很重要，
 
 194
 00:06:14,955 --> 00:06:15,855
 0,210 210,450 450,660 660,780 780,900
-it's important, why we need
+it's important,| why we need
+|为什么我们需要数据库管理系统，
 
 195
 00:06:15,855 --> 00:06:17,370
 0,225 225,465 465,755 1045,1320 1320,1515
-database minute systems. Why this
+database management systems,| why this
+|为什么这门课会存在，
 
 196
 00:06:17,370 --> 00:06:19,740
 0,315 315,710 1180,1580 1960,2235 2235,2370
-course exists, um, not just
+course exists,| {} not just
+|不仅是因为我们做了愚蠢的 Niche ，
 
 197
 00:06:19,740 --> 00:06:20,685
 0,135 135,270 270,420 420,615 615,945
-because we do stupid niche
+because we do stupid [Niche],|
+|
 
 198
 00:06:20,685 --> 00:06:22,620
 0,395 955,1425 1425,1635 1635,1740 1740,1935
-with it's, it's a super
+{} it's, it's a super
+这是一个非常重要的话题，
 
 199
 00:06:22,620 --> 00:06:24,090
 0,240 240,560 850,1140 1140,1305 1305,1470
-important topic and then we'll
+important topic| and then we'll
+|然后我们会讨论，
 
 200
 00:06:24,090 --> 00:06:25,100
 0,90 90,210 210,470
-talk about the.|
+talk about the,|
 |
 
 201
 00:06:25,490 --> 00:06:26,875
 0,260 260,440 440,755 755,1130 1130,1385
-In my opinion, the the
-在我看来，在数据库中如何构建或使用的主要模型。然后让我们讨论关系代数，我们用来与关系模型数据库交互的机制或运算符，我们结束了，因为我们必须讨论人们所使用的替代模型。
+in my opinion, the the
+在我看来，在数据库中如何构建或使用的主要模型，
 
 202
 00:06:26,875 --> 00:06:28,480
@@ -1081,17 +1165,20 @@ want to build or use
 204
 00:06:29,620 --> 00:06:31,195
 0,165 165,285 285,375 375,620 1330,1575
-in in a database. Then
+in in a database,| then
+|然后让我们讨论关系型代数，
 
 205
 00:06:31,195 --> 00:06:32,170
 0,150 150,210 210,285 285,495 495,975
-let's talk about relational algebra,
+let's talk about relational algebra,|
+|
 
 206
 00:06:32,170 --> 00:06:33,415
 0,135 135,380 460,735 735,885 885,1245
 the mechanism or the operators
+我们用来与关系模型数据库交互的机制或运算符，
 
 207
 00:06:33,415 --> 00:06:35,460
@@ -1101,12 +1188,14 @@ we use to interact with
 208
 00:06:35,630 --> 00:06:37,810
 0,400 420,860 860,1115 1115,1420 1860,2180
-a relational model database and
+a relational model database| and
+|我们结束，
 
 209
 00:06:37,810 --> 00:06:38,710
 0,210 210,405 405,615 615,780 780,900
-we finish up because we
+we finish up,| because we
+|因为我们必须讨论替代模型，
 
 210
 00:06:38,710 --> 00:06:39,565
@@ -1116,14 +1205,14 @@ have to be talking about
 211
 00:06:39,565 --> 00:06:42,020
 0,365 385,785 1315,1620 1620,1925
-alternative models that people.|
-|
+alternative models,| that people
+|人们发展模型，
 
 212
 00:06:42,510 --> 00:06:44,195
 0,335 335,670 1020,1355 1355,1550 1550,1685
-Ational model and I have
-国家模特和我对为什么他们错了有强烈的看法，好吗？
+{to,evolutional} model| and I have
+|我对为什么他们错了有强烈的看法，好吗？
 
 213
 00:06:44,195 --> 00:06:45,080
@@ -1139,14 +1228,13 @@ wrong, okay?|
 215
 00:06:47,200 --> 00:06:49,000
 0,275 275,515 515,880
-All right, so.|
-好吧，那么。|
+All right, so,
+好的，数据库是我生命中第二重要的事情。
 
 216
 00:06:50,620 --> 00:06:51,405
 0,260 260,395 395,545 545,695 695,785
-The second most important thing
-我生命中第二重要的事情。
+the second most important thing
 
 217
 00:06:51,405 --> 00:06:54,120
@@ -1158,100 +1246,102 @@ in my life.|
 00:07:01,030 --> 00:07:02,180
 0,400
 Yes.|
-是。|
+是的。|
 
 219
 00:07:04,050 --> 00:07:05,345
 0,305 305,610 660,965 965,1145 1145,1295
 Yes, the question is, if
-是的，问题是，如果你在等待名单上，你能进入广场吗？是的，我们会张贴的。
+是的，问题是，如果你在等待名单上，
 
 220
 00:07:05,345 --> 00:07:05,840
 0,150 150,195 195,240 240,330 330,495
-you're on the wait list,
+you're on the wait list,|
+|
 
 221
 00:07:05,840 --> 00:07:06,575
 0,120 120,195 195,405 405,630 630,735
 can you get access to
+你能进入 Piazza 吗，
 
 222
 00:07:06,575 --> 00:07:08,020
 0,390 390,600 600,855 855,1080 1080,1445
-piazza? Yes, we'll post the.|
-|
+Piazza,| yes, we'll post the,
+|是的，我们让它变得可用。
 
 223
 00:07:09,570 --> 00:07:10,570
 0,260 260,380 380,515 515,695 695,1000
-We make that available, yes.|
-是的，我们让它变得可用。|
+we make that available, yes.|
+|
 
 224
 00:07:11,645 --> 00:07:12,365
 0,75 75,135 135,255 255,525 525,720
-So he's a SEL server
-所以他是后面的SEL服务器。
+So here's a SQL server
+所以这有 SQL server ，
 
 225
 00:07:12,365 --> 00:07:13,440
 0,180 180,255 255,485
-in the back.|
+in the back,|
 |
 
 226
 00:07:15,540 --> 00:07:17,520
 0,290 290,760
-My sql.|
-我的SQL。|
+{MySQL -},
+MySQL ，是的，
 
 227
 00:07:17,950 --> 00:07:19,080
 0,400
-Yes.|
-是。|
+yes,|
+|
 
 228
 00:07:19,530 --> 00:07:23,060
 0,400 930,1190 1190,1450 1470,1870 2910,3530
-Anybody one more? Anybody cassandra?
-有没有人再来一杯？有人叫卡桑德拉吗？好吧。
+anybody one more, anybody,| Cassandra,
+还有没有人知道，|Cassandra ，好的。
 
 229
 00:07:23,060 --> 00:07:24,640
 0,320
-Okay.|
+okay.|
 |
 
 230
 00:07:25,860 --> 00:07:27,545
 0,335 335,695 695,970 1080,1490 1490,1685
-Thing everybody listed sql server
-所有人都列出了SQL SERVER POSTGRES MOGO那里的所有数据库系统。
+Thing everybody listed, SQL server,
+所有人列出的 SQL server, Postgres, mongo ，
 
 231
 00:07:27,545 --> 00:07:29,260
 0,390 390,815 895,1230 1230,1395 1395,1715
-postgres mongo there, all database
+Postgres, Mongo,| those all {database,management}
+|这些都是数据库管理系统，
 
 232
 00:07:29,700 --> 00:07:31,280
 0,400
-systems.|
-|
+systems,
 
 233
 00:07:32,250 --> 00:07:33,550
 0,230 230,305 305,380 380,530 530,1300
-Right. We're talking about databases.|
-正确的。我们谈论的是数据库。|
+right,| we're talking about databases,|
+|我们谈论的是数据库，|
 
 234
 00:07:34,220 --> 00:07:35,555
 0,290 430,735 735,885 885,1065 1065,1335
-And don't feel bad that
-不要因为不是唯一一个犯这个错误的人而感到难过。这是杰夫。啊，但我想今年。
+and don't feel bad,| that
+不要感到难过，|因为不是唯一一个犯这个错误的人，
 
 235
 00:07:35,555 --> 00:07:36,350
@@ -1261,30 +1351,31 @@ not the only one making
 236
 00:07:36,350 --> 00:07:38,020
 0,225 225,560 970,1230 1230,1380 1380,1670
-this mistake. This is Jeff.
+this mistake,| this is Jeff,
+|这是 Jeff ，我想是今年，
 
 237
 00:07:38,250 --> 00:07:39,935
 0,400 750,1130 1130,1355 1355,1505 1505,1685
-Ah, but I think this
+{} but I think this
 
 238
 00:07:39,935 --> 00:07:41,000
 0,275
-year.|
+year,|
 |
 
 239
 00:07:41,800 --> 00:07:43,260
 0,215 215,260 260,365 365,640
-See if it plays.|
-看看它能不能发挥作用。|
+see if it plays,|
+看看能不能播放，|
 
 240
 00:07:43,950 --> 00:07:45,950
 0,350 350,575 575,755 755,1060 1740,2000
-Tech for four place a
-Tech for Four Place这些系统中的一个关系型系统以行和列的形式提供要存储和检索的信息。贾斯汀，矩阵是什么？不是的。
+{tech,beat} for four, please,| a
+科技挑战，谢谢，|这些系统中的一个关系型系统以行和列的形式提供要存储和检索的信息，
 
 241
 00:07:45,950 --> 00:07:47,320
@@ -1304,30 +1395,32 @@ stored and retrieved in rows
 244
 00:07:50,510 --> 00:07:52,580
 0,210 210,710 1390,1890 1890,2010 2010,2070
-and columns. Justin, what is
+and columns,| Justin,| what is
+|Justin ，|是不是矩阵，
 
 245
 00:07:52,580 --> 00:07:58,880
 0,75 75,560 1150,1550
-the matrix? No.|
-|
+the matrix,| no.|
+|不是。|
 
 246
 00:08:01,010 --> 00:08:03,280
 0,105 105,225 225,500 640,1040 1870,2270
-It'll get worse. Okay, right?|
-情况会变得更糟。好的，对吧？|
+It'll get worse, okay, right,|
+情况会变得更糟，好的，|
 
 247
 00:08:04,110 --> 00:08:06,470
 0,400 870,1220 1220,1570 1620,1910 1910,2360
-Base not, again being pedantic
-基础不是，这里又是迂腐的，但理解两者之间的区别是很好的，因为当我们只谈论数据模型时，你不会理解，就像，好吧，我们还不关心系统实现，数据实际上是什么，以及我们将如何与它交互，所以。
+database not, again being pedantic
+数据库不是，再次这里是迂腐的，
 
 248
 00:08:06,470 --> 00:08:07,055
 0,150 150,255 255,375 375,435 435,585
-here, but it's good to
+here,| but it's good to
+|但理解两者之间的区别是很好的，
 
 249
 00:08:07,055 --> 00:08:07,970
@@ -1337,17 +1430,20 @@ understand the distinction between the
 250
 00:08:07,970 --> 00:08:09,575
 0,290 910,1170 1170,1290 1290,1440 1440,1605
-two, because when we just
+two,| because when we just
+|因为当我们只谈论数据模型时，
 
 251
 00:08:09,575 --> 00:08:10,280
 0,105 105,195 195,315 315,480 480,705
-talk about the data models,
+talk about the data models,|
+|
 
 252
 00:08:10,280 --> 00:08:11,230
 0,135 135,285 285,420 420,615 615,950
-you don't understand, like, okay,
+you don't understand,| like, okay,
+你不会理解，|好吧，我们还不关心系统实现，数据实际上是什么，
 
 253
 00:08:11,610 --> 00:08:12,500
@@ -1362,46 +1458,49 @@ implement yet about what data
 255
 00:08:14,960 --> 00:08:15,875
 0,210 210,450 450,690 690,795 795,915
-actually is and how we're
+actually is| and how we're
+|以及我们将如何与它交互。
 
 256
 00:08:15,875 --> 00:08:16,570
 0,45 45,150 150,315 315,450 450,695
-going to interact with it,
+going to interact with it.|
+|
 
 257
 00:08:16,830 --> 00:08:17,700
 0,400
-so.|
-|
+So,
+所以，有组织的相互关联的数据集合，
 
 258
 00:08:18,060 --> 00:08:21,280
 0,400 660,1060 1080,1480 2100,2500 2820,3220
-Um, organized collection of data
-嗯，有组织的相互关联的数据集合，这意味着对某些方面进行建模。
+{} organized collection of data
 
 259
 00:08:21,720 --> 00:08:22,940
 0,455 455,695 695,875 875,980 980,1220
-that's related to each other,
+that's related to each other,|
+|
 
 260
 00:08:22,940 --> 00:08:24,430
 0,345 345,510 510,705 705,1010 1090,1490
 that's meant to model some
+这意味着对某些方面进行建模，
 
 261
 00:08:24,540 --> 00:08:25,420
 0,400
-aspects.|
+aspects,|
 |
 
 262
 00:08:26,420 --> 00:08:28,990
 0,290 290,580 1170,1570 2040,2360 2360,2570
-Everybody lives systems an example
-Everyone Living系统是一个数据库的例子，它将成为大学的数据库，跟踪哪些学生注册了哪些班级和您的成绩。
+everybody lives systems,| an example
+每个人都在系统中生活，|一个数据库的例子是大学的数据库，
 
 263
 00:08:28,990 --> 00:08:30,145
@@ -1411,7 +1510,8 @@ of a database that would
 264
 00:08:30,145 --> 00:08:32,230
 0,275 775,1110 1110,1440 1440,1830 1830,2085
-be the university database that
+be the university database,| that
+|跟踪哪些学生注册了哪些班级和你的成绩，
 
 265
 00:08:32,230 --> 00:08:33,055
@@ -1426,14 +1526,13 @@ are enrolled in what classes
 267
 00:08:34,520 --> 00:08:36,060
 0,260 260,410 410,730
-and your grades.|
-|
+and your grades,
 
 268
 00:08:36,060 --> 00:08:36,840
 0,225 225,345 345,540 540,645 645,780
-Right, because that's trying to
-是的，因为这是在试图模拟，你知道，学生们正在上课并获得报酬的真实的大学互动。
+right,| because that's trying to
+|因为这是在试图模拟真实的大学互动，
 
 269
 00:08:36,840 --> 00:08:38,970
@@ -1443,7 +1542,8 @@ model, you know, the real
 270
 00:08:38,970 --> 00:08:41,520
 0,380 430,1010 1180,1500 1500,1820 2260,2550
-university interactions that that students
+university interactions| that that students
+|学生们上课并获得回报。
 
 271
 00:08:41,520 --> 00:08:42,555
@@ -1459,19 +1559,18 @@ paid.|
 273
 00:08:44,500 --> 00:08:45,620
 0,400
-Um.|
-恩。|
 
 274
 00:08:47,620 --> 00:08:48,565
 0,135 135,285 285,435 435,630 630,945
-This course is so important
-这门课程非常重要，因为数据库，一个数据库，将是基础组件。
+This course is so important,|
+这门课程非常重要，|
 
 275
 00:08:48,565 --> 00:08:51,180
 0,395 625,915 915,1205 1915,2265 2265,2615
 because the database, a database,
+因为数据库将是基础组件，
 
 276
 00:08:51,650 --> 00:08:52,345
@@ -1481,19 +1580,20 @@ is going to be the
 277
 00:08:52,345 --> 00:08:54,380
 0,305 1165,1565
-fundamental component.|
+fundamental component,|
 |
 
 278
 00:08:55,330 --> 00:08:56,835
 0,245 245,470 470,740 740,1030 1170,1505
-The underlying of any application
-任何应用程序的基础，或者任何你将在你的余生中做的事情。所以，如果你是一名CS学生，问题是你是否去做了一份与CS相关的事情，你知道你不是程序员吗？归根结底，您将始终与数据库交互，即使它是Excel电子表格。
+the underlying of any application|
+任何应用程序的基础，|
 
 279
 00:08:56,835 --> 00:08:57,690
 0,315 315,570 570,735 735,795 795,855
 or anything you're going to
+或者任何你将在你的余生中做的事情，
 
 280
 00:08:57,690 --> 00:08:58,320
@@ -1503,7 +1603,8 @@ do with the rest of
 281
 00:08:58,320 --> 00:08:59,565
 0,90 90,350 730,975 975,1110 1110,1245
-your life. So matter of
+your life,| so matter of
+|所以，如果你是一名 CS 学生，
 
 282
 00:08:59,565 --> 00:09:00,240
@@ -1513,7 +1614,8 @@ like if you're a CS
 283
 00:09:00,240 --> 00:09:01,020
 0,210 210,360 360,510 510,675 675,780
-student, a matter if you
+student,| no matter if you
+|无论你去做了一份与 CS 相关的工作，
 
 284
 00:09:01,020 --> 00:09:01,545
@@ -1528,22 +1630,25 @@ job doing and in doing
 286
 00:09:03,465 --> 00:09:04,485
 0,285 285,480 480,645 645,810 810,1020
-CS related things or you
+CS related things| or you
+|或者你不是程序员，
 
 287
 00:09:04,485 --> 00:09:05,520
 0,195 195,375 375,635 655,885 885,1035
-you don't. Do, you know
+you don't, do, you know
 
 288
 00:09:05,520 --> 00:09:06,650
 0,195 195,345 345,525 525,630 630,1130
-you're not not a programmer?
+you're not not a programmer,|
+|
 
 289
 00:09:06,820 --> 00:09:07,500
 0,245 245,365 365,485 485,575 575,680
-At the end of the
+at the end of the
+归根结底，你将始终与数据库交互，
 
 290
 00:09:07,500 --> 00:09:08,295
@@ -1553,35 +1658,37 @@ day, you're always going to
 291
 00:09:08,295 --> 00:09:09,320
 0,180 180,585 585,690 690,780 780,1025
-be interacting with the database,
+be interacting with the database,|
+|
 
 292
 00:09:10,000 --> 00:09:10,980
 0,335 335,560 560,695 695,830 830,980
 even if if it's an
+即使它是 Excel 电子表格数据库，
 
 293
 00:09:10,980 --> 00:09:12,460
 0,255 255,740
-Excel spreadsheet.|
-|
+Excel spreadsheet
 
 294
 00:09:12,460 --> 00:09:13,500
 0,165 165,440
-It bit.|
-它咬人了。|
+{database -},|
+|
 
 295
 00:09:14,950 --> 00:09:18,645
 0,290 290,580 1980,2380 3180,3485 3485,3695
-Is one, and this course
-是其中之一，这门课程很重要，因为您最终将与数据库系统交互，您需要了解其中实际包含的内容。
+is one.| And this course
+是其中之一。|这门课程很重要，
 
 296
 00:09:18,645 --> 00:09:21,285
 0,255 255,605 625,1025 2185,2475 2475,2640
-is important because because you're
+is important,| because because you're
+|因为你最终将与数据库系统交互，
 
 297
 00:09:21,285 --> 00:09:21,975
@@ -1591,7 +1698,8 @@ going to end up interacting
 298
 00:09:21,975 --> 00:09:23,220
 0,105 105,315 315,665 895,1140 1140,1245
-with database systems, you need
+with database systems,| you need
+|你需要了解其中实际包含的内容，
 
 299
 00:09:23,220 --> 00:09:24,525
@@ -1601,14 +1709,14 @@ to understand what's actually get
 300
 00:09:24,525 --> 00:09:25,380
 0,305
-inside.|
+inside,|
 |
 
 301
 00:09:25,690 --> 00:09:26,655
 0,260 260,425 425,635 635,800 800,965
-Even if, if, if it's
-即使是在手机上运行的小应用程序，或者有大量数据的应用程序，理解查询也是很重要的。或者当你使用数据库系统时，它实际上是做什么的？
+even if, if, if it's
+即使是在手机上运行的小应用程序，
 
 302
 00:09:26,655 --> 00:09:27,825
@@ -1618,39 +1726,44 @@ a small application like running
 303
 00:09:27,825 --> 00:09:28,965
 0,120 120,240 240,405 405,695 805,1140
-in your cell phone or
+in your cell phone| or
+|或者有大量数据的应用程序，
 
 304
 00:09:28,965 --> 00:09:31,250
 0,335 745,1080 1080,1935 1935,2025 2025,2285
-a application withabytes of data,
+a application {with,gigabytes} of data,|
+|
 
 305
 00:09:31,660 --> 00:09:33,990
 0,410 410,620 620,830 830,1150 1860,2330
-it's important to understand queries.
+it's important to understand queries,|
+理解查询也是很重要的，|
 
 306
 00:09:33,990 --> 00:09:35,540
 0,135 135,225 225,435 435,800 1150,1550
-Or when you database system,
+or when {you,see} database system,
+或者当你看数据库系统时，它实际上是什么。
 
 307
 00:09:35,860 --> 00:09:37,280
 0,275 275,410 410,620 620,970
-what does it actually?|
+what does it actually.|
 |
 
 308
 00:09:38,040 --> 00:09:39,320
 0,320 320,575 575,785 785,950 950,1280
 And what are the tradeoffs
-在使用一种数据模型与另一种数据模型或一种数据库方法与另一种数据库方法的方式上，您会做出哪些权衡？
+你会做出哪些权衡，
 
 309
 00:09:39,320 --> 00:09:40,130
 0,75 75,195 195,405 405,630 630,810
-you would make for how
+you would make| for how
+|在使用一种数据模型与另一种数据模型，
 
 310
 00:09:40,130 --> 00:09:41,075
@@ -1660,73 +1773,79 @@ you use one data model
 311
 00:09:41,075 --> 00:09:42,650
 0,270 270,635 715,1005 1005,1245 1245,1575
-versus another, or one database
+versus another,| or one database
+|或一种数据库与另一种数据库。
 
 312
 00:09:42,650 --> 00:09:44,520
 0,300 300,620 790,1190
-approach versus another?|
+approach versus another.|
 |
 
 313
 00:09:45,700 --> 00:09:46,815
 0,320 320,395 395,530 530,815 815,1115
 What's the most widely deployed
-世界上部署最广泛的数据库系统是什么？我能猜猜吗？
+世界上部署最广泛的数据库系统是什么，
 
 314
 00:09:46,815 --> 00:09:47,655
 0,180 180,405 405,525 525,600 600,840
-database system in the world?
+database system in the world,|
+|
 
 315
 00:09:47,655 --> 00:09:48,380
 0,225 225,300 300,390 390,480 480,725
-Can I take a guess?|
-|
+you might take a guess,|
+你可以猜猜看，|
 
 316
 00:09:51,970 --> 00:09:52,695
 0,230 230,305 305,410 410,560 560,725
-Everyone has a cell phone,
-每个人都有一部手机，对吗？
+everyone has a cell phone,
+每个人都有一部手机，
 
 317
 00:09:52,695 --> 00:09:53,720
 0,275
-right?|
+right,|
 |
 
 318
 00:09:53,880 --> 00:09:54,905
 0,425 425,605 605,755 755,860 860,1025
-Sql light is on every
-每一部手机上都有SQL Light，它是由北卡罗来纳州的一个家伙写的。很好，但帮手没有地址。他就像，啊，他就像一个游牧民族。
+{SQLite -} is on every
+每一部手机上都有 SQLite ，
 
 319
 00:09:54,905 --> 00:09:57,080
 0,225 225,695 1675,1920 1920,2055 2055,2175
-single cellphone and it's written
+single {cell,phone}| and it's written
+|它是由北卡罗来纳州的一个家伙写的，
 
 320
-00:09:57,080 --> 00:09:58,685
+00:09:57,080 --> 00:09:58,585
 0,225 225,450 450,740 1210,1485 1485,1605
 by one dude down in
 
 321
 00:09:58,685 --> 00:10:01,240
 0,135 135,425 1255,1655 2035,2295 2295,2555
-north Carolina. Kind, but like
+north Carolina,| kind, but like
+|但帮手没有地址，
 
 322
-00:10:01,260 --> 00:10:02,315
+00:10:01,339 --> 00:10:02,315
 0,395 395,590 590,695 695,845 845,1055
-helper doesn't have an address.
+helper doesn't have an address,|
+|
 
 323
 00:10:02,315 --> 00:10:02,945
 0,195 195,255 255,390 390,570 570,630
-He's like, ah, he's like
+he's like, {} he's like
+他就像一个游牧民族。
 
 324
 00:10:02,945 --> 00:10:04,120
@@ -1738,17 +1857,19 @@ a nomad.|
 00:10:05,510 --> 00:10:06,385
 0,245 245,455 455,590 590,770 770,875
 So let's an example of
-让我们举一个数据库的例子。我们和大学申请者谈过了。我们谈论的是一些与这里的每个人更相关的事情。与Spotify、乐队营、iTunes或Keep Music一样。
+让我们举一个数据库的例子，
 
 326
 00:10:06,385 --> 00:10:07,285
 0,60 60,285 285,540 540,675 675,900
-a database. We talk to
+a database,| we talk about
+|我们讨论了大学应用，
 
 327
 00:10:07,285 --> 00:10:09,720
 0,365 1435,1770 1770,1995 1995,2160 2160,2435
-university application. We talk about
+university application,| we talk about
+|我们谈论一些与这里的每个人更相关的事情，
 
 328
 00:10:10,880 --> 00:10:11,950
@@ -1758,34 +1879,37 @@ something more relevant to everyone
 329
 00:10:11,950 --> 00:10:14,520
 0,260 1270,1545 1545,1710 1710,1920 1920,2570
-here. Same thing like Spotify
+here,| same thing like Spotify
+|与 Spotify Bandcamp iTunes 或 KeepMusic 类似的东西。
 
 330
 00:10:14,690 --> 00:10:15,940
 0,245 245,365 365,590 590,935 935,1250
-or like band camp or
+or like {Bandcamp -} or
 
 331
 00:10:15,940 --> 00:10:18,500
 0,525 525,645 645,920 1540,1940
-itunes or keep music.|
+Itunes or {KeepMusic -}.|
 |
 
 332
 00:10:18,510 --> 00:10:19,310
 0,230 230,305 305,455 455,620 620,800
 So we can create a
-所以我们可以创建一个非常简单的数据库，它基本上有两个实体。有艺人出现在专辑中。
+所以我们可以创建一个非常简单的数据库，
 
 333
 00:10:19,310 --> 00:10:21,040
 0,300 300,630 630,980 1150,1440 1440,1730
-really simple database that has
+really simple database,| that has
+|它有两个实体，
 
 334
 00:10:21,270 --> 00:10:24,970
 0,400 420,680 680,1180 1440,1990 3300,3700
-basically two entities. There's artists
+basically two entities,| there's artists
+|有艺人出现在专辑中。
 
 335
 00:10:25,080 --> 00:10:26,560
@@ -1797,7 +1921,7 @@ appear on albums.|
 00:10:26,560 --> 00:10:27,280
 0,210 210,360 360,495 495,615 615,720
 So the thing we need
-所以我们需要存储在我们的数据中的东西就像每个艺术家的名字一样，是的，他们的名字是什么？他们是从哪个国家起步的？这张专辑可能是这样的，专辑的名字是什么，它是什么时候推出的，有哪些艺术家出现在里面？
+所以我们需要存储在我们的数据中的东西是，
 
 337
 00:10:27,280 --> 00:10:27,880
@@ -1807,27 +1931,31 @@ to store in our data
 338
 00:10:27,880 --> 00:10:28,975
 0,195 195,315 315,420 420,680 850,1095
-is gonna be like for
+is gonna be,| like for
+|比如对于每个艺术家，
 
 339
 00:10:28,975 --> 00:10:30,565
 0,195 195,435 435,725 1075,1350 1350,1590
-every single artist, yeah, what's
+every single artist,| yeah, what's
+|他们的名字是什么，他们是从哪个国家开始的，
 
 340
 00:10:30,565 --> 00:10:31,830
 0,120 120,390 390,675 675,915 915,1265
-their name? What country did
+their name, what country did
 
 341
 00:10:32,390 --> 00:10:34,015
 0,320 320,640 1050,1310 1310,1430 1430,1625
-they start? And the album
+they start,| and the album
+|专辑可能是这样的，
 
 342
 00:10:34,015 --> 00:10:34,720
 0,165 165,270 270,405 405,600 600,705
-could be like, what's the
+could be like,| what's the
+|专辑的名字是什么，它是什么时候推出的，
 
 343
 00:10:34,720 --> 00:10:35,695
@@ -1837,52 +1965,54 @@ name of the album, when
 344
 00:10:35,695 --> 00:10:36,850
 0,120 120,225 225,330 330,575 865,1155
-did it come out, what
+did it come out,| what
+|有哪些艺术家出现在里面。
 
 345
 00:10:36,850 --> 00:10:38,400
 0,290 310,570 570,690 690,950
-artists appear on it?|
+artists appear on it.|
 |
 
 346
 00:10:38,810 --> 00:10:39,980
 0,290 290,580
-And so.|
-所以。|
+And so,
+所以，我们现在讨论的是，
 
 347
 00:10:41,170 --> 00:10:42,200
 0,275 275,440 440,590 590,740 740,1030
-What we talk about now
-我们现在讨论的是一个数据库的稻草人实现。
+what we talk about now|
+|
 
 348
 00:10:42,340 --> 00:10:43,605
 0,365 365,605 605,860 860,1085 1085,1265
 we do a sort of
+一个数据库的稻草人实现，
 
 349
 00:10:43,605 --> 00:10:44,880
 0,270 270,555 555,905 925,1170 1170,1275
-straw man implementation of a
+{strawman -} implementation of a
 
 350
 00:10:44,880 --> 00:10:45,860
 0,260
-database.|
-|
+database,
 
 351
 00:10:46,110 --> 00:10:47,975
 0,400 1110,1355 1355,1520 1520,1685 1685,1865
-Database and we'll see why
-数据库，我们将看到为什么它是愚蠢的，我们会看到它将会有的所有问题。然后，这将有助于激励我们为什么真正想要建立一个成熟的数据库。我依赖于一个成熟的数据库。
+database| and we'll see why
+|我们将看到为什么它是愚蠢的，
 
 352
 00:10:47,975 --> 00:10:49,235
 0,270 270,540 540,750 750,995 1015,1260
-it's stupid and we see
+it's stupid| and we see
+|我们会看到它将会有的所有问题，
 
 353
 00:10:49,235 --> 00:10:49,940
@@ -1892,27 +2022,32 @@ all the problems that it's
 354
 00:10:49,940 --> 00:10:51,425
 0,60 60,150 150,410 1030,1290 1290,1485
-going to have. And then
+going to have,| and then
+|然后，这将有助于激励，
 
 355
 00:10:51,425 --> 00:10:52,850
 0,270 270,525 525,840 840,990 990,1425
-that again that'll help motivate
+that again that'll help motivate|
+|
 
 356
 00:10:52,850 --> 00:10:53,600
 0,225 225,420 420,570 570,660 660,750
 why we actually want to
+我们为什么想要建立一个成熟的数据库，
 
 357
 00:10:53,600 --> 00:10:54,640
 0,150 150,315 315,495 495,780 780,1040
-build a full fledged database.
+build a full fledged database,|
+|
 
 358
 00:10:54,720 --> 00:10:55,670
 0,335 335,575 575,710 710,800 800,950
-I rely on a full
+or rely on a full
+或者依赖一个成熟的数据库。
 
 359
 00:10:55,670 --> 00:10:56,900
@@ -1924,7 +2059,7 @@ fledged database.|
 00:10:58,520 --> 00:10:59,440
 0,260 260,365 365,635 635,770 770,920
 So the easiest way to
-因此，实现管理数据的数据库系统的最简单方法是只使用磁盘上的文件。
+所以，实现管理数据的数据库系统的最简单方法是，
 
 361
 00:10:59,440 --> 00:11:00,745
@@ -1934,34 +2069,36 @@ implement a database system that
 362
 00:11:00,745 --> 00:11:02,710
 0,315 315,635 1075,1475 1555,1815 1815,1965
-manages data is to just
+manages data is| to just
+|只使用磁盘上的文件，
 
 363
 00:11:02,710 --> 00:11:05,200
 0,210 210,530 1150,1440 1440,1940
-use files on disk.|
-|
+use files on disk,
 
 364
 00:11:05,610 --> 00:11:06,940
 0,380 380,650 650,785 785,980 980,1330
-Right. So for every single,
-正确的。所以对于每首单曲，对于我的两个实体，我有一张专辑，我有一位艺术家，我有一个CSV文件，逗号分隔值文件。
+right,| so for every single,|
+|所以对于每个，|
 
 365
 00:11:07,470 --> 00:11:08,465
 0,245 245,365 365,485 485,845 845,995
 for my two entities, I
+对于我的两个实体， Album 和 Artist ，
 
 366
 00:11:08,465 --> 00:11:09,140
 0,90 90,195 195,405 405,600 600,675
-have an album, I have
+have an Album, I have
 
 367
 00:11:09,140 --> 00:11:10,460
 0,75 75,320 730,1005 1005,1125 1125,1320
-an artist, I have a
+an Artist,| I have a
+|我有一个 CSV 文件，逗号分隔值文件，
 
 368
 00:11:10,460 --> 00:11:11,990
@@ -1971,50 +2108,48 @@ csv file, comma separated value
 369
 00:11:11,990 --> 00:11:13,040
 0,350
-file.|
+file,|
 |
 
 370
 00:11:13,040 --> 00:11:14,375
 0,240 240,420 420,740 940,1185 1185,1335
-And every single in that
-以及那份文件里的每一个人。
+and every single in that
+那份文件里的每一行，
 
 371
 00:11:14,375 --> 00:11:15,480
 0,305
-file.|
-|
+file,
 
 372
 00:11:15,630 --> 00:11:17,180
 0,305 305,515 515,725 725,1030
-Tax every single line.|
-对每一行都征税。|
+that every single line,
 
 373
 00:11:19,180 --> 00:11:20,340
 0,400
-Right.|
-正确的。|
+right,|
+|
 
 374
 00:11:21,320 --> 00:11:24,200
 0,360 360,675 675,1010 1390,1790
-I want to find.|
-我想要找到。|
+I want to find
+我想要在我的[]找到[]，
 
 375
 00:11:24,350 --> 00:11:25,900
 0,320 320,640
-In my.|
-在我的。|
+in my,|
+|
 
 376
 00:11:26,090 --> 00:11:26,815
 0,320 320,380 380,500 500,635 635,725
 I'm going to open it
-我要打开它，你知道，解析它，排成一行，试着找到我正在寻找的数据。
+我要打开它，解析它，排成一行，
 
 377
 00:11:26,815 --> 00:11:29,190
@@ -2022,119 +2157,120 @@ I'm going to open it
 up, you know, parse it,
 
 378
-00:11:29,510 --> 00:11:30,415
+00:11:29,510 --> 00:11:30,413
 0,275 275,440 440,635 635,800 800,905
-line my line and try
+line my line| and try
+|试着找到我正在寻找的数据。
 
 379
-00:11:30,415 --> 00:11:31,375
+00:11:30,513 --> 00:11:31,374
 0,120 120,270 270,405 405,665 715,960
 to find the data that
 
 380
-00:11:31,375 --> 00:11:32,420
+00:11:31,473 --> 00:11:32,419
 0,150 150,285 285,605
-I'm looking for.|
-|
+I'm looking for,
 
 381
-00:11:32,700 --> 00:11:33,780
+00:11:32,699 --> 00:11:33,779
 0,400
-Right.|
-正确的。|
+right.|
+|
 
 382
-00:11:33,920 --> 00:11:34,525
+00:11:33,919 --> 00:11:34,524
 0,275 275,395 395,485 485,560 560,605
 So say I want to
-所以说我想做一件事。
+所以，假设我想做一件事，
 
 383
-00:11:34,525 --> 00:11:35,940
+00:11:34,524 --> 00:11:35,939
 0,60 60,305
-do something.|
+do something,|
 |
 
 384
-00:11:45,360 --> 00:11:47,360
+00:11:45,359 --> 00:11:47,359
 0,365 365,590 590,1090 1380,1730 1730,2000
-Versus the csv magic word
-与CSV魔法词的对决。基本上就是用逗号分开。
+versus the csv magic word
+对于 CSV 魔法词的部分，
 
 385
-00:11:47,360 --> 00:11:49,805
+00:11:47,359 --> 00:11:49,804
 0,270 270,620 1450,1850 1990,2355 2355,2445
-parts. Basically just splitting on
+parts,| basically just splitting on
+|就是用逗号分开，
 
 386
-00:11:49,805 --> 00:11:51,540
+00:11:49,804 --> 00:11:51,539
 0,245 475,1025
-the commas.|
+the commas,|
 |
 
 387
-00:11:51,610 --> 00:11:52,545
+00:11:51,609 --> 00:11:52,544
 0,260 260,350 350,470 470,710 710,935
-Then if I find that
-那么如果我发现这个名字是。
+then if I find that
+然后如果我发现这个名字是 (GZA) ，
 
 388
-00:11:52,545 --> 00:11:55,430
+00:11:52,544 --> 00:11:55,429
 0,275 1255,1655 2065,2415 2415,2625 2625,2885
-the the name of the.|
+the the name of the,|
 |
 
 389
-00:11:56,860 --> 00:11:57,690
+00:11:56,859 --> 00:11:57,689
 0,225 225,360 360,495 495,585 585,830
-Then I print it out.|
+then I print it out.|
 然后我把它打印出来。|
 
 390
-00:12:01,130 --> 00:12:02,340
+00:12:01,129 --> 00:12:02,339
 0,400
-Right.|
-正确的。|
+{All,right},
+好的，它起作用了，
 
 391
-00:12:02,650 --> 00:12:04,160
+00:12:02,649 --> 00:12:04,159
 0,275 275,550
-It works.|
-它起作用了。|
+it works,|
+|
 
 392
-00:12:06,250 --> 00:12:07,640
+00:12:06,249 --> 00:12:07,639
 0,245 245,305 305,395 395,670 990,1390
-But this is bad. Why?|
-但这很糟糕。为什么？|
+but this is bad, why?|
+但这很糟糕，为什么？|
 
 393
-00:12:11,090 --> 00:12:12,220
+00:12:11,089 --> 00:12:12,219
 0,320 320,545 545,740 740,905 905,1130
-Yes, it can become really
-是的，随着行数的增加，它会变得非常慢。
+Yes.|
+好的。|
 
 394
-00:12:12,220 --> 00:12:13,015
+00:12:12,219 --> 00:12:13,014
 0,240 240,390 390,495 495,630 630,795
-slow as the number of
 
 395
-00:12:13,015 --> 00:12:13,200
+00:12:13,014 --> 00:12:13,199
 0,135
-rows.|
+|
 |
 
 396
-00:12:13,900 --> 00:12:15,000
+00:12:13,899 --> 00:12:14,999
 0,275 275,515 515,680 680,860 860,1100
-Says it's gone. Really, really
-说它不见了。增长非常非常缓慢。是的，所以在软件中总是要考虑极端的情况。
+{} It's gone really, really
+它会变得非常缓慢，随着成员的增加。
 
 397
 00:12:15,000 --> 00:12:17,085
 0,350 850,1250 1390,1695 1695,1905 1905,2085
-slow increases. Yeah, so always
+slow {member,increases}.| Yeah, so always
+|是的，所以在软件中总是要考虑极端的情况，
 
 398
 00:12:17,085 --> 00:12:18,585
@@ -2144,14 +2280,14 @@ to think of in extremes
 399
 00:12:18,585 --> 00:12:21,040
 0,300 300,665 835,1235
-in, in software.|
+in, in software,|
 |
 
 400
 00:12:21,140 --> 00:12:22,795
 0,290 290,530 530,880 1020,1400 1400,1655
-Three records here. Yeah, I
-这里有三张唱片。是的，我可以将它加载到一个页面中，并很快进行解析。但如果我有30亿张唱片。
+three records here,| yeah, I
+这里有三条记录，|是的，我可以将它加载到一个页面中，并很快进行解析，
 
 401
 00:12:22,795 --> 00:12:23,410
@@ -2166,19 +2302,20 @@ a single page and parse
 403
 00:12:24,265 --> 00:12:25,435
 0,120 120,285 285,575 835,1080 1080,1170
-that pretty quickly. But if
+that pretty quickly,| but if
+|但如果我有 30 条记录，
 
 404
 00:12:25,435 --> 00:12:26,730
 0,120 120,345 345,630 630,930 930,1295
-I have 3 billion records.|
+I have 3 billion records,|
 |
 
 405
 00:12:27,950 --> 00:12:28,930
 0,275 275,470 470,650 650,800 800,980
-Then yeah, and if jizz
-是的，如果jizz是最后一个条目，那么我必须逐行解析每一个条目。
+then yeah, and if GZA
+而且如果 GZA 是最后一个条目，
 
 406
 00:12:28,930 --> 00:12:29,880
@@ -2188,7 +2325,8 @@ is the last, the last
 407
 00:12:30,080 --> 00:12:31,120
 0,320 320,485 485,590 590,755 755,1040
-entry, then I gotta parse
+entry,| then I gotta parse
+|那么我必须逐行解析每一个条目。
 
 408
 00:12:31,120 --> 00:12:32,100
@@ -2200,31 +2338,25 @@ every single line by line.|
 00:12:33,330 --> 00:12:35,240
 0,400
 Yes.|
-是。|
+好的。|
 
 410
 00:12:38,320 --> 00:12:40,080
 0,610 630,1175 1175,1325 1325,1505 1505,1760
-Insert deletion would be really
-删除插入内容真的很难。
 
 411
 00:12:40,080 --> 00:12:40,380
 0,270
-hard.|
-|
 
 412
 00:12:41,430 --> 00:12:43,560
 0,400 630,1030 1200,1780
-Consider system restrictions.|
-考虑一下系统限制。|
 
 413
 00:12:43,750 --> 00:12:44,940
 0,260 260,425 425,590 590,740 740,1190
 She says that the insertion
-她说，考虑到系统的限制，插入删除将非常可怕。所以插入不会那么糟糕，对吧？因为如果我只是附加到它的末尾，谁会在乎呢，对吗？
+她说，考虑到系统的限制，插入删除将非常可怕，
 
 414
 00:12:44,940 --> 00:12:45,795
@@ -2234,7 +2366,8 @@ deletion would be really horrible
 415
 00:12:45,795 --> 00:12:47,990
 0,345 345,675 675,990 990,1475 1795,2195
-given the system restrictions. So
+given the system restrictions,| so
+|所以插入不会那么糟糕，
 
 416
 00:12:48,790 --> 00:12:50,100
@@ -2244,7 +2377,8 @@ insertion wouldn't be that bad,
 417
 00:12:50,100 --> 00:12:50,745
 0,270 270,420 420,480 480,555 555,645
-right? Because if I just
+right,| because if I just
+|因为如果我只是附加到它的末尾，谁会在乎呢。
 
 418
 00:12:50,745 --> 00:12:51,375
@@ -2254,14 +2388,14 @@ append to the end of
 419
 00:12:51,375 --> 00:12:53,200
 0,105 105,210 210,605 775,1175
-it, who cares, right?|
+it, who cares, right.|
 |
 
 420
 00:13:00,200 --> 00:13:01,195
 0,290 290,455 455,605 605,815 815,995
-Right. So she said, what
-正确的。所以她说，如果我按发行年份分类，会怎么样？
+Right, so she said, what
+是的，她说，如果我按发行年份分类，会怎么样，
 
 421
 00:13:01,195 --> 00:13:02,260
@@ -2271,14 +2405,14 @@ if I keep things sorted
 422
 00:13:02,260 --> 00:13:03,560
 0,165 165,375 375,680
-by release year?|
+by release year,|
 |
 
 423
 00:13:03,560 --> 00:13:04,700
 0,240 240,555 555,795 795,990 990,1140
-Then, yeah, I have to
-那么，是的，我得去找它应该在哪里。
+then, yeah, I have to
+那么，是的，我得去找它应该在哪里，
 
 424
 00:13:04,700 --> 00:13:06,215
@@ -2288,39 +2422,44 @@ go find where it should
 425
 00:13:06,215 --> 00:13:07,120
 0,275
-be.|
+be,|
 |
 
 426
 00:13:07,850 --> 00:13:10,255
 0,275 275,410 410,670 1920,2240 2240,2405
-That would suck. You also
-那会很糟糕的。你也说过更新或删除，对吗？如果我想删除条目，我会得到与查找相同的问题，我必须找到我正在寻找的东西并将其删除。
+that would suck,| you also
+那会很糟糕，|你也说过更新或删除，
 
 427
 00:13:10,255 --> 00:13:12,240
 0,210 210,575 985,1305 1305,1605 1605,1985
-said update or delete, right?
+said update or delete, right,|
+|
 
 428
 00:13:12,380 --> 00:13:13,135
 0,245 245,350 350,455 455,560 560,755
-If I want to delete
+if I want to delete
+如果我想删除条目，
 
 429
 00:13:13,135 --> 00:13:13,765
 0,210 210,345 345,435 435,570 570,630
-entry I get it's the
+entry,| I get it's the
+|我会得到与查找相同的问题，
 
 430
 00:13:13,765 --> 00:13:14,515
 0,135 135,285 285,405 405,585 585,750
-same problem as looking for
+same problem as looking for|
+|
 
 431
 00:13:14,515 --> 00:13:14,995
 0,60 60,135 135,225 225,330 330,480
 and I got to find
+我必须找到正在寻找的东西并将其删除。
 
 432
 00:13:14,995 --> 00:13:15,610
@@ -2336,8 +2475,8 @@ and delete it.|
 434
 00:13:17,350 --> 00:13:20,055
 0,275 275,550 810,1210 2370,2630 2630,2705
-Those are issues, but there
-这些都是问题，但还有一些其他问题。
+Those are {[],issues},| but there
+这些都是[]问题，|但还有一些其他问题。
 
 435
 00:13:20,055 --> 00:13:20,805
@@ -2353,36 +2492,32 @@ well.|
 437
 00:13:27,580 --> 00:13:29,460
 0,290 290,580 660,1040 1040,1420 1500,1880
-Record one that is a
-如果存在流，请记录该流。
 
 438
 00:13:29,460 --> 00:13:30,800
 0,360 360,630 630,920
-stream if there.|
-|
 
 439
 00:13:31,640 --> 00:13:33,310
 0,300 300,620 640,1035 1035,1395 1395,1670
-In that, then it'll turn.|
-穿上它，它就会转弯。|
 
 440
 00:13:33,910 --> 00:13:34,905
 0,335 335,545 545,710 710,860 860,995
-So your statement is that
-所以你的说法是，我把所有的东西都表示为，比如说，字符串，然后如果有什么。
+So your statement is that,|
+所以你的说法是，|
 
 441
 00:13:34,905 --> 00:13:36,375
 0,225 225,720 720,870 870,1115 1135,1470
 I'm representing everything as, say,
+我把所有的东西都表示为，比如说，字符串，
 
 442
 00:13:36,375 --> 00:13:37,395
 0,365 385,645 645,750 750,855 855,1020
-strings, and then if there's
+strings,| and then if there's
+|然后如果有什么。
 
 443
 00:13:37,395 --> 00:13:39,620
@@ -2393,38 +2528,31 @@ a what.|
 444
 00:13:40,350 --> 00:13:42,940
 0,260 260,520 720,1100 1100,1840
-We are in 1990.|
-我们是在1990年。|
 
 445
 00:13:43,270 --> 00:13:45,285
 0,365 365,730 870,1445 1445,1715 1715,2015
-So if accidentally, somebody would
-所以如果不小心，就会有人发动。
 
 446
 00:13:45,285 --> 00:13:46,040
 0,305
-start.|
-|
 
 447
 00:13:49,170 --> 00:13:50,150
 0,305 305,500 500,680 680,830 830,980
-Yeah, correct. Yeah, so her
-是啊，没错。所以她的评论是我是。
+Yeah, correct,| yeah, so her
+是的，没错，|所以她的说法是，
 
 448
-00:13:50,150 --> 00:13:52,220
+00:13:50,249 --> 00:13:52,220
 0,195 195,500 880,1400
-comment is I'm.|
-|
+comment is,| I'm,
+|我在这种情况下 year 是文本文件，
 
 449
 00:13:52,450 --> 00:13:53,805
 0,400 780,1115 1115,1190 1190,1265 1265,1355
-Uh, I'm so in the
-呃，我在这种情况下是文本文件，所以它是ASCII文本，但我的魔术解析函数，我还没有定义，不知何故知道，哦，这应该是一个整数，它将调用a to i，它将把VR转换成字符串到一个整数。
+{} I'm so in the
 
 450
 00:13:53,805 --> 00:13:54,900
@@ -2434,78 +2562,84 @@ years in this case is
 451
 00:13:54,900 --> 00:13:56,030
 0,210 210,435 435,570 570,690 690,1130
-text file, so it's ascii
+text file,| so it's ASCII
+|所以它是 ASCII 文本，
 
 452
 00:13:56,380 --> 00:13:58,275
 0,400 750,1010 1010,1220 1220,1550 1550,1895
-text, but my magic parse
+text,| but my magic parse
+|但我的魔术解析函数，我还没有定义，
 
 453
 00:13:58,275 --> 00:13:59,240
 0,195 195,360 360,450 450,660 660,965
-function, which I haven't defined,
+function, which I haven't defined,|
+|
 
 454
 00:13:59,440 --> 00:14:00,975
 0,290 290,560 560,920 920,1265 1265,1535
 is somehow knowing, oh, this
+不知何故知道，哦，这应该是一个整数，
 
 455
 00:14:00,975 --> 00:14:02,790
 0,210 210,515 685,945 945,1445 1555,1815
-should be an integer and
+should be an integer| and
+|它将调用 atoi ，
 
 456
 00:14:02,790 --> 00:14:03,825
 0,150 150,225 225,330 330,590 730,1035
-it's going to call a
+it's going to call {atoi
 
 457
 00:14:03,825 --> 00:14:05,535
 0,135 135,365 1225,1530 1530,1590 1590,1710
-to I, it's going to
+- -},| it's going to
+|它将把字符串成一个整数，
 
 458
 00:14:05,535 --> 00:14:07,100
 0,210 210,545 565,855 855,1290 1290,1565
-cast the, the VR into
+cast the, the varchar into,
 
 459
 00:14:07,480 --> 00:14:08,780
 0,305 305,530 530,695 695,800 800,1300
-the string to an integer.|
+the string to an integer,|
 |
 
 460
 00:14:09,470 --> 00:14:11,320
 0,350 350,700 840,1085 1085,1330
-And it the best.|
-而且它是最好的。|
+and it the best,|
+而且它是最好的，|
 
 461
 00:14:12,235 --> 00:14:12,760
 0,60 60,105 105,240 240,405 405,525
-If it's just a bunch
-如果这只是甲板上的一堆文件。
+if it's just a bunch
+如果它只是磁盘上的一堆文件，
 
 462
 00:14:12,760 --> 00:14:14,040
 0,120 120,285 285,465 465,740
-of files on deck.|
+of files on disk,|
 |
 
 463
 00:14:14,740 --> 00:14:16,960
 0,260 260,515 515,760 1230,1660
-A parsing error? Corrupt.|
-分析错误？腐败。|
+a parsing error, {you're,corrupt},|
+一个解析错误，就崩溃了，|
 
 464
 00:14:17,170 --> 00:14:18,180
 0,60 60,120 120,195 195,440
-That's a good one.|
-这是个好主意。|
+that's a good one.|
+这是个好想法。|
 
 465
 00:14:21,930 --> 00:14:22,660
@@ -2516,66 +2650,64 @@ What are some other problems?|
 466
 00:14:23,480 --> 00:14:24,560
 0,330 330,495 495,750 750,945 945,1080
-3D and writing to the
-3D和写入文件，它的速度很慢。
 
 467
 00:14:24,560 --> 00:14:25,880
 0,225 225,540 540,920
-file, it slow.|
-|
 
 468
 00:14:26,110 --> 00:14:27,060
 0,245 245,380 380,590 590,815 815,950
 You say reading, writing the
-你说阅读，写文件，我们在某种程度上涵盖了这些，对吗？
+你说读取，写入文件，
 
 469
 00:14:27,060 --> 00:14:28,200
 0,230 520,795 795,915 915,1005 1005,1140
-file, we sort of covered
+file,| we sort of covered
+|我们在某种程度上涵盖了这些，
 
 470
 00:14:28,200 --> 00:14:29,500
 0,180 180,470
-that, right?|
+that, right,|
 |
 
 471
 00:14:30,310 --> 00:14:30,985
 0,75 75,120 120,435 435,540 540,675
-If you're inserting the end,
-如果你要插入尾部，没什么大不了的。
+if you're inserting the end,
+如果你要插入到尾部，没什么问题，
 
 472
 00:14:30,985 --> 00:14:32,340
 0,165 165,300 300,575
-no big deal.|
+no big deal,|
 |
 
 473
 00:14:33,210 --> 00:14:34,800
 0,400
-Reading.|
-阅读。|
+reading,
+读取，能够很好吗？
 
 474
 00:14:34,810 --> 00:14:36,110
 0,245 245,365 365,515 515,790 900,1300
-Could it could me well.|
-它能很好地帮助我吗？|
+could it could me well?|
+|
 
 475
 00:14:40,760 --> 00:14:42,055
 0,260 260,520 690,965 965,1145 1145,1295
 We said a comment in
-我们说过，名字中的一条评论可能会破坏这一点的类似的Python包。
+我们说过，名字中的一条评论可能会破坏，
 
 476
 00:14:42,055 --> 00:14:43,650
 0,90 90,255 255,480 480,785 1195,1595
-the name might break the
+the name might break,| the
+|这点类似 Python 包。
 
 477
 00:14:44,180 --> 00:14:46,680
@@ -2587,13 +2719,13 @@ like python packages for that.|
 00:14:47,020 --> 00:14:48,320
 0,400
 Yes.|
-是。|
+好的。|
 
 479
 00:14:51,110 --> 00:14:52,075
 0,335 335,545 545,695 800,860 860,965
 Yeah, you said you're not
-是啊，你说过你现在不能使用这份文件。
+是的，你说你不能使用这份文件，
 
 480
 00:14:52,075 --> 00:14:52,705
@@ -2603,14 +2735,14 @@ allowed to have current use
 481
 00:14:52,705 --> 00:14:54,580
 0,120 120,225 225,485
-of the file.|
+of the file,|
 |
 
 482
 00:14:55,260 --> 00:14:56,195
 0,275 275,470 470,650 650,800 800,935
-The writer as things get
-当事情变得有点危险时，编剧，是的。
+the writer as things get
+写入作为字符串有点危险，是的。
 
 483
 00:14:56,195 --> 00:14:57,960
@@ -2621,32 +2753,26 @@ a little dicey, yeah.|
 484
 00:15:00,190 --> 00:15:01,500
 0,380 380,635 635,860 860,1115 1115,1310
-Showing the fact that the
-证明了零点是。
 
 485
 00:15:01,500 --> 00:15:02,960
 0,290 790,1190
-zero is.|
-|
 
 486
 00:15:04,360 --> 00:15:05,980
 0,400
 Yeah.|
-嗯。|
+是的。|
 
 487
 00:15:28,610 --> 00:15:30,580
 0,260 260,520
-But it.|
-但是它。|
 
 488
 00:15:30,590 --> 00:15:31,855
 0,275 275,515 515,785 785,1040 1040,1265
-Of the the file, the
-文件中，数据库的关联方案是隐式的。
+of the the file,| the
+文件中，|数据库的关联方案是隐式的，
 
 489
 00:15:31,855 --> 00:15:33,565
@@ -2656,49 +2782,50 @@ scheme of the correlation of
 490
 00:15:33,565 --> 00:15:36,120
 0,135 135,395 865,1170 1170,1895
-the database is implicitly.|
+the database is implicitly,|
 |
 
 491
 00:15:37,520 --> 00:15:40,020
 0,400 1260,1505 1505,1625 1625,1900
-That in the second.|
-在第二种情况下。|
+{we'll,see,that} in the second.|
+我们一会儿会看到。|
 
 492
 00:15:40,840 --> 00:15:42,720
 0,260 260,380 380,640 930,1330
-So we covered, right?|
-所以我们掩饰了，对吧？|
+So we {covered,these}, right.|
+所以我们覆盖了这些。|
 
 493
 00:15:43,380 --> 00:15:44,680
 0,260 260,365 365,560 560,905 905,1300
-So how to ensure that?|
-那么，如何确保这一点呢？|
+So how to ensure that,|
+所以，我如何确保，|
 
 494
 00:15:49,850 --> 00:15:51,560
 0,305 305,500 500,665 665,940
-Going back real quickly.|
-很快就回来了。|
+going back real quickly.|
+很快返回。|
 
 495
 00:15:54,300 --> 00:15:55,420
 0,380 380,605 605,695 695,815 815,1120
-Right. So I have. Woo.|
-正确的。我就是这么做的。哇哦。|
+Right, so I have [],|
+是的，所以，我有[]，|
 
 496
 00:16:01,360 --> 00:16:02,310
 0,120 120,315 315,435 435,645 645,950
-But I'm gonna fix it.
-但我会修好它的。我要确保我所拥有的每一个地方。
+but I'm gonna fix it,|
+但我会修好它的,|
 
 497
 00:16:02,450 --> 00:16:03,220
 0,260 260,350 350,410 410,560 560,770
 I got to make sure
+我要确保我所拥有的每一行，
 
 498
 00:16:03,220 --> 00:16:04,330
@@ -2708,36 +2835,38 @@ that every single place where
 499
 00:16:04,330 --> 00:16:05,820
 0,210 210,470
-I have.|
+I have,|
 |
 
 500
 00:16:05,880 --> 00:16:07,280
 0,400 540,785 785,935 935,1175 1175,1400
-So it all gets updated
-所以所有的更新都是在磁盘上进行的，操作系统或自由/开源软件不知道。
+so it all gets updated
+所以所有的更新同时发生，
 
 501
 00:16:07,280 --> 00:16:10,060
 0,165 165,440 1450,1850 2050,2340 2340,2780
-the same these on disk,
+the same,| {these,are} on disk,|
+|它们是在磁盘上，|
 
 502
 00:16:10,560 --> 00:16:11,690
 0,305 305,485 485,760 780,1025 1025,1130
 the operating system or the
+操作系统或文件系统不知道，
 
 503
 00:16:11,690 --> 00:16:13,120
 0,270 270,600 600,860
-foss doesn't know.|
+{file,system} doesn't know,|
 |
 
 504
 00:16:14,090 --> 00:16:15,430
 0,245 245,380 380,605 605,940 1080,1340
-It just knows that, you
-它只知道，你知道，你想读什么就读什么。
+it just knows that, you
+它只知道，你想读什么，
 
 505
 00:16:15,430 --> 00:16:16,855
@@ -2747,69 +2876,72 @@ know, whatever you want to
 506
 00:16:16,855 --> 00:16:17,760
 0,245
-read.|
+read,|
 |
 
 507
 00:16:18,220 --> 00:16:19,395
 0,400 480,770 770,905 905,995 995,1175
-So we now in the
-所以我们现在就在申请去吧。
+so we now in the
+所以我们现在在应用程序，
 
 508
 00:16:19,395 --> 00:16:21,060
 0,335 505,750 750,995
-application to go.|
+application to go,|
 |
 
 509
 00:16:21,370 --> 00:16:22,740
 0,365 365,605 605,880
-We make sure.|
-我们要确保。|
+we make sure
+我们要确保所有的条目都会[]。
 
 510
 00:16:22,740 --> 00:16:24,150
 0,135 135,210 210,620 940,1185 1185,1410
-All the entries will we
-所有的参赛作品都会让我们行动起来。
+all the entries will we
 
 511
 00:16:24,150 --> 00:16:25,500
 0,380
-actions.|
+[].|
 |
 
 512
 00:16:26,500 --> 00:16:27,435
 0,275 275,410 410,560 560,725 725,935
-She brought up the issue
-她提出了一个问题，如果有人用它们写一年，有效的字符串。在我的示例中，我们会抛出一个解析错误。我只知道，我假设两者之间有一对一的通信。
+She brought up the issue,|
+她提出了一个问题，|
 
 513
 00:16:27,435 --> 00:16:28,095
 0,180 180,270 270,360 360,495 495,660
 of what if someone ever
+如果有人用无效字符串写入 year ，
 
 514
 00:16:28,095 --> 00:16:28,815
 0,195 195,375 375,495 495,600 600,720
-writes a year with them,
+writes a year with {invalid
 
 515
 00:16:28,815 --> 00:16:30,210
 0,255 255,635 895,1215 1215,1290 1290,1395
-valid string. We'd throw a
+-} string,| we'd throw a
+|我们会抛出一个解析错误，
 
 516
 00:16:30,210 --> 00:16:32,190
 0,300 300,560 1120,1395 1395,1635 1635,1980
-parsing error in my example
+parsing error,| in my example
+|在我的示例中，我只有，
 
 517
 00:16:32,190 --> 00:16:33,825
 0,380 550,825 825,1035 1035,1335 1335,1635
-here. I only have, I'm
+here, I only have,| I'm
+|我假设两者之间有一对一的对应关系，
 
 518
 00:16:33,825 --> 00:16:34,760
@@ -2819,36 +2951,38 @@ assuming there's a one one
 519
 00:16:34,870 --> 00:16:37,480
 0,760 840,1240
-correspondence between.|
+correspondence between,|
 |
 
 520
 00:16:38,120 --> 00:16:39,000
 0,260 260,380 380,500 500,620 620,880
-Could only have one artist
-只能有一个艺术家，但显然我们知道情况并非如此，很多专辑都是如此。
+{album,could} only have one artist,|
+专辑只能有一个艺术家，|
 
 521
 00:16:39,650 --> 00:16:40,600
 0,290 290,455 455,590 590,740 740,950
 but obviously we know that's
+但显然我们知道情况并非如此，
 
 522
 00:16:40,600 --> 00:16:41,620
 0,230 400,645 645,810 810,960 960,1020
-not the case and a
+not the case| and a
+|很多专辑都是如此，
 
 523
 00:16:41,620 --> 00:16:42,920
 0,90 90,180 180,590
-lot of albums.|
+lot of albums,|
 |
 
 524
 00:16:42,920 --> 00:16:43,580
 0,165 165,285 285,360 360,465 465,660
-So how do I go
-那么，我现在如何更改我的文件以说明这一点呢？
+so how do I go
+那么，我现在如何更改我的文件以说明这一点呢，
 
 525
 00:16:43,580 --> 00:16:45,070
@@ -2858,25 +2992,26 @@ change my files now to
 526
 00:16:45,990 --> 00:16:47,360
 0,290 290,425 425,670
-account for that?|
+account for that,|
 |
 
 527
 00:16:49,070 --> 00:16:50,850
 0,320 320,640 930,1175 1175,1295 1295,1780
-Lead artist who has albums.|
-拥有专辑的首席艺人。|
+lead artist who has albums,|
+拥有专辑的首席艺人，|
 
 528
 00:16:53,680 --> 00:16:55,365
 0,400 480,880 960,1250 1250,1460 1460,1685
-Right. Well, in my example
-正确的。在我的例子中，什么都不会发生。现在我有一堆专辑，其中有一个艺术家的名字，地图的结尾是。
+right, well, in my example
+在我的例子中，什么都不会发生，
 
 529
 00:16:55,365 --> 00:16:56,700
 0,305 385,720 720,915 915,1125 1125,1335
-here, nothing will happen. And
+here, nothing will happen,| and
+|现在我有一堆专辑，
 
 530
 00:16:56,700 --> 00:16:57,240
@@ -2886,24 +3021,25 @@ now I got a bunch
 531
 00:16:57,240 --> 00:16:58,800
 0,165 165,630 630,950 1210,1455 1455,1560
-of albums that have an
+of albums| that have an
+|其中的艺术家的名字没有任何匹配，
 
 532
 00:16:58,800 --> 00:16:59,520
 0,285 285,405 405,525 525,615 615,720
-artist's name that has a
+artist's name, that {doesn't -}
 
 533
 00:16:59,520 --> 00:17:00,720
 0,135 135,360 360,710
-map ending to.|
+map anything to,|
 |
 
 534
 00:17:01,700 --> 00:17:04,045
 0,365 365,730 900,1300 1830,2225 2225,2345
-So the reference integrity gets
-因此，基准完整性被破坏。
+so the reference integrity gets
+所以，基准完整性被破坏。
 
 535
 00:17:04,045 --> 00:17:05,060
@@ -2915,29 +3051,31 @@ broken.|
 00:17:05,890 --> 00:17:06,675
 0,260 260,410 410,545 545,635 635,785
 We brought a lot of
-我们已经带来了很多实现问题，比如你是如何发现的？
+我们已经带来了很多实现问题，
 
 537
 00:17:06,675 --> 00:17:08,115
 0,300 300,695 715,1095 1095,1335 1335,1440
-implementation issues already, like how
+implementation issues already,| like how
+|比如你如何查找，
 
 538
 00:17:08,115 --> 00:17:09,020
 0,60 60,135 135,395
-do you find?|
+do you find,|
 |
 
 539
 00:17:09,310 --> 00:17:10,710
 0,245 245,410 410,680 680,980 980,1400
-In my example here, it's
-在我的例子中，它是正确的，我必须对整个文件进行强力扫描，才能找到我正在寻找的东西。
+in my example here, it's
+在我的例子中，它是 O(n) ，
 
 540
 00:17:10,710 --> 00:17:13,785
 0,255 255,390 390,680 1090,2060 2800,3075
-it's O N right, I
+it's {O(n) -}, right,| I
+|我必须对整个文件进行穷举扫描，
 
 541
 00:17:13,785 --> 00:17:14,610
@@ -2947,36 +3085,37 @@ have to do a brute
 542
 00:17:14,610 --> 00:17:16,290
 0,260 460,1170 1170,1350 1350,1545 1545,1680
-force scanot scan across the
+force scan, scan across the
 
 543
 00:17:16,290 --> 00:17:17,130
 0,165 165,390 390,555 555,690 690,840
-entire file to find the
+entire file| to find the
+|才能找到我正在寻找的东西，
 
 544
 00:17:17,130 --> 00:17:18,440
 0,105 105,240 240,375 375,680
-thing I'm looking for.|
+thing I'm looking for,|
 |
 
 545
 00:17:18,600 --> 00:17:20,870
 0,400 1260,1505 1505,1715 1715,2030 2030,2270
-Now if I assume that
-现在如果我假设在那里。
+now if I assume that
+现在如果我假设在那里，
 
 546
 00:17:20,870 --> 00:17:22,080
 0,440
-there.|
+there,|
 |
 
 547
 00:17:22,090 --> 00:17:23,625
 0,400 420,770 770,1100 1100,1385 1385,1535
-Only one person that you
-只有一个你认识的人是带着一个名字出去的。然后我就可以停下来了，因为我受够了。
+only one person that you
+只有一个人有给定的名字，
 
 548
 00:17:23,625 --> 00:17:24,585
@@ -2986,83 +3125,85 @@ know only went out with
 549
 00:17:24,585 --> 00:17:25,890
 0,90 90,255 255,575 925,1185 1185,1305
-a given name. Then I
+a given name,| then I
+|然后我就可以停下来，因为我已经完成了，
 
 550
 00:17:25,890 --> 00:17:27,110
 0,255 255,615 615,810 810,975 975,1220
-can stop because I'm done.|
+can stop, because I'm done,|
 |
 
 551
 00:17:28,570 --> 00:17:29,430
 0,275 275,425 425,605 605,755 755,860
-The same name all the
-一直都是同一个名字。
+the same name all the
+一直都是同一个名字，
 
 552
 00:17:29,430 --> 00:17:30,380
 0,260
-time.|
+time,|
 |
 
 553
 00:17:30,380 --> 00:17:31,820
 0,465 465,770
-Albums that.|
-那张专辑。|
+albums that
+那张专辑 GZA 找出来，
 
 554
 00:17:32,120 --> 00:17:32,885
 0,60 60,120 120,285 285,630 630,765
-I don't know jizo puts
-我不知道吉佐把它拿出来了。
+I don't know GZA puts
 
 555
 00:17:32,885 --> 00:17:33,900
 0,275
-out.|
+out,|
 |
 
 556
 00:17:34,000 --> 00:17:35,010
 0,290 290,470 470,605 605,890 890,1010
-Like boot lake jiza in
-就像佛罗里达州的布尔特湖吉萨或类似的地方。我得继续扫描整个文件。
+like, {} like GZA in
+比如佛罗里达州的 GZA 或类似的，
 
 557
 00:17:35,010 --> 00:17:35,900
 0,210 210,375 375,495 495,630 630,890
-Florida or something like that.
+Florida or something like that,|
+|
 
 558
 00:17:35,980 --> 00:17:36,855
 0,260 260,350 350,440 440,605 605,875
 I got to keep scanning
+我得继续扫描整个文件，
 
 559
 00:17:36,855 --> 00:17:38,160
 0,105 105,285 285,605
-the entire file.|
+the entire file,|
 |
 
 560
 00:17:38,860 --> 00:17:39,250
 0,90 90,165 165,240 240,300 300,390
-And that's going to be
-这将是n的n阶。
+and that's going to be
+这将是 n 或 [n 阶]。
 
 561
 00:17:39,250 --> 00:17:41,400
 0,260 760,1050 1050,1170 1170,1400
-n order of n.|
+n {or,order} of n.|
 |
 
 562
 00:17:42,780 --> 00:17:44,030
 0,320 320,560 560,830 830,1070 1070,1250
 My example here, again, I
-我的例子，再一次，我有，那是在文件中运行的，但是假设我想重写它，现在运行。我想要编写一个使用相同数据库的新应用程序，但我想直接编写，因为这是最热门的东西。
+我的例子，再一次，那是在文件中运行的，
 
 563
 00:17:44,030 --> 00:17:46,550
@@ -3072,7 +3213,8 @@ have that's, that's operating in
 564
 00:17:46,550 --> 00:17:48,245
 0,90 90,350 1150,1410 1410,1605 1605,1695
-the files, but let's say
+the files,| but let's say
+|但是假设我想重写它，现在运行，
 
 565
 00:17:48,245 --> 00:17:48,920
@@ -3082,7 +3224,8 @@ I want to rewrite it
 566
 00:17:48,920 --> 00:17:50,375
 0,135 135,345 345,710 1090,1350 1350,1455
-to now run. I want
+to now run,| I want
+|我想要编写一个使用相同数据库的新应用程序，
 
 567
 00:17:50,375 --> 00:17:51,035
@@ -3097,29 +3240,32 @@ new application that uses the
 569
 00:17:51,890 --> 00:17:52,595
 0,150 150,375 375,555 555,630 630,705
-same database, but I want
+same database,| but I want
+|但我想使用 Rust 编写，
 
 570
 00:17:52,595 --> 00:17:53,230
 0,90 90,180 180,255 255,360 360,635
-to write it in rust
+to write it in Rust,|
+|
 
 571
 00:17:53,790 --> 00:17:54,730
 0,245 245,425 425,515 515,650 650,940
-because that's the hot thing.|
-|
+because that's the hot thing,|
+因为这是最热门的东西，|
 
 572
 00:17:55,340 --> 00:17:55,955
 0,195 195,315 315,495 495,540 540,615
-So now I've got to
-因此，现在我必须确保我的python代码中的任何信息或隐式方案现在都映射到了我的Ruust代码。但是现在，如果我的文件发生了更改，我必须确保同时更改了python代码和rust代码。
+so now I've got to
+现在我必须确保，
 
 573
 00:17:55,955 --> 00:17:57,610
 0,135 135,330 330,540 540,845 1255,1655
-go make sure that whatever
+go make sure that,| whatever
+|我的 Python 代码中的任何信息或隐式方案
 
 574
 00:17:58,110 --> 00:17:59,315
@@ -3129,22 +3275,26 @@ information or implicit scheme I
 575
 00:17:59,315 --> 00:18:00,370
 0,165 165,300 300,435 435,765 765,1055
-had in my python code
+had in my Python code|
+|
 
 576
 00:18:00,570 --> 00:18:01,970
 0,320 320,530 530,755 755,1090 1110,1400
 now maps over to my
+现在都映射到了我的 Rust 代码，
 
 577
 00:18:01,970 --> 00:18:03,230
 0,210 210,530 820,1065 1065,1155 1155,1260
-rust code. But then now
+Rust code,| but then now
+|但是，如果我的文件发生了更改，
 
 578
 00:18:03,230 --> 00:18:04,325
 0,105 105,255 255,560 610,915 915,1095
-if my files change, I've
+if my files change,| I've
+|我必须确保同时更改了 Python 代码和 Rust 代码，
 
 579
 00:18:04,325 --> 00:18:04,760
@@ -3154,75 +3304,77 @@ got to make sure I
 580
 00:18:04,760 --> 00:18:06,200
 0,165 165,470 700,990 990,1140 1140,1440
-go change both the python
+go change both the Python
 
 581
 00:18:06,200 --> 00:18:07,030
 0,150 150,255 255,345 345,510 510,830
-code and the rust code.|
+code and the Rust code,|
 |
 
 582
 00:18:07,610 --> 00:18:08,590
 0,290 290,425 425,530 530,755 755,980
-Maybe, say the guy, the
-也许，比方说，这个家伙，巨蟒代码，你知道，在监狱里，我们无法更新它。
+maybe, say the guy {wrote,the}
+也许，比如，写 Python 代码的这个家伙在监狱里，
 
 583
 00:18:08,590 --> 00:18:10,330
 0,285 285,560 880,1125 1125,1370 1480,1740
-python code, you know, is
+Python code, you know, is
 
 584
 00:18:10,330 --> 00:18:12,370
 0,135 135,410 850,1250 1450,1725 1725,2040
-in jail and we can't
+in jail| and we can't
+|我们无法更新它，
 
 585
 00:18:12,370 --> 00:18:13,540
 0,195 195,470
-update it.|
-|
+update it,
 
 586
 00:18:13,830 --> 00:18:15,140
 0,400 450,850 900,1145 1145,1220 1220,1310
-Right now, what do I
-现在，我该怎么办？
+right,| now, what do I
+|现在，我该怎么办，
 
 587
 00:18:15,140 --> 00:18:16,520
 0,260
-do?|
+do,|
 |
 
 588
 00:18:16,650 --> 00:18:18,040
 0,230 230,305 305,550
-Going to break.|
+going to break.|
 快要崩溃了。|
 
 589
 00:18:18,380 --> 00:18:19,640
 0,260 260,380 380,485 485,730
-What if the APP?|
-如果这个应用程序呢？|
+What if the app
+如果这个应用程序即使在同一台机器上，
 
 590
-00:18:19,850 --> 00:18:20,920
+00:18:19,850 --> 00:18:20,820
 0,260 260,380 380,500 500,740 740,1070
-Even on the same machine
-即使在同一台机器上，我的python代码运行权限就像一个单独的机器上的微服务一样运行，我如何访问另一个机器？我怎么才能访问那个文件？
+even on the same machine,|
+|
 
 591
 00:18:20,920 --> 00:18:21,865
 0,240 240,405 405,705 705,825 825,945
-where my python code is
+where my Python code is
+我的 Python 代码运行的机器，
 
 592
 00:18:21,865 --> 00:18:23,125
 0,275 415,885 885,1020 1020,1155 1155,1260
-running rights running like a
+running, right,| running like a
+|比如作为一个单独的机器上的微服务运行，
 
 593
 00:18:23,125 --> 00:18:24,070
@@ -3232,41 +3384,42 @@ microservice on a on a
 594
 00:18:24,070 --> 00:18:25,360
 0,165 165,470 850,1095 1095,1185 1185,1290
-separate box, how do I
+separate box,| how do I
+|我如何访问另一个，
 
 595
 00:18:25,360 --> 00:18:26,610
 0,240 240,555 555,765 765,945 945,1250
-get access to that other?
+get access to that other,|
+|
 
 596
 00:18:27,140 --> 00:18:27,910
 0,245 245,320 320,410 410,590 590,770
-How do I get access
+how do I get access
+我如何才能访问那个文件。
 
 597
 00:18:27,910 --> 00:18:29,280
 0,75 75,195 195,500
-to that file?|
+to that file.|
 |
 
 598
 00:18:30,730 --> 00:18:32,480
 0,260 260,520
-And then?|
-后来怎么样了？|
+And then,
+然后，如果你有两个线程试图写入相同的文件，
 
 599
 00:18:32,670 --> 00:18:33,700
 0,260 260,440 440,620 620,755 755,1030
-What happens if you have?|
-如果你做到了，会发生什么？|
+what happens if you have
 
 600
 00:18:35,270 --> 00:18:36,205
 0,290 290,545 545,665 665,785 785,935
-Two threads trying to write
-两个线程试图写入相同的文件，相同。
+two threads trying to write
 
 601
 00:18:36,205 --> 00:18:36,970
@@ -3276,31 +3429,32 @@ to the same file, the
 602
 00:18:36,970 --> 00:18:37,760
 0,260
-same.|
+same,|
 |
 
 603
 00:18:38,360 --> 00:18:39,535
 0,365 365,590 590,815 815,1055 1055,1175
-Well, you can rely on
-好的，你可以依靠操作系统来做。
+well, you can rely on
+好的，你可以依靠操作系统来做，
 
 604
 00:18:39,535 --> 00:18:40,590
 0,150 150,345 345,570 570,780 780,1055
-the operating system to do.|
+the operating system to do,|
 |
 
 605
 00:18:42,470 --> 00:18:43,150
 0,290 290,425 425,515 515,605 605,680
-But again, if I have
-但同样，如果我有10亿条记录，我想要更新其中的一条记录，不想锁定10亿条记录，只需更新这条记录。
+but again, if I have
+但同样的，如果我有 10 亿条记录，
 
 606
 00:18:43,150 --> 00:18:44,170
 0,120 120,360 360,705 705,930 930,1020
-a billion records and I
+a billion records| and I
+|我想要更新其中的一条记录，
 
 607
 00:18:44,170 --> 00:18:44,845
@@ -3310,29 +3464,32 @@ want to update one of
 608
 00:18:44,845 --> 00:18:45,460
 0,120 120,300 300,360 360,465 465,615
-them, don't want to lock
+them,| don't want to lock
+|不想锁定 10 亿条记录，
 
 609
 00:18:45,460 --> 00:18:47,155
 0,150 150,410 940,1230 1230,1470 1470,1695
-a billion billion records, just
+a billion billion records,| just
+|只需更新这条记录，
 
 610
 00:18:47,155 --> 00:18:48,220
 0,120 120,210 210,315 315,575
-do that one up.|
+do that one up,|
 |
 
 611
 00:18:48,230 --> 00:18:49,435
 0,605 605,695 695,830 830,1025 1025,1205
-Ideally when I fill more
-理想情况下，当我填充更多的细粒时，可以有多个线程。
+ideally, when I fill more
+理想情况下，当我完成更多的细粒度时，
 
 612
 00:18:49,435 --> 00:18:50,670
 0,195 195,515 565,825 825,960 960,1235
-fine grain that can have
+fine grain,| that can have
+|可以有多个线程。
 
 613
 00:18:50,960 --> 00:18:52,440
@@ -3343,94 +3500,93 @@ multiple threads.|
 614
 00:18:54,970 --> 00:18:58,120
 0,400 540,815 815,1090 1680,2080
-Not anybody really was.|
-并不是每个人都是。|
 
 615
 00:18:58,120 --> 00:18:58,765
 0,195 195,270 270,390 390,540 540,645
 How to make sure that
-如果发生崩溃，如何确保我们的数据安全？
+如果发生崩溃，如何确保我们的数据安全，
 
 616
 00:18:58,765 --> 00:19:00,115
 0,120 120,270 270,435 435,725 1105,1350
-our data is safe if
+our data is safe, if
 
 617
 00:19:00,190 --> 00:19:01,500
 0,75 75,180 180,440
-there's a crash?|
+there's a crash,|
 |
 
 618
 00:19:04,200 --> 00:19:05,320
 0,400
-Right.|
-正确的。|
 
 619
 00:19:06,460 --> 00:19:09,000
 0,395 395,790 900,1300 1980,2315 2315,2540
-And then I crash before
-然后我在F同步之前崩溃了。
+and then I crash before
+然后我在 fsync 之前崩溃了，
 
 620
 00:19:09,000 --> 00:19:10,320
 0,150 150,315 315,710
-I F sync.|
+{} {fsync -},|
 |
 
 621
 00:19:10,480 --> 00:19:11,430
 0,260 260,365 365,485 485,725 725,950
-Some of that data actually
-其中一些数据实际上可能已经得到了那张磁盘。所以当我的，我的。
+some of that data actually
+其中一些数据可能已经到了那张磁盘，
 
 622
 00:19:11,430 --> 00:19:12,560
 0,120 120,225 225,345 345,630 630,1130
-might have gotten thata disk.
+might have gotten that disk,|
+|
 
 623
 00:19:12,970 --> 00:19:15,220
 0,245 245,350 350,610 1170,1570
-So when my, my.|
-|
+so when my, my,|
+所以当我的，|
 
 624
 00:19:15,350 --> 00:19:17,500
 0,275 275,550 900,1300
-I must twice.|
-我必须再来一次。|
+I must twice,|
+我必须再来一次，|
 
 625
 00:19:18,530 --> 00:19:19,450
 0,260 260,485 485,710 710,815 815,920
-Which is not what I
-这不是我想要的，对吧？因为现在我破坏了数据。
+which is not what I
+这不是我想要的，
 
 626
 00:19:19,450 --> 00:19:20,215
 0,180 180,390 390,540 540,645 705,765
-want, right? Because now I've
+want, right,| because now I've
+|因为现在我破坏了数据，
 
 627
 00:19:20,215 --> 00:19:21,440
 0,300 300,545
-corrupted data.|
+corrupted data,|
 |
 
 628
 00:19:22,760 --> 00:19:24,330
 0,365 365,590 590,725 725,1000 1170,1570
-Or now my database is
-或者现在我的数据库真的很大，有很多人想访问它。我如何确保可以跨多台计算机进行复制和复制，以便它们可以同时为所有读取提供服务？
+or now my database is
+或者现在我的数据库真的很大，
 
 629
 00:19:24,500 --> 00:19:25,645
 0,290 290,515 515,815 815,1040 1040,1145
-is really big and I
+is really big| and I
+|有很多人想访问它，
 
 630
 00:19:25,645 --> 00:19:26,455
@@ -3440,7 +3596,8 @@ have a lot of people
 631
 00:19:26,455 --> 00:19:27,775
 0,120 120,285 285,480 480,755 1075,1320
-want to access it. How
+want to access it,| how
+|我如何确保可以跨多台计算机进行复制，
 
 632
 00:19:27,775 --> 00:19:28,680
@@ -3455,7 +3612,8 @@ I can duplicate and replicate
 634
 00:19:30,685 --> 00:19:32,185
 0,165 165,435 435,815 1165,1410 1410,1500
-across multiple machines so they
+across multiple machines,| so they
+|以便它们可以同时为所有读取提供服务，
 
 635
 00:19:32,185 --> 00:19:33,370
@@ -3465,25 +3623,25 @@ can all service reads at
 636
 00:19:33,370 --> 00:19:34,140
 0,120 120,380
-the same?|
+the same,|
 |
 
 637
 00:19:34,210 --> 00:19:35,415
 0,245 245,470 470,785 785,1025 1025,1205
-So my application can scale
-这样我的应用程序就可以向上扩展了。
+so my application can scale
+这样我的应用程序就可以向上扩展，
 
 638
 00:19:35,415 --> 00:19:36,240
 0,275
-up.|
+up,|
 |
 
 639
 00:19:37,160 --> 00:19:37,705
 0,245 245,335 335,410 410,470 470,545
-Files aren't going to do
+files aren't going to do
 文件不会帮我做到这一点。
 
 640
@@ -3496,25 +3654,23 @@ that for me.|
 00:19:39,780 --> 00:19:40,775
 0,245 245,365 365,485 485,695 695,995
 So this is just a
-所以这只是一小部分。
+所以这只是数据库管理系统的一小部分，
 
 642
 00:19:40,775 --> 00:19:42,580
 0,315 315,795 795,1055
-quick smattering of.|
-|
+quick smattering of
 
 643
 00:19:43,060 --> 00:19:44,620
 0,275 275,470 470,790
-Is management system.|
-是管理体制。|
+database management system,
 
 644
 00:19:44,620 --> 00:19:45,955
 0,320 610,900 900,1065 1065,1200 1200,1335
-Right. And why of course
-正确的。当然，在我看来，为什么是这样。
+right,| and why a course
+|在我看来，为什么会有这门课。
 
 645
 00:19:45,955 --> 00:19:47,040
@@ -3525,18 +3681,20 @@ like this, in my opinion.|
 646
 00:19:48,390 --> 00:19:50,135
 0,320 320,500 500,760 900,1300 1380,1745
-So as our agent, management
-因此，作为我们的代理，管理系统将成为允许应用程序在数据库中存储和分析信息的软件。
+So as our database management
+所以，作为我们的数据库管理系统是，
 
 647
 00:19:50,135 --> 00:19:50,960
 0,330 330,570 570,675 675,735 735,825
-system is going to be
+system is going to be|
+|
 
 648
 00:19:50,960 --> 00:19:52,550
 0,225 225,590 850,1200 1200,1425 1425,1590
 the the software that can
+允许应用程序在数据库中存储和分析信息的软件，
 
 649
 00:19:52,550 --> 00:19:54,830
@@ -3546,14 +3704,14 @@ allow applications to store and
 650
 00:19:54,830 --> 00:19:56,170
 0,410 460,795 795,975 975,1080 1080,1340
-analyze information in a database.|
+analyze information in a database,|
 |
 
 651
 00:19:57,040 --> 00:19:58,740
 0,365 365,1115 1115,1385 1385,1580 1580,1700
-And ideally not have to
-理想情况下，不必担心我们刚刚谈到的所有事情。但情况并不总是这样。这其中有很多取舍。
+and ideally not have to
+理想情况下，不必担心我们刚刚谈到的所有事情，
 
 652
 00:19:58,740 --> 00:19:59,970
@@ -3563,46 +3721,50 @@ worry about all the things
 653
 00:19:59,970 --> 00:20:01,220
 0,375 375,615 615,720 720,915 915,1250
-that we just talked about.
+that we just talked about,|
+|
 
 654
 00:20:01,780 --> 00:20:02,685
 0,350 350,485 485,650 650,770 770,905
-That's not always been the
+that's not always been the
+但情况并不总是这样，
 
 655
 00:20:02,685 --> 00:20:04,080
 0,275 445,780 780,930 930,1110 1110,1395
-case. There's many trade offs
+case,| there's many trade offs
+|这其中有很多取舍，
 
 656
 00:20:04,080 --> 00:20:06,200
 0,290 1150,1550
-to the.|
+to the,|
 |
 
 657
 00:20:09,590 --> 00:20:11,245
 0,245 245,490 660,1190 1190,1415 1415,1655
-You know, guarantees in exchange
-你知道，保证换来的是表现。
+you know, guarantees in exchange
+[保证]换来的是性能，
 
 658
 00:20:11,245 --> 00:20:12,680
 0,225 225,545
-for performance.|
+for performance,|
 |
 
 659
 00:20:13,210 --> 00:20:14,480
 0,350 350,560 560,725 725,950 950,1270
-And a general purpose system
-而通用系统通常允许你调整，你知道，这些权衡实际上是什么。
+and a general purpose system
+而通用系统通常允许你，
 
 660
 00:20:14,560 --> 00:20:16,700
 0,400 1170,1445 1445,1580 1580,1790 1790,2140
-typically allow you to adjust,
+typically allow you| to adjust
+|调整这些权衡是什么。
 
 661
 00:20:17,140 --> 00:20:18,270
@@ -3618,14 +3780,13 @@ actually are.|
 663
 00:20:21,590 --> 00:20:23,380
 0,275 275,500 500,850
-And so a.|
-所以。|
+And so a,
+所以，数据库管理系统将定义或指定实现，
 
 664
 00:20:23,380 --> 00:20:25,300
 0,285 285,585 585,980 1240,1635 1635,1920
-The, the data system is
-数据系统将定义或指定Inherentt，以及如何创建数据库、如何查询数据库、如何更改、如何管理数据库、进行语音更改以及其他事情。
+the, the {database,management} system is
 
 665
 00:20:25,300 --> 00:20:27,780
@@ -3635,17 +3796,20 @@ going to define or specify
 666
 00:20:28,700 --> 00:20:30,790
 0,500 500,730 1470,1790 1790,1970 1970,2090
-inherentit and how you can
+{[],implementation}| and how you can
+|如何创建数据库，
 
 667
 00:20:30,790 --> 00:20:31,990
 0,180 180,390 390,930 930,1095 1095,1200
-go create databases, how you
+go create databases,| how you
+|如何查询数据库，
 
 668
 00:20:31,990 --> 00:20:33,355
 0,105 105,330 330,650 850,1170 1170,1365
-can query them, how you
+can query them,| how you
+|如何更改，如何管理数据库，
 
 669
 00:20:33,355 --> 00:20:35,305
@@ -3655,18 +3819,19 @@ can changes, you can administer
 670
 00:20:35,305 --> 00:20:36,745
 0,120 120,675 675,930 930,1200 1200,1440
-the databases, making, making speech
+the databases,| making, making {}
+|进行更改以及其他事情，
 
 671
 00:20:36,745 --> 00:20:38,140
 0,195 195,330 330,465 465,755
-changes and other things.|
+changes and other things,|
 |
 
 672
 00:20:38,630 --> 00:20:40,600
 0,425 425,530 530,1180 1320,1700 1700,1970
-Insert a correspondence of some
+insert a correspondence of some
 插入某种数据模型的对应关系。
 
 673
@@ -3679,12 +3844,13 @@ kind of data model.|
 00:20:42,610 --> 00:20:43,485
 0,215 215,290 290,470 470,695 695,875
 Well, I say also too
-我也要说，不管你是否真的去构建数据库系统，这又是你，在你的日常工作中，这是很重要的，知道你去了哪里，因为在某个时候，你会成为一些构建一些应用程序的人。你必须决定我想要使用哪种数据库管理方式，这应该始终是你不想做我的选择的第一选择。
+我也要再次说，
 
 675
 00:20:43,485 --> 00:20:44,880
 0,150 150,300 300,525 525,875 1165,1395
-that this is again you
+that this is again,| you
+|不管你是否真的去构建数据库系统，
 
 676
 00:20:44,880 --> 00:20:45,630
@@ -3699,17 +3865,20 @@ off and actually build database
 678
 00:20:46,515 --> 00:20:48,480
 0,335 1345,1560 1560,1650 1650,1830 1830,1965
-systems, you know in in
+systems,| you know in in
+|在你的日常工作中，
 
 679
 00:20:48,480 --> 00:20:49,190
 0,90 90,225 225,330 330,435 435,710
-your day to day job,
+your day to day job,|
+|
 
 680
 00:20:49,720 --> 00:20:50,505
 0,275 275,395 395,485 485,545 545,785
 this is to be, its
+这是很重要的，知道你去哪里，
 
 681
 00:20:50,505 --> 00:20:51,330
@@ -3719,27 +3888,30 @@ important again to know where
 682
 00:20:51,330 --> 00:20:52,395
 0,120 120,330 330,615 615,855 855,1065
-you go because at some
+you go,| because at some
+|因为在某个时候，你会构建一些应用程序，
 
 683
 00:20:52,395 --> 00:20:53,235
 0,210 210,390 390,450 450,600 600,840
-point you're gonna be some
+point, you're gonna be some
 
 684
 00:20:53,235 --> 00:20:54,180
 0,210 210,435 435,705 705,855 855,945
-build some application. You have
+build some application,| you have
+|你必须决定我想要使用哪种数据库管理系统，
 
 685
 00:20:54,180 --> 00:20:55,890
 0,225 225,590 790,1065 1065,1290 1290,1710
-to decide what database managementception
+to decide what database {management,system}
 
 686
 00:20:55,890 --> 00:20:57,195
 0,150 150,255 255,360 360,620 1060,1305
-I want to use and
+I want to use| and
+|这应该始终是你的第一选择，
 
 687
 00:20:57,195 --> 00:20:57,855
@@ -3749,7 +3921,8 @@ that should always be sort
 688
 00:20:57,855 --> 00:20:58,995
 0,105 105,285 285,605 745,1005 1005,1140
-the first choice that like
+the first choice,| that like
+|如果不想做我在这里的[]，
 
 689
 00:20:58,995 --> 00:20:59,955
@@ -3759,26 +3932,25 @@ you don't want to do
 690
 00:20:59,955 --> 00:21:00,600
 0,275
-my.|
-|
+my,
 
 691
 00:21:00,830 --> 00:21:02,840
 0,275 275,550
-But here.|
-但在这里。|
+but here,|
+|
 
 692
 00:21:04,520 --> 00:21:05,980
 0,230 230,320 320,425 425,670
-A lot of problems.|
+a lot of problems.|
 有很多问题。|
 
 693
 00:21:06,410 --> 00:21:07,060
 0,245 245,335 335,440 440,530 530,650
-I was like, do you
-我当时就想，你觉得你喜欢创业吗？
+I was like, do you,
+想象你在一家创业公司，
 
 694
 00:21:07,060 --> 00:21:07,765
@@ -3788,31 +3960,32 @@ think you like at a
 695
 00:21:07,765 --> 00:21:08,720
 0,455
-startup?|
+startup,|
 |
 
 696
 00:21:08,730 --> 00:21:09,830
 0,400 450,785 785,875 875,980 980,1100
-And you're trying to build
-你正在尝试构建一个应用程序，一个应用程序。
+and you're trying to build
+你尝试构建一个应用程序，
 
 697
 00:21:09,830 --> 00:21:11,960
 0,225 225,495 495,800 970,1370
-an application, a application.|
+an application, a application,|
 |
 
 698
 00:21:13,360 --> 00:21:14,040
 0,320 320,470 470,530 530,590 590,680
-Startup doesn't have a lot
-初创公司没有很多钱，你没有压力，也没有时间试着把东西拿出来，把第一个版本推出。你真的想花时间确保你的数据是安全的，并且发生崩溃吗？
+startup doesn't have a lot
+初创公司没有很多钱，
 
 699
 00:21:14,040 --> 00:21:15,375
 0,105 105,315 315,615 615,950 1000,1335
-of money your your your
+of money,| your your your
+|你有压力，也没有时间试着把东西拿出来，
 
 700
 00:21:15,375 --> 00:21:16,230
@@ -3827,12 +4000,14 @@ to get things out the
 702
 00:21:16,935 --> 00:21:17,670
 0,180 180,360 360,480 480,600 600,735
-door to get the first
+door| to get the first
+|把第一个版本推出来，
 
 703
 00:21:17,670 --> 00:21:18,840
 0,180 180,330 330,435 435,680 940,1170
-version out the door. Do
+version out the door,| do
+|你真的想花时间确保
 
 704
 00:21:18,840 --> 00:21:19,335
@@ -3847,19 +4022,20 @@ spending your time making sure
 706
 00:21:20,475 --> 00:21:21,345
 0,150 150,300 300,480 480,675 675,870
-that your data is safe
+that| your data is safe
+|你的数据是安全的，当发生崩溃时，
 
 707
 00:21:21,345 --> 00:21:22,100
 0,135 135,285 285,360 360,480 480,755
-and there's is a crash?|
+and there's is a crash,|
 |
 
 708
 00:21:23,560 --> 00:21:24,450
 0,245 245,350 350,455 455,605 605,890
-Because in the end, that's
-因为归根结底，这并不是您的业务或应用程序的一个显著特征。没有人关心，如果你真的丢失了数据，所以如果你崩溃了，你不会丢失被认为是这样的数据。
+because in the end, that's
+因为归根结底，这并不是你的业务或应用程序的一个显著特征，
 
 709
 00:21:24,450 --> 00:21:25,815
@@ -3869,17 +4045,20 @@ not a distinguishing feature of
 710
 00:21:25,815 --> 00:21:27,080
 0,270 270,510 510,720 720,915 915,1265
-your business or your application.
+your business or your application,|
+|
 
 711
 00:21:27,100 --> 00:21:28,310
 0,365 365,770 770,875 875,965 965,1210
-Nobody cares that if you
+nobody cares that if you
+没有人关心，如果你真的丢失了数据，
 
 712
 00:21:28,330 --> 00:21:29,690
 0,260 260,410 410,700 870,1115 1115,1360
-actually lose data that you
+actually lose data,| that you
+|所以如果你崩溃了，你不会丢失数据，
 
 713
 00:21:29,770 --> 00:21:30,750
@@ -3889,30 +4068,29 @@ so if you crash, you
 714
 00:21:30,750 --> 00:21:32,220
 0,225 225,360 360,650 850,1230 1230,1470
-don't lose data that's considered
+don't lose data,| that's considered
+|这样考虑，在现代计算系统中，
 
 715
 00:21:32,220 --> 00:21:33,160
 0,350
-like.|
-|
+like
 
 716
 00:21:33,160 --> 00:21:34,040
 0,105 105,350
-You know.|
-你知道。|
+you know,
 
 717
 00:21:34,750 --> 00:21:36,855
 0,290 290,530 530,875 875,1270 1740,2105
-This point in in modern
-在现代计算系统中，这一点是存在的，因此，与其花费所有时间试图租用您自己的定制数据库系统，您应该只是用完一些东西。
+this point in in modern
 
 718
 00:21:36,855 --> 00:21:38,655
 0,315 315,575 1105,1365 1365,1515 1515,1800
-computing systems and so rather
+computing systems| and so rather
+|所以，与其花费所有时间试图租用你自己的定制数据库系统，
 
 719
 00:21:38,655 --> 00:21:40,050
@@ -3927,31 +4105,32 @@ trying to rent your own
 721
 00:21:40,875 --> 00:21:42,720
 0,390 390,660 660,1025 1525,1770 1770,1845
-bespoke database system, you should
+bespoke database system,| you should
+|你应该只用一些上面的东西，
 
 722
 00:21:42,720 --> 00:21:44,000
 0,105 105,270 270,450 450,740
-just use something up.|
+just use something up,|
 |
 
 723
 00:21:44,680 --> 00:21:46,190
 0,335 335,530 530,665 665,940 1110,1510
-Chances are, it po us
-很有可能，它会让我们和。
+chances are, it probably progress,|
+变更是可能的，|
 
 724
 00:21:46,810 --> 00:21:48,640
 0,400
-and.|
-|
+and
+在一百种情况下，
 
 725
 00:21:48,640 --> 00:21:49,870
 0,150 150,210 210,270 270,500 790,1230
-Out of a hundred that
-在一百种情况下，这是你应该使用的第一选择，也许是强光。
+out of a hundred,| that
+|这是你应该使用的第一选择，
 
 726
 00:21:49,870 --> 00:21:50,695
@@ -3961,84 +4140,83 @@ that's the first choice you
 727
 00:21:50,695 --> 00:21:52,650
 0,135 135,395 955,1335 1335,1650 1650,1955
-should use, maybe steep light.|
-|
+should use,| maybe {SQLite -},|
+|也许是 SQLite ，|
 
 728
 00:21:53,550 --> 00:21:54,395
 0,275 275,440 440,605 605,725 725,845
-But post cuts will get
-但裁员会让你走得很远。
+but {Postgres -} will get
+但 Postgres 会让你走得很远，
 
 729
 00:21:54,395 --> 00:21:58,160
 0,210 210,545 1255,1655
-you pretty far.|
+you pretty far,|
 |
 
 730
 00:21:59,835 --> 00:22:00,590
 0,60 60,165 165,330 330,480 480,755
-That I'm talking about here.|
-我在这里说的就是。|
+that I'm talking about here.|
+我在这里说的。|
 
 731
 00:22:03,610 --> 00:22:05,250
 0,400 750,1025 1025,1175 1175,1400 1400,1640
 So again, a data model
-同样，数据模型也将是我们将如何表示的。
+再次，数据模型将是，
 
 732
 00:22:05,250 --> 00:22:06,270
 0,135 135,225 225,315 315,560 700,1020
-is going to be, again,
+is going to be, again,|
+|
 
 733
 00:22:06,270 --> 00:22:06,950
 0,195 195,360 360,405 405,450 450,680
 how we're going to represent
+我们将如何表示数据库中的实体或数据集合，
 
 734
 00:22:07,810 --> 00:22:09,120
 0,400
-a.|
-|
+{}
 
 735
 00:22:09,120 --> 00:22:10,860
 0,710 760,1125 1125,1365 1365,1560 1560,1740
-Entities or the collection of
-实体或我们数据库中的数据集合。
+entities or the collection of
 
 736
 00:22:10,860 --> 00:22:12,840
 0,260 340,600 600,735 735,1010
-data in our database.|
+data in our database,|
 |
 
 737
 00:22:12,970 --> 00:22:14,680
 0,400
-So.|
-所以。|
+so,
+所以，数据模型就是这种高级抽象，
 
 738
 00:22:15,910 --> 00:22:18,390
 0,400 1470,1745 1745,1955 1955,2255 2255,2480
-So the data model is
-因此，数据模型就是这种高级抽象。
+so the data model is
 
 739
 00:22:18,390 --> 00:22:20,540
 0,165 165,390 390,710 760,1400
-this high level abstraction.|
+this high level abstraction,|
 |
 
 740
 00:22:21,100 --> 00:22:23,145
 0,545 545,785 785,980 980,1270 1710,2045
-Specifies how we represent individual
-指定我们如何表示各个实体以及可能与之相关的实体。
+specifies how we represent individual
+指定我们如何表示各个实体以及可能与之相关的[]，
 
 741
 00:22:23,145 --> 00:22:25,310
@@ -4048,14 +4226,14 @@ entities and potentially that relate
 742
 00:22:25,570 --> 00:22:26,440
 0,400
-to.|
+to,|
 |
 
 743
 00:22:26,670 --> 00:22:27,500
 0,275 275,395 395,545 545,665 665,830
-And again, we're trying to
-再一次，我们试图对真实世界的某些方面进行建模。学生上课，学生拿到成绩。他们在自己的国内部门。
+and again, we're trying to
+再次，我们试图对真实世界的某些方面进行建模，
 
 744
 00:22:27,500 --> 00:22:28,565
@@ -4065,12 +4243,14 @@ model some aspect of the
 745
 00:22:28,565 --> 00:22:29,830
 0,135 135,390 390,705 705,960 960,1265
-real world. Students take classes,
+real world,| students take classes,
+|学生上课，学生拿到成绩，
 
 746
 00:22:29,880 --> 00:22:31,925
 0,290 290,580 600,920 920,1270 1770,2045
-students are get grades. They're
+students are get grades,| they're
+|他们在自己的内政部门。
 
 747
 00:22:31,925 --> 00:22:33,820
@@ -4082,7 +4262,7 @@ in their home department.|
 00:22:35,090 --> 00:22:36,460
 0,260 260,395 395,650 650,1160 1160,1370
 And then the schema is
-然后，模式将表示、定义或描述。
+然后，模式将表示、定义或描述，
 
 749
 00:22:36,460 --> 00:22:37,870
@@ -4097,14 +4277,14 @@ definition or the description of
 751
 00:22:40,345 --> 00:22:41,540
 0,395
-the.|
+the,|
 |
 
 752
 00:22:41,540 --> 00:22:43,715
 0,300 300,680 880,1185 1185,1820 1840,2175
-Of what those entities in
-我们的数据库数据模型中的这些实体是什么样子。
+of what those entities in
+我们的数据库数据模型中的这些实体是什么样子，
 
 753
 00:22:43,715 --> 00:22:45,710
@@ -4114,14 +4294,14 @@ our data model of our
 754
 00:22:45,710 --> 00:22:47,140
 0,255 255,540 540,830
-database look like.|
+database look like,|
 |
 
 755
 00:22:47,770 --> 00:22:49,455
 0,400 480,875 875,1175 1175,1430 1430,1685
-Student names you have have
-你的学生姓名有出生日期、电子邮件地址等等。您将在我们的模式中指定所有这些，然后我们，我们将根据该模式实例化基于数据模型的数据库实例。
+student names, you have have
+学生姓名，有出生日期，电子邮件地址等等，
 
 756
 00:22:49,455 --> 00:22:50,895
@@ -4131,7 +4311,8 @@ birth dates, have email addresses
 757
 00:22:50,895 --> 00:22:52,290
 0,135 135,270 270,545 985,1230 1230,1395
-and so forth. You would
+and so forth,| you would
+|你将在我们的模式中指定所有这些，
 
 758
 00:22:52,290 --> 00:22:53,700
@@ -4141,7 +4322,8 @@ specify all of those in
 759
 00:22:53,700 --> 00:22:55,170
 0,315 315,800 910,1155 1155,1260 1260,1470
-our schema, and then we,
+our schema,| and then we,
+|然后我们将根据该模式实例化，
 
 760
 00:22:55,170 --> 00:22:56,880
@@ -4151,7 +4333,8 @@ we would instantiate instances of
 761
 00:22:56,880 --> 00:22:58,470
 0,105 105,350 1030,1335 1335,1485 1485,1590
-a database based on a
+a database| based on a
+|基于数据模型的数据库实例。
 
 762
 00:22:58,470 --> 00:23:00,020
@@ -4168,7 +4351,7 @@ schema.|
 00:23:02,730 --> 00:23:03,470
 0,245 245,440 440,515 515,635 635,740
 So there's a bunch of
-因此，市场上有很多不同的数据模型。这就是说，这可以追溯到数据库的最开始。人们意识到，哦，我们需要一个在，在数据库中。
+市场上有很多不同的数据模型，
 
 765
 00:23:03,470 --> 00:23:04,460
@@ -4178,7 +4361,8 @@ different data models that are
 766
 00:23:04,460 --> 00:23:05,540
 0,105 105,380 490,735 735,855 855,1080
-out there. So this goes,
+out there,| so this goes,
+|这可以追溯到数据库的最开始，
 
 767
 00:23:05,540 --> 00:23:06,455
@@ -4188,7 +4372,8 @@ this goes back to the
 768
 00:23:06,455 --> 00:23:08,000
 0,195 195,480 480,720 720,1290 1290,1545
-very beginning of databases. People
+very beginning of databases,| people
+|人们意识到，我们需要一个在数据库中。
 
 769
 00:23:08,000 --> 00:23:09,110
@@ -4209,14 +4394,14 @@ in a database.|
 772
 00:23:13,310 --> 00:23:16,560
 0,400 870,1270 1620,2020 2040,2440
-So most systems today?|
-那么，今天的大多数系统？|
+So most systems today,|
+今天的大多数系统，|
 
 773
 00:23:16,980 --> 00:23:17,975
 0,305 305,485 485,635 635,815 815,995
-Something that looks like like
-有些东西看起来像关系数据库，关系关系数据模型，还有一种叫做对象关系Postgres的东西，它只是意味着你可以用用户定义的类型来扩展你的Rel关系。但在最高水平上，大多数数据系统都将是关系型的。我认为还有那个数据库引擎，那个排名。
+something that looks like like
+看起来像关系数据库，关系关系数据模型，
 
 774
 00:23:17,975 --> 00:23:20,000
@@ -4226,12 +4411,14 @@ the relational databases, relational relational
 775
 00:23:20,000 --> 00:23:22,190
 0,225 225,530 1270,1680 1680,1890 1890,2190
-data model, there's things called
+data model,| there's things called
+|有一种叫做对象关系，
 
 776
 00:23:22,190 --> 00:23:24,185
 0,240 240,560 1120,1590 1590,1815 1815,1995
-object relational postgres is it
+object relational,| Postgres is it
+|Postgres 是意味着你可以用用户定义的类型
 
 777
 00:23:24,185 --> 00:23:24,845
@@ -4241,17 +4428,20 @@ just means you can have
 778
 00:23:24,845 --> 00:23:26,500
 0,270 270,540 540,845 985,1320 1320,1655
-user defined types to extend
+user defined types| to extend
+|来扩展你的关系，
 
 779
 00:23:26,550 --> 00:23:27,490
 0,260 260,380 380,470 470,620 620,940
-what your rel relations are.
+what your {relations -} are,|
+|
 
 780
 00:23:29,580 --> 00:23:31,445
 0,230 230,320 320,425 425,910 1500,1865
-But at a higho most
+but at a {high,level}, most
+但在高层次上，大多数数据系统都将是关系型的，
 
 781
 00:23:31,445 --> 00:23:33,170
@@ -4261,19 +4451,20 @@ data systems are going be
 782
 00:23:33,170 --> 00:23:34,760
 0,380 760,1035 1035,1185 1185,1395 1395,1590
-relational. I think there's that
+relational.| I think there's that
+|我认为那个 DB Engines 排名，
 
 783
 00:23:34,760 --> 00:23:36,250
 0,330 330,590 640,900 900,1230 1230,1490
-DB engines, the ranking that.|
+DB Engines the ranking that,|
 |
 
 784
 00:23:36,860 --> 00:23:38,530
 0,245 245,395 395,620 620,940 1410,1670
-The most popular datab I
-我认为五个最流行的数据库中有四个都将是关系型Mongo，其中最受欢迎的数据就是Fire。
+the most popular database,| I
+最流行的数据库，|我认为五个最流行的数据库中有四个都是关系型的，
 
 785
 00:23:38,530 --> 00:23:39,175
@@ -4293,24 +4484,26 @@ are going to be all
 788
 00:23:41,230 --> 00:23:43,240
 0,350 790,1365 1365,1605 1605,1785 1785,2010
-relational mongo is, is the
+relational,| mongo is, is the
+|Mongo 是其他的。
 
 789
 00:23:43,240 --> 00:23:44,120
 0,350
-fire.|
+other.|
 |
 
 790
 00:23:45,320 --> 00:23:46,030
 0,275 275,440 440,500 500,605 605,710
 Then there's a bunch of
-然后还有一堆其他的数据模型，在某种程度上属于这个总括术语。
+然后还有一堆其他的数据模型，
 
 791
 00:23:46,030 --> 00:23:47,935
 0,75 75,240 240,465 465,770 1600,1905
-these other data models that
+these other data models,| that
+|在某种程度上属于这个总括术语，
 
 792
 00:23:47,935 --> 00:23:48,760
@@ -4320,31 +4513,31 @@ sort of fall under this
 793
 00:23:48,760 --> 00:23:50,320
 0,435 435,710
-umbrella term.|
+umbrella term,|
 |
 
 794
 00:23:51,790 --> 00:23:52,815
 0,365 365,560 560,635 635,755 755,1025
-A thing or no sql
-不管有没有SQL系统，它通常是文档、数据模型或json。
+a thing of {NoSQL -}
+一种 NoSQL 系统，
 
 795
 00:23:52,815 --> 00:23:54,090
 0,240 240,510 510,705 705,1005 1005,1275
-systems, it usually the document,
+systems,| it usually the document
+|它通常是文档数据模型或 json 其中之一，
 
 796
 00:23:54,090 --> 00:23:56,400
 0,225 225,530 550,840 840,1340
-data model or json.|
-|
+data model or json
 
 797
 00:23:56,680 --> 00:23:58,500
 0,245 245,350 350,610 930,1565 1565,1820
-One of these, cassandra, essentially
-其中之一，卡桑德拉，本质上已经成为了其中之一，嗯，但有关键的价值商店，数据库，然后这种类型的家庭是什么？
+one of these,| Cassandra, essentially
+|Cassandra 是其中之一，
 
 798
 00:23:58,500 --> 00:23:59,400
@@ -4354,12 +4547,14 @@ become, has become one of
 799
 00:23:59,400 --> 00:24:01,335
 0,230 700,1100 1390,1635 1635,1800 1800,1935
-these, um, but there's key
+these,| {} but there's key
+|但有键值存储数据库，
 
 800
 00:24:01,335 --> 00:24:04,125
 0,225 225,575 1045,1805 2365,2625 2625,2790
-value stores, databases, and then
+value stores databases,| and then
+|然后[]类型的家族是什么？
 
 801
 00:24:04,125 --> 00:24:05,805
@@ -4369,19 +4564,20 @@ what family is this sort
 802
 00:24:05,805 --> 00:24:07,180
 0,120 120,695
-of bestized?|
+of []?|
 |
 
 803
 00:24:23,610 --> 00:24:25,400
 0,455 455,760 840,1400 1400,1580 1580,1790
 There's array matrix and vector
-有数组矩阵和矢量数据数据模型。它们主要用于机器学习或科学应用。我想像是一颗卫星绕着我转，拍了一大堆照片。您可以将其存储为数组。
+有数组矩阵和矢量数据数据模型，
 
 804
 00:24:25,400 --> 00:24:26,960
 0,290 310,600 600,890 1150,1425 1425,1560
-data data models. These are
+data data models,| these are
+|它们主要用于机器学习或科学应用，
 
 805
 00:24:26,960 --> 00:24:29,290
@@ -4391,7 +4587,8 @@ primarily used for machine learning
 806
 00:24:29,490 --> 00:24:32,390
 0,290 290,580 1440,1840 2520,2780 2780,2900
-or scientific applications. I think
+or scientific applications,| I think
+|比如一颗卫星绕着拍了一大堆照片，
 
 807
 00:24:32,390 --> 00:24:33,245
@@ -4406,29 +4603,31 @@ around and taking a bunch
 809
 00:24:33,770 --> 00:24:34,865
 0,120 120,380 550,795 795,930 930,1095
-of photos. You could store
+of photos,| you could store
+|你可以将其存储为数组，
 
 810
 00:24:34,865 --> 00:24:37,700
 0,210 210,390 390,540 540,845
-that as an array.|
+that as an array,|
 |
 
 811
 00:24:37,800 --> 00:24:40,025
 0,590 590,860 860,1400 1400,1690 1980,2225
-Tensors to trainsat model, you
-训练模型的张量，你也会把它表示为a。所以有专门的数据库，可以表示本机表示的数组。
+tensors to {train,some,kind,of} model,| you
+训练某种模型的张量，|你也会把它表示为[]，
 
 812
 00:24:40,025 --> 00:24:41,255
 0,105 105,360 360,755 775,1035 1035,1230
-would represent that as a
+would represent that as {}
 
 813
 00:24:41,255 --> 00:24:42,500
 0,210 210,485 655,915 915,1035 1035,1245
-as well. And so there's
+as well,| and so there's
+|所以有专门的数据库可以表示原生的数组。
 
 814
 00:24:42,500 --> 00:24:44,020
@@ -4445,95 +4644,96 @@ natively represent array.|
 00:24:47,510 --> 00:24:48,580
 0,245 245,485 485,770 770,935 935,1070
 And then these ones at
-然后这些最后的老年人，更高，更多的网络和多元的价值。
+然后这些最后的是为以前的人，
 
 817
 00:24:48,580 --> 00:24:49,440
 0,105 105,270 270,435 435,570 570,860
-the end for old people,
+the end for old people,|
+|
 
 818
 00:24:50,090 --> 00:24:51,250
 0,260 260,485 485,725 725,950 950,1160
-hier, toical network and multi
+hierarchical, network and {multi-value
+分层，网络和多值，
 
 819
 00:24:51,250 --> 00:24:52,400
 0,320
-value.|
+-},|
 |
 
 820
 00:24:53,970 --> 00:24:55,565
 0,400 510,815 815,1010 1010,1475 1475,1595
-These are considered obsolete at
-在这一点上，这些被认为是过时的。
+these are considered obsolete at
+现在，这些被认为是过时的，
 
 821
 00:24:55,565 --> 00:24:57,700
 0,135 135,425
-this point.|
+this point,|
 |
 
 822
 00:24:57,860 --> 00:24:58,615
 0,245 245,365 365,485 485,605 605,755
-Because I still make a
-因为我每一次都能赚很多钱。
+since I still make a
+因为我每一次都能赚很多钱，
 
 823
 00:24:58,615 --> 00:24:59,760
 0,150 150,285 285,545 565,855 855,1145
-lot of money use each.|
+lot of money use each,|
 |
 
 824
 00:25:01,740 --> 00:25:02,945
 0,350 350,635 635,875 875,1040 1040,1205
-The hi model is using
-HI模型使用的是国际货币基金组织。
+the hierarchical model is {used,in}
+分层模型在 IMS 中使用，
 
 825
 00:25:02,945 --> 00:25:04,080
 0,545
-IMF.|
+IMS,|
 |
 
 826
 00:25:05,240 --> 00:25:06,580
 0,515 515,650 650,890 890,1160 1160,1340
 IBM first database system that
-IBM是他们建造的第一个数据库系统。
+IBM 构建的第一个数据库系统，
 
 827
 00:25:06,580 --> 00:25:07,960
 0,150 150,440
-they built.|
+they built,|
 |
 
 828
 00:25:07,960 --> 00:25:09,280
 0,195 195,315 315,495 495,800 1060,1320
-Of all the parts for
-在经济的所有组成部分中。
+of all the parts for
+所有[]的组成部分，在 1960 年代，
 
 829
 00:25:09,280 --> 00:25:10,680
 0,260 340,740
-the economy.|
-|
+the [],
 
 830
 00:25:12,440 --> 00:25:13,940
 0,730
-1960.|
-1960年。|
+1960,|
+|
 
 831
 00:25:18,050 --> 00:25:20,335
 0,320 320,640 720,1100 1100,1480 2040,2285
-Every ATM basically uses, I
-当你与银行沟通时，每个自动取款机基本上都使用，我的意思是不，而不是盒子本身。
+every ATM basically uses,| I
+每个 ATM 都使用，|我的意思是不是盒子本身，
 
 832
 00:25:20,335 --> 00:25:21,115
@@ -4543,59 +4743,61 @@ mean not, not the box
 833
 00:25:21,115 --> 00:25:22,090
 0,255 255,420 420,555 555,705 705,975
-itself when when you communicate
+itself,| when when you communicate
+|而是当你与银行沟通时，
 
 834
 00:25:22,090 --> 00:25:24,020
 0,225 225,470 640,1040
-to the bank.|
+to the bank,|
 |
 
 835
 00:25:24,020 --> 00:25:24,725
 0,195 195,270 270,360 360,540 540,705
-All of these systems are
-所有这些系统都在使用IMS。
+{a,lot} of these systems are
+很多这些系统都在使用 IMS ，
 
 836
 00:25:24,725 --> 00:25:26,040
 0,150 150,665
-using ims.|
+using IMS,|
 |
 
 837
 00:25:26,140 --> 00:25:28,680
 0,380 380,760
-So pretty.|
-太漂亮了。|
+social security
+美国社会保障部仍在使用 IMS 。
 
 838
 00:25:28,680 --> 00:25:29,850
 0,320 400,645 645,765 765,975 975,1170
-And the us government still
-美国政府仍在使用imax。
+in the US government still
 
 839
 00:25:29,850 --> 00:25:30,960
 0,195 195,650
-uses imax.|
+uses IMS.|
 |
 
 840
 00:25:32,090 --> 00:25:33,280
 0,320 320,560 560,770 770,950 950,1190
 And so, so these things
-所以，这些东西是存在的。但如果你是全新的，部分你不是，你不会说我会使用IMS或我会使用IDMS，就像。
+所以，这些东西是存在的，
 
 841
 00:25:33,280 --> 00:25:34,540
 0,350 430,690 690,825 825,1065 1065,1260
-exist. But if you're brand
+exist,| but if you're brand
+|但如果你是全新的，
 
 842
 00:25:34,540 --> 00:25:35,125
 0,195 195,345 345,420 420,480 480,585
-new, part of it you're
+new { - -},| you're
+|你不会说我会使用 IMS ，
 
 843
 00:25:35,125 --> 00:25:35,740
@@ -4605,53 +4807,54 @@ not, you're not gonna say
 844
 00:25:35,740 --> 00:25:36,580
 0,210 210,270 270,330 330,435 435,840
-I'm going to use ims
+I'm going to use IMS|
+|
 
 845
 00:25:36,580 --> 00:25:37,270
 0,150 150,285 285,480 480,570 570,690
 or I'm, I'm gonna use
+或我将使用 IMS ，
 
 846
 00:25:37,270 --> 00:25:38,680
 0,495 495,830
-idms like.|
-|
+IMS,| like
+|你要是那样做肯定是疯了，
 
 847
 00:25:38,905 --> 00:25:39,535
 0,45 45,195 195,405 405,540 540,630
-You'd be insane to do
-你要是那样做肯定是疯了，但是再来一次。
+you'd be insane to do
 
 848
 00:25:39,535 --> 00:25:41,300
 0,245 355,630 630,905
-that, but again.|
-|
+that,| but again,
+|但是再次，不用管，
 
 849
 00:25:41,390 --> 00:25:42,900
 0,245 245,335 335,580
-Not at all.|
-不用谢。|
+not at all,|
+|
 
 850
 00:25:42,945 --> 00:25:43,790
 0,60 60,165 165,300 300,510 510,845
-It's not really relevant here,
-它在这里并不是真的相关，就在本课程中。
+it's not really relevant here.|
+它在这里并不相关。|
 
 851
 00:25:44,110 --> 00:25:45,820
 0,290 290,425 425,590 590,910
-right for this course.|
-|
+Right, for this course,|
+在本课程中，|
 
 852
 00:25:46,970 --> 00:25:47,995
 0,260 260,665 665,740 740,800 800,1025
-Some databases in the relational
+some databases in the relational
 关系数据模型中的一些数据库。
 
 853
@@ -4664,7 +4867,7 @@ data model.|
 00:25:49,940 --> 00:25:50,605
 0,245 245,350 350,470 470,575 575,665
 And this is why I
-这就是为什么我对危险的事情很生气，因为我们回到了贾斯汀。评委已经审查了你在科技节拍类别中对矩阵的反应，他们认为这是正确的。我们已经在你的分数上增加了800美元，你所有的赌注都是在调整后的分数上进行的。
+这就是为什么我对[]的事情很生气，
 
 855
 00:25:50,605 --> 00:25:51,265
@@ -4674,12 +4877,14 @@ was pissed all about the
 856
 00:25:51,265 --> 00:25:52,075
 0,315 315,450 450,585 585,690 690,810
-jeopardy thing, because we go
+[] thing,| because we go
+|因为我们回到这里，
 
 857
 00:25:52,075 --> 00:25:54,460
 0,195 195,515 1435,1950 1950,2130 2130,2385
-back to Justin. The judges
+back {to,it},| Justin. The judges
+|Justin ，评委审查了你在科技挑战类别中的矩阵的回答，
 
 858
 00:25:54,460 --> 00:25:56,125
@@ -4694,12 +4899,14 @@ matrix in the Tech beat
 860
 00:25:57,550 --> 00:25:58,930
 0,320 400,675 675,825 825,1050 1050,1380
-category and they have decided
+category| and they have decided
+|他们认为这是正确的，
 
 861
 00:25:58,930 --> 00:26:00,895
 0,240 240,375 375,650 850,1250 1630,1965
-that it is correct. We've
+that it is correct,| we've
+|我们已经在你的分数上增加了 800 美元，
 
 862
 00:26:00,895 --> 00:26:02,305
@@ -4709,7 +4916,8 @@ added 800 dollars to your
 863
 00:26:02,305 --> 00:26:03,265
 0,270 270,480 480,645 645,810 810,960
-score and all of your
+score| and all of your
+|你所有的赌注都是在调整后的分数上进行的。
 
 864
 00:26:03,265 --> 00:26:05,020
@@ -4726,41 +4934,43 @@ adjusted score.|
 00:26:06,670 --> 00:26:07,485
 0,245 245,350 350,500 500,680 680,815
 There is no such thing
-没有关系矩阵这回事。
+没有关系矩阵这回事，
 
 867
 00:26:07,485 --> 00:26:09,140
 0,105 105,195 195,450 450,1025
-as a relational matrix.|
+as a relational matrix,|
 |
 
 868
 00:26:10,040 --> 00:26:10,900
 0,275 275,410 410,500 500,635 635,860
-I sent them an email.
-我给他们发了一封电子邮件。无论如何，他们都没有回应。
+I sent them an email
+我给他们发了一封电子邮件，他们没有回应。
 
 869
 00:26:11,080 --> 00:26:16,400
 0,105 105,255 255,560 3760,4160
-They didn't respond anyway.|
-|
+they didn't respond.| Anyway,
+|无论如何，拿到博士学位，
 
 870
 00:26:16,400 --> 00:26:17,330
 0,195 195,300 300,720 720,855 855,930
-Got a PhD. I think
-拿到了博士学位。我认为这就像神经科学，但就像，你知道的，随便什么。所以希望，如果这门课没有其他内容，你可以回答这个问题。
+got a PhD,| I think
+|我认为这就像神经科学，
 
 871
 00:26:17,330 --> 00:26:19,550
 0,210 210,420 420,980 1630,1935 1935,2220
-it's like neuroscience, but like,
+it's like neuroscience,| but like,
+|但就像，随便什么。
 
 872
 00:26:19,550 --> 00:26:22,720
 0,210 210,440 940,1340 1750,2150 2770,3170
-you know, whatever. So hopefully,
+you know, whatever.| So hopefully,
+|所以希望，如果这门课没有其他内容，
 
 873
 00:26:23,160 --> 00:26:24,215
@@ -4770,7 +4980,8 @@ if nothing else in this
 874
 00:26:24,215 --> 00:26:25,850
 0,305 955,1215 1215,1320 1320,1470 1470,1635
-course, you can answer that
+course,| you can answer that
+|你可以回答这个问题。
 
 875
 00:26:25,850 --> 00:26:26,640
@@ -4782,12 +4993,13 @@ question.|
 00:26:29,120 --> 00:26:29,890
 0,230 230,380 380,485 485,650 650,770
 So let's go back to
-让我们回到1960年的S，这再次激发了为什么关系模型的产生，它将为我们建立为什么它仍然流行，为什么今天的年轻人。
+让我们回到 1960 年代，
 
 877
 00:26:29,890 --> 00:26:31,840
 0,75 75,540 540,830 1510,1770 1770,1950
-the 1960 s and this
+the {1960s -}| and this
+|这再次激发了为什么关系模型的产生，
 
 878
 00:26:31,840 --> 00:26:33,385
@@ -4797,7 +5009,8 @@ again motivate why the relational
 879
 00:26:33,385 --> 00:26:35,740
 0,330 330,600 600,905 1225,1625 1945,2355
-model came about, and it'll
+model came about,| and it'll
+|它将为我们建立为什么它仍然流行，
 
 880
 00:26:35,740 --> 00:26:37,020
@@ -4807,87 +5020,89 @@ set us up for why
 881
 00:26:37,070 --> 00:26:38,515
 0,365 365,545 545,950 950,1220 1220,1445
-it's still prevalent and why
+it's still prevalent| and why
+|为什么今天的仍在使用，
 
 882
 00:26:38,515 --> 00:26:39,720
 0,105 105,240 240,545
-the youth today.|
+the use today,|
 |
 
 883
 00:26:39,970 --> 00:26:41,100
 0,260 260,520
-Pin it.|
-用别针别住。|
+[] it
+对于任何新的。
 
 884
 00:26:42,070 --> 00:26:43,480
 0,245 245,410 410,730
-For any new.|
-对于任何新的。|
+for any new.|
+|
 
 885
 00:26:45,370 --> 00:26:47,070
 0,305 305,455 455,530 530,1415 1415,1700
-Back in the 1960 s
-早在1960年，S就在十九岁初。
+Back in the {1960s -},
+回到 1960 年代早期，
 
 886
 00:26:47,070 --> 00:26:48,580
 0,345 345,710
-early nineteen.|
+early 1960s,|
 |
 
 887
 00:26:51,310 --> 00:26:52,815
 0,400 630,1010 1010,1055 1055,1265 1265,1505
-There wasn't a relational model,
-没有关系模型，不是关系数据库，也不是Postgres，也不是我的SQL Sqlite mongo，对吧。
+there wasn't a relational model,
+没有关系模型，没有关系数据库，
 
 888
 00:26:52,815 --> 00:26:54,015
 0,255 255,450 450,900 900,975 975,1200
-wasn't relational databases, it wasn't
+wasn't relational databases,| it wasn't
+|也没有 Postgres MySQL SQLite 模型，
 
 889
 00:26:54,015 --> 00:26:55,005
 0,330 330,450 450,615 615,720 720,990
-postgres, it wasn't my sql
+Postgres, it wasn't {MySQL -}
 
 890
 00:26:55,005 --> 00:26:57,180
 0,330 330,785 865,1265
-sqlite mongo right.|
+SQLite model, right,|
 |
 
 891
 00:26:58,330 --> 00:26:59,265
 0,350 350,560 560,665 665,755 755,935
-The first day he says
-他说我们开工的第一天就是。
+the first day, there is
+最开始，人们构建的不是通用的，
 
 892
 00:26:59,265 --> 00:27:01,140
 0,210 210,360 360,630 630,1025
-we were building were.|
-|
+people were building were
 
 893
 00:27:01,810 --> 00:27:02,700
 0,320 320,560 560,725 725,815 815,890
-Not meant really meant to
-不是真的想要成为通用的，但是他们意识到，哦，不是只为这一个应用程序构建这些定制的数据库应用程序或数据库系统，我可以做得更通用一些，现在我可以支持任何可能的应用程序。据你所知，第一个数据库系统曾经存在过，但我。
+not meant really, meant to
 
 894
 00:27:02,700 --> 00:27:03,615
 0,105 105,300 300,600 600,825 825,915
-be general purpose, but then
+be general purpose,| but then
+|但是他们意识到，
 
 895
 00:27:03,615 --> 00:27:05,220
 0,245 295,690 690,1085 1255,1500 1500,1605
-they realize, oh, instead of
+they realize,| oh, instead of
+|哦，不是只为这一个应用程序构建这些定制的数据库应用程序或数据库系统，
 
 896
 00:27:05,220 --> 00:27:06,930
@@ -4902,27 +5117,31 @@ or database systems for just
 898
 00:27:08,565 --> 00:27:10,470
 0,225 225,545 595,995 1465,1755 1755,1905
-this one application, I can
+this one application,| I can
+|我可以做得更通用一些，
 
 899
 00:27:10,470 --> 00:27:11,250
 0,135 135,255 255,360 360,525 525,780
-make a bit more general
+make a bit more general|
+|
 
 900
 00:27:11,250 --> 00:27:12,105
 0,255 255,435 435,600 600,735 735,855
 and and now I can
+现在我可以支持任何可能的应用程序，
 
 901
 00:27:12,105 --> 00:27:14,460
 0,165 165,405 405,755 955,1355 1975,2355
-support any possible application. So
+support any possible application,| so
+|目前，第一个存在的数据库系统，
 
 902
 00:27:14,460 --> 00:27:15,225
 0,270 270,420 420,540 540,645 645,765
-as far as you know,
+as far as, you know,
 
 903
 00:27:15,225 --> 00:27:16,785
@@ -4932,14 +5151,14 @@ the first database system ever
 904
 00:27:16,785 --> 00:27:18,780
 0,575 1105,1365 1365,1625
-existed, but I.|
-|
+existed,| but {}
+|是由通用电气构建的，
 
 905
 00:27:19,380 --> 00:27:21,005
 0,290 290,530 530,800 800,1120 1320,1625
-Built by general electric, which
-由通用电气制造，后来被出售给霍尼韦尔1960年，他们最初建造的ID是为了保留。
+Built by General Electric,| which
+|后来被出售给霍尼韦尔 1960 年代，
 
 906
 00:27:21,005 --> 00:27:23,530
@@ -4949,19 +5168,19 @@ then then sold to Honeywell
 907
 00:27:24,030 --> 00:27:26,150
 0,670 900,1205 1205,1670 1670,1850 1850,2120
-1960 with IDs they originally
+1960s,| with IDS they originally
+|他们最初构建的 IDS 是为了保留[]，在西雅图，
 
 908
 00:27:26,150 --> 00:27:27,520
 0,345 345,585 585,860
-built to keep.|
-|
+built to keep,
 
 909
 00:27:28,100 --> 00:27:29,560
 0,290 290,700 960,1205 1205,1295 1295,1460
-In Seattle, and then they
-在西雅图，然后他们意识到，哦，不只是为了。
+in Seattle,| and then they
+|然后他们意识到，哦，不只是为了[]，
 
 910
 00:27:29,560 --> 00:27:31,000
@@ -4971,24 +5190,25 @@ realize, oh, instead of building
 911
 00:27:31,000 --> 00:27:32,640
 0,285 285,465 465,600 600,860
-this just for the.|
+this just for the,|
 |
 
 912
 00:27:32,640 --> 00:27:33,420
 0,135 135,210 210,315 315,495 495,780
-We can make some tweaks
-我们可以做一些调整，然后制作它，这样我们造纸公司就可以使用它，或者，或者电话公司可以使用它。这可以说是有史以来最早的通用数据库系统之一。
+we can make some tweaks,
+我们可以做一些调整，然后使它，
 
 913
 00:27:33,420 --> 00:27:34,065
 0,105 105,210 210,330 330,495 495,645
-and then make it so
+and then make it,| so
+|这样我们造纸公司就可以使用它，或者电话公司可以使用它，
 
 914
 00:27:34,065 --> 00:27:35,520
 0,245 595,900 900,1140 1140,1320 1320,1455
-we paper company could use
+{} paper company could use
 
 915
 00:27:35,520 --> 00:27:36,285
@@ -4998,7 +5218,8 @@ it or, or a phone
 916
 00:27:36,285 --> 00:27:37,635
 0,195 195,375 375,495 495,755 1105,1350
-company could use it. And
+company could use it,| and
+|这可以说是有史以来最早的通用数据库系统之一。
 
 917
 00:27:37,635 --> 00:27:38,415
@@ -5019,25 +5240,22 @@ database systems that ever built.|
 920
 00:27:41,480 --> 00:27:42,660
 0,400
-Ah.|
-阿。|
 
 921
 00:27:47,180 --> 00:27:49,220
 0,335 335,670
-I met.|
-我遇到了。|
 
 922
 00:27:51,940 --> 00:27:52,860
 0,290 290,440 440,575 575,740 740,920
 Oh, we could use this
-哦，我们可以把它用在其他应用程序上，他们推广了它。
+哦，我们可以把它用在其他应用程序上，
 
 923
 00:27:52,860 --> 00:27:54,435
 0,135 135,380 400,780 780,1160 1300,1575
-for other applications, and they
+for other applications,| and they
+|他们推广了它。
 
 924
 00:27:54,435 --> 00:27:55,700
@@ -5048,18 +5266,19 @@ generalized it.|
 925
 00:27:55,940 --> 00:27:57,960
 0,245 245,410 410,1090 1140,1540 1620,2020
-And then codasil is a
-而Codasil是一种标准，定义了六十年代末的S或七十岁的S作为一种方式，一种与数据系统交互的方式。人们意识到，与其拥有这些标准，不如拥有这些。
+And then CODASYL is a
+而 CODASYL 是一种标准，定义于六十年代末或七十年代，
 
 926
 00:27:58,970 --> 00:28:01,645
 0,400 540,940 1140,1540 1920,2320 2370,2675
-standards that defined late sixty
+standards that defined late {1960s
 
 927
 00:28:01,645 --> 00:28:03,235
 0,210 210,450 450,690 690,995 1315,1590
-s or seventy s as
+-} or {1970s -},| as
+|作为一种与数据库系统交互的方式，
 
 928
 00:28:03,235 --> 00:28:05,785
@@ -5074,7 +5293,8 @@ interact way to interact with
 930
 00:28:06,895 --> 00:28:08,965
 0,210 210,545 1225,1590 1590,1890 1890,2070
-data systems. People realize instead
+database systems,| people realize, instead
+|人们意识到，与其拥有这些标准，
 
 931
 00:28:08,965 --> 00:28:09,970
@@ -5084,58 +5304,60 @@ of having these standard, these
 932
 00:28:09,970 --> 00:28:11,000
 0,320
-these.|
+these,|
 |
 
 933
 00:28:11,900 --> 00:28:13,060
 0,305 305,545 545,845 845,1055 1055,1160
-Data systems that were being
-当时正在建设的数据系统，我们将有标准化的方式。
+database systems that were being
+当时正在构建的数据系统，
 
 934
 00:28:13,060 --> 00:28:14,260
 0,135 135,240 240,330 330,590 940,1200
-built at the time, we
+built at the time,| we
+|我们将有标准化的方式，
 
 935
-00:28:14,260 --> 00:28:15,400
+00:28:14,260 --> 00:28:15,300
 0,105 105,350 370,780 780,975 975,1140
 would have standardize way for
 
 936
 00:28:15,400 --> 00:28:17,320
 0,260
-how.|
+how,|
 |
 
 937
 00:28:21,330 --> 00:28:22,900
 0,305 305,470 470,880 1020,1295 1295,1570
-Less than 5% or five,
-不到5%或5%，我猜你在这里听到了一件大衣奥菲尔。
+less than 5% or 5.|
+不到 5% 或 5% 。|
 
 938
 00:28:24,450 --> 00:28:25,490
 0,350 350,530 530,710 710,860 860,1040
 I'm assuming you here are
+我猜你在这里听到过 CODASYL 。
 
 939
 00:28:25,490 --> 00:28:27,000
 0,150 150,270 270,405 405,830
-heard a coat ofill.|
+heard {} {CODASYL -}.|
 |
 
 940
 00:28:27,530 --> 00:28:31,240
 0,400 720,1120 1410,1810 2040,2440
-One, okay? So why?|
-一个，好吗？那为什么呢？|
+One, okay, so why,|
+一个，好的，那是为什么，|
 
 941
 00:28:31,910 --> 00:28:34,750
 0,230 230,320 320,580 2550,2780 2780,2840
-In the book, in the
+in the book, in the
 在书里，在书里，是的。
 
 942
@@ -5147,19 +5369,20 @@ book, yeah.|
 943
 00:28:38,440 --> 00:28:39,540
 0,400
-People.|
-人民。|
+People,|
+人们，|
 
 944
 00:28:40,170 --> 00:28:41,540
 0,320 320,640 870,1115 1115,1220 1220,1370
-And in, in these early
-在这些早期系统中，这是您与数据库系统交互的方式。而在这些最初的影响中固有的许多事情是你今天不想做的事情。最重要的一件事是，在这些第一批系统中，它们在逻辑层、模式、我拥有什么实体、它们的属性以及系统中的物理层之间存在紧密耦合。
+and in, in these early
+在这些早期系统中，
 
 945
 00:28:41,540 --> 00:28:43,205
 0,290 1030,1320 1320,1455 1455,1560 1560,1665
-systems, this is the way
+systems,| this is the way
+|这是你与数据库系统交互的方式，
 
 946
 00:28:43,205 --> 00:28:43,930
@@ -5169,7 +5392,8 @@ you would in interact with
 947
 00:28:44,670 --> 00:28:46,700
 0,335 335,670 1080,1480 1590,1865 1865,2030
-database systems. And a lot
+database systems,| and a lot
+|而在这些最初的影响中固有的许多事情
 
 948
 00:28:46,700 --> 00:28:47,590
@@ -5184,32 +5408,38 @@ in inherent in these first
 950
 00:28:49,490 --> 00:28:51,305
 0,530 1030,1320 1320,1515 1515,1680 1680,1815
-implications are things you would
+implications| are things you would
+|是你今天不想做的事情，
 
 951
 00:28:51,305 --> 00:28:52,150
 0,165 165,300 300,405 405,555 555,845
-not want to do today.
+not want to do today,|
+|
 
 952
 00:28:52,740 --> 00:28:53,555
 0,260 260,380 380,485 485,605 605,815
-So one of the big
+so one of the big
+最重要的一件事是，
 
 953
 00:28:53,555 --> 00:28:54,545
 0,270 270,525 525,690 690,810 810,990
-things was in these first
+things was,| in these first
+|在这些第一批系统中，
 
 954
 00:28:54,545 --> 00:28:55,595
 0,255 255,465 465,600 600,795 795,1050
-systems, they had this tight
+systems,| they had this tight
+|它们有紧密的耦合，
 
 955
 00:28:55,595 --> 00:28:57,760
 0,465 465,815 1075,1350 1350,1875 1875,2165
-coupling between the logical layer,
+coupling| between the logical layer,
+|在逻辑层、模式，拥有什么实体、它们的属性，
 
 956
 00:28:57,810 --> 00:29:00,710
@@ -5224,19 +5454,20 @@ do I have, what are
 958
 00:29:01,310 --> 00:29:02,705
 0,165 165,590 880,1140 1140,1245 1245,1395
-their attributes, and then a
+their attributes,| and then a
+|以及系统中的物理层之间，
 
 959
 00:29:02,705 --> 00:29:03,850
 0,305 355,645 645,780 780,885 885,1145
-physical layer in the system.|
+physical layer in the system,|
 |
 
 960
 00:29:04,300 --> 00:29:05,595
 0,290 290,500 500,710 710,950 950,1295
-Meaning, like, how is actually
-这意味着，实际上是如何在磁盘或内存中表示的，以及我将如何与它们实际交互。
+meaning, like, how is actually
+这意味着，如何在磁盘或内存中表示，
 
 961
 00:29:05,595 --> 00:29:07,185
@@ -5246,24 +5477,25 @@ being represented on disk or
 962
 00:29:07,185 --> 00:29:08,295
 0,165 165,455 625,885 885,1005 1005,1110
-in memory and how would
+in memory| and how would
+|以及我将如何与它们交互，
 
 963
 00:29:08,295 --> 00:29:09,290
 0,135 135,360 360,585 585,735 735,995
-I actually interact with them.|
-|
+I actually interact with them,
 
 964
 00:29:09,880 --> 00:29:11,535
 0,400 810,1085 1085,1220 1220,1370 1370,1655
-Right. And so what happened
-正确的。发生的情况是，如果你，如果你当时是一名程序员，你想要使用其中一个数据库系统，你必须确切地知道数据库是如何休息的，存储你的数据库。这是因为这将向您公开一个不同的API来与其交互。
+right.| And so what happened
+|发生的情况是，
 
 965
 00:29:11,535 --> 00:29:12,720
 0,375 375,630 630,825 825,1035 1035,1185
-is if you, if you
+is| if you, if you
+|如果你当时是一名程序员，
 
 966
 00:29:12,720 --> 00:29:13,650
@@ -5273,7 +5505,8 @@ were a programmer at the
 967
 00:29:13,650 --> 00:29:14,805
 0,260 490,750 750,855 855,990 990,1155
-time and you wanted to
+time| and you wanted to
+|你想要使用其中一个数据库系统，
 
 968
 00:29:14,805 --> 00:29:15,645
@@ -5283,17 +5516,19 @@ use one of these database
 969
 00:29:15,645 --> 00:29:16,695
 0,360 360,630 630,765 765,870 870,1050
-systems, you had to know
+systems,| you had to know
+|你必须确切地知道数据库如何存储你的数据库，
 
 970
 00:29:16,695 --> 00:29:18,660
 0,335 415,815 1015,1305 1305,1770 1770,1965
-exactly how the databaseases rest,
+exactly how the databases is
 
 971
 00:29:18,660 --> 00:29:20,595
 0,210 210,375 375,650 1360,1650 1650,1935
-storing your database. And so
+storing your database,| and so
+|因为这将向你公开一个不同的 API 来与其交互。
 
 972
 00:29:20,595 --> 00:29:21,600
@@ -5314,33 +5549,36 @@ interact with it.|
 975
 00:29:24,760 --> 00:29:25,815
 0,230 230,305 305,695 695,890 890,1055
-Well, on ims you could
-嗯，在IMS上，您可以将数据存储为哈希表或A、B加树或树结构，然后您有不同的API，因为您知道，取决于我们使用的数据结构，因为哈希表，您不能进行扫描，而是处理结构。
+Well, on IMS, you could
+在 IMS 上，你可以将数据存储为
 
 976
 00:29:25,815 --> 00:29:27,135
 0,305 445,750 750,915 915,1110 1110,1320
-store data is either as
+store data is| either as
+|哈希表或 B+ 树或树结构，
 
 977
 00:29:27,135 --> 00:29:28,020
 0,135 135,360 360,585 585,780 780,885
-a hash table or A
+a hash table or a
 
 978
 00:29:28,020 --> 00:29:29,175
 0,150 150,360 360,555 555,830 850,1155
-B plus tree or tree
+{B+ -} tree or tree
 
 979
 00:29:29,175 --> 00:29:30,630
 0,305 625,975 975,1200 1200,1335 1335,1455
-structure and, and then you
+structure| and, and then you
+|然后你有不同的 API ，
 
 980
 00:29:30,630 --> 00:29:32,910
 0,180 180,405 405,980 1150,1550 2050,2280
-got different APIs because you
+got different APIs,| because you
+|因为，取决于我们使用的数据结构，
 
 981
 00:29:32,910 --> 00:29:33,675
@@ -5350,29 +5588,32 @@ know, depending on which data
 982
 00:29:33,675 --> 00:29:35,625
 0,225 225,450 450,695 1015,1415 1585,1950
-structure we're using, because hash
+structure we're using,| because hash
+|因为哈希表，你不能进行扫描，
 
 983
 00:29:35,625 --> 00:29:36,980
 0,165 165,345 345,585 585,845 925,1355
-tables, you can't do scans
+tables, you can't do scans,|
+|
 
 984
 00:29:37,660 --> 00:29:40,540
 0,400 1680,1955 1955,2230
-but treat structures.|
-|
+but {in,tree} structures.|
+但是在树形结构中（可以）。|
 
 985
 00:29:42,170 --> 00:29:43,030
 0,245 245,350 350,485 485,680 680,860
 So now the problem with
-因此，现在的问题是，每当我想要同时更改逻辑层和物理层的模式时，我都必须重写我的应用程序。
+所以，现在的问题是，
 
 986
 00:29:43,030 --> 00:29:44,545
 0,135 135,285 285,560 880,1245 1245,1515
-this is that any single
+this is that| any single
+|每当我想要同时更改逻辑层和物理层的模式时，
 
 987
 00:29:44,545 --> 00:29:45,415
@@ -5392,7 +5633,8 @@ at both the logical layer
 990
 00:29:48,160 --> 00:29:49,390
 0,105 105,210 210,450 450,830 940,1230
-and the physical layer, I
+and the physical layer,| I
+|我都必须重写我的应用程序，
 
 991
 00:29:49,390 --> 00:29:50,400
@@ -5402,14 +5644,14 @@ had to go rewrite my
 992
 00:29:50,450 --> 00:29:51,740
 0,400
-application.|
+application,|
 |
 
 993
 00:29:52,380 --> 00:29:53,870
 0,245 245,425 425,760 780,1175 1175,1490
-Almost from scratch because oh,
-几乎是从头开始，因为哦，数据库在磁盘上的表示方式发生了变化。
+almost from scratch,| because oh,
+几乎是从头开始，|因为，数据库在磁盘上的表示方式发生了变化，
 
 994
 00:29:53,870 --> 00:29:55,180
@@ -5419,56 +5661,60 @@ how the database was represented
 995
 00:29:55,320 --> 00:29:57,080
 0,305 305,680 680,970
-on disk changed.|
+on disk changed,|
 |
 
 996
 00:29:57,440 --> 00:29:58,555
 0,305 305,590 590,815 815,920 920,1115
-Other issues with the data
-数据模型的其他问题，我们不需要真正好的。
+other issues with the data
+数据模型的其他问题，
 
 997
 00:29:58,555 --> 00:29:59,905
 0,335 715,945 1020,1095 1095,1200 1200,1350
-model, we don't need really
+model,| we don't need really,
+|我们不需要真正的，
 
 998
 00:29:59,905 --> 00:30:00,640
 0,275
-good.|
+{}|
 |
 
 999
 00:30:01,370 --> 00:30:03,685
 0,365 365,635 635,940 1680,2060 2060,2315
-Like in the, the, the
-就像在，更高的模型中，你必须让这四个循环遍历，你知道，一个集合与另一个集合。这真的很低效，与数据系统交互的方式非常低效。
+like in the, the, the
+比如在更高的模型中，
 
 1000
 00:30:03,685 --> 00:30:05,130
 0,275 445,825 825,1065 1065,1185 1185,1445
-higher model, you had to
+higher model,| you had to
+|你必须有循环遍历，
 
 1001
 00:30:05,450 --> 00:30:06,295
 0,245 245,350 350,470 470,635 635,845
-sort of have these four
+sort of have these for
 
 1002
 00:30:06,295 --> 00:30:08,130
 0,285 285,695 1165,1395 1395,1530 1530,1835
-loops traverse, you know, one
+loops traverse,| you know, one
+|一个集合与另一个集合，
 
 1003
 00:30:08,420 --> 00:30:10,525
 0,400 540,875 875,1130 1130,1450 1860,2105
-collection versus another collection. It
+collection versus another collection,| it
+|这是与数据库系统交互非常低效的方式。
 
 1004
 00:30:10,525 --> 00:30:12,805
 0,135 135,330 330,855 855,1145 1705,2280
-was really inefficient, way inefficient
+was really inefficient way, inefficient
 
 1005
 00:30:12,805 --> 00:30:13,375
@@ -5478,7 +5724,7 @@ way to interact with the
 1006
 00:30:13,375 --> 00:30:14,440
 0,165 165,485
-data system.|
+database system.|
 |
 
 1007
@@ -11730,4 +11976,3 @@ web mistake when how I'm
 0,290 290,580
 I living.|
 |
-
