@@ -1,14 +1,14 @@
 1
 00:00:34,900 --> 00:00:37,620
 0,400
-Back.|
-背。|
+{All,right}.|
+好的。|
 
 2
 00:00:37,690 --> 00:00:39,885
 0,230 230,410 410,680 680,1000 1920,2195
-All right so eh some
-好的，那么，呃，上节课的一些快速的东西，行政的东西，嗯？才过了一天。我们已经收到电子邮件了。第一件事是，上节课我犯了一个错误，我说泰德·科德在宾夕法尼亚大学获得了博士学位。他在密歇根获得博士学位，在那里，所有优秀的数据都获得了博士学位，所以迈克·斯威克在那里获得了他的P-G学位。泰德·科在那里得到了他的P-G，大卫·德维特，另一个著名的戴维斯。所以不是宾夕法尼亚，而是密歇根。另一件事是人们对音频有这样的抱怨。亲爱的安迪，你课上的音频很烂，所以我看你请不起音响工程师，安迪，我喜欢这门课，但我听不下去，因为音频搞砸了。你这么做的时候发生了什么？我丢失了一张Will Live，所以上次是我的错，所以我们正在重复录制，所以希望这次我们在发布它时不会有任何问题。然后我们真的收到了关于你的电子邮件，这很令人惊讶，对吗？我上个月在匹兹堡的21世纪桥表演中看了DJ Two P的表演。这是真的吗？正确的。你很幸运。
+All right, so {} some
+好的，上节课的一些快速的东西，行政的东西，
 
 3
 00:00:39,885 --> 00:00:41,550
@@ -18,7 +18,8 @@ quick things, administrative things from
 4
 00:00:41,550 --> 00:00:43,815
 0,240 240,405 405,690 690,1070 1930,2265
-from last class eh? It's
+from last class,| {} it's
+|才过了一天，我们已经收到电子邮件了，
 
 5
 00:00:43,815 --> 00:00:44,505
@@ -28,77 +29,90 @@ only been one day. We
 6
 00:00:44,505 --> 00:00:46,460
 0,120 120,375 375,755 1015,1415 1555,1955
-already got emails EM. So
+already got emails,| {} so
+|第一件事是，
 
 7
 00:00:46,930 --> 00:00:47,810
 0,260 260,395 395,530 530,635 635,880
-the first thing is that
+the first thing is that,|
+|
 
 8
 00:00:47,860 --> 00:00:48,945
 0,260 260,365 365,515 515,785 785,1085
 I made a mistake last
+上节课我犯了一个错误，
 
 9
 00:00:48,945 --> 00:00:50,100
 0,270 270,480 480,645 645,855 855,1155
-class I said ted CoD
+class,| I said Ted Codd
+|我说 Ted Codd 在宾夕法尼亚大学获得了博士学位，
 
 10
 00:00:50,100 --> 00:00:51,950
 0,120 120,270 270,780 780,1130 1450,1850
-got his PhD at Penn.
+got his PhD at Penn,|
+|
 
 11
 00:00:52,360 --> 00:00:53,085
 0,245 245,320 320,410 410,650 650,725
-He got his PhD at
+he got his PhD at
+他实际是在密歇根获得博士学位，
 
 12
 00:00:53,085 --> 00:00:54,465
 0,245 655,930 930,1110 1110,1260 1260,1380
-Michigan where all the great
+Michigan,| where all the great
+|所有优秀的数据人都在那里获得了博士学位，
 
 13
 00:00:54,465 --> 00:00:55,760
 0,195 195,375 375,540 540,705 705,1295
-data who got their PHDs
+data people got their PHDs,|
+|
 
 14
 00:00:56,560 --> 00:00:58,905
 0,400 1500,1790 1790,1955 1955,2240 2240,2345
-so Mike snow breakaker got
+so Michael {Stonebraker -} got
+Michael Stonebraker 在那里获得了他的博士学位，
 
 15
 00:00:58,905 --> 00:00:59,700
 0,105 105,255 255,405 405,585 585,795
-his P G there. Ted
+his {PHD -} there,| Ted
+|Ted Codd 在那里得到了他的博士学位，
 
 16
 00:00:59,700 --> 00:01:00,345
 0,165 165,285 285,375 375,495 495,645
-Co got his P G
+Codd got his {PHD -}
 
 17
 00:01:00,345 --> 00:01:01,410
 0,180 180,390 390,705 705,900 900,1065
-there David DeWitt another famous
+there,| David DeWitt another famous
+|David Dewitt 也是，另一个著名的 David ，
 
 18
 00:01:01,410 --> 00:01:02,490
 0,210 210,530 700,930 930,990 990,1080
-Davis guy. So it was
+Davis guy,| so it was
+|所以不是宾夕法尼亚，而是密歇根。
 
 19
 00:01:02,490 --> 00:01:04,455
 0,165 165,465 465,765 765,1070 1720,1965
-not Penn it was it
+not Penn it was, it
 
 20
 00:01:04,455 --> 00:01:05,790
 0,105 105,365 835,1065 1065,1185 1185,1335
-was Michigan. The other thing
+was Michigan.| The other thing
+|另一件事是人们对音频有这样的抱怨，
 
 21
 00:01:05,790 --> 00:01:07,785
@@ -108,52 +122,60 @@ is people complain that about
 22
 00:01:07,785 --> 00:01:09,315
 0,120 120,365 745,1005 1005,1265 1285,1530
-the audio. Dear Andy the
+the audio,| {Dear,Andy}, the
+|亲爱的 Andy ，你课上的音频很烂，
 
 23
 00:01:09,315 --> 00:01:10,245
 0,150 150,300 300,405 405,585 585,930
-audio of your class sucks
+audio of your class sucks,|
+|
 
 24
 00:01:10,245 --> 00:01:11,040
 0,75 75,165 165,465 465,645 645,795
 so I can't see you
+所以我看你请不起音响工程师，是这样吗，
 
 25
 00:01:11,040 --> 00:01:11,940
 0,150 150,270 270,510 510,780 780,900
-afford a sound engineer do
+afford a sound engineer, do
 
 26
 00:01:11,940 --> 00:01:13,110
 0,90 90,350 550,870 870,1050 1050,1170
-it right Andy I love
+it right,| Andy, I love
+|Andy ，我喜欢这门课，但我听不下去，
 
 27
 00:01:13,110 --> 00:01:13,860
 0,150 150,345 345,495 495,600 600,750
-the course but I can't
+the course, but I can't
 
 28
 00:01:13,860 --> 00:01:14,445
 0,135 135,300 300,390 390,465 465,585
-listen to because the audio
+listen {to,it},| because the audio
+|因为音频太混乱了，
 
 29
 00:01:14,445 --> 00:01:15,465
 0,135 135,345 345,540 540,750 750,1020
-is messed up. What happened
+is messed up,| what happened
+|你这么做的时候发生了什么，
 
 30
 00:01:15,465 --> 00:01:16,410
 0,270 270,435 435,570 570,780 780,945
-while you're doing this? I
+while you're doing this,| I
+|我失去了活下去的方式。
 
 31
 00:01:16,410 --> 00:01:18,470
 0,150 150,285 285,420 420,710 1660,2060
-lost a would live so
+lost a {way,to -} live.| So
+|所以上次是我的错，
 
 32
 00:01:18,760 --> 00:01:20,025
@@ -163,12 +185,14 @@ that that was my fault
 33
 00:01:20,025 --> 00:01:21,015
 0,195 195,435 435,630 630,780 780,990
-last time so we're double
+last time,| so we're double
+|所以我们正在重复录制，
 
 34
 00:01:21,015 --> 00:01:22,320
 0,330 330,525 525,755 925,1170 1170,1305
-recording so hopefully we won't
+recording,| so hopefully we won't
+|所以希望这次我们在发布它时不会有任何问题。
 
 35
 00:01:22,320 --> 00:01:24,600
@@ -178,7 +202,8 @@ have any issues with posting
 36
 00:01:24,600 --> 00:01:25,665
 0,225 225,450 450,710 730,975 975,1065
-it this time. And then
+it this time.| And then
+|然后我们收到了关于你的电子邮件，
 
 37
 00:01:25,665 --> 00:01:26,850
@@ -188,12 +213,14 @@ we actually got emails about
 38
 00:01:26,850 --> 00:01:29,270
 0,260 940,1200 1200,1460 1690,2055 2055,2420
-you which is surprising right?
+you,| which is surprising, right,|
+|这很令人惊讶，对吗，|
 
 39
 00:01:29,950 --> 00:01:31,140
 0,275 275,470 665,815 815,980 980,1190
-I saw DJ two p
+I saw DJ {2PL -}
+我上个月在匹兹堡的 [21桥表演] 中看了 DJ 2PL 的表演，
 
 40
 00:01:31,140 --> 00:01:33,030
@@ -203,54 +230,60 @@ last month performing at the
 41
 00:01:33,030 --> 00:01:34,605
 0,290 610,1065 1065,1275 1275,1455 1455,1575
-bridge 21 over show in
+[bridge 21 over show] in
 
 42
 00:01:34,605 --> 00:01:36,860
 0,540 540,735 735,840 840,1115 1855,2255
-Pittsburgh. Is that true? Right.
+Pittsburgh,| is that true?| {All,right}.|
+|这是真的吗？|好的。|
 
 43
 00:01:37,270 --> 00:01:38,100
 0,320 320,455 455,760
-You're very lucky.|
-|
+You're very lucky
+你很幸运得到像他这样的 DJ ，他很贵，
 
 44
 00:01:38,100 --> 00:01:39,150
 0,345 345,465 465,675 675,840 840,1050
-DJ like that he is
-像那样的DJ，他很贵。SEM有很多钱，没有很多钱还好JDJ两个P是可笑的。他是单身吗？我在要求我的，然后她就像没有拇指的泰勒·斯威夫特。我不知道是什么意思，那么你是单身吗？
+DJ like that, he is
 
 45
 00:01:39,150 --> 00:01:41,610
 0,380 1690,2070 2070,2220 2220,2340 2340,2460
-expensive. Sem have a lot
+expensive,| [] have a lot
+|[]有很多钱，
 
 46
 00:01:41,610 --> 00:01:43,725
 0,105 105,350 1660,1920 1920,2025 2025,2115
-of money, does not have
+of money,| does not have
+|[]没有很多钱，好的，
 
 47
 00:01:43,725 --> 00:01:44,510
 0,75 75,165 165,255 255,435 435,785
-a lot of money okay
+a lot of money, okay.|
+|
 
 48
 00:01:45,670 --> 00:01:47,715
 0,400 1140,1580 1580,1745 1745,1910 1910,2045
-j DJ two p is
+Yo, DJ {2PL -} is
+哟，DJ 2PL 很搞笑，他是单身吗，
 
 49
 00:01:47,715 --> 00:01:49,380
 0,245 475,750 750,960 960,1295 1375,1665
-ridiculous. Is he single? I'm
+ridiculous, is he single,| I'm
+|我在为我的朋友问，
 
 50
 00:01:49,380 --> 00:01:54,530
 0,180 180,360 360,590 4660,4905 4905,5150
-asking for my and then
+asking for {my,friend},| and then
+|然后她就像没有拇指的 Taylor Swift ，
 
 51
 00:01:54,610 --> 00:01:55,995
@@ -260,24 +293,26 @@ she's like Taylor Swift without
 52
 00:01:55,995 --> 00:01:57,255
 0,270 270,810 810,975 975,1110 1110,1260
-any thumbs. I dont know
+any thumbs,| I dont know
+|我不知道是什么意思，
 
 53
 00:01:57,255 --> 00:02:01,340
 0,335 2305,2705 3385,3645 3645,3795 3795,4085
-means so are you single?|
-|
+means,| so are you single?|
+|那么你是单身吗？|
 
 54
 00:02:01,900 --> 00:02:09,250
 0,465 465,740 1120,1520 3850,4250 7030,7350
-I'm not all right anyway.
-不管怎么说，我都不太好。那是他们的问题。所以今天的课我们来讲讲SQL.嗯，上一节课我们花时间讨论了国家模型。我们讨论了在我看来，对于每个可能的数据库，您可以认为关系数据模型的高级数据模型如何可以用来表示几乎所有不同的模式。然后，我们展示了如何将代数作为我们如何执行查询或定义查询以拥有关系数据库的构建块。因此，今天的课程真正要讨论的是SQL，它是一种用于与数据库系统交互的声明性或非过程性语言。
+I'm not.| All right, anyway.
+我不是。|好的，不管怎样，那是他们的问题。
 
 55
 00:02:09,250 --> 00:02:12,850
 0,285 285,420 420,710 2650,3050 3160,3600
-That's their problem. So today's
+That's their problem.| So today's
+|所以今天的课，我们来讲讲 SQL ，
 
 56
 00:02:12,850 --> 00:02:13,615
@@ -287,7 +322,8 @@ class we to talk about
 57
 00:02:13,615 --> 00:02:16,420
 0,485 625,1025 1555,1955 2245,2580 2580,2805
-sql. EM, the last class
+SQL,| {} the last class
+|上一节课我们花时间讨论了关系模型，
 
 58
 00:02:16,420 --> 00:02:17,155
@@ -297,12 +333,14 @@ we spent time talk on
 59
 00:02:17,155 --> 00:02:18,835
 0,375 375,635 1015,1320 1320,1515 1515,1680
-theationalial model. We talked about
+relational model,| we talked about
+|我们讨论了，
 
 60
 00:02:18,835 --> 00:02:20,200
 0,275 355,630 630,870 870,1170 1170,1365
-how in my opinion that
+how,| in my opinion, that
+|在我看来，它是对于每个可能的数据库的高级数据模型，
 
 61
 00:02:20,200 --> 00:02:22,140
@@ -312,12 +350,14 @@ a superior data model for
 62
 00:02:22,280 --> 00:02:23,470
 0,350 350,635 635,905 905,1085 1085,1190
-every possible database you can
+every possible database,| you can
+|你可以认为，
 
 63
 00:02:23,470 --> 00:02:24,600
 0,105 105,195 195,315 315,590 730,1130
-sort of think of the
+sort of think of,| the
+|关系数据模型可以用来表示
 
 64
 00:02:24,860 --> 00:02:26,310
@@ -327,42 +367,47 @@ relational data model can be
 65
 00:02:27,080 --> 00:02:28,945
 0,380 380,650 650,940 1470,1730 1730,1865
-used to represent pretty much
+used to represent| pretty much
+|几乎所有不同的模式。
 
 66
 00:02:28,945 --> 00:02:30,250
 0,210 210,360 360,540 540,1020 1020,1305
-all the different schemes that
+all the different schemes, that
 
 67
 00:02:30,250 --> 00:02:31,735
 0,180 180,285 285,435 435,740 1240,1485
-that are out there. And
+that are out there.| And
+|然后，我们展示了关系代数如何构建块，
 
 68
 00:02:31,735 --> 00:02:32,620
 0,75 75,180 180,375 375,675 675,885
-then we showed how to
+then we showed how relational
 
 69
 00:02:32,620 --> 00:02:33,870
 0,315 315,390 390,540 540,830 850,1250
-algebra was the building block
+algebra was the building block|
+|
 
 70
 00:02:34,130 --> 00:02:35,440
 0,400 420,725 725,875 875,1070 1070,1310
 for how we would execute
+关于我们如何在关系数据库上执行查询或定义查询。
 
 71
 00:02:35,440 --> 00:02:37,530
 0,480 480,860 1000,1380 1380,1815 1815,2090
-queries or define queries to
+queries or define queries {to,operate,over},
 
 72
 00:02:39,380 --> 00:02:41,185
 0,275 275,380 380,620 620,970 1530,1805
-own a relational database. So
+on a relational database.| So
+|所以，今天的课程真正要讨论的是 SQL ，
 
 73
 00:02:41,185 --> 00:02:42,340
@@ -372,17 +417,18 @@ today's class is really now
 74
 00:02:42,340 --> 00:02:43,540
 0,180 180,360 360,630 630,1065 1065,1200
-to talk about sql, which
+to talk about SQL,| which
+|它是一种用于与数据库系统交互的声明性或非过程性语言。
 
 75
 00:02:43,540 --> 00:02:45,775
 0,260 580,870 870,1580 1750,2040 2040,2235
-is a declarative or non
+is a declarative or {non-procedural
 
 76
 00:02:45,775 --> 00:02:48,930
 0,555 555,875 1105,1505 2335,2850 2850,3155
-procedural language for interacting with
+-} language for interacting with
 
 77
 00:02:49,190 --> 00:02:50,560
@@ -394,27 +440,30 @@ a database system.|
 00:02:50,560 --> 00:02:52,510
 0,320 1150,1470 1470,1575 1575,1740 1740,1950
 And we'll see over time
-我们将看到，随着时间的推移，SQL已经发展到了最初的位置，在20世纪70年代，当它第一次被定义时，它对关系数据库应该是什么样子有非常严格的要求。但在过去的40年里，它得到了扩展，以支持看起来不像是关系的东西，例如json。
+我们将看到，随着时间的推移， SQL 已经发展，
 
 79
 00:02:52,510 --> 00:02:53,550
 0,135 135,285 285,540 540,705 705,1040
-is that sql has evolved
+is that SQL has evolved,|
+|
 
 80
 00:02:53,630 --> 00:02:55,375
 0,400 660,935 935,1115 1115,1420 1500,1745
 where in the beginning, in
+在最初的时候，在 1970 年代，当它第一次被定义时，
 
 81
 00:02:55,375 --> 00:02:56,290
 0,90 90,285 285,720 720,840 840,915
-the nineteen seventies, when it
+the {1970s -}, when it
 
 82
 00:02:56,290 --> 00:02:57,190
 0,120 120,360 360,615 615,765 765,900
-was first defined, it was
+was first defined,| it was
+|它对关系数据库应该是什么样子有非常严格的要求，
 
 83
 00:02:57,190 --> 00:02:59,125
@@ -424,17 +473,20 @@ very strict about what a
 84
 00:02:59,125 --> 00:03:00,420
 0,240 240,525 525,780 780,990 990,1295
-relational database should look like.
+relational database should look like,|
+|
 
 85
 00:03:00,830 --> 00:03:02,710
 0,400 870,1145 1145,1265 1265,1510 1560,1880
-But in the last forty
+but in the last 40
+但在过去的 40 年里，
 
 86
 00:03:02,710 --> 00:03:04,450
 0,320 370,795 795,1130 1150,1455 1455,1740
-years it's expanded to support
+years,| it's expanded to support
+|它得到了扩展，以支持看起来不像是关系的东西，例如 json 。
 
 87
 00:03:04,450 --> 00:03:06,060
@@ -450,8 +502,8 @@ like json, for example.|
 89
 00:03:07,820 --> 00:03:09,260
 0,350 700,945 945,1140 1140,1335 1335,1440
-EM, so let's, let's start
-嗯，让我们，让我们从头开始，谈谈它是如何开始的，然后我们将讨论在它的现代版本中可以做的更有趣的事情。
+{} So let's, let's start
+所以，让我们从头开始，谈谈 SQL 是如何开始的，
 
 90
 00:03:09,260 --> 00:03:10,055
@@ -461,7 +513,8 @@ the beginning, talk about how
 91
 00:03:10,055 --> 00:03:11,030
 0,240 240,390 390,645 645,855 855,975
-so got started, and then
+SQL got started,| and then
+|然后我们将讨论在它的现代版本中可以做的更有趣的事情。
 
 92
 00:03:11,030 --> 00:03:13,595
@@ -14519,4 +14572,3 @@ how I'm living to tell
 0,150 150,315 315,585 585,965
 him I living great.|
 |
-
