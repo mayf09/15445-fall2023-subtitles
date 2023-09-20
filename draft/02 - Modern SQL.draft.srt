@@ -2269,8 +2269,8 @@ first one, the DML.|
 400
 00:11:08,350 --> 00:11:09,770
 0,245 245,425 425,755 755,1085 1085,1420
-And in reminder from from
-从我们上节课讲到的地方提醒一下，SQL将基于袋子，这意味着可能会有重复的EM，而关系代数是基于集合的，我们看到了一些情况，我们必须在SQL语句中添加额外的东西来处理这个问题。
+And in reminder from, from
+从我们上节课讲到的提醒一下，
 
 401
 00:11:09,970 --> 00:11:11,925
@@ -2280,7 +2280,8 @@ picking up where we we
 402
 00:11:11,925 --> 00:11:13,830
 0,120 120,255 255,420 420,725 1525,1905
-talked about last class, sql
+talked about last class,| SQL
+|SQL 基于袋子的，
 
 403
 00:11:13,830 --> 00:11:14,160
@@ -2290,32 +2291,37 @@ is going to be based
 404
 00:11:14,160 --> 00:11:16,065
 0,180 180,470 580,980 1450,1740 1740,1905
-on bags, meaning there could
+on bags,| meaning there could
+|这意味着可能会有重复的，
 
 405
 00:11:16,065 --> 00:11:18,315
 0,135 135,695 1045,1445 1705,2025 2025,2250
-be duplicates, EM, whereas relation
+be duplicates,| {} whereas relational
+|而关系代数是基于集合的，
 
 406
 00:11:18,315 --> 00:11:19,610
 0,405 405,570 570,765 765,975 975,1295
-algebra was based on sets
+algebra was based on sets|
+|
 
 407
 00:11:20,080 --> 00:11:21,150
 0,320 320,545 545,710 710,845 845,1070
-and we see some cases
+and we see some cases|
+我们看到了一些情况，|
 
 408
 00:11:21,150 --> 00:11:22,440
 0,350 580,870 870,975 975,1110 1110,1290
 where we'll have to add
+我们必须在 SQL 语句中添加额外的东西来处理这个问题。
 
 409
 00:11:22,440 --> 00:11:23,415
 0,270 270,495 495,615 615,720 720,975
-extra stuff in our sql
+extra stuff in our SQL
 
 410
 00:11:23,415 --> 00:11:26,370
@@ -2331,8 +2337,8 @@ that.|
 412
 00:11:28,480 --> 00:11:29,745
 0,260 260,520 540,815 815,1055 1055,1265
-So today again, is supposed
-因此，今天又应该是一个关于现代SQL的速成课程。我假设每个人，无论您是否知道，您已经从SQL92标准的SELECT Insertlet中了解了足够的知识，我想谈谈。
+So today, again, is supposed
+所以，今天应该是一个关于现代 SQL 的速成课程，
 
 413
 00:11:29,745 --> 00:11:30,450
@@ -2342,7 +2348,8 @@ to be a crash course
 414
 00:11:30,450 --> 00:11:31,905
 0,345 345,705 705,1035 1035,1200 1200,1455
-on modern sql. I'm assuming
+on modern SQL,| I'm assuming
+|我假设每个人，无论你是否知道，
 
 415
 00:11:31,905 --> 00:11:33,660
@@ -2352,17 +2359,19 @@ everyone, whether or not you
 416
 00:11:33,660 --> 00:11:34,680
 0,120 120,195 195,270 270,530 730,1020
-know it or not, you
+know it or not,| you
+|你已经足够了解 SQL-92 标准，
 
 417
 00:11:34,680 --> 00:11:35,730
 0,210 210,465 465,675 675,810 810,1050
-know enough from the sql
+know enough from the {SQL-92
 
 418
 00:11:35,730 --> 00:11:38,820
 0,435 435,740 1360,1650 1650,2480 2830,3090
-92 standard select insertlet and
+-} standard,| SELECT {INSERT,UPDATE,DELETE}| and
+|SELECT INSERT UPDATE DELETE,|我想谈谈，
 
 419
 00:11:38,820 --> 00:11:39,590
@@ -2372,14 +2381,14 @@ I want to talk about
 420
 00:11:39,640 --> 00:11:40,900
 0,400
-the.|
+the,|
 |
 
 421
 00:11:40,900 --> 00:11:41,680
 0,165 165,240 240,330 330,510 510,780
 I want to talk about
-我想谈谈你可以用它们做的更复杂的事情，但是。
+我想谈谈你可以用它们做的更复杂的事情，
 
 422
 00:11:41,680 --> 00:11:43,840
@@ -2389,29 +2398,31 @@ the more sophisticated things you
 423
 00:11:43,840 --> 00:11:45,360
 0,120 120,225 225,330 330,590 1120,1520
-can do with them, but.|
-|
+can do with them,| but,
+|但是最重要的主题将是，
 
 424
 00:11:45,850 --> 00:11:47,595
 0,260 260,395 395,1250 1250,1535 1535,1745
-But the overarching theme also
-但最重要的主题也将是我们将开放航站楼。我们将在不同的数据库系统中尝试一系列这样的查询。我们将看到，即使有一个SQL标准，也有一个国际公认的文档说明了SQL应该是什么样子的。
+but the overarching theme also
 
 425
 00:11:47,595 --> 00:11:48,510
 0,120 120,300 300,480 480,705 705,915
-will be is that we
+will be is that,| we
+|我们将会打开终端，
 
 426
 00:11:48,510 --> 00:11:49,520
 0,165 165,300 300,375 375,495 495,1010
-will open up the terminal.
+will open up the terminal,|
+|
 
 427
 00:11:49,630 --> 00:11:50,445
 0,350 350,470 470,575 575,695 695,815
-We'll try a bunch of
+we'll try a bunch of
+我们将在不同的数据库系统中尝试一系列这样的查询，
 
 428
 00:11:50,445 --> 00:11:51,465
@@ -2421,22 +2432,26 @@ these queries in different database
 429
 00:11:51,465 --> 00:11:53,055
 0,365 805,1095 1095,1230 1230,1380 1380,1590
-systems. And we will see
+systems,| and we will see
+|我们将看到，
 
 430
 00:11:53,055 --> 00:11:54,165
 0,210 210,465 465,735 735,930 930,1110
-that even though there is
+that,| even though there is
+|即使有一个 SQL 标准，
 
 431
 00:11:54,165 --> 00:11:55,725
 0,210 210,540 540,845 1075,1335 1335,1560
-a sql standard, there is
+a SQL standard,| there is
+|也有一个国际公认的文档，
 
 432
 00:11:55,725 --> 00:11:58,080
 0,365 775,1200 1200,1475 1915,2205 2205,2355
-an internationally recognized document that
+an internationally recognized document,| that
+|说明了 SQL 应该是什么样子的，
 
 433
 00:11:58,080 --> 00:11:59,085
@@ -2446,36 +2461,37 @@ says here's what sql should
 434
 00:11:59,085 --> 00:12:00,100
 0,135 135,425
-look like.|
+look like,|
 |
 
 435
 00:12:00,440 --> 00:12:02,005
 0,350 350,755 755,1010 1010,1340 1340,1565
-Nobody implements it exactly that
-没有人会完全以这种方式实现它。
+nobody implements it exactly that
+没有人会完全以这种方式实现它，
 
 436
 00:12:02,005 --> 00:12:03,000
 0,275
-way.|
-|
+way,
 
 437
 00:12:03,000 --> 00:12:04,050
 0,350 520,870 870,930 930,975 975,1050
-Right. Everyone's going to have
-正确的。每个人都会有这些奇怪的细微差别和怪癖，他们有不同的功能或不同的命名或语法来做某些事情，在某些情况下，不同操作的不同语义。
+right,| everyone's going to have
+|每个人都会有这些奇怪的细微差别和怪癖，
 
 438
 00:12:04,050 --> 00:12:05,430
 0,150 150,375 375,855 855,1005 1005,1380
-these weird nuances and quirks
+these weird nuances and quirks,|
+|
 
 439
 00:12:05,430 --> 00:12:06,360
 0,135 135,225 225,390 390,630 630,930
 where they have different features
+他们有不同的功能或不同的命名或语法来做某些事情，
 
 440
 00:12:06,360 --> 00:12:08,625
@@ -2485,7 +2501,8 @@ or different nomenclature or syntax
 441
 00:12:08,625 --> 00:12:10,965
 0,150 150,285 285,495 495,815 2095,2340
-to do certain things, in
+to do certain things,| in
+|在某些情况下，不同操作的不同语义，
 
 442
 00:12:10,965 --> 00:12:12,830
@@ -2495,19 +2512,20 @@ some cases, different semantics of
 443
 00:12:13,180 --> 00:12:14,800
 0,380 380,760
-different operations.|
+different operations,|
 |
 
 444
 00:12:14,800 --> 00:12:16,060
 0,350 490,795 795,960 960,1170 1170,1260
-Where even though there's a
-即使有一个SQL标准，但每个系统都会有所不同。
+where even though there's a
+即使有一个 SQL 标准，
 
 445
 00:12:16,060 --> 00:12:16,855
 0,225 225,450 450,690 690,750 750,795
-sql standard, it's going to
+SQL standard,| it's going to
+|但每个系统都会有所不同。
 
 446
 00:12:16,855 --> 00:12:17,770
@@ -2523,13 +2541,14 @@ to the next.|
 448
 00:12:19,650 --> 00:12:20,615
 0,260 260,520 540,785 785,860 860,965
-Who did take a guess
-是谁猜到了是谁？我认为谁是最糟糕的SQL实现的最大罪魁祸首？更糟糕的不是正确的词，而是最偏离标准的那个。
+Who did, take a guess
+猜猜是谁，
 
 449
 00:12:20,615 --> 00:12:21,785
 0,275 295,695 715,945 945,1050 1050,1170
-who? Who do I think
+who,| who do I think
+|我认为谁是最糟糕的 SQL 实现的最大罪魁祸首，
 
 450
 00:12:21,785 --> 00:12:22,805
@@ -2539,17 +2558,20 @@ is the biggest offender for
 451
 00:12:22,805 --> 00:12:24,350
 0,90 90,335 445,900 900,1290 1290,1545
-the worst sql implementationation worse
+the worst SQL implementationation,| worse
+|更糟糕的不是正确的词，
 
 452
 00:12:24,350 --> 00:12:25,010
 0,150 150,270 270,375 375,495 495,660
-is not the right word,
+is not the right word,|
+|
 
 453
 00:12:25,010 --> 00:12:26,405
 0,150 150,410 790,1050 1050,1200 1200,1395
 but like the one that
+而是像最偏离标准的那个，
 
 454
 00:12:26,405 --> 00:12:27,410
@@ -2559,40 +2581,44 @@ deviates from the standard the
 455
 00:12:27,410 --> 00:12:28,360
 0,260
-most.|
+most,|
 |
 
 456
 00:12:28,740 --> 00:12:29,500
 0,245 245,335 335,425 425,515 515,760
-Let me take a guess.|
+let me take a guess.|
 让我猜猜。|
 
 457
 00:12:31,850 --> 00:12:32,920
 0,275 275,500 500,755 755,890 890,1070
-The top four out of
-后面的前四名是肯定的。是的，我的天，他答对了。是的，米亚格将会是所有这些中他们会做各种怪事的地方。最近，他们现在有了一个标志，可以让它更严格，并试图更接近SQL标准，但在很长一段时间里，他们做了一系列奇怪的事情。我的问题是，我第一次开始使用数据库关系数据库是在20世纪90年代我上高中的时候，我们使用的是我的SQL3，所以我有所有的坏习惯，就像我从我的SQL中学到的一样，我想，哦，是的，这就是续集。然后你意识到，当你开始玩这样的其他系统时，他们正在做一些奇怪的事情。
+The top four out of.|
+前四名是。|
 
 458
 00:12:32,920 --> 00:12:33,690
 0,210 210,300 300,360 360,480 480,770
-yes in the back. Yes
+Yes, in the back, yes.|
+好的，后面的，好的。|
 
 459
 00:12:34,550 --> 00:12:35,515
 0,395 395,635 635,740 740,845 845,965
-my he got it right.
+MySQL, he got it right,|
+MySQL ，他是对的，|
 
 460
 00:12:35,515 --> 00:12:36,895
 0,255 255,795 795,960 960,1110 1110,1380
-Yes, myag is gonna be
+yes, MySQL is gonna be
+是的， MySQL 将会是所有这些中[]，
 
 461
 00:12:36,895 --> 00:12:39,160
 0,395 1015,1245 1245,1395 1395,1715 1945,2265
-the of all these where
+the of all these,| where
+|他们会做各种奇怪的事情，
 
 462
 00:12:39,160 --> 00:12:39,865
@@ -2602,12 +2628,14 @@ they're gonna do all sorts
 463
 00:12:39,865 --> 00:12:42,790
 0,105 105,365 1555,1875 1875,2195 2635,2925
-of weird. More recently they
+of weird,| more recently, they
+|最近，他们有了一个标志，
 
 464
 00:12:42,790 --> 00:12:43,720
 0,180 180,330 330,495 495,750 750,930
-now have a flag where
+now have a flag,| where
+|可以让它更严格，
 
 465
 00:12:43,720 --> 00:12:44,290
@@ -2617,7 +2645,8 @@ you can make it be
 466
 00:12:44,290 --> 00:12:45,520
 0,165 165,470 640,960 960,1140 1140,1230
-more strict and try to
+more strict| and try to
+|并试图更接近 SQL 标准，
 
 467
 00:12:45,520 --> 00:12:47,440
@@ -2627,32 +2656,36 @@ be more closer to the
 468
 00:12:47,440 --> 00:12:48,595
 0,225 225,500 700,960 960,1065 1065,1155
-sql standard but for the
+SQL standard,| but for the
+|但在很长一段时间里，他们做了一系列奇怪的事情。
 
 469
 00:12:48,595 --> 00:12:49,405
 0,210 210,480 480,645 645,735 735,810
-longest time they do a
+longest time, they do a
 
 470
 00:12:49,405 --> 00:12:50,410
 0,90 90,195 195,345 345,635 745,1005
-bunch of weird things. And
+bunch of weird things.| And
+|我的问题是，
 
 471
 00:12:50,410 --> 00:12:51,910
 0,195 195,465 465,690 690,980 1150,1500
-my problem is that I
+my problem is that,| I
+|我第一次开始使用关系数据库是在，
 
 472
 00:12:51,910 --> 00:12:53,410
 0,210 210,345 345,540 540,1190 1210,1500
-first started using databases relation
+first started using databases, relation
 
 473
 00:12:53,410 --> 00:12:54,850
 0,405 405,585 585,860 1090,1335 1335,1440
-databases in like when I
+databases in like,| when I
+|90 年代，我上高中的时候，
 
 474
 00:12:54,850 --> 00:12:55,495
@@ -2662,12 +2695,14 @@ was in high school in
 475
 00:12:55,495 --> 00:12:56,365
 0,90 90,480 480,705 705,795 795,870
-the nineties and we were
+the 90s| and we were
+|我们使用的是 MySQL 3 ，
 
 476
 00:12:56,365 --> 00:12:57,925
 0,150 150,345 345,630 630,935 1315,1560
-using my sql three so
+using {MySQL -} 3,| so
+|所以我有所有的坏习惯，
 
 477
 00:12:57,925 --> 00:12:58,735
@@ -2677,12 +2712,14 @@ I have all these bad
 478
 00:12:58,735 --> 00:13:00,175
 0,335 505,810 810,1050 1050,1275 1275,1440
-habits that like I picked
+habits,| that like I picked
+|我从 MySQL 中学到的，
 
 479
 00:13:00,175 --> 00:13:00,940
 0,165 165,300 300,450 450,705 705,765
-up from my sql and
+up from {MySQL -}| and
+|我想，哦，是的，这就是 SQL ，
 
 480
 00:13:00,940 --> 00:13:01,525
@@ -2692,17 +2729,20 @@ I'm like oh yeah, this
 481
 00:13:01,525 --> 00:13:02,530
 0,90 90,225 225,480 480,725 745,1005
-is what sequel is. Then
+is what SQL is,| then
+|然后你意识到，
 
 482
 00:13:02,530 --> 00:13:03,805
 0,180 180,405 405,555 555,800 970,1275
-you realize when you start
+you realize,| when you start
+|当你开始使用其他系统时，
 
 483
 00:13:03,805 --> 00:13:05,065
 0,180 180,345 345,570 570,905 985,1260
-playing other systems like this
+playing other systems,| like this
+|这太疯狂了，他们在做一些奇怪的事情，
 
 484
 00:13:05,065 --> 00:13:06,190
@@ -2712,24 +2752,25 @@ is crazy, they're doing some
 485
 00:13:06,190 --> 00:13:07,760
 0,180 180,500
-weird stuff.|
+weird stuff,|
 |
 
 486
 00:13:07,760 --> 00:13:09,125
 0,255 255,570 570,720 720,1040 1090,1365
-But it's gotten better. My
-但一切都变好了。我的SQL8确实改进了很多。好的，我们来看一下所有这些聚合。GROUP是字符串日期和时间操作。这将是我们看到所有问题的地方，然后是一系列其他与SQL查询交互的不同方式。我们将要讨论的另一个主题是，编写时间的SQL语句的目标是尝试完成所有的计算。
+but it's gotten better,| {MySQL
+但一切都变好了，|MySQL 8 确实改进了很多。
 
 487
 00:13:09,125 --> 00:13:10,700
 0,240 240,485 505,840 840,1175 1195,1575
-sql eight has has certainly
+-} 8 has has certainly
 
 488
 00:13:10,700 --> 00:13:12,200
 0,380 400,660 660,920 1090,1350 1350,1500
-improved a lot. All right,
+improved a lot.| All right,
+|好的，我们来看一下所有这些聚合。GROUP是字符串日期和时间操作。这将是我们看到所有问题的地方，然后是一系列其他与SQL查询交互的不同方式。我们将要讨论的另一个主题是，编写时间的SQL语句的目标是尝试完成所有的计算。
 
 489
 00:13:12,200 --> 00:13:13,415
