@@ -2770,7 +2770,7 @@ but it's gotten better,| {MySQL
 00:13:10,700 --> 00:13:12,200
 0,380 400,660 660,920 1090,1350 1350,1500
 improved a lot.| All right,
-|好的，我们来看一下所有这些聚合。GROUP是字符串日期和时间操作。这将是我们看到所有问题的地方，然后是一系列其他与SQL查询交互的不同方式。我们将要讨论的另一个主题是，编写时间的SQL语句的目标是尝试完成所有的计算。
+|好的，我们来看一下所有这些 Aggregations, Group by ，
 
 489
 00:13:12,200 --> 00:13:13,415
@@ -2780,17 +2780,20 @@ so we'll go through all
 490
 00:13:13,415 --> 00:13:15,010
 0,105 105,300 300,840 840,1065 1065,1595
-of these aggregations. Group is
+of these aggregations, group bys,|
+|
 
 491
 00:13:15,420 --> 00:13:16,600
 0,365 365,635 635,800 800,920 920,1180
 the string date and time
+字符串、日期和时间操作，
 
 492
 00:13:16,620 --> 00:13:17,510
 0,335 335,605 605,680 680,725 725,890
-operations. That's going to be
+operations,| that's going to be
+|这将是我们看到所有问题的地方，
 
 493
 00:13:17,510 --> 00:13:18,125
@@ -2800,7 +2803,8 @@ the one where we see
 494
 00:13:18,125 --> 00:13:19,325
 0,105 105,225 225,485 775,1050 1050,1200
-all the problems and then
+all the problems| and then
+|然后是一系列其他与 SQL 查询交互的不同方式。
 
 495
 00:13:19,325 --> 00:13:19,985
@@ -2815,7 +2819,8 @@ ways to to interact with
 497
 00:13:21,830 --> 00:13:24,155
 0,255 255,650 910,1310 1630,2025 2025,2325
-sql queries. And another theme
+SQL queries.| And another theme
+|我们将要讨论的另一个主题是，
 
 498
 00:13:24,155 --> 00:13:24,965
@@ -2825,39 +2830,41 @@ about what we'll talk about
 499
 00:13:24,965 --> 00:13:26,735
 0,275 685,975 975,1265 1315,1575 1575,1770
-is the goal of writing
+is| the goal of writing
+|编写 SQL 语句的目标常常是
 
 500
 00:13:26,735 --> 00:13:28,160
 0,300 300,575 685,1020 1020,1215 1215,1425
-sql statement of time is
+SQL statement oftentimes is
 
 501
 00:13:28,160 --> 00:13:29,390
 0,350 550,795 795,885 885,1005 1005,1230
-to try to do all
+to| try to do all
+|尝试在数据库服务器本身上完成所有的计算，
 
 502
 00:13:29,390 --> 00:13:30,860
 0,225 225,830
-the computation.|
-|
+the computation
 
 503
 00:13:30,860 --> 00:13:32,105
 0,330 330,585 585,750 750,945 945,1245
-On the the database server
-在数据库服务器本身上，在一种主要的SQL查询中。这意味着我们不必执行SELECT操作，将一些数据返回到一个python程序或其他程序中，然后对其进行操作，然后将其推回并执行更多查询。我们希望在服务器端、数据库系统内部尽我们所能，因为我们希望能够将查询推送到数据，而不是将数据拉到查询。
+on the the database server
 
 504
 00:13:32,105 --> 00:13:33,875
 0,360 360,735 735,1115 1435,1665 1665,1770
-itself, within one sort of
+itself,| within one sort of
+|在一种主要的 SQL 查询中。
 
 505
 00:13:33,875 --> 00:13:35,825
 0,195 195,720 720,945 945,1235 1645,1950
-one overarching sql query. Meaning
+one overarching SQL query,| meaning
+|这意味着我们不必执行 SELECT 操作，
 
 506
 00:13:35,825 --> 00:13:36,485
@@ -2867,7 +2874,8 @@ we don't want to have
 507
 00:13:36,485 --> 00:13:37,565
 0,210 210,375 375,555 555,855 855,1080
-to do a select, get
+to do a SELECT,| get
+|将一些数据返回到一个 Python 程序或其他程序中，
 
 508
 00:13:37,565 --> 00:13:38,930
@@ -2877,22 +2885,26 @@ some data back into a
 509
 00:13:38,930 --> 00:13:40,070
 0,300 300,480 480,630 630,840 840,1140
-python program or something then
+Python program or something,| then
+|然后对其进行操作，
 
 510
 00:13:40,070 --> 00:13:41,405
 0,345 345,740 880,1140 1140,1245 1245,1335
-then then operate on it
+then then operate on it|
+|
 
 511
 00:13:41,405 --> 00:13:41,975
 0,90 90,195 195,315 315,435 435,570
 and then push it back
+然后将其推回并执行更多查询，
 
 512
 00:13:41,975 --> 00:13:42,995
 0,120 120,225 225,345 345,725 775,1020
-and do more queries. We
+and do more queries,| we
+|我们希望尽可能做任何事，
 
 513
 00:13:42,995 --> 00:13:43,520
@@ -2902,7 +2914,8 @@ want to try to do
 514
 00:13:43,520 --> 00:13:45,250
 0,225 225,345 345,620 910,1310 1330,1730
-everything we can on the
+everything we can| on the
+|在服务器端，在数据库系统之中，
 
 515
 00:13:45,720 --> 00:13:46,835
@@ -2912,7 +2925,8 @@ on, on the server side,
 516
 00:13:46,835 --> 00:13:48,440
 0,180 180,270 270,480 480,845 1345,1605
-inside the database system because
+inside the database system,| because
+|因为我们希望能够将查询推送到数据，
 
 517
 00:13:48,440 --> 00:13:48,860
@@ -2927,7 +2941,8 @@ to push the query to
 519
 00:13:49,925 --> 00:13:51,155
 0,105 105,345 345,660 660,930 930,1230
-the data, not pull the,
+the data,| not pull the,
+|而不是拉取数据到查询。
 
 520
 00:13:51,155 --> 00:13:52,325
@@ -2944,7 +2959,7 @@ query.|
 00:13:53,890 --> 00:13:55,155
 0,400 570,845 845,995 995,1130 1130,1265
 Again, this make more sense
-再说一次，随着我们的前进，这更有意义。
+随着我们的前进，这更有意义。
 
 523
 00:13:55,155 --> 00:13:56,400
@@ -2955,8 +2970,8 @@ as we go along.|
 524
 00:13:57,170 --> 00:13:58,345
 0,245 245,440 440,740 740,980 980,1175
-All right. So for today
-好的。因此，今天我们将使用一个简单的示例数据库，如下所示。EM有三张桌子，学生参加了课程，对吗？它基本上是在模仿一所大学。有学生，他们参加课程，他们被录取，他们在那里的各种课程中获得分数。
+All right, so for today
+好的，今天我们将使用一个简单的示例数据库，
 
 525
 00:13:58,345 --> 00:13:59,770
@@ -2966,22 +2981,25 @@ we're using a simple example
 526
 00:13:59,770 --> 00:14:01,570
 0,225 225,435 435,710 1060,1460 1510,1800
-database like this. EM has
+database like this,| {} has
+|有三张表， student enrolled 和 course ，
 
 527
 00:14:01,570 --> 00:14:03,400
 0,195 195,500 670,1050 1050,1590 1590,1830
-three tables, student enrolled in
+three tables, student, enrolled and
 
 528
 00:14:03,400 --> 00:14:06,010
 0,380 760,1080 1080,1730 2050,2415 2415,2610
-course, right? It's basically trying
+course, right,| it's basically trying
+|它基本上是在模仿一所大学，
 
 529
 00:14:06,010 --> 00:14:07,090
 0,90 90,285 285,435 435,740 760,1080
-to mimic a university. There's
+to mimic a university,| there's
+|有学生，他们参加课程，他们被录取，
 
 530
 00:14:07,090 --> 00:14:09,745
@@ -2991,7 +3009,8 @@ students, they take classes and
 531
 00:14:09,745 --> 00:14:10,660
 0,240 240,585 585,690 690,780 780,915
-they're enrolled and they get
+they're enrolled| and they get
+|他们在那里的各种课程中获得分数。
 
 532
 00:14:10,660 --> 00:14:11,730
@@ -3007,7 +3026,7 @@ that are there.|
 534
 00:14:12,950 --> 00:14:13,885
 0,335 335,515 515,650 650,770 770,935
-OK, so we'll use this
+Okay, so we'll use this
 好的，我们将使用它作为示例数据库。
 
 535
@@ -3025,17 +3044,19 @@ we go along.|
 00:14:18,230 --> 00:14:18,955
 0,245 245,380 380,545 545,650 650,725
 All right, first thing is
-好的，第一件事是聚合。因此，集合函数是一种对一个数据序列或一包两个数据进行数学计算的方法，你基本上是要把它合并成一个单一值。
+好的，第一件事是聚合，
 
 538
 00:14:18,955 --> 00:14:21,390
 0,485 1165,1410 1410,1655 1705,2175 2175,2435
-aggregations. So ag aggregate functions
+aggregations,| so {aggregate -} functions
+|聚合函数是一种方式，
 
 539
 00:14:21,440 --> 00:14:24,310
 0,400 840,1240 2100,2390 2390,2645 2645,2870
-are A A way to
+are a, a way| to
+|对一个数据序列或一个 tuple 袋子进行数学计算，
 
 540
 00:14:24,310 --> 00:14:27,690
@@ -3045,22 +3066,24 @@ compute some mathematical computation on
 541
 00:14:28,880 --> 00:14:30,385
 0,380 380,760 780,1100 1100,1265 1265,1505
-A A sequence of data
+a a sequence of data
 
 542
 00:14:30,385 --> 00:14:31,530
 0,315 315,480 480,615 615,765 765,1145
-or a bag of twoples
+or a bag of tuples|
+|
 
 543
 00:14:31,850 --> 00:14:32,935
 0,320 320,545 545,725 725,950 950,1085
 and you're basically going to
+你是要把它合并成一个单一值。
 
 544
 00:14:32,935 --> 00:14:33,790
 0,120 120,270 270,555 555,690 690,855
-going to coalce it down
+going to coalesce it down
 
 545
 00:14:33,790 --> 00:14:35,500
@@ -3072,17 +3095,18 @@ into a single value.|
 00:14:35,500 --> 00:14:36,805
 0,270 270,465 465,740 820,1140 1140,1305
 So the classic things would
-所以经典的东西是Average Min，Average Min，Max，Some Count。您正在尝试计算一个关系中所有两个列的最小值。
+所以经典的东西是 AVG MIN MAX SUM COUNT ，
 
 547
 00:14:36,805 --> 00:14:39,445
 0,165 165,485 715,1115 1945,2340 2340,2640
-be average min, average min,
+be AVG, MIN, AVG, MIN,
 
 548
 00:14:39,445 --> 00:14:41,845
 0,305 805,1140 1140,1475 1945,2280 2280,2400
-Max, some count. You're trying
+MAX, SUM, COUNT,| you're trying
+|你尝试计算一个列的最小值，
 
 549
 00:14:41,845 --> 00:14:43,920
@@ -3092,29 +3116,32 @@ to compute the min value
 550
 00:14:44,420 --> 00:14:46,825
 0,400 630,905 905,1180 1650,2045 2045,2405
-of a column across all
+of a column| across all
+|在一个关系中所有 tuple 中。
 
 551
 00:14:46,825 --> 00:14:48,720
 0,515 535,935 1105,1410 1410,1605 1605,1895
-twoils within within a relation.|
+tuples, within within a relation.|
 |
 
 552
 00:14:50,420 --> 00:14:51,400
 0,245 245,395 395,605 605,815 815,980
 So an simple example like
-举个简单的例子，我们要计算学生的数量。那么，如果登录以at CS结尾，您是否有at CS电子邮件地址？
+举个简单的例子，
 
 553
 00:14:51,400 --> 00:14:52,135
 0,225 225,450 450,555 555,645 645,735
-this say we want to
+this,| say we want to
+|比如我们想要，
 
 554
 00:14:52,135 --> 00:14:53,605
 0,245 655,900 900,1020 1020,1260 1260,1470
-get for the students, we
+get,| for the students, we
+|对于学生，我们要计算学生的数量，
 
 555
 00:14:53,605 --> 00:14:55,405
@@ -3124,64 +3151,72 @@ want to count the number
 556
 00:14:55,405 --> 00:14:56,200
 0,150 150,360 360,555 555,675 675,795
-of students. So have a
+of students,| so have a
+|如果 login 以 @cs 结尾，
 
 557
 00:14:56,200 --> 00:15:00,145
 0,500 970,1370 1390,1790 2410,3050 3640,3945
-login where the login ends
+login, where the login ends
 
 558
 00:15:00,145 --> 00:15:01,315
 0,180 180,390 390,815 895,1110 1110,1170
-with at CS do you
+with {@cs -},| do you
+|是否有 @cs 电子邮件地址。
 
 559
 00:15:01,315 --> 00:15:03,010
 0,75 75,165 165,390 390,845 1375,1695
-have an at CS email
+have an {@cs -} email
 
 560
 00:15:03,010 --> 00:15:03,900
 0,320
-address?|
+address.|
 |
 
 561
 00:15:03,900 --> 00:15:05,040
 0,180 180,390 390,705 705,990 990,1140
 And so we just put
-所以我们把Count函数放在这里，EM，然后放在它里面，实际上对Count没有影响，但我们计算登录，然后我们有我们的where调用，指定哪些twoil应该符合条件。
+所以我们把 COUNT 函数放在这里，
 
 562
 00:15:05,040 --> 00:15:06,680
 0,120 120,300 300,570 570,920 1240,1640
-the count function here, EM,
+the count function here, {}|
+|
 
 563
 00:15:07,210 --> 00:15:08,115
 0,245 245,455 455,695 695,785 785,905
-and then inside of it
+and then inside of it,
+然后放在它里面，实际上对 COUNT 没有影响，
 
 564
 00:15:08,115 --> 00:15:09,345
 0,150 150,375 375,645 645,960 960,1230
-actually doesn't matter for count,
+actually doesn't matter for COUNT,|
+|
 
 565
 00:15:09,345 --> 00:15:11,300
 0,240 240,840 840,1080 1080,1320 1320,1955
-but we're account that logins
+but we're account that logins|
+但我们计算 logins ，|
 
 566
-00:15:11,500 --> 00:15:12,090
+00:15:11,500 --> 00:15:11,890
 0,245 245,335 335,410 410,485 485,590
 and then we have our
+然后我们有 where 子句，
 
 567
-00:15:12,090 --> 00:15:14,940
+00:15:11,990 --> 00:15:14,840
 0,180 180,435 435,980 2290,2595 2595,2850
-where call specifying what twoil
+where clause| specifying what tuple
+|指定哪个 tuple 应该符合条件。
 
 568
 00:15:14,940 --> 00:15:16,080
@@ -3193,27 +3228,31 @@ should qualify.|
 00:15:16,840 --> 00:15:18,060
 0,400 450,710 710,830 830,995 995,1220
 So again, in my example
-同样，在我的示例中，我输入了LOG，您实际上不必这样做。你可以加上一个相等的星号，因为同样，它只是计算条目的数量。
+再说一次，在我的示例中，我放入了 login ，
 
 570
 00:15:18,060 --> 00:15:19,160
 0,225 225,420 420,570 570,795 795,1100
-here, I'm putting log in,
+here, I'm putting {login -},|
+|
 
 571
 00:15:19,270 --> 00:15:19,980
 0,230 230,410 410,515 515,605 605,710
 you don't actually have to
+你实际上不必这样做，
 
 572
 00:15:19,980 --> 00:15:21,290
 0,135 135,410 550,810 810,990 990,1310
-do that. You could put
+do that,| you could put
+|你可以放入一个星号，那是等同的，
 
 573
 00:15:21,400 --> 00:15:23,955
 0,305 305,610 1080,1505 1505,1780 2250,2555
-a star that's equivalent because
+a star, that's equivalent,| because
+|因为，它只是计算条目的数量。
 
 574
 00:15:23,955 --> 00:15:24,870
@@ -3229,13 +3268,14 @@ number of entries.|
 576
 00:15:26,840 --> 00:15:27,670
 0,120 120,240 240,375 375,525 525,830
-You can actually put one
-实际上你可以再放一次。也是等同的。无所谓。
+You can actually put 1,|
+你也可以放入 1 ，|
 
 577
 00:15:28,290 --> 00:15:30,230
 0,400 420,710 710,1000 1440,1700 1700,1940
-again. Also equivalent. It doesn't
+again, also equivalent, it doesn't
+也是等同的，没有关系。
 
 578
 00:15:30,230 --> 00:15:31,300
@@ -3247,41 +3287,43 @@ matter.|
 00:15:31,490 --> 00:15:32,230
 0,260 260,350 350,425 425,545 545,740
 Inside, you can really put
-在里面，你真的可以放任何东西。你可以加一加一，加一。
+在里面，你可以放任何东西，
 
 580
 00:15:32,230 --> 00:15:33,400
 0,320 640,870 870,930 930,1020 1020,1170
-anything. You can put one
+anything,| you can put {1+1+1
+|你可以放入 1+1+1 。
 
 581
 00:15:33,400 --> 00:15:34,800
 0,180 180,360 360,525 525,800
-plus one, plus one.|
+- - - -}.|
 |
 
 582
 00:15:35,000 --> 00:15:36,475
 0,350 350,700 720,1085 1085,1310 1310,1475
-And the system should be
-在这里的最后一个例子中，系统应该足够智能，能够意识到这一点。
+And the {database,system} should be
+数据库系统应该足够智能，能够意识到这一点，
 
 583
 00:15:36,475 --> 00:15:37,380
 0,165 165,285 285,450 450,630 630,905
-smart enough to realize that
+smart enough to realize that,|
+|
 
 584
 00:15:37,670 --> 00:15:39,180
 0,260 260,520 630,965 965,1205 1205,1510
-in this last example here.|
-|
+in this last example here,|
+在这里的最后一个例子中，|
 
 585
 00:15:39,820 --> 00:15:41,275
 0,195 195,495 495,750 750,1040 1150,1455
 I don't care what the
-我不关心计数内部的表达式是什么，我也不会真正做那个数学运算，因为我只关心我得到的是什么数。
+我不关心 COUNT 内部的表达式是什么，
 
 586
 00:15:41,275 --> 00:15:42,100
@@ -3291,12 +3333,14 @@ expression is inside of the
 587
 00:15:42,100 --> 00:15:43,315
 0,260 490,750 750,870 870,1080 1080,1215
-count, and I won't actually
+COUNT,| and I won't actually
+|我也不会真正做那个数学运算，
 
 588
 00:15:43,315 --> 00:15:44,545
 0,105 105,255 255,545 895,1140 1140,1230
-do that math because I
+do that math,| because I
+|因为我只关心我得到的 tuple 的数。
 
 589
 00:15:44,545 --> 00:15:46,240
@@ -3306,24 +3350,26 @@ just care about what's the
 590
 00:15:46,240 --> 00:15:47,860
 0,615 615,735 735,825 825,1070
-countils that I have.|
+{count,tuples} that I have.|
 |
 
 591
 00:15:49,310 --> 00:15:50,515
 0,245 245,320 320,425 425,620 620,1205
 You can have multiple aggregates
-一个SELECT输出中可以有多个聚合。所以现在我们要计算平均绩点和计算学生人数。同样，有了这一点，让at CS登录。
+你可以在一个 SELECT 输出中可以有多个聚合，
 
 592
 00:15:50,515 --> 00:15:51,780
 0,225 225,360 360,570 570,885 885,1265
-in a single select output.
+in a single SELECT output,|
+|
 
 593
 00:15:51,980 --> 00:15:52,690
 0,260 260,410 410,545 545,665 665,710
-So here now we're going
+so here now we're going
+所以现在我们要计算平均绩点和学生人数，
 
 594
 00:15:52,690 --> 00:15:54,690
@@ -3338,12 +3384,13 @@ and the counting of the
 596
 00:15:57,355 --> 00:15:58,890
 0,105 105,225 225,485 895,1215 1215,1535
-number of students. Again, with
+number of students,| again, with
+|同样，使用 @cs 匹配 login 。
 
 597
 00:15:59,600 --> 00:16:00,960
 0,290 290,485 485,650 650,890 890,1360
-that, have the at CS
+that, have the {@cs -}
 
 598
 00:16:01,850 --> 00:16:03,060
@@ -3355,7 +3402,7 @@ login.|
 00:16:03,060 --> 00:16:04,725
 0,150 150,285 285,560 1210,1500 1500,1665
 And you get back a
-然后，您将在两次计算的输出结果中返回单个条目或单个记录。
+然后，你将在输出结果中得到单个条目或单个记录，
 
 600
 00:16:04,725 --> 00:16:05,960
@@ -3365,7 +3412,8 @@ single entry or single record
 601
 00:16:06,370 --> 00:16:09,150
 0,335 335,605 605,940 1320,1720 2520,2780
-in the output result for
+in the output result| for
+|对于这两次计算。
 
 602
 00:16:09,150 --> 00:16:10,620
@@ -3377,12 +3425,13 @@ the two computations.|
 00:16:13,050 --> 00:16:14,170
 0,275 275,410 410,590 590,815 815,1120
 Important thing to understand though,
-需要理解的重要一点是，对于聚合，因为您正在尝试合并内部的多个二元组，以获得单个标量值，所以您不能引用任何内容。
+对于聚合，需要理解的重要一点是，
 
 604
 00:16:14,250 --> 00:16:15,605
 0,260 260,755 755,1010 1010,1205 1205,1355
-with aggregation, since you're trying
+with aggregation,| since you're trying
+|虽然你尝试合并多个 tuple 到单个标量值，
 
 605
 00:16:15,605 --> 00:16:17,540
@@ -3392,7 +3441,7 @@ to coalesce down, you know,
 606
 00:16:17,540 --> 00:16:19,295
 0,240 240,770 970,1335 1335,1530 1530,1755
-multiple twoples within, you know,
+multiple tuples within, you know,
 
 607
 00:16:19,295 --> 00:16:20,465
@@ -3402,14 +3451,14 @@ to to a single scalar
 608
 00:16:20,465 --> 00:16:23,050
 0,245 895,1215 1215,1590 1590,1895 2185,2585
-value, you can't reference anything.|
-|
+value,| you can't reference anything
+|但是你不能引用 SELECT 输出的任何内容，
 
 609
 00:16:23,760 --> 00:16:25,965
 0,240 240,560 940,1335 1335,1730 1930,2205
-In the select output that
-在不是的SELECT输出中，这不是聚合的一部分。
+in the SELECT output,| that
+|那不是聚合的一部分。
 
 610
 00:16:25,965 --> 00:16:27,720
@@ -3426,17 +3475,19 @@ the aggregate.|
 00:16:28,930 --> 00:16:29,760
 0,245 245,365 365,560 560,665 665,830
 So I can't do something
-所以我不能做这样的事。我不能选择平均GPA，在你加入了学生表，注册表，然后还吐出了学生表的课程ID。
+所以我不能做这样的事，
 
 613
 00:16:29,760 --> 00:16:30,680
 0,150 150,300 300,450 450,675 675,920
-like this. I can't go
+like this,| I can't go
+|我不能 SELECT AVG(s.gpa) ，
 
 614
 00:16:30,820 --> 00:16:33,150
 0,275 275,380 380,530 530,1090 2040,2330
-select the average gpa after
+SELECT the average gpa,| after
+|在你 JOIN student 表和 enrolled 表之后，
 
 615
 00:16:33,150 --> 00:16:34,170
@@ -3446,7 +3497,8 @@ you join the student table,
 616
 00:16:34,170 --> 00:16:35,760
 0,150 150,435 435,710 1060,1335 1335,1590
-the enrolled table, and then
+the enrolled table,| and then
+|然后还获取 enrolled 表的 cid ，
 
 617
 00:16:35,760 --> 00:16:37,995
@@ -3456,134 +3508,139 @@ also spit out the the
 618
 00:16:37,995 --> 00:16:40,035
 0,165 165,455 775,1035 1035,1295 1735,2040
-course ID of the roll
+course id of the enrolled
 
 619
 00:16:40,035 --> 00:16:40,980
 0,305
-table.|
-|
+table,
 
 620
 00:16:41,330 --> 00:16:42,480
 0,400
-Right.|
-正确的。|
+right,|
+|
 
 621
 00:16:42,480 --> 00:16:43,395
 0,135 135,240 240,360 360,570 570,915
-Because this is not defined,
-因为这没有定义，所以这没有任何意义。
+because this is not defined,
+因为这没有定义，这没有任何意义，
 
 622
 00:16:43,395 --> 00:16:44,780
 0,270 270,665 685,930 930,1080 1080,1385
-this doesn't make any sense.|
-|
+this doesn't make any sense,
 
 623
 00:16:45,580 --> 00:16:48,120
 0,400 630,950 950,1130 1130,1510 2250,2540
-Right there, there isn't you.
-就在那里，那里没有你。你排成多排，你你在浓缩它，向下，以平均水平。此上下文中的课程ID是什么？
+right,| there, there isn't,| you,
+|这里没有，|你使用多行，
 
 624
 00:16:48,120 --> 00:16:49,755
 0,240 240,420 420,705 705,1280 1300,1635
-You're taking multiple rows, you
+you're taking multiple rows,| you
+|你[压缩]它，以获得平均值，
 
 625
 00:16:49,755 --> 00:16:51,705
 0,425 505,1020 1020,1110 1110,1680 1680,1950
-you're condensing it, downing down,
+you're condensing it {down\,,closing,it} down,
 
 626
 00:16:51,705 --> 00:16:53,330
 0,450 450,630 630,780 780,1025 1225,1625
-collapsing down for the average.
+collapsing down for the average,|
+|
 
 627
 00:16:53,800 --> 00:16:54,735
 0,260 260,380 380,500 500,650 650,935
-What is the course ID
+what is the course id
+在这个上下文中的 cid 是什么，
 
 628
 00:16:54,735 --> 00:16:56,200
 0,255 255,390 390,665
-in this context?|
-|
+in this context,
 
 629
 00:16:56,600 --> 00:16:58,240
 0,400 450,755 755,1000
-Right. It's nothing.|
-正确的。那算不了什么。|
+right,| it's nothing.|
+|它什么都不是。|
 
 630
 00:16:58,830 --> 00:16:59,900
 0,230 230,305 305,550 690,935 935,1070
-So if you, in this
-所以，如果你，在这个例子中，你看这个，你真正想做的是你试图得到每个课程ID，得到平均GPA。
+So, if you, in this
+所以，在这个例子中，
 
 631
 00:16:59,900 --> 00:17:01,790
 0,180 180,420 420,770 1570,1815 1815,1890
-case here, you sort of
+case here,| you sort of
+|你看这个，
 
 632
 00:17:01,790 --> 00:17:02,255
 0,60 60,120 120,210 210,315 315,465
-look at this, what you're
+look at this,| what you're
+|你真正想做的是，
 
 633
 00:17:02,255 --> 00:17:03,040
 0,120 120,285 285,390 390,510 510,785
-really trying to do is
+really trying to do is,|
+|
 
 634
 00:17:03,120 --> 00:17:03,920
 0,305 305,410 410,515 515,650 650,800
 you're trying to get for
+你试图得到每个 cid ，得到 gpa 平均值，
 
 635
 00:17:03,920 --> 00:17:05,240
 0,195 195,420 420,710 880,1170 1170,1320
-each course ID, get the
+each course id, get the
 
 636
 00:17:05,240 --> 00:17:06,740
 0,210 210,800
-average gpa.|
+average gpa,|
 |
 
 637
 00:17:07,890 --> 00:17:08,555
 0,245 245,350 350,455 455,560 560,665
-So what you need to
-因此，你需要做的是把第一组条款称为什么。
+so what you need to
+所以，你需要做的是 GROUP BY 子句，
 
 638
 00:17:08,555 --> 00:17:09,575
 0,245 415,690 690,825 825,930 930,1020
-do is what to call
+do is, what to call
 
 639
 00:17:09,575 --> 00:17:11,240
 0,120 120,270 270,465 465,815
-a group I clause.|
+a GROUP BY clause,|
 |
 
 640
 00:17:11,240 --> 00:17:13,670
 0,380 430,765 765,930 930,1250 2050,2430
-Where you're going to project
-在这里，您将根据GROUP BY子句中的任何参数将两个油投影到存储桶中。
+where you're going to project
+你将 tuple 投影到桶中，
 
 641
 00:17:13,670 --> 00:17:15,710
 0,435 435,740 1030,1560 1560,1815 1815,2040
-twoils into buckets based on
+tuples into buckets,| based on
+|根据 GROUP BY 子句中的参数，
 
 642
 00:17:15,710 --> 00:17:17,360
@@ -3593,14 +3650,14 @@ whatever the parameters are in
 643
 00:17:17,360 --> 00:17:18,820
 0,120 120,240 240,390 390,710
-the group by clause.|
+the GROUP BY clause,|
 |
 
 644
 00:17:18,820 --> 00:17:20,340
 0,150 150,345 345,795 795,960 960,1520
-And then compute the aggregate
-然后计算每个单独桶的总和。
+and then compute the aggregate
+然后计算每个单独桶的聚合。
 
 645
 00:17:20,540 --> 00:17:22,580
@@ -3612,42 +3669,46 @@ on each individual bucket.|
 00:17:23,030 --> 00:17:23,575
 0,230 230,305 305,395 395,470 470,545
 So you sort of think
-所以你大概是这样想的。如果我首先在已注册表格和学生表格之间进行联接，我就有了基于联接的所有可能的组合，然后我将根据课程ID将它们分开，因为这就是我在我的组I子句中所做的。
+所以你大概是这样想的，
 
 647
 00:17:23,575 --> 00:17:24,310
 0,90 90,210 210,405 405,585 585,735
-it like this. If I
+it like this,| if I
+|如果我首先在 enrolled 表和 student 表之间进行 JOIN ，
 
 648
 00:17:24,310 --> 00:17:26,190
 0,240 240,590 730,1130 1300,1590 1590,1880
-first do the the join
+first do the the JOIN
 
 649
 00:17:26,720 --> 00:17:27,685
 0,260 260,350 350,635 635,815 815,965
-between the enrolllled table and
+between the enrolled table and
 
 650
 00:17:27,685 --> 00:17:29,200
 0,120 120,315 315,635 1045,1320 1320,1515
-the student table, I have
+the student table,| I have
+|我就有了基于 JOIN 的所有可能的组合，
 
 651
 00:17:29,200 --> 00:17:30,760
 0,270 270,620 970,1215 1215,1350 1350,1560
-all the have all possible
+all the, {I,have} all possible
 
 652
 00:17:30,760 --> 00:17:31,950
 0,435 435,675 675,810 810,930 930,1190
-combinations based on the join
+combinations based on the JOIN|
+|
 
 653
 00:17:32,510 --> 00:17:33,580
 0,260 260,410 410,680 680,980 980,1070
 and then now I'm going
+然后我将根据 cid 将它们分开，
 
 654
 00:17:33,580 --> 00:17:34,525
@@ -3657,29 +3718,31 @@ to split them up based
 655
 00:17:34,525 --> 00:17:35,470
 0,150 150,315 315,510 510,675 675,945
-on the the course ID
+on the the course id,|
+|
 
 656
 00:17:35,470 --> 00:17:36,355
 0,225 225,435 435,510 510,615 615,885
 because that's what I have
+因为这就在我的 GROUP BY 子句中，
 
 657
 00:17:36,355 --> 00:17:38,125
 0,330 330,665 1195,1455 1455,1605 1605,1770
-in my in my group
+in my, in my GROUP
 
 658
 00:17:38,125 --> 00:17:39,300
 0,180 180,515
-I clause.|
+BY clause,|
 |
 
 659
 00:17:39,370 --> 00:17:40,680
 0,275 275,470 470,755 755,1010 1010,1310
-And then now I compute
-然后现在我计算平均绩点，每个桶，每个桶。
+and then now I compute
+然后现在我对每个桶计算平均绩点。
 
 660
 00:17:40,680 --> 00:17:43,010
@@ -3700,8 +3763,8 @@ those buckets.|
 663
 00:17:46,730 --> 00:17:47,940
 0,260 260,520
-Makes sense.|
-合乎道理。|
+Makes sense?|
+能理解吗？|
 
 664
 00:17:50,660 --> 00:17:51,475
