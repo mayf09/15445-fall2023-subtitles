@@ -10970,60 +10970,56 @@ row numbers will not.|
 1934
 00:54:07,240 --> 00:54:08,415
 0,245 245,380 380,575 575,845 845,1175
-So yeah, so you're proposing
-所以是的，所以你打算做什么？一群随机的人？
+So, yeah, so you're proposing
+所以，是的，你打算做什么，
 
 1935
 00:54:08,415 --> 00:54:09,525
 0,150 150,270 270,545 715,990 990,1110
-to do what? Bunch of
+to do what,| bunch of
+|rank 分组，
 
 1936
 00:54:09,525 --> 00:54:11,540
 0,165 165,485
-random group?|
+rank group,|
 |
 
 1937
 00:54:11,940 --> 00:54:14,080
 0,400
-Where?|
-哪里?|
+where,|
+哪里，|
 
 1938
 00:54:15,760 --> 00:54:16,785
 0,275 275,395 395,545 545,800 800,1025
-And the inner query, or
-内心的质疑，还是什么？抱歉的。
+at the inner query, or
+在内部查询，还是什么，抱歉。
 
 1939
 00:54:16,785 --> 00:54:18,100
 0,255 255,605
-what? Sorry.|
+what, sorry.|
 |
 
 1940
 00:54:19,070 --> 00:54:20,545
 0,260 260,520 540,860 860,1180 1230,1475
-So basically like try, is
-因此，基本上像Try一样，是否可以使用组BU重新创建相同的查询？
 
 1941
 00:54:20,545 --> 00:54:22,015
 0,120 120,315 315,510 510,1055 1105,1470
-it possible to recreate same
 
 1942
 00:54:22,015 --> 00:54:23,840
 0,395 535,870 870,1095 1095,1385
-query using group bu?|
-|
 
 1943
 00:54:24,300 --> 00:54:25,055
 0,260 260,395 395,530 530,650 650,755
-The question is, is it
-问题是，是否可以使用GROUP BY重新创建相同的查询？
+The question is,| is it
+问题是，|是否可以使用 GROUP BY 重新创建相同的查询，
 
 1944
 00:54:25,055 --> 00:54:25,730
@@ -11033,26 +11029,26 @@ possible to recreate the same
 1945
 00:54:25,730 --> 00:54:28,260
 0,210 210,435 435,615 615,890
-query using group by?|
+query using GROUP BY,|
 |
 
 1946
 00:54:29,200 --> 00:54:30,180
 0,275 275,575 575,755 755,920 920,980
-You wouldn't. You wouldn't be
-你不会的。你不会拿到军衔的。
+you wouldn't, you wouldn't be
+你不会得到 rank ，
 
 1947
 00:54:30,180 --> 00:54:30,830
 0,75 75,150 150,225 225,360 360,650
-able to get the rank.|
+able to get the rank,|
 |
 
 1948
 00:54:32,260 --> 00:54:32,895
 0,245 245,335 335,500 500,560 560,635
-Because you wouldn't be able
-因为你不能得到我的排序位置是什么？没有这方面的概念。
+because you wouldn't be able
+因为你不能得到我的排序位置是什么，
 
 1949
 00:54:32,895 --> 00:54:34,065
@@ -11062,152 +11058,166 @@ to get what what is
 1950
 00:54:34,065 --> 00:54:35,355
 0,150 150,390 390,675 675,900 900,1290
-my sort position? There isn't
+my sort position,| there isn't
+|在 SQL 中没有这方面的概念，
 
 1951
 00:54:35,355 --> 00:54:37,400
 0,300 300,600 600,870 870,1145 1645,2045
-a concept of that in.|
-|
+a concept of that in,
 
 1952
 00:54:38,440 --> 00:54:40,500
 0,400 930,1480
-In sql.|
-在SQL中。|
+in SQL,
 
 1953
 00:54:41,240 --> 00:54:43,675
 0,400 630,1030 1410,1810 1920,2195 2195,2435
-Right. So row number is
-正确的。所以行号很有趣，因为它很有趣。
+right,| so {ROW_NUMBER -} is
+|所以 ROW_NUMBER 很有趣，因为它，
 
 1954
 00:54:43,675 --> 00:54:45,660
 0,300 300,570 570,765 765,1025
-interesting because it is.|
+interesting, because it is,|
 |
 
 1955
 00:54:46,620 --> 00:54:47,930
 0,270 270,360 360,600 600,945 945,1310
-Let's do that row number.|
-让我们来做那个行号吧。|
+let's do that {ROW_NUMBER -},|
+让我们来做 ROW_NUMBER ，|
 
 1956
 00:54:56,260 --> 00:54:57,625
 0,210 210,330 330,710 970,1245 1245,1365
-Make the pointer switch a
-使指针切换为行号、行号。
+make the point, switch a
+换个地方，换成 ROW_NUMBER ，
 
 1957
 00:54:57,625 --> 00:54:59,780
 0,120 120,375 375,755 1045,1445
-row number, row number.|
-|
+{ROW_NUMBER -},| {ROW_NUMBER -},|
+|ROW_NUMBER ，|
 
 1958
 00:55:00,990 --> 00:55:02,075
 0,245 245,365 365,515 515,770 770,1085
-So row number is interesting
-所以行号很有趣，因为它叫它排名，但相信我，它是行号。
+so {ROW_NUMBER -} is interesting,
+所以 ROW_NUMBER 很有趣，因为，
 
 1959
 00:55:02,075 --> 00:55:04,145
 0,335 985,1620 1620,1740 1740,1890 1890,2070
-because it's calling it rank,
+because,| it's calling it rank,
+|它叫做 rank ，但相信我，它是 row_number ，
 
 1960
 00:55:04,145 --> 00:55:05,210
 0,305 445,720 720,825 825,960 960,1065
-but trust me, it's row
+but trust me, it's {row_number
 
 1961
 00:55:05,210 --> 00:55:05,960
 0,260
-number.|
+-},|
 |
 
 1962
 00:55:06,090 --> 00:55:08,405
 0,275 275,550 750,1150 1740,2105 2105,2315
-It because again it's bag
-这是因为它又是袋子代数。在这些关系中没有排序顺序，这是一个奇怪的概念。我们对编程的思考是这样的：你在那里是什么意思？没有排序，因为我们习惯于编程，在X86下，有排序，内存操作是如何发生的，这里没有任何这些。任何东西都可以是无序的。所以如果没有窗口函数，你就不能得到行号，因为没有办法说我在这个位置，在我的位置，我的输出中，在哪里。
+it because, again it's bag
+这是因为它是袋子代数，
 
 1963
 00:55:08,405 --> 00:55:09,845
 0,525 525,750 750,945 945,1200 1200,1440
-algebra. There is no sort
+algebra,| there is no sort
+|在这些关系中没有排序顺序，
 
 1964
 00:55:09,845 --> 00:55:11,020
 0,255 255,510 510,675 675,855 855,1175
-order in in these relations
+order in in these relations|
+|
 
 1965
 00:55:11,190 --> 00:55:11,885
 0,230 230,365 365,455 455,575 575,695
 and that's a sort of
+这是一个奇怪的概念，
 
 1966
 00:55:11,885 --> 00:55:13,340
 0,195 195,515 925,1185 1185,1305 1305,1455
-weird concept. We think about
+weird concept,| we think about
+|我们对编程的思考是，
 
 1967
 00:55:13,340 --> 00:55:14,180
 0,285 285,600 600,750 750,795 795,840
-programming like what do you
+programming like,| what do you
+|你在那里是什么意思，
 
 1968
 00:55:14,180 --> 00:55:15,400
 0,90 90,300 300,570 570,720 720,1220
-mean there? There's not ordering
+mean there,| there's not ordering,|
+|这里没有排序，|
 
 1969
 00:55:15,600 --> 00:55:16,310
 0,245 245,335 335,470 470,575 575,710
 like because we're used to
+因为我们习惯于在 x86 下编程，
 
 1970
 00:55:16,310 --> 00:55:17,720
 0,255 255,570 570,780 780,945 945,1410
-programming and under X 86
+programming and under {x86 -}|
+|
 
 1971
 00:55:17,720 --> 00:55:20,015
 0,210 210,470 1450,1905 1905,2055 2055,2295
-where there ordering, how memory
+where there ordering,| how memory
+那里有排序，|内存操作是如何发生的，
 
 1972
 00:55:20,015 --> 00:55:21,890
 0,360 360,755 1225,1485 1485,1740 1740,1875
-operations occur, there isn't any
+operations occur,| there isn't any
+|这里没有任何这些，
 
 1973
 00:55:21,890 --> 00:55:22,730
 0,135 135,270 270,525 525,750 750,840
-of that here. Everything can
+of that here,| Everything can
+|任何东西都可以是无序的，
 
 1974
 00:55:22,730 --> 00:55:25,895
 0,90 90,650 1000,1400 2590,2940 2940,3165
-be unordered. So without a
+be unordered,| so without a
+|所以如果没有窗口函数，你就不能得到 row_number ，
 
 1975
 00:55:25,895 --> 00:55:27,170
 0,210 210,510 510,795 795,1155 1155,1275
-window function you can't get
+window function, you can't get
 
 1976
 00:55:27,170 --> 00:55:28,220
 0,135 135,315 315,600 600,855 855,1050
-a row number because there's
+a {row_number -},| because there's
+|因为没有办法说，
 
 1977
 00:55:28,220 --> 00:55:29,540
 0,195 195,530 640,900 900,1095 1095,1320
-no way to say where
+no way to say,| where
+|我在我的输出中的这个位置，
 
 1978
 00:55:29,540 --> 00:55:31,085
@@ -11222,53 +11232,53 @@ position, in my position, my
 1980
 00:55:32,630 --> 00:55:33,280
 0,350
-output.|
+output,|
 |
 
 1981
 00:55:33,610 --> 00:55:34,920
 0,400
-Um.|
-恩。|
 
 1982
 00:55:35,100 --> 00:55:36,620
 0,590 590,890 890,1145 1145,1325 1325,1520
-Oracle does have row number.
-Oracle确实有行号。他们对你隐瞒了这件事。你可以得到它，但就像它是。
+Oracle does have {row_number -},|
+Oracle 确实有 row_number ，|
 
 1983
 00:55:36,620 --> 00:55:37,445
 0,195 195,345 345,480 480,600 600,825
-They hide it from you.
+they hide it from you,|
+他们对你隐藏了，|
 
 1984
 00:55:37,445 --> 00:55:38,285
 0,255 255,435 435,585 585,720 720,840
-You can get it, but
+you can't get it, but
+你不能得到它，但它只是 Oracle 的事情。
 
 1985
 00:55:38,285 --> 00:55:39,460
 0,150 150,545
-like it's.|
-|
+like it's,
 
 1986
 00:55:39,980 --> 00:55:41,040
 0,320 320,410 410,500 500,785 785,1060
-That's just an Oracle thing.|
-这只是甲骨文的事情。|
+that's just an Oracle thing.|
+|
 
 1987
 00:55:42,710 --> 00:55:44,130
 0,320 320,635 635,905 905,1100 1100,1420
 So, so the window functions
-因此，窗函数允许您对平均值和所有其他聚合进行条件调整。它允许你以一种你不能以其他方式做到的方式来获得事物的顺序。
+所以，窗函数允许你，
 
 1988
 00:55:44,210 --> 00:55:45,715
 0,320 320,560 560,880 960,1295 1295,1505
-allow you to condition doing
+allow you to| condition doing
+|对平均值和所有其他聚合进行条件调整，
 
 1989
 00:55:45,715 --> 00:55:46,930
@@ -11278,7 +11288,8 @@ the averages and all the
 1990
 00:55:46,930 --> 00:55:48,415
 0,105 105,590 700,960 960,1170 1170,1485
-other aggregates. It allows you
+other aggregates,| it allows you
+|它允许你获得事物的顺序，
 
 1991
 00:55:48,415 --> 00:55:50,530
@@ -11288,7 +11299,8 @@ to get the order of
 1992
 00:55:50,530 --> 00:55:51,550
 0,320 400,645 645,750 750,900 900,1020
-things in a way that
+things,| in a way that
+|以一种你不能以其他方式做到的方式。
 
 1993
 00:55:51,550 --> 00:55:52,150
@@ -11304,33 +11316,38 @@ to do it otherwise.|
 1995
 00:56:03,310 --> 00:56:04,230
 0,245 245,350 350,500 500,665 665,920
-So I should showed nessa
-因此，我应该在前面展示Nessa的查询，但它们只是经过了更多的细节。Nessa查询，嵌套查询，一个非常强大的概念，有时称为子查询，它允许您在查询内有一个查询在查询内，在总体调用查询内有多个查询。
+So I should showed nested
+我应该在前面展示了嵌套查询，
 
 1996
 00:56:04,230 --> 00:56:05,190
 0,300 300,510 510,720 720,855 855,960
-queries before, but they just
+queries before,| but there just
+|但只是展示更多的细节。
 
 1997
 00:56:05,190 --> 00:56:06,410
 0,120 120,315 315,600 600,885 885,1220
-go through more more detail.
+go through more, more detail.|
+|
 
 1998
 00:56:06,730 --> 00:56:08,085
 0,290 290,455 455,740 740,1030 1080,1355
-So a nessa query, nest
+So a nested query, nested
+所以嵌套查询是一个非常强大的概念，
 
 1999
 00:56:08,085 --> 00:56:09,200
 0,210 210,315 315,495 495,765 765,1115
-queries, a really powerful concept,
+queries, a really powerful concept,|
+|
 
 2000
 00:56:09,700 --> 00:56:11,400
 0,350 350,605 605,785 785,1240 1380,1700
-sometimes called sub queries, where
+sometimes called sub queries,| where
+有时称为子查询，|它允许你在查询内有一个查询，
 
 2001
 00:56:11,400 --> 00:56:12,290
@@ -11345,39 +11362,44 @@ a query inside of a
 2003
 00:56:14,115 --> 00:56:15,480
 0,240 240,575 985,1230 1230,1305 1305,1365
-query inside inside of a
+query| inside, inside of a
+|在查询内，
 
 2004
 00:56:15,480 --> 00:56:16,620
 0,210 210,405 405,540 540,780 780,1140
-query, you have multiple queries
+query,| you have multiple queries
+|你可以在总体调用查询内有多个查询，
 
 2005
 00:56:16,620 --> 00:56:18,620
 0,165 165,440 670,1290 1290,1500 1500,2000
-inside of overarching calling queries.|
+inside of overarching calling queries,|
 |
 
 2006
 00:56:19,220 --> 00:56:19,970
 0,105 105,225 225,345 345,540 540,750
-And you would need this
-你需要这个，因为你想要表达某些计算。如果没有这些嵌套查询，就很难表达某些计算，除非取出数据，进行一些计算，然后将其放回数据库系统中。因此，它允许我们把这些东西放在一起，创造出更复杂的逻辑，而不是其他方式。
+and you would need this,|
+你需要这个，|
 
 2007
 00:56:19,970 --> 00:56:20,345
 0,135 135,210 210,270 270,330 330,375
 because you want to be
+因为你想要表达某些计算，
 
 2008
 00:56:20,345 --> 00:56:22,000
 0,90 90,365 445,795 795,1065 1065,1655
-able to express certain computations.
+able to express certain computations,|
+|
 
 2009
 00:56:22,890 --> 00:56:23,690
 0,260 260,350 350,500 500,665 665,800
-It would be difficult to
+it would be difficult to
+如果没有这些嵌套查询，就很难表达某些计算，
 
 2010
 00:56:23,690 --> 00:56:25,025
@@ -11387,22 +11409,26 @@ express certain computations without these
 2011
 00:56:25,025 --> 00:56:26,765
 0,285 285,695 955,1320 1320,1590 1590,1740
-nested queries without taking the
+nested queries,| without taking the
+|除非取出数据，进行一些计算，
 
 2012
 00:56:26,765 --> 00:56:28,130
 0,150 150,455 595,870 870,1005 1005,1365
-data out, doing some computation
+data out, doing some computation|
+|
 
 2013
 00:56:28,130 --> 00:56:28,925
 0,210 210,315 315,450 450,570 570,795
 and then putting it back
+然后将其放回数据库系统中，
 
 2014
 00:56:28,925 --> 00:56:30,380
 0,255 255,375 375,570 570,905 1225,1455
-in the database system. So
+in the database system,| so
+|所以，它允许我们把这些东西放在一起，
 
 2015
 00:56:30,380 --> 00:56:31,040
@@ -11412,12 +11438,14 @@ it allows us to put
 2016
 00:56:31,040 --> 00:56:32,800
 0,135 135,330 330,615 615,980 1360,1760
-these things together to create
+these things together| to create
+|创造出更复杂的逻辑，
 
 2017
 00:56:33,150 --> 00:56:35,710
 0,400 510,910 1320,1720 2040,2300 2300,2560
-more complex logic than we
+more complex logic,| than we
+|而不是其他方式。
 
 2018
 00:56:35,760 --> 00:56:36,470
@@ -11434,7 +11462,7 @@ otherwise do.|
 00:56:37,800 --> 00:56:38,840
 0,260 260,395 395,590 590,890 890,1040
 And these inner queries can
-这些内部查询几乎可以出现在SELECT磁带中的任何地方，但实际上，像SELECT输出中的任何查询，FROM子句，WHERE子句，都可以放入UPDATE查询和删除查询，对吧。
+这些内部查询几乎可以出现在 SELECT []中的任何地方，
 
 2021
 00:56:38,840 --> 00:56:40,580
@@ -11444,44 +11472,47 @@ appear almost anywhere inside of
 2022
 00:56:40,580 --> 00:56:42,005
 0,230 370,675 675,840 840,1100 1150,1425
-a select tape, but actually
+a SELECT [],| but actually
+|实际上，可以出现在任何查询，
 
 2023
 00:56:42,005 --> 00:56:43,520
 0,275 295,600 600,935 1165,1425 1425,1515
-really any query like you
+really any query,| like you
+|比如，你可以在 SELECT 输出， FROM 子句， WHERE 子句，
 
 2024
 00:56:43,520 --> 00:56:44,255
 0,75 75,195 195,315 315,450 450,735
-can have in the select
+can have in the SELECT
 
 2025
 00:56:44,255 --> 00:56:45,350
 0,285 285,450 450,630 630,900 900,1095
-output, the from clause, the
+output, the FROM clause, the
 
 2026
 00:56:45,350 --> 00:56:46,700
 0,165 165,500 880,1140 1140,1245 1245,1350
-where clause, you can put
+WHERE clause,| you can put
+|你可以放入 UPDATE 查询和 DELETE 查询，
 
 2027
 00:56:46,700 --> 00:56:47,930
 0,195 195,435 435,825 825,1035 1035,1230
-an update queries and delete
+an UPDATE queries and DELETE
 
 2028
 00:56:47,930 --> 00:56:49,720
 0,500 760,1160
-queries, right.|
+queries, right,|
 |
 
 2029
 00:56:50,390 --> 00:56:51,355
 0,290 290,425 425,545 545,740 740,965
-And they can now reference
-现在，它们可以引用您自己的查询中的所有表。这是一个非常强大的构造。
+and they can now reference
+现在，它们可以引用你自己的查询中的所有表，
 
 2030
 00:56:51,355 --> 00:56:52,495
@@ -11491,7 +11522,8 @@ all the tables within your
 2031
 00:56:52,495 --> 00:56:53,935
 0,165 165,455 925,1215 1215,1275 1275,1440
-own query. It's a very
+own query,| it's a very
+|这是一个非常强大的[构造]。
 
 2032
 00:56:53,935 --> 00:56:55,680
@@ -11503,22 +11535,24 @@ powerful construct.|
 00:56:55,680 --> 00:56:56,445
 0,210 210,285 285,495 495,690 690,765
 So the basic idea is
-所以基本的想法是这样的。在这里，我们从名称表中进行选择，然后我想要获取至少注册了一门课程的学生的姓名。所以你可以想到这一点，这是顶部的选择器。这称为外部查询。然后这个内部部分，我们称之为内部查询。
+所以基本的想法是这样的，
 
 2034
 00:56:56,445 --> 00:56:57,560
 0,135 135,285 285,540 540,825 825,1115
-something like this. So here
+something like this,| so here
+|这里，我们做 SELECT FROM student 表，
 
 2035
 00:56:57,610 --> 00:56:58,785
 0,275 275,440 440,790 810,1070 1070,1175
-we're doing select from the
+we're doing SELECT FROM the
 
 2036
 00:56:58,785 --> 00:57:00,540
 0,165 165,485 1015,1290 1290,1530 1530,1755
-name table and then I
+student table| and then I
+|然后我想要获取学生的姓名，
 
 2037
 00:57:00,540 --> 00:57:02,910
@@ -11528,7 +11562,8 @@ want to get the name
 2038
 00:57:02,910 --> 00:57:03,840
 0,120 120,240 240,530 550,810 810,930
-of a student that is
+of a student,| that is
+|他至少注册了一门课程。
 
 2039
 00:57:03,840 --> 00:57:05,100
@@ -11538,27 +11573,32 @@ at least enrolled in one
 2040
 00:57:05,100 --> 00:57:06,915
 0,320 640,1040 1360,1605 1605,1710 1710,1815
-course. So you can think
+course.| So you can think
+|所以你可以想到，
 
 2041
 00:57:06,915 --> 00:57:08,250
 0,105 105,315 315,600 600,935 1045,1335
-of this out, this select
+of,| this out, this SELECT
+|这是上面部分的 SELECT ，
 
 2042
 00:57:08,250 --> 00:57:09,090
 0,180 180,330 330,465 465,630 630,840
-der in the top part.
+[] in the top part,|
+|
 
 2043
 00:57:09,090 --> 00:57:10,100
 0,255 255,375 375,495 495,660 660,1010
-That's called the outer query.
+that's called the Outer Query,|
+称为外部查询，|
 
 2044
 00:57:10,330 --> 00:57:11,520
 0,260 260,520 570,845 845,1010 1010,1190
-And then this inner part
+and then this inner part
+然后这个内部部分，我们称之为内部查询。
 
 2045
 00:57:11,520 --> 00:57:12,150
@@ -11568,30 +11608,31 @@ here, we would call this
 2046
 00:57:12,150 --> 00:57:13,260
 0,180 180,500
-inner query.|
+Inner Query.|
 |
 
 2047
 00:57:13,670 --> 00:57:14,820
 0,400
-So.|
-所以。|
+So,
+所以，众所周知，数据库系统很难优化嵌套查询，
 
 2048
 00:57:14,950 --> 00:57:17,520
 0,485 485,860 860,1150 1410,2260 2280,2570
-Ner queries are notoriously difficult
-众所周知，数据库系统很难优化NER查询，因为您认为执行此查询最愚蠢的方法是，对于我的学生表中的每个TIL，重新运行这个程序。
+nested queries are notoriously difficult
 
 2049
 00:57:17,520 --> 00:57:18,860
 0,150 150,375 375,675 675,930 930,1340
-for database systems to optimize,
+for database systems to optimize,|
+|
 
 2050
 00:57:21,070 --> 00:57:22,005
 0,260 260,380 380,530 530,725 725,935
 because you think about the
+因为你认为执行此查询最愚蠢的方法是，
 
 2051
 00:57:22,005 --> 00:57:22,965
@@ -11601,68 +11642,71 @@ stupidest way to execute this
 2052
 00:57:22,965 --> 00:57:24,390
 0,210 210,375 375,635 955,1215 1215,1425
-query would be for every
+query would be,| for every
+|对于我的 student 表中的每个 tuple ，重新运行这个东西，
 
 2053
 00:57:24,390 --> 00:57:25,920
 0,300 300,705 705,900 900,1190 1210,1530
-single til in my student
+single tuple in my student
 
 2054
 00:57:25,920 --> 00:57:28,220
 0,320 760,1275 1275,1530 1530,1850
-table, rerun this thing.|
+table, rerun this thing,|
 |
 
 2055
 00:57:29,040 --> 00:57:29,795
 0,260 260,380 380,500 500,605 605,755
-Get the list of all
-获取所有学生ID的列表，然后计算int。
+get the list of all
+获取所有 sid 的列表，然后计算 IN ，
 
 2056
 00:57:29,795 --> 00:57:31,265
 0,180 180,315 315,845 865,1170 1170,1470
-the student IDs, then compute
+the student ids, then compute
 
 2057
 00:57:31,265 --> 00:57:32,220
 0,120 120,365
-the int.|
+the IN,|
 |
 
 2058
 00:57:32,510 --> 00:57:33,595
 0,245 245,365 365,500 500,760 810,1085
-The way to really execute
-真正执行此操作的方法是，这只是本例的连接。
+the way to really execute
+真正执行此操作的方法是，
 
 2059
 00:57:33,595 --> 00:57:34,435
 0,150 150,390 390,615 615,720 720,840
-this is this is just
+this is,| this is just
+|这只是 JOIN ，对于这里的例子，
 
 2060
 00:57:34,435 --> 00:57:35,640
 0,165 165,455 595,840 840,945 945,1205
-a join for this one
+a JOIN, for this one
 
 2061
 00:57:35,810 --> 00:57:38,140
 0,335 335,670
-example here.|
+example here,|
 |
 
 2062
 00:57:38,140 --> 00:57:39,145
 0,255 255,450 450,600 600,780 780,1005
-This one's easy to do
-这个很容易做，因为，呃，你知道，你正在寻找这个，这个东西来匹配这里的东西。因此，您可以将其转换为质量谓词。当内部查询和adQuery之间存在非平凡的关系时，事情会变得更加复杂。我们不会我们会，我们会在本学期晚些时候讨论这个，但是。
+this one's easy to do,|
+这个很容易做，|
 
 2063
 00:57:39,145 --> 00:57:41,290
 0,365 475,875 1705,1935 1935,2010 2010,2145
-because, eh, you know, you're
+because, {} you know, you're
+因为，你在寻找这个东西来匹配这里的东西，
 
 2064
 00:57:41,290 --> 00:57:42,310
@@ -11672,7 +11716,8 @@ looking for this, this thing
 2065
 00:57:42,310 --> 00:57:43,825
 0,150 150,330 330,615 615,980 1270,1515
-to match something here. So
+to match something here,| so
+|所以，你可以将其转换为[质量]谓词，
 
 2066
 00:57:43,825 --> 00:57:45,025
@@ -11682,27 +11727,31 @@ you can do convert that
 2067
 00:57:45,025 --> 00:57:46,660
 0,105 105,210 210,435 435,995 1315,1635
-to a quality predicate. Things
+to a [quality] predicate,| things
+|事情会变得更加复杂，
 
 2068
 00:57:46,660 --> 00:57:48,390
 0,180 180,330 330,620 850,1155 1155,1730
-get more complicated when there's
+get more complicated,| when there's
+|当内部查询和外部查询之间存在非平凡的关系时，
 
 2069
 00:57:48,950 --> 00:57:50,245
 0,350 350,680 680,935 935,1190 1190,1295
-non trivial relations between the
+{non-trivial -} relations between the
 
 2070
 00:57:50,245 --> 00:57:51,180
 0,135 135,315 315,405 405,465 465,935
-inner query and the adquery.
+inner query and the {outer,query},|
+|
 
 2071
 00:57:51,380 --> 00:57:53,095
 0,260 260,610 840,1220 1220,1520 1520,1715
-We won't we'll, we'll come
+we won't, we'll, we'll come
+我们会在本学期晚些时候讨论这个，
 
 2072
 00:57:53,095 --> 00:57:53,695
@@ -11712,19 +11761,19 @@ into that later in the
 2073
 00:57:53,695 --> 00:57:54,860
 0,270 270,635
-semester, but.|
-|
+semester,| but,
+|但是，这是数据库系统中最难的部分，
 
 2074
 00:57:55,420 --> 00:57:58,430
 0,275 275,425 425,700 2460,2735 2735,3010
-This is something is the
-这是数据库系统中最难的，唯一正确嵌套查询的系统是名为umbra的系统，这是德国的一个学术系统。Dee b现在做得很正确，原因有两个。一是因为他们抄袭了什么。
+this is something, {this,is} the
 
 2075
 00:57:58,690 --> 00:58:00,810
 0,490 600,875 875,1085 1085,1420 1800,2120
-hardest of database systems and
+{hardest,part} of database systems| and
+|唯一正确嵌套查询的系统是名为 Umbra 的系统，
 
 2076
 00:58:00,810 --> 00:58:02,060
@@ -11734,12 +11783,13 @@ the only system that does
 2077
 00:58:02,500 --> 00:58:04,290
 0,275 275,395 395,650 650,970 1440,1790
-nest of queries correctly is
+{nested -} queries correctly is
 
 2078
 00:58:04,290 --> 00:58:06,045
 0,225 225,435 435,660 660,1160 1510,1755
-the system called umbra, which
+the system called Umbra,| which
+|这是德国的一个学术系统，
 
 2079
 00:58:06,045 --> 00:58:08,430
@@ -11749,39 +11799,42 @@ is a academic system out
 2080
 00:58:08,430 --> 00:58:11,490
 0,120 120,380 2020,2550 2550,2805 2805,3060
-of Germany. Dee b does
+of Germany,| {DuckDB -} does
+|DuckDB 现在做得很正确，
 
 2081
 00:58:11,490 --> 00:58:12,945
 0,210 210,495 495,860 1030,1305 1305,1455
-it correctly now for two
+it correctly now,| for two
+|原因有两个，
 
 2082
 00:58:12,945 --> 00:58:14,600
 0,275 325,675 675,915 915,1125 1125,1655
-reasons. One, because they copied
+reasons,| one, because they copied
+|一是因为他们复制了 Umbra 所做的，
 
 2083
 00:58:14,620 --> 00:58:15,480
 0,400
-what.|
-|
+what
 
 2084
 00:58:15,480 --> 00:58:16,850
 0,375 375,650 700,975 975,1095 1095,1370
-Umbra did it in papers.
-本影在报纸上做到了。这并不是说他们偷走了创意。然后我们上个学期也给他们寄了7，21个补丁，所以我们为他们修复了它。他们可以用侧向吃水正确地执行其中一些嵌套查询。D DB可能是对这一点的最好模仿。很多时候，有一堆启发式的黑客。同样，我们将在稍后讨论这个问题。
+Umbra did,| it in papers,
+|它在论文上，并不是说他们偷走了创意，
 
 2085
 00:58:17,200 --> 00:58:17,940
 0,275 275,350 350,455 455,560 560,740
-It's not like they stole
+it's not like they stole
 
 2086
 00:58:17,940 --> 00:58:19,695
 0,150 150,440 1240,1500 1500,1620 1620,1755
-the ideas. And then we
+the ideas,| and then we
+|然后我们上个学期 721 课程之后也给他们发了补丁，
 
 2087
 00:58:19,695 --> 00:58:20,535
@@ -11791,37 +11844,41 @@ also sent them patches last
 2088
 00:58:20,535 --> 00:58:21,300
 0,225 225,360 360,450 450,585 585,765
-semester out of seven, twenty
+semester out of {721 -
 
 2089
 00:58:21,300 --> 00:58:22,185
 0,225 225,405 405,540 540,720 720,885
-one, so we fixed it
+-},| so we fixed it
+|所以我们为他们修复了它，
 
 2090
 00:58:22,185 --> 00:58:23,660
 0,135 135,395 775,1050 1050,1200 1200,1475
-for them. They can do
+for them,| they can do
+|他们可以正确地执行其中一些嵌套查询，
 
 2091
 00:58:23,890 --> 00:58:24,750
 0,245 245,320 320,410 410,560 560,860
-some of these nest queries
+some of these nested queries
 
 2092
 00:58:24,750 --> 00:58:27,930
 0,290 730,1020 1020,1320 1320,1700 2890,3180
-correctly with lateral drawins. D
+correctly with {[] -},| {DuckDB
+|DuckDB 可能是对这一点的最好模仿，
 
 2093
 00:58:27,930 --> 00:58:28,590
 0,195 195,300 300,450 450,570 570,660
-DB is probably the best
+-} is probably the best
 
 2094
 00:58:28,590 --> 00:58:29,910
 0,390 390,540 540,800 940,1200 1200,1320
-imitation of this. A lot
+imitation of this,| a lot
+|很多时候，有一堆启发式的 hack ，
 
 2095
 00:58:29,910 --> 00:58:30,450
@@ -11831,7 +11888,8 @@ of times there's a bunch
 2096
 00:58:30,450 --> 00:58:32,970
 0,105 105,620 1030,1670 1960,2295 2295,2520
-of heuristics hacks. Again, we'll
+of heuristics hacks,| again, we'll
+|同样，我们将在稍后讨论这个问题。
 
 2097
 00:58:32,970 --> 00:58:33,960
@@ -11842,23 +11900,26 @@ cover this later.|
 2098
 00:58:34,910 --> 00:58:35,725
 0,275 275,470 470,590 590,725 725,815
-My sql was always the
-我的SQL总是最差的。不过，情况已经好多了。所以这里有一个类似这样的查询。我们想要得到写在15,445中的学生的名字，所以我们有一个外部查询，我们说我们想要从学生表中获得名字，然后我们想要这个WHERE子句。我们想要指定一个逻辑，它会让我们得到参加445课程的那组人的学生号，所以这是一种思考你想要如何实际构建它的方法。从外部查询开始，即您希望输出的总体计算是什么，然后计算出内部部分需要单独是什么。
+{MySQL -} was always the
+MySQL 总是最差的，
 
 2099
 00:58:35,725 --> 00:58:36,805
 0,245 325,645 645,765 765,930 930,1080
-worst. It's gotten much better
+worst,| it's gotten much better
+|不过，情况已经好多了。
 
 2100
 00:58:36,805 --> 00:58:40,390
 0,275 1705,2105 3115,3405 3405,3465 3465,3585
-though. So here's a query
+though.| So here's a query
+|所以这里有一个类似这样的查询，
 
 2101
 00:58:40,390 --> 00:58:41,035
 0,135 135,330 330,510 510,600 600,645
-like this. We want to
+like this,| we want to
+|我们想要得到在 15-445 注册的学生的名字，
 
 2102
 00:58:41,035 --> 00:58:41,635
@@ -11868,17 +11929,19 @@ get the name of the
 2103
 00:58:41,635 --> 00:58:43,000
 0,240 240,525 525,825 825,1140 1140,1365
-students wrote in fifteen, four
+students enrolled in {15-445 -
 
 2104
 00:58:43,000 --> 00:58:44,310
 0,180 180,470 760,990 990,1065 1065,1310
-forty five, so we have
+- -},| so we have
+|所以我们有一个外部查询，
 
 2105
 00:58:44,330 --> 00:58:45,910
 0,260 260,470 470,850 1200,1460 1460,1580
-the outer query that we
+the outer query,| that we
+|我们说我们想要从学生表中获得名字，
 
 2106
 00:58:45,910 --> 00:58:46,735
@@ -11893,27 +11956,31 @@ the name from the student
 2108
 00:58:47,380 --> 00:58:48,610
 0,290 670,930 930,1050 1050,1155 1155,1230
-table and then we want
+table| and then we want
+|然后我们想要这个 WHERE 子句，
 
 2109
 00:58:48,610 --> 00:58:49,375
 0,60 60,135 135,270 270,495 495,765
-to have this where clause.
+to have this WHERE clause,|
+|
 
 2110
 00:58:49,375 --> 00:58:50,335
 0,150 150,225 225,330 330,765 765,960
-We want to specify the
+we want to specify the
+我们想要指定一个逻辑，
 
 2111
 00:58:50,335 --> 00:58:51,850
 0,275 475,875 895,1200 1200,1365 1365,1515
-logic that will get us
+logic,| that will get us
+|它会让我们得到参加 445 课程的那组人的 sid ，
 
 2112
 00:58:51,850 --> 00:58:53,665
 0,240 240,450 450,710 1300,1620 1620,1815
-the student ID of the
+the student id of the
 
 2113
 00:58:53,665 --> 00:58:54,235
@@ -11923,7 +11990,8 @@ set of people that are
 2114
 00:58:54,235 --> 00:58:55,840
 0,275 475,735 735,900 900,1205 1375,1605
-taking four forty five, so
+taking {445 - -},| so
+|所以这是一种思考方式，
 
 2115
 00:58:55,840 --> 00:58:56,335
@@ -11933,22 +12001,26 @@ this is a way to
 2116
 00:58:56,335 --> 00:58:56,965
 0,90 90,195 195,330 330,480 480,630
-sort of think about how
+sort of think about,| how
+|你想要如何实际构建它，
 
 2117
 00:58:56,965 --> 00:58:57,955
 0,120 120,270 270,540 540,795 795,990
-you want actually construct this.
+you want actually construct this,|
+|
 
 2118
 00:58:57,955 --> 00:58:58,645
 0,150 150,240 240,315 315,465 465,690
-Start with the outer query
+start with the outer query|
+从外部查询开始，|
 
 2119
 00:58:58,645 --> 00:59:00,790
 0,120 120,225 225,330 330,935 1615,2145
 of what the overarching computation
+你希望输出的总体计算是什么，
 
 2120
 00:59:00,790 --> 00:59:01,450
@@ -11958,7 +12030,8 @@ of the output you want
 2121
 00:59:01,450 --> 00:59:02,455
 0,105 105,350 550,795 795,885 885,1005
-to be and then you
+to be| and then you
+|然后得到内部部分单独需要的是什么。
 
 2122
 00:59:02,455 --> 00:59:03,400
@@ -11974,13 +12047,14 @@ part needs to be separately.|
 2124
 00:59:05,650 --> 00:59:06,435
 0,215 215,260 260,365 365,545 545,785
-So in this case here,
-在本例中，我们可以将这里的英语部分转换为这样的查询，但现在我们需要能够在外部查询的WHERE子句中引用它或执行我们想要的检查，并使用之前的INK子句。
+So in this case here,|
+在本例中，|
 
 2125
 00:59:06,435 --> 00:59:07,530
 0,180 180,360 360,585 585,825 825,1095
 we can convert this English
+我们可以将这里的英语部分转换为这样的查询，
 
 2126
 00:59:07,530 --> 00:59:10,185
@@ -11990,7 +12064,8 @@ part here into a query
 2127
 00:59:10,185 --> 00:59:11,565
 0,150 150,425 805,1065 1065,1230 1230,1380
-like this, but now we
+like this,| but now we
+|但现在我们需要引用它，
 
 2128
 00:59:11,565 --> 00:59:11,940
@@ -12000,27 +12075,30 @@ need to be able to
 2129
 00:59:11,940 --> 00:59:14,565
 0,225 225,590 940,1340 1780,2180 2320,2625
-reference it or do the
+reference it| or do the
+|或执行我们想要的检查，
 
 2130
 00:59:14,565 --> 00:59:15,780
 0,180 180,300 300,420 420,695 955,1215
-check that we want in
+check that we want,| in
+|在外部查询的 WHERE 子句中，
 
 2131
 00:59:15,780 --> 00:59:16,425
 0,105 105,240 240,450 450,570 570,645
-the where clause of the
+the WHERE clause of the
 
 2132
 00:59:16,425 --> 00:59:17,940
 0,165 165,515 865,1140 1140,1290 1290,1515
-outer query and we use
+outer query| and we use
+|并使用之前的 IN 子句。
 
 2133
 00:59:17,940 --> 00:59:19,470
 0,350 400,735 735,915 915,1220 1270,1530
-that ink clause that we
+that IN clause that we
 
 2134
 00:59:19,470 --> 00:59:20,500
@@ -12031,60 +12109,64 @@ had before.|
 2135
 00:59:21,560 --> 00:59:22,560
 0,230 230,320 320,470 470,680 680,1000
-So in this case here,
-所以在这个例子中，现在我们看到学生ID在。
+So in this case here,|
+所以在这个例子中，|
 
 2136
 00:59:23,360 --> 00:59:24,385
 0,320 320,515 515,665 665,800 800,1025
 now we see that the
+现在我们看到这个 sid ，
 
 2137
 00:59:24,385 --> 00:59:26,640
 0,255 255,545 775,1095 1095,1415
-student ID in the.|
+student id in the,|
 |
 
 2138
 00:59:26,640 --> 00:59:27,690
 0,210 210,450 450,720 720,930 930,1050
-In this where clause, here
-在这个WHERE子句中，下面是引用添加查询中的学生ID的添加查询，但内部查询中的第二个学生ID引用了、中、注册表中的学生ID。
+in this WHERE clause, here
+在外部查询中的 WHERE 子句中，
 
 2139
 00:59:27,690 --> 00:59:28,560
 0,75 75,150 150,285 285,540 540,870
-are the add query that's
+are the outer query,| that's
+|它引用外部查询中的 sid ，
 
 2140
 00:59:28,560 --> 00:59:29,760
 0,375 375,525 525,660 660,915 915,1200
-referencing the student ID from
+referencing the student id from
 
 2141
 00:59:29,760 --> 00:59:31,200
 0,270 270,495 495,660 660,1010 1180,1440
-the the add query, but
+the the outer query,| but
+|但第二个在内部查询中的 sid ，
 
 2142
 00:59:31,200 --> 00:59:32,235
 0,150 150,405 405,645 645,855 855,1035
-the second student ID in
+the second student id in
 
 2143
 00:59:32,235 --> 00:59:33,645
 0,90 90,240 240,575 655,1035 1035,1410
-the inner query, that's referencing
+the inner query,| that's referencing
+|引用 enrolled 表中的 sid 。
 
 2144
 00:59:33,645 --> 00:59:34,710
 0,150 150,285 285,545 595,870 870,1065
-the student ID in the,
+the student id in the,
 
 2145
 00:59:34,710 --> 00:59:35,940
 0,315 315,630 630,795 795,900 900,1230
-in the, in the enroll
+in the, in the enrolled
 
 2146
 00:59:35,940 --> 00:59:36,840
@@ -12096,17 +12178,19 @@ table.|
 00:59:36,840 --> 00:59:39,045
 0,330 330,680 820,1460 1630,1995 1995,2205
 So the parser in the
-因此，数据库系统中的解析器足够智能，能够识别列被引用的上下文，从而知道您正在查看的是哪个表。
+所以，数据库系统中的解析器足够智能，
 
 2148
 00:59:39,045 --> 00:59:39,930
 0,150 150,360 360,585 585,765 765,885
-database system is smart enough
+database system is smart enough|
+|
 
 2149
 00:59:39,930 --> 00:59:41,655
 0,105 105,350 850,1140 1140,1430 1450,1725
 to recognize the context of
+能够识别列被引用的上下文，
 
 2150
 00:59:41,655 --> 00:59:42,735
@@ -12116,34 +12200,38 @@ where a column is being
 2151
 00:59:42,735 --> 00:59:45,110
 0,545 625,930 930,1235 1555,1955 1975,2375
-referenced to know which table
+referenced| to know which table
+|从而知道你正在查看的是哪个表，
 
 2152
 00:59:45,430 --> 00:59:46,740
 0,320 320,455 455,760
-you're looking at.|
+you're looking at,|
 |
 
 2153
 00:59:46,780 --> 00:59:48,030
 0,245 245,335 335,545 545,910 990,1250
-In the cases where it
-在它不知道两个事物具有相同名称的情况下，它将抛出一个错误，并使您限定列所在的表名。
+in the cases where it
+在它不知道的情况下，
 
 2154
 00:59:48,030 --> 00:59:49,860
 0,240 240,465 465,830 1360,1650 1650,1830
-doesn't know that two things
+doesn't know,| that two things
+|两个事物具有相同名称，
 
 2155
 00:59:49,860 --> 00:59:51,075
 0,135 135,240 240,390 390,680 790,1215
-have the same name, it'll
+have the same name,| it'll
+|它将抛出一个错误，
 
 2156
 00:59:51,075 --> 00:59:52,350
 0,150 150,270 270,420 420,725 1015,1275
-throw an error and make
+throw an error| and make
+|并使你限定列所在的表名。
 
 2157
 00:59:52,350 --> 00:59:54,680
@@ -12165,7 +12253,7 @@ from.|
 00:59:58,820 --> 00:59:59,560
 0,275 275,440 440,485 485,575 575,740
 So there's a bunch different
-因此，您可以通过多种不同的方式与Nesta查询进行交互。您可以设置WHERE子句，这样您就可以拥有嵌套查询中的每一行都必须满足某种约束的ALL命令或ALL操作符之类的东西。你可以吃任何一种。
+所以，你可以通过多种不同的方式与嵌套查询进行交互，
 
 2161
 00:59:59,560 --> 01:00:00,775
@@ -12175,22 +12263,25 @@ ways you can interact with
 2162
 01:00:00,775 --> 01:00:02,545
 0,330 330,725 1165,1455 1455,1620 1620,1770
-nesta queries. You can set
+nested queries,| you can set
+|你可以设置 WHERE 子句，
 
 2163
 01:00:02,545 --> 01:00:04,150
 0,180 180,725 1105,1380 1380,1500 1500,1605
-where clauses so you can
+WHERE clauses,| so you can
+|你可以有 ALL 命令或 ALL 操作符，
 
 2164
 01:00:04,150 --> 01:00:05,500
 0,210 210,480 480,800 820,1095 1095,1350
-have things like an all
+have things like an ALL
 
 2165
 01:00:05,500 --> 01:00:07,225
 0,300 300,465 465,710 730,1130 1360,1725
-command or all operator that
+command or ALL operator,| that
+|嵌套查询中的每一行都必须满足某种约束，
 
 2166
 01:00:07,225 --> 01:00:08,605
@@ -12205,24 +12296,26 @@ nested query has to satisfy
 2168
 01:00:09,715 --> 01:00:11,245
 0,225 225,405 405,495 495,935 1285,1530
-some kind of restraint. You
+some kind of restraint,| you
+|你可以有 ANY ，
 
 2169
 01:00:11,245 --> 01:00:12,500
 0,90 90,210 210,485
-can have any.|
+can have ANY,|
 |
 
 2170
 01:00:12,500 --> 01:00:14,045
 0,260 340,675 675,960 960,1290 1290,1545
-Or sometimes called sum is
-或者有时称为SUM是别名SOE，您可以说至少有一行与我的子查询匹配。In子句是我之前展示过的。它等于Any，然后就存在。我的意思是我想找到我知道至少有一个匹配的东西。对不起，只有一行是退回的，但我并不关心里面有什么。
+or sometimes called SOME is
+或者有时称为 SOME ，它是别名， SOME ，
 
 2171
 01:00:14,045 --> 01:00:16,385
 0,120 120,575 1225,1865 2005,2250 2250,2340
-the alias SOE where you
+the alias, SOME,| where you
+|你可以说至少有一行与我的子查询匹配，
 
 2172
 01:00:16,385 --> 01:00:17,765
@@ -12232,17 +12325,20 @@ can say at least one
 2173
 01:00:17,765 --> 01:00:19,750
 0,335 985,1305 1305,1515 1515,1680 1680,1985
-row match my sub query.
+row match my sub query,|
+|
 
 2174
 01:00:20,190 --> 01:00:21,770
 0,245 245,425 425,785 785,1180 1320,1580
-The in clause is that
+the IN clause is that
+IN 子句是我之前展示过的，
 
 2175
 01:00:21,770 --> 01:00:22,460
 0,120 120,225 225,390 390,600 600,690
-I showed before. It's the
+I showed before,| it's the
+|它等同于 ANY ，
 
 2176
 01:00:22,460 --> 01:00:23,960
@@ -12252,7 +12348,8 @@ same thing as is equals
 2177
 01:00:23,960 --> 01:00:25,775
 0,350 850,1110 1110,1335 1335,1620 1620,1815
-any and then exists. Just
+ANY| and then EXISTS,| just
+|然后是 EXISTS ，|意思是我想要找到，
 
 2178
 01:00:25,775 --> 01:00:26,870
@@ -12262,7 +12359,8 @@ means that I want to
 2179
 01:00:26,870 --> 01:00:28,070
 0,135 135,330 330,650 700,990 990,1200
-find something where I know
+find something,| where I know
+|我知道至少有一个匹配的东西，
 
 2180
 01:00:28,070 --> 01:00:29,300
@@ -12272,12 +12370,14 @@ there's there's at least one
 2181
 01:00:29,300 --> 01:00:31,115
 0,290 610,1010 1120,1485 1485,1620 1620,1815
-match. Sorry, there's just one
+match,| sorry, there's just one
+|抱歉，只有一行返回，
 
 2182
 01:00:31,115 --> 01:00:32,000
 0,195 195,420 420,660 660,810 810,885
-row being return, but I
+row being return,| but I
+|但我并不关心里面有什么。
 
 2183
 01:00:32,000 --> 01:00:32,780
@@ -12294,22 +12394,24 @@ it.|
 01:00:35,300 --> 01:00:36,600
 0,290 290,440 440,545 545,905 905,1300
 So I can rewrite the
-所以我可以重写我以前的例子，而不是使用in，我可以使用Any，它被认为是等价的。
+所以我可以重写我之前的例子，
 
 2186
 01:00:37,010 --> 01:00:37,900
 0,275 275,380 380,455 455,680 680,890
-example I have before instead
+example I have before,| instead
+|不是使用 IN ，我可以使用 ANY ，
 
 2187
 01:00:37,900 --> 01:00:39,055
 0,60 60,210 210,530 760,1020 1020,1155
-of using in I can
+of using IN, I can
 
 2188
 01:00:39,055 --> 01:00:40,900
 0,275 415,815 985,1275 1275,1560 1560,1845
-use any and it's considered
+use ANY| and it's considered
+|它被认为是等价的。
 
 2189
 01:00:40,900 --> 01:00:41,920
@@ -12321,17 +12423,19 @@ equivalent.|
 01:00:42,590 --> 01:00:43,645
 0,245 245,490 540,785 785,890 890,1055
 And so we can show
-因此，我们可以非常迅速地展示波斯格雷斯是如何为此选择不同的计划的，你可以看到它是如何实际执行的。
+所以，我们可以很快地展示，
 
 2191
 01:00:43,645 --> 01:00:45,625
 0,165 165,360 360,695 1285,1755 1755,1980
-real quickly how postgres picks
+real quickly,| how postgres picks
+|Postgres 是如何为此选择不同的计划的，
 
 2192
 01:00:45,625 --> 01:00:47,215
 0,165 165,390 390,540 540,785 1345,1590
-different plans for this, and
+different plans for this,| and
+|你可以看到实际它是如何执行的。
 
 2193
 01:00:47,215 --> 01:00:47,890
@@ -12347,60 +12451,65 @@ being executed.|
 2195
 01:00:49,540 --> 01:00:50,800
 0,230
-Hmm.|
-嗯。|
 
 2196
 01:00:57,510 --> 01:00:58,510
 0,320 320,485 485,635 635,710 710,1000
-Right. So here's our query.|
-正确的。下面是我们的查询。|
+Right, so here's our query,|
+好的，这是我们的查询，|
 
 2197
 01:01:00,010 --> 01:01:00,930
 0,245 245,350 350,500 500,650 650,920
-We have ris and tupac
-我们请里斯和图帕克来上课。所以在SQL中，你可以把这个解释过的关键字放在它前面，放在任何查询前面，如果系统支持它，它会返回查询计划，并告诉你如果它真的试图执行这个东西，它会执行什么操作。
+we have RZA and Tupac
+我们有 RZA 和 Tupac 选择了课程，
 
 2198
 01:01:00,930 --> 01:01:03,300
 0,165 165,300 300,560 1840,2145 2145,2370
-taking the class. So in
+taking the class,| so in
+|所以在 SQL 中，
 
 2199
 01:01:03,300 --> 01:01:04,410
 0,435 435,630 630,750 750,870 870,1110
-sql you can put this
+SQL,| you can put this
+|你可以把这个 EXPLAIN 关键字放在它前面，
 
 2200
 01:01:04,410 --> 01:01:05,415
 0,330 330,660 660,780 780,900 900,1005
-explained keyword in front of
+EXPLAIN keyword in front of
 
 2201
 01:01:05,415 --> 01:01:07,040
 0,245 655,945 945,1110 1110,1290 1290,1625
-it and of any query
+it| and of any query|
+|放在任何查询前面，|
 
 2202
 01:01:07,480 --> 01:01:08,355
 0,275 275,410 410,680 680,755 755,875
 and what that's going to
+它会执行，
 
 2203
 01:01:08,355 --> 01:01:09,795
 0,275 505,780 780,900 900,1140 1140,1440
-do, if the system supports
+do,| if the system supports
+|如果系统支持它，
 
 2204
 01:01:09,795 --> 01:01:10,980
 0,180 180,495 495,645 645,905 925,1185
-it, it'll come back with
+it,| it'll come back with
+|它会返回查询计划，
 
 2205
 01:01:10,980 --> 01:01:12,195
 0,135 135,375 375,710 850,1110 1110,1215
-the query plan and tell
+the query plan| and tell
+|告诉你它会执行什么操作，
 
 2206
 01:01:12,195 --> 01:01:14,850
@@ -12410,70 +12519,79 @@ you what operations would it
 2207
 01:01:14,850 --> 01:01:16,290
 0,380 490,750 750,930 930,1215 1215,1440
-execute if it actually tried
+execute,| if it actually tried
+|如果它试图执行这个东西。
 
 2208
 01:01:16,290 --> 01:01:17,520
 0,165 165,345 345,495 495,770
-to execute this thing.|
-|
+to execute this thing,
 
 2209
 01:01:17,530 --> 01:01:18,640
 0,400
-Right.|
-正确的。|
+right.|
+|
 
 2210
 01:01:19,510 --> 01:01:20,295
 0,245 245,320 320,395 395,530 530,785
-So when we run that,
-所以当我们运行它时，我们会得到类似这样的东西，它会告诉我们基本上是一个树形结构。所以这些是叶节点，然后它建立了这个最终输出。所以这告诉我们POST想要对注册的表进行强制扫描，然后它会对它进行散列，因为它在那里进行散列，我们稍后会讨论什么是散列，然后扫描学生表，然后通过匹配学生ID，学生ID和招生ID。所以Postgres足够聪明地转换了这个。
+So when we run that,|
+所以当我们运行它时，|
 
 2211
 01:01:20,295 --> 01:01:21,260
 0,225 225,360 360,525 525,690 690,965
-we get something like this
+we get something like this,|
+我们会得到类似这样的东西，|
 
 2212
 01:01:21,670 --> 01:01:22,760
 0,530 530,590 590,695 695,830 830,1090
 that's going to tell us
+它会告诉我们基本上是一个树形结构，
 
 2213
 01:01:23,080 --> 01:01:24,710
 0,400 780,1025 1025,1145 1145,1325 1325,1630
-basically as a tree structure.
+basically as a tree structure,|
+|
 
 2214
 01:01:25,060 --> 01:01:26,055
 0,400 420,695 695,800 800,860 860,995
-So these are the leaf
+so these are the leaf
+所以这些是叶节点，
 
 2215
 01:01:26,055 --> 01:01:27,075
 0,450 450,615 615,720 720,825 825,1020
-nodes and then it builds
+nodes| and then it builds
+|然后它建立了这个最终输出，
 
 2216
 01:01:27,075 --> 01:01:28,160
 0,135 135,315 315,450 450,690 690,1085
-up this the final output.
+up this the final output,|
+|
 
 2217
 01:01:28,360 --> 01:01:29,480
 0,335 335,545 545,680 680,830 830,1120
-So this is telling us
+so this is telling us,|
+所以这告诉我们，|
 
 2218
 01:01:29,890 --> 01:01:31,020
 0,350 350,560 560,635 635,695 695,1130
-post wants to do aential
+Postgres wants to do aential
+Postgres 想要对 enrolled 表进行强制扫描，
 
 2219
 01:01:31,020 --> 01:01:32,685
 0,225 225,390 390,660 660,920 1420,1665
-scan the enrolled table and
+scan the enrolled table| and
+|然后它会对它进行散列，
 
 2220
 01:01:32,685 --> 01:01:33,360
@@ -12483,12 +12601,14 @@ then it's going to hash
 2221
 01:01:33,360 --> 01:01:34,635
 0,260 490,840 840,1080 1080,1170 1170,1275
-it because it's doing a
+it,| because it's doing a
+|因为它在那里进行散列，
 
 2222
 01:01:34,635 --> 01:01:35,505
 0,195 195,300 300,405 405,585 585,870
-hash one up there, which
+hash one up there,| which
+|我们稍后会讨论什么是散列，
 
 2223
 01:01:35,505 --> 01:01:36,450
@@ -12498,44 +12618,50 @@ we'll cover what hash is
 2224
 01:01:36,450 --> 01:01:38,120
 0,165 165,470 790,1035 1035,1275 1275,1670
-later on, and then does
+later on,| and then does
+|然后扫描 student 表，
 
 2225
 01:01:38,470 --> 01:01:39,800
 0,380 380,650 650,830 830,1025 1025,1330
-scan on the student table
+scan on the student table|
+|
 
 2226
 01:01:40,210 --> 01:01:41,985
 0,245 245,350 350,575 575,940 1500,1775
 and then now does by
+然后通过匹配 sid ，
 
 2227
 01:01:41,985 --> 01:01:45,150
 0,315 315,435 435,555 555,815 2905,3165
-matching the student ID, student
+matching the student id,| student
+|sid 和 enrolled 的 sid 。
 
 2228
 01:01:45,150 --> 01:01:46,430
 0,195 195,465 465,840 840,1020 1020,1280
-ID with enroll student ID.
+id with enrolled student id.|
+|
 
 2229
 01:01:46,750 --> 01:01:48,060
 0,335 335,800 800,1010 1010,1190 1190,1310
-So postgres was smart enough
+So Postgres was smart enough|
+所以 Postgres 足够聪明，|
 
 2230
 01:01:48,060 --> 01:01:49,540
 0,195 195,480 480,830
-to convert this.|
-|
+to convert this
+转换这个嵌套查询到 JOIN ，
 
 2231
 01:01:49,950 --> 01:01:51,635
 0,485 485,785 785,1175 1175,1460 1460,1685
-Nested query into a join,
-将查询嵌套到连接中，当您拥有这些类型的引用时，这始终是执行某些操作的最快方式。
+nested query into a JOIN,|
+|这始终是执行某些操作的最快方式，
 
 2232
 01:01:51,635 --> 01:01:52,520
@@ -12550,7 +12676,8 @@ be the fastest way to
 2234
 01:01:53,405 --> 01:01:54,965
 0,195 195,485 1135,1380 1380,1470 1470,1560
-execute something when you have
+execute something,| when you have
+|当你拥有这些类型的引用时。
 
 2235
 01:01:54,965 --> 01:01:56,740
@@ -12562,56 +12689,60 @@ these kind of references.|
 01:01:57,010 --> 01:01:57,780
 0,245 245,350 350,485 485,620 620,770
 We can try the same
-我们可以在我的SQL中尝试相同的操作。
+我们可以在 MySQL 中尝试相同的操作，
 
 2237
 01:01:57,780 --> 01:01:59,400
 0,195 195,345 345,480 480,890
-thing in my sql.|
+thing in {MySQL -},|
 |
 
 2238
 01:02:06,410 --> 01:02:07,885
 0,245 245,335 335,580 870,1205 1205,1475
-But you get their explained
-但你会知道，他们解释的产出很糟糕。有一种方法可以得到，我忘记了语法，你必须放入一个扩展的或类似的东西。
+but you get their explained
+但你得到，他们解释的输出很糟糕，
 
 2239
 01:02:07,885 --> 01:02:10,735
 0,180 180,285 285,545 2485,2760 2760,2850
-output is terrible. There's a
+output is terrible,| there's a
+|有一种方法可以得到，
 
 2240
 01:02:10,735 --> 01:02:13,180
 0,165 165,285 285,515 2005,2295 2295,2445
-way to get, I forget
+way to get,| I forget
+|我忘记了语法，
 
 2241
 01:02:13,180 --> 01:02:14,140
 0,120 120,510 510,705 705,825 825,960
-the syntax, you gotta put
+the syntax,| you gotta put
+|你必须放入一个 EXTENDED 或类似的东西，
 
 2242
 01:02:14,140 --> 01:02:15,160
 0,105 105,345 345,675 675,870 870,1020
-like an extended or something
+like an EXTENDED or something
 
 2243
 01:02:15,160 --> 01:02:16,260
 0,150 150,410
-like that.|
+like that,|
 |
 
 2244
 01:02:17,170 --> 01:02:17,820
 0,290 290,425 425,500 500,575 575,650
 I forget how to do
-我忘记了如何在我的SQL中这样做。有一种方法可以让事情变得更好。
+我忘记了如何在 MySQL 中这样做，
 
 2245
 01:02:17,820 --> 01:02:18,495
 0,90 90,195 195,300 300,525 525,675
-it in my sql. There's
+it in {MySQL -},| there's
+|有一种方法可以让事情变得更好。
 
 2246
 01:02:18,495 --> 01:02:19,530
@@ -12627,110 +12758,112 @@ a little bit better.|
 2248
 01:02:22,200 --> 01:02:23,750
 0,400 420,830 830,1120 1385,1475 1475,1550
-In sql light, I don't
-在SQL Light中，我认为您无法做到这一点。你可以做到的。
+In {SQLite -}, I don't
+在 SQLite 中，我不认为你可以做到这个，
 
 2249
 01:02:23,750 --> 01:02:24,520
 0,90 90,210 210,360 360,510 510,770
-think you can do this.
+think you can do this,|
+|
 
 2250
 01:02:25,170 --> 01:02:26,600
 0,245 245,350 350,485 485,760
-You can do this.|
-|
+you can do this,|
+你可以做到，|
 
 2251
 01:02:30,180 --> 01:02:31,540
 0,315 315,710
-Any different.|
-有什么不同吗。|
 
 2252
 01:02:32,165 --> 01:02:33,160
 0,60 60,305
-What's that?|
-那是什么？|
+what's that,|
+那是什么，|
 
 2253
 01:02:34,890 --> 01:02:37,480
 0,400
-This.|
-这。|
 
 2254
 01:02:38,370 --> 01:02:40,680
 0,245 245,490 1110,1445 1445,1690
-All right, sql light.|
-好了，SQL Light。|
+all right, {SQLite -},|
+好的， SQLite ，|
 
 2255
 01:02:43,660 --> 01:02:44,610
 0,245 245,395 395,515 515,710 710,950
-They don't like the select
-他们不喜欢SELECT语句。
+they don't like the SELECT
+他们不喜欢 SELECT 语句，
 
 2256
 01:02:44,610 --> 01:02:46,740
 0,320
-statement.|
+statement,|
 |
 
 2257
 01:02:48,640 --> 01:02:50,175
 0,260 260,470 470,820 1080,1340 1340,1535
-Which is surprising. Why doesn't
-这是令人惊讶的。为什么这不管用呢？看看d DB是否能做到这一点？
+which is surprising,| why doesn't
+这是令人惊讶的，|为什么这不管用。
 
 2258
 01:02:50,175 --> 01:02:51,345
 0,105 105,365 745,960 960,1035 1035,1170
-that work? See if d
+that work.| See if {DuckDB
+|看看 DuckDB 是否能做到这个，
 
 2259
 01:02:51,345 --> 01:02:52,800
 0,180 180,300 300,575
-DB does it?|
+-} does it,|
 |
 
 2260
 01:02:53,550 --> 01:02:54,710
 0,260 260,365 365,485 485,760 870,1160
-Think of the airport. TV
-想想机场吧。电视上有很漂亮的。
+it give the output,| DuckDB
+它给出输出，|DuckDB 有很漂亮的，
 
 2261
 01:02:54,710 --> 01:02:57,460
 0,195 195,450 450,800
-has very pretty.|
+has very pretty,|
 |
 
 2262
 01:02:57,470 --> 01:02:58,330
 0,260 260,365 365,560 560,770 770,860
-They give you, they give
-它们给你，它们给你漂亮的小树，你很容易被逗乐。这给你留下了深刻的印象，哦我的天哪，Unicode输出，但是的，它给了你，展示了什么是物理计划，然后。
+they give you, they give
+它们给你漂亮的树，
 
 2263
 01:02:58,330 --> 01:03:04,345
 0,90 90,210 210,390 390,710 5710,6015
-you nice little trees, you
+you nice little trees,| {you,guys}
+|你们很容易被逗乐，
 
 2264
 01:03:04,345 --> 01:03:08,095
 0,180 180,405 405,875 2995,3360 3360,3750
-are easily amused. This impresses
+are easily amused,| this impresses
+|这给你留下了深刻的印象， unicode 输出，
 
 2265
 01:03:08,095 --> 01:03:10,330
 0,270 270,900 900,1245 1245,1595 1975,2235
-you unicode output for oh
+you, unicode output for,| oh
+|我的天，
 
 2266
 01:03:10,330 --> 01:03:13,375
 0,120 120,380 2230,2475 2475,2720 2800,3045
-my gosh, but yeah, it
+my gosh,| but yeah, it
+|但是，是的，它你展示了什么是物理计划。
 
 2267
 01:03:13,375 --> 01:03:14,905
@@ -12740,155 +12873,160 @@ gives, shows you what the
 2268
 01:03:14,905 --> 01:03:17,910
 0,180 180,390 390,665 2485,2745 2745,3005
-physical plan is and then.|
-|
+physical plan is.| And then
+|然后，我们可以在 Oracle 上尝试，
 
 2269
 01:03:19,190 --> 01:03:19,840
 0,260 260,380 380,470 470,530 530,650
-We can try it an
-我们可以试着成为先知。
+we can try it on
 
 2270
 01:03:19,840 --> 01:03:21,320
 0,530
-Oracle.|
+Oracle,|
 |
 
 2271
 01:03:22,640 --> 01:03:23,970
 0,400 420,695 695,815 815,995 995,1330
-Right has the right output.|
-Right具有正确的输出。|
+right, has the right output,|
+好的，有正确的输出，|
 
 2272
 01:03:27,710 --> 01:03:29,845
 0,400 1080,1480 1590,1850 1850,1940 1940,2135
-I, well, we need this
-我，好吧，我们还需要这个，让飞机离开Oracle和SQL服务器是一个巨大的痛苦，但我对此感到惊讶。
+{} well, we need this
+好吧，我们其他时间再看这个，
 
 2273
 01:03:29,845 --> 01:03:31,630
 0,225 225,345 345,665 1285,1590 1590,1785
-another time there's getting the
+another time,| there's getting the
+|获得 Oracle 和 SQL Server 的计划是一个巨大的痛苦。
 
 2274
 01:03:31,630 --> 01:03:32,770
 0,165 165,420 420,690 690,1050 1050,1140
-plane out of Oracle and
+plan out of Oracle and
 
 2275
 01:03:32,770 --> 01:03:33,550
 0,195 195,360 360,525 525,630 630,780
-sql server is a huge
+SQL Server is a huge
 
 2276
 01:03:33,550 --> 01:03:35,160
 0,255 255,450 450,690 690,1040 1210,1610
-pain, but I'm surprised that.|
-|
+pain.| But I'm surprised that,|
+|但我对此感到惊讶，|
 
 2277
 01:03:36,870 --> 01:03:38,020
 0,350 350,455 455,710 710,875 875,1150
-Sql light doesn't support this.|
-SQL Light不支持这一点。|
+{SQLite -} doesn't support this,|
+SQLLite 不支持这个，|
 
 2278
 01:03:44,510 --> 01:03:45,175
 0,305 305,365 365,440 440,485 485,665
 I'm not going to debug
-我不会现场调试的。
+我不会现场调试，
 
 2279
 01:03:45,175 --> 01:03:46,880
 0,150 150,425
-this live.|
+this live,|
 |
 
 2280
 01:03:48,150 --> 01:03:48,860
 0,290 290,425 425,545 545,620 620,710
-Yeah, I don't know why
-是啊，我不知道它为什么不喜欢那样。让我们试试看。
+yeah, I don't know why
+我不知道它为什么不喜欢那样，
 
 2281
 01:03:48,860 --> 01:03:49,865
 0,60 60,225 225,330 330,590 700,1005
-it doesn't like that. Let's
+it doesn't like that,| let's
+|让我们试试 IN ，
 
 2282
 01:03:49,865 --> 01:03:50,980
 0,135 135,425
-try in.|
+try IN,|
 |
 
 2283
 01:03:55,030 --> 01:03:55,860
 0,290 290,425 425,515 515,680 680,830
-Ah, there we go. They
-啊，又来了。他们不喜欢任何像In这样的人。好的，在单光灯下，如果我跑了，解释一下。
+ah, there we go,| they
+啊，来了，|他们不喜欢 ANY ，喜欢 IN 。
 
 2284
 01:03:55,860 --> 01:03:56,960
 0,120 120,315 315,615 615,825 825,1100
-didn't like any like in.
+didn't like ANY, like IN.|
+|
 
 2285
 01:03:57,520 --> 01:03:59,205
 0,305 305,610 1020,1295 1295,1460 1460,1685
-Alright, so in single light,
+Alright, so in {SQLite -},|
+好的，在 SQLite 中，|
 
 2286
 01:03:59,205 --> 01:04:02,040
 0,165 165,270 270,495 495,845
-if I run, explain.|
-|
+if I run EXPLAIN,|
+如果我运行 EXPLAIN ，|
 
 2287
 01:04:04,670 --> 01:04:06,180
 0,245 245,365 365,640
-I get this.|
-我明白了。|
+I get this,|
+我得到这个，|
 
 2288
 01:04:08,910 --> 01:04:09,950
 0,335 335,515 515,665 665,920 920,1040
-So the way sql light
-因此，就像SQL Light所做的那样，这就是。
+so the way {SQLite -}
+所以， SQLite 所做的方式，
 
 2289
 01:04:09,950 --> 01:04:11,300
 0,210 210,390 390,650
-does, which is.|
-|
+does,| which is,
+|是这样的，
 
 2290
 01:04:11,810 --> 01:04:14,000
 0,470 470,695 695,970
-Genius is that.|
-天才就是这样。|
+[genius], is that,|
+|
 
 2291
 01:04:15,230 --> 01:04:16,390
 0,275 275,425 425,815 815,950 950,1160
-The way itutes your query
-它处理查询计划的方式是将查询计划转换为自己的DSL操作码，并且它有自己的VM来运行类似于JVM的代码。您获取Java代码，将其转换为Java字节码，然后JVM执行或解释它。这就是SQL Lite所做的。
+the way itutes your query
+它处理查询计划的方式是，
 
 2292
 01:04:16,390 --> 01:04:17,545
 0,195 195,405 405,765 765,900 900,1155
-plan, it converts the query
+plan,| it converts the query
+|将查询计划转换为自己的 DSL 操作码，
 
 2293
 01:04:17,545 --> 01:04:20,070
 0,270 270,605 1465,1740 1740,1950 1950,2525
-plan into its own dsl
+plan into its own DSL
 
 2294
 01:04:20,480 --> 01:04:21,355
 0,320 320,635 635,710 710,770 770,875
-op codes, and it has
+op codes,| and it has
+|它有自己的虚拟机来运行操作码，
 
 2295
 01:04:21,355 --> 01:04:22,890
@@ -12898,39 +13036,44 @@ its own vm that runs
 2296
 01:04:23,150 --> 01:04:25,150
 0,350 350,850 1140,1400 1400,1535 1535,2000
-the codes like the jvm.
+the {op,codes},| like the JVM,|
+|就像是 JVM ，|
 
 2297
 01:04:25,150 --> 01:04:26,290
 0,240 240,450 450,735 735,930 930,1140
-You take Java code, convert
+you take Java code, convert
+你获取 Java 代码，将其转换为 Java 字节码，
 
 2298
 01:04:26,290 --> 01:04:27,390
 0,105 105,315 315,645 645,840 840,1100
-it into Java byte code,
+it into Java byte code,|
+|
 
 2299
 01:04:27,500 --> 01:04:28,855
 0,260 260,395 395,545 545,1010 1010,1355
-and then the jvm executes
+and then the JVM executes
+然后 JVM 执行它或解释它，
 
 2300
 01:04:28,855 --> 01:04:30,190
 0,120 120,255 255,525 525,785 985,1335
-it or interprets it. That's
+it or interprets it,| that's
+|这就是 SQLite 所做的。
 
 2301
 01:04:30,190 --> 01:04:32,300
 0,90 90,300 300,435 435,710
-what sql lite does.|
+what SQLite does.|
 |
 
 2302
 01:04:32,300 --> 01:04:34,280
 0,350 400,780 780,1070 1270,1575 1575,1980
-EM, we'll discuss query compilations
-嗯，我们将在本学期晚些时候讨论查询编译。
+{All,right}, we'll discuss query compilations
+好的，我们将在本学期晚些时候讨论查询编译。
 
 2303
 01:04:34,280 --> 01:04:36,660
@@ -12942,47 +13085,49 @@ later in this semester.|
 01:04:36,930 --> 01:04:37,630
 0,230 230,305 305,380 380,455 455,700
 So you got to put
-所以你得把解释计划。
+所以你把 EXPLAIN PLAN,
 
 2305
 01:04:37,830 --> 01:04:39,380
 0,350 350,700
-explain plan.|
+EXPLAIN PLAN,|
 |
 
 2306
 01:04:41,090 --> 01:04:44,160
 0,335 335,670 1740,2140
-Planet that extended.|
-这颗行星延伸了。|
+PLAN, that EXTENDED,|
+PLAN ， EXTENDED ，|
 
 2307
 01:04:44,280 --> 01:04:45,335
 0,335 335,485 485,845 845,980 980,1055
-There's some syntax to get
-有一些语法可以获得真正的计划，不管是什么。相信我，它就在那里。
+there's some syntax to get
+有一些语法可以获得真正的计划，
 
 2308
 01:04:45,335 --> 01:04:46,595
 0,90 90,240 240,545 565,965 985,1260
-the real plan, whatever. Trust
+the real plan, whatever,| Trust
+|相信我，它就在那里。
 
 2309
 01:04:46,595 --> 01:04:47,560
 0,105 105,225 225,455 475,720 720,965
-me, it's there all right.|
-|
+me, it's there.| All right,|
+|好的，|
 
 2310
 01:04:51,390 --> 01:04:53,075
 0,400 780,1100 1100,1340 1340,1535 1535,1685
-So yeah, so they all
-所以是的，所以它们都做一些略有不同的事情，然后如果系统是智能的，您可以尝试将其转换为联接。
+so yeah, so they all
+所以，是的，所以它们都做一些略有不同的事情，
 
 2311
 01:04:53,075 --> 01:04:55,280
 0,135 135,390 390,705 705,1025 1945,2205
-do something slightly different and
+do something slightly different| and
+|然后如果系统是智能的，
 
 2312
 01:04:55,280 --> 01:04:56,120
@@ -12992,87 +13137,91 @@ then if the system is
 2313
 01:04:56,120 --> 01:04:56,600
 0,120 120,210 210,285 285,360 360,480
-smart, you can try to
+smart,| you can try to
+|你可以尝试将其转换为 JOIN 。
 
 2314
 01:04:56,600 --> 01:04:57,880
 0,135 135,225 225,470 760,1020 1020,1280
-convert it into a join.|
+convert it into a JOIN.|
 |
 
 2315
 01:04:59,960 --> 01:05:01,120
 0,410 410,665 665,860 860,1025 1025,1160
 So skip this and sake
-所以跳过这段时间吧，因为我们得熬过去。
+所以跳过这段时间，
 
 2316
 01:05:01,120 --> 01:05:02,200
 0,120 120,330 330,615 615,825 825,1080
-a time, because we got
+a time,| because we got
+|因为我们要完成，
 
 2317
 01:05:02,200 --> 01:05:05,000
 0,210 210,300 300,560
-to get through.|
+to get through,|
 |
 
 2318
 01:05:05,470 --> 01:05:06,110
 0,230 230,290 290,335 335,395 395,640
 I want to get through
-我想通过侧向连接和。
+我想完成 LATERAL JOIN 和 CTE 。
 
 2319
 01:05:06,130 --> 01:05:08,560
 0,440 440,740 740,1030
-lateral joins and.|
+LATERAL JOINs and
 |
 
 2320
 01:05:09,040 --> 01:05:12,050
 0,400 600,1150 1920,2180 2180,2525 2525,3010
-And cte so lateral joins
-侧向连接是一个较新的概念，但是。
+and CTE.| So lateral joins
+|横向连接是一个较新的概念，
 
 2321
 01:05:12,100 --> 01:05:15,050
 0,400 540,940 1740,2105 2105,2380 2550,2950
-are a newer concept, but.|
-|
+are a newer concept,| but,
+|但是，并不是所有的系统都会支持它，
 
 2322
 01:05:16,000 --> 01:05:16,855
 0,180 180,330 330,510 510,705 705,855
-And not all systems are
-并不是所有的系统都会支持它，但基本的想法是，它将允许你拥有一个。
+and not all systems are
 
 2323
 01:05:16,855 --> 01:05:18,120
 0,75 75,210 210,375 375,635 865,1265
-going to support it, but
+going to support it,| but
+|但基本的想法是，
 
 2324
 01:05:18,170 --> 01:05:19,470
 0,275 275,550 600,860 860,1010 1010,1300
-the basic idea is that
+the basic idea is that,|
+|
 
 2325
 01:05:19,610 --> 01:05:20,605
 0,320 320,380 380,485 485,755 755,995
 it's going to allow you
+它将允许你拥有一个，
 
 2326
 01:05:20,605 --> 01:05:22,300
 0,105 105,365 385,785
-to have a.|
+to have a,|
 |
 
 2327
 01:05:22,300 --> 01:05:26,640
 0,350 1300,1830 1830,2150 2680,3080 3940,4340
-A nested query reference data
-嵌套查询引用与其相邻的另一个查询中的数据。因此，通常情况下，如果您有两个Nesta查询，其中一个sa查询不能引用另一个Nesta查询中的内容，因为它不知道其中的内容，但具有横向联接。
+a nested query reference data
+嵌套查询引用与其相邻的另一个查询中的数据。
 
 2328
 01:05:26,870 --> 01:05:30,000
@@ -13082,17 +13231,20 @@ in in another query that
 2329
 01:05:30,050 --> 01:05:32,220
 0,350 350,920 920,1070 1070,1330 1770,2170
-is adjacent to it. So
+is adjacent to it.| So
+|所以，通常情况下，
 
 2330
 01:05:32,390 --> 01:05:33,910
 0,400 960,1190 1190,1265 1265,1385 1385,1520
-normally if you have two
+normally,| if you have two
+|如果你有两个嵌套查询，
 
 2331
 01:05:33,910 --> 01:05:35,590
 0,255 255,710 970,1230 1230,1485 1485,1680
-nesta queries, one sa query
+nested queries,| one nested query
+|一个嵌套查询不能引用另一个嵌套查询中的内容，
 
 2332
 01:05:35,590 --> 01:05:36,625
@@ -13102,7 +13254,8 @@ can't reference what's inside the
 2333
 01:05:36,625 --> 01:05:37,915
 0,135 135,390 390,665 865,1110 1110,1290
-other nesta query because it
+other nested query,| because it
+|因为它不知道其中的内容，
 
 2334
 01:05:37,915 --> 01:05:39,025
@@ -13112,61 +13265,64 @@ doesn't know about what's inside
 2335
 01:05:39,025 --> 01:05:40,270
 0,105 105,335 805,1050 1050,1140 1140,1245
-of it, but with a
+of it,| but with a
+|但是具有横向连接，
 
 2336
 01:05:40,270 --> 01:05:41,740
 0,450 450,740
-lateral join.|
+LATERAL JOIN,|
 |
 
 2337
 01:05:41,840 --> 01:05:42,565
 0,260 260,410 410,530 530,605 605,725
-It allows you to do
-它允许您这样做。您几乎可以认为这是一个for循环。每一个人，每一个人都有一张桌子。
+it allows you to do
+它允许你这样做，
 
 2338
 01:05:42,565 --> 01:05:43,375
 0,165 165,315 315,465 465,600 600,810
-this. You can almost think
+this,| you can almost think
+|你可以认为这是一个 for 循环，
 
 2339
 01:05:43,375 --> 01:05:45,520
 0,455 535,855 855,1080 1080,1385 1855,2145
-it's a for loop. Where
+it's a for loop,| where
+|一张表，每一个外部 for 循环中的 tuple ，
 
 2340
 01:05:45,520 --> 01:05:46,980
 0,225 225,560 730,975 975,1140 1140,1460
-one table for every single,
+one table, for every single,
 
 2341
 01:05:47,270 --> 01:05:49,120
 0,290 290,580
-every single.|
-|
+every single,
 
 2342
 01:05:49,190 --> 01:05:50,470
 0,305 305,560 560,890 890,1145 1145,1280
-Every single t in the
-外部循环中的每个单独的t，外部for循环。你可以做一些。你可以在这里运行一些查询，做一些计算。
+every single tuple in the
 
 2343
 01:05:50,470 --> 01:05:51,760
 0,260 340,645 645,825 825,1065 1065,1290
-outer, outer for loop. You
+outer, outer for loop,| you
+|你可以做一些查询，
 
 2344
 01:05:51,760 --> 01:05:53,050
 0,150 150,375 375,710 940,1185 1185,1290
-can do some. You can
+can do some, you can
 
 2345
 01:05:53,050 --> 01:05:53,815
 0,165 165,330 330,510 510,645 645,765
-run some query, do some
+run some query,| do some
+|在这里做一些计算。
 
 2346
 01:05:53,815 --> 01:05:55,060
