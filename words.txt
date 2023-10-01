@@ -5,3 +5,5 @@ relational calculus 关系演算
 ## 03
 convoy effect 护航效应
 kernel bypass 内核旁路
+slotted pages 插槽页面
+slot array 插槽阵列
