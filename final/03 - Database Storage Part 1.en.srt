@@ -1,0 +1,6596 @@
+1
+00:00:32,530 --> 00:00:33,680
+I heard a rumor,
+
+2
+00:00:34,660 --> 00:00:36,980
+I heard you used to date Larry Ellison's girlfriend.
+
+3
+00:00:44,640 --> 00:00:45,850
+What happened, he stole it from you.
+
+4
+00:00:53,880 --> 00:00:54,910
+We'll come back to that later,
+
+5
+00:00:56,730 --> 00:00:58,400
+Larry Ellison, the founder Oracle,
+
+6
+00:00:58,400 --> 00:01:00,820
+he is the fifth richest person in the world,
+
+7
+00:01:01,230 --> 00:01:02,530
+he owns a Hawaiian island,
+
+8
+00:01:03,120 --> 00:01:04,630
+all pay for by databases,
+
+9
+00:01:05,070 --> 00:01:06,580
+that's why this class exists, all right.
+
+10
+00:01:09,570 --> 00:01:10,390
+Administrative stuff,
+
+11
+00:01:10,530 --> 00:01:12,250
+so the homework #1,
+
+12
+00:01:13,020 --> 00:01:15,070
+we do this coming Sunday, the 10th,
+
+13
+00:01:15,390 --> 00:01:16,870
+project #0 is also due the 10th,
+
+14
+00:01:17,100 --> 00:01:18,850
+who here has not started project #0?
+
+15
+00:01:20,150 --> 00:01:22,320
+One, why not, two.
+
+16
+00:01:24,030 --> 00:01:24,910
+Do you know C++?
+
+17
+00:01:26,480 --> 00:01:28,320
+That a no, do you know C++?
+
+18
+00:01:29,670 --> 00:01:31,235
+Now, okay, you should really start,
+
+19
+00:01:31,235 --> 00:01:34,840
+because if if you know zero C++,
+
+20
+00:01:35,160 --> 00:01:35,945
+it will be a struggle,
+
+21
+00:01:35,945 --> 00:01:38,260
+and again we're not trying to do this to torture you,
+
+22
+00:01:38,310 --> 00:01:39,370
+it's really meant to be like,
+
+23
+00:01:40,050 --> 00:01:41,495
+this is what the rest of the course is going to be,
+
+24
+00:01:41,495 --> 00:01:42,370
+like in terms of the projects,
+
+25
+00:01:42,780 --> 00:01:44,720
+if you don't know how to write C++
+
+26
+00:01:44,720 --> 00:01:45,760
+and don't how to debug it,
+
+27
+00:01:46,170 --> 00:01:46,930
+you're going to have problems,
+
+28
+00:01:47,910 --> 00:01:50,950
+printf or standard cout is not a debug method,
+
+29
+00:01:53,370 --> 00:01:54,335
+you want to use a debugger
+
+30
+00:01:54,335 --> 00:01:55,990
+and then project #1 will be released,
+
+31
+00:01:57,030 --> 00:01:57,910
+we supposed to go out today,
+
+32
+00:01:58,080 --> 00:01:59,050
+probably will come out Friday
+
+33
+00:02:00,210 --> 00:02:01,520
+and that'll be on the buffer pool,
+
+34
+00:02:01,520 --> 00:02:03,520
+which will start teaching in in a week and half.
+
+35
+00:02:04,650 --> 00:02:06,580
+Any questions about homework #1 or project #0?
+
+36
+00:02:09,860 --> 00:02:12,370
+Okay, all right, jump to the material.
+
+37
+00:02:12,370 --> 00:02:15,360
+So last class we spent time talking about SQL
+
+38
+00:02:16,130 --> 00:02:17,875
+and all the modern things,
+
+39
+00:02:17,875 --> 00:02:21,540
+you can do with the CTE, LATERAL JOINs, nested queries, window functions and so forth.
+
+40
+00:02:22,580 --> 00:02:25,470
+Prior to that we talked about the relational model and relational algebra,
+
+41
+00:02:25,850 --> 00:02:27,780
+And so at this point,
+
+42
+00:02:27,920 --> 00:02:32,155
+that's the logical view of what the database system is going to look like,
+
+43
+00:02:32,155 --> 00:02:35,100
+that we're going to, we're sort of mentally construct throughout the rest of the semester,
+
+44
+00:02:35,690 --> 00:02:37,870
+so we're not going to go back to these, discuss these things,
+
+45
+00:02:37,870 --> 00:02:40,860
+but we'll see how we need to know what SQL looks like relational model is,
+
+46
+00:02:40,970 --> 00:02:42,870
+in order to build the various parts of the system,
+
+47
+00:02:43,340 --> 00:02:44,550
+we'll be discussing going forward.
+
+48
+00:02:44,840 --> 00:02:46,390
+So as I said at the end end of last class,
+
+49
+00:02:46,390 --> 00:02:51,100
+this point forward in the semester going forward up to around Thanksgiving is going, is going to be
+
+50
+00:02:51,100 --> 00:02:56,850
+how to build a, sort of a classic or canonical database, relational database management system.
+
+51
+00:02:58,730 --> 00:03:01,210
+So the, the outline for going forward,
+
+52
+00:03:01,210 --> 00:03:03,390
+we, we've already discussed what relational databases are,
+
+53
+00:03:04,670 --> 00:03:07,360
+but the, the first four topics here is,
+
+54
+00:03:07,360 --> 00:03:09,060
+Storage, Execution, Concurrency Control, Recovery,
+
+55
+00:03:09,500 --> 00:03:12,895
+these are the the aspects you would need to have
+
+56
+00:03:12,895 --> 00:03:18,980
+to build a, a full featured, safe, reliable database management system.
+
+57
+00:03:19,700 --> 00:03:22,810
+And we'll assume it's going running on a single node,
+
+58
+00:03:23,310 --> 00:03:24,400
+because it makes our life easier,
+
+59
+00:03:24,420 --> 00:03:25,870
+don't go distribute until you have to.
+
+60
+00:03:26,340 --> 00:03:29,860
+And then once we understand what a single node database system looks like,
+
+61
+00:03:30,060 --> 00:03:33,460
+we'll, we'll then discuss how to expand this and do distributed databases.
+
+62
+00:03:33,600 --> 00:03:34,595
+And at the end of the semester,
+
+63
+00:03:34,595 --> 00:03:36,215
+we'll talk a little bit also to about,
+
+64
+00:03:36,215 --> 00:03:39,310
+how, what other additional features and optimizations we can apply,
+
+65
+00:03:39,660 --> 00:03:42,110
+which then will be a segue into the advanced class,
+
+66
+00:03:42,110 --> 00:03:43,690
+if you want to take that in the Spring.
+
+67
+00:03:44,580 --> 00:03:46,540
+So the way to think about a database management system
+
+68
+00:03:46,620 --> 00:03:50,290
+and the way the course is laid out is a bunch of layers,
+
+69
+00:03:50,880 --> 00:03:54,910
+and the different layers are going to provide different functionality to capabilities for the database system,
+
+70
+00:03:55,500 --> 00:03:59,560
+and they're going to expose an API to whatever the layer is is above it.
+
+71
+00:04:00,130 --> 00:04:02,265
+And it the, the topics we discuss,
+
+72
+00:04:02,265 --> 00:04:04,190
+again basically how to construct those layers,
+
+73
+00:04:04,240 --> 00:04:05,025
+put it all together
+
+74
+00:04:05,025 --> 00:04:07,220
+and have a full featured database management system.
+
+75
+00:04:07,750 --> 00:04:09,165
+So the way to think about it is that,
+
+76
+00:04:09,165 --> 00:04:11,540
+the most simplistic viewpoint would be,
+
+77
+00:04:11,950 --> 00:04:13,190
+the application comes along
+
+78
+00:04:13,960 --> 00:04:15,440
+and you going to issue a SQL query
+
+79
+00:04:15,610 --> 00:04:17,570
+and that's going to first show up and get parsed,
+
+80
+00:04:18,100 --> 00:04:20,360
+the string of text of the SQL query gets parsed,
+
+81
+00:04:20,710 --> 00:04:23,685
+run through the query optimizer below that,
+
+82
+00:04:23,685 --> 00:04:25,430
+then we'll start executing whatever the Query Plan is,
+
+83
+00:04:25,630 --> 00:04:26,565
+there'll be Access Methods,
+
+84
+00:04:26,565 --> 00:04:31,280
+that to actually talk to the the tables or indexes or whatever we're trying to access,
+
+85
+00:04:31,750 --> 00:04:32,780
+that'll be a Buffer Pool Manager
+
+86
+00:04:32,830 --> 00:04:34,970
+to manage the memory for our database system,
+
+87
+00:04:35,380 --> 00:04:37,160
+and then at the lowest level will be a Disk Manager,
+
+88
+00:04:37,750 --> 00:04:41,150
+that'll be responsible for reading writing data to disk.
+
+89
+00:04:42,090 --> 00:04:43,685
+And so today's class,
+
+90
+00:04:43,685 --> 00:04:44,200
+we're going to start,
+
+91
+00:04:44,970 --> 00:04:48,400
+getting the semester at the bottom and then work our way up,
+
+92
+00:04:49,000 --> 00:04:50,790
+when we get to something like a Concurrency Control, Recovery,
+
+93
+00:04:51,230 --> 00:04:53,220
+that's going to permeate throughout the entire system,
+
+94
+00:04:53,480 --> 00:04:55,350
+so we have to come back and revisit all these things,
+
+95
+00:04:56,150 --> 00:04:59,430
+when we're running transactions, we need to know what's on disk,
+
+96
+00:04:59,720 --> 00:05:02,490
+we need to know what we're accessing, how we're accessing it,
+
+97
+00:05:03,020 --> 00:05:05,255
+what, what queries we're executing, right.
+
+98
+00:05:05,255 --> 00:05:08,350
+So the Storage, Execution will get us through the entire stack
+
+99
+00:05:08,880 --> 00:05:10,780
+and then we'll come back and touch it all over again,
+
+100
+00:05:11,670 --> 00:05:12,350
+that sounds weird,
+
+101
+00:05:12,350 --> 00:05:13,960
+but we'll look at it all over again.
+
+102
+00:05:18,060 --> 00:05:18,460
+The same thing for Distributed Databases,
+
+103
+00:05:18,690 --> 00:05:24,160
+we have to know about all these things in a reliable, safe, distributed database.
+
+104
+00:05:24,960 --> 00:05:25,280
+Okay?
+
+105
+00:05:27,090 --> 00:05:31,190
+All right, so for the system, we're going to discuss,
+
+106
+00:05:31,570 --> 00:05:33,380
+the methods we going to discuss this semester.
+
+107
+00:05:33,910 --> 00:05:36,980
+We're going to assume that the architecture of what we're trying to build,
+
+108
+00:05:37,270 --> 00:05:39,110
+again, think conceptually we're construct in our minds,
+
+109
+00:05:39,310 --> 00:05:40,250
+a database management system
+
+110
+00:05:40,360 --> 00:05:42,320
+and Bustub is one implementation of this.
+
+111
+00:05:42,950 --> 00:05:44,290
+We're going to say we're building what is called
+
+112
+00:05:44,290 --> 00:05:47,070
+a disk-based database system or a disk-oriented architecture.
+
+113
+00:05:48,410 --> 00:05:51,625
+And this is where the database management system itself is going to assume that,
+
+114
+00:05:51,625 --> 00:05:57,180
+the primary storage location of the database is going to be on some non-volatile disk,
+
+115
+00:05:57,560 --> 00:05:59,790
+could be an SSD, a spinning disk hard drive,
+
+116
+00:06:00,080 --> 00:06:01,890
+if you're running the cloud, could be S3,
+
+117
+00:06:02,990 --> 00:06:04,620
+assuming that it's going to be disk-based.
+
+118
+00:06:05,770 --> 00:06:08,510
+And all the things we're going to build in our database system
+
+119
+00:06:08,770 --> 00:06:10,220
+are really designed to now,
+
+120
+00:06:11,360 --> 00:06:16,500
+coordinate or orchestrate the movement of data back and forth from disk into memory.
+
+121
+00:06:17,720 --> 00:06:19,900
+This should not be news for anyone,
+
+122
+00:06:19,900 --> 00:06:21,300
+this is the classic [] architecture,
+
+123
+00:06:21,860 --> 00:06:24,360
+where the data is at rest on disk,
+
+124
+00:06:24,410 --> 00:06:25,560
+we can't operate it,
+
+125
+00:06:25,610 --> 00:06:26,640
+unless we bring it into memory,
+
+126
+00:06:26,660 --> 00:06:28,680
+and then the CPU can do whatever it needs to it.
+
+127
+00:06:29,370 --> 00:06:32,740
+So this is, this is the overall theme of what we're trying to build,
+
+128
+00:06:32,940 --> 00:06:34,540
+and this is obviously going to be super hard,
+
+129
+00:06:34,860 --> 00:06:37,000
+and again, if you're an application developer,
+
+130
+00:06:37,170 --> 00:06:39,610
+you don't want to be doing this yourself in your application code,
+
+131
+00:06:40,350 --> 00:06:41,390
+you want a database system,
+
+132
+00:06:41,390 --> 00:06:45,130
+that knows how to do this reliably and safely and correctly and efficiently,
+
+133
+00:06:46,560 --> 00:06:47,440
+to do it for you.
+
+134
+00:06:49,240 --> 00:06:52,010
+So the way to think about what storage looks like
+
+135
+00:06:52,360 --> 00:06:54,890
+from our perspective as from a database system is,
+
+136
+00:06:54,940 --> 00:06:56,130
+in terms of this hierarchy,
+
+137
+00:06:56,130 --> 00:06:59,540
+and you might have seen this in other classes or other other textbooks,
+
+138
+00:07:00,550 --> 00:07:01,880
+and the way to think about this is that,
+
+139
+00:07:02,260 --> 00:07:03,890
+going from the bottom to the top,
+
+140
+00:07:04,270 --> 00:07:09,740
+the, the storage devices are going to get faster, but smaller and more expensive,
+
+141
+00:07:10,490 --> 00:07:11,905
+so at the bottom layer here,
+
+142
+00:07:11,905 --> 00:07:13,260
+you have something like network storage,
+
+143
+00:07:14,060 --> 00:07:15,960
+this would be EBS or S3,
+
+144
+00:07:16,640 --> 00:07:18,445
+I think in in the textbook,
+
+145
+00:07:18,445 --> 00:07:19,390
+there's a layer below this,
+
+146
+00:07:19,390 --> 00:07:20,305
+they have tape drives,
+
+147
+00:07:20,305 --> 00:07:23,070
+but nobody runs database systems off those anymore.
+
+148
+00:07:24,110 --> 00:07:25,750
+But like as you go up,
+
+149
+00:07:25,750 --> 00:07:26,545
+after network storage
+
+150
+00:07:26,545 --> 00:07:28,770
+and you have like a locally attached spinning disk hard drive,
+
+151
+00:07:29,030 --> 00:07:30,450
+and then you have maybe like an SSD
+
+152
+00:07:30,800 --> 00:07:32,095
+and then after that you have DRAM,
+
+153
+00:07:32,095 --> 00:07:33,100
+then CPU caches
+
+154
+00:07:33,100 --> 00:07:35,490
+and now CPU registers, right.
+
+155
+00:07:35,490 --> 00:07:37,430
+CPU registers are super fast,
+
+156
+00:07:38,320 --> 00:07:39,600
+it's the fastest kind of [] you can have,
+
+157
+00:07:39,600 --> 00:07:40,590
+but like we're talking,
+
+158
+00:07:40,590 --> 00:07:41,700
+you have maybe, I don't know,
+
+159
+00:07:41,700 --> 00:07:43,460
+32 registers on your CPU
+
+160
+00:07:43,750 --> 00:07:46,110
+and each one's going to be about 64 bits, right,
+
+161
+00:07:46,110 --> 00:07:47,360
+you can't store a lot of space in there,
+
+162
+00:07:47,440 --> 00:07:48,530
+store a lot of things in there,
+
+163
+00:07:50,750 --> 00:07:51,660
+but they're going to be super fast.
+
+164
+00:07:52,780 --> 00:07:54,890
+So from our perspective in this semester,
+
+165
+00:07:55,390 --> 00:07:58,010
+the only thing we really care about is this division line here,
+
+166
+00:07:59,105 --> 00:08:00,970
+and that's between volatile and non-volatile storage,
+
+167
+00:08:02,020 --> 00:08:03,140
+obviously, what does volatile mean,
+
+168
+00:08:03,280 --> 00:08:04,190
+we have volatile storage.
+
+169
+00:08:06,610 --> 00:08:06,900
+What's that?
+
+170
+00:08:09,190 --> 00:08:11,340
+Yeah, it says data gone, when you when you when you power is gone,
+
+171
+00:08:11,340 --> 00:08:13,970
+you pull the plug on your DRAM or your CPU registers,
+
+172
+00:08:14,020 --> 00:08:15,170
+like everything gets wiped out,
+
+173
+00:08:15,340 --> 00:08:16,455
+when you boot the systemt back up,
+
+174
+00:08:16,455 --> 00:08:17,300
+nothing's still there.
+
+175
+00:08:17,830 --> 00:08:21,170
+Non-volatile basically means that you write data to the device,
+
+176
+00:08:21,940 --> 00:08:25,150
+and assuming that you make the calls to tell them,
+
+177
+00:08:25,150 --> 00:08:27,570
+get flushed, or you get back an acknowledgement,
+
+178
+00:08:27,740 --> 00:08:28,770
+we'll cover that later,
+
+179
+00:08:29,090 --> 00:08:31,710
+then we assume that data is going to be persistent,
+
+180
+00:08:32,290 --> 00:08:35,720
+and that no matter if we restart the system, pull the power,
+
+181
+00:08:36,130 --> 00:08:38,300
+take the machine out, put it into another location, whatever,
+
+182
+00:08:38,470 --> 00:08:40,220
+when we come back, that our data will be there.
+
+183
+00:08:41,060 --> 00:08:43,050
+Of course, database systems, we don't trust the hardware,
+
+184
+00:08:43,400 --> 00:08:44,290
+we don't trust the OS too,
+
+185
+00:08:44,290 --> 00:08:44,970
+we'll get that in a second,
+
+186
+00:08:45,320 --> 00:08:46,140
+we don't trust any of,
+
+187
+00:08:46,190 --> 00:08:47,560
+so we're going to do a bunch of extra stuff
+
+188
+00:08:47,560 --> 00:08:49,200
+to make sure that if we write stuff,
+
+189
+00:08:49,460 --> 00:08:50,970
+maybe we write to multiple locations,
+
+190
+00:08:51,110 --> 00:08:52,440
+where we write a backup for it, right,
+
+191
+00:08:52,580 --> 00:08:53,515
+a bunch of things we'll do
+
+192
+00:08:53,515 --> 00:08:56,310
+to make sure that we we truly get non-volatile storage.
+
+193
+00:08:56,510 --> 00:08:59,640
+But from the design of the, the architecture itself,
+
+194
+00:08:59,840 --> 00:09:03,750
+we'll assume that you know, it's volatile versus it non-volatile.
+
+195
+00:09:05,010 --> 00:09:07,930
+Another key difference we're going to see between volatile and non-volatile is
+
+196
+00:09:08,550 --> 00:09:09,880
+how we can access the data,
+
+197
+00:09:10,690 --> 00:09:13,790
+so non-volatile storage will be considered to be byte addressable,
+
+198
+00:09:14,690 --> 00:09:15,420
+what does that mean?
+
+199
+00:09:19,830 --> 00:09:22,780
+Each, he says, you can query each individual byte, correct.
+
+200
+00:09:22,800 --> 00:09:24,910
+So let's say I have one megabyte file,
+
+201
+00:09:27,240 --> 00:09:29,950
+I want to get 64 bits at some random offset,
+
+202
+00:09:30,270 --> 00:09:31,420
+I can do that in memory,
+
+203
+00:09:32,640 --> 00:09:34,340
+there's cache lines, is not exactly true,
+
+204
+00:09:34,340 --> 00:09:35,890
+but for now we can ignore that,
+
+205
+00:09:36,300 --> 00:09:38,075
+in a non-volatile storage,
+
+206
+00:09:38,075 --> 00:09:39,160
+like, think of it an SSD,
+
+207
+00:09:39,510 --> 00:09:42,550
+you can't go get exactly 64 bits in a one megabyte file,
+
+208
+00:09:43,280 --> 00:09:46,150
+you got to go get the block that that 64 bits is in,
+
+209
+00:09:46,470 --> 00:09:47,285
+bring that into memory
+
+210
+00:09:47,285 --> 00:09:48,700
+and then do whatever you need on it,
+
+211
+00:09:49,420 --> 00:09:53,540
+so you can only address blocks, not individual bytes.
+
+212
+00:09:54,710 --> 00:09:56,640
+And so the reason why this matters is that,
+
+213
+00:09:57,200 --> 00:10:01,050
+there'll be certain algorithms we choose in the design of our system,
+
+214
+00:10:01,070 --> 00:10:05,700
+where we know we're fetching blocks instead of single bytes or byte offsets,
+
+215
+00:10:05,930 --> 00:10:09,150
+and therefore we'll choose maybe an algorithm that is better for block adjustable data,
+
+216
+00:10:10,160 --> 00:10:12,325
+related to this, we're also going to choose potentially algorithms,
+
+217
+00:10:12,325 --> 00:10:17,700
+that maximize the amount of sequential access of our data.
+
+218
+00:10:18,870 --> 00:10:19,960
+So what do I mean by this?
+
+219
+00:10:28,970 --> 00:10:32,100
+So he said accessing adjacent blocks are are cheaper,
+
+220
+00:10:32,300 --> 00:10:33,625
+so we want to do that as much as possible,
+
+221
+00:10:33,625 --> 00:10:38,020
+so again, say I want to get, I want to get 10 megabytes
+
+222
+00:10:38,130 --> 00:10:41,590
+and I have in [program] to 1 megabyte blocks,
+
+223
+00:10:41,880 --> 00:10:44,170
+if those 1 megabyte blocks are scattered in different locations,
+
+224
+00:10:44,520 --> 00:10:46,085
+then it's called random access,
+
+225
+00:10:46,085 --> 00:10:48,010
+go jump to those different locations to get that data,
+
+226
+00:10:48,660 --> 00:10:52,010
+or alternatively, if it's all aligned together, contiguous,
+
+227
+00:10:52,210 --> 00:10:54,200
+then in theory, I can do one fetch command,
+
+228
+00:10:54,640 --> 00:10:55,830
+I'm not saying what the device is,
+
+229
+00:10:55,830 --> 00:10:59,420
+but it's one fetch command to go get those 10 1 megabyte blocks
+
+230
+00:10:59,890 --> 00:11:02,550
+and that's gonna be way more efficient, right.
+
+231
+00:11:03,500 --> 00:11:06,295
+If you just think of like on a website or download something about the Internet,
+
+232
+00:11:06,295 --> 00:11:09,295
+if I can go open up a single connection and get all the data,
+
+233
+00:11:09,295 --> 00:11:10,800
+I need rather than opening up different connections,
+
+234
+00:11:11,690 --> 00:11:13,260
+the the one fetch, it's going to be faster.
+
+235
+00:11:14,510 --> 00:11:15,370
+At the hardware level,
+
+236
+00:11:15,370 --> 00:11:16,645
+think of like a spinning disk hard drive
+
+237
+00:11:16,645 --> 00:11:18,175
+and laptops don't come with these anymore,
+
+238
+00:11:18,175 --> 00:11:19,800
+they still exist in the enterprise world,
+
+239
+00:11:20,090 --> 00:11:23,290
+but there's, there's a physical arm that's spinning around on a platter,
+
+240
+00:11:23,290 --> 00:11:24,850
+like a vinyl record, right,
+
+241
+00:11:24,850 --> 00:11:25,890
+like that old people have,
+
+242
+00:11:26,120 --> 00:11:29,130
+and so if you had to plot move the arm to get data,
+
+243
+00:11:29,600 --> 00:11:31,855
+moving that arm is it's a physical thing,
+
+244
+00:11:31,855 --> 00:11:32,395
+it's expensive,
+
+245
+00:11:32,395 --> 00:11:36,100
+it's you're actually moving something through through [helium],
+
+246
+00:11:36,100 --> 00:11:39,120
+but you're moving something, moving the arm on the platter.
+
+247
+00:11:40,730 --> 00:11:42,760
+If I have to, if I can just move the arm once
+
+248
+00:11:42,760 --> 00:11:44,880
+and then read a bunch of data without moving it again,
+
+249
+00:11:45,020 --> 00:11:45,955
+that's sequential access,
+
+250
+00:11:45,955 --> 00:11:46,620
+that's to be faster,
+
+251
+00:11:46,880 --> 00:11:49,020
+if I had to pick the arm up and move it over and over again,
+
+252
+00:11:49,100 --> 00:11:50,160
+then that's going much slower.
+
+253
+00:11:50,330 --> 00:11:51,600
+And again, we'll see this,
+
+254
+00:11:51,620 --> 00:11:55,110
+when this come up in the execution algorithms,
+
+255
+00:11:55,490 --> 00:11:59,430
+that certain algorithms will choose that will maximize sequential access.
+
+256
+00:12:00,160 --> 00:12:02,110
+And we'll choose those over something that's more random access,
+
+257
+00:12:02,110 --> 00:12:05,790
+and this is different than maybe how you think about algorithms in intro classes,
+
+258
+00:12:05,840 --> 00:12:07,225
+because in that world,
+
+259
+00:12:07,225 --> 00:12:10,830
+they assume everything's always going to be the memory, access is always the same,
+
+260
+00:12:11,960 --> 00:12:13,435
+in our world, we're dealing with real hardware,
+
+261
+00:12:13,435 --> 00:12:14,820
+so we can't make that assumption.
+
+262
+00:12:16,960 --> 00:12:19,120
+All right, so, let me talk about,
+
+263
+00:12:19,380 --> 00:12:20,980
+so the way we'll think about this is that,
+
+264
+00:12:21,390 --> 00:12:23,165
+I'll use the term memory in this class
+
+265
+00:12:23,165 --> 00:12:25,630
+and I'll just mean here. I'll just mean, mean DRAM,
+
+266
+00:12:26,610 --> 00:12:27,710
+and when I say disk,
+
+267
+00:12:27,710 --> 00:12:29,530
+I'm going to mean anything below that, right,
+
+268
+00:12:29,820 --> 00:12:34,090
+so an SSD, spinning disk hard drive or a network cloud storage.
+
+269
+00:12:35,080 --> 00:12:37,460
+The, the, the ones up here, the CPU registers,
+
+270
+00:12:37,780 --> 00:12:39,290
+we won't discuss these in this class,
+
+271
+00:12:39,580 --> 00:12:40,920
+in the advanced class,
+
+272
+00:12:40,920 --> 00:12:42,800
+we'll talk about different algorithms of the methods to
+
+273
+00:12:42,910 --> 00:12:48,920
+try to maximize the amount of processing being do of data in CPU registers or L3 L2 caches,
+
+274
+00:12:49,420 --> 00:12:50,880
+and in that world, you can make a huge difference.
+
+275
+00:12:52,860 --> 00:12:53,810
+It's also worth noting,
+
+276
+00:12:53,810 --> 00:12:56,570
+there are some emerging hardware devices or hardware,
+
+277
+00:12:56,570 --> 00:12:59,740
+that's available today that spans different layers,
+
+278
+00:13:00,890 --> 00:13:05,280
+so you can get sort of fast network storage or disaggregated storage or disaggregated memory,
+
+279
+00:13:05,600 --> 00:13:06,840
+where this looks like,
+
+280
+00:13:08,480 --> 00:13:10,645
+it could potentially could be by addressable,
+
+281
+00:13:10,645 --> 00:13:13,045
+but you're going over a physical network,
+
+282
+00:13:13,045 --> 00:13:13,890
+so it's a little bit slower,
+
+283
+00:13:15,110 --> 00:13:17,100
+so it sort of straddles in between here.
+
+284
+00:13:18,230 --> 00:13:19,980
+And then there was something called persistent memory,
+
+285
+00:13:20,540 --> 00:13:23,610
+that people have been dreaming about for a long time,
+
+286
+00:13:23,900 --> 00:13:28,830
+that would have the benefits, have the by addressability of DRAM,
+
+287
+00:13:29,000 --> 00:13:32,790
+but also the persistence of of an SSD
+
+288
+00:13:33,200 --> 00:13:34,675
+and it would actually sit in the [dim slot],
+
+289
+00:13:34,675 --> 00:13:38,065
+so you could write to it as if it was memory,
+
+290
+00:13:38,065 --> 00:13:40,230
+but if you pull the plug, everything gets retained.
+
+291
+00:13:41,250 --> 00:13:46,000
+And this is something when I, when I first started CMU, 10 years ago,
+
+292
+00:13:46,950 --> 00:13:48,590
+we were spending a lot of time researching this,
+
+293
+00:13:48,590 --> 00:13:50,020
+this is something that was very interesting about,
+
+294
+00:13:50,100 --> 00:13:52,120
+because if we had this persistent memory,
+
+295
+00:13:52,830 --> 00:13:56,225
+basically all the stuff that I'm going to talk about in two weeks,
+
+296
+00:13:56,225 --> 00:13:59,950
+actually, project one in this class basically goes away, right,
+
+297
+00:13:59,950 --> 00:14:02,010
+because I don't need to worry about moving things in and out of disk,
+
+298
+00:14:02,810 --> 00:14:03,810
+everything in memory is persistent.
+
+299
+00:14:05,250 --> 00:14:07,450
+They might know if anybody actually to make this,
+
+300
+00:14:07,620 --> 00:14:08,950
+this persistent non-volatile memory.
+
+301
+00:14:09,830 --> 00:14:15,450
+Yes, boom, there you go.
+
+302
+00:14:18,140 --> 00:14:20,485
+Yes, so he said you could try this with an SSD,
+
+303
+00:14:20,485 --> 00:14:21,145
+asked people to do that,
+
+304
+00:14:21,145 --> 00:14:22,440
+but that's not true persistent memory.
+
+305
+00:14:22,910 --> 00:14:24,420
+Or then you said Intel OPTANE,
+
+306
+00:14:24,560 --> 00:14:26,245
+Intel OPTANE actually was an SSD,
+
+307
+00:14:26,245 --> 00:14:27,730
+it was actually phase change memory,
+
+308
+00:14:27,730 --> 00:14:29,110
+it actually was a physical device,
+
+309
+00:14:29,110 --> 00:14:31,730
+that could do was persistent memory, right,
+
+310
+00:14:32,140 --> 00:14:33,405
+HP had [memory registers],
+
+311
+00:14:33,405 --> 00:14:35,090
+there was IBM rumored has something,
+
+312
+00:14:35,440 --> 00:14:37,220
+Intel is the only one that actually made this.
+
+313
+00:14:38,420 --> 00:14:39,990
+Who here has heard of Intel OPTANE?
+
+314
+00:14:40,370 --> 00:14:42,360
+Well, he obviously yes, very, very few.
+
+315
+00:14:44,030 --> 00:14:45,150
+It's, it's already dead,
+
+316
+00:14:45,590 --> 00:14:46,890
+so Intel killed it last year,
+
+317
+00:14:48,080 --> 00:14:50,155
+basically, Intel hired a new CEO
+
+318
+00:14:50,155 --> 00:14:51,580
+and they cut a bunch of divisions
+
+319
+00:14:51,580 --> 00:14:53,320
+and unfortunately, they cut this,
+
+320
+00:14:53,320 --> 00:14:53,920
+and this sucks,
+
+321
+00:14:53,920 --> 00:14:54,505
+because like, to me,
+
+322
+00:14:54,505 --> 00:14:56,815
+this is like, this would have been a game changer,
+
+323
+00:14:56,815 --> 00:14:59,160
+but Intel couldn't make any money off of it,
+
+324
+00:14:59,270 --> 00:15:00,565
+and what sucks also too is like,
+
+325
+00:15:00,565 --> 00:15:02,310
+now no one's going to try this for another decade,
+
+326
+00:15:02,870 --> 00:15:05,130
+because if Intel couldn't make money off of it,
+
+327
+00:15:05,480 --> 00:15:06,700
+who will, right.
+
+328
+00:15:07,650 --> 00:15:10,550
+But there was a various projects at different database companies,
+
+329
+00:15:10,550 --> 00:15:14,710
+they were trying to build database systems just around persistent memory,
+
+330
+00:15:14,970 --> 00:15:16,655
+because again, a bunch of the stuff we had to do
+
+331
+00:15:16,655 --> 00:15:20,440
+with moving data back and forth between disk and memory goes away with this.
+
+332
+00:15:21,060 --> 00:15:21,880
+So that's a shame.
+
+333
+00:15:23,340 --> 00:15:27,005
+Okay, so the reason why we have to be cognizant
+
+334
+00:15:27,005 --> 00:15:28,550
+of what the storage are going to look like is,
+
+335
+00:15:28,550 --> 00:15:30,220
+because the performance characteristics,
+
+336
+00:15:30,840 --> 00:15:34,030
+as I said, between these different devices are going to be dramatically different,
+
+337
+00:15:35,140 --> 00:15:38,985
+and we're going to try to maximize the amount of work we can do
+
+338
+00:15:38,985 --> 00:15:40,650
+for data when it's in memory,
+
+339
+00:15:40,650 --> 00:15:42,620
+when we bring something off a disk into memory,
+
+340
+00:15:42,850 --> 00:15:45,560
+we want to do as much work as we can on that, on that data,
+
+341
+00:15:45,820 --> 00:15:48,940
+before we throw it away and bring something else into memory, right.
+
+342
+00:15:48,940 --> 00:15:51,480
+In an ideal world, our database would fit entirely in memory,
+
+343
+00:15:52,040 --> 00:15:53,470
+even then you have to write out the disk,
+
+344
+00:15:53,470 --> 00:15:55,200
+but in some cases that's not always possible.
+
+345
+00:15:56,570 --> 00:15:57,820
+So the way to this,
+
+346
+00:15:57,820 --> 00:16:03,000
+at the CPU level, right, a cache miss is going to basically is going one nanosecond,
+
+347
+00:16:03,410 --> 00:16:05,820
+getting out of DRAM is hundred hundred nanoseconds
+
+348
+00:16:05,960 --> 00:16:09,835
+and ssd is about 16 microconds or 16,000 nanoseconds,
+
+349
+00:16:09,835 --> 00:16:10,770
+that's actually pretty good,
+
+350
+00:16:11,120 --> 00:16:13,770
+spinning disk hard drive two, two million nanoseconds
+
+351
+00:16:13,790 --> 00:16:15,685
+and then EBS can fluctuate,
+
+352
+00:16:15,685 --> 00:16:18,300
+sometimes you get 50 milliseconds, sometimes you get 500 milliseconds,
+
+353
+00:16:18,350 --> 00:16:20,010
+depends on how hot the data is
+
+354
+00:16:20,120 --> 00:16:23,580
+and then tape archives, again this is, this is [glacial],
+
+355
+00:16:23,580 --> 00:16:25,400
+you don't, you don't want to build any system off this.
+
+356
+00:16:25,870 --> 00:16:27,735
+So this, this data comes from,
+
+357
+00:16:27,735 --> 00:16:29,685
+this particular data here comes out,
+
+358
+00:16:29,685 --> 00:16:31,190
+there's a Berkeley website and a link there,
+
+359
+00:16:31,360 --> 00:16:33,260
+he sort of shows you the trends of the hardware performance
+
+360
+00:16:33,400 --> 00:16:35,480
+or the the speeds of these devices over time,
+
+361
+00:16:35,890 --> 00:16:40,860
+it's this, this table has been attributed to Jeff Dean from the early 2000s,
+
+362
+00:16:40,860 --> 00:16:43,970
+actually I think it might predate him before that.
+
+363
+00:16:44,350 --> 00:16:47,540
+And so as humans, it's hard for us to reason about nanoseconds, right,
+
+364
+00:16:47,860 --> 00:16:49,530
+like one nanosecond, what does that actually mean
+
+365
+00:16:49,530 --> 00:16:51,920
+or, or, you know 2 million nanoseconds. Is that a long time?
+
+366
+00:16:52,320 --> 00:16:55,955
+And so there's a simple trick you can do to realize
+
+367
+00:16:55,955 --> 00:16:57,995
+how much, how bad this actually is,
+
+368
+00:16:57,995 --> 00:16:59,320
+or how much slower things actually get,
+
+369
+00:16:59,640 --> 00:17:03,520
+if you just change one nanosecond to one second, right.
+
+370
+00:17:04,170 --> 00:17:04,910
+So this is a trick,
+
+371
+00:17:04,910 --> 00:17:08,530
+that this is something that Jim Gray used to do in the 90s,
+
+372
+00:17:09,000 --> 00:17:11,500
+if you just change one nanosecond to one second,
+
+373
+00:17:11,670 --> 00:17:15,070
+now you see how massively slower these other devices are,
+
+374
+00:17:15,150 --> 00:17:18,670
+you see why you want to keep everything in memory as much as possible, right.
+
+375
+00:17:19,140 --> 00:17:20,240
+And so you think,
+
+376
+00:17:20,240 --> 00:17:22,090
+like if I have to read a page from a book
+
+377
+00:17:22,890 --> 00:17:27,790
+and say, you know, doing L1 cache miss would be like me walking at this table and looking in the book, right,
+
+378
+00:17:27,930 --> 00:17:30,365
+or if I have to read from an SSD or DRAM,
+
+379
+00:17:30,365 --> 00:17:32,350
+maybe it's walking over to the library and then finding the book,
+
+380
+00:17:33,420 --> 00:17:34,910
+but if I have to read from a tape archive,
+
+381
+00:17:34,910 --> 00:17:38,380
+it's 31 years. That's equivalent to flying to Pluto, the planet,
+
+382
+00:17:38,610 --> 00:17:39,610
+and then reading one book.
+
+383
+00:17:39,840 --> 00:17:41,890
+So we want to avoid all of this as much as possible.
+
+384
+00:17:43,170 --> 00:17:43,570
+Okay?
+
+385
+00:17:45,300 --> 00:17:46,400
+So the sequential versus random,
+
+386
+00:17:46,400 --> 00:17:48,305
+we've occurred this, we, we discussed this already,
+
+387
+00:17:48,305 --> 00:17:51,965
+but again this is going to be a reoccurring theme, throughout the entire semester,
+
+388
+00:17:51,965 --> 00:17:56,375
+where again the the database system is going to prefer sequential access over random access,
+
+389
+00:17:56,375 --> 00:17:57,250
+for both reads and writes,
+
+390
+00:17:58,590 --> 00:18:00,610
+when spinning disk hard drives, again it makes a huge difference,
+
+391
+00:18:00,660 --> 00:18:01,780
+but even on SSD,
+
+392
+00:18:02,280 --> 00:18:04,910
+because of the way they, they actually work underneath the covers with the []
+
+393
+00:18:04,910 --> 00:18:06,250
+and then doing compaction and so forth,
+
+394
+00:18:06,510 --> 00:18:12,270
+you're, you're better off doing batch region writes sequentially as much as possible, right.
+
+395
+00:18:15,720 --> 00:18:17,620
+All right, so the other system design goals we're going to have
+
+396
+00:18:17,880 --> 00:18:21,730
+and how we choose, how we want to build our system is that,
+
+397
+00:18:21,870 --> 00:18:23,020
+we want to give the illusion,
+
+398
+00:18:23,250 --> 00:18:26,800
+that we are operating with the database entirely in memory,
+
+399
+00:18:27,820 --> 00:18:30,255
+again, for most databases aren't that big,
+
+400
+00:18:30,255 --> 00:18:32,870
+most databases are less than 10 gigabytes, right,
+
+401
+00:18:33,070 --> 00:18:37,700
+but really massive databases like the terabytes, gigabytes and terabytes, petabytes,
+
+402
+00:18:37,750 --> 00:18:41,030
+ideally you want to give the appearance that,
+
+403
+00:18:41,870 --> 00:18:42,670
+everything is already in memory,
+
+404
+00:18:42,670 --> 00:18:43,980
+even though it actually isn't,
+
+405
+00:18:44,890 --> 00:18:47,070
+and there's tricks we can do to hide the disk [] and so forth.
+
+406
+00:18:48,160 --> 00:18:51,170
+And then, as since reading writing disk is so expensive,
+
+407
+00:18:52,750 --> 00:18:55,550
+we want to do a bunch of other tricks in our design of our system
+
+408
+00:18:55,630 --> 00:19:01,520
+to avoid prolonged stalls or having the system appear unresponsive, right,
+
+409
+00:19:01,520 --> 00:19:03,905
+because one that'll frustrate the application or frustrate the user,
+
+410
+00:19:03,905 --> 00:19:05,710
+because they think the system's stuck,
+
+411
+00:19:06,540 --> 00:19:08,050
+but you're really fetching things from disk,
+
+412
+00:19:08,370 --> 00:19:09,905
+but this also is going to cause other problems,
+
+413
+00:19:09,905 --> 00:19:12,785
+because if we're holding like a lock on something and we stall,
+
+414
+00:19:12,785 --> 00:19:15,100
+because we have to get something from disk or write something from disk,
+
+415
+00:19:15,360 --> 00:19:17,560
+that's gonna slow down everybody else behind us,
+
+416
+00:19:18,480 --> 00:19:19,475
+and have a convoy effect.
+
+417
+00:19:19,475 --> 00:19:20,315
+So there's a bunch of,
+
+418
+00:19:20,315 --> 00:19:23,050
+you know, for this reason we want to avoid this as much as possible,
+
+419
+00:19:23,990 --> 00:19:27,390
+and again, because random access is slower than its sequential access,
+
+420
+00:19:27,740 --> 00:19:29,190
+we want to maximize sequential access.
+
+421
+00:19:31,580 --> 00:19:32,790
+So what does this all sound like,
+
+422
+00:19:35,180 --> 00:19:37,650
+having the appearance we have more memory than we actually do,
+
+423
+00:19:39,380 --> 00:19:39,990
+virtual memory,
+
+424
+00:19:40,850 --> 00:19:41,760
+so we'll get this in a second,
+
+425
+00:19:42,230 --> 00:19:44,610
+I'll explain why we don't want to do virtual memory from the OS
+
+426
+00:19:44,810 --> 00:19:48,870
+and why, as a database system developer, engineer building the actual system,
+
+427
+00:19:49,340 --> 00:19:51,895
+we always want to do as much as we can ourselves
+
+428
+00:19:51,895 --> 00:19:53,730
+and not rely on the OS to do anything.
+
+429
+00:19:55,070 --> 00:19:57,040
+So, high level, this is our diagram,
+
+430
+00:19:57,040 --> 00:19:57,600
+this is what we're building,
+
+431
+00:19:58,070 --> 00:20:01,350
+so we have some database file or files, plural,
+
+432
+00:20:02,000 --> 00:20:02,700
+it doesn't matter,
+
+433
+00:20:03,290 --> 00:20:04,440
+we can discuss the differences,
+
+434
+00:20:04,880 --> 00:20:07,200
+we have some database file that's on disk
+
+435
+00:20:07,460 --> 00:20:08,940
+and we're going to break it up into pages,
+
+436
+00:20:09,730 --> 00:20:11,810
+and I'll describe what a page in a second,
+
+437
+00:20:12,160 --> 00:20:13,830
+and there'll be some directory that's going to say,
+
+438
+00:20:13,830 --> 00:20:15,660
+here's what pages I have, here's where to find them,
+
+439
+00:20:15,660 --> 00:20:16,730
+that's all set and so forth.
+
+440
+00:20:17,670 --> 00:20:19,840
+And then there'll be some buffer pool,
+
+441
+00:20:20,250 --> 00:20:23,140
+where of memory the database system is allocated,
+
+442
+00:20:23,310 --> 00:20:25,810
+basically called malloc against the OS, got some memory,
+
+443
+00:20:26,370 --> 00:20:28,480
+and then we're going to use that as the staging area
+
+444
+00:20:28,530 --> 00:20:30,580
+where we bring pages in from disk.
+
+445
+00:20:31,540 --> 00:20:32,820
+So now if the execution engine,
+
+446
+00:20:32,820 --> 00:20:34,760
+the thing that's going to run our query comes along
+
+447
+00:20:35,110 --> 00:20:37,700
+and it wants to get page #2,
+
+448
+00:20:38,360 --> 00:20:42,550
+we can ignore how it knows, it wants page #2 for now,
+
+449
+00:20:42,690 --> 00:20:44,530
+but assumes that's what it wants one, page #2.
+
+450
+00:20:45,160 --> 00:20:47,515
+So the very first thing we got to do is bring in the page directory,
+
+451
+00:20:47,515 --> 00:20:51,480
+because that's going to tell us where, where on disk the pages are,
+
+452
+00:20:51,950 --> 00:20:54,120
+and then it'll make a call to the OS
+
+453
+00:20:54,560 --> 00:20:57,630
+or whatever the device it is that's storing the database file,
+
+454
+00:20:57,800 --> 00:20:59,640
+and it'll bring that page into memory.
+
+455
+00:21:00,200 --> 00:21:05,915
+And then now the buffer pool will give back the execution engine, a pointer in memory,
+
+456
+00:21:05,915 --> 00:21:10,300
+a 64 bit pointer in memory of where this page exists,
+
+457
+00:21:11,410 --> 00:21:14,060
+and now it's up to the execution engine or the access method, the operators
+
+458
+00:21:14,260 --> 00:21:15,950
+to then interpret what's inside that page,
+
+459
+00:21:16,740 --> 00:21:19,995
+because all that's opaque to the, to the rest of the system,
+
+460
+00:21:19,995 --> 00:21:20,480
+they don't,
+
+461
+00:21:21,205 --> 00:21:21,760
+it's not entirely true,
+
+462
+00:21:21,760 --> 00:21:23,220
+but at this point, they don't really need know.
+
+463
+00:21:23,980 --> 00:21:25,645
+And then let's say once you do a bunch of updates,
+
+464
+00:21:25,645 --> 00:21:28,200
+it makes, makes changes to whatever's in page #2,
+
+465
+00:21:28,340 --> 00:21:29,500
+I'm not saying whether it's a tuple,
+
+466
+00:21:29,500 --> 00:21:30,400
+I'm not saying whether it's an index,
+
+467
+00:21:30,400 --> 00:21:30,990
+it doesn't matter.
+
+468
+00:21:31,950 --> 00:21:35,645
+And then now the database system is responsible for writing this back out to disk
+
+469
+00:21:35,645 --> 00:21:37,330
+to make sure that any changes are persistent.
+
+470
+00:21:38,990 --> 00:21:42,270
+So this is, this is effectively where we're going for the next three or four lectures,
+
+471
+00:21:43,010 --> 00:21:44,790
+this is the architecture we're going to be building,
+
+472
+00:21:45,380 --> 00:21:47,610
+so we'll discuss what pages look like
+
+473
+00:21:48,110 --> 00:21:50,190
+in the next three lectures, 3, 4 and 5,
+
+474
+00:21:50,630 --> 00:21:53,640
+we'll discuss how to write things out the disk in 6
+
+475
+00:21:54,740 --> 00:21:56,730
+and what, how to manage memory in 6,
+
+476
+00:21:57,200 --> 00:22:00,660
+and then we'll discuss how to execute the queries, appear in 12 and 13.
+
+477
+00:22:03,590 --> 00:22:05,100
+So our focus really today is,
+
+478
+00:22:06,450 --> 00:22:08,020
+what are these things on disk?
+
+479
+00:22:09,030 --> 00:22:09,430
+Okay.
+
+480
+00:22:10,670 --> 00:22:12,390
+So I said before, what does this sound like?
+
+481
+00:22:13,160 --> 00:22:14,040
+Everyone said virtual memory
+
+482
+00:22:14,630 --> 00:22:18,895
+and you say, okay, well why do, why take the next three lectures talking,
+
+483
+00:22:18,895 --> 00:22:23,580
+about you need this lecture? Why take the next two lectures after that,
+
+484
+00:22:23,720 --> 00:22:25,830
+talk about how to manage memory back and forth from disk,
+
+485
+00:22:25,850 --> 00:22:27,150
+when the OS can do that for us.
+
+486
+00:22:28,250 --> 00:22:31,770
+Do you know what's the syscall you would use to use virtual memory in this way,
+
+487
+00:22:33,510 --> 00:22:35,080
+mmap, beautiful, excellent,
+
+488
+00:22:35,610 --> 00:22:36,460
+{so,the,answer,is,memory map file,
+
+489
+00:22:36,840 --> 00:22:38,140
+so this is in the POSIX Standard,
+
+490
+00:22:38,640 --> 00:22:40,030
+Windows has their own version of it,
+
+491
+00:22:40,290 --> 00:22:43,840
+but this allows you to take the contents of a file that's on disk
+
+492
+00:22:44,070 --> 00:22:47,710
+and you map it into virtual memory in your process,
+
+493
+00:22:47,940 --> 00:22:49,210
+in the address of your process,
+
+494
+00:22:49,860 --> 00:22:55,390
+and then now that process can jump to any offset in that address space in memory,
+
+495
+00:22:56,100 --> 00:22:58,065
+and the OS is responsible for deciding,
+
+496
+00:22:58,065 --> 00:22:59,930
+oh, is the thing you need in memory or not,
+
+497
+00:23:00,160 --> 00:23:02,430
+if not, then it goes and fetches the page you need
+
+498
+00:23:02,430 --> 00:23:04,750
+and brings it in memory, right.
+
+499
+00:23:05,530 --> 00:23:07,880
+So the database system doesn't, is not doing any of the [reason] writes,
+
+500
+00:23:08,200 --> 00:23:09,800
+it just mmap opens the file
+
+501
+00:23:10,270 --> 00:23:12,740
+and the OS does all the management of the data,
+
+502
+00:23:12,790 --> 00:23:14,150
+moving the data back and forth forth for us.
+
+503
+00:23:15,460 --> 00:23:16,320
+So it sort of look like this,
+
+504
+00:23:16,320 --> 00:23:17,175
+we have an on disk file,
+
+505
+00:23:17,175 --> 00:23:17,840
+we have a bunch of pages,
+
+506
+00:23:19,700 --> 00:23:21,040
+we call mmap to open it up
+
+507
+00:23:21,420 --> 00:23:24,670
+and then we'll have a concept of virtual memory and and physical memory,
+
+508
+00:23:24,810 --> 00:23:27,640
+so virtual memory would be what I see in my process address space,
+
+509
+00:23:28,770 --> 00:23:32,470
+again, at some starting location, I'll get the, I'll get the mmap file,
+
+510
+00:23:33,460 --> 00:23:35,865
+and then these virtual memory has to be backed by physical pages,
+
+511
+00:23:35,865 --> 00:23:37,040
+so as I touch a page,
+
+512
+00:23:37,600 --> 00:23:40,580
+the OS has to go, then put it into some space in physical memory,
+
+513
+00:23:40,840 --> 00:23:44,440
+and then update the wiring for the virtual memory table, right.
+
+514
+00:23:45,000 --> 00:23:47,620
+So that my process wants to touch page #1,
+
+515
+00:23:48,120 --> 00:23:49,670
+so we would have a page fault,
+
+516
+00:23:49,670 --> 00:23:51,220
+because the OS would recognize,
+
+517
+00:23:51,270 --> 00:23:52,900
+I don't have page #1 in physical memory,
+
+518
+00:23:53,640 --> 00:23:55,520
+it'll go out the disk, fetch it for me, put it in,
+
+519
+00:23:56,020 --> 00:23:57,540
+update virtual memory to now, point to it,
+
+520
+00:23:57,540 --> 00:24:00,740
+and then my process can touch it or do whatever wants with it.
+
+521
+00:24:01,650 --> 00:24:03,340
+Same thing, now if I want page 3,
+
+522
+00:24:03,570 --> 00:24:04,265
+it's not in there,
+
+523
+00:24:04,265 --> 00:24:05,110
+I get a page fault,
+
+524
+00:24:05,160 --> 00:24:06,310
+the OS blocks my process,
+
+525
+00:24:07,050 --> 00:24:08,500
+when I do, when I access it,
+
+526
+00:24:08,790 --> 00:24:11,825
+it goes fetch to the page I need from disk, updates the wiring
+
+527
+00:24:11,825 --> 00:24:15,395
+and and then then my process can start running again,
+
+528
+00:24:15,395 --> 00:24:16,450
+my thread can start running again.
+
+529
+00:24:17,660 --> 00:24:19,710
+What happens if I want to touch page 2?
+
+530
+00:24:22,550 --> 00:24:23,070
+what's that?
+
+531
+00:24:24,060 --> 00:24:24,940
+Is to get rid of it,
+
+532
+00:24:25,380 --> 00:24:27,040
+but what happens while I'm getting rid of it?
+
+533
+00:24:28,710 --> 00:24:30,100
+My process stalls, right,
+
+534
+00:24:30,390 --> 00:24:32,110
+I go to, the OS is going to block me,
+
+535
+00:24:32,520 --> 00:24:35,020
+while it says, okay, well I don't have any more physical memory,
+
+536
+00:24:35,250 --> 00:24:38,045
+let me go out and figure out what to page 1 or 3,
+
+537
+00:24:38,045 --> 00:24:40,490
+which one should I throw away, right,
+
+538
+00:24:41,350 --> 00:24:43,820
+but the OS is going to have its own internal statistics,
+
+539
+00:24:43,960 --> 00:24:46,850
+about how these pages are being accessed,
+
+540
+00:24:47,050 --> 00:24:50,300
+and it's going to make a decision about what page to evict,
+
+541
+00:24:51,430 --> 00:24:54,140
+but it doesn't know anything about what we're doing inside the database system,
+
+542
+00:24:54,190 --> 00:24:55,575
+because it just sees reads, writes,
+
+543
+00:24:55,575 --> 00:24:57,620
+it doesn't like a [course screen],
+
+544
+00:24:57,670 --> 00:24:58,820
+doesn't know what queries are,
+
+545
+00:24:58,930 --> 00:25:00,230
+doesn't know what's in these data pages,
+
+546
+00:25:01,360 --> 00:25:02,150
+what's in these files,
+
+547
+00:25:02,770 --> 00:25:05,450
+so the OS is going to try to make a decision on how to swap things out.
+
+548
+00:25:06,850 --> 00:25:08,265
+And that's just for eviction,
+
+549
+00:25:08,265 --> 00:25:10,995
+there's a whole bunch of other problems that we're going to face,
+
+550
+00:25:10,995 --> 00:25:12,890
+if we rely on the OS to do this for us.
+
+551
+00:25:15,170 --> 00:25:16,885
+So in my first example here,
+
+552
+00:25:16,885 --> 00:25:20,070
+I shared one thread or one process with accessing it.
+
+553
+00:25:20,560 --> 00:25:21,940
+But again, we're going to try to build a database,
+
+554
+00:25:21,940 --> 00:25:25,980
+a modern database system that can take advantage of multiple cores or multiple CPUs,
+
+555
+00:25:26,840 --> 00:25:28,680
+and so we need to have multiple threads access them,
+
+556
+00:25:29,440 --> 00:25:30,680
+but now, what if one of them,
+
+557
+00:25:32,280 --> 00:25:34,500
+you know, one of them touches something, writes it,
+
+558
+00:25:34,500 --> 00:25:35,790
+and then another guy tries to read it,
+
+559
+00:25:35,790 --> 00:25:37,640
+but it gets stalled, because it gets evicted,
+
+560
+00:25:38,350 --> 00:25:40,140
+the ordering can get kind of screwy,
+
+561
+00:25:40,140 --> 00:25:43,130
+and again, the operating system doesn't know anything that's going on,
+
+562
+00:25:43,150 --> 00:25:44,840
+what's running inside the system at the same time.
+
+563
+00:25:46,130 --> 00:25:47,910
+So everything is read-only, it's okay,
+
+564
+00:25:48,880 --> 00:25:50,120
+because we're not dirty any pages,
+
+565
+00:25:50,350 --> 00:25:51,590
+the OS can swap things out,
+
+566
+00:25:52,360 --> 00:25:53,210
+it'll be good enough,
+
+567
+00:25:53,410 --> 00:25:54,300
+and there are some cases,
+
+568
+00:25:54,300 --> 00:25:59,180
+there are some database systems that do use mmap just for read-only parts of the system.
+
+569
+00:26:00,740 --> 00:26:02,370
+But if you now need to have multiple writers,
+
+570
+00:26:03,230 --> 00:26:05,130
+which again, in a real system, we're going to want this,
+
+571
+00:26:06,430 --> 00:26:07,400
+then there's a bunch of other problems.
+
+572
+00:26:09,120 --> 00:26:10,805
+So the first one is transaction safety,
+
+573
+00:26:10,805 --> 00:26:12,130
+this is the one I sort of mentioned,
+
+574
+00:26:13,050 --> 00:26:16,150
+if I have a transaction that updates multiple pages,
+
+575
+00:26:17,080 --> 00:26:20,250
+I need to make sure that these pages are actually written out in the right order
+
+576
+00:26:20,630 --> 00:26:21,970
+and the OS doesn't know that,
+
+577
+00:26:21,970 --> 00:26:23,490
+because it just solves dirty pages,
+
+578
+00:26:23,780 --> 00:26:24,990
+it doesn't know anything about,
+
+579
+00:26:25,750 --> 00:26:27,710
+does this page need to be written before this other page,
+
+580
+00:26:29,710 --> 00:26:30,855
+you can do some things like,
+
+581
+00:26:30,855 --> 00:26:32,420
+you can lock the page using mlock,
+
+582
+00:26:32,890 --> 00:26:35,030
+but that only prevents the OS from swapping it out,
+
+583
+00:26:35,230 --> 00:26:36,560
+doesn't prevent it from writing out,
+
+584
+00:26:36,910 --> 00:26:39,200
+so now it may write out a dirty page, that it shouldn't have,
+
+585
+00:26:39,310 --> 00:26:40,380
+I crash and come back,
+
+586
+00:26:40,380 --> 00:26:42,920
+and now I have changes that shouldn't have been written a disk,
+
+587
+00:26:43,640 --> 00:26:45,750
+and I had to go figure out how to reverse that
+
+588
+00:26:46,250 --> 00:26:50,640
+or deal with the bad data, inconsistent data.
+
+589
+00:26:52,180 --> 00:26:53,720
+We've already talked about doing stalls,
+
+590
+00:26:54,820 --> 00:26:56,655
+again, if you try to access something that's not in memory,
+
+591
+00:26:56,655 --> 00:26:57,795
+you get a major page fault,
+
+592
+00:26:57,795 --> 00:26:58,710
+it blocks your thread,
+
+593
+00:26:58,710 --> 00:26:59,480
+deschedules you,
+
+594
+00:26:59,980 --> 00:27:02,715
+the disk scheduler goes get your page, brings it in,
+
+595
+00:27:02,715 --> 00:27:03,330
+and when it's available,
+
+596
+00:27:03,330 --> 00:27:05,300
+then you get, your thread gets rescheduled again.
+
+597
+00:27:05,970 --> 00:27:09,410
+But now your thread is blocked in doing nothing, right,
+
+598
+00:27:09,790 --> 00:27:11,990
+and it maybe there are other queries you could possibly run,
+
+599
+00:27:13,420 --> 00:27:15,650
+while you're waiting for that thing to fetch, get fetch from disk.
+
+600
+00:27:16,440 --> 00:27:19,805
+So then you say, okay, well, maybe I'll make a dispatcher or a scheduler,
+
+601
+00:27:19,805 --> 00:27:21,770
+so that there's only one thread that goes and gets things
+
+602
+00:27:21,770 --> 00:27:22,580
+and there's a page fault,
+
+603
+00:27:22,580 --> 00:27:25,030
+he gets blocked and then I can run another, run another threads.
+
+604
+00:27:25,720 --> 00:27:30,170
+But now you kind of, you're building more infrastructure around the limitations of mmap.
+
+605
+00:27:32,030 --> 00:27:36,665
+Next problem you have is, how do you handle errors, right,
+
+606
+00:27:36,665 --> 00:27:38,410
+if I in mmap,
+
+607
+00:27:38,430 --> 00:27:40,330
+if I try to access a page,
+
+608
+00:27:40,890 --> 00:27:43,720
+that for whatever reason it's corrupted or not available,
+
+609
+00:27:43,950 --> 00:27:45,250
+there's some hardware problem,
+
+610
+00:27:46,210 --> 00:27:47,730
+you don't get an exception as you would,
+
+611
+00:27:47,730 --> 00:27:49,460
+if you write it in user space code,
+
+612
+00:27:49,930 --> 00:27:51,410
+you get a SIGBUS and interrupt.
+
+613
+00:27:52,420 --> 00:27:55,010
+Now you need a signal handler all throughout the rest of your system,
+
+614
+00:27:55,360 --> 00:27:58,480
+because you may be doing something that is in a critical section,
+
+615
+00:27:58,960 --> 00:28:01,740
+that you don't want to get interrupted or break,
+
+616
+00:28:01,740 --> 00:28:03,290
+so therefore you have to have an interrupt handler
+
+617
+00:28:03,490 --> 00:28:05,720
+to make sure you can go back to the thing you were doing before,
+
+618
+00:28:07,900 --> 00:28:09,390
+to handle this interrupt,
+
+619
+00:28:10,100 --> 00:28:11,250
+because this is the only,
+
+620
+00:28:12,740 --> 00:28:15,840
+this is how the operating system tells you, things are going bad,
+
+621
+00:28:16,430 --> 00:28:17,575
+you can't get back in error code,
+
+622
+00:28:17,575 --> 00:28:18,900
+you get back and interrupt.
+
+623
+00:28:22,240 --> 00:28:24,500
+Need to say, that's a lot of engineering to handle this,
+
+624
+00:28:24,520 --> 00:28:25,400
+you don't want to do this.
+
+625
+00:28:25,870 --> 00:28:28,100
+And then there's obviously going to be performance issues,
+
+626
+00:28:29,410 --> 00:28:33,165
+and this is because the database, operating system is going to have its own internal data structures,
+
+627
+00:28:33,165 --> 00:28:34,490
+about what's in memory and not memory,
+
+628
+00:28:35,320 --> 00:28:36,770
+what's getting scheduled or not getting scheduled,
+
+629
+00:28:37,090 --> 00:28:40,100
+and it has to protect those critical sections inside its own data structures,
+
+630
+00:28:40,920 --> 00:28:42,130
+with mutexes or whatever,
+
+631
+00:28:43,560 --> 00:28:45,640
+and now that's going to be a contention point,
+
+632
+00:28:46,500 --> 00:28:48,065
+where as in a database system,
+
+633
+00:28:48,065 --> 00:28:49,700
+since we know what queries are trying to do,
+
+634
+00:28:49,700 --> 00:28:51,100
+because again, SQL is declarative,
+
+635
+00:28:51,180 --> 00:28:52,655
+we know what the queries want to do,
+
+636
+00:28:52,655 --> 00:28:53,650
+because we have the physical plan,
+
+637
+00:28:53,910 --> 00:28:55,600
+we know what the data are trying to access
+
+638
+00:28:55,860 --> 00:28:59,140
+and therefore we can we're in a better decision to decide how to schedule things.
+
+639
+00:29:00,420 --> 00:29:00,820
+Yes.
+
+640
+00:29:06,170 --> 00:29:06,805
+His question is,
+
+641
+00:29:06,805 --> 00:29:08,910
+is the database systems have the privilege to work with hardware directly,
+
+642
+00:29:09,350 --> 00:29:11,070
+there are methods called kernel bypass,
+
+643
+00:29:11,510 --> 00:29:12,600
+where you can,
+
+644
+00:29:14,080 --> 00:29:15,265
+or NVMe is sort of like this,
+
+645
+00:29:15,265 --> 00:29:19,260
+there's ways to make calls to hardware without having to rely on the OS.
+
+646
+00:29:20,420 --> 00:29:21,815
+The problem with those things are,
+
+647
+00:29:21,815 --> 00:29:25,810
+you basically have to implement a bunch of the OS back up inside the database system,
+
+648
+00:29:26,340 --> 00:29:29,830
+so there's something called this is a [tangent],
+
+649
+00:29:30,120 --> 00:29:33,910
+if you don't want to have to use the OS's TCP stack for networking,
+
+650
+00:29:34,080 --> 00:29:40,015
+there's something called the, the DPDK from Intel,
+
+651
+00:29:40,015 --> 00:29:41,790
+the Data Plane Data Kit or Development kit,
+
+652
+00:29:41,900 --> 00:29:43,830
+basically, it's a way to hook directly in the hardware
+
+653
+00:29:44,000 --> 00:29:45,480
+and you get raw packets out,
+
+654
+00:29:45,740 --> 00:29:47,020
+but again, it's raw packets,
+
+655
+00:29:47,020 --> 00:29:48,210
+if it's a TCP connection,
+
+656
+00:29:48,530 --> 00:29:52,230
+now you gotta keep track of the TCP headers and right.
+
+657
+00:29:53,840 --> 00:29:55,195
+Very few database systems do this,
+
+658
+00:29:55,195 --> 00:29:56,010
+I only know two,
+
+659
+00:29:56,500 --> 00:29:58,740
+one was, one Yellowbrick,
+
+660
+00:29:59,000 --> 00:30:00,640
+we discuss them throughout the semester,
+
+661
+00:30:00,640 --> 00:30:01,705
+they have a bunch of amazing stuff,
+
+662
+00:30:01,705 --> 00:30:03,360
+they basically rewrite their own,
+
+663
+00:30:04,130 --> 00:30:06,630
+they basically only use the OS to turn the thing on
+
+664
+00:30:06,770 --> 00:30:08,215
+and they never call malloc again,
+
+665
+00:30:08,215 --> 00:30:10,020
+they allocate all the memory, everything beginning,
+
+666
+00:30:10,280 --> 00:30:12,300
+they wrote their own PCIe drivers,
+
+667
+00:30:12,530 --> 00:30:14,160
+they do a bunch of amazing engineering,
+
+668
+00:30:14,390 --> 00:30:15,300
+few people do that.
+
+669
+00:30:15,590 --> 00:30:17,010
+The other was was ScyllaDB,
+
+670
+00:30:17,120 --> 00:30:19,420
+but the DPDK was so difficult to handle,
+
+671
+00:30:19,420 --> 00:30:21,840
+that was huge pain, they don't do it.
+
+672
+00:30:21,920 --> 00:30:23,730
+So the answer to the question is,
+
+673
+00:30:25,560 --> 00:30:27,310
+for some things, you have to go through the OS,
+
+674
+00:30:30,460 --> 00:30:32,150
+in the 80s, they got really crazy
+
+675
+00:30:32,200 --> 00:30:35,160
+and like they, instead of using a file system,
+
+676
+00:30:35,160 --> 00:30:38,150
+they wrote their own storage layer on top of raw block devices,
+
+677
+00:30:38,380 --> 00:30:40,100
+like people have tried this every years,
+
+678
+00:30:40,390 --> 00:30:41,570
+from an engineering perspective,
+
+679
+00:30:43,110 --> 00:30:45,215
+it's oftentimes you do have to rely on the OS,
+
+680
+00:30:45,215 --> 00:30:47,140
+but you want to minimize your contact with it,
+
+681
+00:30:47,640 --> 00:30:48,710
+because the OS is going to be your enemy.
+
+682
+00:30:51,550 --> 00:30:52,100
+Other questions?
+
+683
+00:30:54,660 --> 00:30:55,870
+I don't spend too much time on mmap,
+
+684
+00:30:56,460 --> 00:30:58,510
+this is suffice say it's a bad idea, don't do it,
+
+685
+00:30:59,640 --> 00:31:02,530
+if I die, you know you can put on my tombstone
+
+686
+00:31:02,790 --> 00:31:03,880
+never use mmap for your database.
+
+687
+00:31:05,130 --> 00:31:08,200
+And the reason why I I was want to bring this up is because,
+
+688
+00:31:08,640 --> 00:31:12,130
+you know we invite a lot of these database companies and startups to come give talks at CMU
+
+689
+00:31:12,360 --> 00:31:14,270
+and surprisingly over the last couple of years,
+
+690
+00:31:14,270 --> 00:31:15,970
+a lot of them mentioned they're using mmap
+
+691
+00:31:16,230 --> 00:31:17,200
+and we ask them why
+
+692
+00:31:17,250 --> 00:31:19,360
+and they say, oh, because it's quick and easy to use
+
+693
+00:31:19,680 --> 00:31:21,335
+and then when we go talk to them a few years later,
+
+694
+00:31:21,335 --> 00:31:22,415
+like oh yeah, that was a huge mistake,
+
+695
+00:31:22,415 --> 00:31:23,285
+we should not have done mmap,
+
+696
+00:31:23,285 --> 00:31:26,140
+we should have done what lecture six is going to teach you, right.
+
+697
+00:31:26,670 --> 00:31:28,940
+So here's a listing of some systems that I know using mmap,
+
+698
+00:31:28,940 --> 00:31:30,440
+there's a couple others I'm sure I'm missing,
+
+699
+00:31:30,440 --> 00:31:31,300
+there's a bunch of hobby projects.
+
+700
+00:31:32,620 --> 00:31:34,165
+So the one at the top, these are full usage,
+
+701
+00:31:34,165 --> 00:31:34,765
+these are systems,
+
+702
+00:31:34,765 --> 00:31:39,570
+where they entirely use mmap for all of data back and forth from disk and memory.
+
+703
+00:31:41,300 --> 00:31:42,910
+The most famous one of these is probably Elastic,
+
+704
+00:31:44,010 --> 00:31:49,720
+MonetDB was a construct of CWI,
+
+705
+00:31:49,720 --> 00:31:50,940
+the same place that build []DB,
+
+706
+00:31:51,440 --> 00:31:53,860
+the LMDB do probably the exact opposite of me,
+
+707
+00:31:53,860 --> 00:31:55,165
+where I'm saying never use mmap,
+
+708
+00:31:55,165 --> 00:31:56,790
+he's like always always use mmap
+
+709
+00:31:57,020 --> 00:31:59,530
+and he been banned on a bunch of different databases mailing list,
+
+710
+00:31:59,530 --> 00:32:00,340
+because he would email them
+
+711
+00:32:00,340 --> 00:32:01,500
+and say like you guys should be using,
+
+712
+00:32:01,700 --> 00:32:04,380
+you should be using LMDB, should using mmap, right,
+
+713
+00:32:04,430 --> 00:32:07,100
+he's wrong, he.
+
+714
+00:32:09,490 --> 00:32:12,410
+But here's the ones the partially using it,
+
+715
+00:32:13,270 --> 00:32:14,625
+actually, I should put Mongo as full usage,
+
+716
+00:32:14,625 --> 00:32:15,560
+they should really be at the top,
+
+717
+00:32:15,880 --> 00:32:17,120
+but the ones at the bottom here,
+
+718
+00:32:17,380 --> 00:32:19,345
+they all got rid of it, right,
+
+719
+00:32:19,345 --> 00:32:21,090
+because of all the issues that I mentioned before,
+
+720
+00:32:21,290 --> 00:32:24,715
+you can get, you can get something up and running pretty quickly if you use mmap,
+
+721
+00:32:24,715 --> 00:32:26,190
+because you don't have to build your own buffer pool manager,
+
+722
+00:32:26,690 --> 00:32:29,370
+but because you're lying on the OS to move data back and forth,
+
+723
+00:32:29,510 --> 00:32:31,680
+it's going to make horrible decisions, right.
+
+724
+00:32:32,420 --> 00:32:34,390
+I'm not going, I don't want to pick Mongo,
+
+725
+00:32:34,390 --> 00:32:35,695
+but Mongo is the best example of this,
+
+726
+00:32:35,695 --> 00:32:39,060
+Mongo started off with an mmap based storage engine, storage manager
+
+727
+00:32:39,590 --> 00:32:41,970
+and they, they were the hot database in the 2010s,
+
+728
+00:32:42,230 --> 00:32:44,250
+they raised a ton of, you know, investor money
+
+729
+00:32:44,630 --> 00:32:45,850
+and they had really good engineers,
+
+730
+00:32:45,850 --> 00:32:47,970
+so they and they were based on [time] mmap,
+
+731
+00:32:48,170 --> 00:32:49,590
+if mmap was the right choice,
+
+732
+00:32:50,460 --> 00:32:52,840
+then they could have, they could have made that work,
+
+733
+00:32:53,600 --> 00:32:54,570
+but what do they do,
+
+734
+00:32:54,620 --> 00:32:55,570
+they threw it all away
+
+735
+00:32:55,570 --> 00:32:56,485
+and they bought WiredTiger
+
+736
+00:32:56,485 --> 00:32:59,430
+with a storage manager that doesn't use that mmap, right.
+
+737
+00:33:00,290 --> 00:33:01,920
+So again, just to reiterate,
+
+738
+00:33:02,030 --> 00:33:04,860
+never use, we don't want to use the OS to manage memory,
+
+739
+00:33:05,120 --> 00:33:07,860
+because the database system is always going to be a better position to do this,
+
+740
+00:33:08,460 --> 00:33:09,780
+and it's not just for managing memory,
+
+741
+00:33:09,780 --> 00:33:11,060
+it's basically for everything,
+
+742
+00:33:11,170 --> 00:33:12,585
+we don't need the OS for scheduling,
+
+743
+00:33:12,585 --> 00:33:15,080
+we don't want to use OS for caching writes,
+
+744
+00:33:15,940 --> 00:33:18,110
+we don't the use, use the OS for,
+
+745
+00:33:19,740 --> 00:33:21,605
+and the network stuff you need to in some cases,
+
+746
+00:33:21,605 --> 00:33:23,165
+but there's tricks for that,
+
+747
+00:33:23,165 --> 00:33:25,240
+but the OS is always going to be a problem.
+
+748
+00:33:26,040 --> 00:33:28,965
+And again for mmap,
+
+749
+00:33:28,965 --> 00:33:30,620
+again, I'll send this link on Piazza,
+
+750
+00:33:30,670 --> 00:33:31,485
+We wrote a paper about this,
+
+751
+00:33:31,485 --> 00:33:32,340
+so why you don't want to use this,
+
+752
+00:33:32,340 --> 00:33:34,695
+and then there's there's a 10 minute Youtube video cartoon,
+
+753
+00:33:34,695 --> 00:33:36,200
+about all the problems.
+
+754
+00:33:37,920 --> 00:33:40,310
+So again, the OS is going to be a problem for us,
+
+755
+00:33:40,310 --> 00:33:42,220
+and we have to design our system to deal with it.
+
+756
+00:33:45,300 --> 00:33:46,840
+All right, so for database storage,
+
+757
+00:33:47,585 --> 00:33:48,640
+there's two problems you got to deal with.
+
+758
+00:33:50,060 --> 00:33:53,700
+How are we going to represent the the database on these files on disk,
+
+759
+00:33:53,960 --> 00:33:55,770
+and then once we have those,
+
+760
+00:33:55,940 --> 00:33:58,650
+how do we move data back and forth from disk into memory.
+
+761
+00:33:59,300 --> 00:34:02,130
+So today's lecture is going to be on the first problem here,
+
+762
+00:34:02,360 --> 00:34:06,900
+and then we'll cover the second problem in the upcoming lectures.
+
+763
+00:34:10,140 --> 00:34:10,540
+All,right.
+
+764
+00:34:11,190 --> 00:34:13,415
+So there's going to be sort of three layers
+
+765
+00:34:13,415 --> 00:34:16,270
+of what data is going to look like on these disk pages.
+
+766
+00:34:18,030 --> 00:34:18,970
+So the first question is,
+
+767
+00:34:19,320 --> 00:34:20,950
+what do these files actually look like,
+
+768
+00:34:22,620 --> 00:34:24,950
+and then within a file, there's be pages,
+
+769
+00:34:25,000 --> 00:34:27,230
+because we to break it up into different chunks,
+
+770
+00:34:27,370 --> 00:34:29,630
+and then then we'll discuss what these pages look like,
+
+771
+00:34:30,100 --> 00:34:32,120
+and then within that page, we're going to have tuples,
+
+772
+00:34:32,290 --> 00:34:34,040
+the data itself, the tables,
+
+773
+00:34:35,020 --> 00:34:36,350
+we can ignore indexes for now,
+
+774
+00:34:36,790 --> 00:34:39,440
+and you have to decide what actually tuples look like.
+
+775
+00:34:39,790 --> 00:34:43,790
+So start at the top and then go deeper, deeper inside of these files
+
+776
+00:34:43,990 --> 00:34:46,040
+to understand what, what they actually contain.
+
+777
+00:34:48,790 --> 00:34:49,545
+So as I said before,
+
+778
+00:34:49,545 --> 00:34:53,120
+the database system is going to maintain a database as one or more files on disk,
+
+779
+00:34:53,260 --> 00:34:55,970
+SQLite, DuckDB, those are all single file databases,
+
+780
+00:34:56,260 --> 00:34:58,650
+all the enterprise databases or Postgres, MySQL,
+
+781
+00:34:58,650 --> 00:35:01,130
+every other system, you know, more full featured system
+
+782
+00:35:01,630 --> 00:35:06,740
+is going to be running, you know, maintaining multiple files for your tables and databases.
+
+783
+00:35:07,810 --> 00:35:14,440
+And so the, the format that these files are going to be based on is typically going to be
+
+784
+00:35:14,440 --> 00:35:18,990
+proprietary or custom to whatever the database system actually is, right,
+
+785
+00:35:18,990 --> 00:35:21,830
+that meaning like you can't take the Postgres database files
+
+786
+00:35:22,210 --> 00:35:24,140
+and open them up in in MySQL
+
+787
+00:35:24,340 --> 00:35:25,640
+or open them up in SQLite.
+
+788
+00:35:25,900 --> 00:35:30,030
+Now, DuckDB because they want to be portable and compatible with, with SQLite,
+
+789
+00:35:30,030 --> 00:35:33,320
+they have connectors allow you to read, you know, sqlite files and other things,
+
+790
+00:35:33,760 --> 00:35:37,250
+but in general, all the major database systems are going to have their own proprietary format.
+
+791
+00:35:38,070 --> 00:35:40,360
+And the OS doesn't know anything about what's inside of these files,
+
+792
+00:35:40,740 --> 00:35:41,885
+doesn't know what's inside of a page,
+
+793
+00:35:41,885 --> 00:35:43,625
+doesn't know where indexes are versus tables are,
+
+794
+00:35:43,625 --> 00:35:45,040
+it just knows nothing just sees a bunch of files.
+
+795
+00:35:46,330 --> 00:35:48,560
+So next class we'll talk about portable file formats,
+
+796
+00:35:48,820 --> 00:35:51,380
+things like Parquet, Avro, ORC, Arrow,
+
+797
+00:35:51,790 --> 00:35:57,470
+these are going to be open source specifications for what a database file could look like,
+
+798
+00:35:57,910 --> 00:35:59,115
+and then there's a bunch of database systems,
+
+799
+00:35:59,115 --> 00:36:01,730
+that know how to to read them and access them and write them.
+
+800
+00:36:03,050 --> 00:36:03,930
+But we'll about those later.
+
+801
+00:36:04,950 --> 00:36:05,830
+And as I said before,
+
+802
+00:36:06,240 --> 00:36:11,075
+in the 1980s, there was a sort of a lot of the earlier database systems decided,
+
+803
+00:36:11,075 --> 00:36:14,590
+that they they not only were they gonna have customized file formats,
+
+804
+00:36:15,210 --> 00:36:17,020
+they were also gonna have customized file systems
+
+805
+00:36:17,550 --> 00:36:20,860
+and they weren't going to use, ext3, didn't, didn't exist,
+
+806
+00:36:20,880 --> 00:36:22,745
+you know, btrfs didn't exist back then,
+
+807
+00:36:22,745 --> 00:36:24,490
+but they, whatever the equipment was in the 80s,
+
+808
+00:36:24,570 --> 00:36:27,400
+they didn't even rely on what the OS said, what the file system was,
+
+809
+00:36:27,840 --> 00:36:29,200
+they wanted to do everything themselves.
+
+810
+00:36:29,760 --> 00:36:31,295
+But that's a lot of engineering work
+
+811
+00:36:31,295 --> 00:36:32,615
+and, and nobody does that today,
+
+812
+00:36:32,615 --> 00:36:34,630
+and it usually a marginal benefit.
+
+813
+00:36:35,880 --> 00:36:37,205
+The only system that still do this
+
+814
+00:36:37,205 --> 00:36:38,830
+would be like what I'll call enterprise systems,
+
+815
+00:36:39,150 --> 00:36:42,100
+so this will be an Oracle, the DB2s, the Teradatas,
+
+816
+00:36:42,360 --> 00:36:43,910
+these are million Dollar database systems
+
+817
+00:36:43,910 --> 00:36:46,300
+that are trying to get as much, much performance as you can,
+
+818
+00:36:47,430 --> 00:36:48,820
+these systems will support this,
+
+819
+00:36:48,990 --> 00:36:52,510
+in addition to running off the generic OS file systems.
+
+820
+00:36:57,740 --> 00:37:00,385
+So then the, the part of the database system,
+
+821
+00:37:00,385 --> 00:37:03,960
+that's going to be responsible for maintaining and coordinating these different files,
+
+822
+00:37:04,160 --> 00:37:06,270
+we'll call generically as the storage manager,
+
+823
+00:37:08,135 --> 00:37:09,070
+sometimes it's called the storage engine,
+
+824
+00:37:10,175 --> 00:37:10,840
+it's the same idea.
+
+825
+00:37:11,650 --> 00:37:13,695
+And it's going to be part of the system,
+
+826
+00:37:13,695 --> 00:37:16,820
+that communicates with the either the hardware
+
+827
+00:37:17,410 --> 00:37:21,015
+or communicates with the hardware or whatever the storage device is,
+
+828
+00:37:21,015 --> 00:37:23,870
+either through the OS or using direct direct access
+
+829
+00:37:24,460 --> 00:37:30,350
+to retrieve data and bring it into the database, database system's memory.
+
+830
+00:37:31,430 --> 00:37:32,815
+And so we'll discuss this next class,
+
+831
+00:37:32,815 --> 00:37:33,475
+I keep saying this,
+
+832
+00:37:33,475 --> 00:37:34,890
+but there's so many things to discuss.
+
+833
+00:37:36,080 --> 00:37:40,410
+A bunch of these systems will maintain their own disk scheduler or dispatcher,
+
+834
+00:37:40,640 --> 00:37:43,500
+that decides when what pages to read and what order,
+
+835
+00:37:44,300 --> 00:37:46,690
+because, otherwise, if you just go do more of efforts against the OS,
+
+836
+00:37:46,690 --> 00:37:48,300
+the OS is gonna figure out how to order things,
+
+837
+00:37:48,620 --> 00:37:50,710
+but again, the, the, the database system is in a better position
+
+838
+00:37:50,710 --> 00:37:53,280
+to know what it actually needs and in what order,
+
+839
+00:37:54,710 --> 00:37:57,220
+so, various systems can can, can have their own thread
+
+840
+00:37:57,220 --> 00:37:58,980
+decide how to schedule their own disk reads.
+
+841
+00:37:59,600 --> 00:38:00,400
+And you want to do this,
+
+842
+00:38:00,400 --> 00:38:02,770
+because you want to minimize the amount of thrashing,
+
+843
+00:38:02,770 --> 00:38:05,010
+of bringing things into a memory, how to throw it, throw it out right away.
+
+844
+00:38:05,300 --> 00:38:07,170
+So if you know two queries need the same page,
+
+845
+00:38:07,640 --> 00:38:10,050
+maybe you bring that in first before some other pages
+
+846
+00:38:10,580 --> 00:38:14,070
+and then you you throw away the first page, once you know those two queries are done with it.
+
+847
+00:38:15,870 --> 00:38:18,610
+So the database files are going to be broken up into what call pages,
+
+848
+00:38:19,580 --> 00:38:22,300
+and the database system is responsible for keeping track of
+
+849
+00:38:22,890 --> 00:38:26,110
+what data has been read and written to these various pages,
+
+850
+00:38:27,690 --> 00:38:30,070
+and then keeps track of how much space is available in each of them.
+
+851
+00:38:30,830 --> 00:38:33,660
+Because again, if I, if I insert a new, I need to insert a new tuple,
+
+852
+00:38:33,860 --> 00:38:35,700
+I need to find a page that has space for me,
+
+853
+00:38:35,960 --> 00:38:37,465
+so I'll keep track of some directory,
+
+854
+00:38:37,465 --> 00:38:39,990
+that says this page has this amount of space and go put it in there.
+
+855
+00:38:41,590 --> 00:38:44,840
+Now, the data system itself, the storage manager layer,
+
+856
+00:38:45,100 --> 00:38:46,160
+the part we're talking about here,
+
+857
+00:38:46,390 --> 00:38:51,590
+it's not going to maintain multiple copies of these pages for redundancy replication purposes,
+
+858
+00:38:52,120 --> 00:38:57,200
+we assume that's going to happen either both above and below this part of the system in the stack,
+
+859
+00:38:57,670 --> 00:38:59,270
+so above would be like something,
+
+860
+00:39:00,340 --> 00:39:02,810
+something that knows if a query shows up and wants to do a write,
+
+861
+00:39:03,040 --> 00:39:05,610
+send it to another, another physical box or another node
+
+862
+00:39:05,610 --> 00:39:07,280
+and have both those machines do the write.
+
+863
+00:39:07,800 --> 00:39:08,910
+And then below it would be like,
+
+864
+00:39:08,910 --> 00:39:12,500
+if you're running RAID or some kind of storage appliance that knows how to replicate pages,
+
+865
+00:39:12,790 --> 00:39:14,660
+and then down below, it'll do that as well.
+
+866
+00:39:15,250 --> 00:39:18,045
+Typically, database systems will not maintain multiple copies themselves,
+
+867
+00:39:18,045 --> 00:39:19,370
+because it's a bunch of extra work,
+
+868
+00:39:20,490 --> 00:39:22,420
+that ideally, you don't want to have to do.
+
+869
+00:39:25,300 --> 00:39:26,060
+So, what is a page，
+
+870
+00:39:26,590 --> 00:39:28,380
+so in our view, from a data perspective,
+
+871
+00:39:28,380 --> 00:39:30,590
+a page is going to be a fixed size block of data
+
+872
+00:39:32,080 --> 00:39:35,570
+and it can contain data from any part of the database itself,
+
+873
+00:39:35,980 --> 00:39:39,200
+and for, for this lecture, we assume it's just tuples or records,
+
+874
+00:39:39,760 --> 00:39:45,890
+but it can contain indexes, log information, additional metadata, the catalog statistics, right,
+
+875
+00:39:45,940 --> 00:39:46,700
+it doesn't matter,
+
+876
+00:39:47,590 --> 00:39:51,000
+but it's still going to be broken up into these, these fixed size blocks.
+
+877
+00:39:52,150 --> 00:39:54,140
+Most systems are not going to mix page types,
+
+878
+00:39:54,580 --> 00:39:57,030
+meaning you don't take a one megabyte page
+
+879
+00:39:57,030 --> 00:40:01,520
+and put in data from this table and this table and index and stuff like that,
+
+880
+00:40:02,440 --> 00:40:07,070
+for simplicity, you're going to assume that one page belongs to some object in the database,
+
+881
+00:40:07,540 --> 00:40:09,080
+a table or index and so forth,
+
+882
+00:40:09,280 --> 00:40:11,630
+and it would only contain data for that particular object.
+
+883
+00:40:13,540 --> 00:40:16,010
+Some systems are gonna require every page to be self-contained,
+
+884
+00:40:16,360 --> 00:40:19,410
+meaning all the information, all the metadata you need to have
+
+885
+00:40:19,410 --> 00:40:21,440
+in order to understand what's inside that page
+
+886
+00:40:21,730 --> 00:40:23,240
+has to be included in the page itself.
+
+887
+00:40:24,250 --> 00:40:27,105
+So, Oracle is probably the most famous one that does this, right,
+
+888
+00:40:27,105 --> 00:40:29,325
+so, within a page, you have to keep track of like,
+
+889
+00:40:29,325 --> 00:40:33,320
+it belongs to this table and has these columns with these types and so forth.
+
+890
+00:40:34,320 --> 00:40:36,130
+The reason why they want to do this is because,
+
+891
+00:40:36,600 --> 00:40:40,180
+if there's some corruption in, you know, in the database files,
+
+892
+00:40:41,040 --> 00:40:45,755
+you don't want to have some page that contains the metadata about the table get blown away
+
+893
+00:40:45,755 --> 00:40:50,130
+and then now you can't understand what's in any other page, right.
+
+894
+00:40:51,020 --> 00:40:53,250
+Again, replication can can can solve this problem,
+
+895
+00:40:53,390 --> 00:40:57,570
+hardware has certainly got a lot more reliable in in modern times than it did before,
+
+896
+00:40:57,950 --> 00:41:00,210
+like hard drives, super flaky before,
+
+897
+00:41:00,590 --> 00:41:04,050
+they're still not ideal, but they're much better than they used to be.
+
+898
+00:41:04,430 --> 00:41:08,550
+So maybe having every page be self-contained is less of an issue today,
+
+899
+00:41:09,800 --> 00:41:13,050
+but the design choice that Oracle made very early on.
+
+900
+00:41:14,940 --> 00:41:17,950
+Now, every page in our database file is going to be given a unique identifier,
+
+901
+00:41:18,720 --> 00:41:19,845
+like a page ID,
+
+902
+00:41:19,845 --> 00:41:23,030
+like you know, some number 64 bit integer, 32 bit integer,
+
+903
+00:41:23,830 --> 00:41:27,410
+and then there'll be some method or some mechanism, that the database system is going to use,
+
+904
+00:41:27,820 --> 00:41:33,080
+that allow it to map a page ID to some physical location on our storage device,
+
+905
+00:41:33,490 --> 00:41:37,130
+and again, that could be like a file name inside of a directory at some offset,
+
+906
+00:41:37,480 --> 00:41:38,970
+if we're running on like a cloud storage,
+
+907
+00:41:38,970 --> 00:41:42,970
+it could be an S3 bucket at some offset and so forth, right.
+
+908
+00:41:43,290 --> 00:41:44,375
+For that purpose, it doesn't matter,
+
+909
+00:41:44,375 --> 00:41:45,545
+we just have a way to say,
+
+910
+00:41:45,545 --> 00:41:47,170
+if we look at page one, two, three,
+
+911
+00:41:47,490 --> 00:41:49,510
+there's some method to say, here's where to go find it.
+
+912
+00:41:52,830 --> 00:41:56,290
+So now what's sort of confusing in the constant database is that,
+
+913
+00:41:56,370 --> 00:41:58,450
+there's three different notions of what a page actually is.
+
+914
+00:42:00,120 --> 00:42:02,440
+And so at the lowest level, you have what is called a hardware page,
+
+915
+00:42:04,220 --> 00:42:05,790
+this is typically 4 kilobytes,
+
+916
+00:42:06,870 --> 00:42:08,410
+and this is going to be the,
+
+917
+00:42:10,490 --> 00:42:16,740
+the largest size or the smallest size of a page, a, a block of data,
+
+918
+00:42:17,180 --> 00:42:19,860
+that the hardware can guarantee that it can do atomic writes,
+
+919
+00:42:21,660 --> 00:42:22,445
+so what do I mean by that,
+
+920
+00:42:22,445 --> 00:42:23,380
+what do I mean by atomic writes?
+
+921
+00:42:27,360 --> 00:42:28,715
+He says, all or nothing, right,
+
+922
+00:42:28,715 --> 00:42:29,500
+so it means that,
+
+923
+00:42:29,970 --> 00:42:32,800
+if I tell the hardware I want to write 4 kilobytes
+
+924
+00:42:33,240 --> 00:42:36,190
+and I get back an acknowledgment, yes, I wrote 4 kilobytes,
+
+925
+00:42:36,420 --> 00:42:38,230
+then I can assume that it made it,
+
+926
+00:42:38,610 --> 00:42:40,390
+if I need to write 8 kilobytes,
+
+927
+00:42:41,580 --> 00:42:45,820
+and I send that as two 4 kilobyte blocks down to the OS, to the hardware,
+
+928
+00:42:46,590 --> 00:42:48,350
+I may write the first 4 kilobytes
+
+929
+00:42:48,350 --> 00:42:50,600
+and then crash and then come back,
+
+930
+00:42:50,600 --> 00:42:53,740
+and then the, the second 4 kilobytes didn't make it,
+
+931
+00:42:54,430 --> 00:42:57,860
+there's no guarantee, the hardware can't guarantee that I can do that all atomically,
+
+932
+00:42:58,000 --> 00:42:58,670
+all or nothing.
+
+933
+00:42:59,430 --> 00:43:00,515
+And so because of this,
+
+934
+00:43:00,515 --> 00:43:04,240
+we have to do much other extra stuff inside our database system to deal with that,
+
+935
+00:43:05,895 --> 00:43:06,500
+we'll get to that later.
+
+936
+00:43:07,430 --> 00:43:09,040
+And then above that, above the hardware,
+
+937
+00:43:09,040 --> 00:43:12,330
+now that's going to be, the operating system is going to have its own notion of a page,
+
+938
+00:43:13,170 --> 00:43:15,340
+and in Linux, by default, this is 4 kilobytes,
+
+939
+00:43:16,620 --> 00:43:21,130
+and again, this is like mapping something that's on the hardware to something that's in virtual memory,
+
+940
+00:43:22,200 --> 00:43:26,660
+now, in, in x64 they also support two different modes,
+
+941
+00:43:26,660 --> 00:43:28,840
+or huge pages as they're called,
+
+942
+00:43:29,190 --> 00:43:31,810
+so you can get page sizes, actually 2 megabytes and 1 gigabyte,
+
+943
+00:43:31,830 --> 00:43:36,200
+and again, the hardware can't guarantee that it can, it can write out 4 kilobytes atomically
+
+944
+00:43:36,280 --> 00:43:39,110
+is just to reduce the amount of bookkeeping that the OS does
+
+945
+00:43:39,700 --> 00:43:41,540
+for the pages that it brings into memory.
+
+946
+00:43:43,160 --> 00:43:45,180
+And then with inside that now above that,
+
+947
+00:43:45,590 --> 00:43:49,470
+the database system is going to have its own notion of a page as well, right,
+
+948
+00:43:50,540 --> 00:43:55,290
+and typically, this is going to be anywhere in the range of 512, 512 bytes,
+
+949
+00:43:55,460 --> 00:43:56,520
+this is what SQLite does,
+
+950
+00:43:56,810 --> 00:43:58,570
+up to, I think 32 kilobytes,
+
+951
+00:43:58,570 --> 00:44:01,650
+some systems let you go up to 64 kilobytes, right.
+
+952
+00:44:02,630 --> 00:44:06,150
+And so the page size is going to be the way we'll represent,
+
+953
+00:44:06,380 --> 00:44:07,110
+where to find,
+
+954
+00:44:08,630 --> 00:44:10,650
+sorry, the page ID is a way to represent,
+
+955
+00:44:12,030 --> 00:44:16,090
+at what offset in some file for a given page size,
+
+956
+00:44:16,440 --> 00:44:18,580
+can we find the data that we're looking for.
+
+957
+00:44:19,780 --> 00:44:20,460
+So, okay, this said,
+
+958
+00:44:20,460 --> 00:44:22,910
+most systems are the default is going be 4 kilobytes,
+
+959
+00:44:23,770 --> 00:44:27,470
+in SQL Server and Postgres, the the page size is going to be 8 kilobytes,
+
+960
+00:44:27,790 --> 00:44:31,070
+and then in MySQL, they go up to 16 kilobytes,
+
+961
+00:44:31,270 --> 00:44:33,140
+for something like DB2 and enterprises,
+
+962
+00:44:33,160 --> 00:44:35,790
+actually for for DB2, on a per table basis,
+
+963
+00:44:35,790 --> 00:44:37,490
+you can change the, the page size.
+
+964
+00:44:39,700 --> 00:44:40,520
+And I take a guess,
+
+965
+00:44:40,810 --> 00:44:41,670
+would anybody take a guess,
+
+966
+00:44:41,670 --> 00:44:43,590
+why one page size, a larger page size,
+
+967
+00:44:43,590 --> 00:44:44,510
+might be a better idea?
+
+968
+00:44:48,700 --> 00:44:49,640
+What did I say in the beginning,
+
+969
+00:44:49,660 --> 00:44:50,810
+what do we want to try to maximize?
+
+970
+00:44:51,580 --> 00:44:52,660
+Sequential access, correct, yes.
+
+971
+00:44:52,660 --> 00:44:58,530
+So if I now have, if I'm organizing on disk 16 kilobytes blocks,
+
+972
+00:44:59,480 --> 00:45:01,810
+and I need to read 16 kilobytes of data,
+
+973
+00:45:02,490 --> 00:45:08,860
+then it's one, one call to to our dispatcher, in, in the database system,
+
+974
+00:45:09,060 --> 00:45:13,420
+that makes one call into the OS to go grab contiguous sixteen kilobytes,
+
+975
+00:45:14,320 --> 00:45:15,690
+if I'm using four kilobyte pages,
+
+976
+00:45:15,690 --> 00:45:19,500
+then I got to make separate calls or do separate lookups
+
+977
+00:45:19,500 --> 00:45:21,620
+to go get the data in potentially random locations.
+
+978
+00:45:23,170 --> 00:45:27,680
+And there's, there's syscalls you can make to the OS or to, to the device itself,
+
+979
+00:45:27,820 --> 00:45:31,860
+that when you allocate data that you want things to be ideally contigously aligned,
+
+980
+00:45:31,860 --> 00:45:33,315
+you can like pre allocate an extent
+
+981
+00:45:33,315 --> 00:45:36,770
+to say allocate me a 10 megabyte block of data
+
+982
+00:45:37,060 --> 00:45:40,730
+and then then the database system can divide that 10 megabytes block into,
+
+983
+00:45:41,290 --> 00:45:44,300
+you know, 8 kilobytes chunks or whatever block size it wants.
+
+984
+00:45:44,320 --> 00:45:44,720
+Yes.
+
+985
+00:45:49,240 --> 00:45:50,640
+Right, so then he says, and he's correct,
+
+986
+00:45:51,320 --> 00:45:54,120
+doesn't this mean that large page sizes make writes more expensive,
+
+987
+00:45:54,140 --> 00:45:56,430
+because now if I only have to write 1 kilobyte,
+
+988
+00:45:56,450 --> 00:45:58,090
+but I'm storing as 16 kilobyte page,
+
+989
+00:45:58,090 --> 00:45:59,490
+I got to write it all 16 kilobytes,
+
+990
+00:45:59,810 --> 00:46:00,420
+absolutely yes,
+
+991
+00:46:00,620 --> 00:46:01,620
+so this is a good point,
+
+992
+00:46:01,880 --> 00:46:03,870
+this is something I would say throughout the entire semester,
+
+993
+00:46:04,370 --> 00:46:06,985
+its, I mean, it's not just for databases,
+
+994
+00:46:06,985 --> 00:46:08,850
+computer science in general, there's no free lunch,
+
+995
+00:46:09,140 --> 00:46:11,320
+there's pros and cons to each of these
+
+996
+00:46:11,320 --> 00:46:14,430
+and different situations, one approach might be better than another,
+
+997
+00:46:14,940 --> 00:46:16,650
+if my workload is entirely readonly,
+
+998
+00:46:16,650 --> 00:46:17,900
+if I never write anything,
+
+999
+00:46:17,920 --> 00:46:19,250
+then yeah, I want large page sizes,
+
+1000
+00:46:19,390 --> 00:46:20,990
+assuming I'm doing large sequential scans,
+
+1001
+00:46:21,310 --> 00:46:23,600
+if I'm doing much of writes, then maybe I want something smaller,
+
+1002
+00:46:23,860 --> 00:46:26,460
+but what the write amount is, depends.
+
+1003
+00:46:46,110 --> 00:46:46,510
+Yeah, so his statement is,
+
+1004
+00:46:47,900 --> 00:46:49,620
+if I do 16 kilobytes reads
+
+1005
+00:46:49,790 --> 00:46:51,990
+and I'm still using 4 kilobytes of data,
+
+1006
+00:46:52,670 --> 00:46:54,630
+assuming that 16 kilobytes is contiguous,
+
+1007
+00:46:55,300 --> 00:46:59,425
+then can I go make a, you know, go make a single call
+
+1008
+00:46:59,425 --> 00:47:00,870
+to get 16 kilobytes that are contiguous,
+
+1009
+00:47:01,250 --> 00:47:04,510
+and then if I had the write individual, within 4 kilobytes,
+
+1010
+00:47:04,510 --> 00:47:05,280
+I can still write those out,
+
+1011
+00:47:05,570 --> 00:47:06,180
+absolutely, yes,
+
+1012
+00:47:06,350 --> 00:47:07,240
+and this is what I was saying before,
+
+1013
+00:47:07,240 --> 00:47:09,025
+we will then choose algorithms or methods,
+
+1014
+00:47:09,025 --> 00:47:10,920
+that that try to write that data out,
+
+1015
+00:47:12,140 --> 00:47:13,210
+so that it is contiguous,
+
+1016
+00:47:13,210 --> 00:47:15,820
+so that we can do those fetches, right.
+
+1017
+00:47:16,710 --> 00:47:18,950
+And again, this is something a database system can do for us,
+
+1018
+00:47:18,950 --> 00:47:20,240
+because we know what the query is,
+
+1019
+00:47:20,240 --> 00:47:21,880
+we know what data you're going to potentially read,
+
+1020
+00:47:22,080 --> 00:47:23,345
+and so we can read ahead for you
+
+1021
+00:47:23,345 --> 00:47:26,950
+and try to fetch things that are before you actually need them.
+
+1022
+00:47:27,330 --> 00:47:29,680
+Now the OS can do that with pre fetching as well,
+
+1023
+00:47:30,060 --> 00:47:31,990
+but it can only prefetch things that are contiguous,
+
+1024
+00:47:33,210 --> 00:47:34,990
+in both directions, I think, in Linux, yes,
+
+1025
+00:47:35,100 --> 00:47:38,390
+but it can't do, if I have to pre fetch things that aren't contiguous,
+
+1026
+00:47:38,390 --> 00:47:39,340
+it can't do that for me.
+
+1027
+00:47:42,580 --> 00:47:43,170
+So this is clear.
+
+1028
+00:47:43,170 --> 00:47:44,390
+So again there be some page ID
+
+1029
+00:47:44,740 --> 00:47:45,615
+and we'll see this in a second,
+
+1030
+00:47:45,615 --> 00:47:46,460
+how this is being used,
+
+1031
+00:47:46,690 --> 00:47:49,820
+that's going to allow us page page 103,
+
+1032
+00:47:49,930 --> 00:47:50,930
+here's where to go find it.
+
+1033
+00:47:54,630 --> 00:47:57,120
+All right, so, now we've got to talk about,
+
+1034
+00:47:57,120 --> 00:48:01,400
+how do we actually keep track of that mapping of page IDs to locations,
+
+1035
+00:48:02,170 --> 00:48:05,600
+and there's, this would be one of the big differences
+
+1036
+00:48:05,620 --> 00:48:08,660
+of how the database systems are going organize the and their pages.
+
+1037
+00:48:10,120 --> 00:48:12,620
+And again, there's not, I'm not saying one way is better than another.
+
+1038
+00:48:12,880 --> 00:48:15,740
+I'll describe the heap file approach is the most common one,
+
+1039
+00:48:16,960 --> 00:48:19,370
+but certainly a bunch of other systems are doing different things,
+
+1040
+00:48:20,630 --> 00:48:21,900
+and there are tradeoffs for all these ones.
+
+1041
+00:48:23,190 --> 00:48:24,875
+So at this point,
+
+1042
+00:48:24,875 --> 00:48:25,810
+where we're in our discussion,
+
+1043
+00:48:26,100 --> 00:48:28,000
+we don't need to know anything about what's inside of our pages,
+
+1044
+00:48:28,200 --> 00:48:30,610
+like, again, we don't care whether it's indexes or tuples,
+
+1045
+00:48:30,810 --> 00:48:31,610
+we just need to know,
+
+1046
+00:48:31,610 --> 00:48:34,070
+for a given page, how do I go find it
+
+1047
+00:48:34,070 --> 00:48:35,920
+and how to keep track of what pages I actually have.
+
+1048
+00:48:37,430 --> 00:48:38,970
+So tree files is basically,
+
+1049
+00:48:39,020 --> 00:48:42,290
+you store, you can store the,
+
+1050
+00:48:43,000 --> 00:48:45,260
+sort of in the leaf nodes, you can store the actual pages themselves
+
+1051
+00:48:45,700 --> 00:48:47,000
+or you can have a hash table.
+
+1052
+00:48:47,380 --> 00:48:50,390
+ISAM or sequential sorted files,
+
+1053
+00:48:50,770 --> 00:48:52,520
+this is something from like the 70s,
+
+1054
+00:48:52,720 --> 00:48:54,470
+my sql used to do this by default,
+
+1055
+00:48:54,610 --> 00:48:56,060
+it's not that common anymore,
+
+1056
+00:48:56,290 --> 00:48:58,280
+but again it's another way to sort of keep track of things.
+
+1057
+00:48:58,300 --> 00:49:00,950
+And then hashing file is going use the hash table to lookups.
+
+1058
+00:49:01,000 --> 00:49:02,720
+Heap files is going to be the most common one,
+
+1059
+00:49:03,910 --> 00:49:05,570
+but these other methods exist.
+
+1060
+00:49:06,010 --> 00:49:07,365
+And then for the log structure stuff,
+
+1061
+00:49:07,365 --> 00:49:08,270
+we'll see that next class.
+
+1062
+00:49:12,700 --> 00:49:14,660
+The directory is really keeping track,
+
+1063
+00:49:14,710 --> 00:49:17,150
+you still want to keep track of where things are,
+
+1064
+00:49:18,070 --> 00:49:20,570
+because we don't care, we don't care what's inside the pages.
+
+1065
+00:49:22,840 --> 00:49:26,660
+All right, so heap file is going to be a collection of unordered pages,
+
+1066
+00:49:27,580 --> 00:49:29,120
+where our tuples will be stored in random order,
+
+1067
+00:49:29,290 --> 00:49:31,220
+and again, the relational model allows us to do that,
+
+1068
+00:49:31,240 --> 00:49:34,020
+because the relational model doesn't define, doesn't says,
+
+1069
+00:49:34,020 --> 00:49:36,980
+that the data doesn't have to be specified in exact order,
+
+1070
+00:49:37,700 --> 00:49:39,240
+some systems might pre sort them,
+
+1071
+00:49:39,950 --> 00:49:42,280
+to make things faster for other effects,
+
+1072
+00:49:42,280 --> 00:49:45,330
+but the relational model doesn't require you to do that.
+
+1073
+00:49:46,250 --> 00:49:51,355
+And so the only API we need in our storage manager to support a heap file is basically,
+
+1074
+00:49:51,355 --> 00:49:55,680
+to create pages, get a page, write to a page, delete a page,
+
+1075
+00:49:56,060 --> 00:49:58,195
+and then an iterator API,
+
+1076
+00:49:58,195 --> 00:50:00,990
+that allows to to sequentially read pages
+
+1077
+00:50:01,580 --> 00:50:03,415
+to get the list of all the page ID that we have
+
+1078
+00:50:03,415 --> 00:50:04,230
+and read over them.
+
+1079
+00:50:05,410 --> 00:50:09,050
+So, managing this heat file is really easy to do,
+
+1080
+00:50:09,310 --> 00:50:10,875
+if your database is a single file,
+
+1081
+00:50:10,875 --> 00:50:14,755
+like in DuckDB or like in, in SQLite, right,
+
+1082
+00:50:14,755 --> 00:50:17,545
+because all you need to do, to find a given page is
+
+1083
+00:50:17,545 --> 00:50:19,140
+just know what page, the page number is,
+
+1084
+00:50:19,520 --> 00:50:21,085
+you know what the size of the page is,
+
+1085
+00:50:21,085 --> 00:50:22,350
+because they all have to be the same size,
+
+1086
+00:50:22,850 --> 00:50:24,310
+and now you just do a simple arithmetic,
+
+1087
+00:50:24,310 --> 00:50:26,730
+like take whatever the ID I'm looking for,
+
+1088
+00:50:27,080 --> 00:50:29,610
+multiply it by the the size of the page
+
+1089
+00:50:29,900 --> 00:50:32,070
+and then I can jump to whatever that offset is in the file,
+
+1090
+00:50:32,830 --> 00:50:34,160
+and I know exactly what I'm looking for.
+
+1091
+00:50:36,470 --> 00:50:38,590
+And if you go look in the SQLite documentation,
+
+1092
+00:50:38,590 --> 00:50:39,870
+they, they talk about how,
+
+1093
+00:50:40,520 --> 00:50:42,900
+in, in the header of their of their data file,
+
+1094
+00:50:43,010 --> 00:50:46,650
+all sort of the metadata they keep track of basically do this trick here.
+
+1095
+00:50:48,570 --> 00:50:49,730
+Where things get tricky is,
+
+1096
+00:50:49,730 --> 00:50:50,585
+if you have multiple files,
+
+1097
+00:50:50,585 --> 00:50:52,010
+which again, most systems do,
+
+1098
+00:50:52,010 --> 00:50:53,680
+Postgres does, MySQL does, Oracle does.
+
+1099
+00:50:54,360 --> 00:50:55,850
+And then now we need a way to say
+
+1100
+00:50:56,110 --> 00:50:57,350
+for given page number two,
+
+1101
+00:50:57,910 --> 00:51:07,640
+what file and what offset, what directory, what file, what offset has the page that I need, right.
+
+1102
+00:51:07,960 --> 00:51:10,400
+And this is what a heap file page directory can get, get for us,
+
+1103
+00:51:10,510 --> 00:51:12,080
+again, think of it's like a hash table,
+
+1104
+00:51:12,700 --> 00:51:13,815
+where you're just keeping track of,
+
+1105
+00:51:13,815 --> 00:51:17,990
+it's mapping from the page ID to to the pages in the data file.
+
+1106
+00:51:18,850 --> 00:51:21,390
+And this typically be sort of special file,
+
+1107
+00:51:21,390 --> 00:51:24,110
+you have the header of, of the single database file
+
+1108
+00:51:24,250 --> 00:51:28,250
+or at some special location inside of the database system and a directory.
+
+1109
+00:51:28,780 --> 00:51:30,195
+And you can sort of think it's a database,
+
+1110
+00:51:30,195 --> 00:51:33,290
+when the database, it's the database that keeps track of what's in your database,
+
+1111
+00:51:35,080 --> 00:51:36,375
+the catalog is part of that is too,
+
+1112
+00:51:36,375 --> 00:51:38,720
+but this is like keeping track where the physical location things are.
+
+1113
+00:51:39,690 --> 00:51:44,060
+And so this has to be kept in sync with the actual files on disk,
+
+1114
+00:51:44,060 --> 00:51:46,150
+because I don't want to create a bunch of pages,
+
+1115
+00:51:46,590 --> 00:51:48,100
+not update my page directory,
+
+1116
+00:51:48,300 --> 00:51:49,340
+I crash and come back,
+
+1117
+00:51:49,340 --> 00:51:51,730
+and now my page directory doesn't know about these other pages
+
+1118
+00:51:52,260 --> 00:51:54,640
+and I can't get to them, right.
+
+1119
+00:51:54,640 --> 00:51:56,560
+So there's, there's a bunch of extra tricks we have to do
+
+1120
+00:51:56,560 --> 00:51:59,370
+to make sure that these things are kept in sync.
+
+1121
+00:52:00,200 --> 00:52:02,310
+Okay, so just thinking like I have a bunch of pages,
+
+1122
+00:52:02,390 --> 00:52:05,400
+they're some, they're on some location, a bunch of files, doesn't matter where,
+
+1123
+00:52:05,870 --> 00:52:07,450
+and then it's just a mapping
+
+1124
+00:52:07,450 --> 00:52:08,550
+to tell me where to go find it.
+
+1125
+00:52:09,640 --> 00:52:11,145
+Additional metada we keep track of,
+
+1126
+00:52:11,145 --> 00:52:14,210
+like for every single page, we can keep track of an [essential] location,
+
+1127
+00:52:14,500 --> 00:52:16,160
+the number of free slots that they actually have,
+
+1128
+00:52:16,390 --> 00:52:17,780
+or free space they have,
+
+1129
+00:52:18,130 --> 00:52:19,970
+so now if I want to insert a tuple
+
+1130
+00:52:20,230 --> 00:52:21,740
+and I got to find a page to put it in,
+
+1131
+00:52:21,850 --> 00:52:22,980
+I don't want to have to scan them all
+
+1132
+00:52:22,980 --> 00:52:24,230
+and figure out who's got free space,
+
+1133
+00:52:24,730 --> 00:52:27,520
+my page directory would tell me that, right.
+
+1134
+00:52:28,810 --> 00:52:30,260
+And then if I run out of pages,
+
+1135
+00:52:30,400 --> 00:52:31,425
+I know how to allocate them
+
+1136
+00:52:31,425 --> 00:52:33,440
+and then update my page directory to point this as well.
+
+1137
+00:52:35,820 --> 00:52:38,570
+Again, just think, think of a hash table that get written to disk,
+
+1138
+00:52:38,570 --> 00:52:39,790
+that keeps track of the pages that I have,
+
+1139
+00:52:39,870 --> 00:52:42,400
+but then I can also iterate or scan through and say,
+
+1140
+00:52:42,570 --> 00:52:44,510
+here's page one, here's page two, here's page three,
+
+1141
+00:52:44,510 --> 00:52:45,340
+because we're going to need this,
+
+1142
+00:52:45,570 --> 00:52:48,070
+if we have an access method like a sequential scan operator,
+
+1143
+00:52:48,770 --> 00:52:49,630
+if we don't have an index,
+
+1144
+00:52:49,630 --> 00:52:52,410
+we need to be able to iterate over every single tuple on the table.
+
+1145
+00:52:52,940 --> 00:52:55,855
+So the page directory needs to be exposed as that, that API.
+
+1146
+00:52:55,855 --> 00:52:56,245
+Yes.
+
+1147
+00:52:56,245 --> 00:53:06,110
+Yeah, so his question is,
+
+1148
+00:53:06,430 --> 00:53:09,830
+because the directory has to be brought in a memory in order to read it,
+
+1149
+00:53:10,690 --> 00:53:12,120
+it's, it's a non-volatile memory,
+
+1150
+00:53:12,120 --> 00:53:15,000
+so now if I crash, I don't want to lose it,
+
+1151
+00:53:15,000 --> 00:53:17,310
+does that mean any changes I make to it have to be written a disk.
+
+1152
+00:53:17,310 --> 00:53:17,600
+Yes.
+
+1153
+00:53:18,540 --> 00:53:21,700
+But like, but it's not as bad as,
+
+1154
+00:53:21,870 --> 00:53:25,265
+like you're not updating this thing all the time, right,
+
+1155
+00:53:25,265 --> 00:53:27,065
+so you're not going to,
+
+1156
+00:53:27,065 --> 00:53:29,135
+you know, if you run out of space in your, in your database file
+
+1157
+00:53:29,135 --> 00:53:30,130
+and allocate more pages,
+
+1158
+00:53:30,510 --> 00:53:32,920
+you're not going to allocate just one page, right,
+
+1159
+00:53:33,240 --> 00:53:34,930
+because then you can potentially you do that for every single query,
+
+1160
+00:53:35,100 --> 00:53:37,330
+you allocate like you know a gigabyte of data,
+
+1161
+00:53:37,860 --> 00:53:39,845
+update your page directory that gets written to disk,
+
+1162
+00:53:39,845 --> 00:53:41,800
+once you make sure that's persisted and it's safe,
+
+1163
+00:53:42,760 --> 00:53:44,090
+then you proceed with running the query.
+
+1164
+00:53:47,530 --> 00:53:50,690
+Yes, so statement, any update to the page of directory has to be written a disk,
+
+1165
+00:53:50,710 --> 00:53:51,260
+absolutely yes,
+
+1166
+00:53:51,610 --> 00:53:53,450
+because otherwise you don't know what, you don't know what you have.
+
+1167
+00:53:54,070 --> 00:53:54,470
+Yes.
+
+1168
+00:54:01,940 --> 00:54:02,530
+This question is,
+
+1169
+00:54:02,530 --> 00:54:05,400
+is this sort in a special database file or does it sort along with other pages,
+
+1170
+00:54:05,870 --> 00:54:06,780
+what do you might special,
+
+1171
+00:54:07,540 --> 00:54:09,080
+just like a separate file,
+
+1172
+00:54:09,730 --> 00:54:11,450
+yeah, so in some systems, will as a separate file,
+
+1173
+00:54:12,220 --> 00:54:14,630
+SQLite will store this in the header of the file,
+
+1174
+00:54:16,320 --> 00:54:17,870
+typically stored separately.
+
+1175
+00:54:29,110 --> 00:54:29,880
+So his question is,
+
+1176
+00:54:29,880 --> 00:54:31,800
+when I say a database system could use multiple files,
+
+1177
+00:54:31,800 --> 00:54:34,940
+I mean within one table, does it contain multiple files
+
+1178
+00:54:35,020 --> 00:54:37,010
+or within the databases, contain multiple files.
+
+1179
+00:54:38,760 --> 00:54:39,160
+Anyone?
+
+1180
+00:54:40,200 --> 00:54:44,400
+Yeah, so DuckDB uses one file, all the table,
+
+1181
+00:54:44,400 --> 00:54:45,110
+same as SQLite,
+
+1182
+00:54:45,490 --> 00:54:46,125
+but I mean,
+
+1183
+00:54:46,125 --> 00:54:48,420
+we can pop up at Postgres and look in the data directory,
+
+1184
+00:54:48,420 --> 00:54:49,340
+there's a bunch of files in there,
+
+1185
+00:54:49,420 --> 00:54:50,810
+that have numbers in them,
+
+1186
+00:54:51,300 --> 00:54:52,425
+and there various data files
+
+1187
+00:54:52,425 --> 00:54:53,685
+and sometimes there'll be for indexes,
+
+1188
+00:54:53,685 --> 00:54:54,650
+sometimes there'll be for tables.
+
+1189
+00:54:56,540 --> 00:54:58,620
+And various systems do different things
+
+1190
+00:54:58,760 --> 00:55:01,200
+and again not, to keep repeating myself,
+
+1191
+00:55:01,370 --> 00:55:02,970
+this is the beauty of SQL,
+
+1192
+00:55:03,410 --> 00:55:04,555
+I don't know, don't care,
+
+1193
+00:55:04,555 --> 00:55:07,230
+in MySQL queries, whether I have one file or a thousand files,
+
+1194
+00:55:08,030 --> 00:55:10,140
+the database system can decide how to do that,
+
+1195
+00:55:10,430 --> 00:55:12,120
+it just knows how to run your query for you.
+
+1196
+00:55:12,910 --> 00:55:14,780
+So again, different database systems do different things.
+
+1197
+00:55:20,000 --> 00:55:20,620
+His question is,
+
+1198
+00:55:20,620 --> 00:55:23,400
+how do you know whether you want to use multiple files for for one table,
+
+1199
+00:55:25,010 --> 00:55:25,975
+again, it depends,
+
+1200
+00:55:25,975 --> 00:55:30,130
+so like if we won't talk about large, large columns yet,
+
+1201
+00:55:30,130 --> 00:55:34,035
+but like see say you have a, you have a table,
+
+1202
+00:55:34,035 --> 00:55:37,040
+that has a BLOB field or a TEXT field,
+
+1203
+00:55:37,300 --> 00:55:39,200
+and that's like 10 megabytes,
+
+1204
+00:55:39,820 --> 00:55:41,880
+you'd want to store that in separate pages,
+
+1205
+00:55:42,410 --> 00:55:43,860
+but maybe you want to store that compressed,
+
+1206
+00:55:43,880 --> 00:55:45,300
+because it's a bunch of text data,
+
+1207
+00:55:45,410 --> 00:55:48,390
+so you have the regular columns of the integers and floats, whatever,
+
+1208
+00:55:48,650 --> 00:55:49,645
+that stored in one file,
+
+1209
+00:55:49,645 --> 00:55:52,770
+and then your large stuff is stored in another file, right.
+
+1210
+00:55:53,120 --> 00:55:54,265
+So that's one approach,
+
+1211
+00:55:54,265 --> 00:55:55,240
+but you can imagine also too,
+
+1212
+00:55:55,240 --> 00:55:58,325
+maybe you just, you just, you have some space in a single file,
+
+1213
+00:55:58,325 --> 00:56:00,370
+at the top parts of the fixed stuff, the bottom of the [],
+
+1214
+00:56:01,020 --> 00:56:01,580
+it depends.
+
+1215
+00:56:04,370 --> 00:56:06,990
+I think MySQL up to 5.6 used to store,
+
+1216
+00:56:08,470 --> 00:56:12,475
+I think it was one file for all tables or all databases,
+
+1217
+00:56:12,475 --> 00:56:13,630
+and they don't,
+
+1218
+00:56:13,630 --> 00:56:15,450
+no, it was one file per database
+
+1219
+00:56:15,830 --> 00:56:17,760
+and they split it up to be one file, not per table,
+
+1220
+00:56:19,130 --> 00:56:20,430
+and separate files for indexes.
+
+1221
+00:56:24,160 --> 00:56:24,560
+Okay.
+
+1222
+00:56:26,060 --> 00:56:29,065
+So now we know roughly at what the files look like,
+
+1223
+00:56:29,065 --> 00:56:30,415
+or how the files are laid out
+
+1224
+00:56:30,415 --> 00:56:31,800
+and how we keep track of where they exist.
+
+1225
+00:56:33,050 --> 00:56:35,910
+So, let's talk about what's actually inside the pages themselves.
+
+1226
+00:56:37,610 --> 00:56:39,360
+So every page is going to have a header,
+
+1227
+00:56:40,315 --> 00:56:44,130
+that's going to tell you something about what the data actually is.
+
+1228
+00:56:45,060 --> 00:56:50,225
+So a common thing would be like the page size or like a checksum, right,
+
+1229
+00:56:50,225 --> 00:56:53,150
+so if you crash and come back or you restart the system,
+
+1230
+00:56:53,150 --> 00:56:55,420
+or actually anytime you fetch something from disk,
+
+1231
+00:56:55,560 --> 00:56:58,630
+you compute a fast checksum to make sure that the data isn't corrupted.
+
+1232
+00:57:00,280 --> 00:57:04,010
+Maybe keep track of the version of the database system that actually created the the page,
+
+1233
+00:57:04,030 --> 00:57:06,800
+that way you put out a new version that breaks compatibility,
+
+1234
+00:57:07,150 --> 00:57:09,710
+you can have some code that knows how to read the old data.
+
+1235
+00:57:10,610 --> 00:57:13,090
+We won't talk about transactions until after the midterm,
+
+1236
+00:57:13,090 --> 00:57:14,590
+but like, you can keep track of
+
+1237
+00:57:14,590 --> 00:57:17,965
+like what thread or what transaction wrote to what data in this
+
+1238
+00:57:17,965 --> 00:57:20,640
+and whether it's actually visible to whatever, whatever query you're running.
+
+1239
+00:57:21,700 --> 00:57:23,060
+If the data is compressed,
+
+1240
+00:57:24,090 --> 00:57:25,460
+or encoded in a certain way,
+
+1241
+00:57:25,460 --> 00:57:26,980
+which we'll discuss next week,
+
+1242
+00:57:27,210 --> 00:57:30,130
+there'll be metadata about how what the compression scheme actually is.
+
+1243
+00:57:31,590 --> 00:57:35,225
+To be information about what the the schema is or what the table schema is,
+
+1244
+00:57:35,225 --> 00:57:36,340
+as we talk about Oracle does.
+
+1245
+00:57:36,900 --> 00:57:38,380
+Sometimes there's additional statistics,
+
+1246
+00:57:38,820 --> 00:57:40,600
+about what's in the data itself,
+
+1247
+00:57:41,100 --> 00:57:42,665
+so like for a given column,
+
+1248
+00:57:42,665 --> 00:57:44,890
+what's the min, the min value and the max value,
+
+1249
+00:57:45,210 --> 00:57:47,050
+because maybe I just need to read that,
+
+1250
+00:57:47,190 --> 00:57:51,840
+instead of actually reading the data to figure out whether and there's something I need, right.
+
+1251
+00:57:51,840 --> 00:57:52,785
+And again, as we already discussed,
+
+1252
+00:57:52,785 --> 00:57:55,100
+Oracle is famously self-contained,
+
+1253
+00:57:55,210 --> 00:57:56,750
+but not all systems do that.
+
+1254
+00:57:59,990 --> 00:58:01,320
+So now, within the page itself,
+
+1255
+00:58:02,390 --> 00:58:06,620
+we need to decide how we actually want to organize the tuple data, right.
+
+1256
+00:58:07,300 --> 00:58:08,660
+So at this point in this lecture,
+
+1257
+00:58:09,070 --> 00:58:11,270
+we're going to assume that we're only storing tuples in our pages,
+
+1258
+00:58:12,100 --> 00:58:13,280
+we'll discuss indexes later,
+
+1259
+00:58:13,630 --> 00:58:16,670
+and then we're going to assume that we're storing tuples in a row-oriented manner,
+
+1260
+00:58:17,710 --> 00:58:18,330
+meaning like,
+
+1261
+00:58:18,330 --> 00:58:21,260
+if I have five attributes, I will have, I will have a tuple
+
+1262
+00:58:21,400 --> 00:58:23,250
+and I'll have those five attributes contiguously,
+
+1263
+00:58:23,250 --> 00:58:24,410
+before I see the next tuple.
+
+1264
+00:58:25,170 --> 00:58:27,425
+Next week we'll see about column stores,
+
+1265
+00:58:27,425 --> 00:58:28,610
+we store this slightly different,
+
+1266
+00:58:28,610 --> 00:58:29,650
+but for our purposes here,
+
+1267
+00:58:30,630 --> 00:58:32,470
+we assume that's row-oriented
+
+1268
+00:58:32,640 --> 00:58:34,300
+and we'll break this next week.
+
+1269
+00:58:35,540 --> 00:58:36,475
+So there's three different approaches,
+
+1270
+00:58:36,475 --> 00:58:38,160
+what, what it could actually be in our pages.
+
+1271
+00:58:38,900 --> 00:58:40,150
+So the tuple-oriented storage,
+
+1272
+00:58:40,150 --> 00:58:43,650
+where we're only storing tuples and the exact values that those tuples have.
+
+1273
+00:58:44,240 --> 00:58:45,430
+There be a log-structured approach,
+
+1274
+00:58:45,430 --> 00:58:50,760
+where we just store deltas of what changed since the last time, last time these tuple was updated.
+
+1275
+00:58:51,990 --> 00:58:54,070
+And that should be index-organized,
+
+1276
+00:58:54,450 --> 00:58:55,690
+index-organized storage to be,
+
+1277
+00:58:57,300 --> 00:58:58,900
+it could be like a tree structure,
+
+1278
+00:58:59,460 --> 00:59:02,140
+where in the leaf nodes, I'm actually storing the data itself.
+
+1279
+00:59:02,910 --> 00:59:05,470
+So today's lecture, we're only going to talk about the first one,
+
+1280
+00:59:06,030 --> 00:59:06,850
+tuple-oriented storage,
+
+1281
+00:59:07,170 --> 00:59:09,610
+and then next week we'll talk about the two other approaches.
+
+1282
+00:59:12,630 --> 00:59:13,580
+All right, so let's think about,
+
+1283
+00:59:13,580 --> 00:59:16,265
+how do we actually want to store tuples in our pages, right.
+
+1284
+00:59:16,265 --> 00:59:17,705
+So let's say we have a really simple approach,
+
+1285
+00:59:17,705 --> 00:59:19,580
+where in our page header,
+
+1286
+00:59:19,580 --> 00:59:22,510
+we just keep track of the number of tuples that we have, right,
+
+1287
+00:59:22,950 --> 00:59:25,510
+and anytime we want to insert a new tuple,
+
+1288
+00:59:26,320 --> 00:59:29,020
+we just append to the end, right.
+
+1289
+00:59:29,400 --> 00:59:30,910
+So we can assume our data fixed length,
+
+1290
+00:59:31,260 --> 00:59:32,480
+so if I want to insert a new tuple,
+
+1291
+00:59:32,480 --> 00:59:33,700
+I just go look at the header,
+
+1292
+00:59:33,810 --> 00:59:34,810
+see the number tuples,
+
+1293
+00:59:36,060 --> 00:59:38,320
+multiply that by the size of the tuple
+
+1294
+00:59:38,400 --> 00:59:40,450
+and that tells me where offset I want to write the page.
+
+1295
+00:59:43,935 --> 00:59:44,240
+What's wrong,
+
+1296
+00:59:46,310 --> 00:59:47,730
+oh, lantern fly, just kill it,
+
+1297
+00:59:53,030 --> 00:59:54,540
+is anybody want to keep that alive,
+
+1298
+00:59:58,970 --> 01:00:01,110
+for those on Youtube, we have a lantern fly infestation.
+
+1299
+01:00:02,610 --> 01:00:07,120
+All right, all right, so, is this a good idea or a bad idea,
+
+1300
+01:00:09,320 --> 01:00:10,195
+I said strawman,
+
+1301
+01:00:10,195 --> 01:00:11,245
+so it's obviously a bad idea,
+
+1302
+01:00:11,245 --> 01:00:12,120
+why is it a bad idea?
+
+1303
+01:00:17,530 --> 01:00:18,720
+Right, so if I deleted tuples,
+
+1304
+01:00:18,720 --> 01:00:20,570
+I delete tuple 2,
+
+1305
+01:00:21,190 --> 01:00:23,635
+it throws everything out of order, right,
+
+1306
+01:00:23,635 --> 01:00:28,495
+because now, I what I want to be able to do is insert a new tuple
+
+1307
+01:00:28,495 --> 01:00:29,410
+and I won't put at the end,
+
+1308
+01:00:29,410 --> 01:00:30,840
+I want to use this spot here, right,
+
+1309
+01:00:31,810 --> 01:00:33,590
+so, you know, number tuples is enough,
+
+1310
+01:00:33,790 --> 01:00:36,390
+maybe I keep track of where things are located,
+
+1311
+01:00:36,390 --> 01:00:38,210
+second side, where to put them in, right.
+
+1312
+01:00:38,830 --> 01:00:41,270
+But, you know, it's going beyond what I'm showing here.
+
+1313
+01:00:42,420 --> 01:00:43,250
+What's another obvious problem?
+
+1314
+01:00:44,080 --> 01:00:48,720
+He said what if one of the tuple too big to start on the page.
+
+1315
+01:00:49,400 --> 01:00:52,020
+Yes, but also what if they're not the fixed length,
+
+1316
+01:00:52,430 --> 01:00:54,900
+which most data is, is not fixed length, right,
+
+1317
+01:00:55,630 --> 01:00:56,900
+email addresses aren't the same size,
+
+1318
+01:00:58,510 --> 01:01:00,140
+Andrew IDs aren't the same, always the same size.
+
+1319
+01:01:00,610 --> 01:01:02,040
+Now I can just sort as a [char] type,
+
+1320
+01:01:02,040 --> 01:01:02,670
+but what does that do,
+
+1321
+01:01:02,670 --> 01:01:04,400
+that pre allocates the space I need,
+
+1322
+01:01:04,870 --> 01:01:09,290
+and you know, if the largest email address is is 1 kilobyte,
+
+1323
+01:01:09,310 --> 01:01:11,580
+then I have to store 1 kilobyte for every single email address,
+
+1324
+01:01:11,580 --> 01:01:14,300
+even though it's not going to be using that space, right,
+
+1325
+01:01:14,710 --> 01:01:15,465
+then, his comment is,
+
+1326
+01:01:15,465 --> 01:01:18,620
+well, what if the table, can the table can't fit in this page,
+
+1327
+01:01:19,150 --> 01:01:20,300
+how do I split in multiple pages.
+
+1328
+01:01:21,140 --> 01:01:22,175
+We discuss that next week,
+
+1329
+01:01:22,175 --> 01:01:24,930
+but this also would not work, right.
+
+1330
+01:01:25,810 --> 01:01:27,585
+So clearly, you know, this is not enough for us,
+
+1331
+01:01:27,585 --> 01:01:29,360
+we need additional metadata to keep track of,
+
+1332
+01:01:31,120 --> 01:01:33,860
+keep track of how we going to store this,
+
+1333
+01:01:34,060 --> 01:01:35,145
+another problem too is like,
+
+1334
+01:01:35,145 --> 01:01:38,970
+again, if four, if four could go here, right,
+
+1335
+01:01:38,970 --> 01:01:42,290
+I could fill the gap, where, when I deleted two,
+
+1336
+01:01:42,370 --> 01:01:45,470
+if four needs to go here, then I'm wasting space,
+
+1337
+01:01:45,820 --> 01:01:47,510
+but if I want to, maybe move #3 up,
+
+1338
+01:01:48,550 --> 01:01:52,970
+but now I have to tell the rest of the system, that I moved three, right,
+
+1339
+01:01:52,970 --> 01:01:55,480
+because I have told you how I'm pointing to three, how I find three,
+
+1340
+01:01:57,090 --> 01:02:00,310
+but assuming it's going to be like some offset within this page,
+
+1341
+01:02:00,540 --> 01:02:01,750
+but now if I'm moving three,
+
+1342
+01:02:02,590 --> 01:02:04,545
+then, then I have to go update every possible index,
+
+1343
+01:02:04,545 --> 01:02:05,720
+that is maybe pointing to it.
+
+1344
+01:02:06,370 --> 01:02:07,290
+And that's going to be super expensive.
+
+1345
+01:02:09,910 --> 01:02:14,060
+So the most common approach to handle this problem is called slotted pages,
+
+1346
+01:02:14,770 --> 01:02:18,710
+and what I'll describe here isn't, you know, isn't going to be exactly how every system does this,
+
+1347
+01:02:18,910 --> 01:02:20,805
+but at a high level, this is what everyone is doing,
+
+1348
+01:02:20,805 --> 01:02:22,400
+if you're a row oriented database system,
+
+1349
+01:02:23,530 --> 01:02:26,810
+that's using two oriented pages, so not log structured,
+
+1350
+01:02:27,425 --> 01:02:28,690
+then they're doing something that looks like this.
+
+1351
+01:02:29,870 --> 01:02:32,320
+So we're going to have, we'll have a header,
+
+1352
+01:02:32,320 --> 01:02:34,470
+that keeps track of all the metadata, we talked about before,
+
+1353
+01:02:34,850 --> 01:02:38,040
+but then after the header, we'll have this slot array,
+
+1354
+01:02:38,840 --> 01:02:42,600
+where the, at every position in that slot array
+
+1355
+01:02:42,890 --> 01:02:47,220
+is going to point to some tuple in our page,
+
+1356
+01:02:48,060 --> 01:02:51,910
+and the tuples will be starting at the bottom, at the end of the page, right,
+
+1357
+01:02:51,910 --> 01:02:54,990
+so at the bottom, we'll have all the fixed length and var-length tuple data,
+
+1358
+01:02:55,520 --> 01:02:58,600
+for now, assume that that everything is put together, right,
+
+1359
+01:02:58,600 --> 01:03:00,030
+so meaning like, there isn't,
+
+1360
+01:03:00,110 --> 01:03:01,270
+if you have a really large value,
+
+1361
+01:03:01,270 --> 01:03:02,910
+it isn't stored in separate page,
+
+1362
+01:03:03,170 --> 01:03:05,550
+the entire table has to be stored inside this page.
+
+1363
+01:03:07,420 --> 01:03:10,340
+And so the slot array is just going to be storing fixed length offsets
+
+1364
+01:03:11,020 --> 01:03:14,480
+to where to find the starting location of individual tuples.
+
+1365
+01:03:15,190 --> 01:03:17,730
+And maybe you could also store the size of the tuple and the header,
+
+1366
+01:03:17,730 --> 01:03:20,190
+if you wanted to, right.
+
+1367
+01:03:21,380 --> 01:03:22,590
+So now what's going to happen is,
+
+1368
+01:03:22,730 --> 01:03:26,720
+as we need to update the the the table
+
+1369
+01:03:27,040 --> 01:03:28,010
+and add new pages,
+
+1370
+01:03:28,570 --> 01:03:30,500
+sorry, add new tuples inside the page,
+
+1371
+01:03:30,880 --> 01:03:33,770
+the slot array is going to grow from the beginning to the end,
+
+1372
+01:03:34,560 --> 01:03:38,180
+and then all our tuple data is going to grow from the end to the beginning.
+
+1373
+01:03:39,430 --> 01:03:43,760
+And any single time, I add a new entry in, to my slot array, sorry, new tuple,
+
+1374
+01:03:43,780 --> 01:03:47,070
+I put, I update the slot array
+
+1375
+01:03:47,070 --> 01:03:49,250
+to tell me where to go find it, right.
+
+1376
+01:03:50,920 --> 01:03:52,365
+So now if I go back to the problem I had before,
+
+1377
+01:03:52,365 --> 01:03:53,900
+where I say I deleted tuple three,
+
+1378
+01:03:55,570 --> 01:03:57,045
+well, this is fine,
+
+1379
+01:03:57,045 --> 01:03:59,540
+because I didn't move any other tuples,
+
+1380
+01:04:00,340 --> 01:04:03,180
+the slot array still, for four still points to it,
+
+1381
+01:04:03,410 --> 01:04:06,980
+so I don't tell any other part of the system that, I moved four, right.
+
+1382
+01:04:07,360 --> 01:04:10,425
+But even, you know, if I now wanted to reclaim this space,
+
+1383
+01:04:10,425 --> 01:04:13,760
+that three used to be and I deleted,
+
+1384
+01:04:13,900 --> 01:04:18,350
+if I want to slide three or four over to, to take, you know, compact it,
+
+1385
+01:04:19,510 --> 01:04:20,865
+all they need to do now is
+
+1386
+01:04:20,865 --> 01:04:22,760
+update the slot array to point to the new offset,
+
+1387
+01:04:24,580 --> 01:04:25,520
+which is easy to do,
+
+1388
+01:04:27,430 --> 01:04:28,290
+I don't have to,
+
+1389
+01:04:28,290 --> 01:04:29,780
+again, relational model says they don't have to do this,
+
+1390
+01:04:29,950 --> 01:04:31,590
+some, some systems do, some systems don't,
+
+1391
+01:04:31,590 --> 01:04:33,110
+we'll see this in a second, right,
+
+1392
+01:04:33,860 --> 01:04:34,800
+and this is all fine.
+
+1393
+01:04:37,220 --> 01:04:39,940
+So this is what SQLite, actually I don't know SQLite does this,
+
+1394
+01:04:39,940 --> 01:04:40,980
+but what Postgres does,
+
+1395
+01:04:42,080 --> 01:04:42,540
+MySQL does, MySQL doesn't do this,
+
+1396
+01:04:42,800 --> 01:04:43,285
+SQL Server does this,
+
+1397
+01:04:43,285 --> 01:04:45,790
+this slotted pages is the most common approach,
+
+1398
+01:04:45,790 --> 01:04:46,650
+this is what everyone does.
+
+1399
+01:04:50,910 --> 01:04:51,310
+Yes.
+
+1400
+01:04:56,200 --> 01:04:56,720
+So his question is,
+
+1401
+01:04:56,860 --> 01:04:58,820
+can I reuse slot position three,
+
+1402
+01:04:58,820 --> 01:05:01,030
+if I insert a new tuple, yes,
+
+1403
+01:05:01,030 --> 01:05:03,915
+but I don't have to put that in front of four, right,
+
+1404
+01:05:03,915 --> 01:05:04,670
+I can put it anywhere.
+
+1405
+01:05:08,310 --> 01:05:08,860
+Other questions?
+
+1406
+01:05:10,830 --> 01:05:11,230
+Yes.
+
+1407
+01:05:18,370 --> 01:05:20,055
+Yeah, so her statement, her question is,
+
+1408
+01:05:20,055 --> 01:05:23,690
+wouldn't this be wasting space, if the tuples are variable length,
+
+1409
+01:05:23,980 --> 01:05:25,160
+yeah, so the,
+
+1410
+01:05:26,130 --> 01:05:30,040
+again, my tuples are growing from the, from, from the,
+
+1411
+01:05:30,270 --> 01:05:31,930
+tuple data is going from the end to the beginning,
+
+1412
+01:05:32,580 --> 01:05:33,880
+slot array is going from the beginning to the end,
+
+1413
+01:05:34,140 --> 01:05:35,690
+at some point, I'm going to run out of space
+
+1414
+01:05:35,690 --> 01:05:36,790
+and there might be a little bit of,
+
+1415
+01:05:37,140 --> 01:05:40,385
+you know, little space in the middle that I can't use for anything,
+
+1416
+01:05:40,385 --> 01:05:41,290
+is that wasted, yes.
+
+1417
+01:05:42,660 --> 01:05:44,060
+But the advantage we get of
+
+1418
+01:05:44,060 --> 01:05:50,290
+not having to update other things anytime we shuffle the order the slot array,
+
+1419
+01:05:50,550 --> 01:05:51,880
+is worth that cost.
+
+1420
+01:05:58,470 --> 01:05:58,870
+Okay.
+
+1421
+01:06:00,010 --> 01:06:02,780
+So now, assuming we sort of thinking the slotted pages,
+
+1422
+01:06:04,450 --> 01:06:07,070
+now we need a way to identify tuples.
+
+1423
+01:06:09,190 --> 01:06:12,290
+And this this one, we're going to use the notion of a record ID,
+
+1424
+01:06:12,910 --> 01:06:15,950
+different data systems may call this the row ID or the row number,
+
+1425
+01:06:16,600 --> 01:06:18,350
+but a high level, the way to think about it,
+
+1426
+01:06:18,370 --> 01:06:22,790
+it is a way to uniquely identify some logical tuple,
+
+1427
+01:06:23,530 --> 01:06:27,140
+based on its physical location inside of a file inside of a page,
+
+1428
+01:06:28,140 --> 01:06:32,800
+and it's typically going to be a combination of a file number, an ID number, the page number,
+
+1429
+01:06:33,620 --> 01:06:36,670
+and then the slot number that corresponds where they exist in that slot array.
+
+1430
+01:06:37,390 --> 01:06:39,045
+So that when you want to do a lookup
+
+1431
+01:06:39,045 --> 01:06:41,120
+to say I need, I need this tuple,
+
+1432
+01:06:41,260 --> 01:06:42,380
+if you have the record ID,
+
+1433
+01:06:42,850 --> 01:06:44,145
+you would then look in the page directory
+
+1434
+01:06:44,145 --> 01:06:45,500
+and to figure out what page has it,
+
+1435
+01:06:45,820 --> 01:06:46,910
+go grab that page,
+
+1436
+01:06:47,170 --> 01:06:48,975
+then use the slot number inside the slot array
+
+1437
+01:06:48,975 --> 01:06:53,120
+to figure out where you know what what offset inside that page has the data you're looking for.
+
+1438
+01:06:54,510 --> 01:06:56,480
+So most databases will not store this record ID,
+
+1439
+01:06:56,480 --> 01:06:58,270
+this is something that's synthesized, materialize,
+
+1440
+01:06:58,440 --> 01:07:01,060
+again, based on the page directory you know of, of
+
+1441
+01:07:02,430 --> 01:07:04,540
+or how how you keep track of how to find things,
+
+1442
+01:07:04,650 --> 01:07:07,930
+meaning, like within the tuple data itself, I'm not storing this record ID.
+
+1443
+01:07:08,640 --> 01:07:11,300
+SQLite does store this as a separate column,
+
+1444
+01:07:11,300 --> 01:07:13,600
+that you're not supposed to see, but you can get to it,
+
+1445
+01:07:13,980 --> 01:07:15,905
+and the way they do, the reason why they do this is,
+
+1446
+01:07:15,905 --> 01:07:17,320
+because this is how they're going to,
+
+1447
+01:07:18,480 --> 01:07:20,555
+they're going to use this, use this as the primary key
+
+1448
+01:07:20,555 --> 01:07:22,840
+to allow them to identify individual tuples.
+
+1449
+01:07:23,340 --> 01:07:25,370
+So if like I, we, we haven't talked about secondary indexes,
+
+1450
+01:07:25,370 --> 01:07:26,450
+but I have, if I have an index,
+
+1451
+01:07:26,450 --> 01:07:27,700
+that's not the primary key index,
+
+1452
+01:07:28,750 --> 01:07:33,330
+my, my value, when I, when I do my lookup on a key, is going to be that row ID,
+
+1453
+01:07:33,330 --> 01:07:36,740
+which I then use in the primary key row ID index to find the data I need.
+
+1454
+01:07:37,900 --> 01:07:39,110
+Different systems do different things.
+
+1455
+01:07:40,720 --> 01:07:44,090
+So, the size of this is going to vary, based on implementation,
+
+1456
+01:07:44,350 --> 01:07:46,610
+so Postgres is going to be 6, 6 bytes,
+
+1457
+01:07:47,200 --> 01:07:48,950
+SQLite going be 8 bytes or 64 bits,
+
+1458
+01:07:49,930 --> 01:07:51,210
+SQL Server has an 8 byte []
+
+1459
+01:07:51,210 --> 01:07:55,070
+and then Oracle has a 10 byte record ID.
+
+1460
+01:07:56,150 --> 01:07:58,260
+Again, you can see this directly in the database system,
+
+1461
+01:07:59,000 --> 01:07:59,845
+so we can do a quick demo
+
+1462
+01:07:59,845 --> 01:08:00,960
+just to show you all this.
+
+1463
+01:08:04,890 --> 01:08:07,270
+So you're not supposed to use this in your application, right,
+
+1464
+01:08:07,530 --> 01:08:11,940
+so even though this would uniquely identify a, a tuple,
+
+1465
+01:08:12,230 --> 01:08:14,190
+again, it's the physical location of it,
+
+1466
+01:08:14,880 --> 01:08:15,790
+and it could change,
+
+1467
+01:08:16,320 --> 01:08:18,910
+meaning, like if I insert a tuple
+
+1468
+01:08:19,320 --> 01:08:20,380
+and I get a record ID,
+
+1469
+01:08:21,900 --> 01:08:24,250
+if my application then references it,
+
+1470
+01:08:24,570 --> 01:08:25,355
+the problem could be,
+
+1471
+01:08:25,355 --> 01:08:27,275
+like I could run compaction or garbage collection,
+
+1472
+01:08:27,275 --> 01:08:28,600
+in Postgres, it's called the Vacuum,
+
+1473
+01:08:28,830 --> 01:08:30,860
+where I could reorganize that page,
+
+1474
+01:08:30,860 --> 01:08:33,440
+where maybe now the slot number changes or the page number changes,
+
+1475
+01:08:33,440 --> 01:08:35,320
+and now the thing I'm looking for isn't there anymore.
+
+1476
+01:08:35,520 --> 01:08:37,895
+So again, this is a physical aspect of the database system,
+
+1477
+01:08:37,895 --> 01:08:40,360
+that we're not supposed to really use in our application,
+
+1478
+01:08:40,620 --> 01:08:42,365
+but it's exposed to us,
+
+1479
+01:08:42,365 --> 01:08:44,530
+because if we need to administer and maintain these systems,
+
+1480
+01:08:44,820 --> 01:08:46,720
+we need to know where the data actually is.
+
+1481
+01:08:51,160 --> 01:08:52,460
+So let me log in quickly, sorry,
+
+1482
+01:09:01,680 --> 01:09:02,560
+I may need to reconnect.
+
+1483
+01:09:04,710 --> 01:09:05,920
+All right, so I do Postgres first.
+
+1484
+01:09:08,135 --> 01:09:09,850
+So we're going to create a really simple table r,
+
+1485
+01:09:11,730 --> 01:09:18,380
+that just has three tuples, right, 100 101 102.
+
+1486
+01:09:19,520 --> 01:09:21,330
+So Postgres has something called the ctid,
+
+1487
+01:09:23,510 --> 01:09:25,680
+and this is going to be a tuple now,
+
+1488
+01:09:26,090 --> 01:09:29,670
+that's going to give you the page number and then the slot number,
+
+1489
+01:09:30,290 --> 01:09:35,320
+so these tuple here are at page 0, slot 1, slot 2, slot 3, right.
+
+1490
+01:09:37,770 --> 01:09:42,620
+So now if I, say I delete the second tuple, I delete 101,
+
+1491
+01:09:43,630 --> 01:09:45,440
+now when I do my scan again,
+
+1492
+01:09:46,420 --> 01:09:49,430
+now you can see that, Postgres [] deleted the tuple,
+
+1493
+01:09:51,630 --> 01:09:53,080
+but it didn't move things around,
+
+1494
+01:09:54,200 --> 01:09:57,180
+and let the data where actually where it actually lives.
+
+1495
+01:09:59,810 --> 01:10:01,770
+But I can run garbage, the garbage collection,
+
+1496
+01:10:03,650 --> 01:10:05,100
+let me insert a tuple back,
+
+1497
+01:10:06,430 --> 01:10:07,460
+so I insert 103,
+
+1498
+01:10:09,400 --> 01:10:10,305
+now you can see again,
+
+1499
+01:10:10,305 --> 01:10:13,260
+it didn't take that that that (0 2) slot,
+
+1500
+01:10:13,260 --> 01:10:14,480
+from the first tuple I deleted,
+
+1501
+01:10:15,100 --> 01:10:18,490
+it is appended to the end, put it in slot 4, right.
+
+1502
+01:10:20,830 --> 01:10:22,430
+So then I can now run the,
+
+1503
+01:10:23,950 --> 01:10:25,490
+again, in Postgres, it's called the Vacuum,
+
+1504
+01:10:29,040 --> 01:10:30,350
+so the command is VACUUM,
+
+1505
+01:10:30,350 --> 01:10:31,570
+again, this is a Postgres idiom,
+
+1506
+01:10:31,980 --> 01:10:33,650
+so VACUUM FULL is going to
+
+1507
+01:10:33,650 --> 01:10:39,280
+have Postgres basically compact every single page and write out a new page, new files,
+
+1508
+01:10:40,120 --> 01:10:42,540
+so I I have a bunch of pages that are empty,
+
+1509
+01:10:42,890 --> 01:10:45,810
+it'll release them, when it creates a new version.
+
+1510
+01:10:47,130 --> 01:10:49,720
+So now when I do that same query before, right,
+
+1511
+01:10:49,920 --> 01:10:54,730
+now, you see it compact of it, right, (0,1) (0 2) (0 3).
+
+1512
+01:10:58,410 --> 01:10:59,590
+Makes sense, yes.
+
+1513
+01:10:59,670 --> 01:11:02,230
+So is this the ctid referring to the?
+
+1514
+01:11:03,550 --> 01:11:06,480
+Page number and offset, slot number.
+
+1515
+01:11:11,980 --> 01:11:12,950
+Is in the slot array,
+
+1516
+01:11:13,330 --> 01:11:14,550
+because if you use the slot array
+
+1517
+01:11:14,550 --> 01:11:17,270
+to say what offset within the page, do I find what I need.
+
+1518
+01:11:18,130 --> 01:11:18,530
+Yes.
+
+1519
+01:11:18,730 --> 01:11:24,720
+The question is,
+
+1520
+01:11:25,100 --> 01:11:26,980
+the slot array starts at zero index,
+
+1521
+01:11:26,980 --> 01:11:28,705
+even though the page zero index,
+
+1522
+01:11:28,705 --> 01:11:30,360
+sorry, slot array starts at one index,
+
+1523
+01:11:30,740 --> 01:11:31,885
+page starts at zero index,
+
+1524
+01:11:31,885 --> 01:11:34,170
+is there something in, in one,
+
+1525
+01:11:34,310 --> 01:11:35,010
+let's find out,
+
+1526
+01:11:35,330 --> 01:11:36,475
+so you're not supposed to do this,
+
+1527
+01:11:36,475 --> 01:11:37,830
+but you can do,
+
+1528
+01:11:38,330 --> 01:11:39,330
+you can actually query this,
+
+1529
+01:11:40,220 --> 01:11:43,130
+ctid equals then (0 0),
+
+1530
+01:11:46,400 --> 01:11:47,250
+doesn't have anything there,
+
+1531
+01:11:48,520 --> 01:11:49,550
+but I can get the other one,
+
+1532
+01:11:49,960 --> 01:11:51,290
+so I don't know why they do that.
+
+1533
+01:11:52,710 --> 01:11:53,110
+Yes.
+
+1534
+01:12:02,010 --> 01:12:05,380
+The statement is when we say a slot,
+
+1535
+01:12:06,090 --> 01:12:08,135
+the ctid is going to be six bytes,
+
+1536
+01:12:08,135 --> 01:12:11,560
+so it's probably a four byte page number and then a two byte offset,
+
+1537
+01:12:11,910 --> 01:12:14,650
+doesn't that limit the number of slots we can have in a page,
+
+1538
+01:12:14,730 --> 01:12:17,260
+yes, but Postgres is by default is 8 kilobytes page sizes,
+
+1539
+01:12:17,280 --> 01:12:19,330
+so you can't have a billion tuples in a single page.
+
+1540
+01:12:21,290 --> 01:12:22,800
+All right, so let's look at other systems.
+
+1541
+01:12:24,760 --> 01:12:27,080
+So again, SQlite is, is different,
+
+1542
+01:12:27,610 --> 01:12:30,350
+so SQLite, they have this rowid
+
+1543
+01:12:30,670 --> 01:12:32,570
+again and it's actually storing this,
+
+1544
+01:12:33,190 --> 01:12:34,250
+it's a 64 bit,
+
+1545
+01:12:34,450 --> 01:12:35,450
+it actually stores this,
+
+1546
+01:12:35,560 --> 01:12:38,570
+so it uses this as the primary key.
+
+1547
+01:12:41,440 --> 01:12:41,955
+Question is,
+
+1548
+01:12:41,955 --> 01:12:43,040
+the size of the tuple will sort somewhere,
+
+1549
+01:12:43,180 --> 01:12:44,630
+typically in the header of the tuple, yes.
+
+1550
+01:12:48,410 --> 01:12:50,490
+All right, so if we delete from,
+
+1551
+01:12:53,790 --> 01:12:54,940
+we delete a tuple,
+
+1552
+01:12:55,700 --> 01:12:56,440
+run the same query,
+
+1553
+01:12:58,140 --> 01:12:59,680
+it doesn't reuse the rowid,
+
+1554
+01:13:01,095 --> 01:13:02,750
+because it's actually a physical thing, the primary key.
+
+1555
+01:13:03,720 --> 01:13:06,970
+All right, so let's do now, SQL Server,
+
+1556
+01:13:10,630 --> 01:13:13,430
+so SQL Server has this different syntax,
+
+1557
+01:13:14,260 --> 01:13:15,110
+it has this double,
+
+1558
+01:13:15,370 --> 01:13:16,190
+that's hard to see,
+
+1559
+01:13:17,050 --> 01:13:18,260
+if I highlight, I can see it,
+
+1560
+01:13:21,610 --> 01:13:23,910
+no, there's two, there's percent signs there, trust me,
+
+1561
+01:13:27,945 --> 01:13:28,430
+sorry, let's go back,
+
+1562
+01:13:34,990 --> 01:13:36,260
+there you go, there you go,
+
+1563
+01:13:36,460 --> 01:13:37,730
+there's percent signs, sorry,
+
+1564
+01:13:39,250 --> 01:13:40,395
+so when you run this,
+
+1565
+01:13:40,395 --> 01:13:43,130
+you get back some hex data like this, right,
+
+1566
+01:13:43,850 --> 01:13:44,640
+what does this mean,
+
+1567
+01:13:45,490 --> 01:13:48,830
+so there is an undocumented command,
+
+1568
+01:13:48,850 --> 01:13:51,980
+actually, this is all you're not supposed to do this, you can't,
+
+1569
+01:13:53,740 --> 01:13:54,735
+it's not documented,
+
+1570
+01:13:54,735 --> 01:13:56,570
+meaning Microsoft doesn't officially support this,
+
+1571
+01:13:56,650 --> 01:14:00,650
+but there's a command called, whatever, this function here,
+
+1572
+01:14:00,910 --> 01:14:02,390
+and you pass in the physical location,
+
+1573
+01:14:03,100 --> 01:14:04,440
+and then you'll get back now,
+
+1574
+01:14:05,030 --> 01:14:09,310
+the formatted file number, the page number, and then the slot number, right.
+
+1575
+01:14:10,960 --> 01:14:11,700
+And you can actually,
+
+1576
+01:14:11,700 --> 01:14:13,980
+it's interesting in learned this today,
+
+1577
+01:14:13,980 --> 01:14:17,270
+you can actually get back what the that function is actually doing,
+
+1578
+01:14:17,830 --> 01:14:21,555
+so you can get it to spit back the what it actually does,
+
+1579
+01:14:21,555 --> 01:14:24,110
+and you see they're taking that physical location
+
+1580
+01:14:24,310 --> 01:14:25,665
+and how they're jumping to different bytes
+
+1581
+01:14:25,665 --> 01:14:28,280
+to get the page ID, file number and the slot number.
+
+1582
+01:14:31,035 --> 01:14:32,090
+So let's do the same thing we did before,
+
+1583
+01:14:32,650 --> 01:14:33,770
+let's delete 101,
+
+1584
+01:14:36,140 --> 01:14:37,230
+then we run the same query,
+
+1585
+01:14:38,230 --> 01:14:40,590
+to get the page number offsets, right,
+
+1586
+01:14:40,590 --> 01:14:44,060
+so in this case here, it didn't move anything, right.
+
+1587
+01:14:44,880 --> 01:14:49,180
+So now if we insert our tuple back, insert a new tuple,
+
+1588
+01:14:50,080 --> 01:14:50,960
+run that same query,
+
+1589
+01:14:53,560 --> 01:14:54,380
+now look what it did.
+
+1590
+01:14:56,510 --> 01:15:00,840
+So my tuple before with id 102, that was at slot 2,
+
+1591
+01:15:01,310 --> 01:15:03,150
+but when I inserted the new tuple,
+
+1592
+01:15:03,560 --> 01:15:07,200
+it moved that second tuple 102 into slot 2,
+
+1593
+01:15:07,920 --> 01:15:10,550
+and then put the new tuple into slot 3,
+
+1594
+01:15:12,115 --> 01:15:13,020
+Postgres didn't do that, right,
+
+1595
+01:15:13,490 --> 01:15:14,910
+Postgres just kept appending on the end,
+
+1596
+01:15:16,810 --> 01:15:20,550
+is this wrong, who knows,
+
+1597
+01:15:20,780 --> 01:15:23,930
+is it better, who knows, right.
+
+1598
+01:15:24,650 --> 01:15:26,730
+And the reason why you can do this is because,
+
+1599
+01:15:27,080 --> 01:15:29,340
+when you fetch a page and bring it into memory
+
+1600
+01:15:29,870 --> 01:15:32,160
+and you start, you know, inserting a tuple into it,
+
+1601
+01:15:32,390 --> 01:15:34,770
+you're holding the latch or the lock on that page,
+
+1602
+01:15:35,480 --> 01:15:38,970
+the database to decide whether it wants to do compaction or whatever the optimization wants to do,
+
+1603
+01:15:39,440 --> 01:15:42,070
+because it knows that no other thread can write to that page at the same time,
+
+1604
+01:15:42,780 --> 01:15:47,210
+so we can decide whether or not, we want, we want to, you know, compact it or not,
+
+1605
+01:15:47,290 --> 01:15:47,865
+as we do it,
+
+1606
+01:15:47,865 --> 01:15:49,670
+Postgres doesn't do it, SQL, SQL Server does.
+
+1607
+01:15:50,750 --> 01:15:52,650
+All right, let's look at everyone's favorite, Oracle.
+
+1608
+01:15:56,310 --> 01:15:57,790
+I need to create the table first, I think,
+
+1609
+01:16:04,650 --> 01:16:06,160
+I don't think it's gonna, let me do that, no, it did,
+
+1610
+01:16:07,390 --> 01:16:13,630
+so in Oracle, they have a rowid, right,
+
+1611
+01:16:13,630 --> 01:16:16,530
+but you get again some binary data here, right,
+
+1612
+01:16:18,480 --> 01:16:21,770
+and again, this is stack overflow, this is not me,
+
+1613
+01:16:22,270 --> 01:16:23,690
+but there's a bunch of functions you can do,
+
+1614
+01:16:24,580 --> 01:16:25,130
+run this
+
+1615
+01:16:26,890 --> 01:16:29,835
+and you see now they're storing an OBJID, a FILENUM,
+
+1616
+01:16:29,835 --> 01:16:31,130
+a BLOKCNUM or the page number,
+
+1617
+01:16:31,300 --> 01:16:32,300
+and then the row slot.
+
+1618
+01:16:34,290 --> 01:16:37,670
+So again, this is something taking something that's defined in the textbook,
+
+1619
+01:16:37,670 --> 01:16:41,380
+describing at like a logical level or describing a theoretical level,
+
+1620
+01:16:41,460 --> 01:16:42,820
+here's how to organize your database system,
+
+1621
+01:16:43,350 --> 01:16:45,100
+and then you can see different implementations of it.
+
+1622
+01:16:45,620 --> 01:16:47,240
+Through SQL you can then see how,
+
+1623
+01:16:47,240 --> 01:16:50,110
+you know they are certain slots, sort of things in slot slotted pages.
+
+1624
+01:16:51,180 --> 01:16:51,620
+All right.
+
+1625
+01:16:53,370 --> 01:16:54,940
+All right, so in the sake of time.
+
+1626
+01:16:58,930 --> 01:17:00,080
+I think I'm going to skip.
+
+1627
+01:17:02,900 --> 01:17:04,990
+This will segue into next class,
+
+1628
+01:17:04,990 --> 01:17:10,640
+but the tuple itself is just going to be a sequence of bytes.
+
+1629
+01:17:12,370 --> 01:17:14,720
+There's some header and then a byte sequence,
+
+1630
+01:17:15,160 --> 01:17:17,090
+and then it's up for the database system to know
+
+1631
+01:17:17,170 --> 01:17:22,760
+how to interpret those bytes based on the type and based on the values that you're looking at.
+
+1632
+01:17:23,300 --> 01:17:24,890
+So again, we'll cover this next class,
+
+1633
+01:17:24,890 --> 01:17:25,960
+but the way to think about this is,
+
+1634
+01:17:26,790 --> 01:17:27,575
+there'll be some header,
+
+1635
+01:17:27,575 --> 01:17:30,160
+that contains information on whether this tuple [] or not,
+
+1636
+01:17:30,900 --> 01:17:32,530
+we can store, you know, whether or not we want to store,
+
+1637
+01:17:32,550 --> 01:17:34,150
+keep track of what columns have nulls
+
+1638
+01:17:34,560 --> 01:17:41,530
+and then then the execution engine will know how to jump to different offsets within the tuple based on the schema.
+
+1639
+01:17:42,130 --> 01:17:44,600
+So again, we'll cover this in next class,
+
+1640
+01:17:45,220 --> 01:17:46,160
+but just to finish up.
+
+1641
+01:17:49,400 --> 01:17:50,850
+Again, what we what do we discussed today,
+
+1642
+01:17:51,260 --> 01:17:53,815
+there's a database system to maintain a database,
+
+1643
+01:17:53,815 --> 01:17:58,290
+that data is going be tracked in across different files and broke up into pages
+
+1644
+01:17:58,940 --> 01:18:00,750
+and then we have different ways to keep track of those pages,
+
+1645
+01:18:01,040 --> 01:18:03,180
+keep track of what's and how to store things in those pages
+
+1646
+01:18:03,500 --> 01:18:04,225
+and then next class,
+
+1647
+01:18:04,225 --> 01:18:05,880
+we'll talk about what how to store actually the tuples.
+
+1648
+01:18:06,980 --> 01:18:08,485
+So, again, a lot of discuss next next class,
+
+1649
+01:18:08,485 --> 01:18:09,250
+have a good weekend, see you.
+
