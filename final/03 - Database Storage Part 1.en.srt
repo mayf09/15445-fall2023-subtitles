@@ -484,7 +484,7 @@ This should not be news for anyone,
 
 122
 00:06:19,900 --> 00:06:21,300
-this is the classic [] architecture,
+this is the classic Von Neumann architecture,
 
 123
 00:06:21,860 --> 00:06:24,360

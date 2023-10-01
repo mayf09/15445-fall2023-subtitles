@@ -1226,12 +1226,12 @@ This should not be news
 00:06:19,570 --> 00:06:20,230
 0,180 180,330 330,435 435,525 525,660
 for anyone,| this is the
-|这是经典的[]架构，
+|这是经典的冯·诺伊曼架构，
 
 217
 00:06:20,230 --> 00:06:22,440
 0,270 270,810 810,1070 1630,1920 1920,2210
-classic [] architecture,| where the
+classic {Von,Neumann} architecture,| where the
 |其中数据位于磁盘上，
 
 218
