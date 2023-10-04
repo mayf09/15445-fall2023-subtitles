@@ -5841,7 +5841,7 @@ called {Sorted -} String Tables
 1036
 00:26:48,390 --> 00:26:50,310
 0,195 195,480 480,770 1510,1785 1785,1920
-or {SSTables - -},| I think
+or {SSTables -},| I think
 |我想这个术语是 Jeff Dean 和 Sandjay 创造的，
 
 1037
@@ -8281,7 +8281,7 @@ to make your reads go
 1467
 00:38:05,360 --> 00:38:06,455
 0,320 460,690 690,795 795,885 885,1095
-slower,| so it's to balance,
+slower,| so it's to balance,|
 |所以，它是如何平衡，|
 
 1468
@@ -8974,7 +8974,7 @@ So this is what is,
 1588
 00:41:06,615 --> 00:41:07,440
 0,180 180,390 390,660 660,750 750,825
-how, MySQL, when you
+how, {MySQL -}, when you
 
 1589
 00:41:07,440 --> 00:41:08,300
@@ -9905,7 +9905,7 @@ disk,| and then this {index-organized
 1755
 00:45:32,725 --> 00:45:34,080
 0,255 255,605 685,915 915,1050 1050,1355
-one like the ISAMs,|
+one like the {ISAMs -},|
 |
 
 1756
@@ -11901,7 +11901,7 @@ the CREATE TABLE savings or
 2103
 00:55:10,410 --> 00:55:12,825
 0,330 330,450 450,710 1330,1730 2170,2415
-reorder tuples,| that we
+reorder {tuples -},| that we
 |我们可以在更小的空间内存储东西。
 
 2104
@@ -12669,7 +12669,7 @@ what are called {fixed-point -}
 2238
 00:59:19,325 --> 00:59:21,940
 0,515 1045,1350 1350,1800 1800,2070 2070,2615
-decimals, so NUMERIC or DECIMAL ，|
+decimals, so NUMERIC or DECIMAL,|
 |
 
 2239
@@ -14675,7 +14675,7 @@ every single attribute in the
 2593
 01:08:49,060 --> 01:08:49,975
 0,120 120,380 460,720 720,825 825,915
-tuple,| you have a
+{tuple -},| you have a
 |在它前面都有一个小的标志，告诉你它是否为空，
 
 2594
@@ -15650,7 +15650,7 @@ this,| {} in Oracle, they
 2766
 01:13:02,765 --> 01:13:04,070
 0,135 135,315 315,605 625,975 975,1305
-called BFILEs,| in Microsoft
+called {BFILEs -},| in Microsoft
 |在 Microsoft 中，被称为 FILESTREAM ，
 
 2767
