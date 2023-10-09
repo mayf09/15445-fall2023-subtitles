@@ -1538,13 +1538,14 @@ things like that.|
 276
 00:08:08,990 --> 00:08:09,730
 0,245 245,380 380,545 545,650 650,740
-So h dot would be
-所以h点应该在中间。所以，今天我想花点时间谈谈。
+So {HTAP -} would be
+所以 HTAP 应该在中间，
 
 277
 00:08:09,730 --> 00:08:11,130
 0,120 120,225 225,300 300,530 1000,1400
-sort of the middle. So,
+sort of the middle,| so,
+|所以，今天我想花点时间谈谈，
 
 278
 00:08:11,270 --> 00:08:12,730
@@ -1554,14 +1555,14 @@ so today I want to
 279
 00:08:12,730 --> 00:08:15,720
 0,195 195,435 435,735 735,1100
-spend time talking about.|
+spend time talking about,|
 |
 
 280
 00:08:16,070 --> 00:08:17,035
 0,320 320,485 485,605 605,755 755,965
-Why the things we talked
-为什么到目前为止，我们在前两节课中谈到的东西，它们将有利于OP而不是OLAP，然后我们将设计一个更适合OLAP的A存储团队。
+why the things we talked
+为什么到目前为止，我们在前两节课中谈到的东西，
 
 281
 00:08:17,035 --> 00:08:18,310
@@ -1571,7 +1572,8 @@ about so far in the
 282
 00:08:18,310 --> 00:08:19,930
 0,290 310,615 615,765 765,1160 1300,1620
-the previous two lectures, they're
+the previous two lectures,| they're
+|它们将有利于 OLTP 而不是 OLAP ，
 
 283
 00:08:19,930 --> 00:08:20,785
@@ -1581,29 +1583,30 @@ gonna be good for for
 284
 00:08:20,785 --> 00:08:22,360
 0,420 420,585 585,720 720,1205 1315,1575
-op and not olap and
+OLTP and not OLAP| and
+|然后我们将设计一个更适合 OLAP 的存储方案。
 
 285
 00:08:22,360 --> 00:08:24,420
 0,135 135,390 390,705 705,1100 1660,2060
-then we'll design A A
+then we'll design a, a
 
 286
 00:08:24,770 --> 00:08:25,660
 0,320 320,500 500,605 605,725 725,890
-storage team that is better
+storage scheme, that is better
 
 287
 00:08:25,660 --> 00:08:26,820
 0,135 135,500
-for olap.|
+for OLAP.|
 |
 
 288
 00:08:27,980 --> 00:08:28,735
 0,245 245,335 335,455 455,605 605,755
-So to do this, we're
-为了做到这一点，我们将使用一个真实的数据库来做一个非常简单的示例。所以这就是，呃，这大概就是维基百科数据库的样子。它运行着一种名为媒体维基的软件。它运行在我的SQL和php上。它是开源的。你可以去看看它和那个。
+So to do this,| we're
+为了做到这一点，|我们将使用一个真实的数据库来做一个非常简单的示例，
 
 289
 00:08:28,735 --> 00:08:29,245
@@ -1613,109 +1616,121 @@ going to do a real
 290
 00:08:29,245 --> 00:08:31,315
 0,300 300,695 715,1050 1050,1385 1795,2070
-simple eh example using a
+simple {} example, using a
 
 291
 00:08:31,315 --> 00:08:33,270
 0,275 505,905 1285,1545 1545,1680 1680,1955
-real database. So this is,
+real database.| so this is,
+|所以这大概就是维基百科数据库的样子，
 
 292
 00:08:33,290 --> 00:08:35,260
 0,400 810,1055 1055,1265 1265,1610 1610,1970
-eh, this is roughly what
+{} this is roughly what
 
 293
 00:08:35,260 --> 00:08:38,040
 0,255 255,980 1720,2055 2055,2280 2280,2780
-the Wikipedia database looks likes.
+the Wikipedia database looks like,|
+|
 
 294
 00:08:38,180 --> 00:08:39,040
 0,260 260,395 395,530 530,695 695,860
-It runs a software called
+it runs a software called
+它运行着一个名为 MediaWiki 的软件，
 
 295
 00:08:39,040 --> 00:08:40,480
 0,180 180,650 670,945 945,1185 1185,1440
-media wiki. It runs off
+{MediaWiki -},| it runs off
+|它运行在 MySQL 和 PHP 上，
 
 296
 00:08:40,480 --> 00:08:42,480
 0,120 120,240 240,710 1210,1500 1500,2000
-of my sql and php.
+of {MySQL -} and PHP,|
+|
 
 297
 00:08:42,560 --> 00:08:43,450
 0,380 380,530 530,695 695,830 830,890
-It's open source. You can
+it's open source, you can
+它是开源的，你可以去看看它，
 
 298
 00:08:43,450 --> 00:08:44,515
 0,105 105,255 255,390 390,650 760,1065
-go look at it and
+go look at it| and
+|[模式]大概是这样的，
 
 299
 00:08:44,515 --> 00:08:46,320
 0,305
-the.|
-|
+the,
 
 300
 00:08:46,320 --> 00:08:47,745
 0,195 195,405 405,855 855,1200 1200,1425
-The, the schema roughly looks
-这个，这个模式大概是这样的，对不对？将会有用户帐户，那些实际上正在进行更改的人。会像维基百科上的文章一样付费，然后对那些文章进行修改。因此，有一个外来的和关键的参考资料进行修订。您有创建更改的用户，然后是实际页面本身的ID。
+the, the schema roughly looks
 
 301
 00:08:47,745 --> 00:08:49,035
 0,150 150,425 715,1005 1005,1185 1185,1290
-like this, right? There'll be
+like this, right,| there'll be
+|有 useracct ，那些进行修改的人，
 
 302
 00:08:49,035 --> 00:08:50,505
 0,255 255,635 985,1260 1260,1350 1350,1470
-user accounts, people that are
+{useracct -}, people that are
 
 303
 00:08:50,505 --> 00:08:52,095
 0,150 150,315 315,635 1165,1455 1455,1590
-actually making changes. There'll be
+actually making changes,| there'll be
+|有 pages ，就像维基百科上的文章，
 
 304
 00:08:52,095 --> 00:08:53,250
 0,305 325,600 600,720 720,930 930,1155
-paid like the articles in
+pages, like the articles in
 
 305
 00:08:53,250 --> 00:08:54,945
 0,680 910,1200 1200,1395 1395,1590 1590,1695
-Wikipedia, and then there'll be
+Wikipedia,| and then there'll be
+|然后有 revisions ，对于那些文章，
 
 306
 00:08:54,945 --> 00:08:57,090
 0,405 405,645 645,905 1045,1445 1885,2145
-revisions for those articles. And
+revisions for those articles,| and
+|这里 revision 有一个外键引用，
 
 307
 00:08:57,090 --> 00:08:57,705
 0,105 105,240 240,330 330,465 465,615
-so there's a foreign and
+so there's a foreign {}
 
 308
 00:08:57,705 --> 00:08:58,760
 0,165 165,420 420,615 615,705 705,1055
-key reference for a revision.
+key reference for a revision,|
+|
 
 309
 00:08:59,020 --> 00:08:59,880
 0,245 245,350 350,470 470,650 650,860
-You have the user that
+you have the user that
+你有创建更改的用户，
 
 310
 00:08:59,880 --> 00:09:01,040
 0,180 180,330 330,590 640,900 900,1160
-created the change and then
+created the change| and then
+|然后是页面本身的 ID ，
 
 311
 00:09:01,990 --> 00:09:03,590
@@ -1725,14 +1740,14 @@ an ID to the actual
 312
 00:09:05,320 --> 00:09:06,660
 0,380 380,760
-page itself.|
+page itself,|
 |
 
 313
 00:09:06,730 --> 00:09:07,800
 0,230 230,380 380,575 575,815 815,1070
-But all the text itself
-但所有的文本本身都将在修改部分进行。
+but all the text itself
+但所有的文本本身都将在 revision 部分，
 
 314
 00:09:07,800 --> 00:09:08,490
@@ -1742,14 +1757,14 @@ is going to go in
 315
 00:09:08,490 --> 00:09:09,720
 0,90 90,375 375,710
-the revision part.|
+the revision part,|
 |
 
 316
 00:09:11,430 --> 00:09:12,950
 0,260 260,485 485,710 710,940 1230,1520
-And there's, there's a, there's
-还有，有一个，有一个外键，从一个页面回到另一个版本。所以，你可以找到最新的版本。
+and there's, there's a, there's
+这里有一个外键从 page 回到 revision ，
 
 317
 00:09:12,950 --> 00:09:13,760
@@ -1759,7 +1774,8 @@ a foreign key going back
 318
 00:09:13,760 --> 00:09:15,200
 0,210 210,480 480,810 810,1200 1200,1440
-from page to revision. So,
+from page to revision,| so,
+|所以，你可以找到最新的版本。
 
 319
 00:09:15,200 --> 00:09:15,910
@@ -1775,13 +1791,14 @@ latest revision.|
 321
 00:09:18,970 --> 00:09:19,950
 0,230 230,350 350,485 485,695 695,980
-So I said this before
-所以我在再次说之前已经说过了，关系模型并没有定义或指定这一点。
+So I said this before,
+我在之前已经说过了，
 
 322
 00:09:19,950 --> 00:09:21,420
 0,240 240,405 405,525 525,800 1210,1470
-I say it again, the
+I say it again,| the
+|关系模型并没有定义或指定，
 
 323
 00:09:21,420 --> 00:09:23,690
@@ -1791,14 +1808,14 @@ relational model does not define
 324
 00:09:23,710 --> 00:09:26,240
 0,305 305,880 1170,1570
-or specify that.|
+or specify that,|
 |
 
 325
 00:09:26,580 --> 00:09:27,605
 0,260 260,470 470,710 710,860 860,1025
-Anything about how we should
-关于我们应该如何将数据存储在表中，对吗？所以在我到目前为止展示的所有例子中，我们只是一个接一个地展示这两个、每两个、所有的属性。是的，我们说过大型属性有溢出页面，但您知道，通常所有较小的属性都存储在一起。但是，再说一次，关系模型并没有说你必须这样做，只是我们作为人类最先想到的东西。我们很容易从概念上思考这一点。
+anything about how we should
+关于我们应该如何将数据存储在表中，
 
 326
 00:09:27,605 --> 00:09:28,805
@@ -1808,7 +1825,8 @@ store the data in a
 327
 00:09:28,805 --> 00:09:30,425
 0,275 925,1260 1260,1425 1425,1485 1485,1620
-table, right? So in all
+table, right,| so in all
+|所以在我目前为止展示的所有例子中，
 
 328
 00:09:30,425 --> 00:09:31,385
@@ -1818,17 +1836,20 @@ the examples I've shown so
 329
 00:09:31,385 --> 00:09:32,555
 0,275 385,675 675,780 780,975 975,1170
-far, we're just showing the
+far,| we're just showing the
+|我们只是展示 tuple ，
 
 330
 00:09:32,555 --> 00:09:34,070
 0,275 445,750 750,1035 1035,1305 1305,1515
-two, every two, all the
+tuple,| every tuple, all the
+|每个 tuple ，所有一个接一个的属性，
 
 331
 00:09:34,070 --> 00:09:35,420
 0,270 270,420 420,600 600,920 1060,1350
-attributes one after another. Yes,
+attributes one after another,| yes,
+|是的，我们说过大型属性有溢出页面，
 
 332
 00:09:35,420 --> 00:09:36,290
@@ -1838,7 +1859,8 @@ we said there was overflow
 333
 00:09:36,290 --> 00:09:38,200
 0,270 270,525 525,780 780,1250 1510,1910
-pages for large attributes, but
+pages for large attributes,| but
+|但是，通常所有较小的属性都存储在一起，
 
 334
 00:09:38,970 --> 00:09:41,420
@@ -1853,7 +1875,8 @@ all all the smaller attributes
 336
 00:09:43,430 --> 00:09:44,930
 0,270 270,560 880,1125 1125,1275 1275,1500
-store together. But there's nothing
+store together,| but there's nothing
+|但是，关系模型并没有说你必须这样做，
 
 337
 00:09:44,930 --> 00:09:46,010
@@ -1868,7 +1891,8 @@ says you have to do
 339
 00:09:46,865 --> 00:09:48,065
 0,195 195,515 745,990 990,1065 1065,1200
-that, just sort of what
+that,| just sort of what
+|只是我们作为人类最先想到的东西，
 
 340
 00:09:48,065 --> 00:09:48,905
@@ -1878,7 +1902,8 @@ we as humans came up
 341
 00:09:48,905 --> 00:09:49,820
 0,165 165,375 375,600 600,750 750,915
-with first. It's easy for
+with first,| it's easy for
+|我们很容易从概念上思考。
 
 342
 00:09:49,820 --> 00:09:50,950
@@ -1889,13 +1914,14 @@ us to conceptually think about.|
 343
 00:09:51,870 --> 00:09:53,450
 0,305 305,560 560,770 770,1115 1115,1580
-But again, for olap workloads,
-但是，对于olap工作负载而言，这可能不是最好的选择。
+But again, for OLAP workloads,|
+但是，对于 OLAP 工作负载而言，|
 
 344
 00:09:53,450 --> 00:09:54,485
 0,150 150,330 330,525 525,810 810,1035
 this may not be the
+这可能不是最好的选择。
 
 345
 00:09:54,485 --> 00:09:55,700
@@ -1907,17 +1933,18 @@ best thing.|
 00:09:55,870 --> 00:09:56,685
 0,245 245,425 425,560 560,710 710,815
 So let's see how it
-那么让我们来看看它是如何为OP工作的，对吗？同样对于OP，它将是一堆小查询。
+那么让我们来看看它是如何为 OLTP 工作的，
 
 347
 00:09:56,685 --> 00:09:59,235
 0,150 150,455 805,1475 1705,2105 2275,2550
-works for op, right? Again
+works for OLTP, right,| again
+|对于 OLTP ，它将是一堆小查询，
 
 348
 00:09:59,235 --> 00:10:00,120
 0,120 120,600 600,795 795,840 840,885
-for op, it's going to
+for OLTP, it's going to
 
 349
 00:10:00,120 --> 00:10:01,020
@@ -1927,14 +1954,14 @@ be a bunch of small
 350
 00:10:01,020 --> 00:10:02,200
 0,440
-queries.|
+queries,|
 |
 
 351
 00:10:02,410 --> 00:10:03,705
 0,305 305,485 485,760 930,1250 1250,1295
-That are going, it's going
-这将是非常简单的大量查询，它们将相对于数据库中的所有数据读取或写入少量数据。
+that are going, it's going
+这将是非常简单的大量查询，
 
 352
 00:10:03,705 --> 00:10:04,155
@@ -1949,7 +1976,8 @@ queries that are going to
 354
 00:10:04,725 --> 00:10:06,135
 0,75 75,255 255,575 895,1200 1200,1410
-be really simple and they're
+be really simple| and they're
+|它们将读取或写入少量数据，
 
 355
 00:10:06,135 --> 00:10:07,230
@@ -1959,24 +1987,25 @@ going to read or write
 356
 00:10:07,230 --> 00:10:08,450
 0,350 370,675 675,825 825,945 945,1220
-a small amount of data
+a small amount of data|
+|
 
 357
 00:10:08,530 --> 00:10:10,065
 0,395 395,695 695,1000 1080,1355 1355,1535
 relative to all the data
+相对于数据库中的所有数据。
 
 358
 00:10:10,065 --> 00:10:11,400
 0,150 150,255 255,515
-in the database.|
-|
+in the database
 
 359
 00:10:11,410 --> 00:10:12,450
 0,335 335,515 515,620 620,785 785,1040
-Right. So the first query
-正确的。因此，这里的第一个查询将只获取给定页面的。给出它的页面ID，去给我弄到它的最新版本，以便加入到修订表中。但它只有一页和一次修改。它正在找回它。
+right.| So the first query
+|这里的第一个查询将是获取，
 
 360
 00:10:12,450 --> 00:10:13,610
@@ -1986,12 +2015,14 @@ here is just going get
 361
 00:10:13,690 --> 00:10:15,375
 0,400 840,1085 1085,1175 1175,1355 1355,1685
-the for a given page.
+the,| for a given page,
+|对于给定页面，给出它的 pageID ，
 
 362
 00:10:15,375 --> 00:10:17,115
 0,390 390,660 660,810 810,1085 1435,1740
-Given its page ID, go
+given its {pageID -},| go
+|为我获取它的最新版本，
 
 363
 00:10:17,115 --> 00:10:18,540
@@ -2001,12 +2032,14 @@ get me the latest revision
 364
 00:10:18,540 --> 00:10:19,875
 0,180 180,440 550,855 855,1050 1050,1335
-for it so to join
+for it,| so to JOIN
+|所以，对 revision 表做 JOIN ，
 
 365
 00:10:19,875 --> 00:10:21,255
 0,255 255,360 360,615 615,965 1135,1380
-against the revision table. But
+against the revision table,| but
+|但它只有一页和一个版本，
 
 366
 00:10:21,255 --> 00:10:22,560
@@ -2016,86 +2049,95 @@ it's one page and one
 367
 00:10:22,560 --> 00:10:25,100
 0,380 970,1290 1290,1590 1590,1850
-revision. It's retrieving that.|
-|
+revision,| it's retrieving that.|
+|它获取的。|
 
 368
 00:10:25,100 --> 00:10:26,255
 0,165 165,315 315,480 480,740 850,1155
 The next one is the
-下一个是更新查询。有人在登录吗？你有一个用户ID，他们已经过身份验证，你用他们最后一次登录的时间戳和他们登录的主机名来更新用户计数。或者，如果我在预置表中执行INSERT操作，它会插入一行，对吗？
+下一个是更新查询，
 
 369
 00:10:26,255 --> 00:10:27,305
 0,165 165,330 330,465 465,660 660,1050
-update query. Is somebody logging
+UPDATE query,| is somebody {login
+|有人在登录吗，
 
 370
 00:10:27,305 --> 00:10:28,580
 0,275 535,855 855,1020 1020,1110 1110,1275
-in? You have a user
+-},| you have a {userID
+|你有一个 userID ，假设他们已经过身份验证，
 
 371
 00:10:28,580 --> 00:10:30,370
 0,320 610,900 900,1065 1065,1215 1215,1790
-ID, something they've been authenticated
+-}, assuming they've been authenticated|
+|
 
 372
 00:10:30,630 --> 00:10:32,045
 0,305 305,560 560,910 930,1205 1205,1415
 and you update the user
+你更新用户账户，
 
 373
 00:10:32,045 --> 00:10:33,680
 0,270 270,605 775,1125 1125,1560 1560,1635
-count with the timestamp at
+account,| with the timestamp at
+|使用他们最后一次登录的时间戳，
 
 374
 00:10:33,680 --> 00:10:34,415
 0,75 75,210 210,360 360,480 480,735
-the last time they logged
+the last time they {login
 
 375
 00:10:34,415 --> 00:10:35,420
 0,240 240,525 525,660 660,810 810,1005
-in and the host name
+-}| and the {hostname -}
+|和他们登录的主机名。
 
 376
 00:10:35,420 --> 00:10:36,170
 0,150 150,285 285,435 435,630 630,750
-from where they logged in
+from where they {login -}
 
 377
 00:10:36,170 --> 00:10:37,445
 0,290 760,990 990,1050 1050,1155 1155,1275
-from. Or if I do
+from.| Or if I do
+|或者，如果我在 revision 表中执行 INSERT ，
 
 378
 00:10:37,445 --> 00:10:38,255
 0,90 90,405 405,510 510,600 600,810
-an insert into the provisionision
+an INSERT into the revision
 
 379
 00:10:38,255 --> 00:10:40,145
 0,270 270,645 645,1025 1105,1710 1710,1890
-table, it's, it's inserting a
+table,| it's, it's inserting a
+|它会插入一行。
 
 380
 00:10:40,145 --> 00:10:42,020
 0,195 195,515 775,1175
-single row, right?|
+single row, right.|
 |
 
 381
 00:10:42,310 --> 00:10:43,350
 0,305 305,485 485,620 620,770 770,1040
 And this is what usually
-这通常是人们在构建一个全新的应用程序时得到的结果。比如，如果你，如果你，你知道，如果你要创建一家初创公司，你开始建立一些在线服务，你通常会得到这样的结果，因为你一开始没有任何数据，你需要得到它，你做了一个网站，然后你的网站会运行这些查询。而对于LAP，我们将做更复杂的事情，这需要我们查看表的更大部分。因此，这实际上是人们运行EM的真实查询的粗略近似值。
+这通常是人们得到的结果，
 
 382
 00:10:43,350 --> 00:10:44,205
 0,285 285,465 465,600 600,735 735,855
-people end up with when
+people end up with,| when
+|当他们在构建一个全新的应用程序时，
 
 383
 00:10:44,205 --> 00:10:44,910
@@ -2105,7 +2147,8 @@ they build a brand new
 384
 00:10:44,910 --> 00:10:46,095
 0,350 580,825 825,915 915,1080 1080,1185
-application. Like if you're, if
+application,| like if you're, if
+|比如，如果你要创建一家初创公司，
 
 385
 00:10:46,095 --> 00:10:47,205
@@ -2115,17 +2158,20 @@ you're, you know, if you're
 386
 00:10:47,205 --> 00:10:47,960
 0,45 45,120 120,210 210,330 330,755
-going to create a startup
+going to create a startup|
+|
 
 387
 00:10:48,040 --> 00:10:49,170
 0,245 245,395 395,590 590,860 860,1130
 and you start building some
+你开始构建一些在线服务，
 
 388
 00:10:49,170 --> 00:10:50,970
 0,270 270,650 1060,1350 1350,1590 1590,1800
-online service, you usually end
+online service,| you usually end
+|你通常会得到这样的结果，
 
 389
 00:10:50,970 --> 00:10:51,855
@@ -2135,7 +2181,8 @@ up with something that looks
 390
 00:10:51,855 --> 00:10:53,250
 0,165 165,435 435,815 985,1230 1230,1395
-like this because you don't
+like this,| because you don't
+|因为你一开始没有任何数据，
 
 391
 00:10:53,250 --> 00:10:54,030
@@ -2145,17 +2192,20 @@ have any data in the
 392
 00:10:54,030 --> 00:10:55,260
 0,290 610,870 870,990 990,1095 1095,1230
-beginning, you need to get
+beginning,| you need to get
+|你需要得到它，
 
 393
 00:10:55,260 --> 00:10:56,400
 0,240 240,590 700,945 945,1050 1050,1140
-it and you make a
+it| and you make a
+|你做了一个网站，
 
 394
 00:10:56,400 --> 00:10:57,675
 0,230 280,540 540,800 850,1110 1110,1275
-website and then your website
+website| and then your website
+|然后你的网站会运行这些查询。
 
 395
 00:10:57,675 --> 00:10:58,440
@@ -2165,17 +2215,19 @@ is going to run these
 396
 00:10:58,440 --> 00:11:01,590
 0,105 105,180 180,590 2740,3015 3015,3150
-kind of queries. And for
+kind of queries.| And for
+|而对于 OLAP ，我们将做更复杂的事情，
 
 397
 00:11:01,590 --> 00:11:02,340
 0,375 375,555 555,600 600,660 660,750
-lap, we're going to do
+OLAP, we're going to do
 
 398
 00:11:02,340 --> 00:11:04,815
 0,120 120,380 400,800 1300,1700 2170,2475
-more complicated things that require
+more complicated things,| that require
+|需要我们查看表的更大部分，
 
 399
 00:11:04,815 --> 00:11:06,105
@@ -2185,7 +2237,8 @@ us to look at larger
 400
 00:11:06,105 --> 00:11:08,370
 0,510 510,825 825,1080 1080,1355 2005,2265
-portions of the table. So
+portions of the table,| so
+|这是真实查询的粗略近似值，
 
 401
 00:11:08,370 --> 00:11:10,260
@@ -2195,19 +2248,20 @@ this is actually a rough
 402
 00:11:10,260 --> 00:11:11,780
 0,560 610,855 855,975 975,1170 1170,1520
-approximation of a real query
+approximation of a real query,|
+|
 
 403
 00:11:11,800 --> 00:11:14,210
 0,400 1110,1445 1445,1670 1670,1960 2010,2410
-where people were running EM.|
-|
+where people were running, {}|
+当人们运行，|
 
 404
 00:11:15,010 --> 00:11:16,005
 0,365 365,620 620,755 755,860 860,995
-Uh, you, you would look
-呃，你，你看一下维基百科的用户账号，你会发现所有的登录尝试都来自，来自IP地址或主机名以.gov结尾的用户，对吗？因为这就像是，有一起丑闻发生得很晚，2000年，2000年初，还有几十年，国会里的人让他们的工作人员更新维基百科，对彭斯这样的国会议员或国会女议员说更多恭维的话，乔·拜登做了这件事，对吗？因此，此查询可以找到正在执行此操作的所有人。因此，我们基本上是在付钱让政府雇员离开。
+{} you, you would look
+你看一下维基百科的用户账号，
 
 405
 00:11:16,005 --> 00:11:16,935
@@ -2217,7 +2271,8 @@ at the user accounts in
 406
 00:11:16,935 --> 00:11:18,810
 0,695 865,1110 1110,1260 1260,1530 1530,1875
-Wikipedia and you find all
+Wikipedia| and you find all
+|你会发现所有来自用户的登录尝试，
 
 407
 00:11:18,810 --> 00:11:21,590
@@ -2227,22 +2282,24 @@ the, the login attempts from,
 408
 00:11:21,970 --> 00:11:23,820
 0,320 320,640 750,1150 1470,1730 1730,1850
-from users that had an
+from users| that had an
+|有 IP 地址或主机名以 .gov 结尾，
 
 409
 00:11:23,820 --> 00:11:24,900
 0,260 280,600 600,780 780,900 900,1080
-IP address or a host
+IP address or a {hostname
 
 410
 00:11:24,900 --> 00:11:26,085
 0,320 400,660 660,810 810,975 975,1185
-name that ended with dot
+-} that ended with {.gov
 
 411
 00:11:26,085 --> 00:11:27,540
 0,515 925,1215 1215,1350 1350,1410 1410,1455
-gov, right? Because it was
+-}, right,| because it was
+|因为，有一起丑闻发生在 2000 年代末，2010 年代初，
 
 412
 00:11:27,540 --> 00:11:28,155
@@ -2252,12 +2309,13 @@ like a, there was a
 413
 00:11:28,155 --> 00:11:30,135
 0,515 775,1065 1065,1215 1215,1475 1675,1980
-scandal late, two thousands, early
+scandal late {2000s -}, early
 
 414
 00:11:30,135 --> 00:11:31,790
 0,255 255,390 390,600 600,935 1255,1655
-2000 and tens where like
+{2010s - -},| where like
+|国会里的人让他们的工作人员更新维基百科，
 
 415
 00:11:32,080 --> 00:11:33,210
@@ -2267,27 +2325,32 @@ people in congress were having
 416
 00:11:33,210 --> 00:11:35,180
 0,255 255,590 610,975 975,1245 1245,1970
-their staff go update Wikipedia
+their staff go update Wikipedia|
+|
 
 417
 00:11:35,320 --> 00:11:36,660
 0,275 275,485 485,725 725,1100 1100,1340
 to say more flattering things
+对国会议员或国会女议员说更多恭维的话，
 
 418
 00:11:36,660 --> 00:11:38,510
 0,350 430,690 690,1065 1065,1170 1170,1850
-about the congressman or congresswoman
+about the congressman or congresswoman|
+|
 
 419
 00:11:39,100 --> 00:11:40,365
 0,305 305,545 545,725 725,995 995,1265
 like Pence did this, Joe
+比如 Pence 做了这个， Joe Biden 做了这个，
 
 420
 00:11:40,365 --> 00:11:42,240
 0,300 300,405 405,600 600,935 1645,1875
-Biden did this, right? So
+Biden did this, right,| so
+|所以，这个查询可以找到执行这个操作的所有人，
 
 421
 00:11:42,240 --> 00:11:43,215
@@ -2297,24 +2360,25 @@ this query could find all
 422
 00:11:43,215 --> 00:11:44,085
 0,240 240,465 465,585 585,720 720,870
-people that were doing that.
+people that were doing that,|
+|
 
 423
 00:11:44,085 --> 00:11:45,285
 0,150 150,425 445,720 720,915 915,1200
-So basically were paying government
+so basically were paying government
+所以，基本上是付钱让政府雇员更新维基百科，
 
 424
 00:11:45,285 --> 00:11:46,600
 0,315 315,510 510,755
-employees to go.|
-|
+employees to go
 
 425
 00:11:46,700 --> 00:11:48,685
 0,275 275,940 1470,1715 1715,1820 1925,1985
-Update Wikipedia, and they shouldn't
-更新维基百科，他们不应该这么做。
+update Wikipedia,| and they shouldn't
+|他们不应该这么做。
 
 426
 00:11:48,685 --> 00:11:49,560
@@ -2326,7 +2390,7 @@ have.|
 00:11:49,720 --> 00:11:51,075
 0,400 420,680 680,830 830,1010 1010,1355
 Again, so this is queries
-同样，这是我们在从应用程序的旧TB部分收集数据后将对其执行的查询。
+这个我们要在数据上执行的查询，
 
 428
 00:11:51,075 --> 00:11:51,855
@@ -2336,7 +2400,8 @@ we're going to execute on
 429
 00:11:51,855 --> 00:11:53,175
 0,255 255,555 555,795 795,1005 1005,1320
-data after we've already collected
+data| after we've already collected
+|在应用程序的 OLTP 部分收集数据后。
 
 430
 00:11:53,175 --> 00:11:54,885
@@ -2346,7 +2411,7 @@ it from, from sort of
 431
 00:11:54,885 --> 00:11:55,740
 0,75 75,225 225,495 495,690 690,855
-the old tb portion of
+the {OLTP -} portion of
 
 432
 00:11:55,740 --> 00:11:57,280
