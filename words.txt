@@ -7,3 +7,8 @@ convoy effect 护航效应
 kernel bypass 内核旁路
 slotted pages 插槽页面
 slot array 插槽阵列
+
+## 05
+run-length encoding 游程编码
+bitmap encoding 位图编码
+delta encoding 增量编码
