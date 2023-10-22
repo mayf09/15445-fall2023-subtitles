@@ -1,0 +1,6332 @@
+1
+00:00:33,520 --> 00:00:34,460
+You get a live show coming up,
+
+2
+00:00:34,460 --> 00:00:38,470
+we'll talking that in a second.
+
+3
+00:00:38,470 --> 00:00:38,870
+So quickly, for you guys in the class,
+
+4
+00:00:39,310 --> 00:00:41,390
+homework #1 is due this Friday on the 15th,
+
+5
+00:00:41,650 --> 00:00:45,050
+project #1 is out and be due on October 1st,
+
+6
+00:00:46,270 --> 00:00:47,175
+even though we haven't discussed
+
+7
+00:00:47,175 --> 00:00:49,460
+what a Buffer Pool is yet, Buffer Pool Manager is,
+
+8
+00:00:49,750 --> 00:00:51,020
+you can get started if you want,
+
+9
+00:00:51,880 --> 00:00:54,620
+again where you're going to allocate memory that gets it written out of disk.
+
+10
+00:00:56,020 --> 00:00:57,620
+The upcoming events,
+
+11
+00:00:57,880 --> 00:01:04,280
+so next, next Monday, Dana Van Aken will be giving a talk with us [] [],
+
+12
+00:01:04,540 --> 00:01:07,550
+giving a talk at our seminar series on the,
+
+13
+00:01:14,410 --> 00:01:16,280
+talking the seminary series on Zoom on Monday,
+
+14
+00:01:16,510 --> 00:01:23,265
+and then before that DJ2PL is having a concert this, this Saturday at 9pm
+
+15
+00:01:23,265 --> 00:01:28,140
+on campus, in Rangos in the, in the, CUC, right.
+
+16
+00:01:28,940 --> 00:01:30,420
+They let you sign autographs or no?
+
+17
+00:01:34,130 --> 00:01:36,310
+Yeah, CMU is kind of weird,
+
+18
+00:01:36,310 --> 00:01:37,000
+they won't let him,
+
+19
+00:01:37,000 --> 00:01:38,155
+like like it's a big show
+
+20
+00:01:38,155 --> 00:01:39,570
+and they won't let him sign autographs afterwards,
+
+21
+00:01:40,700 --> 00:01:41,550
+some stupid yeah.
+
+22
+00:01:43,130 --> 00:01:47,250
+So last class is, jump right into it.
+
+23
+00:01:48,160 --> 00:01:51,950
+So last class we were talking about alternative approaches
+
+24
+00:01:51,970 --> 00:01:57,620
+to to the tuple-oriented slotted-page storage scheme, that we presented last week
+
+25
+00:01:57,970 --> 00:02:02,600
+and in particular we spent a lot of time talking about the log-structured storage method,
+
+26
+00:02:03,040 --> 00:02:04,890
+where instead of storing the actual tuples,
+
+27
+00:02:04,890 --> 00:02:10,010
+you store the log entries of of the changes you've made to tuple
+
+28
+00:02:10,810 --> 00:02:14,480
+and I said that was popular in sort of modern systems that are more write intensive.
+
+29
+00:02:15,430 --> 00:02:18,045
+So the three approaches we talked about,
+
+30
+00:02:18,045 --> 00:02:22,250
+so the the tuple-oriented slotted-pages, the log-structure storage, the index-organized storage,
+
+31
+00:02:22,780 --> 00:02:28,700
+these storage approaches are are ideal for workloads that are write heavy,
+
+32
+00:02:29,460 --> 00:02:32,705
+meaning if you're doing a lot of inserts, updates or deletes, right,
+
+33
+00:02:32,705 --> 00:02:34,700
+the log-structure one is obviously better for this,
+
+34
+00:02:34,700 --> 00:02:36,580
+because you're appending to the log
+
+35
+00:02:38,130 --> 00:02:40,340
+and for a lot of applications or most applications,
+
+36
+00:02:40,340 --> 00:02:45,700
+when you start off, you're going to be a more potentially write heavy workload,
+
+37
+00:02:46,500 --> 00:02:49,955
+but there's going to be some applications or some environments or some workloads,
+
+38
+00:02:49,955 --> 00:02:53,290
+where maybe you don't care about getting the best performance for writes,
+
+39
+00:02:54,160 --> 00:02:57,000
+what you really want to do is get the best performance for reads,
+
+40
+00:02:57,960 --> 00:03:03,440
+and therefore, these approaches may not be the best way to approach it.
+
+41
+00:03:04,280 --> 00:03:08,580
+So I'm going to spend a little time talking about what sort of broad categories or database applications look like,
+
+42
+00:03:08,990 --> 00:03:12,720
+and then that'll be motivation for why we want to look at an alternative storage scheme,
+
+43
+00:03:13,100 --> 00:03:16,200
+where maybe we don't want to store everything just rows,
+
+44
+00:03:16,200 --> 00:03:18,750
+like the tuples with all the attributes together.
+
+45
+00:03:20,660 --> 00:03:22,260
+So this is a rough categorization,
+
+46
+00:03:23,630 --> 00:03:24,720
+but industry this is,
+
+47
+00:03:25,040 --> 00:03:28,890
+if you say sort of these three, these three, you say you're one of these three approaches,
+
+48
+00:03:29,660 --> 00:03:31,380
+people roughly know what you mean.
+
+49
+00:03:32,360 --> 00:03:36,630
+So the first category of applications are going to call OLTP or On-Line Transaction Processing
+
+50
+00:03:37,340 --> 00:03:42,210
+and these are applications where you're ingesting new data from the outside world
+
+51
+00:03:42,500 --> 00:03:46,230
+and you're serving, you know, a lot of users at the same time,
+
+52
+00:03:46,730 --> 00:03:49,950
+so again the, the, the example application I always like to use is Amazon,
+
+53
+00:03:50,690 --> 00:03:52,020
+when you go to the Amazon website,
+
+54
+00:03:52,280 --> 00:03:55,165
+you look, you look at products, then you click things,
+
+55
+00:03:55,165 --> 00:03:57,210
+you add them to your cart and then you purchase them,
+
+56
+00:03:57,380 --> 00:03:59,050
+maybe you go to on your account information
+
+57
+00:03:59,050 --> 00:04:02,730
+and you go update, you know, your mailing address or payment information,
+
+58
+00:04:03,350 --> 00:04:06,820
+those are all considered OLTP style workloads,
+
+59
+00:04:06,820 --> 00:04:11,310
+because you're making changes to a small subset of the database,
+
+60
+00:04:11,330 --> 00:04:15,980
+like you're going updating your cart, going updating your payment information, right.
+
+61
+00:04:16,810 --> 00:04:19,700
+So think about, you know, you know, think of like posting things on Reddit or Hacker News,
+
+62
+00:04:19,990 --> 00:04:21,290
+those are making small changes,
+
+63
+00:04:21,310 --> 00:04:22,740
+which potentially could be a large database,
+
+64
+00:04:22,740 --> 00:04:26,460
+but the amount of change each query where operation is making is small,
+
+65
+00:04:26,460 --> 00:04:28,520
+amount of data that they're reading is small,
+
+66
+00:04:29,020 --> 00:04:30,800
+reading for a single entity.
+
+67
+00:04:31,980 --> 00:04:35,480
+So contrast this with On-Line Analytical Processing, OLAP workloads,
+
+68
+00:04:35,480 --> 00:04:37,960
+where this is where I want to use,
+
+69
+00:04:38,820 --> 00:04:45,100
+I'm going to run queries that are going to extract or extrapolate new information across the entire data set,
+
+70
+00:04:45,740 --> 00:04:47,525
+so this would be like Amazon running a query,
+
+71
+00:04:47,525 --> 00:04:49,630
+that says find me the number one sold product
+
+72
+00:04:50,010 --> 00:04:52,570
+in the state of Pennsylvania on, on a Saturday,
+
+73
+00:04:52,650 --> 00:04:56,350
+when the temperature is above 80 degrees, right,
+
+74
+00:04:56,350 --> 00:05:00,175
+It's not looking at a single person or looking at a single entity,
+
+75
+00:05:00,175 --> 00:05:01,590
+but it's looking across the entire table,
+
+76
+00:05:02,530 --> 00:05:07,700
+potentially doing a lot of JOINs also, you know, with with additional information,
+
+77
+00:05:08,020 --> 00:05:11,360
+similar to the things you guys have done in in homework #1.
+
+78
+00:05:13,080 --> 00:05:14,570
+And so in these OLAP workloads,
+
+79
+00:05:14,570 --> 00:05:18,065
+they're going to be primarily read heavy or read only, right,
+
+80
+00:05:18,065 --> 00:05:19,085
+I'm not doing single updates,
+
+81
+00:05:19,085 --> 00:05:22,600
+I'm going doing large scans of and JOINs over big tables.
+
+82
+00:05:23,890 --> 00:05:30,380
+And this last one is sort of, sort of a buzzword from the industry [analyst] or Gartner, called HTAP,
+
+83
+00:05:30,700 --> 00:05:32,430
+and this is basically there are some applications,
+
+84
+00:05:32,430 --> 00:05:36,440
+where you want to do both the OLTP style workloads and the OLAP workloads,
+
+85
+00:05:37,210 --> 00:05:38,330
+potentially in the same system,
+
+86
+00:05:39,100 --> 00:05:43,280
+so instead of having to me take all my transactional data, put into a separate data warehouse
+
+87
+00:05:44,050 --> 00:05:45,350
+and then do my analytics on there,
+
+88
+00:05:46,240 --> 00:05:48,980
+maybe I can do some analytics directly as the data comes in,
+
+89
+00:05:50,500 --> 00:05:52,965
+we'll, we'll discuss this throughout the semester,
+
+90
+00:05:52,965 --> 00:05:56,390
+but the the main two ones you want to focus on are OLTP and OLAP.
+
+91
+00:05:57,940 --> 00:06:00,290
+Another way to think about distinction between them is,
+
+92
+00:06:01,390 --> 00:06:03,015
+sort of a simple grid like this,
+
+93
+00:06:03,015 --> 00:06:08,750
+where along the the x axis, I'm saying whether the workload is Write-Heavy versus Read-Heavy,
+
+94
+00:06:08,980 --> 00:06:12,500
+and then the y axis says how complex the queries are, right,
+
+95
+00:06:12,550 --> 00:06:13,815
+so you can sort of divide it up like this,
+
+96
+00:06:13,815 --> 00:06:15,350
+OLTP would be down in this corner,
+
+97
+00:06:15,670 --> 00:06:17,630
+because we're doing potentially a lot of updates,
+
+98
+00:06:18,460 --> 00:06:20,510
+but the queries we're going to execute are going to be really simple,
+
+99
+00:06:21,140 --> 00:06:22,420
+like go SELECT single,
+
+100
+00:06:22,530 --> 00:06:26,230
+go SELECT * FROM the account table, where your id equals Andy,
+
+101
+00:06:26,850 --> 00:06:29,560
+it's going, getting, going, getting single things.
+
+102
+00:06:30,680 --> 00:06:32,850
+OLAP would be on the opposite end of the spectrum here,
+
+103
+00:06:33,710 --> 00:06:37,800
+where we're doing mostly writes and the mostly reads
+
+104
+00:06:38,210 --> 00:06:41,400
+and the reads, the select queries are going to be executing are going to be,
+
+105
+00:06:42,680 --> 00:06:45,250
+much more complex than we do in the OLTP world,
+
+106
+00:06:45,960 --> 00:06:48,520
+think it Q9 Q10 in homework #1.
+
+107
+00:06:49,880 --> 00:06:53,790
+So OLAP, the OLDP term goes back to the 80s,
+
+108
+00:06:54,020 --> 00:06:56,305
+OLAP comes from the 90s,
+
+109
+00:06:56,305 --> 00:06:59,125
+this guy that named Jim Gray was famous database researcher,
+
+110
+00:06:59,125 --> 00:07:01,410
+who invented a lot of stuff, when we talk about this semester,
+
+111
+00:07:02,120 --> 00:07:04,300
+he wrote an article saying,
+
+112
+00:07:04,300 --> 00:07:07,240
+hey, there's this new category of workloads in the early 90s called OLAP
+
+113
+00:07:07,240 --> 00:07:08,400
+and we should pay attention to it,
+
+114
+00:07:09,800 --> 00:07:11,845
+turns out he was actually getting paid by a company
+
+115
+00:07:11,845 --> 00:07:14,575
+who was trying to sell a OLAP database system product in the early 90s
+
+116
+00:07:14,575 --> 00:07:17,370
+and the paper got retracted, but the name still stuck around,
+
+117
+00:07:17,980 --> 00:07:21,480
+and then Jim Gray won the Turing Award in databases in, I think 96,
+
+118
+00:07:22,250 --> 00:07:23,640
+a very famous data researcher,
+
+119
+00:07:25,240 --> 00:07:26,360
+has anyone heard the story, you know,
+
+120
+00:07:26,710 --> 00:07:27,920
+has anyone heard of Jim Gray before,
+
+121
+00:07:30,490 --> 00:07:31,430
+one, sort of guy,
+
+122
+00:07:31,540 --> 00:07:36,210
+so he famously got lost at sea in the San Francisco Bay in 2006,
+
+123
+00:07:36,210 --> 00:07:37,335
+he was out sailing by himself,
+
+124
+00:07:37,335 --> 00:07:38,030
+it was not a joke,
+
+125
+00:07:38,350 --> 00:07:41,000
+he was out sailing by himself and his boat disappeared,
+
+126
+00:07:42,100 --> 00:07:44,880
+and it's actually one of the early examples of [] searching,
+
+127
+00:07:44,880 --> 00:07:48,675
+because they actually moved satellites to take pictures of the San Francisco Bay
+
+128
+00:07:48,675 --> 00:07:51,290
+and try to, you know, people look at the images, try to find the, the boat,
+
+129
+00:07:51,740 --> 00:07:52,600
+and they never found him,
+
+130
+00:07:55,290 --> 00:07:57,850
+all right, so that's a weird, but,
+
+131
+00:07:59,520 --> 00:08:01,090
+I never met him, but a lot of,
+
+132
+00:08:01,650 --> 00:08:04,895
+we talked about like, you know, going to Pluto versus reading, you know, reading the book in front of you,
+
+133
+00:08:04,895 --> 00:08:06,530
+you know, that was a Jim Gray metaphor,
+
+134
+00:08:06,530 --> 00:08:07,990
+he had a lot of interesting things like that.
+
+135
+00:08:08,990 --> 00:08:10,260
+So HTAP would be sort of the middle,
+
+136
+00:08:10,730 --> 00:08:13,830
+so, so today I want to spend time talking about,
+
+137
+00:08:16,070 --> 00:08:19,470
+why the things we talked about so far in the the previous two lectures,
+
+138
+00:08:19,610 --> 00:08:21,990
+they're gonna be good for for OLTP and not OLAP
+
+139
+00:08:22,100 --> 00:08:26,160
+and then we'll design a, a storage scheme, that is better for OLAP.
+
+140
+00:08:27,980 --> 00:08:28,585
+So to do this,
+
+141
+00:08:28,585 --> 00:08:32,220
+we're going to do a real simple example, using a real database.
+
+142
+00:08:32,600 --> 00:08:38,040
+so this is, this is roughly what the Wikipedia database looks like,
+
+143
+00:08:38,180 --> 00:08:39,690
+it runs a software called MediaWiki,
+
+144
+00:08:39,710 --> 00:08:42,480
+it runs off of MySQL and PHP,
+
+145
+00:08:42,560 --> 00:08:44,100
+it's open source, you can go look at it
+
+146
+00:08:44,210 --> 00:08:48,750
+and the, the, the schema roughly looks like this, right,
+
+147
+00:08:48,750 --> 00:08:51,140
+there'll be useracct, people that are actually making changes,
+
+148
+00:08:51,670 --> 00:08:53,930
+there'll be pages, like the articles in Wikipedia,
+
+149
+00:08:54,160 --> 00:08:56,390
+and then there'll be revisions for those articles,
+
+150
+00:08:56,830 --> 00:08:58,760
+and so there's a foreign key reference for a revision,
+
+151
+00:08:59,020 --> 00:09:00,470
+you have the user that created the change
+
+152
+00:09:00,520 --> 00:09:06,080
+and then an ID to the actual page itself,
+
+153
+00:09:06,730 --> 00:09:09,200
+but all the text itself is going to go in the revision part,
+
+154
+00:09:11,430 --> 00:09:14,960
+and there's, there's a, there's a foreign key going back from page to revision,
+
+155
+00:09:14,960 --> 00:09:16,840
+so, so you can find the latest revision.
+
+156
+00:09:18,970 --> 00:09:20,750
+So I said this before, I say it again,
+
+157
+00:09:21,160 --> 00:09:25,280
+the relational model does not define or specify that,
+
+158
+00:09:26,580 --> 00:09:30,065
+anything about how we should store the data in a table, right,
+
+159
+00:09:30,065 --> 00:09:31,660
+so in all the examples I've shown so far,
+
+160
+00:09:31,770 --> 00:09:32,830
+we're just showing the tuple,
+
+161
+00:09:33,000 --> 00:09:34,990
+every tuple, all the attributes one after another,
+
+162
+00:09:35,130 --> 00:09:37,540
+yes, we said there was overflow pages for large attributes,
+
+163
+00:09:37,800 --> 00:09:43,990
+but you know that in general all all the smaller attributes store together,
+
+164
+00:09:44,310 --> 00:09:47,060
+but there's nothing about, again, the relational model says you have to do that,
+
+165
+00:09:47,060 --> 00:09:49,280
+just sort of what we as humans came up with first,
+
+166
+00:09:49,280 --> 00:09:50,950
+it's easy for us to conceptually think about.
+
+167
+00:09:51,870 --> 00:09:53,450
+But again, for OLAP workloads,
+
+168
+00:09:53,450 --> 00:09:54,970
+this may not be the best thing.
+
+169
+00:09:55,870 --> 00:09:58,790
+So let's see how it works for OLTP, right,
+
+170
+00:09:58,960 --> 00:10:01,460
+again for OLTP, it's going to be a bunch of small queries,
+
+171
+00:10:02,410 --> 00:10:05,300
+that are going, it's going to be a lot of queries that are going to be really simple
+
+172
+00:10:05,620 --> 00:10:08,450
+and they're going to read or write a small amount of data
+
+173
+00:10:08,530 --> 00:10:11,745
+relative to all the data in the database right.
+
+174
+00:10:11,745 --> 00:10:14,090
+So the first query here is just going get the,
+
+175
+00:10:14,530 --> 00:10:16,460
+for a given page, given its pageID,
+
+176
+00:10:16,810 --> 00:10:18,980
+go get me the latest revision for it,
+
+177
+00:10:19,090 --> 00:10:20,840
+so to JOIN against the revision table,
+
+178
+00:10:21,010 --> 00:10:22,940
+but it's one page and one revision,
+
+179
+00:10:23,530 --> 00:10:24,410
+it's retrieving that.
+
+180
+00:10:25,100 --> 00:10:26,585
+The next one is the UPDATE query,
+
+181
+00:10:26,585 --> 00:10:27,580
+is somebody login,
+
+182
+00:10:27,840 --> 00:10:30,370
+you have a userID, assuming they've been authenticated
+
+183
+00:10:30,630 --> 00:10:32,315
+and you update the user account,
+
+184
+00:10:32,315 --> 00:10:34,655
+with the timestamp at the last time they login
+
+185
+00:10:34,655 --> 00:10:36,460
+and the hostname from where they login from.
+
+186
+00:10:36,930 --> 00:10:38,525
+Or if I do an INSERT into the revision table,
+
+187
+00:10:38,525 --> 00:10:41,320
+it's, it's inserting a single row, right.
+
+188
+00:10:42,310 --> 00:10:44,085
+And this is what usually people end up with,
+
+189
+00:10:44,085 --> 00:10:45,260
+when they build a brand new application,
+
+190
+00:10:45,490 --> 00:10:47,960
+like if you're, if you're, you know, if you're going to create a startup
+
+191
+00:10:48,040 --> 00:10:49,820
+and you start building some online service,
+
+192
+00:10:50,230 --> 00:10:52,290
+you usually end up with something that looks like this,
+
+193
+00:10:52,290 --> 00:10:54,320
+because you don't have any data in the beginning,
+
+194
+00:10:54,640 --> 00:10:55,500
+you need to get it
+
+195
+00:10:55,500 --> 00:10:56,630
+and you make a website
+
+196
+00:10:56,680 --> 00:10:59,030
+and then your website is going to run these kind of queries.
+
+197
+00:11:01,180 --> 00:11:03,140
+And for OLAP, we're going to do more complicated things,
+
+198
+00:11:03,640 --> 00:11:07,460
+that require us to look at larger portions of the table,
+
+199
+00:11:08,110 --> 00:11:11,780
+so this is actually a rough approximation of a real query,
+
+200
+00:11:11,800 --> 00:11:14,210
+where people were running,
+
+201
+00:11:15,010 --> 00:11:17,630
+you, you would look at the user accounts in Wikipedia
+
+202
+00:11:17,800 --> 00:11:22,610
+and you find all the, the login attempts from, from users
+
+203
+00:11:22,720 --> 00:11:27,300
+that had an IP address or a hostname that ended with .gov, right,
+
+204
+00:11:27,300 --> 00:11:30,735
+because it was like a, there was a scandal late 2000s, early 2010s,
+
+205
+00:11:30,735 --> 00:11:35,180
+where like people in congress were having their staff go update Wikipedia
+
+206
+00:11:35,320 --> 00:11:38,510
+to say more flattering things about the congressman or congresswoman
+
+207
+00:11:39,100 --> 00:11:41,300
+like Pence did this, Joe Biden did this, right,
+
+208
+00:11:42,010 --> 00:11:44,085
+so this query could find all people that were doing that,
+
+209
+00:11:44,085 --> 00:11:47,640
+so basically were paying government employees to go update Wikipedia,
+
+210
+00:11:48,170 --> 00:11:48,900
+and they shouldn't have.
+
+211
+00:11:49,720 --> 00:11:52,110
+Again, so this is queries we're going to execute on data
+
+212
+00:11:52,110 --> 00:11:56,360
+after we've already collected it from, from sort of the OLTP portion of the application.
+
+213
+00:11:59,270 --> 00:12:01,320
+So the thing we need to talk about now is,
+
+214
+00:12:02,000 --> 00:12:03,900
+what I'll call the, the, the storage model,
+
+215
+00:12:04,520 --> 00:12:06,060
+and this is going to be,
+
+216
+00:12:06,320 --> 00:12:10,620
+how the database system is going to physically organize tuples in, in disk and in memory
+
+217
+00:12:11,300 --> 00:12:14,610
+relative to their other tuples in their own attributes.
+
+218
+00:12:15,280 --> 00:12:17,250
+And so up until now,
+
+219
+00:12:17,420 --> 00:12:20,640
+again, I've been assuming that all of the attributes are contiguous for a tuple
+
+220
+00:12:21,050 --> 00:12:23,520
+and that's sort of roughly called a row store,
+
+221
+00:12:24,800 --> 00:12:28,020
+but again, for OLAP, that actually may not be the best thing,
+
+222
+00:12:28,280 --> 00:12:29,910
+and we'll see why in a second.
+
+223
+00:12:30,730 --> 00:12:33,330
+And the reason why we have to discuss this part of a system,
+
+224
+00:12:33,330 --> 00:12:39,050
+because there is a clear distinction in the marketplace now in, in, in, in the database world
+
+225
+00:12:39,400 --> 00:12:41,690
+between a row store system and a column store system,
+
+226
+00:12:41,980 --> 00:12:44,600
+like a row store system, you'd want to use that for OLTP
+
+227
+00:12:44,950 --> 00:12:47,810
+and for a column store system, you'd want to use that for OLAP.
+
+228
+00:12:47,950 --> 00:12:49,245
+And if anybody tries to say,
+
+229
+00:12:49,245 --> 00:12:52,640
+hey, I have a fast row store that you can use for analytics,
+
+230
+00:12:53,500 --> 00:12:55,040
+you know, you should be very skeptical.
+
+231
+00:12:56,130 --> 00:12:57,695
+All right, so the three choices to do are
+
+232
+00:12:57,695 --> 00:13:01,300
+the the N-ary Storage Model or NSM, that's the row store,
+
+233
+00:13:01,500 --> 00:13:04,510
+Decomposition Storage Model, DSM, that's the column store
+
+234
+00:13:04,680 --> 00:13:07,955
+and then a hybrid approach is actually, this is the most common one for column stores,
+
+235
+00:13:07,955 --> 00:13:09,070
+well, we'll see why in a second,
+
+236
+00:13:09,510 --> 00:13:12,010
+it's called PAX or partition attribute across,
+
+237
+00:13:13,260 --> 00:13:15,130
+and most time people say they have a column store,
+
+238
+00:13:15,150 --> 00:13:16,870
+they really have the PAX one,
+
+239
+00:13:16,920 --> 00:13:21,880
+but it's, it's a, it's, it's, it's not a major, major, major difference.
+
+240
+00:13:24,570 --> 00:13:26,740
+Let's start with the first one, the NSM row store,
+
+241
+00:13:27,270 --> 00:13:29,740
+again, this is what we've already said so far this semester,
+
+242
+00:13:30,090 --> 00:13:32,945
+we assume that almost all the attributes for a given tuple
+
+243
+00:13:32,945 --> 00:13:34,690
+are going to be stored continuously in a single page,
+
+244
+00:13:35,040 --> 00:13:37,120
+you know, one after another,
+
+245
+00:13:37,720 --> 00:13:38,275
+and the idea is,
+
+246
+00:13:38,275 --> 00:13:39,670
+again, you're going across in the page
+
+247
+00:13:39,670 --> 00:13:42,030
+and you're laying out all the the data for a given tuple
+
+248
+00:13:42,080 --> 00:13:43,300
+and you don't start anything,
+
+249
+00:13:43,300 --> 00:13:45,610
+you don't, you don't lay down any bits for the next tuple
+
+250
+00:13:45,610 --> 00:13:47,550
+until you finish the the current tuple.
+
+251
+00:13:48,730 --> 00:13:51,105
+And the reason why this is going to be better for an OLTP system,
+
+252
+00:13:51,105 --> 00:13:52,490
+as I already said before,
+
+253
+00:13:52,630 --> 00:13:53,900
+OLTP application is that,
+
+254
+00:13:54,970 --> 00:13:59,560
+most of the queries are going to be accessing a single entry or single tuple, right,
+
+255
+00:13:59,850 --> 00:14:01,925
+and so now I can go to a single page
+
+256
+00:14:01,925 --> 00:14:04,330
+and get all the data I need for that single attribute,
+
+257
+00:14:04,380 --> 00:14:07,540
+and that's really all I need to satisfy that query.
+
+258
+00:14:08,930 --> 00:14:10,060
+We already talk about page sizes,
+
+259
+00:14:10,060 --> 00:14:12,900
+but again, it's always been some multiple of hardware pages.
+
+260
+00:14:14,280 --> 00:14:17,110
+So this is basically the same layout that we saw before, right,
+
+261
+00:14:17,310 --> 00:14:18,700
+that we have some database page,
+
+262
+00:14:18,960 --> 00:14:21,460
+we have a header in the front, with the slot, slot array,
+
+263
+00:14:21,810 --> 00:14:25,960
+and then as we start scanning through our table and want to start or scanning through,
+
+264
+00:14:26,100 --> 00:14:27,700
+the application, which starts inserting data,
+
+265
+00:14:28,020 --> 00:14:30,850
+it's just going to go append the entries to the end
+
+266
+00:14:31,950 --> 00:14:34,210
+and keep adding, adding more and more
+
+267
+00:14:34,920 --> 00:14:37,060
+and then think it filled up, right,
+
+268
+00:14:37,740 --> 00:14:39,230
+and again, now if any query comes along,
+
+269
+00:14:39,230 --> 00:14:43,930
+says you SELECT * FROM this table, where id equals something,
+
+270
+00:14:44,540 --> 00:14:45,670
+we could go to get this one page,
+
+271
+00:14:45,900 --> 00:14:48,220
+jump to the offset as defined in the slot array,
+
+272
+00:14:48,450 --> 00:14:49,870
+and we get all the data that we need.
+
+273
+00:14:51,830 --> 00:14:54,070
+So let's see now how this works in our Wikipedia example,
+
+274
+00:14:55,350 --> 00:14:56,210
+say you have a query here,
+
+275
+00:14:56,210 --> 00:14:57,280
+where someone wants a login,
+
+276
+00:14:57,930 --> 00:14:59,800
+they're passing a username and a password,
+
+277
+00:15:00,390 --> 00:15:01,900
+we're just checking to see whether that matches,
+
+278
+00:15:01,920 --> 00:15:05,500
+this is roughly how you log into a database back application,
+
+279
+00:15:06,000 --> 00:15:06,400
+using,
+
+280
+00:15:06,420 --> 00:15:08,410
+if you do authentication database, it roughly looks like this.
+
+281
+00:15:09,430 --> 00:15:14,000
+Again, so we can ignore how we actually find the data that we want for one given user,
+
+282
+00:15:14,260 --> 00:15:15,680
+but assume there's some kind of index,
+
+283
+00:15:16,030 --> 00:15:17,960
+hash table, B+ tree, it doesn't matter,
+
+284
+00:15:18,250 --> 00:15:19,485
+we'll cover that in lecture 8,
+
+285
+00:15:19,485 --> 00:15:20,420
+but there's a way to say,
+
+286
+00:15:20,680 --> 00:15:24,680
+for this, for this user account, here's the record ID and offset.
+
+287
+00:15:25,620 --> 00:15:27,190
+So now we go into our page directory
+
+288
+00:15:27,270 --> 00:15:29,830
+and we find the page that has the data we're looking for,
+
+289
+00:15:30,210 --> 00:15:31,330
+we look in the slot array,
+
+290
+00:15:31,410 --> 00:15:32,620
+we jump to some offset,
+
+291
+00:15:32,850 --> 00:15:36,100
+and now we have all the data that we need for this query, query
+
+292
+00:15:36,270 --> 00:15:37,840
+and we can produce the result.
+
+293
+00:15:38,490 --> 00:15:39,950
+Again, so this is ideal for OLTP,
+
+294
+00:15:39,950 --> 00:15:41,590
+because all the data is contiguous.
+
+295
+00:15:42,820 --> 00:15:44,060
+Same thing, we want to do an insert,
+
+296
+00:15:44,230 --> 00:15:46,545
+all we need to do is look at page directory,
+
+297
+00:15:46,545 --> 00:15:48,350
+find a page that has a free slot,
+
+298
+00:15:48,850 --> 00:15:50,480
+go bring it a memory, assume it's this one,
+
+299
+00:15:51,550 --> 00:15:54,600
+and then, you know, append it to the end of it, right.
+
+300
+00:15:55,650 --> 00:15:56,030
+That's fine.
+
+301
+00:15:57,200 --> 00:15:58,465
+But now if I try to run that query,
+
+302
+00:15:58,465 --> 00:16:00,840
+before again where I'm trying to find all the,
+
+303
+00:16:01,340 --> 00:16:03,180
+get the number of times people have logged in per month,
+
+304
+00:16:03,380 --> 00:16:05,910
+if they end with a hostname with .gov,
+
+305
+00:16:07,250 --> 00:16:08,520
+now, you see, in this case here,
+
+306
+00:16:08,570 --> 00:16:11,010
+I got to scan all the pages in the table,
+
+307
+00:16:11,510 --> 00:16:14,610
+because I need to look at everything, all the user accounts,
+
+308
+00:16:15,350 --> 00:16:16,950
+and then when I bring a page in,
+
+309
+00:16:18,600 --> 00:16:21,065
+the, the way, we're going to roughly execute the query,
+
+310
+00:16:21,065 --> 00:16:22,445
+we haven't got through how to do query execution yet,
+
+311
+00:16:22,445 --> 00:16:23,680
+but the roughly the idea is that,
+
+312
+00:16:23,910 --> 00:16:26,650
+we got this WHERE clause thing, that's look up on hostname,
+
+313
+00:16:26,970 --> 00:16:30,460
+we, we need to go find the tuples in a page,
+
+314
+00:16:30,480 --> 00:16:33,910
+that where that that predicate on the hostname is satisfied.
+
+315
+00:16:34,710 --> 00:16:38,710
+So the only data we really need to look at is just the hostname here,
+
+316
+00:16:40,910 --> 00:16:45,900
+then we've got to do the, the aggregate on the lastLogin, for the GROUP BY,
+
+317
+00:16:47,180 --> 00:16:49,090
+and so that means the only data we really need to look at
+
+318
+00:16:49,090 --> 00:16:52,200
+for that portion of the query is just these attributes here.
+
+319
+00:16:54,205 --> 00:16:54,960
+So what's the obvious problem?
+
+320
+00:16:59,820 --> 00:17:00,785
+You have to go through all the rows
+
+321
+00:17:00,785 --> 00:17:02,620
+and you brought a bunch of data and you actually don't need,
+
+322
+00:17:03,690 --> 00:17:06,010
+so in order to get just the attributes I needed,
+
+323
+00:17:06,270 --> 00:17:07,880
+I had to bring in the entire page,
+
+324
+00:17:07,880 --> 00:17:10,180
+but the entire page brings on a bunch of attributes,
+
+325
+00:17:10,410 --> 00:17:13,930
+userID, userName, userPass that I don't need for this query,
+
+326
+00:17:14,310 --> 00:17:16,220
+so I'm basically doing useless IO,
+
+327
+00:17:16,220 --> 00:17:18,520
+I'm fetching data in from disk
+
+328
+00:17:18,690 --> 00:17:22,170
+and I don't even need it at all, right,
+
+329
+00:17:22,170 --> 00:17:23,445
+so not only is that slow,
+
+330
+00:17:23,445 --> 00:17:26,540
+but in some systems you pay per disk IOPS,
+
+331
+00:17:27,490 --> 00:17:29,210
+in Aurora on Amazon, you pay,
+
+332
+00:17:29,260 --> 00:17:30,770
+if you read something from disk,
+
+333
+00:17:30,850 --> 00:17:34,785
+you pay per the number of IO operations you're doing for a query, right,
+
+334
+00:17:34,785 --> 00:17:35,640
+so in this case here,
+
+335
+00:17:35,640 --> 00:17:38,570
+I be paying for data that I, that I don't actually even need.
+
+336
+00:17:41,830 --> 00:17:43,485
+So that's the obvious problem with NSM,
+
+337
+00:17:43,485 --> 00:17:45,165
+again, great for inserts, updates, deletes,
+
+338
+00:17:45,165 --> 00:17:49,730
+great for queries that need to get the entire, all the data for a for a single entity in the database,
+
+339
+00:17:50,470 --> 00:17:53,060
+but if you want to scan large portions of of a table
+
+340
+00:17:53,710 --> 00:17:55,725
+and you only need a subset of the attributes,
+
+341
+00:17:55,725 --> 00:17:59,715
+which most OLAP queries only need, right,
+
+342
+00:17:59,715 --> 00:18:03,510
+it's very rare what you call a SELECT * on a and a really wide, huge table,
+
+343
+00:18:03,510 --> 00:18:05,060
+because you're basically dumping the whole thing out,
+
+344
+00:18:05,680 --> 00:18:08,630
+there's utilities to make that go faster other than SELECT *.
+
+345
+00:18:09,270 --> 00:18:10,490
+So this can be bad for OLAP,
+
+346
+00:18:10,490 --> 00:18:12,760
+because we're bringing in data that we don't need.
+
+347
+00:18:14,620 --> 00:18:17,295
+The this is sort of low level detail,
+
+348
+00:18:17,295 --> 00:18:19,610
+but going back to this portion here,
+
+349
+00:18:19,900 --> 00:18:26,200
+like if you think about how you would actually execute the query to do this, to, run this predicate,
+
+350
+00:18:26,520 --> 00:18:29,800
+I'm jumping around to different locations in in memory
+
+351
+00:18:30,360 --> 00:18:32,045
+to to do my scan, right,
+
+352
+00:18:32,045 --> 00:18:35,050
+so like I gotta read this header for the first tuple,
+
+353
+00:18:35,370 --> 00:18:38,740
+figure out where you know how far I need to jump over to get the hostname,
+
+354
+00:18:39,120 --> 00:18:40,865
+then I can maybe look at the lastLogin,
+
+355
+00:18:40,865 --> 00:18:42,490
+I'm computing aggregate as I go along,
+
+356
+00:18:42,660 --> 00:18:44,560
+but then I jump down to the next tuple
+
+357
+00:18:44,760 --> 00:18:48,910
+and then jump over that to get get to the, you know to its hostname attribute.
+
+358
+00:18:49,290 --> 00:18:51,395
+So in a modern super scale of CPU,
+
+359
+00:18:51,395 --> 00:18:52,030
+this is terrible,
+
+360
+00:18:52,140 --> 00:18:55,300
+because there's a bunch of these non-sequential operations,
+
+361
+00:18:55,380 --> 00:18:57,010
+that could also became non-deterministic,
+
+362
+00:18:57,090 --> 00:19:02,200
+where, I, my memory locations that I'm accessing is, is going to be,
+
+363
+00:19:02,850 --> 00:19:03,635
+it's not random,
+
+364
+00:19:03,635 --> 00:19:05,410
+because you're always going in in increasing order,
+
+365
+00:19:05,520 --> 00:19:08,105
+but it's not going to be like I'm just reading strides of memory
+
+366
+00:19:08,105 --> 00:19:09,640
+and and crunching through it very quickly.
+
+367
+00:19:11,690 --> 00:19:12,775
+It's a low level of detail,
+
+368
+00:19:12,775 --> 00:19:14,170
+that we don't really cover in the semester,
+
+369
+00:19:14,170 --> 00:19:17,190
+but it's, it's at least worth discussing.
+
+370
+00:19:18,240 --> 00:19:19,210
+And then we'll see this,
+
+371
+00:19:19,650 --> 00:19:21,590
+we'll cover compression later in in this lecture,
+
+372
+00:19:21,590 --> 00:19:23,180
+but in this case here,
+
+373
+00:19:23,180 --> 00:19:25,235
+we're not going to be able to get, you know, good compression rate,
+
+374
+00:19:25,235 --> 00:19:28,660
+if you want to reduce the amount of or pack in more data within a single page,
+
+375
+00:19:28,710 --> 00:19:33,290
+because all the attributes for a given table are just thrown together in that page,
+
+376
+00:19:33,290 --> 00:19:36,815
+and there's no, there's going to be less chance for repeatability
+
+377
+00:19:36,815 --> 00:19:38,855
+or less chance for identifying,
+
+378
+00:19:38,855 --> 00:19:40,390
+hey, these these values are the same,
+
+379
+00:19:40,560 --> 00:19:43,215
+I can compress them really well, right,
+
+380
+00:19:43,215 --> 00:19:43,970
+again, is going back,
+
+381
+00:19:44,380 --> 00:19:46,490
+we have, we have a userID, that's going to be integer,
+
+382
+00:19:46,990 --> 00:19:48,330
+userName is going to be random string,
+
+383
+00:19:48,330 --> 00:19:49,430
+userPass random string,
+
+384
+00:19:49,750 --> 00:19:52,610
+it's going to be all different value domains
+
+385
+00:19:52,960 --> 00:19:54,710
+and that's not going to be ideal for compression.
+
+386
+00:19:58,450 --> 00:20:03,140
+So the alternative approach is the DSM, the column store, decomposition storage model,
+
+387
+00:20:03,670 --> 00:20:05,180
+and the idea here is that,
+
+388
+00:20:05,500 --> 00:20:10,010
+instead of storing all the attributes for a single tuple together in a page,
+
+389
+00:20:10,690 --> 00:20:13,460
+we're going to store all the attributes for all tuples,
+
+390
+00:20:14,510 --> 00:20:19,260
+sorry, for all tuple, to store a single attribute in a single page, right.
+
+391
+00:20:19,260 --> 00:20:21,110
+I've just had that lastLogin field,
+
+392
+00:20:21,370 --> 00:20:24,900
+instead of having all intermix with the other attributes within a single page,
+
+393
+00:20:24,900 --> 00:20:28,700
+I only just have that login lastLogin attribute.
+
+394
+00:20:29,780 --> 00:20:32,125
+And this is going to be ideal now for OLAP queries,
+
+395
+00:20:32,125 --> 00:20:34,350
+because they're going to scan the entire table
+
+396
+00:20:34,730 --> 00:20:37,290
+and only for, only a subset of the attributes,
+
+397
+00:20:37,610 --> 00:20:39,840
+and now when I go fetch a page from disk,
+
+398
+00:20:39,860 --> 00:20:41,020
+I'm only getting data,
+
+399
+00:20:41,020 --> 00:20:43,500
+I know I'm only getting data from the attributes that I actually need,
+
+400
+00:20:44,410 --> 00:20:47,660
+and not for other things that just sort of gets carried along for the ride.
+
+401
+00:20:49,340 --> 00:20:50,190
+So the,
+
+402
+00:20:51,240 --> 00:20:53,530
+again, the benefit of a declared language like SQL is that,
+
+403
+00:20:53,640 --> 00:20:55,355
+you don't have to know, not to care,
+
+404
+00:20:55,355 --> 00:20:58,120
+whether you're running on a row store system versus a column store system,
+
+405
+00:20:58,260 --> 00:21:00,970
+your same SQL query works just fine, just the same,
+
+406
+00:21:02,100 --> 00:21:04,030
+but now it's the database system responsibility,
+
+407
+00:21:04,500 --> 00:21:06,190
+meaning us people actually building it,
+
+408
+00:21:06,390 --> 00:21:07,715
+it's, it's our responsibility
+
+409
+00:21:07,715 --> 00:21:11,740
+to be to take data, split it up into separate columns, separate attributes,
+
+410
+00:21:11,910 --> 00:21:15,700
+and then stitch it back together to when we need to produce results.
+
+411
+00:21:19,640 --> 00:21:22,560
+All right, so this is just another the same diagram I shared before,
+
+412
+00:21:23,120 --> 00:21:24,385
+again, the way to think about this is that,
+
+413
+00:21:24,385 --> 00:21:26,850
+for the first column here, first attribute column A,
+
+414
+00:21:27,140 --> 00:21:28,950
+we have a separate file with a bunch of pages,
+
+415
+00:21:29,720 --> 00:21:30,840
+it'll have a header, now,
+
+416
+00:21:30,860 --> 00:21:33,300
+just, you know, tell us what, what's in, what's inside the page,
+
+417
+00:21:33,920 --> 00:21:36,120
+and then now we'll have this, the null bitmap,
+
+418
+00:21:36,800 --> 00:21:42,390
+for all the columns, sorry, for all the values within that within this column,
+
+419
+00:21:43,220 --> 00:21:47,670
+followed by now the contiguous values for all the tuples in the table,
+
+420
+00:21:49,490 --> 00:21:51,390
+and we just do it for the next one and the next one.
+
+421
+00:21:52,590 --> 00:21:56,600
+All right, and so these are still,
+
+422
+00:21:56,600 --> 00:21:59,590
+these files will still be broken up as as database pages like we talked about before,
+
+423
+00:21:59,820 --> 00:22:03,010
+so either four kilobytes, eight kilobytes, whatever, whatever the system supports,
+
+424
+00:22:03,690 --> 00:22:09,910
+but the, the file itself will contain, again, just just the data for a single attribute
+
+425
+00:22:10,380 --> 00:22:13,550
+and now the metadata overhead for these different files
+
+426
+00:22:13,550 --> 00:22:16,985
+is actually much less than a in a row store,
+
+427
+00:22:16,985 --> 00:22:20,570
+because I don't have to keep track of like all additional,
+
+428
+00:22:20,570 --> 00:22:25,510
+like every single, every single column, whether it could be null or not,
+
+429
+00:22:26,280 --> 00:22:29,980
+the, the different information about the offsets or where to find things, right,
+
+430
+00:22:30,000 --> 00:22:32,720
+these are all going to be the metadata at the store,
+
+431
+00:22:32,720 --> 00:22:35,950
+because it's just all the same value domains or all the same attribute type,
+
+432
+00:22:36,180 --> 00:22:38,050
+it's being much less than than a row store.
+
+433
+00:22:41,090 --> 00:22:43,720
+All right, so, the idea here again,
+
+434
+00:22:43,720 --> 00:22:45,090
+so we go back to our Wikipedia example,
+
+435
+00:22:45,440 --> 00:22:50,310
+we just take every column for our table
+
+436
+00:22:50,840 --> 00:22:54,640
+and then we're going to store that as a separate page, right,
+
+437
+00:22:54,640 --> 00:22:57,360
+so if you go back to the hostname example,
+
+438
+00:22:57,530 --> 00:23:01,200
+within a single page, again, we're only storing values for the hostname column,
+
+439
+00:23:04,255 --> 00:23:06,420
+and we'll have separate pages for all our attributes.
+
+440
+00:23:07,920 --> 00:23:12,245
+So now if we go back to this, the OLAP query here,
+
+441
+00:23:12,245 --> 00:23:16,660
+then we're doing the lookup the counting number of logins per month, with for the government addresses,
+
+442
+00:23:17,870 --> 00:23:20,400
+the first part executing the query is going get the hostname,
+
+443
+00:23:20,810 --> 00:23:23,820
+well, that's assuming it's one page per attribute,
+
+444
+00:23:24,020 --> 00:23:25,620
+that's going fetching that one page
+
+445
+00:23:26,150 --> 00:23:28,800
+and then doing the scan, just ripping through the column
+
+446
+00:23:29,300 --> 00:23:32,880
+and identifying all the matches for that for that hostname.
+
+447
+00:23:33,630 --> 00:23:37,835
+And again, I have complete utilization of all the data that I brought in,
+
+448
+00:23:37,835 --> 00:23:40,600
+because I'm only bringing in the data I need for for this query,
+
+449
+00:23:40,710 --> 00:23:42,730
+I'm not bringing attributes that I don't care about.
+
+450
+00:23:44,130 --> 00:23:45,815
+And then now we'll talk about this later,
+
+451
+00:23:45,815 --> 00:23:46,390
+how we do,
+
+452
+00:23:47,070 --> 00:23:49,750
+we talk about query execution, how we match things up,
+
+453
+00:23:49,770 --> 00:23:51,455
+but assuming I keep track of a list of,
+
+454
+00:23:51,455 --> 00:23:55,450
+here's the offsets of the tuples within this column that match my predicate.
+
+455
+00:23:56,320 --> 00:23:59,120
+Then I go to now to the lastLogin page,
+
+456
+00:23:59,470 --> 00:24:02,030
+go fetch that, and again, that only has data that we need,
+
+457
+00:24:02,350 --> 00:24:07,095
+and then now I know how to jump to the different offsets of the matching hostnames
+
+458
+00:24:07,095 --> 00:24:10,760
+to find the right offset for the login, the login timestamp,
+
+459
+00:24:11,340 --> 00:24:12,920
+and then compute whatever I need for the query.
+
+460
+00:24:16,270 --> 00:24:16,880
+This is clear?
+
+461
+00:24:18,770 --> 00:24:20,520
+Who here has heard a column store before today?
+
+462
+00:24:22,320 --> 00:24:23,410
+Less than 10%, okay.
+
+463
+00:24:24,220 --> 00:24:25,340
+Again, so this is a,
+
+464
+00:24:26,500 --> 00:24:27,800
+it sort of seems obvious now,
+
+465
+00:24:28,000 --> 00:24:29,580
+that this is clearly the way you want to do this,
+
+466
+00:24:29,580 --> 00:24:34,130
+but, before up to 15 years ago, 20 years ago,
+
+467
+00:24:34,480 --> 00:24:36,675
+this is not how any database system was actually built,
+
+468
+00:24:36,675 --> 00:24:37,640
+it was very, very rare.
+
+469
+00:24:50,680 --> 00:24:51,770
+Sorry, your question is,
+
+470
+00:24:51,940 --> 00:24:53,720
+if I go back to the row store example,
+
+471
+00:24:57,610 --> 00:24:58,250
+this one here,
+
+472
+00:24:58,480 --> 00:24:59,340
+your question is, what,
+
+473
+00:24:59,340 --> 00:25:01,640
+if even in this one, do I have to.
+
+474
+00:25:07,780 --> 00:25:10,230
+Oh, like, this one,
+
+475
+00:25:11,740 --> 00:25:14,180
+literally, okay, yes, why.
+
+476
+00:25:15,400 --> 00:25:24,030
+Oh, okay. The question is,
+
+477
+00:25:24,530 --> 00:25:25,960
+I said there's some index,
+
+478
+00:25:25,960 --> 00:25:26,755
+I didn't say what it was,
+
+479
+00:25:26,755 --> 00:25:28,080
+there's some magic way to say,
+
+480
+00:25:28,520 --> 00:25:29,440
+look at the WHERE clause,
+
+481
+00:25:29,440 --> 00:25:30,840
+where it says userName equals something,
+
+482
+00:25:31,850 --> 00:25:33,510
+because you would go to index on userName
+
+483
+00:25:33,530 --> 00:25:35,550
+and I magically got to the single record,
+
+484
+00:25:36,110 --> 00:25:38,280
+again, the record ID, page ID and offset,
+
+485
+00:25:38,630 --> 00:25:39,450
+how do I do that,
+
+486
+00:25:39,920 --> 00:25:40,795
+that's what the index does,
+
+487
+00:25:40,795 --> 00:25:42,320
+that's next week, right,
+
+488
+00:25:42,700 --> 00:25:43,760
+it's just a key value,
+
+489
+00:25:45,100 --> 00:25:47,480
+you think about a key value map or associate array,
+
+490
+00:25:47,650 --> 00:25:54,410
+for given key, the userName, give be the record ID or record IDs if it's non unique, that matched this,
+
+491
+00:25:54,910 --> 00:25:57,860
+then then so I get that my index gives me the record ID,
+
+492
+00:25:58,060 --> 00:25:59,360
+I look at my page directory,
+
+493
+00:25:59,470 --> 00:26:01,125
+said okay, I need page one, two, three,
+
+494
+00:26:01,125 --> 00:26:01,730
+where's that,
+
+495
+00:26:01,870 --> 00:26:03,720
+it's on here on, it's either in memory or on disk,
+
+496
+00:26:03,720 --> 00:26:04,400
+I go get it
+
+497
+00:26:04,690 --> 00:26:06,570
+and now I have the slot number from the record ID
+
+498
+00:26:06,570 --> 00:26:08,450
+and I look in that page and jump to that slot,
+
+499
+00:26:08,770 --> 00:26:09,440
+get what I need,
+
+500
+00:26:09,760 --> 00:26:12,325
+so that allows me to jump exactly to the page I need
+
+501
+00:26:12,325 --> 00:26:15,360
+and then within that page go to get exactly the record I need,
+
+502
+00:26:16,240 --> 00:26:18,770
+but again, like I only need one,
+
+503
+00:26:19,810 --> 00:26:21,200
+assuming userNames are unique,
+
+504
+00:26:21,460 --> 00:26:22,850
+I only need one userName,
+
+505
+00:26:24,670 --> 00:26:26,900
+but I had to go fetch all these other rows I don't actually need.
+
+506
+00:26:29,290 --> 00:26:29,655
+Yes.
+
+507
+00:26:29,655 --> 00:26:42,370
+What do you mean, slightly more implementation?
+
+508
+00:27:08,390 --> 00:27:10,410
+I would say they are equally as hard,
+
+509
+00:27:12,770 --> 00:27:15,240
+if you don't care about other bunch other protections,
+
+510
+00:27:16,130 --> 00:27:16,920
+we're not talking about transactions,
+
+511
+00:27:17,060 --> 00:27:19,850
+but, if you don't care about those things,
+
+512
+00:27:20,440 --> 00:27:23,660
+then yeah, I would agree that a row store would be easier to implement,
+
+513
+00:27:26,110 --> 00:27:29,210
+again, you just like everything's here, I assume it all packs in, then yeah,
+
+514
+00:27:29,380 --> 00:27:33,800
+then, assuming that every record can fit into a single page, ignoring overflows,
+
+515
+00:27:34,090 --> 00:27:36,260
+then a row store would be potentially easier, yes.
+
+516
+00:27:37,970 --> 00:27:38,370
+Yes.
+
+517
+00:27:38,510 --> 00:27:46,260
+So his question is,
+
+518
+00:27:47,570 --> 00:27:52,900
+is the fact, that the database system store is a row store versus a column store,
+
+519
+00:27:52,900 --> 00:27:54,420
+is this something that's configurable by table
+
+520
+00:27:54,980 --> 00:27:57,210
+or is this it sort of all or nothing?
+
+521
+00:27:58,980 --> 00:28:03,940
+Most systems are going to be row only or column only,
+
+522
+00:28:06,000 --> 00:28:09,910
+the, the HTAP stuff, the hybrid stuff that sort of tries to do sort of both,
+
+523
+00:28:11,820 --> 00:28:15,250
+the, so typically you would say,
+
+524
+00:28:15,570 --> 00:28:17,380
+yeah, so in most systems you would say,
+
+525
+00:28:18,510 --> 00:28:20,830
+I know I'm using the system, it's going to be a column store,
+
+526
+00:28:20,910 --> 00:28:22,060
+so I'll store everything in there,
+
+527
+00:28:24,030 --> 00:28:25,480
+the tables will be column,
+
+528
+00:28:25,950 --> 00:28:29,200
+now, even though I said, like the,
+
+529
+00:28:30,480 --> 00:28:33,010
+like even though it's a, it's a column store
+
+530
+00:28:33,600 --> 00:28:36,550
+and we're going to be optimized for for readonly queries,
+
+531
+00:28:36,750 --> 00:28:39,095
+people obviously want to update data, right,
+
+532
+00:28:39,095 --> 00:28:42,070
+and so the way you typically get around that is,
+
+533
+00:28:42,330 --> 00:28:46,390
+these systems would have a, a sort of row store buffer area,
+
+534
+00:28:47,070 --> 00:28:48,790
+and it typically log-structured,
+
+535
+00:28:49,050 --> 00:28:50,890
+where if I have any updates,
+
+536
+00:28:50,940 --> 00:28:53,510
+I apply them to that row portion
+
+537
+00:28:53,510 --> 00:28:56,440
+and then periodically I would then merge them into the column store,
+
+538
+00:28:57,420 --> 00:28:58,660
+that's one approach to this,
+
+539
+00:29:00,300 --> 00:29:01,385
+Oracle does a different approach,
+
+540
+00:29:01,385 --> 00:29:04,720
+where the row store is considered the primary storage location of the database,
+
+541
+00:29:05,070 --> 00:29:09,520
+but then they'll make a copy of of your tables in a column store format
+
+542
+00:29:09,900 --> 00:29:12,460
+and they they're responsible for keeping the sort of things updated for you,
+
+543
+00:29:12,570 --> 00:29:13,805
+so different approach, these different things,
+
+544
+00:29:13,805 --> 00:29:17,690
+but typically if the system supports I want row store versus a column store,
+
+545
+00:29:17,690 --> 00:29:19,630
+you, you could define it on a per table basis,
+
+546
+00:29:19,950 --> 00:29:21,610
+but most systems don't do that.
+
+547
+00:29:22,540 --> 00:29:22,940
+Yes.
+
+548
+00:29:37,080 --> 00:29:37,790
+This question is,
+
+549
+00:29:37,790 --> 00:29:40,480
+if I have as many discs as I have columns,
+
+550
+00:29:40,800 --> 00:29:43,000
+assuming I break up in a column store table
+
+551
+00:29:43,620 --> 00:29:47,020
+and every attribute goes to a separate, goes to a separate disk,
+
+552
+00:29:47,250 --> 00:29:48,730
+would that be as fast as a row store.
+
+553
+00:29:50,460 --> 00:29:51,880
+Well, no, because you have to,
+
+554
+00:29:52,110 --> 00:29:55,750
+you still have to do that, that that splitting apart and writing it all out, right,
+
+555
+00:29:56,640 --> 00:29:58,990
+and then you also would have more pressure in memory,
+
+556
+00:29:59,070 --> 00:30:03,240
+because, because again, say I have a thousand attributes,
+
+557
+00:30:03,860 --> 00:30:05,850
+so now if I have to update a thousand pages,
+
+558
+00:30:06,320 --> 00:30:08,700
+I have thousand pages in my buffer pool
+
+559
+00:30:08,720 --> 00:30:11,130
+to do the update, to put each,
+
+560
+00:30:12,230 --> 00:30:13,585
+updating each of them with a new attribute
+
+561
+00:30:13,585 --> 00:30:15,735
+and then write them all out, right,
+
+562
+00:30:15,735 --> 00:30:19,860
+typically, again, doing updates in a, in a, in a column store system
+
+563
+00:30:19,860 --> 00:30:21,770
+without this sort of buffer thing I just mentioned
+
+564
+00:30:22,150 --> 00:30:23,300
+is always going to be slow.
+
+565
+00:30:25,590 --> 00:30:25,990
+Yes.
+
+566
+00:30:32,050 --> 00:30:32,835
+Her question is,
+
+567
+00:30:32,835 --> 00:30:37,410
+what is the null bitmap is there equivalence in, in, in row store,
+
+568
+00:30:37,410 --> 00:30:38,630
+yeah, we discussed this last class,
+
+569
+00:30:38,800 --> 00:30:43,575
+it basically, it's a way to represent which attribute is null, right,
+
+570
+00:30:43,575 --> 00:30:44,865
+so I'm not drawing here,
+
+571
+00:30:44,865 --> 00:30:46,130
+but the header, the diagram last class,
+
+572
+00:30:46,390 --> 00:30:48,050
+in the header of every row,
+
+573
+00:30:48,340 --> 00:30:53,060
+there'll be a bitmap and says which attribute is null or not, right,
+
+574
+00:30:53,140 --> 00:30:55,130
+that's one approach to do it in this common one,
+
+575
+00:30:55,630 --> 00:30:56,360
+you could do this,
+
+576
+00:30:56,470 --> 00:30:59,130
+we talk about the special value or each attribute,
+
+577
+00:30:59,130 --> 00:31:00,800
+you could have a little flag in front of it,
+
+578
+00:31:01,060 --> 00:31:03,170
+the null bitmap that basically says attribute,
+
+579
+00:31:03,190 --> 00:31:05,690
+you know for this tuple, attribute one is null, attribute two is null
+
+580
+00:31:06,010 --> 00:31:06,950
+and so think of that,
+
+581
+00:31:07,000 --> 00:31:10,550
+instead of having that bitmap per, in the header per tuple,
+
+582
+00:31:10,900 --> 00:31:13,970
+in the column store, for the entire column, here's the null bitmap.
+
+583
+00:31:17,060 --> 00:31:17,460
+Yes.
+
+584
+00:31:18,340 --> 00:31:26,840
+For an index in a His question is,
+
+585
+00:31:26,890 --> 00:31:27,950
+in a column store,
+
+586
+00:31:29,930 --> 00:31:31,530
+in column store, what does the index actually do,
+
+587
+00:31:31,790 --> 00:31:34,650
+so some systems, some OLAP systems that are column stores,
+
+588
+00:31:35,630 --> 00:31:36,550
+you don't get any indexes,
+
+589
+00:31:37,400 --> 00:31:39,000
+I don't think Snowflake gives you an index,
+
+590
+00:31:39,140 --> 00:31:40,270
+you can't, you can't create one,
+
+591
+00:31:40,270 --> 00:31:43,200
+it might have changed [], you couldn't have indexes, right,
+
+592
+00:31:45,080 --> 00:31:49,590
+because again, they're not trying to do point queries or single single thing lookups,
+
+593
+00:31:50,180 --> 00:31:51,120
+to do complete scans.
+
+594
+00:31:51,930 --> 00:31:55,000
+And so now you have the point and you are correct,
+
+595
+00:31:55,020 --> 00:31:58,690
+you could have indexes that are range indexes, right,
+
+596
+00:31:58,740 --> 00:32:03,490
+so here's where to find if your ID is when 0 and 100 go to this page,
+
+597
+00:32:05,370 --> 00:32:06,460
+there's things like that,
+
+598
+00:32:06,920 --> 00:32:13,600
+there's inverted indexes, like find all the the records where the keyword Andy exists, right,
+
+599
+00:32:13,980 --> 00:32:15,365
+then that doesn't look like a tree structure,
+
+600
+00:32:15,365 --> 00:32:16,420
+that's usually a hash table,
+
+601
+00:32:16,530 --> 00:32:17,810
+there's different types of indexes,
+
+602
+00:32:17,810 --> 00:32:18,400
+but you would not,
+
+603
+00:32:19,540 --> 00:32:22,130
+maybe you wouldn't have the index of do point query lookups.
+
+604
+00:32:27,470 --> 00:32:28,110
+All right, cool.
+
+605
+00:32:30,370 --> 00:32:32,330
+So let's jump back.
+
+606
+00:32:36,180 --> 00:32:39,280
+All right, so I was kind of [hand wavy] about this part here,
+
+607
+00:32:39,810 --> 00:32:40,750
+where I said, okay,
+
+608
+00:32:40,950 --> 00:32:43,720
+let me go fetch the page that has the hostname,
+
+609
+00:32:44,280 --> 00:32:46,330
+run my WHERE clause, I'll get a bunch of matches,
+
+610
+00:32:46,740 --> 00:32:49,090
+and then let me go fetch the lastLogin page,
+
+611
+00:32:49,470 --> 00:32:52,960
+and then I had a magic way of finding the matches there, right,
+
+612
+00:32:53,860 --> 00:32:54,620
+how do they do that.
+
+613
+00:32:55,460 --> 00:32:56,250
+Well, the two approaches.
+
+614
+00:32:57,450 --> 00:33:00,370
+The most common one is to do fixed-length offsets,
+
+615
+00:33:01,340 --> 00:33:03,840
+and that means that the, the,
+
+616
+00:33:04,610 --> 00:33:07,290
+you identify rows not by a slot number,
+
+617
+00:33:07,670 --> 00:33:09,630
+but you identify you know unique tuples,
+
+618
+00:33:09,950 --> 00:33:13,200
+this is why I don't want to say row versus instead of tuples record,
+
+619
+00:33:13,760 --> 00:33:17,460
+because what does a row look like in a column store,
+
+620
+00:33:18,570 --> 00:33:19,510
+tuple is the better term,
+
+621
+00:33:19,620 --> 00:33:26,050
+but the unique identifier for a tuple is going to be its offset within the table,
+
+622
+00:33:27,060 --> 00:33:31,270
+so now if I'm at, like offset three in one column,
+
+623
+00:33:31,740 --> 00:33:34,745
+I would then know how to, you know, jump to offset three and another column,
+
+624
+00:33:34,745 --> 00:33:36,850
+and then I can stitch that tuple back together,
+
+625
+00:33:37,710 --> 00:33:41,110
+but again, this only works if the values are fixed-length,
+
+626
+00:33:42,160 --> 00:33:43,700
+of course, what breaks that assumption,
+
+627
+00:33:46,350 --> 00:33:48,850
+variable length VARCHAR strings, BLOB, text, right,
+
+628
+00:33:49,500 --> 00:33:51,070
+so we'll talk about how to handle that in a second,
+
+629
+00:33:52,080 --> 00:33:54,680
+so that that this approach, the fixed-length column one,
+
+630
+00:33:54,680 --> 00:33:56,080
+that's the, that's the most common one.
+
+631
+00:33:57,480 --> 00:34:01,270
+A legacy approach is to use embedded IDs,
+
+632
+00:34:01,560 --> 00:34:05,710
+where with every single value you have some unique tuple identifier,
+
+633
+00:34:06,030 --> 00:34:08,625
+like, you know, sort of like the log-structure stuff,
+
+634
+00:34:08,625 --> 00:34:11,000
+like some counter being increment by one,
+
+635
+00:34:11,920 --> 00:34:14,985
+and then there's some index structure, that I'm not showing here,
+
+636
+00:34:14,985 --> 00:34:17,360
+where for a given record ID, for a given column,
+
+637
+00:34:18,130 --> 00:34:19,760
+it tells you where to jump to this.
+
+638
+00:34:20,500 --> 00:34:22,580
+This is rare,
+
+639
+00:34:23,650 --> 00:34:24,690
+you probably shouldn't even mention it,
+
+640
+00:34:24,690 --> 00:34:26,535
+but like, it is one way to do it,
+
+641
+00:34:26,535 --> 00:34:29,400
+there was some system I forget in the old days that did do this,
+
+642
+00:34:29,400 --> 00:34:31,700
+because they were kind of like contorting a row store to make it a column store,
+
+643
+00:34:32,860 --> 00:34:34,650
+but everyone uses fixed-length [] sets,
+
+644
+00:34:34,650 --> 00:34:36,590
+of course, the problem you got to deal with now again is,
+
+645
+00:34:37,090 --> 00:34:40,810
+how to convert variable length values into fixed-length values.
+
+646
+00:34:41,790 --> 00:34:42,970
+Let me think, I guess, how you do that.
+
+647
+00:34:45,450 --> 00:34:45,850
+Yes.
+
+648
+00:34:47,170 --> 00:34:48,890
+He says pointers, pointers to what?
+
+649
+00:34:56,030 --> 00:34:58,080
+For every, every data is less continuous,
+
+650
+00:35:00,270 --> 00:35:03,815
+Yeah, that would, yeah, that actually would, would potentially work,
+
+651
+00:35:03,815 --> 00:35:04,655
+the problem with that one is like,
+
+652
+00:35:04,655 --> 00:35:07,760
+you to do like in place updates, right,
+
+653
+00:35:07,760 --> 00:35:09,220
+if you're just packing all the data in,
+
+654
+00:35:09,870 --> 00:35:11,840
+if it's immutable, you don't have this problem,
+
+655
+00:35:11,840 --> 00:35:15,610
+but if it is mutable, then you have fragmentation.
+
+656
+00:35:17,800 --> 00:35:18,570
+He says slot arrays,
+
+657
+00:35:20,630 --> 00:35:22,140
+but what it pointing to.
+
+658
+00:35:35,120 --> 00:35:36,330
+Yeah, yeah.
+
+659
+00:35:38,400 --> 00:35:40,660
+That sort of similar what he was saying, that potentially would work,
+
+660
+00:35:45,640 --> 00:35:48,310
+compression, right.
+
+661
+00:35:48,720 --> 00:35:52,925
+So the the point approach that would work,
+
+662
+00:35:52,925 --> 00:35:53,860
+I don't think anybody does that,
+
+663
+00:35:54,990 --> 00:35:56,090
+you could just pad things out,
+
+664
+00:35:56,090 --> 00:35:57,430
+but that's going to be wasteful as we said before,
+
+665
+00:35:58,050 --> 00:36:00,520
+but this is basically how dictionary compression works,
+
+666
+00:36:00,870 --> 00:36:07,060
+dictionary compression is is replacing some, some variable length value with, with the integer code,
+
+667
+00:36:07,350 --> 00:36:09,850
+which which is going to be fixed-length and usually 32 bits,
+
+668
+00:36:10,290 --> 00:36:17,240
+that we can use to, to, to then do some predicates on the dictionary code
+
+669
+00:36:17,440 --> 00:36:20,000
+and if necessary, if it matches something we're looking for,
+
+670
+00:36:20,110 --> 00:36:22,760
+go do a lookup and find, find what the actual value is,
+
+671
+00:36:23,320 --> 00:36:24,230
+and that's a typo,
+
+672
+00:36:24,250 --> 00:36:25,365
+it's not more in this next week,
+
+673
+00:36:25,365 --> 00:36:31,065
+it's more this hour, like we will discuss this now.
+
+674
+00:36:31,065 --> 00:36:32,460
+So, that's how we're going to be able to solve this problem,
+
+675
+00:36:32,460 --> 00:36:35,600
+and pretty much the way everyone does it, in a modern system.
+
+676
+00:36:38,130 --> 00:36:40,750
+So this [] idea is not new,
+
+677
+00:36:41,100 --> 00:36:43,360
+according to the literature,
+
+678
+00:36:43,590 --> 00:36:46,750
+the very first version of this goes back to 1970s,
+
+679
+00:36:47,070 --> 00:36:51,400
+there is this project out of the the Swedish Defense Ministry called Cantor,
+
+680
+00:36:51,540 --> 00:36:54,880
+it was more of a file system than a than a database system,
+
+681
+00:36:55,200 --> 00:37:00,070
+but this is considered to be the first documented like proposal for a column store system,
+
+682
+00:37:00,300 --> 00:37:02,620
+and I I don't know whether it, it, it, it exists today,
+
+683
+00:37:03,630 --> 00:37:07,025
+in the 1980s, there was a paper that actually sort of mapped out
+
+684
+00:37:07,025 --> 00:37:10,990
+the theoretical properties of what the decomposition storage model looked like,
+
+685
+00:37:12,090 --> 00:37:14,890
+but again it was still mostly only only in academia,
+
+686
+00:37:16,060 --> 00:37:20,450
+the roughly what considered the first commercial implementation of a column store system
+
+687
+00:37:20,860 --> 00:37:22,610
+was this thing called SybaseIQ,
+
+688
+00:37:22,990 --> 00:37:26,150
+but it wasn't really a full-fledged database system,
+
+689
+00:37:26,920 --> 00:37:29,090
+it was more like a like a query accelerator,
+
+690
+00:37:29,470 --> 00:37:32,175
+and so similar to what I was saying before about Oracle,
+
+691
+00:37:32,175 --> 00:37:35,210
+they make a copy of your row store into a in-memory column store,
+
+692
+00:37:35,380 --> 00:37:37,850
+this is basically what Sybase was doing back in the 1990s,
+
+693
+00:37:38,110 --> 00:37:39,380
+so your query would show up
+
+694
+00:37:39,520 --> 00:37:40,830
+and then Sybase would figure out,
+
+695
+00:37:40,830 --> 00:37:44,210
+should I go to the row store and maybe do something there
+
+696
+00:37:44,290 --> 00:37:47,930
+or should I run the query only on the, on the in-memory column store.
+
+697
+00:37:49,610 --> 00:37:52,720
+In the 2000s, is when the column store stuff really took off,
+
+698
+00:37:52,720 --> 00:37:54,700
+and the three key systems in this space,
+
+699
+00:37:54,700 --> 00:38:00,750
+where Vertica, which found by [], stands, Mike Stonebraker,
+
+700
+00:38:01,610 --> 00:38:07,140
+Vectorwise was a [] DB, but that was at a CWI
+
+701
+00:38:08,030 --> 00:38:12,270
+and MonetDB was was was a major academic project at CWI as well,
+
+702
+00:38:13,540 --> 00:38:15,200
+DuckDB is from CWI,
+
+703
+00:38:15,520 --> 00:38:20,270
+so the the first version of DuckDB was actually called MonetDBLite,
+
+704
+00:38:20,830 --> 00:38:22,110
+they threw all the code away
+
+705
+00:38:22,110 --> 00:38:25,160
+and then started DuckDB from scratch, after learning MonetDBLite,
+
+706
+00:38:25,700 --> 00:38:28,950
+Vectorwise was started by some people that worked on MonetDB
+
+707
+00:38:30,290 --> 00:38:33,160
+and then the the two main people at Vectorwise,
+
+708
+00:38:33,160 --> 00:38:36,360
+one of them left and was a co-founder of Snowflake,
+
+709
+00:38:36,890 --> 00:38:39,420
+so a lot of the early ideas that Vectorwise developed is in Snowflake
+
+710
+00:38:39,620 --> 00:38:41,665
+and then the other guy, Peter Boncz,
+
+711
+00:38:41,665 --> 00:38:42,595
+he went back to CWI
+
+712
+00:38:42,595 --> 00:38:45,660
+and then he, you know, helped advise the the DuckDB project.
+
+713
+00:38:46,950 --> 00:38:48,890
+So there was a bunch of other systems at the time,
+
+714
+00:38:48,890 --> 00:38:52,090
+but I consider these three major ones, the pioneers in this space.
+
+715
+00:38:53,920 --> 00:38:55,910
+And actually how this all sort of came out,
+
+716
+00:38:55,960 --> 00:38:59,480
+the way Mike tells it was, or Stonebraker tells it,
+
+717
+00:38:59,680 --> 00:39:03,590
+he was consulting for Walmart Labs, in the early 2000s,
+
+718
+00:39:03,820 --> 00:39:07,280
+and they were struggling try to scale their tera data database,
+
+719
+00:39:07,450 --> 00:39:08,720
+at the time was a row store,
+
+720
+00:39:09,010 --> 00:39:13,070
+I think Walmart was, it was multiple petabytes,
+
+721
+00:39:13,180 --> 00:39:14,625
+it was a database of every single transaction,
+
+722
+00:39:14,625 --> 00:39:16,520
+anytime somebody bought something at a store,
+
+723
+00:39:16,630 --> 00:39:18,980
+like [], it was in that database
+
+724
+00:39:19,420 --> 00:39:21,530
+and they were struggling to get tera data to run fast,
+
+725
+00:39:21,910 --> 00:39:22,590
+and then Mike was like,
+
+726
+00:39:22,590 --> 00:39:24,560
+oh, we should make just make this the column store
+
+727
+00:39:24,730 --> 00:39:29,810
+and then he, and then he he founded the C-store project, that became Vectica
+
+728
+00:39:29,890 --> 00:39:33,330
+and then, it was a pretty famous project.
+
+729
+00:39:34,250 --> 00:39:35,580
+Now pretty much everybody does this,
+
+730
+00:39:35,840 --> 00:39:42,480
+so this is just a sample of a bunch of database systems that are out there, that are considered column stores,
+
+731
+00:39:43,460 --> 00:39:46,620
+but the two key things that are also interesting about the 2010 is,
+
+732
+00:39:46,790 --> 00:39:50,520
+there's these open source file formats, Parquet and ORC,
+
+733
+00:39:50,630 --> 00:39:54,870
+parquet came out of Dremio and somebody else I'm forgetting
+
+734
+00:39:55,190 --> 00:39:56,400
+and ORC came out of Facebook,
+
+735
+00:39:56,930 --> 00:40:01,020
+these are open source file formats that are columnar based,
+
+736
+00:40:01,970 --> 00:40:06,630
+and now you can build database systems that can read and write Parquet ORC files.
+
+737
+00:40:09,810 --> 00:40:14,890
+All right, so the advantages for the, the columnar or decomposition storage model is that,
+
+738
+00:40:15,150 --> 00:40:17,050
+we're going to greatly reduce the amount of waste I/O,
+
+739
+00:40:17,130 --> 00:40:18,740
+we have to do for analytical queries,
+
+740
+00:40:18,740 --> 00:40:22,120
+because we're only reading the exact data that we need,
+
+741
+00:40:23,520 --> 00:40:25,395
+and we're going to get better cache for use
+
+742
+00:40:25,395 --> 00:40:27,710
+and better locality for our access patterns,
+
+743
+00:40:27,730 --> 00:40:31,310
+because again, we're literally just going to rip through columns one after another
+
+744
+00:40:31,540 --> 00:40:34,700
+and not have to jump around within, within memory,
+
+745
+00:40:34,990 --> 00:40:36,080
+which is better for CPUs,
+
+746
+00:40:36,490 --> 00:40:37,940
+and again, we'll get better compression,
+
+747
+00:40:38,260 --> 00:40:39,200
+which we're coming up to.
+
+748
+00:40:39,940 --> 00:40:41,010
+Because the downside is going to be,
+
+749
+00:40:41,010 --> 00:40:42,510
+it's going to be slow for point query,
+
+750
+00:40:42,510 --> 00:40:43,695
+slow for insert update delete,
+
+751
+00:40:43,695 --> 00:40:45,500
+because we're going to have to split things up
+
+752
+00:40:45,970 --> 00:40:48,075
+and write out multiple, you know, data to multiple locations
+
+753
+00:40:48,075 --> 00:40:48,930
+and then bring it back in
+
+754
+00:40:48,930 --> 00:40:50,150
+if we want to put it, put it back together.
+
+755
+00:40:52,230 --> 00:40:52,630
+Yes.
+
+756
+00:40:56,520 --> 00:40:58,940
+Question is, [] build their own database, no,
+
+757
+00:41:00,030 --> 00:41:01,750
+it consider that an each [],
+
+758
+00:41:02,730 --> 00:41:06,190
+but [] DB is real, that's a real system.
+
+759
+00:41:08,560 --> 00:41:08,960
+Okay.
+
+760
+00:41:10,870 --> 00:41:14,180
+So one thing to point out, though, is that,
+
+761
+00:41:15,370 --> 00:41:16,725
+in my, my earlier example,
+
+762
+00:41:16,725 --> 00:41:18,860
+the way I showed I ran that one query,
+
+763
+00:41:19,150 --> 00:41:27,380
+I did the scan on the, on the, on the, on the the hostname the column,
+
+764
+00:41:27,970 --> 00:41:33,710
+then I ran the scan portion of the query on the on the login one
+
+765
+00:41:34,210 --> 00:41:35,655
+and you sort of think of that,
+
+766
+00:41:35,655 --> 00:41:38,060
+like it was I did one and then it moved on another,
+
+767
+00:41:38,140 --> 00:41:39,405
+a lot of cases though, queries,
+
+768
+00:41:39,405 --> 00:41:43,195
+you actually want to look at multiple columns at the same time, right,
+
+769
+00:41:43,195 --> 00:41:45,510
+my WHERE clause had was only referenced one attribute,
+
+770
+00:41:45,710 --> 00:41:48,150
+but as you've seen in the queries you've written for homework one,
+
+771
+00:41:48,410 --> 00:41:52,020
+often times you have multiple columns or multiple attributes referenced in your WHERE clause,
+
+772
+00:41:52,750 --> 00:41:58,700
+and so it would be kind of kind of expensive or cumbersome to sort of now maintaining,
+
+773
+00:42:00,100 --> 00:42:03,690
+as I'm scanning along one column, fetching in another column at the same time
+
+774
+00:42:03,690 --> 00:42:05,480
+and trying to patch things together,
+
+775
+00:42:06,160 --> 00:42:10,400
+and so we still want we still, we want to be able to have data
+
+776
+00:42:10,630 --> 00:42:11,685
+or we want, we want a way
+
+777
+00:42:11,685 --> 00:42:15,870
+to have the attributes that are somewhat that are going to use together
+
+778
+00:42:16,340 --> 00:42:19,080
+somewhat close to each other on disk in our files,
+
+779
+00:42:19,610 --> 00:42:26,920
+but still get all the benefit of a column store layout, right.
+
+780
+00:42:27,930 --> 00:42:29,950
+And so this is what the PAX model, model is,
+
+781
+00:42:31,560 --> 00:42:32,800
+again, and as I said,
+
+782
+00:42:33,180 --> 00:42:35,320
+in most systems, they say they're a column store,
+
+783
+00:42:35,490 --> 00:42:36,730
+they're really doing this,
+
+784
+00:42:36,930 --> 00:42:39,100
+Parquet and ORC are really, really doing this.
+
+785
+00:42:39,820 --> 00:42:42,190
+And the idea is not like, you know, mind blowing,
+
+786
+00:42:42,190 --> 00:42:43,290
+it just basically saying,
+
+787
+00:42:43,790 --> 00:42:48,210
+instead of having a separate file for every single column or attribute by itself,
+
+788
+00:42:48,710 --> 00:42:53,940
+I'll have, I'll break them up into chunks, into row groups
+
+789
+00:42:54,080 --> 00:42:57,960
+and have data that are within the same tuple close to each other,
+
+790
+00:42:59,680 --> 00:43:05,030
+in the same file, just sort of spaced out in separate pages, right.
+
+791
+00:43:05,410 --> 00:43:07,880
+So if we go back to our sort of mock example here,
+
+792
+00:43:08,080 --> 00:43:13,310
+all we're going to do is just horizontally partition the table into to row groups,
+
+793
+00:43:13,630 --> 00:43:15,135
+and then within that row group,
+
+794
+00:43:15,135 --> 00:43:18,570
+we're going to partition it based on columns, right.
+
+795
+00:43:18,570 --> 00:43:20,660
+So you think of this, the first three rows here,
+
+796
+00:43:21,100 --> 00:43:26,270
+I'll have some portion in my giant file, define the row group,
+
+797
+00:43:26,380 --> 00:43:27,770
+I have a header for that row group
+
+798
+00:43:27,970 --> 00:43:30,470
+and then I have all the attribute of column A together,
+
+799
+00:43:30,610 --> 00:43:33,300
+then all the attributes for all the values for column A,
+
+800
+00:43:33,300 --> 00:43:34,200
+all the values column B,
+
+801
+00:43:34,200 --> 00:43:38,340
+followed by all the values column C, right.
+
+802
+00:43:38,690 --> 00:43:40,555
+So now again, if I have a WHERE clause
+
+803
+00:43:40,555 --> 00:43:43,410
+that needs to access, you know, both column A and column C,
+
+804
+00:43:43,850 --> 00:43:46,350
+when I go fetch these pages for this row group,
+
+805
+00:43:46,760 --> 00:43:50,400
+I, you know, I I have all the data for that I need close to each other,
+
+806
+00:43:50,540 --> 00:43:52,210
+but I'm also getting the benefit [] I/O,
+
+807
+00:43:52,210 --> 00:43:56,260
+because this row group is gonna be, you know, in in the tens of megabytes
+
+808
+00:43:56,260 --> 00:44:02,700
+instead of like, you know, four kilobyte or eight kilobyte pages, right,
+
+809
+00:44:02,780 --> 00:44:04,200
+same thing with the next guy, and so forth.
+
+810
+00:44:04,340 --> 00:44:07,920
+And so, this is roughly how Parquet work,
+
+811
+00:44:08,450 --> 00:44:13,770
+there's a lot of diagrams or presentations of what Parquet look look like,
+
+812
+00:44:14,360 --> 00:44:18,150
+and again, they're basically using all the same language that that we're using here,
+
+813
+00:44:19,100 --> 00:44:22,240
+and here they say the, the default size of a page is one megabyte,
+
+814
+00:44:22,240 --> 00:44:24,145
+because they want to have, you know, group things together
+
+815
+00:44:24,145 --> 00:44:26,430
+and have, you know, as much stretch I/O as they can,
+
+816
+00:44:26,630 --> 00:44:29,700
+and then a row groupp is going to be 128 megabytes.
+
+817
+00:44:32,190 --> 00:44:32,590
+Yes.
+
+818
+00:44:33,660 --> 00:44:39,390
+The statement is,
+
+819
+00:44:39,620 --> 00:44:42,510
+couldn't this also have you still have the problem where you have a bunch of I/Os,
+
+820
+00:44:43,400 --> 00:44:44,640
+if you're doing a full table scan.
+
+821
+00:44:46,220 --> 00:44:49,030
+The header tells you where things are, right,
+
+822
+00:44:49,470 --> 00:44:50,795
+and because it's so huge,
+
+823
+00:44:50,795 --> 00:44:52,870
+like I could bring in, I bring in this first header here,
+
+824
+00:44:53,070 --> 00:44:55,250
+actually, I'm showing the header,
+
+825
+00:44:55,250 --> 00:44:57,200
+but like in in real systems or in Parquet Orc,
+
+826
+00:44:57,200 --> 00:44:58,180
+it's actually at the footer,
+
+827
+00:44:58,350 --> 00:44:59,800
+because assuming the file is immutable,
+
+828
+00:44:59,820 --> 00:45:01,000
+so I don't know what like,
+
+829
+00:45:01,080 --> 00:45:03,910
+I don't know what where everything's gonna be until I finish writing it,
+
+830
+00:45:04,080 --> 00:45:05,290
+so it's in the footer,
+
+831
+00:45:05,340 --> 00:45:07,000
+but that's an aside,
+
+832
+00:45:07,230 --> 00:45:08,500
+so his statement is,
+
+833
+00:45:08,670 --> 00:45:10,175
+don't have the same problem as a row store here,
+
+834
+00:45:10,175 --> 00:45:11,330
+if I'm doing this PAX thing,
+
+835
+00:45:11,330 --> 00:45:14,830
+because now if I bring this entire row group in,
+
+836
+00:45:15,400 --> 00:45:16,740
+am I going to read a bunch of stuff I don't need,
+
+837
+00:45:17,000 --> 00:45:19,255
+so you don't bring the whole row group in,
+
+838
+00:45:19,255 --> 00:45:20,220
+you bring the header in
+
+839
+00:45:20,450 --> 00:45:23,640
+and you say here's the offsets now of where my attributes are
+
+840
+00:45:24,080 --> 00:45:25,800
+and then go ahead and fetch those.
+
+841
+00:45:33,230 --> 00:45:34,290
+Actually, here you can see,
+
+842
+00:45:36,660 --> 00:45:39,875
+here, here's you see the footer here instead of the header,
+
+843
+00:45:39,875 --> 00:45:40,805
+the metadata, what's in here,
+
+844
+00:45:40,805 --> 00:45:43,840
+the file and column metadata, what the offsets are,
+
+845
+00:45:44,010 --> 00:45:45,435
+instead of the header, it's just in the footer,
+
+846
+00:45:45,435 --> 00:45:47,740
+for Parquet and Orc is the same way.
+
+847
+00:45:50,350 --> 00:45:53,840
+All right, so, as you say multiple times,
+
+848
+00:45:54,070 --> 00:45:55,850
+I/O has always been the main bottleneck we have,
+
+849
+00:45:56,770 --> 00:45:58,010
+especially for analytical queries
+
+850
+00:45:58,420 --> 00:46:01,995
+and if we assume the data uncompressed,
+
+851
+00:46:01,995 --> 00:46:03,560
+that means like the,
+
+852
+00:46:04,600 --> 00:46:08,820
+you know, whatever the exact size of a tuple for in a table,
+
+853
+00:46:10,010 --> 00:46:13,110
+every page is going to bring exactly that data in,
+
+854
+00:46:14,390 --> 00:46:16,470
+and so the most obvious way to reduce the,
+
+855
+00:46:17,870 --> 00:46:22,010
+to speed up queries, you can, you can, you can basically skip data
+
+856
+00:46:22,390 --> 00:46:26,300
+or you can make the data you do fetch, bring more things into memory.
+
+857
+00:46:26,890 --> 00:46:29,325
+So skipping data is what the column store stuff helps with,
+
+858
+00:46:29,325 --> 00:46:32,210
+because you avoid having to read attributes you don't need,
+
+859
+00:46:32,710 --> 00:46:33,675
+compression is another way,
+
+860
+00:46:33,675 --> 00:46:35,180
+to say, okay, for every page I fetch,
+
+861
+00:46:35,350 --> 00:46:38,090
+I get more tuples than I would if it was uncompressed.
+
+862
+00:46:38,980 --> 00:46:43,010
+now this is going to be this trade off between speed up and the compression ratio,
+
+863
+00:46:43,690 --> 00:46:47,760
+obviously disk is going to be potentially slower than CPU,
+
+864
+00:46:47,760 --> 00:46:48,920
+especially in the cloud setting,
+
+865
+00:46:49,270 --> 00:46:53,170
+and so I'm willing to pay the extra cost of having to decompress and compress data,
+
+866
+00:46:53,860 --> 00:46:56,750
+because now again it reduce my amount of IOPS,
+
+867
+00:46:56,980 --> 00:46:59,990
+amount of time I'm wasting on IOPS to bring to fetch things in.
+
+868
+00:47:01,970 --> 00:47:03,270
+Things are slightly getting,
+
+869
+00:47:05,330 --> 00:47:11,550
+the sort of, the difference between disk and CPU speed is getting, the distance is getting smaller,
+
+870
+00:47:11,550 --> 00:47:13,910
+where in some cases, disk is actually getting so fast lately,
+
+871
+00:47:14,200 --> 00:47:16,010
+where maybe you don't want things to be compressed.
+
+872
+00:47:16,820 --> 00:47:18,320
+There'll be some other benefits we'll see in a second,
+
+873
+00:47:18,320 --> 00:47:19,610
+where we do keep things compressed,
+
+874
+00:47:19,610 --> 00:47:21,010
+the database system actually can run faster,
+
+875
+00:47:21,630 --> 00:47:23,260
+when it actually processes things in memory,
+
+876
+00:47:23,460 --> 00:47:25,895
+and we'll cover that in a few weeks,
+
+877
+00:47:25,895 --> 00:47:28,570
+but in general, for most systems,
+
+878
+00:47:28,740 --> 00:47:30,820
+compressing things on disk is, is always going to be a win.
+
+879
+00:47:33,230 --> 00:47:36,960
+So, any compression scheme we need to use has to produce fixed-length values,
+
+880
+00:47:37,670 --> 00:47:38,425
+as we said before,
+
+881
+00:47:38,425 --> 00:47:40,200
+because we want to store this in a column store,
+
+882
+00:47:40,790 --> 00:47:43,320
+we want to make sure that we always have fixed-length all sets.
+
+883
+00:47:45,500 --> 00:47:46,825
+In some cases, too,
+
+884
+00:47:46,825 --> 00:47:50,790
+we want to delay, when we actually decompress things for as long as possible,
+
+885
+00:47:50,990 --> 00:47:52,170
+while we execute queries
+
+886
+00:47:52,430 --> 00:47:53,350
+and we'll see this again,
+
+887
+00:47:53,350 --> 00:47:55,080
+we'll talk about this more when we talk about query execution,
+
+888
+00:47:55,370 --> 00:47:56,610
+but the idea here is that,
+
+889
+00:47:56,810 --> 00:47:59,550
+if I have a bunch of these one megabyte strings,
+
+890
+00:48:00,440 --> 00:48:01,990
+that that are in my table,
+
+891
+00:48:02,580 --> 00:48:04,930
+but I can, I can convert them to 32 bit integers,
+
+892
+00:48:05,100 --> 00:48:08,620
+I want to process 32 bit integers for as long as possible,
+
+893
+00:48:09,240 --> 00:48:11,225
+because I have to copy data from one operator to the next,
+
+894
+00:48:11,225 --> 00:48:12,310
+as, as I execute the query,
+
+895
+00:48:12,690 --> 00:48:15,370
+or if it's a distributed system copied over the network,
+
+896
+00:48:15,570 --> 00:48:17,300
+I want to keep things that compress as long as possible
+
+897
+00:48:17,300 --> 00:48:20,200
+and only decompress it when I actually have to show something back to,
+
+898
+00:48:20,580 --> 00:48:22,300
+that something needs it to be decompressed
+
+899
+00:48:22,530 --> 00:48:23,950
+or the user needs the output,
+
+900
+00:48:24,530 --> 00:48:25,980
+JOINs makes that, makes that harder,
+
+901
+00:48:26,390 --> 00:48:27,870
+but we'll cover that later in a second.
+
+902
+00:48:28,720 --> 00:48:32,130
+And then the most important thing we need for any compression scheme in our data system is,
+
+903
+00:48:32,130 --> 00:48:34,250
+we need to ensure that we're using a lossless scheme,
+
+904
+00:48:35,650 --> 00:48:36,560
+anyone know what that means,
+
+905
+00:48:37,610 --> 00:48:38,700
+lossy versus lossless.
+
+906
+00:48:38,700 --> 00:48:39,200
+Yes.
+
+907
+00:48:41,060 --> 00:48:44,620
+Right, there's no information loss when you compress things, right, or decompress them, right,
+
+908
+00:48:45,570 --> 00:48:49,900
+so a lossy scheme would be like MP3, MP4, JPEG,
+
+909
+00:48:50,430 --> 00:48:55,300
+where they're doing some tricks about how the human perceives, you know, audio data or visual data
+
+910
+00:48:55,590 --> 00:48:57,970
+to compress things down to a much smaller size,
+
+911
+00:48:58,720 --> 00:49:02,070
+so that means if you have the raw image you took and the raw sound file you took,
+
+912
+00:49:02,150 --> 00:49:02,905
+when you compress it,
+
+913
+00:49:02,905 --> 00:49:06,000
+you're not going to get back the same, the same values,
+
+914
+00:49:06,080 --> 00:49:08,040
+if you will, when you decompress it.
+
+915
+00:49:09,095 --> 00:49:10,420
+We don't want to do that in a database system,
+
+916
+00:49:10,470 --> 00:49:15,080
+because, but as you said before, people don't losing data, right,
+
+917
+00:49:15,280 --> 00:49:17,925
+if, you know, if you have 100 dollars in your bank account
+
+918
+00:49:17,925 --> 00:49:19,050
+and then they compress the data
+
+919
+00:49:19,050 --> 00:49:21,350
+and when it gets decompress and now you have, you know, 90 dollars,
+
+920
+00:49:21,910 --> 00:49:23,660
+you're gonna notice, you're gonna complain, right,
+
+921
+00:49:24,220 --> 00:49:29,190
+so typically, you know, most systems will not use a lossy scheme just,
+
+922
+00:49:29,190 --> 00:49:32,390
+because you know it'll have problems.
+
+923
+00:49:33,340 --> 00:49:36,805
+You can do lossy compression yourself, right,
+
+924
+00:49:36,805 --> 00:49:40,285
+so think of like, I mean like the application could do this,
+
+925
+00:49:40,285 --> 00:49:45,985
+like if I have, keeping track of the temperature of this room every second, right,
+
+926
+00:49:45,985 --> 00:49:47,610
+and I do this for for ten years,
+
+927
+00:49:48,140 --> 00:49:50,800
+do I really need to know what the exact temperature was
+
+928
+00:49:50,800 --> 00:49:53,850
+at, at a one second interval, you know, a year from now,
+
+929
+00:49:54,440 --> 00:49:56,095
+no, I could maybe compress it down to,
+
+930
+00:49:56,095 --> 00:49:58,730
+here's the average temperature per minute, right.
+
+931
+00:49:58,840 --> 00:50:00,470
+So I can't get back the original data,
+
+932
+00:50:00,880 --> 00:50:03,170
+because it been compressed or aggregated,
+
+933
+00:50:03,640 --> 00:50:04,730
+and that might be okay.
+
+934
+00:50:05,260 --> 00:50:07,680
+But again, that's something you as a user in the application,
+
+935
+00:50:07,680 --> 00:50:09,530
+a human has to know whether that's an okay thing to do,
+
+936
+00:50:09,640 --> 00:50:10,980
+the database system doesn't,
+
+937
+00:50:10,980 --> 00:50:13,430
+therefore, the database system is always going to be using a lossless scheme.
+
+938
+00:50:15,490 --> 00:50:16,400
+So now the question is,
+
+939
+00:50:17,170 --> 00:50:18,380
+what do we actually want to compress,
+
+940
+00:50:19,030 --> 00:50:20,630
+and there's, there's a couple different choices.
+
+941
+00:50:21,430 --> 00:50:24,110
+One is we can compress a single page or a block of data,
+
+942
+00:50:24,880 --> 00:50:27,300
+so that's all the tuples within the same table.
+
+943
+00:50:28,010 --> 00:50:29,965
+We can compress a single tuple by itself,
+
+944
+00:50:29,965 --> 00:50:31,590
+if it's a row store system.
+
+945
+00:50:33,290 --> 00:50:34,720
+We can go even more fine grain than that,
+
+946
+00:50:34,720 --> 00:50:36,970
+we can say I compress within one tuple,
+
+947
+00:50:36,970 --> 00:50:39,540
+one single attribute and compress that,
+
+948
+00:50:40,360 --> 00:50:43,470
+so think of like the overflow tables, we said before,
+
+949
+00:50:43,850 --> 00:50:47,850
+if you're storing huge text attributes
+
+950
+00:50:48,020 --> 00:50:53,040
+or in Wikipedia, the revisions could be a lot of text,
+
+951
+00:50:54,530 --> 00:50:56,635
+I forget what the largest Wikipedia article is
+
+952
+00:50:56,635 --> 00:50:58,230
+and it's something star wars,
+
+953
+00:50:58,640 --> 00:51:01,800
+so that, you know, could be kilobytes of text data,
+
+954
+00:51:02,000 --> 00:51:05,400
+and I could compress just for that, you know, that one entry,
+
+955
+00:51:05,860 --> 00:51:08,700
+and Postgres do this and a bunch of other systems do this,
+
+956
+00:51:09,410 --> 00:51:12,630
+Or alternatively, I could compress for a single column,
+
+957
+00:51:13,490 --> 00:51:14,700
+if it's a column store system.
+
+958
+00:51:16,280 --> 00:51:18,330
+So let's talk about how you can do this at the block level,
+
+959
+00:51:19,820 --> 00:51:22,255
+and then we'll spend most our time talking how to do this at the column level,
+
+960
+00:51:22,255 --> 00:51:25,440
+because that matters the most for in a column store system.
+
+961
+00:51:27,590 --> 00:51:28,780
+So to do it at a block level,
+
+962
+00:51:28,780 --> 00:51:31,170
+we, we essentially need to use a naive compression scheme,
+
+963
+00:51:31,580 --> 00:51:34,230
+and by naive I mean that the,
+
+964
+00:51:34,730 --> 00:51:40,080
+it's, it's the database system is making a call to like a third party library like Gzip,
+
+965
+00:51:40,610 --> 00:51:41,935
+you wouldn't want to use that, because it's slow,
+
+966
+00:51:41,935 --> 00:51:43,470
+but it's a third party library,
+
+967
+00:51:43,550 --> 00:51:47,580
+that's going to take the page and then compress it down to some binary form,
+
+968
+00:51:47,930 --> 00:51:50,490
+where the database system has no way to interpret
+
+969
+00:51:50,570 --> 00:51:56,220
+or can do any introspection into the compressed version of, of the block, right,
+
+970
+00:51:56,220 --> 00:52:01,310
+again, so I call, you know, call Gzip on a, on a, on a file,
+
+971
+00:52:01,750 --> 00:52:05,205
+the database system doesn't know how to go read inside that compress file, right,
+
+972
+00:52:05,205 --> 00:52:06,120
+it has to decompress it
+
+973
+00:52:06,120 --> 00:52:09,260
+in order to get back the original version of it, right.
+
+974
+00:52:10,150 --> 00:52:11,685
+So again, you wouldn't want to use Gzip,
+
+975
+00:52:11,685 --> 00:52:13,100
+there's a bunch of these faster alternatives
+
+976
+00:52:14,620 --> 00:52:16,760
+and that sort of all came out with LZO,
+
+977
+00:52:17,020 --> 00:52:20,480
+was was a big great breakthrough in the in 1990s,
+
+978
+00:52:20,980 --> 00:52:23,900
+Zstd is considered the state of the art compression scheme now,
+
+979
+00:52:24,460 --> 00:52:25,010
+from Facebook,
+
+980
+00:52:25,450 --> 00:52:27,740
+they're actually working on a new version. It's not public yet,
+
+981
+00:52:29,630 --> 00:52:32,190
+it's even faster and better,
+
+982
+00:52:32,360 --> 00:52:33,210
+but that's not out yet,
+
+983
+00:52:34,250 --> 00:52:36,390
+but Zstd is what you should be using.
+
+984
+00:52:37,610 --> 00:52:38,830
+So let's see how MySQL does this,
+
+985
+00:52:40,110 --> 00:52:43,120
+so MySQL, you can support table compression,
+
+986
+00:52:43,410 --> 00:52:45,070
+you declare it on a per table basis,
+
+987
+00:52:45,420 --> 00:52:46,540
+I don't think it's owned by default,
+
+988
+00:52:46,950 --> 00:52:48,040
+and the way it works is that,
+
+989
+00:52:48,690 --> 00:52:50,780
+all your your pages when they're written, a disk,
+
+990
+00:52:50,780 --> 00:52:56,660
+they're going to be compressed into into some page size,
+
+991
+00:52:56,660 --> 00:53:03,170
+that some multiple of, of of 4 or 2, up to 8 kilobytes,
+
+992
+00:53:04,330 --> 00:53:05,295
+and in each page,
+
+993
+00:53:05,295 --> 00:53:07,340
+they're going to have a header portion called the mod log,
+
+994
+00:53:07,780 --> 00:53:10,950
+where it's sort of like the row store thing I mentioned before,
+
+995
+00:53:10,950 --> 00:53:14,480
+where I can do a bunch of writes and make changes to the page
+
+996
+00:53:14,860 --> 00:53:17,660
+without having to decompress it first, right,
+
+997
+00:53:18,630 --> 00:53:20,000
+so it's like a little extra space in the beginning.
+
+998
+00:53:23,290 --> 00:53:24,200
+And I would say also too,
+
+999
+00:53:24,310 --> 00:53:28,610
+say like say if your page is like when compressed, it's 6 kilobytes,
+
+1000
+00:53:28,630 --> 00:53:32,750
+they'll pad it up to the next highest value within one, two, four, eight,
+
+1001
+00:53:33,100 --> 00:53:38,030
+and this ensures that you have, you don't have any fragmentation in, in your layout on disk,
+
+1002
+00:53:39,180 --> 00:53:40,480
+and, and when you bring things into memory.
+
+1003
+00:53:40,980 --> 00:53:43,295
+So say I, I query runs
+
+1004
+00:53:43,295 --> 00:53:45,550
+and want to read something in page 0, right,
+
+1005
+00:53:46,140 --> 00:53:47,650
+if I'm doing a blind write,
+
+1006
+00:53:48,150 --> 00:53:51,710
+like an insert or a delete or even update,
+
+1007
+00:53:51,710 --> 00:53:52,630
+assuming I have the values,
+
+1008
+00:53:53,580 --> 00:53:55,240
+I don't need to decompress the page,
+
+1009
+00:53:55,470 --> 00:53:57,520
+I just write that change to the mod log
+
+1010
+00:53:57,960 --> 00:53:59,360
+and again it's just a log structure,
+
+1011
+00:53:59,360 --> 00:54:00,160
+like we talked about before,
+
+1012
+00:54:00,210 --> 00:54:03,160
+I said we going to see this idea throughout the rest of the semester,
+
+1013
+00:54:03,870 --> 00:54:06,550
+you can think the mod log is just the log structure storage we talked about before.
+
+1014
+00:54:08,120 --> 00:54:09,420
+And in some cases too,
+
+1015
+00:54:09,470 --> 00:54:11,040
+I can do reads on the mod log,
+
+1016
+00:54:11,480 --> 00:54:15,660
+because if the data I need was just inserted and within the mod log,
+
+1017
+00:54:15,890 --> 00:54:18,180
+I don't have to decompress the rest of the page,
+
+1018
+00:54:20,170 --> 00:54:21,645
+but then if I do need to read the page,
+
+1019
+00:54:21,645 --> 00:54:23,030
+they'll, they'll decompress it,
+
+1020
+00:54:23,530 --> 00:54:28,140
+store it as a regular 16 kilobyte page in in memory, in the buffer pool,
+
+1021
+00:54:28,140 --> 00:54:30,050
+because that's the default size for MySQL,
+
+1022
+00:54:30,400 --> 00:54:33,420
+and then I can do whatever reads I want on that, right,
+
+1023
+00:54:34,150 --> 00:54:36,110
+but I still keep the compressed version around
+
+1024
+00:54:36,580 --> 00:54:37,620
+and I think also too,
+
+1025
+00:54:37,620 --> 00:54:38,535
+when it gets decompressed,
+
+1026
+00:54:38,535 --> 00:54:42,600
+they apply the changes to the mod log to to the page there, right.
+
+1027
+00:54:45,980 --> 00:54:47,370
+This is a good idea or a bad idea?
+
+1028
+00:54:50,140 --> 00:54:51,200
+Postgres doesn't do this.
+
+1029
+00:54:56,770 --> 00:54:57,170
+Yes.
+
+1030
+00:55:00,530 --> 00:55:02,100
+He said, so reading it's not super great, why?
+
+1031
+00:55:02,900 --> 00:55:09,830
+Not necessarily,
+
+1032
+00:55:09,830 --> 00:55:12,680
+like, like going back here,
+
+1033
+00:55:14,480 --> 00:55:15,510
+if I do an insert,
+
+1034
+00:55:16,280 --> 00:55:17,830
+and it lands in the mod log, right,
+
+1035
+00:55:18,450 --> 00:55:19,540
+I don't have to decompress it,
+
+1036
+00:55:19,860 --> 00:55:20,620
+my index,
+
+1037
+00:55:21,150 --> 00:55:22,445
+like there's some bookkeeping doing saying,
+
+1038
+00:55:22,445 --> 00:55:24,275
+okay, I updated the index now,
+
+1039
+00:55:24,275 --> 00:55:25,900
+so the record ID points to this page
+
+1040
+00:55:26,010 --> 00:55:27,455
+and then you look in the mod log,
+
+1041
+00:55:27,455 --> 00:55:29,810
+oh, for that slot number, that that record ID,
+
+1042
+00:55:29,810 --> 00:55:31,300
+it's really in the mod log, the [full] page,
+
+1043
+00:55:31,770 --> 00:55:32,770
+so you don't have to decompress it.
+
+1044
+00:55:36,150 --> 00:55:37,490
+I'll say I actually think it's a decent idea,
+
+1045
+00:55:38,200 --> 00:55:39,880
+and, and I say, Postgres doesn't do it,
+
+1046
+00:55:39,880 --> 00:55:40,470
+not because,
+
+1047
+00:55:40,730 --> 00:55:43,770
+like, oh, Postgres, like Postgres is not the Gospel, right,
+
+1048
+00:55:43,850 --> 00:55:45,250
+Postgres doesn't do something,
+
+1049
+00:55:45,250 --> 00:55:47,250
+doesn't mean like you shouldn't be doing it,
+
+1050
+00:55:47,690 --> 00:55:49,530
+Postgres is actually amazing front end,
+
+1051
+00:55:49,610 --> 00:55:52,190
+the back end is actually pretty terrible, right,
+
+1052
+00:55:53,320 --> 00:55:56,180
+because a lot of the design is remnants from the 1980s,
+
+1053
+00:55:56,440 --> 00:55:58,220
+and it's not how you would build a modern system today,
+
+1054
+00:55:59,040 --> 00:56:03,845
+so, and they don't support compression for, for regular data pages like this,
+
+1055
+00:56:03,845 --> 00:56:05,650
+only for TOAST tables, the overflow pages,
+
+1056
+00:56:06,180 --> 00:56:09,370
+so this is actually a decent idea, right.
+
+1057
+00:56:09,660 --> 00:56:11,140
+It does have some challenges, though, right,
+
+1058
+00:56:14,760 --> 00:56:16,270
+because MySQL is a row store,
+
+1059
+00:56:16,740 --> 00:56:19,745
+the that's why you have to use naive compression scheme,
+
+1060
+00:56:19,745 --> 00:56:20,980
+because you can't do anything fancy,
+
+1061
+00:56:21,090 --> 00:56:26,020
+because the, the values you're storing in the tuples themselves or sorry in the page itself
+
+1062
+00:56:26,040 --> 00:56:27,155
+from all the different attributes
+
+1063
+00:56:27,155 --> 00:56:30,215
+and you're not going to be able to do all the native compression,
+
+1064
+00:56:30,215 --> 00:56:31,990
+we'll see in a second, right.
+
+1065
+00:56:32,790 --> 00:56:37,660
+And again, because we're just using, I think they use Snappy or Zstd,
+
+1066
+00:56:38,010 --> 00:56:40,600
+because we're using a general purpose compression algorithm,
+
+1067
+00:56:40,740 --> 00:56:42,580
+the database system doesn't know how to interpret
+
+1068
+00:56:42,990 --> 00:56:45,700
+what those compressed version, compressed bytes actually mean.
+
+1069
+00:56:46,710 --> 00:56:49,180
+And the spoiler is all those compression algorithms I've talked about before,
+
+1070
+00:56:49,260 --> 00:56:53,260
+they're basically doing some variant of of dictionary compression,
+
+1071
+00:56:54,180 --> 00:56:57,610
+it's going to build its own dictionary of repeated byte byte sequences,
+
+1072
+00:56:58,050 --> 00:57:01,030
+but again, MySQL doesn't know how to read that dictionary,
+
+1073
+00:57:01,500 --> 00:57:02,980
+so it has to decompress the whole thing.
+
+1074
+00:57:04,950 --> 00:57:08,675
+So for some workloads, I think this, this is actually a good idea
+
+1075
+00:57:08,675 --> 00:57:10,900
+and I kind of wish Postgres did do some compression.
+
+1076
+00:57:12,920 --> 00:57:16,280
+All right, so, if we're doing OLAP,
+
+1077
+00:57:17,450 --> 00:57:21,330
+ideally, we want to be able to run our query directly in the compressed data
+
+1078
+00:57:21,650 --> 00:57:23,730
+without having to decompress it first, right.
+
+1079
+00:57:23,730 --> 00:57:24,885
+So say something like this,
+
+1080
+00:57:24,885 --> 00:57:27,230
+I have my salary, DJ 2PL salary,
+
+1081
+00:57:27,820 --> 00:57:28,970
+assuming I have some compression algorithm,
+
+1082
+00:57:29,080 --> 00:57:30,080
+I'm not saying what it is
+
+1083
+00:57:30,400 --> 00:57:33,860
+and then I have a compressed form of of the database,
+
+1084
+00:57:34,780 --> 00:57:36,090
+well, if my query shows up,
+
+1085
+00:57:36,230 --> 00:57:37,410
+I want to get my salary,
+
+1086
+00:57:37,700 --> 00:57:40,770
+I do some kind of magic that converts the query,
+
+1087
+00:57:41,900 --> 00:57:45,780
+to convert this constant string Andy into the compressed form,
+
+1088
+00:57:46,160 --> 00:57:49,820
+and now I can do a direct lookup on my compressed table
+
+1089
+00:57:50,080 --> 00:57:51,200
+using my compressed constant
+
+1090
+00:57:51,640 --> 00:57:54,050
+and not have to decompress every single page as I'm going along,
+
+1091
+00:57:56,490 --> 00:57:59,135
+now I'm getting, I'm going to reduce amount of I/O I have to do,
+
+1092
+00:57:59,135 --> 00:58:01,030
+because I'm fetching and compress pages,
+
+1093
+00:58:01,350 --> 00:58:04,240
+I don't have to decompress them in order to do lookups into them.
+
+1094
+00:58:08,390 --> 00:58:09,870
+So this is idea what we want,
+
+1095
+00:58:10,130 --> 00:58:13,290
+and the easiest way to do this is going to be in a columnar system.
+
+1096
+00:58:16,300 --> 00:58:20,690
+So this is just sort of a quick overview of a bunch of different compression algorithms you could possibly have.
+
+1097
+00:58:21,780 --> 00:58:24,920
+Again, the [spoil] is going to be dictionary compression,
+
+1098
+00:58:24,920 --> 00:58:27,310
+dictionary encoding is the default choice for most systems,
+
+1099
+00:58:28,290 --> 00:58:29,405
+but what you can do,
+
+1100
+00:58:29,405 --> 00:58:35,645
+you may not want to compress a single column using these other schemes,
+
+1101
+00:58:35,645 --> 00:58:37,450
+we'll see some examples where it does make sense,
+
+1102
+00:58:37,650 --> 00:58:40,330
+but after you do dictionary encoding,
+
+1103
+00:58:40,680 --> 00:58:44,230
+you can apply all these other compression schemes on the dictionary itself,
+
+1104
+00:58:44,310 --> 00:58:47,590
+or you're still your dictionary encoded values and get even further compression.
+
+1105
+00:58:48,070 --> 00:58:49,500
+So you can get sort of a multiplicative effect
+
+1106
+00:58:49,500 --> 00:58:50,870
+where you do compression one way,
+
+1107
+00:58:51,160 --> 00:58:53,340
+and then you run another compression algorithm on the compressed data
+
+1108
+00:58:53,340 --> 00:58:54,350
+and get even better compression,
+
+1109
+00:58:54,640 --> 00:58:58,130
+and it's still done in a way where the database system can natively interpret,
+
+1110
+00:58:58,840 --> 00:59:00,780
+what those bytes actually mean in the compressed form,
+
+1111
+00:59:00,980 --> 00:59:02,370
+without having to decompress it first.
+
+1112
+00:59:03,790 --> 00:59:06,540
+And again, this is why you want the database system to do everything, do everything
+
+1113
+00:59:06,540 --> 00:59:08,630
+and don't want the OS to do anything or anybody else to do anything,
+
+1114
+00:59:09,570 --> 00:59:13,240
+because, again, because we can do this native compression.
+
+1115
+00:59:16,270 --> 00:59:18,140
+So let's do some quick examples here.
+
+1116
+00:59:19,060 --> 00:59:22,010
+So one approach you do is called run-length encoding, RLE,
+
+1117
+00:59:22,800 --> 00:59:24,555
+and this is the basic idea here is that,
+
+1118
+00:59:24,555 --> 00:59:31,640
+if we have contiguous runs of values that are the same thing,
+
+1119
+00:59:33,070 --> 00:59:33,980
+literally the same value,
+
+1120
+00:59:34,300 --> 00:59:37,400
+instead of storing that value over and over again for every single tuple,
+
+1121
+00:59:37,840 --> 00:59:40,370
+I'll instead store a compressed summary,
+
+1122
+00:59:40,780 --> 00:59:43,760
+that says for this value, at this offset,
+
+1123
+00:59:44,380 --> 00:59:47,500
+here's how many, how many occurrences it has, right.
+
+1124
+00:59:48,500 --> 00:59:49,765
+Now, this works great,
+
+1125
+00:59:49,765 --> 00:59:52,980
+if your data is sorted based on whatever the column you're trying to compress,
+
+1126
+00:59:53,480 --> 00:59:55,860
+you can't always do this,
+
+1127
+00:59:56,300 --> 00:59:58,255
+but again, if you sort things,
+
+1128
+00:59:58,255 --> 01:00:02,640
+then you can, you can maximize the amount of maximize the repeated runs.
+
+1129
+01:00:03,440 --> 01:00:04,735
+Let's say I I have a single table,
+
+1130
+01:00:04,735 --> 01:00:05,850
+where it has an id field
+
+1131
+01:00:06,080 --> 01:00:08,380
+and then has a column says whether somebody's dead or not,
+
+1132
+01:00:08,380 --> 01:00:12,990
+yes or no, right, Yes or no, there's no null, there's no maybe, right,
+
+1133
+01:00:14,180 --> 01:00:16,260
+so we can compress this guy here, right,
+
+1134
+01:00:17,250 --> 01:00:18,610
+so a compressed form
+
+1135
+01:00:19,170 --> 01:00:22,330
+would just take, essentially just scanning through the column
+
+1136
+01:00:22,950 --> 01:00:27,610
+and finding the contiguous attributes or tuples that have the same value
+
+1137
+01:00:28,050 --> 01:00:29,570
+and then converting it into this triplet,
+
+1138
+01:00:29,570 --> 01:00:33,340
+that says, here's the value, where at this offset, and here's the size of the run.
+
+1139
+01:00:34,450 --> 01:00:35,000
+All right.
+
+1140
+01:00:36,890 --> 01:00:38,610
+And so now if have a query comes along,
+
+1141
+01:00:38,900 --> 01:00:43,920
+like count the number of people that are dead versus not dead, right,
+
+1142
+01:00:44,270 --> 01:00:47,640
+I can just rip through that isDead column
+
+1143
+01:00:49,010 --> 01:00:54,300
+and compute my aggregation by just summing up the the length of the run,
+
+1144
+01:00:55,100 --> 01:00:57,850
+you know, and then along with the value there.
+
+1145
+01:01:01,300 --> 01:01:03,950
+I actually can do even better, right,
+
+1146
+01:01:05,590 --> 01:01:07,130
+so I have this little, this little part here,
+
+1147
+01:01:07,330 --> 01:01:08,690
+I have somebody's not dead,
+
+1148
+01:01:08,770 --> 01:01:10,100
+and then they're dead and not dead,
+
+1149
+01:01:10,540 --> 01:01:15,650
+so I have now these three triplets here where the run size is 1,
+
+1150
+01:01:16,660 --> 01:01:18,470
+so in this case here, I'm actually doing worse,
+
+1151
+01:01:18,490 --> 01:01:20,300
+because I'm, I'm storing a triplet,
+
+1152
+01:01:20,770 --> 01:01:24,330
+when I could have just stored a single value by itself, right,
+
+1153
+01:01:25,700 --> 01:01:28,650
+so if I sort the data based on whether somebody is dead or not,
+
+1154
+01:01:29,870 --> 01:01:33,750
+now my compression only has, you know, compressed column only has two entries,
+
+1155
+01:01:34,835 --> 01:01:36,490
+here's all the dead people and here all the non dead people,
+
+1156
+01:01:37,690 --> 01:01:41,810
+and this greatly reduces the amount of data at the store now.
+
+1157
+01:01:42,570 --> 01:01:43,610
+So it may be the case,
+
+1158
+01:01:43,610 --> 01:01:45,620
+again say I have, always think of it extremes,
+
+1159
+01:01:45,620 --> 01:01:46,330
+my example is,
+
+1160
+01:01:46,500 --> 01:01:47,500
+I have to fit them on the slides,
+
+1161
+01:01:47,940 --> 01:01:50,380
+I having, I have ten, eight, eight or nine tuples here,
+
+1162
+01:01:50,610 --> 01:01:52,510
+if I have a billion tuples or a billion people,
+
+1163
+01:01:53,680 --> 01:01:55,400
+I can compress now down,
+
+1164
+01:01:55,450 --> 01:01:58,940
+you know, keeping track of like, you know who's a billion people was dead or not dead,
+
+1165
+01:01:59,170 --> 01:02:01,670
+into a small number of bytes,
+
+1166
+01:02:02,360 --> 01:02:03,430
+and that will fit on one page,
+
+1167
+01:02:07,310 --> 01:02:09,520
+you need the length in the triplet,
+
+1168
+01:02:09,520 --> 01:02:12,600
+because, because, again, assuming that we always have fixed length offsets,
+
+1169
+01:02:12,890 --> 01:02:14,125
+this allows you to figure out,
+
+1170
+01:02:14,125 --> 01:02:17,440
+okay, like if I need to find for a single tuple, a single entry,
+
+1171
+01:02:17,440 --> 01:02:18,510
+if they dead or not,
+
+1172
+01:02:18,740 --> 01:02:21,760
+like it allows you to do the math to reverse it back
+
+1173
+01:02:21,760 --> 01:02:24,180
+and say, okay, I would be at this offset if I was uncompressed,
+
+1174
+01:02:25,380 --> 01:02:26,570
+and that's just simple arithmetic.
+
+1175
+01:02:30,350 --> 01:02:32,220
+Another compression scheme you can do is called bit packing,
+
+1176
+01:02:32,940 --> 01:02:34,010
+and the idea here is that,
+
+1177
+01:02:35,470 --> 01:02:40,160
+people often times declare attributes or columns in a certain type,
+
+1178
+01:02:40,870 --> 01:02:43,070
+that is larger than they actually need,
+
+1179
+01:02:44,390 --> 01:02:46,540
+so the idea would be,
+
+1180
+01:02:46,540 --> 01:02:48,690
+like if I have a column where I'm keeping track of some number,
+
+1181
+01:02:48,980 --> 01:02:51,420
+and I declare it as an integer type,
+
+1182
+01:02:51,950 --> 01:02:54,810
+that's, in SQL, that's, it's a 32 bit integer,
+
+1183
+01:02:55,610 --> 01:02:56,470
+so that means that,
+
+1184
+01:02:56,470 --> 01:02:59,020
+even if, no matter if there's a small value,
+
+1185
+01:02:59,020 --> 01:03:01,140
+I'm still going to allocate 32 bits to store,
+
+1186
+01:03:01,730 --> 01:03:02,760
+so for these numbers here,
+
+1187
+01:03:02,930 --> 01:03:03,930
+none of them are very big,
+
+1188
+01:03:05,000 --> 01:03:06,625
+but I'm always going to store it as certain bits,
+
+1189
+01:03:06,625 --> 01:03:07,560
+so in this case here,
+
+1190
+01:03:08,360 --> 01:03:11,455
+to store these these eight or nine numbers, eight numbers,
+
+1191
+01:03:11,455 --> 01:03:12,750
+I store 256 bits,
+
+1192
+01:03:13,400 --> 01:03:17,010
+but again, the only thing that matters is actually these lower portion of the bits here,
+
+1193
+01:03:17,870 --> 01:03:22,210
+because this is, this is the actual, this is the actual data that I need, right,
+
+1194
+01:03:22,530 --> 01:03:23,530
+all this other stuff,
+
+1195
+01:03:24,030 --> 01:03:30,640
+you know, the other, the other 24 bits is just wasted space, right,
+
+1196
+01:03:31,260 --> 01:03:33,040
+so instead what I can do is,
+
+1197
+01:03:34,330 --> 01:03:36,530
+even though you declared it as a 32 bit integer,
+
+1198
+01:03:37,030 --> 01:03:38,870
+I'm going to store it as an 8 bit integer,
+
+1199
+01:03:40,170 --> 01:03:44,620
+and then now that greatly reduces the size down by a factor of four,
+
+1200
+01:03:46,180 --> 01:03:49,340
+so I was able to go again from 256 bits to 64 bits,
+
+1201
+01:03:50,380 --> 01:03:53,660
+and you can do a bunch of tricks with bit shifting operators and [],
+
+1202
+01:03:53,950 --> 01:03:55,100
+which we can talk about later semester,
+
+1203
+01:03:55,420 --> 01:03:58,620
+to actually now you know, as, as I'm scanning along
+
+1204
+01:03:58,620 --> 01:04:01,010
+and saying, trying to find, you know, matches on a certain number,
+
+1205
+01:04:01,630 --> 01:04:03,030
+because these are now 8 bit integers,
+
+1206
+01:04:03,030 --> 01:04:06,590
+I could put them into a single 32 bit integer
+
+1207
+01:04:06,910 --> 01:04:08,430
+and I'm keeping track of inside my system,
+
+1208
+01:04:08,430 --> 01:04:11,270
+oh, it's really at this offset, these different values,
+
+1209
+01:04:11,650 --> 01:04:13,550
+and then now with a single CPU instruction,
+
+1210
+01:04:13,870 --> 01:04:16,940
+I can operate on four values at once,
+
+1211
+01:04:21,010 --> 01:04:21,750
+what's the problem with this?
+
+1212
+01:04:21,750 --> 01:04:22,070
+Yes.
+
+1213
+01:04:22,630 --> 01:04:27,600
+Okay, excellent, thank you.
+
+1214
+01:04:28,190 --> 01:04:29,070
+So his statement is,
+
+1215
+01:04:29,390 --> 01:04:33,085
+well, what happens, if I have a number that can't be stored in those 8 bits,
+
+1216
+01:04:33,085 --> 01:04:34,620
+that I'm trying to pack them into, right,
+
+1217
+01:04:35,270 --> 01:04:38,155
+and so the way you get around this is a technique from Amazon for Redshift,
+
+1218
+01:04:38,155 --> 01:04:39,300
+it's called mostly encoding,
+
+1219
+01:04:39,680 --> 01:04:40,530
+where you say,
+
+1220
+01:04:41,490 --> 01:04:42,770
+the, the idea is basically say,
+
+1221
+01:04:42,770 --> 01:04:45,250
+most of the data my column is going to be small enough,
+
+1222
+01:04:45,690 --> 01:04:47,320
+but in the cases where it's not,
+
+1223
+01:04:47,730 --> 01:04:49,010
+they they'll keep track of that
+
+1224
+01:04:49,010 --> 01:04:51,920
+and then store that as a separate in a dictionary, right,
+
+1225
+01:04:51,920 --> 01:04:53,680
+so again, I have these 32 32 bit numbers,
+
+1226
+01:04:53,970 --> 01:04:55,970
+but I have I have this one 99999999 here,
+
+1227
+01:04:55,970 --> 01:04:56,620
+that's really big,
+
+1228
+01:04:57,120 --> 01:05:00,070
+So I'll store still store them is is eight bits,
+
+1229
+01:05:00,570 --> 01:05:03,190
+but then I'll have a special marker value,
+
+1230
+01:05:03,810 --> 01:05:05,470
+think like all the bits are set to 1
+
+1231
+01:05:06,180 --> 01:05:08,330
+and then I have a separate table,
+
+1232
+01:05:08,330 --> 01:05:12,220
+that says for a given offset, here's, here's what the original value should be,
+
+1233
+01:05:12,450 --> 01:05:15,250
+so now as as I'm scanning along this column,
+
+1234
+01:05:15,510 --> 01:05:17,260
+if I see my special marker value,
+
+1235
+01:05:17,550 --> 01:05:20,320
+I know that I should look in this offset table
+
+1236
+01:05:20,550 --> 01:05:22,150
+and find out what the real value should have been.
+
+1237
+01:05:34,790 --> 01:05:35,590
+Yeah, so his statement is,
+
+1238
+01:05:35,590 --> 01:05:37,330
+could you do something with like the triplets,
+
+1239
+01:05:37,330 --> 01:05:40,045
+where instead of just saying everything's always 8 bits,
+
+1240
+01:05:40,045 --> 01:05:44,755
+could you say, you know, I have a thousand values that are contiguous,
+
+1241
+01:05:44,755 --> 01:05:46,020
+that you store as 4 bits,
+
+1242
+01:05:46,280 --> 01:05:49,410
+then I can store them in is 12 bits or whatever.
+
+1243
+01:05:49,700 --> 01:05:51,480
+So that going back to the packs thing,
+
+1244
+01:05:51,860 --> 01:05:53,430
+because they break it up into row groups,
+
+1245
+01:05:53,660 --> 01:05:55,740
+each row group could have its own compression scheme,
+
+1246
+01:05:56,600 --> 01:05:57,840
+so you could do something like that.
+
+1247
+01:06:00,000 --> 01:06:01,150
+I think Parquet is more,
+
+1248
+01:06:01,260 --> 01:06:04,270
+Parquet is more aggressive compression than Orc, more complicated,
+
+1249
+01:06:05,160 --> 01:06:05,990
+maybe the other way around,
+
+1250
+01:06:05,990 --> 01:06:07,700
+one of them, one of them is very simple,
+
+1251
+01:06:07,700 --> 01:06:10,150
+one of them does has a bunch of the various tricks you're talking about.
+
+1252
+01:06:12,340 --> 01:06:13,485
+All right, so in this example here,
+
+1253
+01:06:13,485 --> 01:06:14,930
+the original size is 256 bits,
+
+1254
+01:06:15,310 --> 01:06:16,910
+but then if I do the mostly encoding,
+
+1255
+01:06:18,250 --> 01:06:22,430
+I used have to store 8x8 bits for the mostly 8 column,
+
+1256
+01:06:22,780 --> 01:06:25,580
+and then assuming that I only need 16 bits for the offset
+
+1257
+01:06:25,780 --> 01:06:27,020
+and the 32 bits for the value,
+
+1258
+01:06:27,790 --> 01:06:28,640
+for this lookup table,
+
+1259
+01:06:28,750 --> 01:06:29,445
+which is not true,
+
+1260
+01:06:29,445 --> 01:06:33,375
+because obviously allocate more for additional metadata,
+
+1261
+01:06:33,375 --> 01:06:35,660
+but assuming you get it down to that, it's 112 bits,
+
+1262
+01:06:37,585 --> 01:06:38,130
+so that's pretty good.
+
+1263
+01:06:41,320 --> 01:06:43,100
+Another trick you do is called bitmap encoding,
+
+1264
+01:06:43,840 --> 01:06:44,920
+and the idea here is that,
+
+1265
+01:06:44,920 --> 01:06:48,175
+if you have an attribute that has low cardinality,
+
+1266
+01:06:48,175 --> 01:06:50,550
+meaning it has a small number of unique values,
+
+1267
+01:06:51,640 --> 01:06:57,060
+where now, instead of storing for every single tuple in, in a column,
+
+1268
+01:06:57,060 --> 01:06:58,010
+here's the actual value,
+
+1269
+01:06:58,810 --> 01:07:01,100
+what I'm staggering to do is maintain bitmaps,
+
+1270
+01:07:01,630 --> 01:07:04,640
+where I have one bitmap for every possible value, I could have in the column,
+
+1271
+01:07:05,140 --> 01:07:06,410
+and the bit is set to 1,
+
+1272
+01:07:06,550 --> 01:07:14,190
+based on whether the the column or the attribute, the tuple at that offset has that particular value, right.
+
+1273
+01:07:15,390 --> 01:07:18,260
+So there are some database systems that,
+
+1274
+01:07:18,260 --> 01:07:20,930
+that provide bitmap indexes that essentially give the same things,
+
+1275
+01:07:20,930 --> 01:07:21,970
+you still have the original column,
+
+1276
+01:07:22,170 --> 01:07:23,885
+but then they maintain bitmap indexes,
+
+1277
+01:07:23,885 --> 01:07:25,510
+that will do the same technique that we're seeing here,
+
+1278
+01:07:26,580 --> 01:07:28,535
+there's a system, there's a company,
+
+1279
+01:07:28,535 --> 01:07:33,170
+that's gonna come talk about their database system later this semester,
+
+1280
+01:07:33,170 --> 01:07:34,690
+it's FeatureBase or FeatureForm,
+
+1281
+01:07:35,670 --> 01:07:38,800
+there's two different database have the same name Feature in them,
+
+1282
+01:07:39,060 --> 01:07:40,985
+one of them only stores bitmap indexes,
+
+1283
+01:07:40,985 --> 01:07:43,600
+they don't, you can't actually store real data, base data.
+
+1284
+01:07:45,210 --> 01:07:45,950
+So the idea is here,
+
+1285
+01:07:45,950 --> 01:07:48,580
+so say we go back to our isDead column, right,
+
+1286
+01:07:49,110 --> 01:07:50,855
+again, there's only two possible values,
+
+1287
+01:07:50,855 --> 01:07:51,910
+either dead or not dead,
+
+1288
+01:07:54,060 --> 01:07:56,500
+instead in storing in the actual single values themselves,
+
+1289
+01:07:56,790 --> 01:07:57,820
+I have two bit maps,
+
+1290
+01:07:58,410 --> 01:08:01,390
+one says for yes, one says, says no,
+
+1291
+01:08:02,670 --> 01:08:05,470
+and then there's a bit here, that set in each bitmap,
+
+1292
+01:08:05,490 --> 01:08:09,370
+that corresponds to whether the the original value has that, that bitmap or not,
+
+1293
+01:08:09,540 --> 01:08:12,690
+it has that particular value or not, right,
+
+1294
+01:08:12,890 --> 01:08:18,540
+so I only need now 2 8-bits, 16 bits to store the yes or no,
+
+1295
+01:08:18,950 --> 01:08:22,950
+and then now my bitmap is just 18 bits,
+
+1296
+01:08:23,940 --> 01:08:26,050
+because I have 9 values and I need 2 bits each,
+
+1297
+01:08:26,370 --> 01:08:28,240
+so I can get this down now to 34 bits.
+
+1298
+01:08:32,240 --> 01:08:33,340
+What's an obvious problem with this approach?
+
+1299
+01:08:35,400 --> 01:08:35,800
+Yes.
+
+1300
+01:08:38,310 --> 01:08:40,070
+He said, if your data is high cardinality,
+
+1301
+01:08:40,070 --> 01:08:41,555
+this is a terrible idea indeed,
+
+1302
+01:08:41,555 --> 01:08:42,280
+yes, it is.
+
+1303
+01:08:42,660 --> 01:08:43,450
+Let's look at an example,
+
+1304
+01:08:44,300 --> 01:08:45,870
+so say we have a customer table like this
+
+1305
+01:08:46,310 --> 01:08:48,790
+and we have the zip_code column, right,
+
+1306
+01:08:49,170 --> 01:08:51,490
+how many zip codes are in the United States, guess.
+
+1307
+01:08:53,210 --> 01:08:56,310
+I heard 10000, no, more, 100000, less,
+
+1308
+01:08:56,900 --> 01:08:57,930
+but now we're doing binary search,
+
+1309
+01:08:59,510 --> 01:09:01,500
+it's 43000, right,
+
+1310
+01:09:02,180 --> 01:09:02,830
+assuming we have a table,
+
+1311
+01:09:02,830 --> 01:09:04,020
+we do 10 million rows
+
+1312
+01:09:04,400 --> 01:09:08,970
+and I'm going to build a bitmap for every single unique possible zip code I have,
+
+1313
+01:09:09,470 --> 01:09:11,010
+well, I'm going to need,
+
+1314
+01:09:13,410 --> 01:09:14,360
+just to store the data,
+
+1315
+01:09:14,360 --> 01:09:17,680
+assuming the raw data, assuming we can zip code is 32 bits,
+
+1316
+01:09:18,090 --> 01:09:19,810
+the raw data is 40 megabytes,
+
+1317
+01:09:19,890 --> 01:09:26,200
+but if I had to have a 10 million size bitmap for every single zip code,
+
+1318
+01:09:26,550 --> 01:09:28,420
+now we're at 53G,
+
+1319
+01:09:29,520 --> 01:09:31,270
+so clearly, this is a bad idea.
+
+1320
+01:09:31,890 --> 01:09:36,520
+Furthermore, every time somebody adds a new tuple,
+
+1321
+01:09:37,260 --> 01:09:38,860
+I have to extend that bitmap,
+
+1322
+01:09:39,150 --> 01:09:40,955
+because I, you know, because it also have to match,
+
+1323
+01:09:40,955 --> 01:09:42,500
+I keep adding more, you know, to it,
+
+1324
+01:09:42,500 --> 01:09:45,120
+so I have to do that for every possible bitmap, right.
+
+1325
+01:09:46,160 --> 01:09:47,910
+So bitmpa indexes can make a huge difference,
+
+1326
+01:09:47,960 --> 01:09:49,200
+but it's really for, like,
+
+1327
+01:09:49,460 --> 01:09:51,355
+when you have a really small number cardinality like,
+
+1328
+01:09:51,355 --> 01:09:52,500
+like less than maybe 10,
+
+1329
+01:09:53,680 --> 01:09:54,560
+you want to do this,
+
+1330
+01:09:56,210 --> 01:09:58,740
+and most systems don't do this by default.
+
+1331
+01:10:01,100 --> 01:10:02,440
+All right, delta encoding,
+
+1332
+01:10:02,440 --> 01:10:03,505
+The idea here is that,
+
+1333
+01:10:03,505 --> 01:10:06,450
+if the values from one attribute to the next,
+
+1334
+01:10:06,770 --> 01:10:07,980
+from one, tuple to the next, sorry,
+
+1335
+01:10:09,050 --> 01:10:10,620
+if they're close enough to each other,
+
+1336
+01:10:11,320 --> 01:10:16,110
+maybe, again, I don't need to store the entire value for one tuple,
+
+1337
+01:10:16,190 --> 01:10:19,650
+I just need to store the difference of the delta between the previous value.
+
+1338
+01:10:20,670 --> 01:10:23,060
+So let's say again, I I have a kind of sensor reading,
+
+1339
+01:10:23,060 --> 01:10:24,700
+where I'm keeping track of the temperature in the room,
+
+1340
+01:10:24,930 --> 01:10:29,050
+and every minute I'm, I'm storing the temperature, right,
+
+1341
+01:10:29,670 --> 01:10:31,240
+so it is timestamp column here,
+
+1342
+01:10:31,530 --> 01:10:33,130
+assuming that we're storing 64 bits,
+
+1343
+01:10:35,470 --> 01:10:38,840
+we know that the time is always going to increment by 1,
+
+1344
+01:10:39,100 --> 01:10:42,800
+and furthermore, assuming I can keep track of the temperature, you know, in the room or outside
+
+1345
+01:10:43,450 --> 01:10:47,885
+from one minute to the next, there's not going to be dramatic temperature swings, right,
+
+1346
+01:10:47,885 --> 01:10:52,480
+we're not going to go from like 99 degrees to 0 degrees within a minute,
+
+1347
+01:10:53,670 --> 01:10:55,265
+and so what I can just do now is
+
+1348
+01:10:55,265 --> 01:10:58,090
+to store, you know, from one tuple to the next,
+
+1349
+01:10:58,320 --> 01:11:02,290
+what was the difference between the previous one here, right,
+
+1350
+01:11:02,730 --> 01:11:04,655
+so in in case of the timestamp,
+
+1351
+01:11:04,655 --> 01:11:06,280
+it's just plus one, adding a minute,
+
+1352
+01:11:07,350 --> 01:11:08,770
+in case of the temperature,
+
+1353
+01:11:08,770 --> 01:11:11,980
+it's some, you know, fractional, decimal difference between the previous one,
+
+1354
+01:11:14,210 --> 01:11:15,660
+I compress this even further now,
+
+1355
+01:11:15,710 --> 01:11:18,570
+because what do I have in this first column here at the timestamp,
+
+1356
+01:11:18,650 --> 01:11:19,350
+what do I have,
+
+1357
+01:11:20,300 --> 01:11:21,270
+a bunch of plus ones,
+
+1358
+01:11:21,800 --> 01:11:22,740
+how can we compress that,
+
+1359
+01:11:25,360 --> 01:11:26,780
+run-length encoding, right.
+
+1360
+01:11:27,660 --> 01:11:29,120
+so we can compress this even further now
+
+1361
+01:11:29,380 --> 01:11:30,560
+and convert this into,
+
+1362
+01:11:33,230 --> 01:11:38,305
+you know, convert the combination of the delta encoding in run-length encoding
+
+1363
+01:11:38,305 --> 01:11:40,290
+to tell you how many plus ones I have afterwards.
+
+1364
+01:11:43,480 --> 01:11:44,445
+So this is a good example,
+
+1365
+01:11:44,445 --> 01:11:45,855
+again, we can have this multiplicer effect,
+
+1366
+01:11:45,855 --> 01:11:48,290
+where we can compress the compressed data even further,
+
+1367
+01:11:48,700 --> 01:11:53,060
+because we're putting into a form that that's, that's, that can take advantage of it.
+
+1368
+01:11:54,200 --> 01:11:56,310
+So if you go back to our original data size,
+
+1369
+01:11:58,140 --> 01:11:59,870
+just for the timestamp column itself,
+
+1370
+01:12:00,160 --> 01:12:01,430
+we at 320 bits,
+
+1371
+01:12:01,900 --> 01:12:05,390
+but if we do the delta encoding followed by the RL encoding,
+
+1372
+01:12:05,470 --> 01:12:06,860
+we can get it down to 96 bits,
+
+1373
+01:12:08,020 --> 01:12:10,020
+again, I'm showing six or seven tuples here,
+
+1374
+01:12:10,020 --> 01:12:10,710
+it's not that big,
+
+1375
+01:12:10,710 --> 01:12:11,990
+but again, think of it extreme,
+
+1376
+01:12:12,400 --> 01:12:14,270
+think of like a billion records,
+
+1377
+01:12:15,160 --> 01:12:16,280
+this would be a massive savings.
+
+1378
+01:12:19,940 --> 01:12:21,840
+The last one discussed is dictionary compression,
+
+1379
+01:12:21,860 --> 01:12:23,695
+because again, I said this is the most common one,
+
+1380
+01:12:23,695 --> 01:12:24,690
+this is how we're going to get,
+
+1381
+01:12:25,160 --> 01:12:27,360
+this, how most systems are going to express data,
+
+1382
+01:12:27,770 --> 01:12:30,150
+even for things that aren't strings, right,
+
+1383
+01:12:31,100 --> 01:12:35,580
+in some cases, there are some columnar systems will compress integer data or flow data
+
+1384
+01:12:35,750 --> 01:12:37,980
+and putting them to dictionary codes.
+
+1385
+01:12:39,590 --> 01:12:40,510
+The idea here is that,
+
+1386
+01:12:40,510 --> 01:12:44,010
+if we have values that we see over and over again,
+
+1387
+01:12:44,630 --> 01:12:47,340
+instead of storing that value repeatedly within a column,
+
+1388
+01:12:47,660 --> 01:12:51,300
+we're going to convert that into some 32 bit integer,
+
+1389
+01:12:52,040 --> 01:12:55,410
+and then we maintain a mapping data structure, the dictionary,
+
+1390
+01:12:55,580 --> 01:12:59,100
+that knows how to take that, that dictionary code, the 32 bit integer,
+
+1391
+01:12:59,210 --> 01:13:01,770
+and convert it back into an original value,
+
+1392
+01:13:03,420 --> 01:13:05,470
+typically we're going to have, it's a one to one correspondence,
+
+1393
+01:13:05,490 --> 01:13:07,660
+for one value, we'll have one dictionary code,
+
+1394
+01:13:07,950 --> 01:13:09,490
+there is some techniques,
+
+1395
+01:13:09,720 --> 01:13:11,290
+I don't think any commercial system does this,
+
+1396
+01:13:11,400 --> 01:13:16,090
+where you can say, if I see multiple attributes, the patterns together,
+
+1397
+01:13:16,260 --> 01:13:20,200
+I'll convert the combination of the two of them or three of them into a single dictionary code
+
+1398
+01:13:20,460 --> 01:13:21,520
+to get even further compression,
+
+1399
+01:13:21,990 --> 01:13:25,420
+but again, I've only seen that in academic literature.
+
+1400
+01:13:27,030 --> 01:13:30,460
+And then we need a way to do fast encoding and decoding on the fly,
+
+1401
+01:13:30,870 --> 01:13:34,060
+that allows to do both range and point queries,
+
+1402
+01:13:34,530 --> 01:13:35,705
+so point queries are obvious,
+
+1403
+01:13:35,705 --> 01:13:36,880
+like I want to be able to say,
+
+1404
+01:13:36,960 --> 01:13:40,600
+you know, the string Andy maps to, you know, code 101,
+
+1405
+01:13:40,860 --> 01:13:42,400
+I know how to do the exact lookup at those,
+
+1406
+01:13:43,050 --> 01:13:47,140
+but ideally I want to be able to also be able to do range queries on compressed data,
+
+1407
+01:13:47,720 --> 01:13:53,770
+and so I want my dictionary codes to have the same ordering that the original values actually did, too,
+
+1408
+01:13:54,640 --> 01:13:56,000
+and we'll see how to do that in a second.
+
+1409
+01:13:57,600 --> 01:13:58,720
+So say this is my original data,
+
+1410
+01:13:58,980 --> 01:14:00,730
+a bunch of names of my former students,
+
+1411
+01:14:02,640 --> 01:14:05,200
+then the compressed version of this could be,
+
+1412
+01:14:05,580 --> 01:14:10,480
+again, I have my original column, convert those into 32 bit integers,
+
+1413
+01:14:10,680 --> 01:14:12,820
+and then I just had this mapping table here,
+
+1414
+01:14:13,140 --> 01:14:15,840
+that converts the, allows me to look up,
+
+1415
+01:14:15,840 --> 01:14:17,600
+to say, for given code, what's the original value
+
+1416
+01:14:17,770 --> 01:14:20,540
+or for a given original value, what's what's the code,
+
+1417
+01:14:20,710 --> 01:14:21,710
+and that's the dictionary.
+
+1418
+01:14:22,820 --> 01:14:24,010
+So now we can go back to my example,
+
+1419
+01:14:24,010 --> 01:14:26,400
+that I had in the very beginning with me and DJ 2PL,
+
+1420
+01:14:26,660 --> 01:14:29,040
+where SELECT * FROM users WHERE name equals Andy,
+
+1421
+01:14:29,690 --> 01:14:34,855
+I can convert the string Andy into the dictionary code
+
+1422
+01:14:34,855 --> 01:14:36,780
+by doing a lookup first in the dictionary,
+
+1423
+01:14:37,660 --> 01:14:40,380
+then now I scan through my, my column
+
+1424
+01:14:40,380 --> 01:14:44,300
+and just do lookup or do do comparisons based on the integers,
+
+1425
+01:14:44,590 --> 01:14:46,730
+so I don't need to go through as I'm scanning along,
+
+1426
+01:14:47,200 --> 01:14:49,610
+if I don't do, if I don't compress my, my constant,
+
+1427
+01:14:49,900 --> 01:14:50,880
+then as I scan along,
+
+1428
+01:14:50,880 --> 01:14:53,240
+I gotta go decompress each of these one by one
+
+1429
+01:14:53,410 --> 01:14:54,360
+and then do my lookup,
+
+1430
+01:14:54,360 --> 01:14:58,270
+I'm basically losing all the benefit of compression, right,
+
+1431
+01:14:58,380 --> 01:14:59,720
+and that's what MySQL has to do,
+
+1432
+01:14:59,720 --> 01:15:01,805
+because they can't interpret what's actually in the dictionary,
+
+1433
+01:15:01,805 --> 01:15:04,030
+they can't interpret what the compressed bytes actually mean,
+
+1434
+01:15:04,410 --> 01:15:05,320
+but in this case here,
+
+1435
+01:15:05,580 --> 01:15:06,760
+because we're the database system,
+
+1436
+01:15:07,020 --> 01:15:09,110
+we, we built the dictionary, we control it,
+
+1437
+01:15:09,110 --> 01:15:10,660
+we know how to read it and interpret it,
+
+1438
+01:15:10,860 --> 01:15:13,690
+we can and I mean in SQL, so we know what the query wants to do,
+
+1439
+01:15:13,800 --> 01:15:15,130
+we know how to take that constant,
+
+1440
+01:15:15,750 --> 01:15:16,870
+convert it to the dictionary code,
+
+1441
+01:15:17,280 --> 01:15:19,510
+then then do our scan directly on the compressed data.
+
+1442
+01:15:23,790 --> 01:15:26,240
+So, how do we actually do this,
+
+1443
+01:15:26,500 --> 01:15:28,460
+do the encoding and decoding, right,
+
+1444
+01:15:28,870 --> 01:15:31,635
+well, again, for a given, given uncompressed value,
+
+1445
+01:15:31,635 --> 01:15:34,550
+we know had a way to go compressed form and then reverse it,
+
+1446
+01:15:35,020 --> 01:15:36,180
+so the key thing you point out is,
+
+1447
+01:15:36,180 --> 01:15:39,690
+there's not going to be a magic hash function that can do this for us, right,
+
+1448
+01:15:42,700 --> 01:15:46,365
+any reversible hash function is, is going to
+
+1449
+01:15:46,365 --> 01:15:49,005
+generate something that's something much larger likely than the original of value,
+
+1450
+01:15:49,005 --> 01:15:52,550
+so not get it down to a 32 bit integer, right,
+
+1451
+01:15:53,080 --> 01:15:54,620
+so we're going to have to build a data structure,
+
+1452
+01:15:54,640 --> 01:15:57,500
+that we maintain that allows us to do this.
+
+1453
+01:15:58,600 --> 01:15:59,430
+And as I said,
+
+1454
+01:15:59,430 --> 01:16:02,630
+we want something that's going to be preserve the ordering of the original values,
+
+1455
+01:16:02,980 --> 01:16:05,810
+such that the compressed data, the compressed dictionary codes,
+
+1456
+01:16:06,280 --> 01:16:12,680
+those things have the same ordering leographically or as the original data does.
+
+1457
+01:16:14,350 --> 01:16:15,825
+So going back here, right,
+
+1458
+01:16:15,825 --> 01:16:18,020
+if I have again, I have a bunch of these names,
+
+1459
+01:16:18,610 --> 01:16:26,655
+I want my, I want the dictionary that I'm generating to the codes have such that,
+
+1460
+01:16:26,655 --> 01:16:32,370
+if one, if the original value comes before in the, in the, in the ordering, before another original value,
+
+1461
+01:16:32,510 --> 01:16:34,800
+is dictionary code should come before it as well,
+
+1462
+01:16:36,280 --> 01:16:39,110
+so I would have my dictionary is basically sorted,
+
+1463
+01:16:39,430 --> 01:16:41,480
+so now this allows me to do queries like this,
+
+1464
+01:16:42,010 --> 01:16:44,150
+SELECT * FROM users WHREE name LIKE Andy,
+
+1465
+01:16:44,290 --> 01:16:46,490
+And, followed by the wildcard,
+
+1466
+01:16:47,120 --> 01:16:49,720
+and so if we operate directly on compressed data,
+
+1467
+01:16:50,340 --> 01:16:54,460
+we can convert this LIKE clause into a BETWEEN clause,
+
+1468
+01:16:55,630 --> 01:16:57,260
+because we could look up in the dictionary,
+
+1469
+01:16:58,120 --> 01:17:01,670
+run the LIKE portion, just on the dictionary, the values,
+
+1470
+01:17:02,230 --> 01:17:08,570
+find the ones that match, find the min and max values for the matching values,
+
+1471
+01:17:08,920 --> 01:17:11,330
+and then rewrite the LIKE into a BETWEEN calls,
+
+1472
+01:17:12,100 --> 01:17:15,180
+and then now run through my column while it's still compressed.
+
+1473
+01:17:17,160 --> 01:17:18,125
+Again, we can do this,
+
+1474
+01:17:18,125 --> 01:17:19,430
+because it's, it's SQL,
+
+1475
+01:17:19,430 --> 01:17:21,370
+we know, we know it's in the WHERE clause,
+
+1476
+01:17:21,540 --> 01:17:23,710
+it's not arbitrary Python code or C code,
+
+1477
+01:17:23,760 --> 01:17:26,380
+we know exactly what the, what the WHERE clause wants to do
+
+1478
+01:17:26,730 --> 01:17:28,870
+and we can be smart, intelligent and convert this,
+
+1479
+01:17:31,050 --> 01:17:32,170
+do the rewriting for us.
+
+1480
+01:17:33,050 --> 01:17:36,715
+And again, you as the, the, the application programmer
+
+1481
+01:17:36,715 --> 01:17:38,190
+or not you guys, but some Javascript programmer,
+
+1482
+01:17:38,540 --> 01:17:41,590
+they don't have to know what the hell going underneath the covers, right,
+
+1483
+01:17:41,590 --> 01:17:42,745
+they just write the LIKE clause
+
+1484
+01:17:42,745 --> 01:17:45,820
+and the database system can be can be smart and rewrite it for you
+
+1485
+01:17:45,820 --> 01:17:46,650
+and get better performance.
+
+1486
+01:17:49,970 --> 01:17:53,005
+So, in some cases here,
+
+1487
+01:17:53,005 --> 01:17:53,910
+you still have to do,
+
+1488
+01:17:55,790 --> 01:17:56,320
+the question is,
+
+1489
+01:17:56,320 --> 01:17:58,560
+whether you still to perform original column,
+
+1490
+01:17:58,700 --> 01:17:59,470
+in this case here,
+
+1491
+01:17:59,470 --> 01:18:06,210
+since I need the, I need the output of of the, of the name attribute,
+
+1492
+01:18:06,530 --> 01:18:08,310
+I still have to go rip through the column
+
+1493
+01:18:08,990 --> 01:18:10,470
+and actually look at them,
+
+1494
+01:18:10,880 --> 01:18:13,950
+in some cases, though, the database system can be even smarter
+
+1495
+01:18:14,420 --> 01:18:17,940
+and it can answer queries without actually looking at the compressed data,
+
+1496
+01:18:18,670 --> 01:18:21,800
+but just operate directly on the dictionary.
+
+1497
+01:18:23,100 --> 01:18:25,300
+So instead of saying SELECT name FROM users,
+
+1498
+01:18:25,590 --> 01:18:27,250
+if it was DISTINCT name FROM users,
+
+1499
+01:18:28,220 --> 01:18:30,185
+where I don't need to get the actual tuples themselves,
+
+1500
+01:18:30,185 --> 01:18:32,620
+I just need to get the actual values that are unique,
+
+1501
+01:18:33,360 --> 01:18:35,230
+then for this query here,
+
+1502
+01:18:35,430 --> 01:18:40,660
+after I do my conversion to, converting to BETWEEN,
+
+1503
+01:18:40,830 --> 01:18:45,520
+or convert the this wildcard here into the the dictionary values,
+
+1504
+01:18:45,990 --> 01:18:49,180
+I only need to know what what values actually exist in the dictionary,
+
+1505
+01:18:49,760 --> 01:18:51,430
+and I don't need to go look at the actual column,
+
+1506
+01:18:51,750 --> 01:18:54,130
+for this query here with a DISTINCT,
+
+1507
+01:18:54,690 --> 01:18:58,450
+you know, assuming I only have four names in my table,
+
+1508
+01:18:58,590 --> 01:18:59,980
+but I have a billion rows,
+
+1509
+01:19:00,210 --> 01:19:03,820
+I only need to look at four rows in the dictionary to answer it,
+
+1510
+01:19:05,000 --> 01:19:06,900
+and again, I've said this multiple times,
+
+1511
+01:19:06,950 --> 01:19:07,860
+we can do this,
+
+1512
+01:19:07,880 --> 01:19:12,420
+because the data, because the database is responsible for compressing this,
+
+1513
+01:19:14,040 --> 01:19:17,110
+now, Parquet and, or one of the big limitations that they have is,
+
+1514
+01:19:17,250 --> 01:19:19,450
+they don't actually expose the dictionary to you,
+
+1515
+01:19:20,190 --> 01:19:21,940
+when you use their libraries and utilities,
+
+1516
+01:19:22,500 --> 01:19:24,170
+so you can't do this trick I'm talking about here,
+
+1517
+01:19:24,170 --> 01:19:25,930
+if you're using Parquet or Orc, right,
+
+1518
+01:19:26,190 --> 01:19:27,755
+Parquet, and Orc decompress the data,
+
+1519
+01:19:27,755 --> 01:19:28,640
+when it gives, it back to you,
+
+1520
+01:19:28,640 --> 01:19:30,460
+you can't operate directly on compressed data,
+
+1521
+01:19:31,200 --> 01:19:34,960
+that's actually one of the biggest limitations of, in my opinion, of those two formats,
+
+1522
+01:19:36,330 --> 01:19:40,600
+but again, other systems that do native compression without Parquet, Orc can, can, can do this trick.
+
+1523
+01:19:42,430 --> 01:19:44,120
+All right, so what is this data structure,
+
+1524
+01:19:45,840 --> 01:19:47,630
+what is the data structure we're going to use for our dictionary,
+
+1525
+01:19:48,160 --> 01:19:50,540
+so the most common approach is going to be a really simple array,
+
+1526
+01:19:51,200 --> 01:19:53,120
+and this works great, if the files are mutable,
+
+1527
+01:19:53,120 --> 01:19:54,125
+because I build the array once
+
+1528
+01:19:54,125 --> 01:19:55,450
+and I never to resize things,
+
+1529
+01:19:55,710 --> 01:19:57,605
+insert things in place
+
+1530
+01:19:57,605 --> 01:19:59,470
+and to move things around,
+
+1531
+01:19:59,610 --> 01:20:01,180
+I can just build it once I'm done,
+
+1532
+01:20:01,830 --> 01:20:04,060
+if you need something that's dynamic and can support updates,
+
+1533
+01:20:04,290 --> 01:20:06,490
+you need either a hash table or a B+ tree,
+
+1534
+01:20:06,720 --> 01:20:09,790
+these are, the hash table is I think less common there,
+
+1535
+01:20:10,700 --> 01:20:12,190
+actually, these things are less common,
+
+1536
+01:20:12,190 --> 01:20:13,230
+most people do the array
+
+1537
+01:20:13,340 --> 01:20:18,060
+and assume the blocks are going be, the compressed blocks are going to be immutable
+
+1538
+01:20:18,080 --> 01:20:21,160
+and only if I need to to rebuild it,
+
+1539
+01:20:21,160 --> 01:20:22,170
+then I'll rebuild the array.
+
+1540
+01:20:22,190 --> 01:20:23,095
+I realize I'm over time,
+
+1541
+01:20:23,095 --> 01:20:24,990
+let me show roughly what it looks like,
+
+1542
+01:20:25,790 --> 01:20:27,720
+so basically you have your original data in your column,
+
+1543
+01:20:28,400 --> 01:20:30,990
+so the first thing you need to do is build your dictionary
+
+1544
+01:20:31,160 --> 01:20:36,180
+and again, all that's going to be is a sorted list of the of the values you have
+
+1545
+01:20:36,620 --> 01:20:42,960
+and then the, and you store the length of the, of the string
+
+1546
+01:20:43,430 --> 01:20:49,020
+and then now the dictionary code is going to be, is just an offset into this array here,
+
+1547
+01:20:49,640 --> 01:20:51,700
+so my compressed data would look like this,
+
+1548
+01:20:52,320 --> 01:20:55,600
+and these are just offsets, the byte offset into the array,
+
+1549
+01:20:56,420 --> 01:20:58,120
+and so now when I'm doing a scan
+
+1550
+01:20:58,170 --> 01:21:05,590
+and I want to say, okay, if I have the second one, second entry, it's 17,
+
+1551
+01:21:06,000 --> 01:21:08,290
+I jump a by offset at 17
+
+1552
+01:21:08,760 --> 01:21:10,030
+and I can look in the,
+
+1553
+01:21:11,100 --> 01:21:11,565
+down here,
+
+1554
+01:21:11,565 --> 01:21:14,480
+I can look in the header and tell me how big is the string afterwards.
+
+1555
+01:21:15,500 --> 01:21:18,300
+So the dictionary itself is literally just an array packed of bytes like that.
+
+1556
+01:21:20,150 --> 01:21:20,550
+Okay?
+
+1557
+01:21:22,220 --> 01:21:23,910
+All right, so to finish up,
+
+1558
+01:21:26,150 --> 01:21:28,180
+you know this row store versus column store to be really important
+
+1559
+01:21:28,180 --> 01:21:31,230
+and we'll see this show up when we talk about query execution and other things,
+
+1560
+01:21:32,930 --> 01:21:34,440
+mostly before before the midterm,
+
+1561
+01:21:34,610 --> 01:21:38,340
+because again the, the distinction or the difference between a row store and a column store system
+
+1562
+01:21:39,140 --> 01:21:42,450
+have ramifications through throughout all other parts of the database system,
+
+1563
+01:21:42,770 --> 01:21:43,600
+how you do recovery,
+
+1564
+01:21:43,600 --> 01:21:44,490
+how you could do query execution,
+
+1565
+01:21:44,540 --> 01:21:45,690
+how you want to run transactions,
+
+1566
+01:21:46,670 --> 01:21:48,060
+how you want to optimize your queries,
+
+1567
+01:21:48,290 --> 01:21:49,740
+and so it's really important to understand this now
+
+1568
+01:21:50,060 --> 01:21:52,860
+and we'll, we'll, we'll see the tradeoffs between the two approaches
+
+1569
+01:21:52,940 --> 01:21:55,020
+again and again throughout the entire semester.
+
+1570
+01:21:55,820 --> 01:21:58,285
+And then most data systems to get the best compression ratio,
+
+1571
+01:21:58,285 --> 01:21:59,970
+you want to do it natively to yourself
+
+1572
+01:22:00,710 --> 01:22:02,490
+and dictionary coding is common one.
+
+1573
+01:22:03,230 --> 01:22:06,370
+So, I showed this three, three lectures ago,
+
+1574
+01:22:06,870 --> 01:22:08,320
+there was two problems in database storage,
+
+1575
+01:22:08,550 --> 01:22:10,420
+first, how we can represent data on disk,
+
+1576
+01:22:10,470 --> 01:22:11,710
+we've covered that so far,
+
+1577
+01:22:12,390 --> 01:22:14,230
+so starting next week,
+
+1578
+01:22:14,640 --> 01:22:17,020
+now when we bring things into memory,
+
+1579
+01:22:17,610 --> 01:22:18,470
+what do we do with it,
+
+1580
+01:22:18,470 --> 01:22:19,325
+how do we store it,
+
+1581
+01:22:19,325 --> 01:22:20,800
+and how do we write things back out safely,
+
+1582
+01:22:21,300 --> 01:22:22,420
+when we make changes.
+
+1583
+01:22:24,220 --> 01:22:44,475
+Alright, hit it.
+
