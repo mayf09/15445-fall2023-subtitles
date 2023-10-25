@@ -227,13 +227,14 @@ be any office hours on
 41
 00:01:35,580 --> 00:01:37,140
 0,630 630,885 885,1110 1110,1350 1350,1560
-Sundays| when the project is
-|但在项目到期前的周六，会有一个特别的办公时间会议，大约下午3-5点之间有4个TA。这就像是一种强制功能，让你们真正开始工作，而不是在办公时间显示日期，说你们没有像我们想要的那样编译正确。我们希望你尽快开始，好吗？
+Sundays,| when the project is
+|当项目到期时，
 
 42
 00:01:37,140 --> 00:01:38,175
 0,290 490,735 735,870 870,930 930,1035
-due but there'll be a
+due,| but there'll be a
+|但是会有一个特别的办公时间会议，在周六，在它到期之前，
 
 43
 00:01:38,175 --> 00:01:40,365
@@ -243,22 +244,25 @@ special office hours session on
 44
 00:01:40,365 --> 00:01:41,690
 0,180 180,485 505,825 825,1065 1065,1325
-the saturday before it's due
+the Saturday, before it's due,|
+|
 
 45
 00:01:42,070 --> 00:01:43,755
 0,350 350,700 930,1205 1205,1415 1415,1685
-on campus with like four
+on campus, with like four
+大约下午 3-5 点之间有 4 个助教，
 
 46
 00:01:43,755 --> 00:01:46,005
 0,180 180,425 1015,1415 1855,2115 2115,2250
-T A between three and
+{TAs -}, between 3 and
 
 47
 00:01:46,005 --> 00:01:47,490
 0,180 330,575 1045,1290 1290,1380 1380,1485
-five PM. This is meant
+{5pm -},| this is meant
+|这就像是一种强制功能，
 
 48
 00:01:47,490 --> 00:01:48,240
@@ -268,32 +272,38 @@ to be like a forcing
 49
 00:01:48,240 --> 00:01:49,430
 0,290 310,555 555,660 660,855 855,1190
-function for you guys actually
+function| for you guys actually
+|让你们真正开始工作，
 
 50
 00:01:49,510 --> 00:01:50,415
 0,275 275,440 440,560 560,650 650,905
-start working on the project
+start working on the project|
+|
 
 51
 00:01:50,415 --> 00:01:51,705
 0,225 225,345 345,540 540,845 1015,1290
 instead of showing up the
+而不是在到期日期的办公时间表示，
 
 52
 00:01:51,705 --> 00:01:52,890
 0,275 325,630 630,840 840,1005 1005,1185
-dates due to office hours
+dates due to office hours,|
+|
 
 53
 00:01:52,890 --> 00:01:54,480
 0,210 210,500 640,990 990,1320 1320,1590
-saying you doesn't compile right
+saying you doesn't compile, right,|
+说你没有编译，|
 
 54
 00:01:54,480 --> 00:01:56,115
 0,290 700,960 960,1095 1095,1370 1390,1635
-like we want you. We
+like we want you, we
+我们希望你尽快开始，好吗？
 
 55
 00:01:56,115 --> 00:01:57,000
@@ -303,46 +313,49 @@ want you to start sooner
 56
 00:01:57,000 --> 00:01:58,820
 0,270 270,420 420,680 940,1340
-rather than later, okay.|
+rather than later, okay?|
 |
 
 57
 00:01:59,930 --> 00:02:01,195
 0,455 455,575 575,770 770,950 950,1265
 Somebody's already gotten, I think,
-虽然今天的讲座讨论的是项目一，但我认为，有些人已经百分之百地完成了项目一，令人印象深刻。
+我想有些人已经百分之百地完成了项目一，
 
 58
 00:02:01,195 --> 00:02:01,975
 0,225 225,345 345,435 435,540 540,780
-already gotten a hundred percent
+already gotten a {100% -}
 
 59
 00:02:01,975 --> 00:02:03,865
 0,365 805,1140 1140,1425 1425,1680 1680,1890
-on project one, even though
+on project #1,| even though
+|虽然今天的讲座讨论的是项目一，
 
 60
 00:02:03,865 --> 00:02:05,455
 0,360 360,635 685,1095 1095,1305 1305,1590
-today's lecture discusses project one,
+today's lecture discusses project #1,|
+|
 
 61
 00:02:05,455 --> 00:02:09,880
 0,335 1045,1445
 so impressive.|
-|
+所以，令人印象深刻。|
 
 62
 00:02:10,180 --> 00:02:11,040
 0,320 320,485 485,575 575,680 680,860
-Sorry, how much you expected?
-对不起，你期望多少钱？他的问题是什么。我们应该花多长时间来完成整个项目？是我吗？这取决于你的背景。就像有些人用c++解决问题一样。其他人也在挣扎，对吗？项目一是我的意思是它比项目零的工作量更大。它没有第一个项目那么糟糕，这是合理的。其他的都不差。
+Sorry, how much you expected
+抱歉，你期望什么是多少？
 
 63
 00:02:11,040 --> 00:02:16,230
 0,320 4450,4725 4725,4890 4890,5055 5055,5190
-What his question is. How
+what?| His question is,| how
+|他的问题是，|我们应该花多长时间来完成整个项目，
 
 64
 00:02:16,230 --> 00:02:17,460
@@ -352,94 +365,107 @@ much time should we expect
 65
 00:02:17,460 --> 00:02:18,590
 0,240 240,465 465,645 645,825 825,1130
-to complete the entire project?
+to complete the entire project,|
+|
 
 66
 00:02:19,840 --> 00:02:20,880
 0,275 275,395 395,590 590,860 860,1040
-M me? It depends on
+I mean, it depends on
+我想，这取决于你的背景，
 
 67
 00:02:20,880 --> 00:02:22,170
 0,120 120,380 520,885 885,1110 1110,1290
-your background. Like some people
+your background,| like some people
+|比如有些人用 C++ ，没有问题，
 
 68
 00:02:22,170 --> 00:02:22,935
 0,210 210,345 345,465 465,585 585,765
-ripped through c plus plus
+ripped through {C++ - -},
 
 69
 00:02:22,935 --> 00:02:24,140
 0,165 165,405 405,645 645,855 855,1205
-no problems. Other people struggle,
+no problems,| other people struggle,
+|而其他人在挣扎，
 
 70
 00:02:24,670 --> 00:02:27,555
 0,400 1770,2120 2120,2360 2360,2570 2570,2885
-right? Project one is is
+right,| project #1 is, is,
+|项目一是，
 
 71
 00:02:27,555 --> 00:02:29,085
 0,395 955,1185 1185,1260 1260,1410 1410,1530
-is I mean it's more
+is,| I mean it's more
+|我的意思是它比项目零的工作量更大，
 
 72
 00:02:29,085 --> 00:02:30,390
 0,150 150,270 270,450 450,785 955,1305
-work than project zero. It's
+work than project zero,| it's
+|它没有项目一那么糟糕，
 
 73
 00:02:30,390 --> 00:02:31,430
 0,150 150,345 345,510 510,705 705,1040
-less worse than project one,
+less [worse] than project #1,|
+|
 
 74
 00:02:31,510 --> 00:02:33,590
 0,365 365,640 1350,1670 1670,1790 1790,2080
-it's reasonable. It's not bad
+it's reasonable,| it's not bad.|
+这是合理的，|它不是很糟糕。|
 
 75
 00:02:34,870 --> 00:02:37,080
 0,290 290,580
-any other.|
-|
+Any {other,questions}?|
+还有其他问题吗？|
 
 76
 00:02:38,060 --> 00:02:38,740
 0,230 230,380 380,530 530,590 590,680
-All right so a bunch
-好了，还有其他一些课外活动，你们今天可以在课堂上做。我们将进行另一场研讨会演讲，来自半校友达纳·曼·艾肯。谈谈autiune和我参与的初创公司，下周我们将有Process ML的联合创始人之一，这是Postgres的托管版本，他们在那里放置U D f，或者你可以在Sequel中直接进行类似于pytorch的调用。他们还在制作Postgres的代理人，名为P G CAT，这是用铁锈写成的，很受欢迎，然后在接下来的一周，实际上不是10月18日。第二，将让首席运营官和联合创始人缓解其中一个矢量数据库。来给我们讲讲ZOOM吧。
+All right, so a bunch
+好的，还有一些其他课外活动，
 
 77
 00:02:38,740 --> 00:02:41,005
 0,75 75,195 195,420 420,740 1570,2265
-of other things that extracurricular
+of other things, that extracurricular
 
 78
 00:02:41,005 --> 00:02:42,160
 0,305 505,765 765,870 870,975 975,1155
-things that you can do
+things,| that you can do
+|你们可以在课程中做，
 
 79
 00:02:42,160 --> 00:02:44,050
 0,165 165,285 285,560 1120,1520 1570,1890
-in the class today. We're
+in the class,| today, we're
+|今天，我们将进行另一场研讨会演讲，
 
 80
 00:02:44,050 --> 00:02:45,930
 0,195 195,495 495,1010 1090,1485 1485,1880
-having another seminar talk from
+having another Seminar talk| from
+|来自 CMU 的 Dana Van Aken ，
 
 81
 00:02:46,160 --> 00:02:47,680
 0,400 540,920 920,1145 1145,1430 1430,1520
-from semi alum Dana man
+from {CMU -} Dana Van
 
 82
 00:02:47,680 --> 00:02:49,680
 0,410 820,1155 1155,1365 1365,1500 1500,2000
-aiken. Just talk about autitune
+Aken,| just talk about OtterTune
+|谈谈 OtterTune 和我参与的初创公司，
 
 83
 00:02:49,880 --> 00:02:50,845
@@ -449,7 +475,8 @@ and the startup that I'm
 84
 00:02:50,845 --> 00:02:52,195
 0,180 180,485 685,960 960,1155 1155,1350
-involved in then next week
+involved in,| then next week,
+|下周，我们将有 PostgresML 的联合创始人之一，
 
 85
 00:02:52,195 --> 00:02:53,635
@@ -459,115 +486,129 @@ we'll have one of the
 86
 00:02:53,635 --> 00:02:54,840
 0,120 120,405 405,525 525,735 735,1205
-Co founders of process ml
+{co-founders -} of {PostgresML -},|
+|
 
 87
 00:02:55,220 --> 00:02:58,930
 0,275 275,2615 2615,2830 3330,3635 3635,3710
-this is's a it's a
+this is's a, it's a
+这是 Postgres 的[托管]版本，
 
 88
 00:02:58,930 --> 00:03:00,310
 0,315 315,510 510,705 705,1170 1170,1380
-hosted version of postgres where
+hosted version of Postgres,| where
+|他们在那里放置 UDF ，
 
 89
 00:03:00,310 --> 00:03:01,570
 0,210 210,480 480,800 880,1155 1155,1260
-they they put U D
+they they put {[UDFs] -
 
 90
 00:03:01,570 --> 00:03:02,380
 0,210 210,435 435,645 645,705 705,810
-fs or you can make
+-}| or you can make
+|或者你可以在直接使用 SQL 进行类似于 PyTorch 的调用，
 
 91
 00:03:02,380 --> 00:03:03,370
 0,120 120,225 225,360 360,570 570,990
-you can make like pytorch
+you can make like PyTorch
 
 92
 00:03:03,370 --> 00:03:04,890
 0,210 210,510 510,795 795,1050 1050,1520
-calls directly in in sequel.
+calls directly in, in SQL,|
+|
 
 93
 00:03:05,390 --> 00:03:06,415
 0,305 305,470 470,590 590,815 815,1025
-They also been working on
+they also been working on
+他们还做了 Postgres 代理，叫做 PgCat ，
 
 94
 00:03:06,415 --> 00:03:07,705
 0,150 150,540 540,975 975,1140 1140,1290
-a postgres proxy called P
+a Postgres proxy called {PgCat
 
 95
 00:03:07,705 --> 00:03:09,430
 0,150 150,425 1165,1485 1485,1590 1590,1725
-G cat that's written in
+- -},| that's written in
+|是用 Rust 写成的，很受欢迎，
 
 96
 00:03:09,430 --> 00:03:10,945
 0,210 210,420 420,540 540,1160 1240,1515
-rust, engaged in popularity and
+rust, engaged in popularity,| and
+|然后在接下来的一周，
 
 97
 00:03:10,945 --> 00:03:12,030
 0,225 225,435 435,570 570,765 765,1085
-then the week after that
+then the week after that,|
+|
 
 98
 00:03:12,170 --> 00:03:13,555
 0,275 275,425 425,545 545,970 1050,1385
-actually not the eighteenth October.
+actually not the 18th, October
+实际上不是 18 日，而是 10 月 2 日，|
 
 99
 00:03:13,555 --> 00:03:16,285
 0,335 1525,1800 1800,1995 1995,2315 2425,2730
-Second will have the C
+2nd,| we'll have the {CTO
+|我们将有 Weaviate 的 CTO 和联合创始人，
 
 100
 00:03:16,285 --> 00:03:17,590
 0,150 150,255 255,390 390,705 705,1305
-O and Co founder alleviate
+-} and {co-founder -} {of,Weaviate}|
+|
 
 101
 00:03:17,590 --> 00:03:18,810
 0,210 210,270 270,375 375,585 585,1220
-one of these vector databases.
+one of these vector databases,|
+Weaviate 是一个向量数据库，|
 
 102
 00:03:19,400 --> 00:03:20,095
 0,275 275,380 380,455 455,575 575,695
-Come give a talk with
+come give a talk with
+在 Zoom 上给我们演讲。
 
 103
 00:03:20,095 --> 00:03:21,200
 0,120 120,300 300,635
-us on zoom.|
+us on Zoom.|
 |
 
 104
 00:03:21,920 --> 00:03:23,300
 0,400
 Okay.|
-好吧。|
+好的。|
 
 105
 00:03:23,300 --> 00:03:25,150
 0,350 640,900 900,1005 1005,1250 1270,1850
-Yes. Are there any internship
-是。这个问题有没有实习机会？这些公司中有没有实习的机会？绝对一点儿没错。是的，他们想出一种最好的免费联系方式。但没错，这一切都是为了招聘。
+Yes.| { - - -}
+是的。|
 
 106
 00:03:25,200 --> 00:03:26,615
 0,400 480,740 740,860 860,1120 1140,1415
-opportunities for any of this
 
 107
 00:03:26,615 --> 00:03:27,740
 0,195 195,375 375,480 480,675 675,1125
-question? Is there any internship,
+{His,question} is,| {is,there} any internship,
+它的问题是，|这些公司中有没有实习机会，
 
 108
 00:03:27,740 --> 00:03:28,490
@@ -577,7 +618,8 @@ any opportunities for any of
 109
 00:03:28,490 --> 00:03:33,830
 0,75 75,320 820,1170 1170,1520 5050,5340
-these companies? Absolutely. Yes, they
+these companies,| absolutely, yes,| they
+|当然有，|他们想出一种最好的联系方式，
 
 110
 00:03:33,830 --> 00:03:34,625
@@ -587,19 +629,20 @@ figure out a best way
 111
 00:03:34,625 --> 00:03:35,770
 0,195 195,285 285,465 465,765 765,1145
-free to contact them. But
+{for,you} to contact them,| but,
+|但是，没错，所有这些公司都是为了招聘。
 
 112
 00:03:36,060 --> 00:03:38,500
 0,400 1290,1610 1610,1930 1950,2195 2195,2440
-yes, all the to hiring.|
+yes, all {the,companies} to hiring.|
 |
 
 113
 00:03:41,490 --> 00:03:42,320
 0,260 260,350 350,470 470,650 650,830
 So there was two big
-自上半节课以来，上周有两条重大的数据库新闻。他们知道他们是。
+上周有两条重大的数据库新闻，
 
 114
 00:03:42,320 --> 00:03:43,205
@@ -609,29 +652,32 @@ database news in the last
 115
 00:03:43,205 --> 00:03:44,180
 0,305 355,615 615,720 720,825 825,975
-week since the last half
+week,| since we last have
+|自从我们上节课以来，
 
 116
 00:03:44,180 --> 00:03:46,120
 0,290 730,1130 1270,1545 1545,1680 1680,1940
-class. They know they were.|
-|
+class,| {did,anybody} know they were?|
+|有人知道它们是什么吗？|
 
 117
 00:03:51,600 --> 00:03:54,950
 0,400 420,710 710,935 935,1270 3060,3350
-Post release version sixteen is
-发布后的版本16并不是一个很大的游戏规则改变者，就像他们没有你知道的那样，令人惊叹的新功能。它有很多改进和改进之处。他们很高兴有你在。它是，它是，它是游戏规则的改变者。在我看来，改进是当他们为磨损条款增加了及时编译时，我们将在几周内讨论，EM重复数据删除对于BE树来说是一种不错的选择。有一堆IO的东西还没有准备好投入生产，我们今天会稍微谈一谈，但像这样。
+Postgres release version 16,| is
+Postgres 发布了版本 16 ，|并不是一个很大的游戏规则改变者，
 
 118
 00:03:54,950 --> 00:03:56,230
 0,165 165,330 330,525 525,765 765,1280
-not a big game changer
+not a big game changer,|
+|
 
 119
 00:03:56,310 --> 00:03:57,110
 0,290 290,455 455,575 575,695 695,800
 in terms of like they
+他们没有令人惊叹的新功能，
 
 120
 00:03:57,110 --> 00:03:58,055
@@ -641,32 +687,38 @@ don't have like you know,
 121
 00:03:58,055 --> 00:03:59,105
 0,225 225,435 435,675 675,975 975,1050
-amazing new features. It's a
+amazing new features,| it's a
+|它有很多改进之处，
 
 122
 00:03:59,105 --> 00:04:00,190
 0,90 90,165 165,585 585,765 765,1085
-lot of refinement and improvements.
+lot of refinement and improvements,|
+|
 
 123
 00:04:00,990 --> 00:04:03,560
 0,290 290,410 410,530 530,760 2220,2570
-They're nice to have you.
+they're nice to {haves -},
+很高兴他们有，它是，
 
 124
 00:04:03,560 --> 00:04:06,185
 0,420 420,830 1600,1860 1860,2120 2350,2625
-It's, it's, it says a
+it's, it's, it [],| a
+|游戏规则的改变者的改进是，
 
 125
 00:04:06,185 --> 00:04:07,565
 0,225 225,645 645,885 885,1155 1155,1380
-game changer. Improvements be like
+game changer improvements be like,|
+|
 
 126
 00:04:07,565 --> 00:04:08,600
 0,165 165,345 345,645 645,900 900,1035
-in my opinion is when
+in my opinion, is when
+在我看来，是他们为 WHERE 子句增加及时编译时，
 
 127
 00:04:08,600 --> 00:04:09,665
@@ -676,7 +728,8 @@ they added just in time
 128
 00:04:09,665 --> 00:04:11,420
 0,515 535,870 870,1110 1110,1590 1590,1755
-compilation for wear clauses which
+compilation for WHERE clauses,| which
+|我们将在几周内讨论，
 
 129
 00:04:11,420 --> 00:04:12,920
@@ -686,27 +739,31 @@ we'll cover in a few
 130
 00:04:12,920 --> 00:04:15,170
 0,260 670,1070 1300,1935 1935,2100 2100,2250
-weeks, EM deduplication for be
+weeks,| {} deduplication for B
+|对 B 树重复数据删除是不错的，
 
 131
 00:04:15,170 --> 00:04:15,940
 0,165 165,315 315,435 435,525 525,770
-trees is kind of nice.
+trees is kind of nice,|
+|
 
 132
 00:04:16,290 --> 00:04:17,060
 0,320 320,410 410,530 530,635 635,770
-There's a bunch of I
+there's a bunch of {I/O
+有一堆 I/O 的东西还没有准备好投入生产，
 
 133
 00:04:17,060 --> 00:04:18,850
 0,270 270,600 600,1110 1110,1410 1410,1790
-O stuff that's still not
+-} stuff that's still not
 
 134
 00:04:18,900 --> 00:04:21,980
 0,400 810,1100 1100,1280 1280,1570 2820,3080
-in ready for production which
+in ready for production,| which
+|我们今天会稍微讨论一下，
 
 135
 00:04:21,980 --> 00:04:22,385
@@ -716,19 +773,20 @@ we'll talk about a little
 136
 00:04:22,385 --> 00:04:24,180
 0,105 105,365 715,1020 1020,1325
-about today, but like.|
-|
+about today,| but like,
+|但是，有是不错的，
 
 137
 00:04:24,220 --> 00:04:25,005
 0,335 335,395 395,530 530,650 650,785
-It's a nice to have
-Postgres每年发布一次，这是一件很好的事情，这是一种很好的感觉。然后，Databricks宣布，他们以5亿美元的价格筹集了第一季，估值为430亿美元。嗯，这么多钱是不言而喻的，啊，对，我没有，我没有，雪花在IPO之前没有筹集到这个数额，这个数额。但不管怎样，他们都在招人。
+it's a nice to have,|
+|
 
 138
 00:04:25,005 --> 00:04:26,130
 0,345 345,495 495,690 690,900 900,1125
-postgres has been putting out
+Postgres has been putting out
+Postgres 每年发布一次，这是一件很好的事情。
 
 139
 00:04:26,130 --> 00:04:26,790
@@ -738,12 +796,14 @@ releases once a year and
 140
 00:04:26,790 --> 00:04:27,350
 0,105 105,165 165,255 255,330 330,560
-it's been kind of nice.
+it's been kind of nice.|
+|
 
 141
 00:04:27,520 --> 00:04:28,785
 0,245 245,365 365,845 845,1025 1025,1265
-And then databricks announced they
+And then Databricks announced,| they
+然后， Databricks 宣布，|他们以 5 亿美元的价格融资了第 I 轮，
 
 142
 00:04:28,785 --> 00:04:30,750
@@ -753,32 +813,38 @@ raised a series I for
 143
 00:04:30,750 --> 00:04:33,615
 0,420 420,660 660,980 2140,2540 2560,2865
-500 million dollars with a
+500 million dollars| with a
+|估值为 430 亿美元，
 
 144
 00:04:33,615 --> 00:04:35,960
 0,480 480,720 720,990 990,1595 1945,2345
-43 billion Dollar valuation. Um,
+43 billion Dollar valuation, {}|
+|
 
 145
 00:04:37,060 --> 00:04:37,790
 0,290 290,335 335,395 395,485 485,730
 that's a lot of money
+这么多钱是不言而喻的，
 
 146
 00:04:39,160 --> 00:04:40,610
 0,290 290,455 455,605 605,880 1050,1450
-goes goes without saying, ah,
+goes goes without saying, {}|
+|
 
 147
 00:04:41,260 --> 00:04:42,270
 0,320 320,500 500,665 665,755 755,1010
-yeah, I don't, I don't.
+yeah, I don't, I don't,|
+是的，我没有，|
 
 148
 00:04:42,270 --> 00:04:43,370
 0,330 330,525 525,660 660,825 825,1100
 Snowflake didn't raise this amount,
+Snowflake 在 IPO 之前没有筹集到这个数额，
 
 149
 00:04:43,630 --> 00:04:45,255
@@ -788,14 +854,14 @@ this amount before they went
 150
 00:04:45,255 --> 00:04:48,020
 0,455 505,905 1735,2135 2155,2520 2520,2765
-IPO. But anyway, they're hiring.|
-|
+IPO,| but anyway, they're hiring.|
+|但不管怎样，他们都在招人。|
 
 151
 00:04:49,720 --> 00:04:51,260
 0,260 260,455 455,790 990,1265 1265,1540
-All right. So, all right.|
-好的。所以，好吧。|
+All right, so, all right.|
+好的，所以，好的。|
 
 152
 00:04:52,570 --> 00:04:55,905
