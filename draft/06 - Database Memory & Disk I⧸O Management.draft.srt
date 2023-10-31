@@ -3973,7 +3973,7 @@ through programmer discipline, we need,|
 00:18:19,900 --> 00:18:20,590
 0,240 240,330 330,450 450,585 585,690
 we're the ones, we have
-我们必须确保我们不会有死锁。
+我们必须确保我们不会有死锁，
 
 701
 00:18:20,590 --> 00:18:21,670
@@ -3983,76 +3983,83 @@ to make sure that, we
 702
 00:18:21,670 --> 00:18:23,460
 0,195 195,375 375,465 465,1040
-don't, don't have deadlocks.|
+don't, don't have deadlocks,|
 |
 
 703
 00:18:24,140 --> 00:18:25,240
 0,275 275,410 410,545 545,890 890,1100
-Now, this is confusing because
-现在，这是令人困惑的，因为这也在c++和标准库中。他们也使用术语闩锁，但这只是一个倒计时障碍。我们不想这样。我们不需要那个。我们要绕着门闩转。下周，当我们讨论b+树的指数和货币控制时，我们会更多地看到这一点。
+now, this is confusing,| because
+现在，这是令人困惑的，|因为在 C++ 标准库中，
 
 704
 00:18:25,240 --> 00:18:26,365
 0,120 120,315 315,645 645,960 960,1125
-this is also in c
+this is also in {C++
 
 705
 00:18:26,365 --> 00:18:27,900
 0,120 120,395 835,1095 1095,1245 1245,1535
-plus plus the standard library.
+- -} the standard library,|
+|
 
 706
 00:18:28,190 --> 00:18:29,530
 0,425 425,730 810,1070 1070,1205 1205,1340
-There's also they use the
+there's also, they use the
+他们也使用术语 latch ，
 
 707
 00:18:29,530 --> 00:18:30,850
 0,150 150,620 820,1065 1065,1230 1230,1320
-term latches, but that's just
+term latches,| but that's just
+|但只是一个 countdown barrier ，
 
 708
 00:18:30,850 --> 00:18:32,380
 0,135 135,480 480,980 1120,1365 1365,1530
-a countdown barrier. We don't
+a countdown barrier,| we don't
+|我们不想这样，我们不需要那个，
 
 709
 00:18:32,380 --> 00:18:33,055
 0,120 120,300 300,435 435,570 570,675
-want that. We don't need
+want that, we don't need
 
 710
 00:18:33,055 --> 00:18:34,045
 0,225 225,450 450,495 495,705 705,990
-that. We're going to roll
+that,| we're going to roll
+|我们要轮询 latch ，
 
 711
 00:18:34,045 --> 00:18:35,620
 0,165 165,635 835,1200 1200,1365 1365,1575
-around latches. We'll see this
+around latches,| we'll see this
+|下周，我们会更多地看到这个，
 
 712
 00:18:35,620 --> 00:18:36,400
 0,210 210,405 405,585 585,690 690,780
-more next week when we
+more next week,| when we
+|当我们讨论 B+ 树的索引并发控制时，
 
 713
 00:18:36,400 --> 00:18:37,480
 0,165 165,450 450,705 705,855 855,1080
-talk about index and currency
+talk about index {concurrency -}
 
 714
 00:18:37,480 --> 00:18:38,760
 0,350 430,690 690,810 810,975 975,1280
-control for b plus trees.|
+control for {B+ -} trees,|
 |
 
 715
 00:18:40,400 --> 00:18:41,350
 0,165 165,240 240,390 390,630 630,950
-But for now, just assume
-但就目前而言，只要假设您可以将其视为互斥体。
+but for now, just assume
+但就目前而言，你可以将其视为 mutex ，
 
 716
 00:18:41,610 --> 00:18:42,320
@@ -4062,24 +4069,26 @@ you can treat it as
 717
 00:18:42,320 --> 00:18:43,620
 0,105 105,500
-a mutex.|
+a mutex,|
 |
 
 718
 00:18:44,560 --> 00:18:45,135
 0,230 230,365 365,425 425,485 485,575
-We don't want to use
-我们不想使用有其他问题的OS UX。我们稍后会讲述这一点。
+we don't want to use
+我们不想使用操作系统的 mutex ，
 
 719
 00:18:45,135 --> 00:18:46,050
 0,105 105,240 240,600 600,795 795,915
-the OS ux that has
+the OS metux,| that has
+|它有其他问题，
 
 720
 00:18:46,050 --> 00:18:47,100
 0,165 165,470 490,780 780,900 900,1050
-other problems. We'll cover that
+other problems,| we'll cover that
+|我们稍后会讲到。
 
 721
 00:18:47,100 --> 00:18:48,580
