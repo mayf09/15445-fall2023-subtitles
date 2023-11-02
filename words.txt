@@ -12,3 +12,6 @@ slot array 插槽阵列
 run-length encoding 游程编码
 bitmap encoding 位图编码
 delta encoding 增量编码
+
+## 06
+buffer pool 缓冲池
