@@ -1,0 +1,6968 @@
+1
+00:00:26,650 --> 00:00:30,590
+2PL, how was the concert on Saturday.
+
+2
+00:00:31,030 --> 00:00:33,260
+It went well, it might be [redline] a bunch of speakers.
+
+3
+00:00:33,260 --> 00:00:34,750
+What does it mean the redline speaders?
+
+4
+00:00:34,750 --> 00:00:38,450
+I mean if the speaker can work at like a 100%,
+
+5
+00:00:38,650 --> 00:00:40,040
+you will working them at 200%.
+
+6
+00:00:40,480 --> 00:00:41,030
+Did you break them?
+
+7
+00:00:42,040 --> 00:00:42,980
+Next time maybe.
+
+8
+00:00:43,090 --> 00:00:45,170
+Okay, nice, how many people showed up?
+
+9
+00:00:45,490 --> 00:00:45,980
+Two hundred.
+
+10
+00:00:46,150 --> 00:00:47,265
+Two hundred, that's impressive.
+
+11
+00:00:47,265 --> 00:00:48,710
+Okay and your next show is when?
+
+12
+00:00:49,270 --> 00:00:49,670
+October, after the fall break.
+
+13
+00:00:51,130 --> 00:00:52,160
+That's off campus though.
+
+14
+00:00:52,570 --> 00:00:53,870
+We'll post that on Piazza.
+
+15
+00:00:53,980 --> 00:00:55,040
+All right, guys, a lot to cover,
+
+16
+00:00:55,510 --> 00:00:57,050
+some quick administrative things, go quickly.
+
+17
+00:00:57,460 --> 00:01:01,160
+So the homework #2 is been out,
+
+18
+00:01:01,450 --> 00:01:04,010
+we bumped the due date to be October 4th,
+
+19
+00:01:04,030 --> 00:01:07,850
+because we didn't want to have it lined up on the same date that project #1 is due,
+
+20
+00:01:09,070 --> 00:01:11,115
+so the material part of the problem,
+
+21
+00:01:11,115 --> 00:01:12,860
+I also do is the scheduling with Labor Day everything,
+
+22
+00:01:12,970 --> 00:01:15,855
+so the material of that homework discusses things we'll discuss next week,
+
+23
+00:01:15,855 --> 00:01:17,120
+so we postpone that a day
+
+24
+00:01:17,440 --> 00:01:20,060
+and then project #1 still on track, we due October 2nd
+
+25
+00:01:20,410 --> 00:01:21,500
+and again that's on a Sunday,
+
+26
+00:01:21,820 --> 00:01:26,990
+we're having the Q&A session this today, Monday at 6:30pm
+
+27
+00:01:27,220 --> 00:01:30,860
+and that'll be on, on Zoom and that's a post on that Piazza
+
+28
+00:01:31,120 --> 00:01:32,835
+and then as for all the projects,
+
+29
+00:01:32,835 --> 00:01:36,210
+again, there won't be any office hours on Sundays,
+
+30
+00:01:36,210 --> 00:01:37,430
+when the project is due,
+
+31
+00:01:37,630 --> 00:01:41,690
+but there'll be a special office hours session on the Saturday, before it's due,
+
+32
+00:01:42,070 --> 00:01:46,580
+on campus, with like four TAs, between 3 and 5pm,
+
+33
+00:01:47,050 --> 00:01:48,530
+this is meant to be like a forcing function
+
+34
+00:01:48,550 --> 00:01:50,415
+for you guys actually start working on the project
+
+35
+00:01:50,415 --> 00:01:52,890
+instead of showing up the dates due to office hours,
+
+36
+00:01:52,890 --> 00:01:54,480
+saying you doesn't compile, right,
+
+37
+00:01:54,480 --> 00:01:58,340
+like we want you, we want you to start sooner rather than later, okay?
+
+38
+00:01:59,930 --> 00:02:03,400
+Somebody's already gotten, I think, already gotten a 100% on project #1,
+
+39
+00:02:03,400 --> 00:02:05,455
+even though today's lecture discusses project #1,
+
+40
+00:02:05,455 --> 00:02:06,900
+so impressive.
+
+41
+00:02:10,180 --> 00:02:11,360
+Sorry, how much you expected what?
+
+42
+00:02:15,490 --> 00:02:16,095
+His question is,
+
+43
+00:02:16,095 --> 00:02:18,590
+how much time should we expect to complete the entire project,
+
+44
+00:02:19,840 --> 00:02:21,260
+I mean, it depends on your background,
+
+45
+00:02:21,400 --> 00:02:23,340
+like some people ripped through C++, no problems,
+
+46
+00:02:23,340 --> 00:02:25,070
+other people struggle, right,
+
+47
+00:02:26,440 --> 00:02:27,950
+project #1 is, is, is,
+
+48
+00:02:28,510 --> 00:02:29,870
+I mean it's more work than project zero,
+
+49
+00:02:30,040 --> 00:02:31,430
+it's less [worse] than project #1,
+
+50
+00:02:31,510 --> 00:02:32,150
+it's reasonable,
+
+51
+00:02:32,860 --> 00:02:33,590
+it's not bad.
+
+52
+00:02:34,870 --> 00:02:35,450
+Any other questions?
+
+53
+00:02:38,060 --> 00:02:41,310
+All right, so a bunch of other things, that extracurricular things,
+
+54
+00:02:41,510 --> 00:02:42,720
+that you can do in the class,
+
+55
+00:02:43,280 --> 00:02:45,535
+today, we're having another Seminar talk
+
+56
+00:02:45,535 --> 00:02:48,090
+from from CMU Dana Van Aken,
+
+57
+00:02:48,500 --> 00:02:51,330
+just talk about OtterTune and the startup that I'm involved in,
+
+58
+00:02:51,530 --> 00:02:54,840
+then next week, we'll have one of the co-founders of PostgresML,
+
+59
+00:02:55,220 --> 00:03:00,100
+this is's a, it's a hosted version of Postgres,
+
+60
+00:03:00,100 --> 00:03:01,780
+where they they put [UDFs]
+
+61
+00:03:01,780 --> 00:03:04,890
+or you can make you can make like PyTorch calls directly in, in SQL,
+
+62
+00:03:05,390 --> 00:03:08,130
+they also been working on a Postgres proxy called PgCat,
+
+63
+00:03:08,870 --> 00:03:10,590
+that's written in rust, engaged in popularity,
+
+64
+00:03:10,670 --> 00:03:12,030
+and then the week after that,
+
+65
+00:03:12,170 --> 00:03:13,890
+actually not the 18th, October 2nd,
+
+66
+00:03:15,080 --> 00:03:17,590
+we'll have the CTO and co-founder of Weaviate
+
+67
+00:03:17,590 --> 00:03:18,810
+one of these vector databases,
+
+68
+00:03:19,400 --> 00:03:20,730
+come give a talk with us on Zoom.
+
+69
+00:03:21,920 --> 00:03:22,320
+Okay.
+
+70
+00:03:23,300 --> 00:03:23,650
+Yes.
+
+71
+00:03:23,940 --> 00:03:26,990
+His question is,
+
+72
+00:03:26,990 --> 00:03:28,810
+is there any internship, any opportunities for any of these companies,
+
+73
+00:03:29,310 --> 00:03:30,010
+absolutely, yes,
+
+74
+00:03:33,540 --> 00:03:35,390
+they figure out a best way for you to contact them,
+
+75
+00:03:35,390 --> 00:03:38,500
+but, yes, all the companies to hiring.
+
+76
+00:03:41,490 --> 00:03:43,510
+So there was two big database news in the last week,
+
+77
+00:03:43,560 --> 00:03:44,470
+since we last have class,
+
+78
+00:03:44,910 --> 00:03:46,120
+did anybody know they were?
+
+79
+00:03:51,600 --> 00:03:52,870
+Postgres release version 16,
+
+80
+00:03:54,660 --> 00:03:56,230
+is not a big game changer,
+
+81
+00:03:56,310 --> 00:03:58,730
+in terms of like they don't have like you know, amazing new features,
+
+82
+00:03:58,730 --> 00:04:00,190
+it's a lot of refinement and improvements,
+
+83
+00:04:00,990 --> 00:04:05,680
+they're nice to haves, it's, it's, it [],
+
+84
+00:04:05,910 --> 00:04:07,565
+a game changer improvements be like,
+
+85
+00:04:07,565 --> 00:04:11,255
+in my opinion, is when they added just in time compilation for WHERE clauses,
+
+86
+00:04:11,255 --> 00:04:13,180
+which we'll cover in a few weeks,
+
+87
+00:04:13,590 --> 00:04:15,940
+deduplication for B trees is kind of nice,
+
+88
+00:04:16,290 --> 00:04:20,470
+there's a bunch of I/O stuff that's still not in ready for production,
+
+89
+00:04:21,720 --> 00:04:22,750
+which we'll talk about a little about today,
+
+90
+00:04:23,100 --> 00:04:25,005
+but like, it's a nice to have,
+
+91
+00:04:25,005 --> 00:04:27,350
+Postgres has been putting out releases once a year and it's been kind of nice.
+
+92
+00:04:27,520 --> 00:04:28,545
+And then Databricks announced,
+
+93
+00:04:28,545 --> 00:04:31,730
+they raised a series I for 500 million dollars
+
+94
+00:04:32,890 --> 00:04:35,960
+with a 43 billion Dollar valuation,
+
+95
+00:04:37,060 --> 00:04:40,610
+that's a lot of money goes goes without saying,
+
+96
+00:04:41,260 --> 00:04:42,270
+yeah, I don't, I don't,
+
+97
+00:04:42,270 --> 00:04:45,710
+Snowflake didn't raise this amount, this amount before they went IPO,
+
+98
+00:04:45,760 --> 00:04:48,020
+but anyway, they're hiring.
+
+99
+00:04:49,720 --> 00:04:51,260
+All right, so, all right.
+
+100
+00:04:52,570 --> 00:04:59,250
+So last class, was we finished up the discussion on the storage aspect of database systems
+
+101
+00:04:59,250 --> 00:05:05,480
+and was really focusing on how the database system is going to represent data in, in disk,
+
+102
+00:05:05,560 --> 00:05:09,260
+we talk about the tuple-oriented storage, log-structure storage, the index-organized storage,
+
+103
+00:05:09,340 --> 00:05:11,805
+right now we know what these files look like on disk,
+
+104
+00:05:11,805 --> 00:05:12,770
+how they're broken up into pages,
+
+105
+00:05:13,550 --> 00:05:17,070
+and so today's class and going forward is really about
+
+106
+00:05:17,360 --> 00:05:19,980
+how do we get those pages from disk,
+
+107
+00:05:20,330 --> 00:05:21,270
+bring those into memory,
+
+108
+00:05:21,290 --> 00:05:23,070
+and then do something with them.
+
+109
+00:05:24,050 --> 00:05:28,860
+And of course, the whole goal of what we're trying to build in this conceptual system we're talking about is
+
+110
+00:05:29,330 --> 00:05:31,645
+having a database system that gives the illusion,
+
+111
+00:05:31,645 --> 00:05:33,870
+that we have more memory than we actually have,
+
+112
+00:05:34,400 --> 00:05:36,180
+the database is larger than what fits in memory,
+
+113
+00:05:36,470 --> 00:05:38,910
+we want to make it look like we could fit everything in memory.
+
+114
+00:05:39,380 --> 00:05:40,405
+So today is really about,
+
+115
+00:05:40,405 --> 00:05:43,080
+how do we go get the things we need from disk, those pages,
+
+116
+00:05:43,550 --> 00:05:44,400
+bring them into memory,
+
+117
+00:05:44,420 --> 00:05:46,470
+and then make decisions on how to remove them
+
+118
+00:05:46,790 --> 00:05:49,470
+in order to save space when we want to bring new things in.
+
+119
+00:05:50,940 --> 00:05:51,340
+All right.
+
+120
+00:05:53,070 --> 00:05:56,420
+So there's two key aspects we have to consider
+
+121
+00:05:56,420 --> 00:05:59,950
+in any decisions we're making on how we move data back and forth in disk.
+
+122
+00:06:00,860 --> 00:06:03,880
+The first is where do we want to write our pages on disk
+
+123
+00:06:03,900 --> 00:06:05,480
+and how can we lay them out
+
+124
+00:06:05,480 --> 00:06:08,500
+in such a way that we can maximize the amount of sequential I/O we are doing,
+
+125
+00:06:08,640 --> 00:06:09,820
+instead of doing random I/O.
+
+126
+00:06:10,560 --> 00:06:13,065
+And the idea here is that,
+
+127
+00:06:13,065 --> 00:06:15,170
+we want to keep pages that are going to used together,
+
+128
+00:06:15,910 --> 00:06:18,710
+possibly close to each other physically on disk,
+
+129
+00:06:18,940 --> 00:06:23,475
+so that when something, when a query is running or some task is running inside of our database system,
+
+130
+00:06:23,475 --> 00:06:24,740
+we have to go fetch a bunch of pages,
+
+131
+00:06:25,300 --> 00:06:26,550
+we want those pages to be sequential,
+
+132
+00:06:26,550 --> 00:06:27,830
+when we, when we bring those into memory.
+
+133
+00:06:29,300 --> 00:06:30,720
+Then the next thing to consider is,
+
+134
+00:06:31,460 --> 00:06:33,090
+when we have to go read things in memory,
+
+135
+00:06:33,470 --> 00:06:36,150
+and this is typically done on demand, meaning,
+
+136
+00:06:36,560 --> 00:06:37,870
+we'll see prefetching in a second,
+
+137
+00:06:37,870 --> 00:06:38,620
+but you're not just,
+
+138
+00:06:38,620 --> 00:06:40,375
+the system just go randomly reading things,
+
+139
+00:06:40,375 --> 00:06:41,130
+because it wants to,
+
+140
+00:06:42,290 --> 00:06:43,675
+if you insert a bunch of data
+
+141
+00:06:43,675 --> 00:06:44,695
+and then you never go read it,
+
+142
+00:06:44,695 --> 00:06:47,280
+it's not gonna go, go read back into memory
+
+143
+00:06:47,540 --> 00:06:48,570
+just for the [] of it, right,
+
+144
+00:06:49,010 --> 00:06:50,740
+and so it's gonna be on demand,
+
+145
+00:06:50,740 --> 00:06:54,090
+we have to go get things from disk and bring them to memory.
+
+146
+00:06:54,770 --> 00:06:56,100
+And then the question's gonna be,
+
+147
+00:06:56,330 --> 00:07:00,360
+when do we want to evict that from memory, right,
+
+148
+00:07:00,500 --> 00:07:02,650
+what was the last time it's accesssed, how was access,
+
+149
+00:07:02,650 --> 00:07:04,645
+was it updated since we brought it into memory
+
+150
+00:07:04,645 --> 00:07:05,760
+and therefore we need to write it out,
+
+151
+00:07:06,170 --> 00:07:07,200
+we're not going to talk about,
+
+152
+00:07:07,460 --> 00:07:09,840
+how to make sure that we can,
+
+153
+00:07:10,670 --> 00:07:13,050
+save our changes in case of a crash or a failure,
+
+154
+00:07:13,520 --> 00:07:15,210
+we'll talk a little about that at the end,
+
+155
+00:07:15,560 --> 00:07:21,720
+but that will be a foucs, major focus, for major focus of a lecture after the, the midterm,
+
+156
+00:07:21,830 --> 00:07:22,690
+this is really about,
+
+157
+00:07:22,690 --> 00:07:25,200
+okay, I got to decide what data to evict,
+
+158
+00:07:25,400 --> 00:07:26,550
+how do I make that decision.
+
+159
+00:07:28,940 --> 00:07:30,870
+And so this is that same diagram I showed before,
+
+160
+00:07:31,760 --> 00:07:34,360
+what we have the database file on disk
+
+161
+00:07:34,360 --> 00:07:35,520
+and it's broken up to a bunch of pages,
+
+162
+00:07:36,080 --> 00:07:38,140
+and then now what we're talking about today is,
+
+163
+00:07:38,140 --> 00:07:39,540
+this piece here called the buffer pool,
+
+164
+00:07:40,160 --> 00:07:41,460
+I'll call it the buffer pool manager,
+
+165
+00:07:41,600 --> 00:07:49,620
+some places or some of systems called the the buffer pool cache, cache manager,
+
+166
+00:07:49,880 --> 00:07:51,310
+they all basically mean the same thing,
+
+167
+00:07:51,310 --> 00:07:55,770
+it's the memory that the database system is going to allocate from the operating system and control on its own.
+
+168
+00:07:57,060 --> 00:07:58,870
+So when you have your execution engine,
+
+169
+00:07:59,340 --> 00:08:00,425
+it starts doing something,
+
+170
+00:08:00,425 --> 00:08:02,530
+like, it's, say it's running a query,
+
+171
+00:08:03,180 --> 00:08:04,390
+It doesn't have to, but it could,
+
+172
+00:08:05,100 --> 00:08:07,600
+and at some point, it says I need to get page number two,
+
+173
+00:08:08,460 --> 00:08:10,655
+so again we go get the page directory from disk,
+
+174
+00:08:10,655 --> 00:08:11,345
+bring that into memory,
+
+175
+00:08:11,345 --> 00:08:12,370
+if it's not already there,
+
+176
+00:08:12,660 --> 00:08:13,685
+look on our page directory
+
+177
+00:08:13,685 --> 00:08:14,990
+and that's going to tell us our page number two,
+
+178
+00:08:14,990 --> 00:08:18,250
+here's the file and the offset where to find that that particular page,
+
+179
+00:08:18,720 --> 00:08:19,900
+we go fetch that in memory,
+
+180
+00:08:20,310 --> 00:08:23,350
+put into one of our free space in our buffer pool
+
+181
+00:08:23,760 --> 00:08:25,655
+and then give back the execution engine,
+
+182
+00:08:25,655 --> 00:08:28,780
+a pointer to that page sitting in the buffer pool.
+
+183
+00:08:31,210 --> 00:08:33,050
+So now let's say,
+
+184
+00:08:33,430 --> 00:08:36,615
+again, we run some kind of eviction policy, replacement policy
+
+185
+00:08:36,615 --> 00:08:39,405
+and we decide to remove page two, for whatever reason,
+
+186
+00:08:39,405 --> 00:08:40,460
+because we need more space,
+
+187
+00:08:40,750 --> 00:08:41,730
+we run a bunch of other data,
+
+188
+00:08:41,730 --> 00:08:42,350
+it doesn't matter,
+
+189
+00:08:43,270 --> 00:08:45,195
+but now when the execution engine comes back
+
+190
+00:08:45,195 --> 00:08:46,700
+and says I give me page two again,
+
+191
+00:08:47,480 --> 00:08:48,080
+it's not in memory,
+
+192
+00:08:48,080 --> 00:08:49,840
+you got to go to disk and get it,
+
+193
+00:08:50,130 --> 00:08:54,970
+but this time it actually might land in a different location in our buffer pool,
+
+194
+00:08:55,950 --> 00:08:58,040
+and again, our system, the execution engine,
+
+195
+00:08:58,040 --> 00:09:00,100
+all the other parts of the system above the buffer pool,
+
+196
+00:09:00,480 --> 00:09:05,200
+they should obviously not be, not, not cared that it's now in a different location.
+
+197
+00:09:06,780 --> 00:09:08,705
+This is different than mmap, right,
+
+198
+00:09:08,705 --> 00:09:10,570
+if you mmap a file, the memory map file,
+
+199
+00:09:11,100 --> 00:09:12,305
+when you bring that in your address space,
+
+200
+00:09:12,305 --> 00:09:15,790
+anytime you jump to that sort of mmap file address space,
+
+201
+00:09:16,200 --> 00:09:17,710
+you're always gonna get the same page
+
+202
+00:09:18,030 --> 00:09:20,980
+or the operating system is gonna guarantee that for you,
+
+203
+00:09:21,120 --> 00:09:22,895
+it may not be in memory when you access it
+
+204
+00:09:22,895 --> 00:09:25,630
+and you get get installed, get fetches in,
+
+205
+00:09:25,830 --> 00:09:27,430
+but it's always gonna be in the same address space.
+
+206
+00:09:28,050 --> 00:09:29,630
+In our system, we're not going to do that,
+
+207
+00:09:29,630 --> 00:09:31,355
+the same page can be in different locations,
+
+208
+00:09:31,355 --> 00:09:32,830
+every time it's brought in and out of memory,
+
+209
+00:09:34,290 --> 00:09:35,590
+because we need that freedom,
+
+210
+00:09:35,640 --> 00:09:37,490
+because who knows what's going to be in memory,
+
+211
+00:09:37,490 --> 00:09:38,800
+the next time we go fetch a page.
+
+212
+00:09:40,630 --> 00:09:43,640
+So again, this is much different than calling malloc,
+
+213
+00:09:44,020 --> 00:09:44,990
+you call malloc,
+
+214
+00:09:45,370 --> 00:09:47,000
+the OS is taking care of this all for you,
+
+215
+00:09:47,470 --> 00:09:50,000
+the database system is managing all this memory,
+
+216
+00:09:50,740 --> 00:09:51,805
+because as we see as we go along,
+
+217
+00:09:51,805 --> 00:09:53,190
+it's always going to be in a better position
+
+218
+00:09:53,600 --> 00:09:55,500
+to make the best decision how to optimize this.
+
+219
+00:09:57,370 --> 00:09:58,485
+All right, so for today's agenda,
+
+220
+00:09:58,485 --> 00:10:00,740
+we're going to talk about high level of what a buffer manager is,
+
+221
+00:10:01,000 --> 00:10:03,770
+talk some optimizations we can add to it,
+
+222
+00:10:04,840 --> 00:10:05,760
+the order actually switched,
+
+223
+00:10:05,760 --> 00:10:07,280
+then we'll talk about buffer replacement policies,
+
+224
+00:10:07,900 --> 00:10:08,955
+then Disk I/O scheduling,
+
+225
+00:10:08,955 --> 00:10:10,280
+and then we'll briefly mention that,
+
+226
+00:10:10,510 --> 00:10:14,820
+there's other memory pools in, in, in our database system,
+
+227
+00:10:14,820 --> 00:10:17,390
+that may not be always backed by a buffer pool manager,
+
+228
+00:10:17,600 --> 00:10:20,210
+might be like an ephemeral cache for certain things.
+
+229
+00:10:21,660 --> 00:10:23,410
+So again, I'm going to call it a buffer pool manager,
+
+230
+00:10:23,430 --> 00:10:24,790
+the textbook calls a buffer manager,
+
+231
+00:10:25,290 --> 00:10:28,270
+I think Oracle might call the buffer cache,
+
+232
+00:10:28,500 --> 00:10:29,680
+we're all talking about the same thing.
+
+233
+00:10:32,220 --> 00:10:33,490
+So at a high level, looks like this,
+
+234
+00:10:34,140 --> 00:10:37,990
+again, it's just a region of memory that we've allocated from the OS
+
+235
+00:10:38,550 --> 00:10:42,130
+and we're going to logically chunk it up into fixed size pages,
+
+236
+00:10:42,600 --> 00:10:46,300
+again based on the page size of the database system, right,
+
+237
+00:10:46,800 --> 00:10:49,085
+we said 8, Postgres is 8 kilobytes,
+
+238
+00:10:49,085 --> 00:10:51,580
+MySQL 16 kilobytes, could have compression sizes, right,
+
+239
+00:10:52,080 --> 00:10:52,640
+doesn't matter,
+
+240
+00:10:52,640 --> 00:10:55,060
+we're breaking it up based on those page sizes.
+
+241
+00:10:56,120 --> 00:11:00,870
+And then an entry or a location in our buffer pool memory,
+
+242
+00:11:01,340 --> 00:11:03,480
+that we could use to, to install a page,
+
+243
+00:11:04,100 --> 00:11:05,250
+we're going to call that a frame.
+
+244
+00:11:06,420 --> 00:11:07,880
+So think the system boots up,
+
+245
+00:11:07,880 --> 00:11:09,820
+it calls malloc, gets a bunch of memory
+
+246
+00:11:10,230 --> 00:11:12,910
+and then say break it up and divide it up into frames,
+
+247
+00:11:13,260 --> 00:11:19,390
+and then as the database system or other parts of the the execution engine or whatever start requesting pages,
+
+248
+00:11:20,070 --> 00:11:24,430
+we're going to make an exact copy of the pages from disk into memory
+
+249
+00:11:24,570 --> 00:11:26,080
+and, and put it into one of these frames,
+
+250
+00:11:26,580 --> 00:11:28,145
+the reason why we have to call it frames is,
+
+251
+00:11:28,145 --> 00:11:29,170
+because we're running out of terms,
+
+252
+00:11:29,640 --> 00:11:30,560
+I can't call it a page,
+
+253
+00:11:30,560 --> 00:11:31,280
+can't call it a block,
+
+254
+00:11:31,280 --> 00:11:32,110
+because we've already used that,
+
+255
+00:11:32,490 --> 00:11:33,395
+can't call it a slot,
+
+256
+00:11:33,395 --> 00:11:34,630
+because we have a slot array,
+
+257
+00:11:34,950 --> 00:11:36,790
+so for whatever reason, we're to call it a frame.
+
+258
+00:11:38,630 --> 00:11:40,560
+All right, so again, so somebody needs page one,
+
+259
+00:11:40,790 --> 00:11:43,170
+then we go find a free frame in our buffer pool
+
+260
+00:11:43,310 --> 00:11:45,360
+and we just copy that page on disk into memory,
+
+261
+00:11:46,290 --> 00:11:47,030
+same thing here,
+
+262
+00:11:47,030 --> 00:11:48,010
+I need page three,
+
+263
+00:11:48,270 --> 00:11:49,150
+find a free slot,
+
+264
+00:11:49,290 --> 00:11:50,650
+and I copy it into memory here,
+
+265
+00:11:51,550 --> 00:11:53,300
+but again, here we can see that,
+
+266
+00:11:53,620 --> 00:11:56,450
+page one and page three are not contiguous on disk,
+
+267
+00:11:56,770 --> 00:11:58,280
+because it's page two in between them,
+
+268
+00:11:58,390 --> 00:12:00,350
+but when we put it in our buffer pool and bring it in a memory,
+
+269
+00:12:01,090 --> 00:12:03,440
+again, we're free to put it in any location that we want,
+
+270
+00:12:04,220 --> 00:12:04,980
+it doesn't matter.
+
+271
+00:12:07,710 --> 00:12:09,190
+So now when dirty,
+
+272
+00:12:09,270 --> 00:12:13,210
+when if if we modify one of these pages,
+
+273
+00:12:14,310 --> 00:12:17,980
+we're not gonna, we're not required to flush the data back to disk right away,
+
+274
+00:12:18,150 --> 00:12:22,030
+and again we will cover durability and and recovery late after the midterm,
+
+275
+00:12:22,260 --> 00:12:26,740
+but this is a key difference then between like a write through cache or a write back cache, right,
+
+276
+00:12:27,120 --> 00:12:28,430
+the write through cache in the OS,
+
+277
+00:12:28,430 --> 00:12:30,850
+when you write something to the cache,
+
+278
+00:12:31,020 --> 00:12:33,280
+it then gets immediately written out the disk as well,
+
+279
+00:12:33,780 --> 00:12:34,755
+in a write back cache,
+
+280
+00:12:34,755 --> 00:12:35,870
+we'll write it in memory,
+
+281
+00:12:36,760 --> 00:12:38,490
+but we're not required to write it back right away,
+
+282
+00:12:38,490 --> 00:12:40,620
+we'll do it at some, some later point,
+
+283
+00:12:40,620 --> 00:12:42,860
+there be a background thread or an eviction policy that do this.
+
+284
+00:12:43,740 --> 00:12:45,305
+And so we won't talk about this today,
+
+285
+00:12:45,305 --> 00:12:46,420
+but there'll, there'll be a,
+
+286
+00:12:46,680 --> 00:12:48,940
+think of there a separate log file, write ahead log,
+
+287
+00:12:49,650 --> 00:12:51,490
+that'll keep track of what changes we made,
+
+288
+00:12:52,110 --> 00:12:53,915
+and we'll make sure that thing gets flushed a disk,
+
+289
+00:12:53,915 --> 00:12:55,120
+before our dirty pages do,
+
+290
+00:12:56,540 --> 00:12:58,150
+we don't have to know that for now,
+
+291
+00:12:58,150 --> 00:13:01,440
+just to be mindful that even though we may update pages,
+
+292
+00:13:01,670 --> 00:13:03,720
+we're not required to write them back right away in memory.
+
+293
+00:13:06,490 --> 00:13:08,715
+I said that the internal data structure, we're going to use
+
+294
+00:13:08,715 --> 00:13:11,150
+to keep track of what is actually in our frames
+
+295
+00:13:11,560 --> 00:13:12,890
+is going to be called the page table,
+
+296
+00:13:13,660 --> 00:13:15,105
+again, the OS has its own page table,
+
+297
+00:13:15,105 --> 00:13:16,515
+this is the database page table,
+
+298
+00:13:16,515 --> 00:13:17,060
+it's better.
+
+299
+00:13:18,460 --> 00:13:21,110
+And so it's typically going to be a fixed size hash table,
+
+300
+00:13:22,630 --> 00:13:23,715
+that is just keeping track of,
+
+301
+00:13:23,715 --> 00:13:26,120
+here's the, here's all my frames, right,
+
+302
+00:13:26,440 --> 00:13:27,440
+identified by some frame ID
+
+303
+00:13:27,910 --> 00:13:31,440
+and then here's the, here's the page information,
+
+304
+00:13:31,440 --> 00:13:35,570
+that's, that's currently residing in that, in that page,
+
+305
+00:13:35,860 --> 00:13:38,270
+I could just be a pointer to where that page is actually located,
+
+306
+00:13:39,120 --> 00:13:42,410
+and we I have to protect this page table with with a latch,
+
+307
+00:13:42,790 --> 00:13:43,830
+which I'll describe in a second,
+
+308
+00:13:43,830 --> 00:13:45,200
+think of a, like a mutex,
+
+309
+00:13:45,610 --> 00:13:49,340
+that allows us to have multiple threads or multiple workers
+
+310
+00:13:50,620 --> 00:13:52,760
+accessing the the the page table, at the same time,
+
+311
+00:13:53,110 --> 00:13:54,690
+I don't want to use term threads
+
+312
+00:13:54,690 --> 00:13:56,420
+and it's, it's better to use terms workers,
+
+313
+00:13:56,500 --> 00:13:58,610
+because like in Postgres, in older systems,
+
+314
+00:13:59,110 --> 00:14:01,580
+they don't, they're not multi threaded, they're multi process
+
+315
+00:14:02,020 --> 00:14:04,035
+and so, but the idea is still the same,
+
+316
+00:14:04,035 --> 00:14:04,770
+we want to make sure that,
+
+317
+00:14:04,770 --> 00:14:06,860
+if there's multiple workers touching things and updating things,
+
+318
+00:14:07,030 --> 00:14:08,240
+they don't, they don't have,
+
+319
+00:14:09,130 --> 00:14:11,300
+when we're in the critical sections, we don't break things.
+
+320
+00:14:13,290 --> 00:14:15,305
+So in addition to keeping track of like,
+
+321
+00:14:15,305 --> 00:14:18,820
+here's the, the pointer to the page in our buffer pool and in the frame,
+
+322
+00:14:19,230 --> 00:14:20,750
+we're also going to have additional metadata
+
+323
+00:14:20,750 --> 00:14:24,340
+about how the pages are being used throughout the system.
+
+324
+00:14:25,300 --> 00:14:27,525
+So the first thing we would have obviously is a dirty flag,
+
+325
+00:14:27,525 --> 00:14:30,380
+that tells us whether a query has updated a page
+
+326
+00:14:30,400 --> 00:14:31,790
+since we last brought it into memory,
+
+327
+00:14:32,620 --> 00:14:34,580
+we'll also have a Pin or reference counter,
+
+328
+00:14:35,020 --> 00:14:38,540
+that keeps track of the number of, number of workers,
+
+329
+00:14:39,190 --> 00:14:41,510
+that require this page to remain in memory
+
+330
+00:14:42,100 --> 00:14:46,350
+and therefore it can't be evicted when we run our eviction policy, right,
+
+331
+00:14:46,350 --> 00:14:48,860
+so for each page, page three here,
+
+332
+00:14:49,090 --> 00:14:52,370
+say there's some query that is accessing it at this given time,
+
+333
+00:14:52,780 --> 00:14:54,615
+so in our page table we have a little counter,
+
+334
+00:14:54,615 --> 00:14:57,990
+says there's at least one worker, that's accessing it,
+
+335
+00:14:59,740 --> 00:15:04,020
+and then now say if a, another query comes along
+
+336
+00:15:04,310 --> 00:15:07,500
+and was looking for another page, that's not in our page table,
+
+337
+00:15:08,420 --> 00:15:10,110
+we'll put a latch on it, protect it,
+
+338
+00:15:10,370 --> 00:15:11,550
+go fetch the data we need,
+
+339
+00:15:11,630 --> 00:15:12,930
+in this case we need page two,
+
+340
+00:15:13,100 --> 00:15:15,660
+we update a free frame in our, in our buffer pool,
+
+341
+00:15:16,130 --> 00:15:18,450
+update the page table to now point to this buffer pool,
+
+342
+00:15:19,010 --> 00:15:21,280
+update any metadata we need to know about it,
+
+343
+00:15:21,280 --> 00:15:23,300
+like, who accessed it,
+
+344
+00:15:23,300 --> 00:15:25,480
+when they last accessed it and so forth,
+
+345
+00:15:26,130 --> 00:15:30,610
+and then once this query is done doing whatever its update needs to the page table,
+
+346
+00:15:30,840 --> 00:15:31,840
+we can release the latch,
+
+347
+00:15:32,430 --> 00:15:35,110
+return that worker back to whatever is doing,
+
+348
+00:15:35,430 --> 00:15:38,140
+and then now any other worker that comes along looking for page two
+
+349
+00:15:38,280 --> 00:15:39,850
+will find it in this page table.
+
+350
+00:15:44,030 --> 00:15:44,820
+Pretty simple, right?
+
+351
+00:15:48,550 --> 00:15:50,390
+So I used this term latch
+
+352
+00:15:51,430 --> 00:15:53,900
+and purposely did not say lock,
+
+353
+00:15:55,450 --> 00:15:56,330
+anyone guess why.
+
+354
+00:15:58,890 --> 00:15:59,290
+Yes.
+
+355
+00:15:59,670 --> 00:16:04,190
+He says the standard locks that we have,
+
+356
+00:16:04,780 --> 00:16:05,955
+locks and latches we have are different,
+
+357
+00:16:05,955 --> 00:16:07,010
+different from who or what.
+
+358
+00:16:19,570 --> 00:16:20,240
+So he says,
+
+359
+00:16:20,590 --> 00:16:25,400
+he said that there's that latches have some database magic,
+
+360
+00:16:25,990 --> 00:16:27,860
+that's better for our purposes versus locks.
+
+361
+00:16:29,740 --> 00:16:30,290
+Not quite.
+
+362
+00:16:31,720 --> 00:16:32,120
+Yes.
+
+363
+00:16:35,230 --> 00:16:36,680
+He said locks for user space,
+
+364
+00:16:37,450 --> 00:16:39,855
+I mean, the database system is running in user space,
+
+365
+00:16:39,855 --> 00:16:42,980
+but it's for logical things in the database, correct, yes.
+
+366
+00:16:43,510 --> 00:16:44,670
+So right, so this trips people up,
+
+367
+00:16:44,670 --> 00:16:46,910
+when they come from like like a more OS background.
+
+368
+00:16:47,650 --> 00:16:49,020
+So in the database world,
+
+369
+00:16:49,020 --> 00:16:50,990
+we have this distinction between locks and latches,
+
+370
+00:16:51,580 --> 00:16:56,040
+so a locks to protect these higher level concepts or objects in our database,
+
+371
+00:16:56,420 --> 00:16:59,130
+a tuple, a table, a database,
+
+372
+00:16:59,720 --> 00:17:01,080
+I take locks on these things,
+
+373
+00:17:01,820 --> 00:17:02,740
+and what will happen is,
+
+374
+00:17:02,740 --> 00:17:04,150
+we haven't discussed what transactions are just yet,
+
+375
+00:17:04,150 --> 00:17:05,940
+but think of like I want to do multiple updates,
+
+376
+00:17:06,140 --> 00:17:08,220
+it's like multiple round trips of SQL queries,
+
+377
+00:17:08,450 --> 00:17:10,500
+and so if I take a lock on something,
+
+378
+00:17:10,880 --> 00:17:13,200
+I want to hold it for the length of that transaction,
+
+379
+00:17:14,350 --> 00:17:16,290
+and because, he's saying user space,
+
+380
+00:17:16,290 --> 00:17:20,025
+but it's like the application is the one that's that's creating these locks
+
+381
+00:17:20,025 --> 00:17:22,430
+or the database system creating these locks on the behalf of the application,
+
+382
+00:17:22,930 --> 00:17:24,410
+we assume that they're stupid
+
+383
+00:17:24,820 --> 00:17:28,190
+and therefore we need to make sure that they don't have deadlocks or other problems,
+
+384
+00:17:28,900 --> 00:17:30,705
+so we have to have these additional protection mechanisms
+
+385
+00:17:30,705 --> 00:17:35,270
+to make sure that the Javascript programmer doesn't do something they shouldn't be doing, right.
+
+386
+00:17:36,170 --> 00:17:39,070
+Latches are the low level internal primitives,
+
+387
+00:17:39,070 --> 00:17:43,375
+we're going to use to protect the critical sections of our database system, right,
+
+388
+00:17:43,375 --> 00:17:45,490
+and these are what the database system developers are using,
+
+389
+00:17:45,490 --> 00:17:47,970
+you had use in, in project #0, right,
+
+390
+00:17:48,440 --> 00:17:50,305
+you have to take a mutex, right,
+
+391
+00:17:50,305 --> 00:17:54,490
+so a latch is basically like a low level mutex, right.
+
+392
+00:17:55,170 --> 00:17:56,980
+And because, this is meant to be,
+
+393
+00:17:57,060 --> 00:18:01,490
+latches are being used by the database system developers, meaning us, right,
+
+394
+00:18:01,490 --> 00:18:06,500
+it's not going to have the, the, the deadlock detection and other protection mechanisms we need,
+
+395
+00:18:06,500 --> 00:18:08,620
+because if we're the ones building a database system,
+
+396
+00:18:08,730 --> 00:18:11,110
+we need to be smart enough to make sure we don't have deadlocks.
+
+397
+00:18:12,110 --> 00:18:15,535
+And so latches are really meant to be like quick in and out critical section,
+
+398
+00:18:15,535 --> 00:18:16,620
+do something and release it,
+
+399
+00:18:16,790 --> 00:18:19,900
+and we need to through through programmer discipline, we need,
+
+400
+00:18:19,900 --> 00:18:22,710
+we're the ones, we have to make sure that, we don't, don't have deadlocks,
+
+401
+00:18:24,140 --> 00:18:25,030
+now, this is confusing,
+
+402
+00:18:25,030 --> 00:18:27,900
+because this is also in C++ the standard library,
+
+403
+00:18:28,190 --> 00:18:30,150
+there's also, they use the term latches,
+
+404
+00:18:30,350 --> 00:18:31,830
+but that's just a countdown barrier,
+
+405
+00:18:31,970 --> 00:18:33,280
+we don't want that, we don't need that,
+
+406
+00:18:33,280 --> 00:18:34,680
+we're going to roll around latches,
+
+407
+00:18:34,880 --> 00:18:36,205
+we'll see this more next week,
+
+408
+00:18:36,205 --> 00:18:38,760
+when we talk about index concurrency control for B+ trees,
+
+409
+00:18:40,400 --> 00:18:42,820
+but for now, just assume you can treat it as a mutex,
+
+410
+00:18:44,560 --> 00:18:45,735
+we don't want to use the OS metux,
+
+411
+00:18:45,735 --> 00:18:46,520
+that has other problems,
+
+412
+00:18:46,540 --> 00:18:47,360
+we'll cover that later.
+
+413
+00:18:50,450 --> 00:18:52,000
+All right, again, another importantent distinction,
+
+414
+00:18:52,000 --> 00:18:52,710
+I've already said this,
+
+415
+00:18:52,880 --> 00:18:54,360
+between the page directory and the page table.
+
+416
+00:18:54,680 --> 00:18:59,230
+The page directory is just the the a disk residenton mapping
+
+417
+00:18:59,230 --> 00:19:04,650
+between page IDs and their locations on the physical disk on, on the actual files themselves,
+
+418
+00:19:05,390 --> 00:19:08,760
+but the page table is gonna be this ephemeral in memory memory mapping,
+
+419
+00:19:09,170 --> 00:19:11,760
+that we use to identify for a given page id,
+
+420
+00:19:12,170 --> 00:19:14,550
+here's the frame where it's actually located
+
+421
+00:19:14,810 --> 00:19:16,390
+and if it's not in our page table,
+
+422
+00:19:16,390 --> 00:19:17,935
+we know we have to look in the page directory
+
+423
+00:19:17,935 --> 00:19:19,530
+to go find where it is on disk
+
+424
+00:19:19,730 --> 00:19:21,990
+and go bring it in, right.
+
+425
+00:19:23,500 --> 00:19:26,570
+So most of the time the query is going to be hitting up the page table,
+
+426
+00:19:26,740 --> 00:19:28,730
+but it's only when the page table says something's not there,
+
+427
+00:19:28,960 --> 00:19:31,230
+then there needs to be some mechanism through,
+
+428
+00:19:31,230 --> 00:19:32,280
+like the disk scheduler or something,
+
+429
+00:19:32,280 --> 00:19:34,100
+that says, all right, let me look at the page directory,
+
+430
+00:19:34,330 --> 00:19:36,075
+let me go get the fetch the page from disk
+
+431
+00:19:36,075 --> 00:19:37,580
+and then put it into the page table.
+
+432
+00:19:38,590 --> 00:19:38,990
+Okay?
+
+433
+00:19:40,560 --> 00:19:42,910
+So what I've shown you so far is a basic page table,
+
+434
+00:19:43,410 --> 00:19:45,550
+it's a hash table, some extra metadata,
+
+435
+00:19:46,140 --> 00:19:47,140
+if the page is there,
+
+436
+00:19:47,820 --> 00:19:48,700
+for given page id,
+
+437
+00:19:48,810 --> 00:19:50,080
+you get back a pointer to it,
+
+438
+00:19:50,160 --> 00:19:51,020
+if it's not there,
+
+439
+00:19:51,020 --> 00:19:53,380
+there's some mechanism to go get get it from disk,
+
+440
+00:19:53,400 --> 00:19:55,570
+then install it into a free frame,
+
+441
+00:19:55,950 --> 00:19:59,090
+then the page table has has the entry, right.
+
+442
+00:19:59,920 --> 00:20:03,385
+But this is going to be, this is going to be a big bottleneck
+
+443
+00:20:03,385 --> 00:20:06,630
+unless we're clever and smart about exploiting the information we know
+
+444
+00:20:06,980 --> 00:20:09,330
+about what is going on inside our database system,
+
+445
+00:20:12,290 --> 00:20:13,135
+for us, to make decisions,
+
+446
+00:20:13,135 --> 00:20:14,200
+how we want to allocate things
+
+447
+00:20:14,200 --> 00:20:18,390
+and and decide who gets what page, at what time and what location
+
+448
+00:20:19,010 --> 00:20:20,610
+and what how we decide to evict things,
+
+449
+00:20:21,020 --> 00:20:22,975
+because if we don't do, we don't want to exploit the information,
+
+450
+00:20:22,975 --> 00:20:24,630
+we know about what our queries want to do,
+
+451
+00:20:24,800 --> 00:20:25,960
+what our data looks like,
+
+452
+00:20:25,960 --> 00:20:27,030
+what our access patterns are,
+
+453
+00:20:27,620 --> 00:20:28,980
+then we're no better than the OS,
+
+454
+00:20:29,680 --> 00:20:32,100
+the OS doesn't see anything going on inside our database system,
+
+455
+00:20:32,510 --> 00:20:37,260
+so, you know, if we just blindly go take requests and go take them out,
+
+456
+00:20:38,060 --> 00:20:40,580
+we're no better than the OS, right.
+
+457
+00:20:41,950 --> 00:20:45,380
+So some of these techniques we'll talk about, these optimizations,
+
+458
+00:20:47,710 --> 00:20:50,510
+this is going to motivate why we need to write our own buffer pool manager,
+
+459
+00:20:50,740 --> 00:20:51,920
+why we don't want to use OS,
+
+460
+00:20:53,020 --> 00:20:55,580
+and it would be a combination of policies,
+
+461
+00:20:55,810 --> 00:20:58,790
+that will affect all queries of running at the same time,
+
+462
+00:21:00,610 --> 00:21:05,000
+or it could be things that are gonna just help a, a single query by itself,
+
+463
+00:21:05,290 --> 00:21:08,210
+maybe not necessarily worrying about other queries that are running the same time,
+
+464
+00:21:08,560 --> 00:21:11,970
+but we can isolate the decisions we make for that query,
+
+465
+00:21:11,970 --> 00:21:15,790
+so that they don't try not to affect others, right.
+
+466
+00:21:16,820 --> 00:21:20,250
+And I'm not going to say one of these approaches can be better than another,
+
+467
+00:21:20,690 --> 00:21:22,500
+but you will see that as we go along,
+
+468
+00:21:23,440 --> 00:21:26,750
+all the major database systems are going to use some combination of all of them,
+
+469
+00:21:26,950 --> 00:21:30,110
+or some of them, most of them, right,
+
+470
+00:21:30,490 --> 00:21:34,280
+so I can't say you know which one is the most important one to implement first,
+
+471
+00:21:34,630 --> 00:21:37,010
+but we'll see as we go along.
+
+472
+00:21:39,220 --> 00:21:40,500
+All right, so the things I talk about is,
+
+473
+00:21:41,330 --> 00:21:42,360
+using multiple buffer pools,
+
+474
+00:21:42,500 --> 00:21:44,035
+actually, that's probably the first one I take back,
+
+475
+00:21:44,035 --> 00:21:44,490
+what I said,
+
+476
+00:21:44,600 --> 00:21:46,680
+multiple buffer pools is obvious thing to do first,
+
+477
+00:21:47,180 --> 00:21:48,060
+we'll see what that looks like,
+
+478
+00:21:48,200 --> 00:21:51,330
+pre-fetching is more complicated, scan sharing and then buffer pool bypass.
+
+479
+00:21:53,630 --> 00:21:56,910
+All right, so, my toy example I shared the beginning,
+
+480
+00:21:57,020 --> 00:21:59,520
+we said there was one page table, one set of frames,
+
+481
+00:21:59,750 --> 00:22:02,160
+and that was it for the entire system, right.
+
+482
+00:22:02,750 --> 00:22:06,490
+But then again, because there's multiple workers running at the same time,
+
+483
+00:22:06,490 --> 00:22:08,850
+we had to use these latches to protect the data structure,
+
+484
+00:22:09,260 --> 00:22:13,860
+and for a large number of CPU cores or large number of workers running at the same time,
+
+485
+00:22:14,210 --> 00:22:17,690
+those latches are going to become a bottleneck, right.
+
+486
+00:22:17,860 --> 00:22:19,580
+We can, because it's fixed,
+
+487
+00:22:20,230 --> 00:22:21,620
+assuming the page table is fixed size,
+
+488
+00:22:22,270 --> 00:22:24,170
+we don't have to have a latch for the entire page table,
+
+489
+00:22:24,700 --> 00:22:29,300
+have latch for individual pages or, or locations in, in the hash table,
+
+490
+00:22:29,470 --> 00:22:30,120
+but even then,
+
+491
+00:22:30,120 --> 00:22:33,290
+if everybody's trying to go get the same small number of pages,
+
+492
+00:22:33,880 --> 00:22:37,530
+then those latches are gonna be a, a bottleneck, right.
+
+493
+00:22:38,510 --> 00:22:44,245
+So an easy way to alleviate this contention point is
+
+494
+00:22:44,245 --> 00:22:45,570
+to have multiple buffer pools,
+
+495
+00:22:46,200 --> 00:22:47,780
+so I still allocate the same amount of memory,
+
+496
+00:22:48,070 --> 00:22:49,880
+so I have to tell the database system when I boot up,
+
+497
+00:22:49,930 --> 00:22:52,400
+I want 10 gigs of memory, for my buffer pool,
+
+498
+00:22:52,780 --> 00:22:54,135
+but I'm going to take those 10 gigs
+
+499
+00:22:54,135 --> 00:22:58,820
+and I can divide it into equal size chunks,
+
+500
+00:22:59,400 --> 00:23:01,640
+and then now have a separate page table for each of them.
+
+501
+00:23:04,360 --> 00:23:05,480
+It also ensures that,
+
+502
+00:23:05,650 --> 00:23:10,410
+that for certain access patterns on certain data structure,
+
+503
+00:23:10,410 --> 00:23:11,780
+sorry, certain objects in the database,
+
+504
+00:23:12,670 --> 00:23:14,000
+I can have different policies,
+
+505
+00:23:14,080 --> 00:23:16,010
+that can affect one buffer pool versus another,
+
+506
+00:23:16,300 --> 00:23:18,650
+based on how I know that object is going to be used.
+
+507
+00:23:19,600 --> 00:23:21,060
+So for example, in, in DB2,
+
+508
+00:23:21,255 --> 00:23:25,730
+DB2 probably has the the most sophisticated buffer pool management configurations,
+
+509
+00:23:26,290 --> 00:23:28,460
+where you can actually define a table space,
+
+510
+00:23:30,190 --> 00:23:31,310
+like a namespace,
+
+511
+00:23:31,870 --> 00:23:33,830
+and that is backed by a given buffer pool,
+
+512
+00:23:33,970 --> 00:23:36,650
+you can set what the page size should be for that buffer pool
+
+513
+00:23:36,850 --> 00:23:40,550
+and you can tell which tables will be managed or indexes will be managed by that buffer pool.
+
+514
+00:23:41,440 --> 00:23:46,790
+So let's say you have like one table that is is primarily used for random access,
+
+515
+00:23:47,140 --> 00:23:48,110
+you could have some policies,
+
+516
+00:23:48,130 --> 00:23:52,580
+eviction policies based on, you know, for that, that's optimal for random access,
+
+517
+00:23:52,870 --> 00:23:54,180
+then you have another, another buffer pool,
+
+518
+00:23:54,180 --> 00:23:56,130
+that's for these other tables, you're doing sequential scans,
+
+519
+00:23:56,130 --> 00:23:58,245
+so you have different buffer policies for that sequential scan,
+
+520
+00:23:58,245 --> 00:24:00,740
+maybe use larger page page sizes, right.
+
+521
+00:24:01,630 --> 00:24:03,870
+As far as I know, DB2 is the only one that lets you do this,
+
+522
+00:24:03,870 --> 00:24:06,170
+I haven't seen Postgres, MySQL certainly can't do this,
+
+523
+00:24:07,780 --> 00:24:09,855
+and I don't know about the other enterprise ones,
+
+524
+00:24:09,855 --> 00:24:12,800
+but like the DB2 one is very sophisticated.
+
+525
+00:24:13,520 --> 00:24:16,660
+And again, this allows you to customize the buffer pool management
+
+526
+00:24:16,890 --> 00:24:19,420
+for exactly how that object is going to be used.
+
+527
+00:24:21,370 --> 00:24:22,005
+Now the question is,
+
+528
+00:24:22,005 --> 00:24:27,080
+how do you find at runtime what buffer pool manager should you use.
+
+529
+00:24:28,090 --> 00:24:29,130
+So let's say a really simple example,
+
+530
+00:24:29,130 --> 00:24:30,290
+here I have two buffer pools
+
+531
+00:24:31,450 --> 00:24:33,170
+and so the first thing I can just do is, is,
+
+532
+00:24:33,280 --> 00:24:34,755
+as I said in the DB2 case,
+
+533
+00:24:34,755 --> 00:24:38,730
+I can assign a buffer pool [do to] back a given object
+
+534
+00:24:38,730 --> 00:24:39,920
+based on some kind of identifier,
+
+535
+00:24:40,120 --> 00:24:43,440
+like table one, two, three, table, whatever, that's buffer pool #1
+
+536
+00:24:43,440 --> 00:24:45,590
+and all, all other tables are buffer pool #2.
+
+537
+00:24:46,470 --> 00:24:48,880
+So, now runtime, when I have a request,
+
+538
+00:24:48,960 --> 00:24:50,260
+this is obviously not SQL,
+
+539
+00:24:50,430 --> 00:24:53,465
+but somehow I got through index look up,
+
+540
+00:24:53,465 --> 00:24:55,540
+I figured out that I want to look at record one, two, three,
+
+541
+00:24:56,260 --> 00:24:59,790
+and we saw before how we can break the record ID into its individual components,
+
+542
+00:25:00,260 --> 00:25:02,430
+usually like a page ID or a slot number,
+
+543
+00:25:02,990 --> 00:25:04,030
+but in case a SQL Server,
+
+544
+00:25:04,030 --> 00:25:07,380
+it also had a file number or object ID,
+
+545
+00:25:08,360 --> 00:25:10,260
+so we can use this from the record ID,
+
+546
+00:25:11,080 --> 00:25:12,025
+then you'll look up and say,
+
+547
+00:25:12,025 --> 00:25:16,540
+okay, you know, object four, five, six, that's managed by buffer #1,
+
+548
+00:25:16,540 --> 00:25:18,840
+and then send the request to that buffer pool,
+
+549
+00:25:19,450 --> 00:25:22,670
+and all the requests for other other objects may end to another buffer pool,
+
+550
+00:25:22,720 --> 00:25:23,840
+and I've isolated them,
+
+551
+00:25:24,130 --> 00:25:26,960
+so that there's less last contention between the two of them.
+
+552
+00:25:29,110 --> 00:25:29,850
+The simplest approach,
+
+553
+00:25:29,850 --> 00:25:32,310
+then, is to do, what MySQL does is,
+
+554
+00:25:32,310 --> 00:25:33,710
+you just take the the record ID,
+
+555
+00:25:34,150 --> 00:25:37,250
+hash it, modify the number of buffer pool managers you have
+
+556
+00:25:37,600 --> 00:25:40,710
+and that tells you which one you go to, right,
+
+557
+00:25:41,870 --> 00:25:42,480
+pretty simple.
+
+558
+00:25:42,800 --> 00:25:43,200
+Yes.
+
+559
+00:25:43,430 --> 00:25:48,995
+Yeah, so, so he said that the question is,
+
+560
+00:25:48,995 --> 00:25:52,840
+do you have to statically allocate how much memory each buffer pool has,
+
+561
+00:25:53,430 --> 00:25:58,055
+yes, and so in in Postgres, MySQL, in most systems,
+
+562
+00:25:58,055 --> 00:25:59,855
+you cannot change the size of the buffer pool
+
+563
+00:25:59,855 --> 00:26:01,630
+without actually having to restart the entire system,
+
+564
+00:26:02,400 --> 00:26:05,740
+actually, in that all the open source systems have that limitation,
+
+565
+00:26:06,120 --> 00:26:08,045
+the commercial systems could be kind of clever
+
+566
+00:26:08,045 --> 00:26:10,660
+and like I think in Oracle,
+
+567
+00:26:10,660 --> 00:26:12,030
+you can, you can increase the buffer pool size
+
+568
+00:26:12,560 --> 00:26:14,125
+and it'll allocate the memory
+
+569
+00:26:14,125 --> 00:26:19,080
+and then slowly increment and migrate pages over from page to the next, right,
+
+570
+00:26:19,250 --> 00:26:20,065
+that's a tricky thing,
+
+571
+00:26:20,065 --> 00:26:22,230
+but most systems are statically allocated.
+
+572
+00:26:30,340 --> 00:26:32,390
+Yeah, so his question is could this,
+
+573
+00:26:32,470 --> 00:26:34,860
+could this mean that you potentially wasting memory,
+
+574
+00:26:34,860 --> 00:26:36,290
+if you partition say by table,
+
+575
+00:26:37,540 --> 00:26:39,080
+so for example, if I, if I say,
+
+576
+00:26:39,430 --> 00:26:40,490
+I make a new buffer pool,
+
+577
+00:26:40,630 --> 00:26:42,440
+I put, I say it has 10 gigs
+
+578
+00:26:42,460 --> 00:26:43,880
+and I say you're gonna manage this table,
+
+579
+00:26:44,350 --> 00:26:45,980
+but I don't put any data in that table,
+
+580
+00:26:46,270 --> 00:26:47,210
+is that wasting space,
+
+581
+00:26:47,620 --> 00:26:48,020
+yes,
+
+582
+00:26:49,250 --> 00:26:51,360
+but like the database system did exactly what you wanted to do,
+
+583
+00:26:52,250 --> 00:26:54,895
+the human was stupid, right,
+
+584
+00:26:54,895 --> 00:26:55,560
+I mean, there's not,
+
+585
+00:26:56,870 --> 00:26:58,530
+yeah, because the problem, it doesn't know,
+
+586
+00:26:58,760 --> 00:27:01,770
+you think, okay, well, only allocate it when demand is needed,
+
+587
+00:27:02,060 --> 00:27:08,290
+but like, the amount of engineering effort to, to sort of accommodate stupid people,
+
+588
+00:27:08,520 --> 00:27:10,390
+it's probably not worth it in that case, right.
+
+589
+00:27:10,530 --> 00:27:11,810
+If you're using DB2,
+
+590
+00:27:11,810 --> 00:27:12,910
+in theory, you know,
+
+591
+00:27:13,290 --> 00:27:15,335
+if you're calling create buffer pool the command to do it,
+
+592
+00:27:15,335 --> 00:27:18,250
+you kind of should be knowing what you're doing, right, like.
+
+593
+00:27:23,460 --> 00:27:25,265
+All right, so again, in my opinion,
+
+594
+00:27:25,265 --> 00:27:26,120
+I think about what I said,
+
+595
+00:27:26,120 --> 00:27:27,880
+this is actually the first optimization you do
+
+596
+00:27:28,140 --> 00:27:29,590
+to scale your buffer pool manager,
+
+597
+00:27:29,760 --> 00:27:31,600
+because it's not that much, much work,
+
+598
+00:27:31,770 --> 00:27:34,330
+the hashing one probably the easiest one to do as well,
+
+599
+00:27:36,280 --> 00:27:37,965
+because there's no central data structure to say,
+
+600
+00:27:37,965 --> 00:27:39,915
+okay, for this object, go to this one,
+
+601
+00:27:39,915 --> 00:27:41,390
+you just hash it and you're done.
+
+602
+00:27:44,320 --> 00:27:46,190
+The next optimization we can do is pre-fetching,
+
+603
+00:27:47,550 --> 00:27:48,910
+again, the OS to do pre-fetching,
+
+604
+00:27:50,310 --> 00:27:52,630
+we'll see for simple cases,
+
+605
+00:27:52,680 --> 00:27:54,450
+where you're doing sequential scans,
+
+606
+00:27:54,450 --> 00:27:56,230
+we'll see one case, where it can't do it.
+
+607
+00:27:56,520 --> 00:27:57,700
+So the basic idea is that,
+
+608
+00:27:58,540 --> 00:27:59,820
+if you run a query
+
+609
+00:28:00,590 --> 00:28:04,320
+and it has to start accessing data in your table,
+
+610
+00:28:05,570 --> 00:28:06,960
+it's going to open up a cursor,
+
+611
+00:28:07,460 --> 00:28:10,380
+that start scanning through the page one by one,
+
+612
+00:28:11,630 --> 00:28:14,065
+and so assuming this in our example here,
+
+613
+00:28:14,065 --> 00:28:15,330
+our buffer pool is empty,
+
+614
+00:28:15,680 --> 00:28:19,500
+so the very first page that it sees page0,
+
+615
+00:28:19,700 --> 00:28:20,760
+it's not in the buffer pool,
+
+616
+00:28:20,930 --> 00:28:22,890
+so we again, we just go copy and put that in,
+
+617
+00:28:23,430 --> 00:28:24,245
+then we scan along,
+
+618
+00:28:24,245 --> 00:28:26,020
+we need page1, page1 is not there,
+
+619
+00:28:26,340 --> 00:28:28,150
+so go go goes ahead and copy that,
+
+620
+00:28:28,770 --> 00:28:30,725
+but now the database system can be smart and say,
+
+621
+00:28:30,725 --> 00:28:33,680
+okay, well, you've read page0, read page1,
+
+622
+00:28:33,680 --> 00:28:37,840
+it's very likely you're gonna read page 2, 3 and, and so and so forth,
+
+623
+00:28:38,460 --> 00:28:40,630
+so let me go ahead and pre-fetch those guys,
+
+624
+00:28:41,870 --> 00:28:45,000
+while the database system is processing page1,
+
+625
+00:28:46,090 --> 00:28:48,830
+all right, go get page2, page3, put it in,
+
+626
+00:28:49,450 --> 00:28:53,420
+so that by the time you're finished processing page1
+
+627
+00:28:53,710 --> 00:28:54,690
+and you come to page2,
+
+628
+00:28:54,690 --> 00:28:56,000
+[] and behold, the page you're looking,
+
+629
+00:28:56,680 --> 00:29:00,770
+the next page you need is already there, right,
+
+630
+00:29:00,770 --> 00:29:02,920
+and just do this all the way down the line, right.
+
+631
+00:29:03,060 --> 00:29:04,900
+We haven't talked about how we execute queries just yet,
+
+632
+00:29:05,130 --> 00:29:06,970
+but typically the way it works is that,
+
+633
+00:29:07,530 --> 00:29:08,950
+you request a page,
+
+634
+00:29:09,480 --> 00:29:10,810
+it's going to have a bunch of tuples in it,
+
+635
+00:29:10,980 --> 00:29:14,650
+you do some kind of computation inside the data, that's in those tuples,
+
+636
+00:29:14,940 --> 00:29:16,090
+and then when you're done,
+
+637
+00:29:16,620 --> 00:29:17,620
+go get the next page,
+
+638
+00:29:18,510 --> 00:29:21,850
+as you're doing your scan along the leaf nodes of the query plan tree.
+
+639
+00:29:22,440 --> 00:29:25,370
+And so it's not like we're just blindly ripping through the pages
+
+640
+00:29:25,870 --> 00:29:27,440
+and say, you know, get, get, get, get,
+
+641
+00:29:27,910 --> 00:29:30,500
+it get some think time, do some compute,
+
+642
+00:29:31,180 --> 00:29:32,460
+then go get the next page,
+
+643
+00:29:32,460 --> 00:29:34,635
+and so that think time is where the database system say,
+
+644
+00:29:34,635 --> 00:29:35,760
+I I have some time to go ahead
+
+645
+00:29:35,760 --> 00:29:38,950
+and pre-fetch the things that that you're needing, right.
+
+646
+00:29:39,960 --> 00:29:41,360
+And I don't have the diagram here,
+
+647
+00:29:41,360 --> 00:29:45,755
+but this is why we have that, that [pinning] mechanism before, right,
+
+648
+00:29:45,755 --> 00:29:47,860
+I don't obviously don't want to fetch in page1,
+
+649
+00:29:48,540 --> 00:29:50,690
+then the database system says, in a background thread,
+
+650
+00:29:50,690 --> 00:29:53,020
+okay, let me go prefetch page3 and 2
+
+651
+00:29:53,220 --> 00:29:54,695
+and it goes and swaps out page1,
+
+652
+00:29:54,695 --> 00:29:56,240
+while you're still accessing it, right,
+
+653
+00:29:56,240 --> 00:29:59,230
+the pin will will, the [pinning] mechanism will prevent that.
+
+654
+00:30:00,290 --> 00:30:00,690
+Yes.
+
+655
+00:30:07,020 --> 00:30:07,520
+This question,
+
+656
+00:30:07,520 --> 00:30:08,860
+good point, thank you,
+
+657
+00:30:09,060 --> 00:30:09,790
+his question is,
+
+658
+00:30:10,140 --> 00:30:13,690
+is it possible for different buffer, buffer pools to hold the same page,
+
+659
+00:30:13,920 --> 00:30:14,320
+no.
+
+660
+00:30:14,940 --> 00:30:16,365
+It's, it's always been a one more [correspondent],
+
+661
+00:30:16,365 --> 00:30:18,110
+every page can only exist in one buffer pool,
+
+662
+00:30:18,520 --> 00:30:20,660
+because think about what would happen if you allowed that, right,
+
+663
+00:30:23,070 --> 00:30:28,090
+well, you could have the page table pointed the same, point to the same page,
+
+664
+00:30:28,860 --> 00:30:30,310
+different page point to the same page,
+
+665
+00:30:30,540 --> 00:30:32,345
+but then depending where the metadata is,
+
+666
+00:30:32,345 --> 00:30:35,380
+like the reference counter, the pin marker and things like that,
+
+667
+00:30:36,780 --> 00:30:38,315
+like if that's separate and separate pages,
+
+668
+00:30:38,315 --> 00:30:40,340
+then then one buffer pool may say,
+
+669
+00:30:40,340 --> 00:30:41,525
+okay, no one's access to it,
+
+670
+00:30:41,525 --> 00:30:42,700
+let me, let me go swap it out,
+
+671
+00:30:42,780 --> 00:30:44,825
+but the other page table has it, has it pinned
+
+672
+00:30:44,825 --> 00:30:45,640
+and you would miss that.
+
+673
+00:30:46,500 --> 00:30:47,650
+So yeah, for that reason,
+
+674
+00:30:48,690 --> 00:30:49,960
+it's a one one correspondent.
+
+675
+00:30:52,430 --> 00:30:53,200
+That's a good point, thank you.
+
+676
+00:30:54,490 --> 00:30:54,840
+Yes.
+
+677
+00:30:54,840 --> 00:30:59,120
+This question is,
+
+678
+00:30:59,120 --> 00:31:00,880
+what's the relation between a pin counter and a latch,
+
+679
+00:31:01,050 --> 00:31:02,680
+a pin counter just says that,
+
+680
+00:31:03,360 --> 00:31:06,570
+there's some, some,
+
+681
+00:31:08,870 --> 00:31:10,885
+so, the pin counter says,
+
+682
+00:31:10,885 --> 00:31:14,130
+there's some worker that's accessing this page,
+
+683
+00:31:14,510 --> 00:31:15,775
+but I'm not in the page table,
+
+684
+00:31:15,775 --> 00:31:17,490
+right now, when I'm doing it, right,
+
+685
+00:31:17,600 --> 00:31:19,440
+I get the pointer to the page,
+
+686
+00:31:19,700 --> 00:31:20,760
+go back to my original diagram.
+
+687
+00:31:25,050 --> 00:31:25,870
+Right, going back here,
+
+688
+00:31:26,250 --> 00:31:28,280
+so I don't on the page table,
+
+689
+00:31:28,280 --> 00:31:29,750
+but like this guy says,
+
+690
+00:31:29,750 --> 00:31:30,670
+give me page #2,
+
+691
+00:31:31,080 --> 00:31:32,950
+I take a latch in the page table
+
+692
+00:31:33,210 --> 00:31:36,100
+to go get the pointer to that, to that page,
+
+693
+00:31:37,020 --> 00:31:40,370
+and then before I get the pointer back to my execution engine,
+
+694
+00:31:40,480 --> 00:31:41,420
+I pin it,
+
+695
+00:31:42,390 --> 00:31:43,805
+because now I'm not inside the page table,
+
+696
+00:31:43,805 --> 00:31:46,520
+because the pin is latch of protecting the data structure,
+
+697
+00:31:46,520 --> 00:31:47,620
+but I'm out of the data structure,
+
+698
+00:31:47,940 --> 00:31:49,630
+but I have a reference to the page,
+
+699
+00:31:49,950 --> 00:31:51,340
+so the pin is supposed to say,
+
+700
+00:31:51,480 --> 00:31:52,810
+someone is actually reading this page
+
+701
+00:31:53,160 --> 00:31:54,815
+and then when I'm done, done with it,
+
+702
+00:31:54,815 --> 00:31:57,550
+I can then, you know, decrement the reference counter,
+
+703
+00:31:57,720 --> 00:32:00,490
+which potentially unlock the or release the pin,
+
+704
+00:32:01,110 --> 00:32:03,490
+and then now the buffer pool manager can decide,
+
+705
+00:32:03,540 --> 00:32:05,770
+okay, I know for this page #2,
+
+706
+00:32:06,000 --> 00:32:06,935
+nobody has it pinned,
+
+707
+00:32:06,935 --> 00:32:07,775
+there's nobody referencing it,
+
+708
+00:32:07,775 --> 00:32:09,040
+so it's, I'm free to evict it.
+
+709
+00:32:10,160 --> 00:32:11,770
+So again, the latch protects the data structure,
+
+710
+00:32:11,770 --> 00:32:13,320
+the pin pin protects the page.
+
+711
+00:32:13,610 --> 00:32:13,915
+Yes.
+
+712
+00:32:20,740 --> 00:32:22,310
+All right, question is that, the, the.
+
+713
+00:32:23,560 --> 00:32:25,610
+Page tables like separate from the buffer pool?
+
+714
+00:32:26,020 --> 00:32:26,990
+It is the buffer pool.
+
+715
+00:32:27,310 --> 00:32:28,010
+I guess like.
+
+716
+00:32:29,270 --> 00:32:30,760
+Yeah, this is like a diagram,
+
+717
+00:32:30,760 --> 00:32:34,280
+but like, it's in this box, how about that.
+
+718
+00:32:35,620 --> 00:32:37,820
+Right, these are, these are the frames,
+
+719
+00:32:38,590 --> 00:32:40,550
+there are some other page table data structure here.
+
+720
+00:32:54,290 --> 00:32:55,170
+So his question is,
+
+721
+00:32:55,610 --> 00:32:58,470
+does the buffer pool manager have access to the query plan,
+
+722
+00:32:58,610 --> 00:33:01,530
+no, right, because we have these layers,
+
+723
+00:33:01,730 --> 00:33:02,970
+but you can send it hints,
+
+724
+00:33:03,800 --> 00:33:05,170
+BusTub doesn't support those hints,
+
+725
+00:33:05,170 --> 00:33:06,010
+but you can send it hints,
+
+726
+00:33:06,010 --> 00:33:07,410
+like I'm, I'm accessing this page,
+
+727
+00:33:09,350 --> 00:33:12,030
+and here's likely the next pages I'm going to access as well,
+
+728
+00:33:12,440 --> 00:33:14,130
+yes, then you said something about static?
+
+729
+00:33:19,460 --> 00:33:23,320
+What do you might [statically] know?
+
+730
+00:33:34,560 --> 00:33:35,530
+Okay, so his question is,
+
+731
+00:33:36,540 --> 00:33:37,540
+if I have a SELECT query,
+
+732
+00:33:39,540 --> 00:33:41,360
+who's figuring out what the prefetch,
+
+733
+00:33:41,360 --> 00:33:42,430
+maybe that's what you're really asking,
+
+734
+00:33:43,260 --> 00:33:44,590
+this has to [] the execution engine,
+
+735
+00:33:46,000 --> 00:33:47,900
+the buffer pool manager doesn't know about,
+
+736
+00:33:50,610 --> 00:33:53,080
+it's just, yeah, it's, it's sort of division responsibilities,
+
+737
+00:33:53,160 --> 00:33:55,780
+like the [] manager shouldn't have to infer,
+
+738
+00:33:56,250 --> 00:33:59,530
+like for this query plan on on this table, what page that I'm gonna read,
+
+739
+00:33:59,550 --> 00:34:00,670
+that all comes down below,
+
+740
+00:34:00,900 --> 00:34:02,380
+because you think about it too, that's where,
+
+741
+00:34:02,490 --> 00:34:04,715
+the execution has to know what page it needs to read anyway,
+
+742
+00:34:04,715 --> 00:34:05,470
+because as to read them,
+
+743
+00:34:06,170 --> 00:34:08,820
+so all that logic is in that part of the system,
+
+744
+00:34:08,930 --> 00:34:09,900
+which we'll cover in two weeks.
+
+745
+00:34:13,430 --> 00:34:16,860
+Yeah, execution engine should say,
+
+746
+00:34:17,090 --> 00:34:18,895
+I'm fetching page1 now,
+
+747
+00:34:18,895 --> 00:34:21,970
+but by the way, I'm also gonna fetch page 2 and 3, right,
+
+748
+00:34:21,970 --> 00:34:22,495
+because think about it,
+
+749
+00:34:22,495 --> 00:34:23,940
+like you could have a,
+
+750
+00:34:25,430 --> 00:34:27,780
+you could have like, in your SELECT clause, in the query here,
+
+751
+00:34:27,920 --> 00:34:30,390
+you could have a LIMIT 10, right,
+
+752
+00:34:30,470 --> 00:34:31,560
+with no where clause,
+
+753
+00:34:31,970 --> 00:34:35,140
+so in the first page I got five tuples,
+
+754
+00:34:35,140 --> 00:34:36,000
+in the second page,
+
+755
+00:34:36,380 --> 00:34:37,980
+or page0, I got five twoils,
+
+756
+00:34:38,060 --> 00:34:39,870
+in page1, I got two tuples,
+
+757
+00:34:40,580 --> 00:34:42,205
+therefore, I know I'm gonna have to read more pages,
+
+758
+00:34:42,205 --> 00:34:44,700
+so you can send that hint, you know, ahead of time or something like that.
+
+759
+00:34:46,310 --> 00:34:48,970
+Again, that's the beauty of having a declarative language like SQL,
+
+760
+00:34:48,970 --> 00:34:52,575
+where you know what you're going to do ahead of time, right,
+
+761
+00:34:52,575 --> 00:34:54,770
+at least at a high level,
+
+762
+00:34:54,910 --> 00:34:58,850
+with enough, you have enough information where you could make these kind of decisions.
+
+763
+00:35:10,400 --> 00:35:11,460
+So the question is,
+
+764
+00:35:12,080 --> 00:35:13,470
+do you never pre-fetch pages
+
+765
+00:35:14,720 --> 00:35:16,560
+unless you're absolutely certain you're going to need them,
+
+766
+00:35:16,970 --> 00:35:17,790
+maybe that's what you're asking?
+
+767
+00:35:19,645 --> 00:35:23,020
+Actually, I don't. I don't know how aggressive they are, yeah,
+
+768
+00:35:27,040 --> 00:35:28,905
+the commercial systems do this much better
+
+769
+00:35:28,905 --> 00:35:30,410
+and they obviously closed source,
+
+770
+00:35:34,130 --> 00:35:36,840
+so schedule scans is pretty easy for index scans,
+
+771
+00:35:37,250 --> 00:35:37,860
+next slide,
+
+772
+00:35:38,740 --> 00:35:40,830
+this one can be kind of tricky as well,
+
+773
+00:35:40,910 --> 00:35:44,570
+because, you may not be able to prefetch,
+
+774
+00:35:45,450 --> 00:35:49,840
+without following along the the pages as much,
+
+775
+00:35:50,220 --> 00:35:51,815
+you may, may not be to jump ahead,
+
+776
+00:35:51,815 --> 00:35:54,710
+so I think in index scans, the prefetching is a bit more conservative,
+
+777
+00:35:54,710 --> 00:35:58,210
+sequential scan, you could just, you know, you can jump a lot farther.
+
+778
+00:36:00,080 --> 00:36:00,910
+We haven't been talking about,
+
+779
+00:36:00,910 --> 00:36:03,340
+like there's all a bunch of other factors, too,
+
+780
+00:36:03,340 --> 00:36:05,365
+as always the case in databases,
+
+781
+00:36:05,365 --> 00:36:09,400
+like there's, there's like multi versioning,
+
+782
+00:36:09,400 --> 00:36:10,710
+so who knows whether like,
+
+783
+00:36:10,730 --> 00:36:13,075
+you know, yes, the next page I'm gonna read has 10 tuples,
+
+784
+00:36:13,075 --> 00:36:14,970
+but like only three may be visible,
+
+785
+00:36:15,290 --> 00:36:15,840
+it's complicated.
+
+786
+00:36:18,380 --> 00:36:20,475
+All right, so, going back here,
+
+787
+00:36:20,475 --> 00:36:22,370
+sequential scans, the OS can kind of do this,
+
+788
+00:36:23,080 --> 00:36:24,350
+assuming your pages are contiguous,
+
+789
+00:36:24,520 --> 00:36:27,290
+the OS read ahead can can kind of figure this out,
+
+790
+00:36:27,640 --> 00:36:29,300
+what it can't do is
+
+791
+00:36:29,320 --> 00:36:34,280
+infer the the logical data structure that the pages represent physically represent
+
+792
+00:36:35,050 --> 00:36:36,470
+and prefetch according to that,
+
+793
+00:36:37,240 --> 00:36:39,615
+because again, it doesn't know what B+ tree is,
+
+794
+00:36:39,615 --> 00:36:40,710
+doesn't know what a hash table is,
+
+795
+00:36:40,710 --> 00:36:42,020
+at least in the at the page level,
+
+796
+00:36:42,510 --> 00:36:44,110
+but we do, because we're the database system,
+
+797
+00:36:44,370 --> 00:36:46,840
+we, we're the ones actually running it.
+
+798
+00:36:48,080 --> 00:36:48,835
+Let's say, I have a query,
+
+799
+00:36:48,835 --> 00:36:52,320
+like the SELECT * FROM A WHERE val BETWEEN 100 AND 250,
+
+800
+00:36:52,790 --> 00:36:57,480
+and I can do this, by reading, by doing an index scan,
+
+801
+00:36:58,160 --> 00:36:59,410
+we haven't talked about B+ trees yet,
+
+802
+00:36:59,410 --> 00:37:00,820
+but again it's a tree data structure,
+
+803
+00:37:00,820 --> 00:37:02,340
+that shouldn't be foreign to anyone in this class,
+
+804
+00:37:02,720 --> 00:37:04,830
+and then assume that along the leaf nodes,
+
+805
+00:37:05,120 --> 00:37:09,020
+the the values are sorted based on on the key, right.
+
+806
+00:37:09,820 --> 00:37:13,010
+So, to to do this run this particular query,
+
+807
+00:37:13,240 --> 00:37:14,630
+I had to sort of the root node,
+
+808
+00:37:14,650 --> 00:37:16,290
+that's page0, I go get that,
+
+809
+00:37:16,290 --> 00:37:18,380
+put that in my database, put that in my buffer pool,
+
+810
+00:37:18,880 --> 00:37:20,990
+then I traverse down to this side of the tree,
+
+811
+00:37:21,100 --> 00:37:24,140
+I get page1, put that in my buffer pool,
+
+812
+00:37:24,580 --> 00:37:27,020
+but then now I'm gonna jump down to this leaf node here
+
+813
+00:37:27,370 --> 00:37:29,715
+and because I have this this WHERE clause,
+
+814
+00:37:29,715 --> 00:37:33,590
+that is gonna be reading, you know, so so many, so many records,
+
+815
+00:37:34,210 --> 00:37:38,420
+I know I need to at least go to over to to page5, right,
+
+816
+00:37:38,950 --> 00:37:42,470
+so I'll go get page, sorry, I will get page3,
+
+817
+00:37:42,550 --> 00:37:46,010
+but also can potentially prefetch page5,
+
+818
+00:37:46,840 --> 00:37:49,675
+but again, the operating system can't do this, can't know this,
+
+819
+00:37:49,675 --> 00:37:52,670
+because, page3 and page5 are not contiguous,
+
+820
+00:37:53,760 --> 00:37:54,820
+the database system knows,
+
+821
+00:37:54,840 --> 00:37:58,150
+because it knows that if I least get the index-page3,
+
+822
+00:37:58,320 --> 00:38:01,690
+I have a sibling pointer, a page ID,
+
+823
+00:38:01,830 --> 00:38:03,995
+so I know what the next next page I'm going to read
+
+824
+00:38:03,995 --> 00:38:06,430
+over along the leaf nodes as I scan across,
+
+825
+00:38:06,720 --> 00:38:08,320
+so therefore I can go ahead and prefetch that,
+
+826
+00:38:09,380 --> 00:38:12,420
+even though it's not in sequential order of the other pages,
+
+827
+00:38:15,720 --> 00:38:16,790
+and there's just another example,
+
+828
+00:38:16,790 --> 00:38:19,120
+why we want to do this on the side of the database system and not the OS.
+
+829
+00:38:24,050 --> 00:38:26,010
+The next optimization we can do is called scan sharing,
+
+830
+00:38:26,880 --> 00:38:29,810
+sometimes called synchronized scans in some of the older systems.
+
+831
+00:38:30,280 --> 00:38:33,170
+The basic idea here is a bunch of queries show up,
+
+832
+00:38:33,840 --> 00:38:35,150
+they want to access to the same table,
+
+833
+00:38:36,190 --> 00:38:38,960
+one of them gets started and start scanning through the pages,
+
+834
+00:38:39,880 --> 00:38:44,120
+and we can recognize that they need the same data,
+
+835
+00:38:44,500 --> 00:38:45,950
+so [piggy] back off of them
+
+836
+00:38:46,180 --> 00:38:47,930
+and our cursor attaches their cursor
+
+837
+00:38:48,010 --> 00:38:50,450
+and we read the same pages at the same time,
+
+838
+00:38:51,570 --> 00:38:54,430
+so we remove the redundant I/O.
+
+839
+00:38:55,410 --> 00:38:57,070
+So this is different than result caching,
+
+840
+00:38:57,420 --> 00:38:59,300
+which we won't want to talk about the semester,
+
+841
+00:38:59,300 --> 00:39:03,610
+result caching, basically query shows up, I compute some answer,
+
+842
+00:39:04,200 --> 00:39:06,160
+I save that result in a cache,
+
+843
+00:39:06,720 --> 00:39:08,320
+query, same query shows up again,
+
+844
+00:39:08,880 --> 00:39:10,490
+potentially slightly different, which is harder to do,
+
+845
+00:39:10,490 --> 00:39:11,800
+but say the same query shows up again,
+
+846
+00:39:12,030 --> 00:39:13,130
+I have to rerun the query,
+
+847
+00:39:13,130 --> 00:39:14,710
+I just, I just send, send the result back.
+
+848
+00:39:15,440 --> 00:39:18,745
+The scan sharing is really at the low physical levels of the access method,
+
+849
+00:39:18,745 --> 00:39:19,920
+how we're actually scanning the pages,
+
+850
+00:39:20,240 --> 00:39:21,210
+we can recognize that,
+
+851
+00:39:21,350 --> 00:39:23,340
+the two queries need to read the same thing
+
+852
+00:39:23,600 --> 00:39:29,910
+and therefore, we, we can reuse any pages as we go along and fetch them,
+
+853
+00:39:30,320 --> 00:39:33,540
+so we don't have conflicting cursors trying to read the same pages at the same time.
+
+854
+00:39:36,510 --> 00:39:38,890
+All right, so this is repeating what I just said,
+
+855
+00:39:39,150 --> 00:39:43,330
+for the DB2, SQL Server, Teradata and Postgres,
+
+856
+00:39:43,530 --> 00:39:47,950
+they actually support the full scan sharing,
+
+857
+00:39:48,450 --> 00:39:50,440
+for queries that aren't exactly the same,
+
+858
+00:39:50,880 --> 00:39:53,050
+but at least they're, they're reading the same tables.
+
+859
+00:39:54,370 --> 00:39:59,930
+In Oracle, they only support cursor sharing for queries that show up that look exactly the same,
+
+860
+00:40:00,070 --> 00:40:01,695
+I mean literally exactly the same,
+
+861
+00:40:01,695 --> 00:40:05,480
+because they're basically hashing the string, seeing whether there's a match,
+
+862
+00:40:06,250 --> 00:40:07,670
+like if you go look at the documentation,
+
+863
+00:40:08,110 --> 00:40:10,280
+like, if you have queries like SELECT * FROM employees,
+
+864
+00:40:10,900 --> 00:40:12,650
+SELECT * FROM Employees of the capital E
+
+865
+00:40:12,910 --> 00:40:14,660
+or an extra space before the FROM clause,
+
+866
+00:40:15,220 --> 00:40:16,130
+these won't match,
+
+867
+00:40:16,180 --> 00:40:18,710
+because when you hash the strings they're not the same,
+
+868
+00:40:18,820 --> 00:40:21,530
+so it has to literally be the exact same query, run at the exact same time
+
+869
+00:40:21,850 --> 00:40:23,330
+and and then they can share it.
+
+870
+00:40:25,360 --> 00:40:26,595
+So conception looks like this,
+
+871
+00:40:26,595 --> 00:40:28,545
+so say I have query 1,
+
+872
+00:40:28,545 --> 00:40:33,500
+let's do a summation on the val column from table A,
+
+873
+00:40:34,120 --> 00:40:36,765
+so attaches a cursor to the pages,
+
+874
+00:40:36,765 --> 00:40:38,660
+starts reading them, fetching them into the buffer pool,
+
+875
+00:40:39,850 --> 00:40:41,660
+first thing it gets page0, that's not there,
+
+876
+00:40:42,370 --> 00:40:46,350
+so puts that in memory, goes down to page2, and so forth, right,
+
+877
+00:40:46,350 --> 00:40:47,450
+so now we get to page3,
+
+878
+00:40:47,770 --> 00:40:50,220
+and we haven't talked about the eviction policy,
+
+879
+00:40:50,220 --> 00:40:51,950
+but page0 is the last one was used,
+
+880
+00:40:52,330 --> 00:40:55,280
+so we go ahead and evict page0 and put in page3,
+
+881
+00:40:56,370 --> 00:40:57,760
+but, now Q2 shows up,
+
+882
+00:40:58,480 --> 00:41:02,100
+wants to compute an average instead of summation on the same table, though,
+
+883
+00:41:02,780 --> 00:41:04,660
+so the naive thing to do is,
+
+884
+00:41:04,660 --> 00:41:05,905
+have it start at the beginning,
+
+885
+00:41:05,905 --> 00:41:07,290
+just like the first cursor,
+
+886
+00:41:07,430 --> 00:41:09,750
+and just scan down and read the pages at the same time,
+
+887
+00:41:11,510 --> 00:41:12,580
+but obviously this is stupid,
+
+888
+00:41:12,580 --> 00:41:14,760
+because in this scenario here,
+
+889
+00:41:15,350 --> 00:41:17,970
+we just, the Q2 needs to read page0,
+
+890
+00:41:18,140 --> 00:41:21,710
+but Q1 just got that evicted from the buffer pool, right,
+
+891
+00:41:21,710 --> 00:41:24,010
+so the first thing we would do here is,
+
+892
+00:41:24,930 --> 00:41:25,960
+if you want to Q2,
+
+893
+00:41:26,010 --> 00:41:28,510
+we had to evict page2, to put page0 in,
+
+894
+00:41:28,710 --> 00:41:30,790
+but again, we just got rid of page0,
+
+895
+00:41:31,580 --> 00:41:32,815
+so the better thing to do is,
+
+896
+00:41:32,815 --> 00:41:34,500
+you attach Q2 to Q1,
+
+897
+00:41:35,240 --> 00:41:38,250
+again at the lowest level as you scan the table,
+
+898
+00:41:39,060 --> 00:41:41,390
+and let Q2 ride along Q1,
+
+899
+00:41:41,830 --> 00:41:44,600
+see all the pages that it sees and processes them accordingly,
+
+900
+00:41:44,980 --> 00:41:46,515
+and then Q1 goes away,
+
+901
+00:41:46,515 --> 00:41:48,030
+but then Q2 recognizes,
+
+902
+00:41:48,030 --> 00:41:50,630
+oh, there's a bunch of pages at the top of the table that I missed,
+
+903
+00:41:51,280 --> 00:41:53,300
+let me go back and and get get all those
+
+904
+00:41:54,610 --> 00:41:55,670
+and then compute my query.
+
+905
+00:41:57,640 --> 00:41:58,040
+All right,
+
+906
+00:42:01,050 --> 00:42:02,060
+what's the potential problem with this?
+
+907
+00:42:05,480 --> 00:42:05,880
+Yes.
+
+908
+00:42:07,245 --> 00:42:10,450
+So it's hard to implement, not that hard.
+
+909
+00:42:17,870 --> 00:42:20,010
+Says, if the aggregate function depends on the ordering of the data,
+
+910
+00:42:20,600 --> 00:42:24,390
+which again, relational model, it doesn't, with no functions, yes,
+
+911
+00:42:26,305 --> 00:42:26,725
+you're close to it,
+
+912
+00:42:26,725 --> 00:42:30,070
+but basically say you had a LIMIT clause, right,
+
+913
+00:42:30,330 --> 00:42:32,170
+right, I want to get the first 100 tuples
+
+914
+00:42:32,700 --> 00:42:33,880
+and compute the average on that,
+
+915
+00:42:35,370 --> 00:42:36,880
+again, relational models unordered,
+
+916
+00:42:37,110 --> 00:42:38,500
+so technically, it's correct,
+
+917
+00:42:38,640 --> 00:42:41,770
+if Q2 starts at page0 versus page3,
+
+918
+00:42:41,970 --> 00:42:44,290
+and again it gets 100 tuples compute the average,
+
+919
+00:42:44,910 --> 00:42:46,570
+both answers are technically correct,
+
+920
+00:42:46,980 --> 00:42:49,055
+from the application perspective, this looks [] up,
+
+921
+00:42:49,055 --> 00:42:50,030
+because now you got queries,
+
+922
+00:42:50,030 --> 00:42:53,020
+the same query at two different times show up with different results.
+
+923
+00:42:53,780 --> 00:42:55,180
+So I was being glib and I said,
+
+924
+00:42:55,180 --> 00:42:56,245
+oh yeah, it's not that hard to implement,
+
+925
+00:42:56,245 --> 00:42:57,450
+because you attach the cursor,
+
+926
+00:42:58,330 --> 00:43:02,420
+again, if there's no, if there's no ordering constraints, it's easy,
+
+927
+00:43:02,710 --> 00:43:04,080
+but if you need to make sure that,
+
+928
+00:43:04,080 --> 00:43:07,670
+your queries produce the same results over and over again,
+
+929
+00:43:07,780 --> 00:43:09,830
+then this can be a bit tricky,
+
+930
+00:43:11,650 --> 00:43:12,495
+this is part of the reason,
+
+931
+00:43:12,495 --> 00:43:13,880
+again, I'm not trying to bash Oracle,
+
+932
+00:43:13,900 --> 00:43:15,090
+like, the easiest thing to do is,
+
+933
+00:43:15,090 --> 00:43:17,000
+if it's exact same query, I'll do cursor sharing,
+
+934
+00:43:17,950 --> 00:43:19,340
+the tricky thing is to figure out,
+
+935
+00:43:19,540 --> 00:43:22,370
+to understand the semantics of what the queries actually wants to do,
+
+936
+00:43:22,660 --> 00:43:27,320
+to then identify when is it safe to attach the, you know, one cursor to another
+
+937
+00:43:28,060 --> 00:43:30,950
+and then how to maybe go back and and get more results as needed.
+
+938
+00:43:36,730 --> 00:43:38,180
+So this is a,
+
+939
+00:43:41,320 --> 00:43:46,280
+going sort of extreme scan sharing is this idea called continuous scan sharing,
+
+940
+00:43:46,720 --> 00:43:47,715
+I'll say up front, too,
+
+941
+00:43:47,715 --> 00:43:50,330
+that no real system does this,
+
+942
+00:43:50,650 --> 00:43:51,435
+but I just like it,
+
+943
+00:43:51,435 --> 00:43:53,120
+because it's a different way to think about how to build a system.
+
+944
+00:43:54,000 --> 00:43:55,730
+So again, going back to his point,
+
+945
+00:43:55,730 --> 00:43:57,970
+he said it would be hard to implement the scan sharing,
+
+946
+00:43:58,410 --> 00:44:00,310
+potentially, yes, right,
+
+947
+00:44:00,870 --> 00:44:02,560
+but what if you just did the dumbest thing,
+
+948
+00:44:04,640 --> 00:44:06,810
+just everything due scan sharing,
+
+949
+00:44:07,160 --> 00:44:09,570
+because the cursor just running all the time,
+
+950
+00:44:10,340 --> 00:44:12,360
+so it literally reads one page after another,
+
+951
+00:44:12,800 --> 00:44:14,010
+brings that into your buffer pool
+
+952
+00:44:14,270 --> 00:44:16,350
+and then when you're done,
+
+953
+00:44:17,060 --> 00:44:19,290
+just look back around and does it all over again.
+
+954
+00:44:19,950 --> 00:44:21,700
+So now when a query shows up,
+
+955
+00:44:22,140 --> 00:44:25,670
+you just kind of pop along whenever it's going
+
+956
+00:44:25,670 --> 00:44:26,555
+and then get what you need
+
+957
+00:44:26,555 --> 00:44:27,640
+and then you go away and you're done.
+
+958
+00:44:32,080 --> 00:44:33,200
+Good idea or bad idea,
+
+959
+00:44:34,970 --> 00:44:37,640
+with that heard bad, why?
+
+960
+00:44:38,470 --> 00:44:45,630
+So assuming it's [] lab,
+
+961
+00:44:45,630 --> 00:44:47,760
+assuming every query is doing maybe a full table scan
+
+962
+00:44:47,760 --> 00:44:49,160
+or almost a full table scan.
+
+963
+00:44:54,135 --> 00:44:54,950
+So, would you have a table,
+
+964
+00:44:55,330 --> 00:44:56,480
+so you, you could maybe say,
+
+965
+00:44:56,560 --> 00:44:58,110
+you know, the cursor doesn't get fired,
+
+966
+00:44:58,110 --> 00:44:59,780
+until the query shows that touches the table?
+
+967
+00:45:00,970 --> 00:45:01,370
+That.
+
+968
+00:45:06,800 --> 00:45:07,440
+Yeah, but,
+
+969
+00:45:11,340 --> 00:45:11,740
+well,
+
+970
+00:45:13,200 --> 00:45:14,825
+say you have to do that anyway for a full table scan,
+
+971
+00:45:14,825 --> 00:45:16,030
+because the table doesn't fit in memory anyway.
+
+972
+00:45:19,600 --> 00:45:20,000
+So.
+
+973
+00:45:21,430 --> 00:45:21,830
+Yes.
+
+974
+00:45:24,540 --> 00:45:25,510
+So, it's hard to skip around,
+
+975
+00:45:26,340 --> 00:45:27,605
+well, in some ways, also, too,
+
+976
+00:45:27,605 --> 00:45:30,425
+it makes your, your runtime kind of deterministic, right,
+
+977
+00:45:30,425 --> 00:45:33,275
+because you know it's gonna be at least n,
+
+978
+00:45:33,275 --> 00:45:35,320
+where it ends the number pages, right,
+
+979
+00:45:36,230 --> 00:45:37,200
+that's just for scans,
+
+980
+00:45:37,340 --> 00:45:39,000
+JOINs or [], other [] we haven't talked about yet.
+
+981
+00:45:41,180 --> 00:45:42,025
+If it's on [],
+
+982
+00:45:42,025 --> 00:45:44,350
+you've already paid for the hardware, ignoring energy costs,
+
+983
+00:45:44,350 --> 00:45:45,900
+then you know this is kind of okay,
+
+984
+00:45:46,220 --> 00:45:47,320
+but if it's running in the Cloud,
+
+985
+00:45:47,320 --> 00:45:48,550
+you actually paying per IOP,
+
+986
+00:45:48,550 --> 00:45:50,515
+then this is actually terrible, right,
+
+987
+00:45:50,515 --> 00:45:53,280
+because you end up reading more data than you potentially actually need,
+
+988
+00:45:53,780 --> 00:45:56,910
+so I was saying there's only one prototype I know that did this,
+
+989
+00:45:56,930 --> 00:45:59,940
+out of, out of ETH Zurich, called Crescando,
+
+990
+00:46:00,950 --> 00:46:03,715
+and they built it specifically for a telecom business,
+
+991
+00:46:03,715 --> 00:46:06,000
+where they needed deterministic runtimes of queries,
+
+992
+00:46:06,600 --> 00:46:08,310
+but this was a few years ago
+
+993
+00:46:08,310 --> 00:46:11,840
+and there was another prototype, it had the same kind of thing.
+
+994
+00:46:12,040 --> 00:46:13,140
+So it's an interesting idea,
+
+995
+00:46:13,140 --> 00:46:16,010
+it's a different way to think of a system that's unorthodox,
+
+996
+00:46:16,630 --> 00:46:18,330
+like present a different way to think things,
+
+997
+00:46:19,360 --> 00:46:20,175
+I love databases,
+
+998
+00:46:20,175 --> 00:46:22,010
+there's so many different ways to solve the same problem,
+
+999
+00:46:22,090 --> 00:46:22,490
+again, it was bad.
+
+1000
+00:46:27,590 --> 00:46:29,760
+So last optimization you talk about is called buffer pool bypass,
+
+1001
+00:46:30,910 --> 00:46:32,450
+and the idea here is that,
+
+1002
+00:46:34,060 --> 00:46:36,680
+if we have a query that's running a sequential scan,
+
+1003
+00:46:38,280 --> 00:46:40,420
+you know, we had to bring things off a disk into memory,
+
+1004
+00:46:40,920 --> 00:46:43,810
+but maybe we don't want to put it into our buffer pool,
+
+1005
+00:46:44,400 --> 00:46:47,200
+because one need to pay for the maintenance cost of the buffer pool,
+
+1006
+00:46:47,460 --> 00:46:50,980
+in the page, take a latch, update things and stuff and so forth, right,
+
+1007
+00:46:51,570 --> 00:46:53,440
+and then also too, if we're doing sequential scan,
+
+1008
+00:46:53,910 --> 00:46:56,710
+the the data we just read may not actually be useful,
+
+1009
+00:46:57,360 --> 00:46:58,625
+well, it's not gonna be useful for our query,
+
+1010
+00:46:58,625 --> 00:46:59,945
+because we're going sequentially scan,
+
+1011
+00:46:59,945 --> 00:47:03,910
+we're only going to be the the table once usually
+
+1012
+00:47:05,250 --> 00:47:10,490
+and so rather than having all these different, these different, you know, workers
+
+1013
+00:47:10,510 --> 00:47:13,700
+running at the same time, doing sequential scans and [polluting] the page table,
+
+1014
+00:47:14,480 --> 00:47:19,270
+what if we just give every worker its own little piece of memory,
+
+1015
+00:47:20,460 --> 00:47:22,060
+like a working memory,
+
+1016
+00:47:22,590 --> 00:47:24,640
+and then any page we read,
+
+1017
+00:47:25,050 --> 00:47:26,890
+we put into that, that worker's memory,
+
+1018
+00:47:27,420 --> 00:47:29,390
+yes, you could have duplicates, it only works,
+
+1019
+00:47:29,390 --> 00:47:30,880
+if it's read only, you can't do writes,
+
+1020
+00:47:32,440 --> 00:47:33,805
+and that way it's just like a circular buffer,
+
+1021
+00:47:33,805 --> 00:47:35,400
+we just keep filling up and wrap around.
+
+1022
+00:47:37,030 --> 00:47:38,570
+So a bunch of systems support this,
+
+1023
+00:47:38,980 --> 00:47:41,420
+Oracle, SQL Server, Postgres and Informix,
+
+1024
+00:47:41,470 --> 00:47:44,630
+I think this originated Informix and they call it Light Scans,
+
+1025
+00:47:45,130 --> 00:47:48,680
+light meaning, because again, you don't touch that sort of heavyweight page table in the buffer pool.
+
+1026
+00:47:49,610 --> 00:47:50,890
+And the idea here is that,
+
+1027
+00:47:50,890 --> 00:47:53,845
+I can potentially not pollute my page table,
+
+1028
+00:47:53,845 --> 00:47:54,990
+because the data I need,
+
+1029
+00:47:56,090 --> 00:47:58,980
+but the data I need is sort of local to me,
+
+1030
+00:47:59,700 --> 00:48:02,740
+of course, the downside of this is that you lose the sharing capability
+
+1031
+00:48:02,760 --> 00:48:06,160
+of two, two workers need the same pages at the same time,
+
+1032
+00:48:06,630 --> 00:48:08,290
+or one soon after another,
+
+1033
+00:48:08,670 --> 00:48:11,170
+then you lose that reuse possibility,
+
+1034
+00:48:12,390 --> 00:48:14,570
+but again, it's another optimization that we can do,
+
+1035
+00:48:14,570 --> 00:48:16,150
+because we control exactly what the,
+
+1036
+00:48:16,930 --> 00:48:18,525
+you know what the queries are actually,
+
+1037
+00:48:18,525 --> 00:48:21,110
+you know what they're actually executing and touching.
+
+1038
+00:48:24,150 --> 00:48:24,550
+All right.
+
+1039
+00:48:26,060 --> 00:48:27,790
+So we sort of dance around this idea
+
+1040
+00:48:27,790 --> 00:48:31,450
+of evicting data or evicting pages from our buffer pool,
+
+1041
+00:48:31,920 --> 00:48:33,970
+so now we got to talk about how we're actually going to do it,
+
+1042
+00:48:34,170 --> 00:48:36,280
+you need to know this because it's project one.
+
+1043
+00:48:37,930 --> 00:48:41,595
+So, when the execution says,
+
+1044
+00:48:41,595 --> 00:48:43,250
+okay, I'm bringing a page into memory,
+
+1045
+00:48:43,720 --> 00:48:44,870
+I'm going to put into a frame,
+
+1046
+00:48:46,450 --> 00:48:47,895
+if there's no free frames,
+
+1047
+00:48:47,895 --> 00:48:49,550
+it has to decide what to evict,
+
+1048
+00:48:50,500 --> 00:48:53,300
+it's a cache, this should not be groundbreaking.
+
+1049
+00:48:55,260 --> 00:49:02,390
+So the [budget] of different metrics or objectives, we have to consider in our eviction policy,
+
+1050
+00:49:02,890 --> 00:49:07,070
+that's going to depend on various factors of our implementation of our database system,
+
+1051
+00:49:07,980 --> 00:49:10,790
+obviously, we want our eviction policy to be correct, right,
+
+1052
+00:49:10,790 --> 00:49:11,795
+we don't want to evict a page,
+
+1053
+00:49:11,795 --> 00:49:14,375
+then immediately that page is the most, you know, the most used thing,
+
+1054
+00:49:14,375 --> 00:49:16,900
+and therefore we keep reading and writing it from disk over and over again,
+
+1055
+00:49:16,950 --> 00:49:17,650
+could that be bad,
+
+1056
+00:49:19,410 --> 00:49:22,810
+we want our eviction policy to be fast, right,
+
+1057
+00:49:22,810 --> 00:49:24,960
+we, we don't want, you know, it's a,
+
+1058
+00:49:25,280 --> 00:49:28,405
+we're using an NP-complete algorithm or exponential algorithm,
+
+1059
+00:49:28,405 --> 00:49:30,790
+we don't want to take three seconds to decide what page to evict,
+
+1060
+00:49:30,790 --> 00:49:32,965
+because [monitor] go read it from disk,
+
+1061
+00:49:32,965 --> 00:49:34,500
+that would have a lot faster in the first place.
+
+1062
+00:49:35,520 --> 00:49:36,230
+And related to this,
+
+1063
+00:49:36,230 --> 00:49:38,780
+we also don't want to pay a big cost
+
+1064
+00:49:38,780 --> 00:49:43,000
+of maintaining the metadata, we need to keep track of how pages are being accessed,
+
+1065
+00:49:43,170 --> 00:49:45,280
+so that we can make a decision what to evict.
+
+1066
+00:49:47,800 --> 00:49:49,730
+So again, this is the oldest problem in computer science,
+
+1067
+00:49:50,750 --> 00:49:53,520
+the other oldest problem in computer science is naming something or naming a system,
+
+1068
+00:49:54,470 --> 00:49:55,675
+we can talk about how BusTub got named,
+
+1069
+00:49:55,675 --> 00:49:59,190
+but, like everyone has a caching paper,
+
+1070
+00:49:59,780 --> 00:50:00,660
+I think I have two.
+
+1071
+00:50:03,310 --> 00:50:07,940
+So the most obvious easy thing to do is do LRU, least-recently use,
+
+1072
+00:50:08,710 --> 00:50:12,890
+the basic idea here is just maintain a timestamp or keep track a link, a linked list
+
+1073
+00:50:12,910 --> 00:50:16,460
+of when when pages were last touched,
+
+1074
+00:50:17,330 --> 00:50:19,290
+and then when it comes time to evict a page,
+
+1075
+00:50:19,520 --> 00:50:21,510
+we just go to the tail end of the linked list
+
+1076
+00:50:21,980 --> 00:50:23,785
+and pop, pop whatever is there,
+
+1077
+00:50:23,785 --> 00:50:26,070
+and you know that one hasn't been accessed in a while,
+
+1078
+00:50:26,300 --> 00:50:27,300
+we go ahead and evict it.
+
+1079
+00:50:28,260 --> 00:50:30,820
+So say here Q1 wants to touch page1,
+
+1080
+00:50:32,250 --> 00:50:33,820
+page1 is already in our linked list,
+
+1081
+00:50:34,140 --> 00:50:36,310
+so we just move it to the front, to the head,
+
+1082
+00:50:37,470 --> 00:50:40,955
+and then now say another query wants to touch access page5,
+
+1083
+00:50:40,955 --> 00:50:42,190
+but page5 is not in memory,
+
+1084
+00:50:42,630 --> 00:50:45,970
+so we go ahead and evict page2,
+
+1085
+00:50:46,750 --> 00:50:48,260
+because it's at the end, right,
+
+1086
+00:50:50,780 --> 00:50:52,680
+this should not be news to anyone.
+
+1087
+00:50:54,450 --> 00:50:56,900
+So another way to achieve the same thing
+
+1088
+00:50:56,900 --> 00:51:00,410
+without tracking the actual timestamps in this linked list is
+
+1089
+00:51:00,410 --> 00:51:02,740
+to use an approximation algorithm called CLOCK,
+
+1090
+00:51:03,580 --> 00:51:04,790
+who here has heard a CLOCK before,
+
+1091
+00:51:06,450 --> 00:51:07,450
+less than five, okay,
+
+1092
+00:51:09,180 --> 00:51:11,795
+and so clock, a clock is using a bunch of other systems as well,
+
+1093
+00:51:11,795 --> 00:51:15,400
+I think Linux uses this for its page cache or page table,
+
+1094
+00:51:16,530 --> 00:51:17,630
+they use a multi hand clock,
+
+1095
+00:51:17,630 --> 00:51:20,230
+which we don't need to know about that,
+
+1096
+00:51:20,250 --> 00:51:21,520
+but the basic idea here is that,
+
+1097
+00:51:21,720 --> 00:51:26,680
+instead of keeping track of like the exact ordering of of of pages in LRU,
+
+1098
+00:51:27,480 --> 00:51:32,350
+instead we just give a, use a simple reference bit for every page,
+
+1099
+00:51:32,910 --> 00:51:34,150
+that we use to keep track of,
+
+1100
+00:51:35,550 --> 00:51:37,280
+we set to 1, whenever it's accessed,
+
+1101
+00:51:37,280 --> 00:51:38,860
+whenever it's written to or read.
+
+1102
+00:51:39,900 --> 00:51:40,940
+And the idea here is that,
+
+1103
+00:51:40,940 --> 00:51:44,350
+we'll have this clock hand sweep around and look at all our pages,
+
+1104
+00:51:45,000 --> 00:51:47,560
+and if the bit set to 1, set it to 0,
+
+1105
+00:51:47,940 --> 00:51:51,510
+if it is set to 0, then we go ahead and evict it, right.
+
+1106
+00:51:51,510 --> 00:51:52,400
+So say we have four pages,
+
+1107
+00:51:52,900 --> 00:51:55,340
+we get, reference, bit reference bit, we set the 0,
+
+1108
+00:51:56,510 --> 00:51:59,310
+and then, say page1 gets accessed by a query,
+
+1109
+00:51:59,630 --> 00:52:01,260
+we go ahead and set the reference bit to 1,
+
+1110
+00:52:02,190 --> 00:52:03,250
+and then now let's say,
+
+1111
+00:52:03,840 --> 00:52:06,430
+another query wants a page that's not in a buffer pool,
+
+1112
+00:52:06,570 --> 00:52:08,830
+so we got to decide which of these four we want to evict,
+
+1113
+00:52:09,560 --> 00:52:12,490
+so we go ahead and the clock starts at some starting point,
+
+1114
+00:52:13,430 --> 00:52:14,455
+it looks at the reference bit,
+
+1115
+00:52:14,455 --> 00:52:16,350
+if it's set to 1, we set it to 0
+
+1116
+00:52:16,730 --> 00:52:18,000
+and then move on to the next one,
+
+1117
+00:52:18,320 --> 00:52:20,520
+in here, at page two, the reference bit is set to 0,
+
+1118
+00:52:20,930 --> 00:52:24,720
+so therefore we know the last time the clock swept it around and looked for pages to evict,
+
+1119
+00:52:25,580 --> 00:52:26,460
+it wasn't touched,
+
+1120
+00:52:27,220 --> 00:52:29,490
+so therefore, this is safe to evict,
+
+1121
+00:52:30,280 --> 00:52:32,070
+we go ahead and remove it, replace it with another one,
+
+1122
+00:52:32,760 --> 00:52:35,690
+and then say the other page three and four, they both accessed,
+
+1123
+00:52:35,800 --> 00:52:38,060
+the clock sweeps around, sets their bit to 0,
+
+1124
+00:52:38,590 --> 00:52:39,645
+and then so far to come to here,
+
+1125
+00:52:39,645 --> 00:52:41,450
+and then now we're back to page1,
+
+1126
+00:52:41,800 --> 00:52:43,550
+it wasn't accessed as the last time you saw it,
+
+1127
+00:52:43,660 --> 00:52:44,870
+so we go ahead and pick this one.
+
+1128
+00:52:48,620 --> 00:52:50,130
+This is a good idea or a bad idea?
+
+1129
+00:52:53,630 --> 00:52:54,370
+It seems good,
+
+1130
+00:52:54,370 --> 00:52:58,045
+in that it allows us to have a lot less storage,
+
+1131
+00:52:58,045 --> 00:52:59,370
+since we only need one bit per,
+
+1132
+00:52:59,510 --> 00:53:02,185
+but the downside seems like it's going to evict,
+
+1133
+00:53:02,185 --> 00:53:03,690
+even if we don't need the room,
+
+1134
+00:53:04,700 --> 00:53:06,810
+so we might have like fewer hits.
+
+1135
+00:53:07,040 --> 00:53:08,605
+So, so he got the first part right,
+
+1136
+00:53:08,605 --> 00:53:10,380
+the first part said this is nice,
+
+1137
+00:53:10,430 --> 00:53:12,190
+because the metadata overhead is low,
+
+1138
+00:53:12,190 --> 00:53:13,770
+because it's just a bit per page,
+
+1139
+00:53:14,030 --> 00:53:16,380
+you store that as a as a contiguous big, big vector,
+
+1140
+00:53:16,520 --> 00:53:17,430
+that's easy to do,
+
+1141
+00:53:17,900 --> 00:53:21,790
+but then the second one you said like you might evict things that you don't, shouldn't, shouldn't need evict,
+
+1142
+00:53:21,790 --> 00:53:24,750
+the clock only runs, like you only start the, the, the sweep,
+
+1143
+00:53:25,010 --> 00:53:25,950
+whenever you need to evict,
+
+1144
+00:53:26,300 --> 00:53:27,870
+so it's not just running the background all the time,
+
+1145
+00:53:28,220 --> 00:53:29,640
+yeah, we don't want to do that.
+
+1146
+00:53:32,630 --> 00:53:33,030
+Yes.
+
+1147
+00:53:39,380 --> 00:53:40,890
+Yes, so he said, and he's correct,
+
+1148
+00:53:41,480 --> 00:53:45,045
+that in case of clock and actually LRU,
+
+1149
+00:53:45,045 --> 00:53:45,860
+they both have this problem,
+
+1150
+00:53:46,330 --> 00:53:51,020
+we're not keeping track of the frequency in which pages are accessed,
+
+1151
+00:53:52,030 --> 00:53:54,230
+and so this makes them susceptible to two problems.
+
+1152
+00:53:55,040 --> 00:53:57,040
+So the first one is what he said down here,
+
+1153
+00:53:57,120 --> 00:53:58,790
+like in both clock and LRU,
+
+1154
+00:53:58,790 --> 00:54:00,380
+we're only tracking when they're accessed,
+
+1155
+00:54:00,380 --> 00:54:02,680
+not, not how often they were accessed,
+
+1156
+00:54:03,540 --> 00:54:05,030
+and in both cases also too,
+
+1157
+00:54:05,030 --> 00:54:08,080
+they're susceptible to a problem called sequential flooding,
+
+1158
+00:54:09,280 --> 00:54:10,550
+and this is the problem where,
+
+1159
+00:54:11,760 --> 00:54:12,920
+if we're running sequential scans,
+
+1160
+00:54:14,090 --> 00:54:16,890
+we gotta go fetch pages from disk put into our buffer pool,
+
+1161
+00:54:17,420 --> 00:54:19,740
+but if we're tracking the last time they were used,
+
+1162
+00:54:20,270 --> 00:54:23,610
+the the last page I just got got for my sequential scan
+
+1163
+00:54:23,930 --> 00:54:25,500
+is the most one that's recently used,
+
+1164
+00:54:25,760 --> 00:54:30,000
+but for that sequential scan, it's actually the most useful one, sorry, least useful one,
+
+1165
+00:54:30,590 --> 00:54:31,825
+because it just the page that is read,
+
+1166
+00:54:31,990 --> 00:54:35,270
+I'm not going to go back and read it again, right.
+
+1167
+00:54:35,680 --> 00:54:37,425
+And in some cases, for lot workloads,
+
+1168
+00:54:37,425 --> 00:54:39,770
+it's kind of like you want the most recently used one,
+
+1169
+00:54:40,410 --> 00:54:42,495
+it's a gross, a gross approximation,
+
+1170
+00:54:42,495 --> 00:54:46,045
+but, another way to think about it, right.
+
+1171
+00:54:46,045 --> 00:54:46,830
+Again, so like this,
+
+1172
+00:54:47,180 --> 00:54:49,830
+I have a query went to a SELECT * FROM a table,
+
+1173
+00:54:50,090 --> 00:54:52,140
+but we're only going to get one ID or one record
+
+1174
+00:54:52,370 --> 00:54:53,910
+and say that's in page0,
+
+1175
+00:54:55,020 --> 00:54:58,030
+so we go put page0 in in our, in our buffer pool,
+
+1176
+00:54:58,350 --> 00:54:59,675
+then we have our OLAP query,
+
+1177
+00:54:59,675 --> 00:55:01,480
+that's going to scan the entire table
+
+1178
+00:55:01,740 --> 00:55:03,790
+and go fetch all the pages at the entire table,
+
+1179
+00:55:04,380 --> 00:55:06,425
+but when it gets to page3,
+
+1180
+00:55:06,425 --> 00:55:07,180
+we don't have any space,
+
+1181
+00:55:07,500 --> 00:55:09,730
+so in, for these pages here,
+
+1182
+00:55:09,840 --> 00:55:13,720
+the least recently used page is page0,
+
+1183
+00:55:14,250 --> 00:55:15,820
+so I'm going to go ahead and evict that,
+
+1184
+00:55:16,860 --> 00:55:17,860
+and put in page3,
+
+1185
+00:55:18,450 --> 00:55:20,660
+but if another query comes along,
+
+1186
+00:55:20,660 --> 00:55:22,010
+it does the same thing the first guy did
+
+1187
+00:55:22,010 --> 00:55:24,880
+and goes gets page1 or once once, record one in page1,
+
+1188
+00:55:26,005 --> 00:55:28,710
+that's actually the page I wanted, I need,
+
+1189
+00:55:29,210 --> 00:55:30,240
+but I just evicted it,
+
+1190
+00:55:31,070 --> 00:55:35,270
+so this is the worst thing you could do, right.
+
+1191
+00:55:37,320 --> 00:55:39,100
+And so sequential flooding is a problem,
+
+1192
+00:55:39,120 --> 00:55:41,980
+because, again, if we do most of these point queries
+
+1193
+00:55:42,390 --> 00:55:44,080
+and then all sudden a query shows up,
+
+1194
+00:55:44,370 --> 00:55:50,140
+it's going to blow away any useful information we've collected in our in our LRU or clock metadata.
+
+1195
+00:55:52,840 --> 00:55:55,880
+So the solution to this is called LRU-K,
+
+1196
+00:55:56,920 --> 00:55:57,720
+the idea here is,
+
+1197
+00:55:57,720 --> 00:56:01,490
+you just keep track of the last k times a page was accessed,
+
+1198
+00:56:02,130 --> 00:56:04,930
+and then when it comes time to decide what to evict,
+
+1199
+00:56:05,580 --> 00:56:12,460
+you compute the interval between the last time, last time or sorry the k times it was accessed,
+
+1200
+00:56:13,020 --> 00:56:17,480
+and whatever one has the largest interval, meaning the time it was accessed,
+
+1201
+00:56:18,070 --> 00:56:19,700
+k-1 or k-2 times,
+
+1202
+00:56:20,260 --> 00:56:21,350
+that interval is the largest,
+
+1203
+00:56:21,370 --> 00:56:25,160
+then you know that it's likely to not be used in in the future
+
+1204
+00:56:25,720 --> 00:56:28,010
+and therefore you can, you can go ahead and remove it,
+
+1205
+00:56:29,610 --> 00:56:34,220
+you think regular LRU is basically LRU-K, where k equals 1, right.
+
+1206
+00:56:35,120 --> 00:56:37,495
+And with 2 or 3 or whatever,
+
+1207
+00:56:37,495 --> 00:56:38,320
+most systems use 2,
+
+1208
+00:56:38,320 --> 00:56:39,000
+if you can use this,
+
+1209
+00:56:39,110 --> 00:56:41,305
+they just keep track of like the last two times,
+
+1210
+00:56:41,305 --> 00:56:43,315
+and I'd say what's the time between the two of those,
+
+1211
+00:56:43,315 --> 00:56:44,730
+and I take the one that is the largest.
+
+1212
+00:56:46,630 --> 00:56:50,320
+And so, of course, this is susceptible to another problem,
+
+1213
+00:56:50,430 --> 00:56:53,730
+where, I I fetch a page in
+
+1214
+00:56:55,430 --> 00:56:57,535
+and I haven't accessed it twice yet,
+
+1215
+00:56:57,535 --> 00:57:00,270
+so the interval is essentially infinity,
+
+1216
+00:57:01,970 --> 00:57:03,745
+and then it go ahead and get gets immediately evicted,
+
+1217
+00:57:03,745 --> 00:57:05,365
+but say that actually is the hot page,
+
+1218
+00:57:05,365 --> 00:57:06,360
+and I want to keep that in memory,
+
+1219
+00:57:06,950 --> 00:57:09,150
+but because I keep evicting it, I lose that,
+
+1220
+00:57:09,200 --> 00:57:10,440
+I don't have any history of it.
+
+1221
+00:57:11,100 --> 00:57:12,520
+So the way to solve this is that,
+
+1222
+00:57:12,540 --> 00:57:15,580
+you maintain a in memory hash table
+
+1223
+00:57:16,110 --> 00:57:21,680
+that keeps track of, here's the last couple pages that I've evicted, on disk,
+
+1224
+00:57:21,680 --> 00:57:24,040
+and here's the here's when they were accessed, the timestamp,
+
+1225
+00:57:24,330 --> 00:57:26,980
+so that when I fetch a page back in after it was just removed,
+
+1226
+00:57:27,180 --> 00:57:28,760
+at least now have a history for it
+
+1227
+00:57:28,760 --> 00:57:30,940
+and not assume that it's that it's infinity.
+
+1228
+00:57:32,600 --> 00:57:34,050
+And that means that over time,
+
+1229
+00:57:34,220 --> 00:57:37,890
+you'll be able to get information you need to compute the correct interval for pages,
+
+1230
+00:57:38,180 --> 00:57:40,260
+when you know when the first time they're brought into memory,
+
+1231
+00:57:41,740 --> 00:57:43,035
+and again, it's self correcting,
+
+1232
+00:57:43,035 --> 00:57:44,115
+because again, if I bring something into memory,
+
+1233
+00:57:44,115 --> 00:57:45,350
+but then never go fetch it again,
+
+1234
+00:57:45,910 --> 00:57:48,440
+it'll get removed from my ephemeral cache,
+
+1235
+00:57:49,120 --> 00:57:50,625
+and whenever I need it again,
+
+1236
+00:57:50,625 --> 00:57:51,710
+I won't have that history,
+
+1237
+00:57:51,730 --> 00:57:53,480
+and I don't know, I should evict it.
+
+1238
+00:57:56,510 --> 00:57:58,020
+It's a simple solution to a simple problem,
+
+1239
+00:57:58,100 --> 00:57:59,910
+surprisingly, this was not invented until the 90s
+
+1240
+00:58:01,640 --> 00:58:02,545
+and as far as I can tell,
+
+1241
+00:58:02,545 --> 00:58:04,440
+only Postgres and SQL Server actually do this,
+
+1242
+00:58:06,140 --> 00:58:08,125
+and this' why I like open source things,
+
+1243
+00:58:08,125 --> 00:58:13,150
+because there's actually the the mailing list [] post for the Postgres people in 2002,
+
+1244
+00:58:13,150 --> 00:58:15,160
+saying hey, this LRU-K seems like a good idea,
+
+1245
+00:58:15,160 --> 00:58:16,200
+we should do it, right,
+
+1246
+00:58:17,150 --> 00:58:18,060
+and they implement it.
+
+1247
+00:58:19,880 --> 00:58:22,720
+So MySQL doesn't do exactly LRU-K as I define,
+
+1248
+00:58:22,720 --> 00:58:24,180
+but they use a sort of approximate one
+
+1249
+00:58:25,010 --> 00:58:26,455
+and the way they do this is that,
+
+1250
+00:58:26,455 --> 00:58:33,990
+they logically divide up the linked list for the the the LRU page page list
+
+1251
+00:58:35,630 --> 00:58:37,540
+and they have two different sections or regions,
+
+1252
+00:58:37,540 --> 00:58:40,650
+they have like the the, the, the young region, the old region,
+
+1253
+00:58:41,350 --> 00:58:42,770
+and for each of these two different regions,
+
+1254
+00:58:42,790 --> 00:58:44,570
+you have a different head pointer,
+
+1255
+00:58:45,360 --> 00:58:47,050
+where you would insert new entries.
+
+1256
+00:58:48,120 --> 00:58:49,940
+So let's say that I have a query,
+
+1257
+00:58:49,940 --> 00:58:50,920
+I want to touch page1,
+
+1258
+00:58:51,120 --> 00:58:51,860
+it's not in memory,
+
+1259
+00:58:51,860 --> 00:58:54,670
+I got, So I therefore I have to put it into my buffer pool,
+
+1260
+00:58:55,200 --> 00:58:57,100
+and when I want to add it to my linked list here,
+
+1261
+00:58:57,840 --> 00:59:00,340
+because page1 is not already in the linked list,
+
+1262
+00:59:00,630 --> 00:59:02,590
+I'm going to add it to the old region
+
+1263
+00:59:03,090 --> 00:59:05,560
+and I'll insert it where the head pointer is,
+
+1264
+00:59:05,910 --> 00:59:09,370
+so it will evict page8 and put page1 there,
+
+1265
+00:59:11,340 --> 00:59:15,260
+now if if page1 is never accessed again,
+
+1266
+00:59:15,260 --> 00:59:17,890
+it'll slowly make its way to the end of the the linked list
+
+1267
+00:59:18,180 --> 00:59:19,990
+and then get evicted,
+
+1268
+00:59:21,130 --> 00:59:22,395
+but if say, Q2 comes along
+
+1269
+00:59:22,395 --> 00:59:23,510
+and it touches page1 again,
+
+1270
+00:59:24,360 --> 00:59:28,940
+we would identify that it already exists in my, my linked list
+
+1271
+00:59:29,110 --> 00:59:31,100
+and it's in the old region,
+
+1272
+00:59:31,780 --> 00:59:35,020
+so therefore I'll put it at the head of the young list, right,
+
+1273
+00:59:35,020 --> 00:59:36,330
+and then slide everyone out.
+
+1274
+00:59:37,970 --> 00:59:39,325
+So again, it's approximate LRU-K,
+
+1275
+00:59:39,325 --> 00:59:40,510
+because I'm not really keeping track of
+
+1276
+00:59:40,510 --> 00:59:43,380
+like the the intervals between when when it was accessed before,
+
+1277
+00:59:44,060 --> 00:59:47,065
+but just knowing that it's within this boundary of the young versus old,
+
+1278
+00:59:47,065 --> 00:59:51,810
+that I know it's like it was most likely accessed more recently,
+
+1279
+00:59:53,110 --> 00:59:55,160
+whereas over here, you haven't seen it before,
+
+1280
+00:59:55,860 --> 00:59:58,910
+you haven't seen before it was added to the list.
+
+1281
+01:00:04,630 --> 01:00:05,030
+So.
+
+1282
+01:00:08,570 --> 01:00:10,680
+I would say also, going back to the LRU-K,
+
+1283
+01:00:10,730 --> 01:00:12,930
+there's a bunch of other optimizations you can do,
+
+1284
+01:00:15,170 --> 01:00:17,130
+that SQL Server does, but I don't think Postgres does,
+
+1285
+01:00:17,450 --> 01:00:19,770
+where you can keep track of
+
+1286
+01:00:19,910 --> 01:00:24,550
+when, how, of who is accessing or referencing a page
+
+1287
+01:00:25,140 --> 01:00:27,875
+and then that can determine whether you would,
+
+1288
+01:00:27,875 --> 01:00:30,850
+you would say an access counts for a distinct reference
+
+1289
+01:00:31,050 --> 01:00:32,590
+and therefore should update the interval.
+
+1290
+01:00:32,820 --> 01:00:33,820
+So an example would be,
+
+1291
+01:00:34,170 --> 01:00:36,610
+if I have within the same transaction,
+
+1292
+01:00:37,800 --> 01:00:40,060
+two separate queries, access the same page,
+
+1293
+01:00:40,740 --> 01:00:41,980
+well, that's in the same transaction,
+
+1294
+01:00:42,210 --> 01:00:45,750
+so therefore should they be considered distinct or not,
+
+1295
+01:00:46,740 --> 01:00:48,040
+if there's two separate transactions,
+
+1296
+01:00:48,270 --> 01:00:50,225
+then it's very likely this page is hot,
+
+1297
+01:00:50,225 --> 01:00:51,940
+because a bunch of transactions are accessing it,
+
+1298
+01:00:52,050 --> 01:00:52,750
+I think of like,
+
+1299
+01:00:55,190 --> 01:00:56,455
+if you log into Amazon
+
+1300
+01:00:56,455 --> 01:00:59,190
+and you go update, you know, your, your account information
+
+1301
+01:00:59,570 --> 01:01:03,060
+and say for whatever reason that transaction updates your record twice,
+
+1302
+01:01:03,410 --> 01:01:04,650
+well, that's done in the same transaction,
+
+1303
+01:01:04,670 --> 01:01:06,750
+is that consider two accesses or one,
+
+1304
+01:01:07,880 --> 01:01:09,720
+and in SQL Server, they'll consider that one,
+
+1305
+01:01:10,540 --> 01:01:12,450
+I think in Postgres, they consider that two,
+
+1306
+01:01:14,660 --> 01:01:16,870
+all right, again, you know, a bunch of fancy things,
+
+1307
+01:01:16,870 --> 01:01:21,690
+because you know how the database system is accessing pages.
+
+1308
+01:01:27,370 --> 01:01:28,935
+There's a bunch of policies you can do
+
+1309
+01:01:28,935 --> 01:01:32,680
+for deciding, to relate to this like,
+
+1310
+01:01:33,940 --> 01:01:38,330
+for a given query, what page should I evict, like if,
+
+1311
+01:01:38,710 --> 01:01:43,560
+this is related to the the, the sort of the private cache,
+
+1312
+01:01:43,850 --> 01:01:45,625
+like in, in some systems, you can say,
+
+1313
+01:01:45,625 --> 01:01:51,600
+all right, here's a, some subset of the pages that I [],
+
+1314
+01:01:51,600 --> 01:01:54,080
+they're being backed by the buffer pool, right,
+
+1315
+01:01:54,190 --> 01:01:56,150
+but I'm keeping track of which ones I'm accessing,
+
+1316
+01:01:56,440 --> 01:01:58,455
+so then I can give a hint to the buffer pool manager,
+
+1317
+01:01:58,455 --> 01:02:00,525
+say if you don't have any more space,
+
+1318
+01:02:00,525 --> 01:02:02,690
+here's the pages where I know I'm accessing
+
+1319
+01:02:03,640 --> 01:02:04,730
+and I don't need them again,
+
+1320
+01:02:05,050 --> 01:02:06,530
+therefore, you can go ahead and evict them,
+
+1321
+01:02:06,820 --> 01:02:10,160
+now, whether or not the database system decides [] evict them or not,
+
+1322
+01:02:10,450 --> 01:02:11,480
+depends on the implementation.
+
+1323
+01:02:14,740 --> 01:02:16,260
+You can also maintain priority hints
+
+1324
+01:02:16,260 --> 01:02:21,080
+about what the type of page or you know what the object that page represents,
+
+1325
+01:02:21,850 --> 01:02:25,970
+and then this is provided to the database system to say, you know, the buffer pool manager,
+
+1326
+01:02:25,990 --> 01:02:27,290
+whether something should be evicted or not.
+
+1327
+01:02:27,910 --> 01:02:29,970
+So the classic example would be,
+
+1328
+01:02:29,970 --> 01:02:32,120
+if I have an index of a bunch of pages
+
+1329
+01:02:33,580 --> 01:02:35,990
+and any queries that always be inserting new records,
+
+1330
+01:02:36,640 --> 01:02:40,725
+that are just increasing the size of the, the, the data
+
+1331
+01:02:40,725 --> 01:02:43,340
+or the value that the index is based on,
+
+1332
+01:02:43,660 --> 01:02:47,720
+then I know I'm gonna be always hitting the, the, the right side of the tree
+
+1333
+01:02:48,130 --> 01:02:50,630
+and therefore maybe I wanna keep those pages in memory,
+
+1334
+01:02:50,860 --> 01:02:53,720
+and I don't care if if page2 over here gets, gets evicted,
+
+1335
+01:02:53,800 --> 01:02:57,810
+because I'm mostly gonna be updating things on, on page6, right,
+
+1336
+01:02:59,490 --> 01:03:02,080
+or likewise, if I do a bunch of SELECT queries,
+
+1337
+01:03:02,880 --> 01:03:03,970
+that I have to use the index,
+
+1338
+01:03:04,200 --> 01:03:08,860
+well, I know the, the, the very first thing they're always going to access is the root page in the index,
+
+1339
+01:03:09,210 --> 01:03:12,340
+so therefore that should be given higher priority than other ones,
+
+1340
+01:03:13,100 --> 01:03:17,940
+now, these seem kind of like [] over like LRU-K or or other mechanisms
+
+1341
+01:03:18,470 --> 01:03:20,250
+and they kind of are, right,
+
+1342
+01:03:20,600 --> 01:03:22,750
+and so it's like think of like as a []
+
+1343
+01:03:22,750 --> 01:03:25,825
+or to tell this, hey, you really probably shouldn't evict this,
+
+1344
+01:03:25,825 --> 01:03:27,210
+but if you have to, yes you can,
+
+1345
+01:03:27,770 --> 01:03:29,790
+but please, you know, please don't,
+
+1346
+01:03:31,290 --> 01:03:36,070
+but again, there's just additional things beyond the LRU tracking that the system is already doing.
+
+1347
+01:03:38,650 --> 01:03:41,025
+The big challenge, though, when it comes to evict pages is
+
+1348
+01:03:41,025 --> 01:03:42,080
+whether they're dirty or not.
+
+1349
+01:03:43,050 --> 01:03:44,450
+So the easiest thing to do is,
+
+1350
+01:03:44,450 --> 01:03:45,970
+if all my pages are clean,
+
+1351
+01:03:47,340 --> 01:03:48,910
+to evict them from the buffer pool is,
+
+1352
+01:03:49,680 --> 01:03:52,760
+to do nothing, you just drop the page reference in the page table,
+
+1353
+01:03:53,140 --> 01:03:55,800
+you need to overwrite whatever was there before, right,
+
+1354
+01:03:55,800 --> 01:03:57,590
+because you don't need to flush it back to disk,
+
+1355
+01:03:58,770 --> 01:04:01,360
+if though, if all the pages are dirty
+
+1356
+01:04:01,830 --> 01:04:03,220
+or the one you want evict is dirty,
+
+1357
+01:04:03,720 --> 01:04:05,470
+then you got to write that to disk,
+
+1358
+01:04:05,490 --> 01:04:07,520
+make sure it's durable and safe,
+
+1359
+01:04:07,520 --> 01:04:08,680
+which we cover later in the semester,
+
+1360
+01:04:09,000 --> 01:04:10,835
+before you can go ahead and say,
+
+1361
+01:04:10,835 --> 01:04:12,460
+okay, this frame is now free,
+
+1362
+01:04:12,960 --> 01:04:14,800
+you can go ahead and and reuse it.
+
+1363
+01:04:16,310 --> 01:04:17,650
+It's actually more complicated than that,
+
+1364
+01:04:17,650 --> 01:04:20,790
+because you actually have to write sure the log record is flushed to disk first,
+
+1365
+01:04:21,140 --> 01:04:24,720
+before you can flush the dirty page that the log reference talks about,
+
+1366
+01:04:25,610 --> 01:04:26,580
+we will cover that later.
+
+1367
+01:04:27,470 --> 01:04:29,050
+So the reason why this is tricky to do is,
+
+1368
+01:04:29,050 --> 01:04:30,145
+because it may be the case,
+
+1369
+01:04:30,145 --> 01:04:31,315
+given all the things we just talked about,
+
+1370
+01:04:31,315 --> 01:04:35,370
+these priority hints, the different policies, the LRU-K stuff,
+
+1371
+01:04:35,480 --> 01:04:36,415
+it may be the case,
+
+1372
+01:04:36,415 --> 01:04:39,390
+that the page you want to evict is dirty,
+
+1373
+01:04:40,530 --> 01:04:43,420
+and so that is going to require, you know, a disk flush,
+
+1374
+01:04:43,980 --> 01:04:47,890
+but maybe the second, the second page you could evict is clean,
+
+1375
+01:04:49,220 --> 01:04:51,790
+so should you violate the LRU-K, in that case,
+
+1376
+01:04:51,790 --> 01:04:55,400
+because you're trying to get things out as fast as possible, right.
+
+1377
+01:04:56,920 --> 01:04:58,035
+Different systems do different things,
+
+1378
+01:04:58,035 --> 01:05:00,855
+and this is why the enterprise systems are much better than the, than the open source systems,
+
+1379
+01:05:00,855 --> 01:05:02,550
+because they have all this metadata,
+
+1380
+01:05:02,550 --> 01:05:04,940
+they have all these sophisticated algorithms to make these decisions,
+
+1381
+01:05:05,560 --> 01:05:08,490
+because it actually depends on the speed of the hardware, right,
+
+1382
+01:05:08,490 --> 01:05:09,825
+if if your disk is super fast
+
+1383
+01:05:09,825 --> 01:05:10,980
+and yeah, I'll write it out the disk,
+
+1384
+01:05:10,980 --> 01:05:12,680
+you know, I'll write a dirty page out right away,
+
+1385
+01:05:12,940 --> 01:05:16,220
+because that's going be fairly inexpensive operation,
+
+1386
+01:05:16,660 --> 01:05:18,075
+but if my disk is really slow
+
+1387
+01:05:18,075 --> 01:05:20,240
+or I gotta write over the network to some slow device,
+
+1388
+01:05:20,800 --> 01:05:24,380
+then maybe I want to minimize the amount of disk writes I have to do,
+
+1389
+01:05:24,640 --> 01:05:25,820
+when I have to evict something,
+
+1390
+01:05:25,840 --> 01:05:29,580
+the exact moment, I I need a, you know, I I need a space.
+
+1391
+01:05:31,240 --> 01:05:33,110
+So there's no, there's no easy answer to this,
+
+1392
+01:05:35,220 --> 01:05:36,610
+you know, if all your pages are dirty
+
+1393
+01:05:37,230 --> 01:05:38,800
+and you need to pick one, you have to write it,
+
+1394
+01:05:41,665 --> 01:05:42,750
+but what's one way to avoid this problem,
+
+1395
+01:05:43,570 --> 01:05:45,380
+do not have the write [] on the critical path,
+
+1396
+01:05:45,490 --> 01:05:46,520
+when you want to access a page.
+
+1397
+01:05:52,530 --> 01:05:53,830
+Background writing, right,
+
+1398
+01:05:55,950 --> 01:05:59,710
+right, there's, you could have a separate thread in the background,
+
+1399
+01:05:59,730 --> 01:06:01,060
+just walk through your page table,
+
+1400
+01:06:01,410 --> 01:06:05,470
+figure out what's dirty, make sure the log is is on disk,
+
+1401
+01:06:05,520 --> 01:06:06,470
+again, we'll cover that later,
+
+1402
+01:06:06,470 --> 01:06:08,830
+but assume there's, you have to [] log first,
+
+1403
+01:06:09,540 --> 01:06:10,720
+find pages that are dirty
+
+1404
+01:06:10,950 --> 01:06:12,460
+and go ahead and, and write them out,
+
+1405
+01:06:14,810 --> 01:06:15,880
+and then you just flip the bit
+
+1406
+01:06:15,880 --> 01:06:17,100
+to say this page is now clean,
+
+1407
+01:06:17,360 --> 01:06:19,110
+so that when the eviction algorithm runs
+
+1408
+01:06:19,130 --> 01:06:20,670
+and it says, okay, I have to evict something,
+
+1409
+01:06:20,900 --> 01:06:23,640
+now has a bunch of options of pages that are clean, that could write out,
+
+1410
+01:06:24,500 --> 01:06:26,610
+or, sorry, not just drop, you know, write anything.
+
+1411
+01:06:30,150 --> 01:06:31,340
+But now there's this trade off
+
+1412
+01:06:31,340 --> 01:06:34,235
+between like, should I have my system be aggressively writing out dirty pages,
+
+1413
+01:06:34,235 --> 01:06:35,920
+maybe interfering with queries and transactions,
+
+1414
+01:06:35,940 --> 01:06:38,440
+that are trying to run things [] the application,
+
+1415
+01:06:39,540 --> 01:06:42,380
+or should I, you know, should I delay that,
+
+1416
+01:06:42,580 --> 01:06:43,485
+but then now the problem is,
+
+1417
+01:06:43,485 --> 01:06:45,320
+at some point, I need to get free space
+
+1418
+01:06:45,700 --> 01:06:46,850
+and all my pages are dirty,
+
+1419
+01:06:48,950 --> 01:06:49,730
+it's a super hard problem
+
+1420
+01:06:49,730 --> 01:06:51,430
+and there's no easy answer.
+
+1421
+01:06:54,580 --> 01:06:57,770
+But all the systems are going to have some mechanism to do this kind of background writing.
+
+1422
+01:07:00,540 --> 01:07:02,375
+Then we haven't, checkpoints are a whole other [],
+
+1423
+01:07:02,375 --> 01:07:03,580
+checkpoints, you flush everything out,
+
+1424
+01:07:04,230 --> 01:07:08,630
+but that happens every, every minutes,
+
+1425
+01:07:10,380 --> 01:07:11,110
+not every second.
+
+1426
+01:07:14,710 --> 01:07:15,110
+Okay?
+
+1427
+01:07:18,330 --> 01:07:19,000
+All right, so,
+
+1428
+01:07:20,440 --> 01:07:21,585
+now we start talking a little bit about,
+
+1429
+01:07:21,585 --> 01:07:23,085
+when we do these disk writes and disk reads,
+
+1430
+01:07:23,085 --> 01:07:23,690
+we got to talk about,
+
+1431
+01:07:23,980 --> 01:07:25,700
+how are we actually going to do that.
+
+1432
+01:07:27,540 --> 01:07:28,780
+And for this one,
+
+1433
+01:07:29,220 --> 01:07:34,000
+when we, you know, when we make read and write calls to the file system,
+
+1434
+01:07:34,410 --> 01:07:36,910
+assuming we're running on the file system, not, not raw partitions,
+
+1435
+01:07:38,390 --> 01:07:40,350
+there's a bunch of layers below us, in our database system,
+
+1436
+01:07:40,370 --> 01:07:43,170
+like the OS and the file system and the hardware,
+
+1437
+01:07:44,620 --> 01:07:45,525
+that's gonna be clever
+
+1438
+01:07:45,525 --> 01:07:49,350
+and try to maximize the amount of bandwidth we that that can achieve
+
+1439
+01:07:49,350 --> 01:07:52,340
+by reordering and batching our I/O requests,
+
+1440
+01:07:53,540 --> 01:07:58,770
+part of the reason why these, the modern disk drives or SSDs or NVMe drives are so fast,
+
+1441
+01:07:58,820 --> 01:08:00,280
+because they have these long queues,
+
+1442
+01:08:00,280 --> 01:08:01,620
+they can do parallel requests,
+
+1443
+01:08:02,060 --> 01:08:03,715
+so if you just do one read at a time,
+
+1444
+01:08:03,715 --> 01:08:04,630
+that's going to be super slow,
+
+1445
+01:08:04,630 --> 01:08:05,640
+but you can batch things up
+
+1446
+01:08:05,930 --> 01:08:07,890
+and make sure that you're reading a bunch of contiguous data,
+
+1447
+01:08:08,270 --> 01:08:09,240
+things will be really fast.
+
+1448
+01:08:10,940 --> 01:08:12,120
+But the challenge is, though,
+
+1449
+01:08:12,590 --> 01:08:14,910
+these different layers of the system below the database system,
+
+1450
+01:08:16,470 --> 01:08:19,090
+don't know what the requests actually correspond to,
+
+1451
+01:08:19,290 --> 01:08:22,120
+they just see reads and writes pages at some location or some address,
+
+1452
+01:08:22,590 --> 01:08:23,255
+they don't know,
+
+1453
+01:08:23,255 --> 01:08:24,580
+oh, this is from the background writer
+
+1454
+01:08:24,780 --> 01:08:25,790
+or this is for an index
+
+1455
+01:08:25,790 --> 01:08:28,480
+or this is for the query, that I need to run right now.
+
+1456
+01:08:30,400 --> 01:08:32,660
+So you can play some games with,
+
+1457
+01:08:33,430 --> 01:08:35,780
+in, in Linux, setting the I/O priority,
+
+1458
+01:08:36,280 --> 01:08:37,860
+but that's basically a sledgehammer,
+
+1459
+01:08:37,860 --> 01:08:39,110
+the only thing you can really do is,
+
+1460
+01:08:39,250 --> 01:08:43,230
+change the I/O priority on a per, per process level,
+
+1461
+01:08:43,670 --> 01:08:45,570
+you can't do it on a per single request,
+
+1462
+01:08:45,590 --> 01:08:46,710
+which is what we really want.
+
+1463
+01:08:48,560 --> 01:08:50,845
+So if you read the documentation bunch of different database systems,
+
+1464
+01:08:50,845 --> 01:08:53,670
+they tell you to all get off the default Linux scheduler,
+
+1465
+01:08:54,380 --> 01:08:55,440
+which is the Fair scheduler,
+
+1466
+01:08:55,550 --> 01:08:56,695
+and either use deadline
+
+1467
+01:08:56,695 --> 01:08:58,860
+or the simple FIFO queue noop,
+
+1468
+01:09:00,710 --> 01:09:03,415
+because they don't want the the database system,
+
+1469
+01:09:03,415 --> 01:09:04,885
+they don't want the operating system to do a bunch of stuff,
+
+1470
+01:09:04,885 --> 01:09:08,520
+that that, that the database system can't control.
+
+1471
+01:09:10,750 --> 01:09:11,325
+So this is why,
+
+1472
+01:09:11,325 --> 01:09:12,270
+in most database systems,
+
+1473
+01:09:12,270 --> 01:09:18,230
+they're going to have their own little shim layer, right above the, the OS,
+
+1474
+01:09:19,320 --> 01:09:21,590
+that's going to be responsible for keeping track of
+
+1475
+01:09:21,880 --> 01:09:25,550
+what requests are outstanding for reads and writes from the buffer pool manager
+
+1476
+01:09:26,890 --> 01:09:30,320
+and decide how to put things together to optimize performance,
+
+1477
+01:09:31,840 --> 01:09:36,020
+and basically you think of determining the priorities for these different I/O requests,
+
+1478
+01:09:36,190 --> 01:09:38,180
+based on a multitude of different factors,
+
+1479
+01:09:38,680 --> 01:09:41,210
+because again, we know what the queries are trying to do,
+
+1480
+01:09:41,350 --> 01:09:43,070
+we know what pages are in a buffer pool,
+
+1481
+01:09:43,120 --> 01:09:44,505
+we know what's dirty and not dirty,
+
+1482
+01:09:44,505 --> 01:09:46,100
+we know what are the outstanding requests.
+
+1483
+01:09:47,970 --> 01:09:49,355
+And so to try to keep track of things
+
+1484
+01:09:49,355 --> 01:09:51,340
+like what's sequential I/O versus random I/O
+
+1485
+01:09:52,530 --> 01:09:54,350
+is the request based on the critical path,
+
+1486
+01:09:54,350 --> 01:09:55,960
+like a query needs this right now
+
+1487
+01:09:56,640 --> 01:09:59,650
+or is this like a background job, background, the, the background writer
+
+1488
+01:09:59,970 --> 01:10:02,080
+and therefore, you know, could have a lower priority,
+
+1489
+01:10:03,370 --> 01:10:07,400
+the data we're accessing for a table, an index, log records,
+
+1490
+01:10:07,690 --> 01:10:09,470
+again, the logs we want to flush as fast as possible,
+
+1491
+01:10:10,330 --> 01:10:11,540
+is it for ephemeral data,
+
+1492
+01:10:12,670 --> 01:10:14,750
+like if if it's a sequencential scan for a table,
+
+1493
+01:10:15,550 --> 01:10:16,940
+that's gonna have a lower priority,
+
+1494
+01:10:17,020 --> 01:10:19,070
+then maybe random access for index,
+
+1495
+01:10:19,090 --> 01:10:20,930
+because as you traverse your B+ tree,
+
+1496
+01:10:21,070 --> 01:10:23,030
+you're holding latches as you go down
+
+1497
+01:10:23,620 --> 01:10:26,145
+and therefore that's going prevent other threads from running the same time,
+
+1498
+01:10:26,145 --> 01:10:28,970
+but if you query, your scan query is a little bit slower,
+
+1499
+01:10:29,380 --> 01:10:32,600
+you're technically potentially not interfering with other queries running at the same time,
+
+1500
+01:10:33,420 --> 01:10:34,295
+well, that's not true,
+
+1501
+01:10:34,295 --> 01:10:37,960
+because you take, you take locks when you run queries and transactions,
+
+1502
+01:10:38,280 --> 01:10:41,170
+so there's no, you know, there's no easy answer for,
+
+1503
+01:10:41,890 --> 01:10:43,830
+when one be faster than another,
+
+1504
+01:10:43,830 --> 01:10:44,385
+you can't just,
+
+1505
+01:10:44,385 --> 01:10:45,800
+because it's an index, because it's a table,
+
+1506
+01:10:46,180 --> 01:10:48,800
+again, the OS doesn't know that it's an index page versus a table page.
+
+1507
+01:10:50,200 --> 01:10:51,705
+There's also sometimes in some systems,
+
+1508
+01:10:51,705 --> 01:10:55,310
+you can have SLA service level agreements or service level objectives,
+
+1509
+01:10:55,540 --> 01:10:59,090
+like my queries have to run within a certain deadline at a certain latency,
+
+1510
+01:10:59,750 --> 01:11:01,060
+and the typical way you do this is,
+
+1511
+01:11:01,060 --> 01:11:02,275
+you have different user account
+
+1512
+01:11:02,275 --> 01:11:05,040
+and give one user account higher priority than another user account,
+
+1513
+01:11:05,540 --> 01:11:09,960
+like the, the frontend application has a higher priority than like, you know, nightly reporting jobs,
+
+1514
+01:11:10,850 --> 01:11:12,330
+and you do that based on user roles.
+
+1515
+01:11:16,860 --> 01:11:19,955
+So the way we can get better performance
+
+1516
+01:11:19,955 --> 01:11:25,235
+and try to avoid some of this interference from the OS is
+
+1517
+01:11:25,235 --> 01:11:26,620
+to use what's called direct I/O.
+
+1518
+01:11:28,040 --> 01:11:30,895
+So, all your disk operations for the most part,
+
+1519
+01:11:30,895 --> 01:11:33,150
+are going to have to go through the OS API,
+
+1520
+01:11:33,590 --> 01:11:37,560
+unless you're doing like, you know, direct kernel bypass to the hardware device,
+
+1521
+01:11:37,940 --> 01:11:39,330
+but most systems don't do that.
+
+1522
+01:11:41,100 --> 01:11:42,605
+And the idea here is that,
+
+1523
+01:11:42,605 --> 01:11:46,090
+we don't want the OS to maintain its own cache, called the page cache,
+
+1524
+01:11:46,650 --> 01:11:49,900
+because we don't want the OS to buffer our reads and writes,
+
+1525
+01:11:50,770 --> 01:11:52,640
+we want to do that all entirely ourselves,
+
+1526
+01:11:53,480 --> 01:11:56,010
+because again, we want to have full control of the hardware.
+
+1527
+01:11:57,380 --> 01:11:58,225
+So the idea is like this,
+
+1528
+01:11:58,225 --> 01:12:01,530
+if I do a read against the file system,
+
+1529
+01:12:02,420 --> 01:12:03,580
+well, the OS is gonna say,
+
+1530
+01:12:03,580 --> 01:12:08,370
+oh, let me go maintain my own little buffer pool in, in the OS
+
+1531
+01:12:08,900 --> 01:12:12,810
+across all all the processes running global for the OS,
+
+1532
+01:12:13,490 --> 01:12:17,190
+and then I will store the data I need you're asking for in my page cache
+
+1533
+01:12:17,600 --> 01:12:18,870
+and then the next time I do a read,
+
+1534
+01:12:18,950 --> 01:12:20,550
+I'll get it for my, for my page cache.
+
+1535
+01:12:21,610 --> 01:12:24,225
+So instead we want to bypass this and go around it
+
+1536
+01:12:24,225 --> 01:12:25,850
+and go directly to the hardware
+
+1537
+01:12:26,440 --> 01:12:29,120
+and not have the OS buffer anything.
+
+1538
+01:12:30,880 --> 01:12:32,820
+So most systems use direct I/O,
+
+1539
+01:12:32,820 --> 01:12:34,430
+most systems use direct I/O by default,
+
+1540
+01:12:35,560 --> 01:12:36,950
+there is only one system that does not,
+
+1541
+01:12:39,200 --> 01:12:40,110
+anyone to guess what it is.
+
+1542
+01:12:41,840 --> 01:12:42,780
+Say SingleStore, no.
+
+1543
+01:12:44,470 --> 01:12:45,230
+MySQL, no.
+
+1544
+01:12:46,135 --> 01:12:47,830
+It's Postgres, right,
+
+1545
+01:12:47,830 --> 01:12:49,860
+Postgres, because it's a relic from the 80s,
+
+1546
+01:12:51,110 --> 01:12:52,860
+they rely heavily on the OS page cache,
+
+1547
+01:12:53,670 --> 01:12:54,190
+it calls,
+
+1548
+01:12:54,690 --> 01:12:56,980
+and so when you allocate a buffer pool in Postgres,
+
+1549
+01:12:57,150 --> 01:12:59,830
+you set, it's like 30 40 percent of the amount of memory that's on the box,
+
+1550
+01:13:00,630 --> 01:13:04,570
+MySQL and every other database system tells you use 80% of the memory, that's available in the box,
+
+1551
+01:13:05,040 --> 01:13:05,825
+because in Postgres,
+
+1552
+01:13:05,825 --> 01:13:08,440
+they want some of the memory to be for the the page cache and the OS,
+
+1553
+01:13:08,610 --> 01:13:09,970
+some of the memory for the database system.
+
+1554
+01:13:11,130 --> 01:13:12,040
+So what's the problem with this,
+
+1555
+01:13:12,540 --> 01:13:14,230
+well, now I got redundant copies of my pages,
+
+1556
+01:13:14,790 --> 01:13:16,145
+the OS is going to have a copy of my page,
+
+1557
+01:13:16,145 --> 01:13:17,830
+and my database system is going to have a copy of my page,
+
+1558
+01:13:18,300 --> 01:13:19,750
+same thing for both reads and writes,
+
+1559
+01:13:20,670 --> 01:13:24,250
+and then the, the, the, the database system is going to have its own policy
+
+1560
+01:13:24,780 --> 01:13:26,560
+of how to decide what pages to evict,
+
+1561
+01:13:27,000 --> 01:13:30,310
+but then, just because I evict it from my buffer pool in my, in my database system,
+
+1562
+01:13:30,600 --> 01:13:33,070
+the OS can decide evict anyway it wants to,
+
+1563
+01:13:33,680 --> 01:13:35,550
+and again, it doesn't know what the pages actually represent,
+
+1564
+01:13:37,350 --> 01:13:40,925
+and then you also lose control, when things actually get flushed out the disk,
+
+1565
+01:13:40,925 --> 01:13:41,530
+unless you're careful.
+
+1566
+01:13:44,670 --> 01:13:47,855
+So, let's see how far you guys can get these answers here,
+
+1567
+01:13:47,855 --> 01:13:49,000
+even if you haven't taken the OS class.
+
+1568
+01:13:49,760 --> 01:13:51,310
+So if you call fwrite, what happens?
+
+1569
+01:13:53,900 --> 01:13:55,260
+I open a file, right,
+
+1570
+01:13:55,370 --> 01:13:56,910
+say my database file,
+
+1571
+01:13:57,470 --> 01:13:59,305
+I have my buffer pool manager bring a page
+
+1572
+01:13:59,305 --> 01:14:02,010
+in another query updates it,
+
+1573
+01:14:02,270 --> 01:14:03,090
+the page is dirty,
+
+1574
+01:14:03,320 --> 01:14:05,110
+I call fwrite to write that page out the disk,
+
+1575
+01:14:05,110 --> 01:14:05,520
+What happens?
+
+1576
+01:14:08,590 --> 01:14:09,920
+Assuming we were not using direct I/O,
+
+1577
+01:14:12,830 --> 01:14:14,460
+the page lands in the OS page cache,
+
+1578
+01:14:14,990 --> 01:14:16,330
+because the operating system is trying to be clever
+
+1579
+01:14:16,330 --> 01:14:17,970
+and trying to make things fast for you, right,
+
+1580
+01:14:19,990 --> 01:14:21,230
+so is it on disk yet,
+
+1581
+01:14:21,340 --> 01:14:23,660
+when I get, when I get, when fwrite returns,
+
+1582
+01:14:23,740 --> 01:14:25,610
+is is my, is my data save,
+
+1583
+01:14:26,390 --> 01:14:28,650
+no, because it's in the OS page cache,
+
+1584
+01:14:29,400 --> 01:14:30,740
+when is it going to be flush out the disk,
+
+1585
+01:14:32,610 --> 01:14:34,690
+when the OS decides to do it, right,
+
+1586
+01:14:36,080 --> 01:14:38,485
+but that we want to make sure our thing on disk,
+
+1587
+01:14:38,485 --> 01:14:39,690
+so what do we call fsync,
+
+1588
+01:14:41,330 --> 01:14:42,270
+what does fsync do?
+
+1589
+01:14:44,290 --> 01:14:44,720
+Flush.
+
+1590
+01:14:45,250 --> 01:14:45,860
+Flush what?
+
+1591
+01:14:47,200 --> 01:14:48,495
+Dirty pages out the disk
+
+1592
+01:14:48,495 --> 01:14:50,720
+and you can be clever, you kind kind of do [ranges], right,
+
+1593
+01:14:50,950 --> 01:14:51,680
+doesn't always work
+
+1594
+01:14:52,930 --> 01:14:54,890
+and then the call to fsync will block,
+
+1595
+01:14:55,940 --> 01:14:59,310
+until the hardware comes back, says your data is persistent.
+
+1596
+01:15:00,130 --> 01:15:01,545
+The hardware can play games too,
+
+1597
+01:15:01,545 --> 01:15:03,530
+because sometimes the hardware has a little battery down there,
+
+1598
+01:15:03,910 --> 01:15:05,130
+so you'll get your writes,
+
+1599
+01:15:05,130 --> 01:15:06,470
+that's still sitting, volatile memory,
+
+1600
+01:15:06,730 --> 01:15:09,465
+but if there's a power and you, you can, you can send in response to,
+
+1601
+01:15:09,465 --> 01:15:10,520
+I got, I got your write,
+
+1602
+01:15:10,930 --> 01:15:11,970
+but then there's a power loss,
+
+1603
+01:15:11,970 --> 01:15:13,340
+there's just enough battery juice
+
+1604
+01:15:13,360 --> 01:15:15,980
+to then make sure it gets gets written to disk, right,
+
+1605
+01:15:16,570 --> 01:15:18,910
+so it's not, not,
+
+1606
+01:15:19,170 --> 01:15:20,890
+always me on the NAND flash at that point,
+
+1607
+01:15:21,090 --> 01:15:22,900
+but, typically, that's good enough.
+
+1608
+01:15:24,230 --> 01:15:25,920
+But what happens if fsync calls failure,
+
+1609
+01:15:26,750 --> 01:15:28,530
+what fsync says I can't do it for you,
+
+1610
+01:15:30,630 --> 01:15:31,360
+what does that mean?
+
+1611
+01:15:36,030 --> 01:15:37,120
+Say the OS doesn't crash,
+
+1612
+01:15:38,040 --> 01:15:39,220
+fsync just returns an error,
+
+1613
+01:15:44,660 --> 01:15:47,770
+in Linux, it's going to mark the dirty pages are clean,
+
+1614
+01:15:48,510 --> 01:15:49,610
+it's not a kernel panic,
+
+1615
+01:15:49,610 --> 01:15:50,800
+it says these pages are clean,
+
+1616
+01:15:51,240 --> 01:15:52,240
+even though fsync failed,
+
+1617
+01:15:52,890 --> 01:15:55,600
+and then you call fsync again, it's going to,
+
+1618
+01:15:55,800 --> 01:15:58,450
+on those pages that you want to write the disk through your fwrite,
+
+1619
+01:15:58,740 --> 01:16:00,430
+it's going to come back and say, yep, I got them,
+
+1620
+01:16:01,190 --> 01:16:02,920
+they're clean, it's on disk,
+
+1621
+01:16:03,560 --> 01:16:05,840
+but it's lying to you, right,
+
+1622
+01:16:06,900 --> 01:16:07,930
+why is it lying to you,
+
+1623
+01:16:11,090 --> 01:16:15,060
+because the kernel developers are worried about someone pulling out a USB stick, right,
+
+1624
+01:16:15,440 --> 01:16:17,040
+and then the fsync failing
+
+1625
+01:16:17,210 --> 01:16:22,140
+and having a bunch of dirt pages marked dirty in its, in its page table,
+
+1626
+01:16:22,460 --> 01:16:24,280
+that are never gonna get come back again,
+
+1627
+01:16:24,280 --> 01:16:26,790
+because you're never gonna put the USB stick back in again, right,
+
+1628
+01:16:27,630 --> 01:16:29,050
+is that the right thing for databases,
+
+1629
+01:16:29,940 --> 01:16:33,580
+no, right, we're not running off a usb stick.
+
+1630
+01:16:35,150 --> 01:16:37,300
+So again, we need full control of everything
+
+1631
+01:16:37,300 --> 01:16:38,310
+to make sure we're doing things right,
+
+1632
+01:16:39,220 --> 01:16:40,740
+well, it turns out that,
+
+1633
+01:16:41,090 --> 01:16:44,880
+people didn't know that that fsync was broken in this way for 20 years,
+
+1634
+01:16:45,890 --> 01:16:49,920
+so in 2018, there was a scandal called fsyncgate,
+
+1635
+01:16:50,180 --> 01:16:53,545
+where someone on the Postgres mailing list reported,
+
+1636
+01:16:53,545 --> 01:16:55,650
+hey, Postgres lost some of my data,
+
+1637
+01:16:56,570 --> 01:16:59,430
+but I, you know, I never got a kernel panic, I never had a failure,
+
+1638
+01:17:00,200 --> 01:17:02,290
+and it turns out, because fsync,
+
+1639
+01:17:03,000 --> 01:17:04,010
+on all these database systems,
+
+1640
+01:17:04,060 --> 01:17:05,070
+they would call fsync,
+
+1641
+01:17:05,070 --> 01:17:06,050
+fsync would return to error
+
+1642
+01:17:06,190 --> 01:17:08,780
+and they just put it in a while loop and call it again,
+
+1643
+01:17:09,250 --> 01:17:10,590
+and then fsync came back and said,
+
+1644
+01:17:10,590 --> 01:17:11,310
+yep, I got it,
+
+1645
+01:17:11,310 --> 01:17:13,530
+because they marked out your pages that were dirty to clean,
+
+1646
+01:17:13,530 --> 01:17:14,540
+even though they were never written.
+
+1647
+01:17:15,460 --> 01:17:16,710
+It's not just Postgres had this problem,
+
+1648
+01:17:16,710 --> 01:17:17,520
+MySQL had this problem,
+
+1649
+01:17:17,520 --> 01:17:18,450
+MongoDB had this problem
+
+1650
+01:17:18,450 --> 01:17:20,270
+and WiredTiger a bunch of other systems.
+
+1651
+01:17:21,140 --> 01:17:22,120
+So now what do they do,
+
+1652
+01:17:22,960 --> 01:17:25,510
+well, if fsync fails, then then the system crashes,
+
+1653
+01:17:25,510 --> 01:17:27,270
+and then you got to go figure out what's going on,
+
+1654
+01:17:28,310 --> 01:17:33,410
+but for twenty years, people didn't know this was an issue, right.
+
+1655
+01:17:34,320 --> 01:17:37,100
+And so this is not an issue of the page cache,
+
+1656
+01:17:37,210 --> 01:17:40,860
+but this is an example where we need to make sure we have full control
+
+1657
+01:17:40,860 --> 01:17:43,910
+of what is getting read and written from disk into memory,
+
+1658
+01:17:44,440 --> 01:17:46,515
+and that when we write things out the disk,
+
+1659
+01:17:46,515 --> 01:17:49,070
+we want to make sure that it's actually save and correct,
+
+1660
+01:17:49,930 --> 01:17:51,560
+and that the OS can lie to us,
+
+1661
+01:17:51,610 --> 01:17:53,420
+because the OS doesn't care about databases,
+
+1662
+01:17:53,890 --> 01:17:55,040
+because the OS is worried about,
+
+1663
+01:17:55,570 --> 01:17:58,280
+you know, somebody with a USB stick or whatever,
+
+1664
+01:17:58,870 --> 01:18:00,500
+because it's trying to be a general purpose system,
+
+1665
+01:18:01,210 --> 01:18:02,565
+and so we need to make sure that,
+
+1666
+01:18:02,565 --> 01:18:03,860
+we, as a database system developers,
+
+1667
+01:18:04,600 --> 01:18:05,685
+put the mechanisms in place
+
+1668
+01:18:05,685 --> 01:18:07,370
+to make sure that we don't, we don't get screwed.
+
+1669
+01:18:10,590 --> 01:18:10,990
+Okay?
+
+1670
+01:18:12,370 --> 01:18:16,280
+All right, so there's multiple pools other than, than what we've talked about,
+
+1671
+01:18:16,600 --> 01:18:18,735
+just think ephemeral caches for JOINs and things like that,
+
+1672
+01:18:18,735 --> 01:18:19,460
+we'll see that later.
+
+1673
+01:18:19,870 --> 01:18:20,270
+Okay.
+
+1674
+01:18:20,820 --> 01:18:23,240
+So we always be better than the operating system,
+
+1675
+01:18:23,590 --> 01:18:26,270
+despite what the Linux people say, the OS people say,
+
+1676
+01:18:27,490 --> 01:18:30,825
+and it's because we know what the query plans are want to do,
+
+1677
+01:18:30,825 --> 01:18:32,690
+we know how queries want to access data
+
+1678
+01:18:32,950 --> 01:18:34,670
+and we can always do better things.
+
+1679
+01:18:35,980 --> 01:18:36,870
+Hash tables next class,
+
+1680
+01:18:37,070 --> 01:18:38,520
+but let me talk about project #1 very, very quickly,
+
+1681
+01:18:38,870 --> 01:18:41,520
+so you'll be implementing this in BusTub obviously,
+
+1682
+01:18:41,750 --> 01:18:42,870
+and so you have three parts,
+
+1683
+01:18:43,460 --> 01:18:44,760
+LRU-K replacement policy,
+
+1684
+01:18:45,470 --> 01:18:47,170
+a disk scheduler, a very primitive one,
+
+1685
+01:18:47,170 --> 01:18:49,200
+and then the actual buffer pool manager instance itself.
+
+1686
+01:18:53,020 --> 01:18:54,230
+So for the first one,
+
+1687
+01:18:54,610 --> 01:18:57,045
+there'll be a separate class that you need to implement that,
+
+1688
+01:18:57,045 --> 01:18:58,640
+basically keep track of all the pages
+
+1689
+01:18:59,050 --> 01:19:01,335
+and then there'll be an API to implement,
+
+1690
+01:19:01,335 --> 01:19:03,800
+it says I need, give me, give me a page to evict,
+
+1691
+01:19:04,480 --> 01:19:05,785
+so you sort of implement that first
+
+1692
+01:19:05,785 --> 01:19:10,960
+and then there's there's there's, you know, there's test to make sure this is actually working correctly,
+
+1693
+01:19:11,190 --> 01:19:14,435
+if none of the pages have been touched that time you check,
+
+1694
+01:19:14,435 --> 01:19:16,090
+then always return the lowest page ID,
+
+1695
+01:19:16,200 --> 01:19:17,740
+because again, you got to fix something,
+
+1696
+01:19:18,970 --> 01:19:20,810
+and so you decide what to evict based on that.
+
+1697
+01:19:22,470 --> 01:19:24,970
+Next, implement is a disk scheduler,
+
+1698
+01:19:24,990 --> 01:19:27,760
+basically you going take a bunch of requests or different threads at the same time
+
+1699
+01:19:28,020 --> 01:19:33,970
+and then have a single queue decide in which order you should apply the read and writes,
+
+1700
+01:19:35,510 --> 01:19:37,170
+and the way you implement this, the API,
+
+1701
+01:19:37,490 --> 01:19:38,760
+there will be a callback mechanism
+
+1702
+01:19:38,870 --> 01:19:42,570
+through the C++ promise API, promise constructs,
+
+1703
+01:19:42,920 --> 01:19:44,275
+and this is a function you invoke
+
+1704
+01:19:44,275 --> 01:19:50,190
+once the the page, the data that the requester is waiting for is available
+
+1705
+01:19:50,780 --> 01:19:51,720
+and you call that back,
+
+1706
+01:19:52,070 --> 01:19:53,730
+it's not going to be true asynchronous I/O,
+
+1707
+01:19:55,280 --> 01:19:59,550
+but it the, because basically the thread that makes the request will block on this call back,
+
+1708
+01:20:00,050 --> 01:20:02,190
+But this would be the building block to do more sophisticated things,
+
+1709
+01:20:02,760 --> 01:20:05,320
+so make sure that what you build here is thread safe.
+
+1710
+01:20:06,580 --> 01:20:08,270
+Last thing is the buffer pool manager itself
+
+1711
+01:20:08,620 --> 01:20:12,020
+and this will be built on top of the LRU-K implementation and your disk scheduler,
+
+1712
+01:20:12,310 --> 01:20:16,665
+and you maintain the internal data structure to read and write data using the disk scheduler
+
+1713
+01:20:16,665 --> 01:20:18,800
+and keep track of what pages are free and when they're accessed,
+
+1714
+01:20:19,120 --> 01:20:20,910
+and the thing that always trips up people every year is
+
+1715
+01:20:20,910 --> 01:20:22,550
+make sure you get the ordering correctly,
+
+1716
+01:20:23,380 --> 01:20:24,650
+when you're pinning and unpinning.
+
+1717
+01:20:26,350 --> 01:20:30,980
+So, six might not be the right number, but don't change any other file,
+
+1718
+01:20:31,900 --> 01:20:34,640
+because everything will get over overwritten, when you load it up into GradeScope,
+
+1719
+01:20:34,810 --> 01:20:36,105
+the projects are cumulative,
+
+1720
+01:20:36,105 --> 01:20:41,150
+we won't be writing solutions and then post everything on on piazza as you go along,
+
+1721
+01:20:41,860 --> 01:20:44,150
+like in project #0, you have to make sure you have good code quality,
+
+1722
+01:20:44,380 --> 01:20:47,840
+so make sure you run, make format and then check-clang-tidy,
+
+1723
+01:20:48,430 --> 01:20:51,830
+because if you don't do this and you upload the GradeScope, you'll get a zero,
+
+1724
+01:20:52,470 --> 01:20:54,580
+we are having,
+
+1725
+01:20:55,980 --> 01:20:58,070
+for this project and all the other projects, there'll be extra credit,
+
+1726
+01:20:58,070 --> 01:20:59,015
+there's a leader board,
+
+1727
+01:20:59,015 --> 01:21:01,990
+with the additional tasks that go beyond the core requirements
+
+1728
+01:21:02,520 --> 01:21:05,650
+and then you'll get ranked when you submit thing on GradeScope
+
+1729
+01:21:06,000 --> 01:21:10,270
+and then the the top twenty students will get will get bonus points for this project,
+
+1730
+01:21:10,860 --> 01:21:12,350
+and this will be available for all four projects
+
+1731
+01:21:12,820 --> 01:21:17,850
+and then the student at the end of the semester has the has the highest score of bonus points
+
+1732
+01:21:17,850 --> 01:21:20,690
+and all the students will get a limited edition BusTub hoodie,
+
+1733
+01:21:21,700 --> 01:21:23,870
+You have to fill out a tax form, because they're limited edition,
+
+1734
+01:21:24,190 --> 01:21:25,320
+they cost 5000 dollars
+
+1735
+01:21:25,320 --> 01:21:28,520
+and again CMU will handle that the paperwork for that,
+
+1736
+01:21:28,540 --> 01:21:30,650
+but it's highly desirable.
+
+1737
+01:21:31,330 --> 01:21:32,810
+Don't around, don't plagiarize,
+
+1738
+01:21:32,920 --> 01:21:36,920
+because again the GradeScope has the automatic plagiarism checker
+
+1739
+01:21:37,060 --> 01:21:38,930
+and we go find the [] Github,
+
+1740
+01:21:39,130 --> 01:21:40,215
+we put them as fake students
+
+1741
+01:21:40,215 --> 01:21:41,210
+and if you copy them
+
+1742
+01:21:41,440 --> 01:21:42,380
+you'll get flagged.
+
