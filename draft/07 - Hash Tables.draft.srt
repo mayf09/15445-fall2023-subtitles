@@ -4758,29 +4758,31 @@ what you want to use.|
 00:21:47,280 --> 00:21:48,150
 0,240 240,420 525,585 585,705 705,870
 And so there's a bunch
-因此，GitHub上有一堆这样的存储库。
+GitHub 上有一堆这样的存储库，
 
 845
 00:21:48,150 --> 00:21:50,120
 0,135 135,285 285,1065 1065,1425 1425,1970
-of these repositories on github.|
+of these repositories on Github,|
 |
 
 846
 00:21:51,010 --> 00:21:51,990
 0,260 260,410 410,590 590,710 710,980
-Or people I've written basically
-或者我写的人基本上是在拷问钱伯斯或基准，呃，运行所有可能的哈希函数，看看它们的冲突率是多少，看看性能是什么。这就是这个mhasher mhasher。还有一个是杂音杂碎的家伙写的，还有一个是这个方面的分叉。这只是删除所有密码学的东西。但对于这里的存储库，他们在这里有一个很好的总结，说这些是工作最好的，并且有很好的冲突率。
+or people I've written basically
+或者人们[]或基准，
 
 847
 00:21:51,990 --> 00:21:54,080
 0,390 390,690 690,825 825,1280 1690,2090
-torture Chambers or benchmarks to,
+{[] -} or benchmarks to,|
+|
 
 848
 00:21:54,160 --> 00:21:55,905
 0,400 660,935 935,1115 1115,1415 1415,1745
-eh, to run all possible
+{} to run all possible
+运行所有可能的哈希函数，
 
 849
 00:21:55,905 --> 00:21:56,805
@@ -4790,62 +4792,72 @@ hash functions that are out
 850
 00:21:56,805 --> 00:21:58,005
 0,305 535,840 840,1005 1005,1110 1110,1200
-there and see what their
+there| and see what their
+|看看它们的碰撞率是多少，
 
 851
 00:21:58,005 --> 00:21:58,830
 0,195 195,390 390,585 585,750 750,825
-collision rate is, see what
+collision rate is,| see what
+|看看性能是什么，
 
 852
 00:21:58,830 --> 00:22:00,930
 0,135 135,360 360,680 1750,1995 1995,2100
-the performance is. So this
+the performance is,| so this
+|这个是 SMhasher ，
 
 853
 00:22:00,930 --> 00:22:02,415
 0,195 195,450 450,675 675,1185 1185,1485
-is this m hasher m
+is this {Mhasher -} {SMhasher
 
 854
 00:22:02,415 --> 00:22:03,735
 0,405 405,660 660,825 825,1020 1020,1320
-hasher. There's another one written
+-},| there's another one written
+|这是另一个 MurmurHash 的人写的，
 
 855
 00:22:03,735 --> 00:22:04,730
 0,255 255,360 360,540 540,735 735,995
-by the murmur hash guy
+by the {MurmurHash -} guy|
+|
 
 856
 00:22:05,140 --> 00:22:06,780
 0,260 260,500 500,695 695,1000 1320,1640
 and there's another one that's
+还有一个是这个方面的 fork ，
 
 857
 00:22:06,780 --> 00:22:08,700
 0,105 105,300 300,405 405,680 1600,1920
-a fork at this. That's
+a fork at this,| that's
+|这只是[]所有密码学的东西，
 
 858
 00:22:08,700 --> 00:22:11,175
 0,230 1570,1830 1830,1935 1935,2040 2040,2475
-only remo all the cryptography
+only [] all the cryptography
 
 859
 00:22:11,175 --> 00:22:13,365
 0,275 625,960 960,1290 1290,1575 1575,2190
-stuff. But for this repository
+stuff,| but for this repository
+|但对于这里的存储库，
 
 860
 00:22:13,365 --> 00:22:14,460
 0,240 240,390 390,510 510,780 780,1095
-here, they have this nice
+here,| they have this nice
+|他们在这里有一个很好的总结，
 
 861
 00:22:14,460 --> 00:22:15,780
 0,270 270,620 700,960 960,1125 1125,1320
-summary here that says these
+summary here,| that says these
+|说这些是工作最好的，并且有很好的碰撞率，
 
 862
 00:22:15,780 --> 00:22:16,935
@@ -4860,19 +4872,19 @@ the best and have good
 864
 00:22:18,250 --> 00:22:19,380
 0,350 350,670
-collision rates.|
+collision rates,|
 |
 
 865
 00:22:19,380 --> 00:22:21,090
 0,120 120,270 270,560 1270,1560 1560,1710
-And then the top one
-然后这里最上面的是xx有三个，脸书的那个。
+and then the top one
+然后这里最上面的是 XXHash-3 ， Facebook 的那个。
 
 866
 00:22:21,090 --> 00:22:22,515
 0,195 195,465 465,870 870,1125 1125,1425
-here is xx has three,
+here is {XXHash-3 - -},
 
 867
 00:22:22,515 --> 00:22:24,160
