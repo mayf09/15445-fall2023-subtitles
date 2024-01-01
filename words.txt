@@ -15,3 +15,6 @@ delta encoding 增量编码
 
 ## 06
 buffer pool 缓冲池
+
+## 07
+vectorized instruction 向量化指令
