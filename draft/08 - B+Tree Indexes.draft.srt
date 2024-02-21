@@ -661,8 +661,8 @@ is a {B+ -} tree.|
 118
 00:03:39,710 --> 00:03:40,540
 0,275 275,395 395,485 485,620 620,830
-And so the b plus
-因此，b+树属于一种称为b树的数据结构。在数据库文献中，令人困惑的是，不同的数据库系统中，有一类数据结构被称为b树。然后是一种特殊的数据结构，称为b树。然后一些数据库系统实际上使用的是b加树，但他们将自己称为A、B树。
+And so the {B+ -}
+B+ 树属于一种称为 B 树的数据结构，
 
 119
 00:03:40,540 --> 00:03:42,745
@@ -672,12 +672,13 @@ tree is in a category
 120
 00:03:42,745 --> 00:03:44,530
 0,240 240,405 405,725 745,1145 1465,1785
-of data structures called b
+of data structures called B
 
 121
 00:03:44,530 --> 00:03:45,715
 0,320 580,840 840,1020 1020,1095 1095,1185
-trees. And what's sort of
+trees,| and what's sort of
+|在数据库文献中，令人困惑的是，
 
 122
 00:03:45,715 --> 00:03:47,785
@@ -687,79 +688,86 @@ confusing about this in database
 123
 00:03:47,785 --> 00:03:49,915
 0,395 1105,1395 1395,1635 1635,1920 1920,2130
-literature, different database systems, is
+literature,| different database systems, is
+|不同的数据库系统中，
 
 124
 00:03:49,915 --> 00:03:51,445
 0,275 595,945 945,1110 1110,1350 1350,1530
-that there's the class of
+that,| there's the class of
+|有一类数据结构被称为 B 树，
 
 125
 00:03:51,445 --> 00:03:52,555
 0,105 105,300 300,615 615,900 900,1110
-the data structure called b
+the data structure called B
 
 126
 00:03:52,555 --> 00:03:53,995
 0,305 745,1020 1020,1155 1155,1335 1335,1440
-trees. And then there's a
+trees,| and then there's a
+|然后是一种特殊的数据结构，称为 B 树，
 
 127
 00:03:53,995 --> 00:03:55,570
 0,275 355,705 705,1020 1020,1320 1320,1575
-specific data structure called b
+specific data structure called B
 
 128
 00:03:55,570 --> 00:03:57,330
 0,320 790,1065 1065,1245 1245,1455 1455,1760
-trees. And then some database
+tree,| and then some database
+|然后一些数据库系统实际上使用的是 B+ 树，
 
 129
 00:03:57,380 --> 00:03:58,690
 0,335 335,590 590,770 770,1010 1010,1310
-systems are actually using b
+systems are actually using {B+
 
 130
 00:03:58,690 --> 00:04:00,475
 0,270 270,620 1270,1545 1545,1725 1725,1785
-plus trees, but they're going
+-} trees,| but they're going
+|但他们将自己称为 B 树。
 
 131
 00:04:00,475 --> 00:04:01,690
 0,90 90,330 330,725 775,1035 1035,1215
-to call themselves A B
+to call themselves a B
 
 132
 00:04:01,690 --> 00:04:02,640
 0,320
-tree.|
-|
+tree,
 
 133
 00:04:02,740 --> 00:04:03,555
 0,380 380,590 590,650 650,725 725,815
-Right. So if you go
-正确的。所以如果你去看POSTRES代码，他们会把他们的数据结构称为A，B树。但据我所知，这是一棵A，B+树，使用了一些现代技术，比如从b链接树。
+right.| So if you go
+|所以如果你去看 Postgres 代码，
 
 134
 00:04:03,555 --> 00:04:04,460
 0,90 90,165 165,255 255,615 615,905
-look at the postres code,
+look at the Postgres code,|
+|
 
 135
 00:04:04,600 --> 00:04:05,460
 0,320 320,380 380,440 440,635 635,860
 they're going to refer to
+他们会把他们的数据结构称为 B 树，
 
 136
 00:04:05,460 --> 00:04:06,450
 0,180 180,420 420,675 675,870 870,990
-their data structure as A
+their data structure as a
 
 137
 00:04:06,450 --> 00:04:07,725
 0,180 180,500 820,1050 1050,1140 1140,1275
-B tree. But as far
+B tree,| but as far
+|但据我所知，这是一棵 B+ 树，
 
 138
 00:04:07,725 --> 00:04:08,670
@@ -769,34 +777,35 @@ as I can tell, it's
 139
 00:04:08,670 --> 00:04:10,125
 0,105 105,285 285,525 525,860 1150,1455
-A B plus tree with
+a {B+ -} tree,| with
+|使用了一些现代技术，比如 B-Link 树。
 
 140
 00:04:10,125 --> 00:04:12,345
 0,305 505,905 1075,1475 1495,1895 1945,2220
-some modern techniques like from
+some modern techniques, like from
 
 141
 00:04:12,345 --> 00:04:13,560
 0,120 120,255 255,450 450,755
-the b link tree.|
-|
+the {B-Link -} tree,
 
 142
 00:04:13,570 --> 00:04:14,900
 0,400 600,830 830,980 980,1070 1070,1330
-Right. So it's sort of
-正确的。所以当你说b加树的时候，它通常指的是其他一些不同的东西，所以。
+right.| So it's sort of,
+|所以当你说 B+ 树的时候，
 
 143
 00:04:14,950 --> 00:04:15,945
 0,275 275,545 545,785 785,875 875,995
-when b, when you say
+when B, when you say
 
 144
 00:04:15,945 --> 00:04:17,970
 0,165 165,360 360,665 1285,1725 1725,2025
-b plus tree, it's typically
+{B+ -} tree,| it's typically
+|它通常指的是其他一些不同的东西。
 
 145
 00:04:17,970 --> 00:04:18,885
@@ -806,29 +815,31 @@ going to mean a bunch
 146
 00:04:18,885 --> 00:04:19,730
 0,90 90,165 165,315 315,525 525,845
-of these other different things,
+of these other different things.|
+|
 
 147
 00:04:20,590 --> 00:04:22,280
 0,400
-so.|
-|
+So,
+所以， B+ 树没有原始论文，
 
 148
 00:04:22,280 --> 00:04:23,770
 0,225 225,450 450,735 735,1070 1090,1490
-There is no original paper
-B+树上没有原纸。其实大家提到的这个是1979年的这个，嗯？由IBM的人谈论他们所说的无处不在的B-B树。然后他们描述说，嘿，有这个Di，不同的变种，但对数据库系统最有用的是A，B+树。然后他们引用了某种我找不到的IBM技术报告。我没有那么认真地看，但在谷歌上没有显示出来，这是他们谈论的那个。
+there is no original paper
 
 149
 00:04:24,300 --> 00:04:25,450
 0,290 290,425 425,590 590,830 830,1150
-on the b plus tree.
+on the {B+ -} tree,|
+|
 
 150
 00:04:25,500 --> 00:04:27,500
 0,400 1170,1430 1430,1565 1565,1775 1775,2000
-Actually, the one that everyone
+actually, the one that everyone
+大家提到的这个是 1979 年的这个，
 
 151
 00:04:27,500 --> 00:04:28,415
@@ -838,37 +849,44 @@ cites is this one from
 152
 00:04:28,415 --> 00:04:31,235
 0,905 1345,1745 2305,2565 2565,2670 2670,2820
-1979, eh? By the guys
+1979,| {} by the guys
+|由 IBM 的人谈论，
 
 153
 00:04:31,235 --> 00:04:32,770
 0,150 150,600 600,900 900,1185 1185,1535
-at IBM talking about the
+at IBM talking about the,|
+|
 
 154
 00:04:33,270 --> 00:04:33,845
 0,245 245,335 335,425 425,500 500,575
 what they call it, the
+他们称为无处不在的 B 树，
 
 155
 00:04:33,845 --> 00:04:35,870
 0,495 495,750 750,1065 1065,1385 1765,2025
-ubiquitous B B tree. And
+ubiquitous {B -} tree,| and
+|然后他们描述说，
 
 156
 00:04:35,870 --> 00:04:36,970
 0,135 135,285 285,435 435,705 705,1100
-in then this they describe,
+in then this they describe,|
+|
 
 157
 00:04:37,050 --> 00:04:38,240
 0,305 305,545 545,725 725,980 980,1190
-hey, there's this Di, the
+hey, there's this {}, the
+嘿，有这个不同的变种，
 
 158
 00:04:38,240 --> 00:04:40,040
 0,225 225,770 1180,1470 1470,1620 1620,1800
-different variants, but the most
+different variants,| but the most
+|但对数据库系统最有用的是 B+ 树，
 
 159
 00:04:40,040 --> 00:04:40,925
@@ -883,12 +901,13 @@ most useful for database systems
 161
 00:04:42,180 --> 00:04:42,920
 0,275 275,395 395,485 485,590 590,740
-is gonna be A B
+is gonna be a {B+
 
 162
 00:04:42,920 --> 00:04:43,760
 0,210 210,405 405,525 525,645 645,840
-plus tree. And then they
+-} tree,| And then they
+|然后他们引用了某种 IBM 技术报告，
 
 163
 00:04:43,760 --> 00:04:45,850
@@ -898,27 +917,32 @@ cite some kind of IBM
 164
 00:04:45,990 --> 00:04:46,925
 0,320 320,545 545,695 695,800 800,935
-Tech report that I have
+tech report,| that I have
+|我没有找到，
 
 165
 00:04:46,925 --> 00:04:47,680
 0,150 150,255 255,360 360,495 495,755
-not been able to find.
+not been able to find,|
+|
 
 166
 00:04:49,020 --> 00:04:49,805
 0,245 245,380 380,470 470,620 620,785
-I didn't look that hard,
+I didn't look that hard,|
+我没有那么认真地找，|
 
 167
 00:04:49,805 --> 00:04:51,125
 0,275 745,990 990,1170 1170,1245 1245,1320
 but it doesn't show up
+但它在 Google 上没有显示出来，
 
 168
 00:04:51,125 --> 00:04:53,825
 0,135 135,285 285,545 1675,2075 2305,2700
-right on Google that that's
+right on Google,| that that's
+|这是他们谈论的那个原始 B+ 树，
 
 169
 00:04:53,825 --> 00:04:54,560
@@ -928,75 +952,82 @@ the one where they talk
 170
 00:04:54,560 --> 00:04:56,080
 0,330 330,710
-about the.|
-|
+about the,
 
 171
 00:04:56,080 --> 00:04:59,220
 0,360 360,660 660,870 870,1430
-The original b pedestrian.|
-原来的B行人。|
+the original {B+,tree -}.|
+|
 
 172
 00:04:59,500 --> 00:05:02,175
 0,400 810,1175 1175,1775 1775,2140 2340,2675
 The original authors of what
-关于b+的原始作者，这个人承担的责任和功劳，他们从未真正定义过b在b+树中的意思。通常人们说它是，它代表平衡，宽广，浓密。这家伙的名字是拜耳B·A·E·Y·E·R，所以可能是以他自己的名字命名的。这种数据结构实际上是波音公司开发的，就像飞机公司可能是波音公司的树一样。
+关于 B+ 的原始作者，
 
 173
 00:05:02,175 --> 00:05:04,335
 0,335 775,1175 1555,1860 1860,2010 2010,2160
-the of of the b
+the of of the {B+
 
 174
 00:05:04,335 --> 00:05:06,600
 0,305 535,935 1375,1635 1635,1890 1890,2265
-plus work this guy bear
+-} work,| this guy bear
+|这个人承担的责任和功劳，
 
 175
 00:05:06,600 --> 00:05:08,145
 0,240 240,375 375,650 1000,1305 1305,1545
-and the credit, they never
+and the credit,| they never
+|他们从未真正定义过 B+ 树中 B 的意思，
 
 176
 00:05:08,145 --> 00:05:09,315
 0,285 285,585 585,810 810,960 960,1170
-actually define what the b
+actually define what the B
 
 177
 00:05:09,315 --> 00:05:11,810
 0,335 1525,1800 1800,1965 1965,2175 2175,2495
-means in b plus tree.
+means in {B+ -} tree,|
+|
 
 178
 00:05:12,070 --> 00:05:13,995
 0,400 480,815 815,1055 1055,1445 1445,1925
-Typically people say it's, it's
+typically people say it's, it's
+通常人们说它是，代表平衡，宽广，浓密，
 
 179
 00:05:13,995 --> 00:05:17,415
 0,240 240,755 1975,2375 2515,3095 3175,3420
-for balanced, broad, bushy. The
+for balanced, broad, bushy,| the
+|这个人的名字是 Bayer ， b a y er ，
 
 180
 00:05:17,415 --> 00:05:18,525
 0,255 255,360 360,525 525,915 915,1110
-guy's name is Bayer B
+guy's name is Bayer, b
 
 181
 00:05:18,525 --> 00:05:19,485
 0,180 180,360 360,540 540,705 705,960
-A E Y E R
+a {} y e r,|
+|
 
 182
 00:05:19,485 --> 00:05:20,540
 0,255 255,465 465,660 660,810 810,1055
 so could have nameded after
+所以可能是以他自己的名字命名的，
 
 183
 00:05:20,560 --> 00:05:24,210
 0,400 2160,2560 2730,3065 3065,3365 3365,3650
-himself. This data structure actually
+himself,| this data structure actually
+|这个数据结构实际上是 Boeing 开发的，那个飞机公司，
 
 184
 00:05:24,210 --> 00:05:26,040
@@ -1006,24 +1037,26 @@ developed at Boeing, like the
 185
 00:05:26,040 --> 00:05:27,765
 0,195 195,470 490,890 1360,1590 1590,1725
-airplane companies could have been
+airplane companies,| could have been
+|可能是 Boeing 树，
 
 186
 00:05:27,765 --> 00:05:29,120
 0,455 505,905
-Boeing tree.|
+Boeing tree,|
 |
 
 187
 00:05:29,280 --> 00:05:30,430
 0,290 290,455 455,635 635,845 845,1150
-Nobody really knows, but typically
-没有人真正知道，但通常情况下，当你说牛肉树时，人们通常指的是平衡。
+nobody really knows,| but typically
+没有人真正知道，|但通常情况下，
 
 188
 00:05:30,540 --> 00:05:32,135
 0,400 900,1145 1145,1250 1250,1400 1400,1595
-people, when you say beef
+people,| when you say B
+|当你说 B 树时，人们通常指的是平衡。
 
 189
 00:05:32,135 --> 00:05:33,970
@@ -1034,13 +1067,14 @@ tree, people typically mean balanced.|
 190
 00:05:35,320 --> 00:05:36,675
 0,335 335,545 545,965 965,1175 1175,1355
-There's another variant called b
-还有另一个变体叫做b链接树EM，正如我所说的，将会有一种经典的b加号树，但没有人实现它的定义。人们会零星地借用它，特别是他们会从这篇b链接树论文中借到一些想法，这篇论文实际上来自加州大学，在1981年，菲尔·雷曼的《某个人》一书中。
+There's another variant called {B-Link
+还有另一个变体叫做 B-Link 树，
 
 191
 00:05:36,675 --> 00:05:38,490
 0,210 210,545 745,1145 1465,1710 1710,1815
-link tree EM and as
+-} tree,| {} and as
+|正如我所说的，有一种经典的 B+ 树，
 
 192
 00:05:38,490 --> 00:05:39,555
@@ -1050,17 +1084,19 @@ I said, there'll be the
 193
 00:05:39,555 --> 00:05:40,665
 0,120 120,270 270,555 555,855 855,1110
-sort of classic b plus
+sort of classic {B+ -}
 
 194
 00:05:40,665 --> 00:05:42,570
 0,335 715,975 975,1185 1185,1665 1665,1905
-tree, but nobody implements exactly
+tree,| but nobody implements exactly
+|但没有人实现它的定义，
 
 195
 00:05:42,570 --> 00:05:44,235
 0,195 195,420 420,645 645,980 1300,1665
-as it's defined there. People
+as it's defined there,| people
+|人们会零星地借用它，
 
 196
 00:05:44,235 --> 00:05:45,180
@@ -1070,7 +1106,8 @@ gonna borrow bits and pieces
 197
 00:05:45,180 --> 00:05:46,035
 0,150 150,240 240,345 345,540 540,855
-of it and in particular
+of it| and in particular
+|特别是他们会从这篇 B-Link 树论文中借用一些想法，
 
 198
 00:05:46,035 --> 00:05:47,130
@@ -1080,44 +1117,47 @@ what they're gonna borrow some
 199
 00:05:47,130 --> 00:05:48,075
 0,255 255,420 420,570 570,750 750,945
-ideas from this b link
+ideas from this {B-Link -}
 
 200
 00:05:48,075 --> 00:05:49,590
 0,180 180,455 805,1140 1140,1350 1350,1515
-tree paper that actually came
+tree paper,| that actually came
+|这篇论文实际上来自 CMU ，在 1981 年，
 
 201
 00:05:49,590 --> 00:05:50,480
 0,135 135,240 240,390 390,585 585,890
-from here at C U
+from here at {CMU -}
 
 202
 00:05:50,830 --> 00:05:53,205
 0,335 335,530 530,1240 1860,2180 2180,2375
-in in 1981 certain guy
+in in 1981,| certain guy
+|这个人是 Philip Lehman ，
 
 203
 00:05:53,205 --> 00:05:54,520
 0,165 165,345 345,785
-by Phil Lehman.|
+by Philip Lehman,|
 |
 
 204
 00:05:54,650 --> 00:05:55,615
 0,290 290,515 515,710 710,845 845,965
-That dude still works in
-那个家伙仍在CMU五楼的院长办公室工作。如果你去看POST源代码，他们在目录中谈论他们的蜂鸣树，注意到他们说的是b树而不是b加树，如果他们是一棵N B树，因为这是一棵非平衡的b加树。但我们稍后会谈到这一点。但是，是的，就在这条赛道上，哦，是的，这是一个正确的暗示。正确总是很重要的，从73开始从b链接树中留下一篇Yow的论文。
+that dude still works in
+那个家伙仍在 CMU 五楼的院长办公室工作，
 
 205
 00:05:55,615 --> 00:05:56,760
 0,90 90,405 405,540 540,660 660,1145
-the dean's office at cmu
+the dean's office at CMU
 
 206
 00:05:57,350 --> 00:05:59,020
 0,275 275,410 410,590 590,910 1410,1670
-on the fifth floor. And
+on the 5th floor,| and
+|如果你去看 Postgres 源代码，
 
 207
 00:05:59,020 --> 00:05:59,530
@@ -1127,7 +1167,8 @@ if you go look at
 208
 00:05:59,530 --> 00:06:01,390
 0,75 75,315 315,630 630,950 1570,1860
-the post source code in
+the Postgres source code,| in
+|在他们谈论 B 树的目录中，
 
 209
 00:06:01,390 --> 00:06:02,980
@@ -1137,47 +1178,55 @@ the the directory where they
 210
 00:06:02,980 --> 00:06:03,835
 0,120 120,240 240,360 360,570 570,855
-talk about their beep tree,
+talk about of B tree,|
+|
 
 211
 00:06:03,835 --> 00:06:04,915
 0,285 285,420 420,570 570,795 795,1080
-notice they say b tree
+notice they say B tree
+注意他们说的是 B 树而不是 B+ 树，
 
 212
 00:06:04,915 --> 00:06:05,820
 0,195 195,270 270,405 405,600 600,905
-instead of b plus tree
+instead of {B+ -} tree|
+|
 
 213
 00:06:05,990 --> 00:06:06,685
 0,230 230,320 320,455 455,575 575,695
-and if they is an
+and {} there is an
+这里有一个 nbtree ，
 
 214
 00:06:06,685 --> 00:06:08,020
 0,225 225,540 540,905 925,1185 1185,1335
-N B tree because it's
+{nbtree - -},| because it's
+|因为这是一个非平衡 B+ 树，
 
 215
 00:06:08,020 --> 00:06:09,160
 0,105 105,330 330,660 660,930 930,1140
-a non balance b plus
+a non balance {B+ -}
 
 216
 00:06:09,160 --> 00:06:10,675
 0,320 610,1010 1030,1320 1320,1410 1410,1515
-tree. But we'll get to
+tree,| but we'll get to
+|但我们稍后会谈到这个。
 
 217
 00:06:10,675 --> 00:06:12,700
 0,105 105,365 1495,1755 1755,1890 1890,2025
-that later. But yeah, right
+that later.| But yeah, right
+|但是，是的，就在这个代码中，
 
 218
 00:06:12,700 --> 00:06:13,510
 0,105 105,180 180,270 270,615 615,810
-here in the circuit, oh
+here in the source,| oh
+|是的，这是一个正确的暗示，
 
 219
 00:06:13,510 --> 00:06:14,620
@@ -1187,35 +1236,36 @@ yeah, this is a correct
 220
 00:06:14,620 --> 00:06:16,110
 0,555 555,810 810,990 990,1185 1185,1490
-implication. Correct is always important
+implication,| correct is always important,|
+|正确总是重要的，|
 
 221
 00:06:16,400 --> 00:06:18,210
 0,400 780,1085 1085,1250 1250,1550 1550,1810
-of leaving a yow's paper
+of Lehman and Yao's paper
+关于 Lehman 和 Yao 的 B-Link 论文，在 1973 年，
 
 222
 00:06:18,260 --> 00:06:19,255
 0,305 305,440 440,545 545,710 710,995
-from the b link tree
+from the {B-Link -} tree,
 
 223
 00:06:19,255 --> 00:06:20,740
 0,390 390,1025
-from 73.|
-|
+from 1973,
 
 224
 00:06:21,020 --> 00:06:21,810
 0,245 245,335 335,425 425,530 530,790
-Right. That's kind of cool.|
-正确的。这真是太酷了。|
+right,| that's kind of cool.|
+|这太酷了。|
 
 225
 00:06:23,370 --> 00:06:24,650
 0,400 510,860 860,1085 1085,1235 1235,1280
-EM, but again we're going
-嗯，但我们将再次主要关注这一点，我们将看看是否有时间。我将在最后谈到贝西隆树。然后，B-W树是微软的东西，是A-B plus树的无锁版本。我们实际上在这里实现了这一点，这并不容易，我们有一个开放源码的实现。
+{} But again we're going
+但我们将主要关注这个，
 
 226
 00:06:24,650 --> 00:06:25,610
@@ -1225,52 +1275,59 @@ to focus primarily on this
 227
 00:06:25,610 --> 00:06:27,140
 0,260 430,825 825,1130 1210,1455 1455,1530
-one, we'll see if we
+one,| we'll see if we
+|我们将看看是否有时间，
 
 228
 00:06:27,140 --> 00:06:28,025
 0,135 135,390 390,675 675,780 780,885
-have time. I'll talk about
+have time,| I'll talk about
+|我将在最后讨论 Bε 树，
 
 229
 00:06:28,025 --> 00:06:28,865
 0,75 75,165 165,570 570,735 735,840
-the b epsilon tree at
+the {Bε -} tree at
 
 230
 00:06:28,865 --> 00:06:30,020
 0,90 90,335 655,915 915,1035 1035,1155
-the end. And then the
+the end,| and then the
+|然后， Bw 树是微软的东西，
 
 231
 00:06:30,020 --> 00:06:31,030
 0,120 120,315 315,555 555,735 735,1010
-B W tree is a
+{Bw -} tree is a
 
 232
 00:06:31,170 --> 00:06:32,510
 0,290 290,440 440,995 995,1100 1100,1340
-thing of Microsoft a lock
+thing of Microsoft,| a {lock-free
+|一种 B+ 树的无锁版本。
 
 233
 00:06:32,510 --> 00:06:33,605
 0,300 300,600 600,825 825,945 945,1095
-free version of A B
+-} version of {} {B+
 
 234
 00:06:33,605 --> 00:06:35,390
 0,180 180,485 1015,1335 1335,1545 1545,1785
-plus tree. We actually implemented
+-} tree.| We actually implemented
+|我们实际上在 CMU 实现了这个，
 
 235
 00:06:35,390 --> 00:06:36,970
 0,240 240,530 670,1125 1125,1320 1320,1580
-that here cu and was
+that here CMU| and was
+|这并不容易，
 
 236
 00:06:36,990 --> 00:06:38,915
 0,290 290,580 1530,1775 1775,1850 1850,1925
-not easy and we have
+not easy| and we have
+|我们有一个开放源码的实现。
 
 237
 00:06:38,915 --> 00:06:39,755
