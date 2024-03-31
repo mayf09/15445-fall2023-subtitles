@@ -1,0 +1,7112 @@
+1
+00:00:42,300 --> 00:00:47,145
+Okay, alright, let's lots of discuss today,
+
+2
+00:00:47,145 --> 00:00:48,470
+so I'm gonna [plow right] through everything.
+
+3
+00:00:49,770 --> 00:00:51,455
+So again, a quick reminder,
+
+4
+00:00:51,455 --> 00:00:53,140
+upcoming events now correct dates,
+
+5
+00:00:53,520 --> 00:00:55,985
+so today, at 4:30 over Zoom,
+
+6
+00:00:55,985 --> 00:00:59,020
+we're going to have the Co founder of Postgres ML,
+
+7
+00:00:59,370 --> 00:01:02,990
+basically a modified version of Postgres
+
+8
+00:01:02,990 --> 00:01:04,700
+or it's not Postgres isn't modified,
+
+9
+00:01:04,700 --> 00:01:08,210
+they're building off the extension system and API in Postgres,
+
+10
+00:01:08,210 --> 00:01:13,875
+to support machine learning frameworks and large language models directly inside of Postgres,
+
+11
+00:01:13,875 --> 00:01:15,650
+he's going to talk about the stuff that they've been building,
+
+12
+00:01:16,090 --> 00:01:21,020
+next week, we have probably one of the bigger vector database companies come to give a talk Weaviate,
+
+13
+00:01:21,160 --> 00:01:23,630
+and then after that, it's going to be FeatureForm
+
+14
+00:01:23,860 --> 00:01:26,325
+and after FeatureForm its FeatureBase, right,
+
+15
+00:01:26,325 --> 00:01:27,470
+same name, different systems.
+
+16
+00:01:28,330 --> 00:01:31,700
+Again, this is optional by all means attend if you want.
+
+17
+00:01:32,200 --> 00:01:33,585
+And then as I post on Piazza,
+
+18
+00:01:33,585 --> 00:01:35,480
+while sending out an email to the database friends,
+
+19
+00:01:35,800 --> 00:01:36,750
+companies like theses,
+
+20
+00:01:36,750 --> 00:01:37,770
+with everyone's CVs,
+
+21
+00:01:37,770 --> 00:01:39,440
+if you, if you uploaded it yesterday.
+
+22
+00:01:41,840 --> 00:01:42,330
+All right.
+
+23
+00:01:42,840 --> 00:01:44,510
+So last class we talked about hash tables
+
+24
+00:01:45,430 --> 00:01:48,020
+and we talked how this important data structure,
+
+25
+00:01:48,430 --> 00:01:51,780
+that's going to give us this nice O(1) average time complexity
+
+26
+00:01:51,780 --> 00:01:54,650
+to do lookup matching keys to values.
+
+27
+00:01:56,200 --> 00:02:01,940
+And we spent time talking about how there was this differentiation between static and dynamic hashing schemes,
+
+28
+00:02:02,830 --> 00:02:05,270
+like static was used of fixed size number of slots,
+
+29
+00:02:05,680 --> 00:02:09,710
+whereas the extendible hashing, chain hashing and linear hashing
+
+30
+00:02:09,970 --> 00:02:12,330
+all had the ability to grow incrementally over time
+
+31
+00:02:12,330 --> 00:02:14,660
+to accommodate more more keys than you originally envisioned.
+
+32
+00:02:15,410 --> 00:02:17,850
+So the main takeaway from last class should be,
+
+33
+00:02:17,870 --> 00:02:20,370
+we spent most of our time talking about how to deal with the complex,
+
+34
+00:02:21,230 --> 00:02:24,870
+two keys, hash two different keys hash to the same location, what do you do,
+
+35
+00:02:26,000 --> 00:02:27,025
+and then we mostly talk about,
+
+36
+00:02:27,025 --> 00:02:32,130
+how these hash tables are primarily going to be used in most systems for internal data structures,
+
+37
+00:02:32,480 --> 00:02:36,275
+like your page table and project 1, or the page directory
+
+38
+00:02:36,275 --> 00:02:39,950
+or the other thing is keeping track of what's the state of of the database system itself,
+
+39
+00:02:39,950 --> 00:02:40,600
+while we're running,
+
+40
+00:02:41,250 --> 00:02:42,470
+we'll see hash tables again,
+
+41
+00:02:42,470 --> 00:02:44,350
+when we talk about how to you Joins sufficiently,
+
+42
+00:02:44,610 --> 00:02:46,220
+but again for the most part
+
+43
+00:02:46,220 --> 00:02:48,310
+these are primarily used for internal data structures.
+
+44
+00:02:49,530 --> 00:02:51,670
+So today's class we're now talking about B+ trees
+
+45
+00:02:52,770 --> 00:02:55,930
+and these are going to be primarily the default choice,
+
+46
+00:02:56,100 --> 00:02:59,750
+when you want to have an index in, in a relational database system.
+
+47
+00:02:59,750 --> 00:03:01,000
+So if you call CREATE INDEX,
+
+48
+00:03:01,690 --> 00:03:03,770
+yeah 99% of the time, in most systems,
+
+49
+00:03:03,790 --> 00:03:06,830
+you'll be getting something that looks like A B plus tree,
+
+50
+00:03:07,570 --> 00:03:08,355
+Then we'll talk about,
+
+51
+00:03:08,355 --> 00:03:09,900
+so we'll first go a high level overview
+
+52
+00:03:09,900 --> 00:03:11,390
+of what a B plus tree looks like,
+
+53
+00:03:12,100 --> 00:03:12,830
+what makes it,
+
+54
+00:03:13,030 --> 00:03:15,740
+what's the plus, and B+ tree versus regular B tree.
+
+55
+00:03:16,690 --> 00:03:18,405
+And I'll talk about some basic design choices,
+
+56
+00:03:18,405 --> 00:03:20,150
+how when we actually want to build one
+
+57
+00:03:20,440 --> 00:03:21,510
+and then we'll finish up
+
+58
+00:03:21,510 --> 00:03:23,150
+to to the time we have,
+
+59
+00:03:23,890 --> 00:03:25,220
+to that we have time at the end,
+
+60
+00:03:25,450 --> 00:03:26,580
+talk about all the different ways
+
+61
+00:03:26,580 --> 00:03:30,240
+you can actually optimize and improve performance of these different systems
+
+62
+00:03:30,240 --> 00:03:33,020
+and the examples real systems are actually doing today.
+
+63
+00:03:33,610 --> 00:03:34,010
+Okay?
+
+64
+00:03:35,810 --> 00:03:39,060
+All right, so the first we got to discuss is what is a B+ tree.
+
+65
+00:03:39,710 --> 00:03:44,850
+And so the B+ tree is in a category of data structures called B trees,
+
+66
+00:03:45,110 --> 00:03:48,180
+and what's sort of confusing about this in database literature,
+
+67
+00:03:48,890 --> 00:03:50,190
+different database systems, is that,
+
+68
+00:03:50,510 --> 00:03:52,860
+there's the class of the data structure called B trees,
+
+69
+00:03:53,300 --> 00:03:55,890
+and then there's a specific data structure called B tree,
+
+70
+00:03:56,360 --> 00:03:59,310
+and then some database systems are actually using B+ trees,
+
+71
+00:03:59,960 --> 00:04:03,120
+but they're going to call themselves a B tree, right.
+
+72
+00:04:03,120 --> 00:04:04,460
+So if you go look at the Postgres code,
+
+73
+00:04:04,600 --> 00:04:06,950
+they're going to refer to their data structure as a B tree,
+
+74
+00:04:07,270 --> 00:04:09,530
+but as far as I can tell, it's a B+ tree,
+
+75
+00:04:09,820 --> 00:04:13,970
+with some modern techniques, like from the B-Link tree, right.
+
+76
+00:04:14,170 --> 00:04:16,610
+So it's sort of, when B, when you say B+ tree,
+
+77
+00:04:17,230 --> 00:04:19,730
+it's typically going to mean a bunch of these other different things.
+
+78
+00:04:20,590 --> 00:04:25,450
+So, there is no original paper on the B+ tree,
+
+79
+00:04:25,500 --> 00:04:29,320
+actually, the one that everyone cites is this one from 1979,
+
+80
+00:04:29,760 --> 00:04:32,770
+by the guys at IBM talking about the,
+
+81
+00:04:33,270 --> 00:04:35,230
+what they call it, the ubiquitous B tree,
+
+82
+00:04:35,610 --> 00:04:36,970
+and in then this they describe,
+
+83
+00:04:37,050 --> 00:04:39,010
+hey, there's this, the different variants,
+
+84
+00:04:39,420 --> 00:04:43,325
+but the most common one that's gonna be most useful for database systems is gonna be a B+ tree,
+
+85
+00:04:43,325 --> 00:04:46,535
+And then they cite some kind of IBM tech report,
+
+86
+00:04:46,535 --> 00:04:47,680
+that I have not been able to find,
+
+87
+00:04:49,020 --> 00:04:49,805
+I didn't look that hard,
+
+88
+00:04:49,805 --> 00:04:51,670
+but it doesn't show up right on Google,
+
+89
+00:04:52,800 --> 00:04:57,510
+that that's the one where they talk about the, the original B+ tree.
+
+90
+00:04:59,500 --> 00:05:05,270
+The original authors of what the of of the B+ work,
+
+91
+00:05:05,710 --> 00:05:07,250
+this guy bear and the credit,
+
+92
+00:05:07,600 --> 00:05:11,810
+they never actually define what the B means in B+ tree,
+
+93
+00:05:12,070 --> 00:05:17,090
+typically people say it's, it's for balanced, broad, bushy,
+
+94
+00:05:17,170 --> 00:05:19,485
+the guy's name is Bayer, b a y e r,
+
+95
+00:05:19,485 --> 00:05:20,960
+so could have nameded after himself,
+
+96
+00:05:22,720 --> 00:05:26,510
+this data structure actually developed at Boeing, like the airplane companies,
+
+97
+00:05:26,530 --> 00:05:28,670
+could have been Boeing tree,
+
+98
+00:05:29,280 --> 00:05:29,915
+nobody really knows,
+
+99
+00:05:29,915 --> 00:05:30,940
+but typically people,
+
+100
+00:05:31,440 --> 00:05:33,970
+when you say B tree, people typically mean balanced.
+
+101
+00:05:35,320 --> 00:05:37,220
+There's another variant called B-Link tree,
+
+102
+00:05:37,420 --> 00:05:41,000
+and as I said, there'll be the sort of classic B+ tree,
+
+103
+00:05:41,380 --> 00:05:43,550
+but nobody implements exactly as it's defined there,
+
+104
+00:05:43,870 --> 00:05:45,420
+people gonna borrow bits and pieces of it
+
+105
+00:05:45,420 --> 00:05:48,530
+and in particular what they're gonna borrow some ideas from this B-Link tree paper,
+
+106
+00:05:48,880 --> 00:05:52,070
+that actually came from here at CMU in in 1981,
+
+107
+00:05:52,690 --> 00:05:53,990
+certain guy by Philip Lehman,
+
+108
+00:05:54,650 --> 00:05:58,260
+that dude still works in the dean's office at CMU on the 5th floor,
+
+109
+00:05:58,760 --> 00:06:00,480
+and if you go look at the Postgres source code,
+
+110
+00:06:01,100 --> 00:06:03,835
+in the the directory where they talk about of B tree,
+
+111
+00:06:03,835 --> 00:06:05,820
+notice they say B tree instead of B+ tree
+
+112
+00:06:05,990 --> 00:06:07,590
+and there is an nbtree,
+
+113
+00:06:07,610 --> 00:06:09,480
+because it's a non balance B+ tree,
+
+114
+00:06:09,770 --> 00:06:11,040
+but we'll get to that later.
+
+115
+00:06:12,170 --> 00:06:13,315
+But yeah, right here in the source,
+
+116
+00:06:13,315 --> 00:06:15,175
+oh yeah, this is a correct implication,
+
+117
+00:06:15,175 --> 00:06:16,110
+correct is always important,
+
+118
+00:06:16,400 --> 00:06:21,265
+of Lehman and Yao's paper from the B-Link tree, from 1973, right,
+
+119
+00:06:21,265 --> 00:06:21,810
+that's kind of cool.
+
+120
+00:06:23,370 --> 00:06:25,870
+But again we're going to focus primarily on this one,
+
+121
+00:06:26,040 --> 00:06:27,530
+we'll see if we have time,
+
+122
+00:06:27,530 --> 00:06:29,200
+I'll talk about the Bε tree at the end,
+
+123
+00:06:29,520 --> 00:06:32,165
+and then the Bw tree is a thing of Microsoft,
+
+124
+00:06:32,165 --> 00:06:34,090
+a lock-free version of B+ tree.
+
+125
+00:06:34,620 --> 00:06:36,515
+We actually implemented that here CMU
+
+126
+00:06:36,515 --> 00:06:37,570
+and was not easy
+
+127
+00:06:38,520 --> 00:06:39,970
+and we have an open source implementation of that.
+
+128
+00:06:41,150 --> 00:06:41,550
+Okay.
+
+129
+00:06:42,570 --> 00:06:45,910
+So the B+ tree is going to be a self balanced order tree,
+
+130
+00:06:46,350 --> 00:06:50,740
+that's going to allow us to do searches and sequential access and insertions and deletions,
+
+131
+00:06:51,000 --> 00:06:54,470
+all in log n time, right,
+
+132
+00:06:54,730 --> 00:06:56,750
+log n is going to be the height of the tree.
+
+133
+00:06:57,570 --> 00:07:00,370
+And so the, the difference between,
+
+134
+00:07:00,480 --> 00:07:05,740
+what we'll describe here and B+ tree versus a generic binary search tree is that,
+
+135
+00:07:06,000 --> 00:07:11,530
+the nodes in our data structure can have obviously more than two, two keys,
+
+136
+00:07:12,320 --> 00:07:14,380
+and the reason why we're going to want this is because,
+
+137
+00:07:14,580 --> 00:07:16,085
+again, we want to convert,
+
+138
+00:07:16,085 --> 00:07:17,980
+we want to minimize amount of random I/O we're doing,
+
+139
+00:07:18,180 --> 00:07:20,170
+so we want to maximize amount of sequential I/O,
+
+140
+00:07:20,610 --> 00:07:22,960
+and the B+ tree is going to be perfect for us to do this,
+
+141
+00:07:23,250 --> 00:07:25,870
+because when we land in a node, that's essentially fetching in a page
+
+142
+00:07:26,190 --> 00:07:29,110
+and we don't have, we don't have as many keys as we can inside that,
+
+143
+00:07:29,610 --> 00:07:34,260
+before we have to move on, to grab the next piece of next page from disk, right.
+
+144
+00:07:35,060 --> 00:07:38,710
+So thinking back, way back in the 1970s,
+
+145
+00:07:38,710 --> 00:07:40,080
+when hardware was terrible,
+
+146
+00:07:40,400 --> 00:07:43,170
+like you had a minimum amount of RAM,
+
+147
+00:07:43,700 --> 00:07:45,180
+but your disk was also super slow,
+
+148
+00:07:45,500 --> 00:07:46,990
+so a B+ tree,
+
+149
+00:07:46,990 --> 00:07:48,180
+it's going to allow you to convert,
+
+150
+00:07:48,680 --> 00:07:49,650
+when you do these lookup,
+
+151
+00:07:50,030 --> 00:07:52,830
+from random I/O into sequential access.
+
+152
+00:07:53,500 --> 00:07:55,130
+Because once you follow the leaf nodes
+
+153
+00:07:55,210 --> 00:07:58,800
+or follow the the the tree down to the leaf nodes,
+
+154
+00:07:58,800 --> 00:07:59,720
+and once you're down there,
+
+155
+00:07:59,770 --> 00:08:00,830
+you never go back up,
+
+156
+00:08:01,420 --> 00:08:02,160
+not entirely true,
+
+157
+00:08:02,160 --> 00:08:02,745
+but for our purposes,
+
+158
+00:08:02,745 --> 00:08:04,010
+now we'll assume that's the case,
+
+159
+00:08:04,180 --> 00:08:06,800
+and then I can scan along the leaf nodes
+
+160
+00:08:06,850 --> 00:08:10,140
+to find the data I'm looking for, right.
+
+161
+00:08:11,990 --> 00:08:13,405
+So more formative, we can say,
+
+162
+00:08:13,405 --> 00:08:16,860
+that a B+ tree is going to be M-way search tree with the following properties,
+
+163
+00:08:18,100 --> 00:08:19,910
+for us, is that it be perfectly balanced,
+
+164
+00:08:19,990 --> 00:08:25,730
+meaning that the every leaf node in our tree structure is going to have the same depth,
+
+165
+00:08:26,080 --> 00:08:30,860
+means, the same number of levels down from the root to that that leaf node,
+
+166
+00:08:31,060 --> 00:08:33,990
+and again, Postgres is going to violate this little bit,
+
+167
+00:08:33,990 --> 00:08:34,910
+some, some people do,
+
+168
+00:08:35,020 --> 00:08:37,130
+but the very beginning assume that's the case.
+
+169
+00:08:38,720 --> 00:08:39,970
+We also have a rule,
+
+170
+00:08:39,970 --> 00:08:43,800
+that every node other than the root has to be at least half-full,
+
+171
+00:08:44,090 --> 00:08:47,970
+so if I, if I can have M keys in my, in my, in my, in my node,
+
+172
+00:08:48,050 --> 00:08:51,160
+I need to have at least half a number of nodes,
+
+173
+00:08:51,160 --> 00:08:56,320
+half a number of keys as possible, up to the maximum number, right,
+
+174
+00:08:56,520 --> 00:08:58,145
+if I go below that threshold,
+
+175
+00:08:58,145 --> 00:09:00,250
+if I go below mean less than half-full,
+
+176
+00:09:00,690 --> 00:09:02,380
+then I have to do some merging,
+
+177
+00:09:02,790 --> 00:09:06,840
+but again, we can, we can, we can tweak that requirement later on.
+
+178
+00:09:08,310 --> 00:09:10,030
+And so then the root would be special case,
+
+179
+00:09:10,080 --> 00:09:11,530
+so we can ignore it for now,
+
+180
+00:09:12,510 --> 00:09:17,350
+and then every inner node with k keys are going to have at least k+1 non-null children,
+
+181
+00:09:18,030 --> 00:09:21,365
+meaning I could have some locations,
+
+182
+00:09:21,365 --> 00:09:25,655
+or pointer, possible pointers to leaf nodes or nodes below me,
+
+183
+00:09:25,655 --> 00:09:26,590
+when I'm inner node,
+
+184
+00:09:26,670 --> 00:09:28,540
+but I don't have to have the max number.
+
+185
+00:09:32,120 --> 00:09:32,875
+So this is all math,
+
+186
+00:09:33,040 --> 00:09:33,660
+let's look at example.
+
+187
+00:09:34,600 --> 00:09:35,460
+So here's a really simple,
+
+188
+00:09:38,260 --> 00:09:40,370
+here's a really simple 2-way B+ tree,
+
+189
+00:09:41,710 --> 00:09:43,640
+and we can define the root node at the top
+
+190
+00:09:43,960 --> 00:09:45,080
+and then the inner nodes,
+
+191
+00:09:45,310 --> 00:09:46,530
+because we only have three levels,
+
+192
+00:09:46,530 --> 00:09:47,720
+the inner nodes are just the ones in the middle,
+
+193
+00:09:48,130 --> 00:09:50,360
+and then the leaf nodes are the things at the bottom.
+
+194
+00:09:51,720 --> 00:09:53,080
+So with inner node itself,
+
+195
+00:09:53,370 --> 00:09:56,660
+we're going to have this alternating pattern
+
+196
+00:09:56,660 --> 00:09:59,440
+between a pointer to another node and then a key,
+
+197
+00:10:00,840 --> 00:10:02,560
+and then in the leaf nodes,
+
+198
+00:10:02,760 --> 00:10:07,480
+there'll be the value that we're trying to store for this for a given key,
+
+199
+00:10:08,540 --> 00:10:10,375
+and for now, we're not going to find what the value is,
+
+200
+00:10:10,375 --> 00:10:12,570
+but you can think of it like potentially the record ID
+
+201
+00:10:12,650 --> 00:10:16,350
+to point to the actual tuple, some page number, page number and offset,
+
+202
+00:10:17,360 --> 00:10:19,530
+or if it's a case of MySQL or SQLite,
+
+203
+00:10:19,820 --> 00:10:21,420
+it could actually be the tuple itself,
+
+204
+00:10:21,920 --> 00:10:23,100
+but for now, we can ignore that.
+
+205
+00:10:24,230 --> 00:10:28,060
+And so the way to think about these numbers here in the inner nodes and the root nodes,
+
+206
+00:10:28,060 --> 00:10:29,590
+that these are essentially guideposts,
+
+207
+00:10:29,590 --> 00:10:32,695
+that tell you which path you want to go down, right.
+
+208
+00:10:32,695 --> 00:10:33,565
+So at the root node here,
+
+209
+00:10:33,565 --> 00:10:34,830
+we only have one key, it's 20,
+
+210
+00:10:35,090 --> 00:10:36,450
+so if you're going to go left to it,
+
+211
+00:10:36,530 --> 00:10:39,510
+it's any value, any key value that's going to be less than 20,
+
+212
+00:10:39,830 --> 00:10:43,700
+and we'll go right, greater than or equal to, right.
+
+213
+00:10:44,140 --> 00:10:46,520
+Same thing, the next one, I have 10 here,
+
+214
+00:10:47,140 --> 00:10:48,200
+less than 10 goes here,
+
+215
+00:10:48,340 --> 00:10:50,120
+greater than equal to 10 goes on the other side.
+
+216
+00:10:53,370 --> 00:10:54,070
+So what makes?
+
+217
+00:10:55,200 --> 00:10:56,705
+So this is sort of what I'm describing so far,
+
+218
+00:10:56,705 --> 00:10:58,240
+this is a basic B+ tree,
+
+219
+00:10:58,500 --> 00:11:01,090
+but what I was saying before that they have this,
+
+220
+00:11:01,230 --> 00:11:05,230
+we're borrowing ideas from other papers like the B-Link tree,
+
+221
+00:11:05,460 --> 00:11:10,060
+is that the nodes are also going to have sibling pointers at every level,
+
+222
+00:11:10,740 --> 00:11:13,610
+so I think the textbook might only show at the leaf nodes,
+
+223
+00:11:13,780 --> 00:11:16,460
+Postgres puts them in the middle node, the inner nodes as well,
+
+224
+00:11:16,780 --> 00:11:19,700
+and I think the original B-Link paper had the nodes as well.
+
+225
+00:11:20,370 --> 00:11:22,580
+And so the reason why this matters is,
+
+226
+00:11:22,580 --> 00:11:24,400
+again, if I'm doing search,
+
+227
+00:11:24,510 --> 00:11:26,800
+give me all the keys greater than equal to 6,
+
+228
+00:11:27,150 --> 00:11:31,270
+I could traverse down the, you know, this side of the tree, get to the bottom,
+
+229
+00:11:31,590 --> 00:11:35,890
+and now I can [] through along the leaf nodes and never have to go back up,
+
+230
+00:11:36,860 --> 00:11:38,560
+we won't talk about multi threading just yet,
+
+231
+00:11:38,560 --> 00:11:43,920
+but like like the having to get parent lock or latches on your parents in order to scan along,
+
+232
+00:11:44,060 --> 00:11:44,965
+that's gonna be expensive,
+
+233
+00:11:44,965 --> 00:11:47,220
+if I can just keep down at the lowest level I need to go,
+
+234
+00:11:47,570 --> 00:11:48,960
+then I can, I can move more quickly.
+
+235
+00:11:50,480 --> 00:11:52,945
+And again, if it's random I/O, this sucks,
+
+236
+00:11:52,945 --> 00:11:53,790
+but if I get down here,
+
+237
+00:11:54,020 --> 00:11:58,340
+assuming all these pages are sequentially or contiguous on each other on disk,
+
+238
+00:11:58,360 --> 00:12:00,350
+then that's all sequential I/O, to scan across.
+
+239
+00:12:01,170 --> 00:12:02,770
+Yes.
+
+240
+00:12:04,130 --> 00:12:04,780
+Yeah, it point goes,
+
+241
+00:12:04,780 --> 00:12:06,180
+what's the point of having these in the inner nodes,
+
+242
+00:12:06,410 --> 00:12:08,800
+it helps you when do splits, merges, right,
+
+243
+00:12:08,800 --> 00:12:09,900
+if I know I have to,
+
+244
+00:12:09,980 --> 00:12:11,400
+like if I want to steal something,
+
+245
+00:12:12,240 --> 00:12:16,070
+so say if I delete 10, say 10 gets deleted,
+
+246
+00:12:16,390 --> 00:12:20,060
+instead of having to reorganize the entire tree,
+
+247
+00:12:20,140 --> 00:12:21,420
+I could follow sibling pointer,
+
+248
+00:12:21,420 --> 00:12:23,000
+maybe take a key from this guy and bring it over.
+
+249
+00:12:24,560 --> 00:12:25,615
+Yes.
+
+250
+00:12:28,710 --> 00:12:29,630
+What is question,
+
+251
+00:12:29,630 --> 00:12:30,970
+what is a node pointer,
+
+252
+00:12:32,370 --> 00:12:34,325
+these red lines,
+
+253
+00:12:34,325 --> 00:12:36,970
+oh, the node pointer,
+
+254
+00:12:39,530 --> 00:12:40,435
+I'll show the next slide,
+
+255
+00:12:40,435 --> 00:12:41,605
+you're not going to lay this out exactly,
+
+256
+00:12:41,605 --> 00:12:43,795
+you wouldn't lay this out in a disk exactly I'm describing,
+
+257
+00:12:43,795 --> 00:12:44,490
+but to think of it is,
+
+258
+00:12:44,870 --> 00:12:47,730
+like I have the key here 20,
+
+259
+00:12:48,020 --> 00:12:48,990
+and so that's this part,
+
+260
+00:12:49,190 --> 00:12:51,240
+and then the node pointer is saying,
+
+261
+00:12:51,620 --> 00:12:53,490
+if you're looking for a key that's less than 20,
+
+262
+00:12:54,020 --> 00:12:56,340
+follow this pointer and you go down here, you find it,
+
+263
+00:12:56,830 --> 00:12:59,700
+and in an our world, in a database system that's on disk,
+
+264
+00:12:59,700 --> 00:13:00,590
+it's just a page ID.
+
+265
+00:13:07,360 --> 00:13:10,220
+Yeah, this is the visualization people usually show, show.
+
+266
+00:13:12,280 --> 00:13:17,870
+All right, so the, the nodes themselves are going to be basically arrays of key value pairs,
+
+267
+00:13:18,760 --> 00:13:24,530
+and again, the keys are to be derived from whatever the attribute that the index is based on from the table,
+
+268
+00:13:24,880 --> 00:13:28,280
+so I say I built an index on table foo column abc,
+
+269
+00:13:28,450 --> 00:13:33,050
+the key itself will be copies of the values for every single tuple in abc,
+
+270
+00:13:33,780 --> 00:13:34,460
+so you can sort of think,
+
+271
+00:13:34,460 --> 00:13:38,380
+the index is like a replica of the table that, that you're trying to index,
+
+272
+00:13:38,940 --> 00:13:43,750
+and it's, it's organized in such a way in an ordered manner,
+
+273
+00:13:43,920 --> 00:13:47,000
+that allow you to do these efficient log n lookups, right,
+
+274
+00:13:47,000 --> 00:13:50,380
+in the relational model, the tables are could potentially be unsorteded,
+
+275
+00:13:50,460 --> 00:13:52,240
+we'll violate that in a few more slides,
+
+276
+00:13:52,440 --> 00:13:54,305
+but the table could be unsorteded
+
+277
+00:13:54,305 --> 00:13:57,430
+and so this index is a way to have fast sort of access.
+
+278
+00:13:58,730 --> 00:14:00,565
+And of course, now only if it covers the database system,
+
+279
+00:14:00,565 --> 00:14:01,680
+and we'll see this later in the semester,
+
+280
+00:14:01,970 --> 00:14:05,850
+has to make sure that your index is in sync with the table, right,
+
+281
+00:14:05,850 --> 00:14:08,700
+meaning if I update, insert a tuple into my table,
+
+282
+00:14:08,700 --> 00:14:10,910
+I want to automatically update my indexes
+
+283
+00:14:11,050 --> 00:14:12,770
+and the database system will do this for you
+
+284
+00:14:12,970 --> 00:14:14,930
+and make sure everything is consistent in sync.
+
+285
+00:14:16,580 --> 00:14:18,270
+But again, we won't focus on that in this class.
+
+286
+00:14:20,640 --> 00:14:21,040
+The.
+
+287
+00:14:22,940 --> 00:14:25,380
+The values can differ depending,
+
+288
+00:14:26,630 --> 00:14:29,340
+the values will differ, depending on where the inner node or a leaf node,
+
+289
+00:14:29,360 --> 00:14:30,415
+if it's inner node,
+
+290
+00:14:30,415 --> 00:14:32,670
+the value is a pointer to some page below us,
+
+291
+00:14:33,020 --> 00:14:34,225
+if it's the leaf node,
+
+292
+00:14:34,225 --> 00:14:38,005
+then it's gonna be either again the the pointer to the tuple,
+
+293
+00:14:38,005 --> 00:14:40,645
+I'm using the pointer, not the memory address term,
+
+294
+00:14:40,645 --> 00:14:42,070
+I meaning like in page, ID,
+
+295
+00:14:42,070 --> 00:14:45,420
+oh, sorry the record ID or could be the actual tuple itself.
+
+296
+00:14:46,520 --> 00:14:50,035
+The arrays within the nodes themselves are typically kept in sorted order,
+
+297
+00:14:50,035 --> 00:14:50,940
+but they don't have to be,
+
+298
+00:14:51,560 --> 00:14:53,405
+and then there's this issue,
+
+299
+00:14:53,405 --> 00:14:54,610
+how do you deal with NULL keys?
+
+300
+00:14:55,380 --> 00:14:58,870
+Because again, assume that if the index are trying to build,
+
+301
+00:14:59,640 --> 00:15:02,105
+the index are trying to build using B+ tree,
+
+302
+00:15:02,105 --> 00:15:04,420
+if if it's non unique there could be NULL values,
+
+303
+00:15:04,500 --> 00:15:05,710
+we have to put the null somewhere,
+
+304
+00:15:06,210 --> 00:15:09,040
+so typically you either put them all at the end or all all at the beginning,
+
+305
+00:15:09,480 --> 00:15:11,570
+and actually when you create indexes in some systems,
+
+306
+00:15:11,570 --> 00:15:13,025
+you actually define where you want them,
+
+307
+00:15:13,025 --> 00:15:14,050
+you want to be first or after,
+
+308
+00:15:14,370 --> 00:15:15,590
+because depending on what your query is,
+
+309
+00:15:15,590 --> 00:15:17,435
+you may want to not see the nulls first,
+
+310
+00:15:17,435 --> 00:15:18,550
+you may want to see them at the end,
+
+311
+00:15:19,570 --> 00:15:20,750
+and it depends on applications.
+
+312
+00:15:22,130 --> 00:15:23,640
+Another important thing also, too, is that,
+
+313
+00:15:24,440 --> 00:15:25,200
+going back here,
+
+314
+00:15:25,580 --> 00:15:28,230
+there's only sibling pointers and pointers going down,
+
+315
+00:15:28,580 --> 00:15:30,270
+there's no pointers going back up,
+
+316
+00:15:31,250 --> 00:15:32,305
+and the reason is why,
+
+317
+00:15:32,305 --> 00:15:33,520
+we'll see this more next class is,
+
+318
+00:15:33,520 --> 00:15:35,880
+when we start taking latches on these nodes,
+
+319
+00:15:36,950 --> 00:15:40,800
+we don't want to have one thread going this way, you know, from the top down,
+
+320
+00:15:41,030 --> 00:15:42,540
+another thread going from the bottom top,
+
+321
+00:15:42,740 --> 00:15:44,010
+because that's going to have deadlocks,
+
+322
+00:15:44,330 --> 00:15:46,270
+now the sibling pointers are going have this issue too,
+
+323
+00:15:46,270 --> 00:15:47,280
+and we'll see how to handle that,
+
+324
+00:15:47,540 --> 00:15:51,270
+but by avoiding having the pointers going in two directions between different levels,
+
+325
+00:15:51,500 --> 00:15:53,100
+it's one less thing we have to worry about.
+
+326
+00:15:53,930 --> 00:15:54,660
+Because we don't need,
+
+327
+00:15:54,740 --> 00:15:55,975
+the way we're going to do splits and merges,
+
+328
+00:15:55,975 --> 00:15:57,130
+it's not like an AVL tree,
+
+329
+00:15:57,130 --> 00:15:59,550
+where you have to do rotations and all that,
+
+330
+00:16:00,020 --> 00:16:00,960
+we're not going do any of that.
+
+331
+00:16:02,520 --> 00:16:03,700
+Some may say it's, it's easier,
+
+332
+00:16:04,350 --> 00:16:05,410
+no, not really,
+
+333
+00:16:07,080 --> 00:16:08,110
+they both, both hard.
+
+334
+00:16:08,220 --> 00:16:10,420
+All, right, so here's what again our node looks like
+
+335
+00:16:10,890 --> 00:16:13,580
+and somewhere in assuming this is a page, right,
+
+336
+00:16:13,580 --> 00:16:17,860
+so we're going to have this array of key value pointers, sorry, keys and values,
+
+337
+00:16:18,360 --> 00:16:20,560
+and then we'll have these pointers here,
+
+338
+00:16:21,200 --> 00:16:25,540
+that go, that'll be just a page ID to the previous one and to the next one
+
+339
+00:16:25,590 --> 00:16:27,880
+along along along our level,
+
+340
+00:16:29,080 --> 00:16:32,630
+the key value pairs could either be sorted one after another,
+
+341
+00:16:33,100 --> 00:16:36,255
+if it's a, it's an inner node,
+
+342
+00:16:36,255 --> 00:16:40,160
+then the values would just be pointers, again, record IDs,
+
+343
+00:16:41,200 --> 00:16:42,740
+we could also sort them separately,
+
+344
+00:16:43,410 --> 00:16:44,975
+and this, this common approach,
+
+345
+00:16:44,975 --> 00:16:47,110
+you would have the the key sort of in one array
+
+346
+00:16:47,310 --> 00:16:49,780
+and then the values sort of separately in another array,
+
+347
+00:16:49,920 --> 00:16:54,490
+and then whatever offset you are in the in the, you know, in the key array
+
+348
+00:16:54,630 --> 00:16:57,260
+that corresponds to some offset in the in the value array,
+
+349
+00:16:57,260 --> 00:16:59,075
+it's almost like the column store stuff, we said before,
+
+350
+00:16:59,075 --> 00:17:01,630
+you can do simple arithmetic to decide how to jump around
+
+351
+00:17:01,890 --> 00:17:03,760
+[], mess that up,
+
+352
+00:17:03,840 --> 00:17:06,640
+but you you just maintain offset table to keep keep track of these things.
+
+353
+00:17:09,190 --> 00:17:12,135
+So, and then there's additional [] keep track of,
+
+354
+00:17:12,135 --> 00:17:15,050
+like, here's a number of slots I have left my my page,
+
+355
+00:17:15,460 --> 00:17:17,840
+what level, you know, what level am I looking at,
+
+356
+00:17:17,980 --> 00:17:19,580
+and that way as you're traversing down,
+
+357
+00:17:19,660 --> 00:17:20,865
+you can just look in the page and say,
+
+358
+00:17:20,865 --> 00:17:23,090
+okay, where am I in the tree,
+
+359
+00:17:24,450 --> 00:17:26,620
+it's also useful for recovery as well.
+
+360
+00:17:29,010 --> 00:17:29,565
+So I've already said this,
+
+361
+00:17:29,655 --> 00:17:30,330
+I'm just repeating myself,
+
+362
+00:17:30,330 --> 00:17:34,545
+but the, the, the leaf node values themselves could either be record IDs,
+
+363
+00:17:34,545 --> 00:17:36,350
+which is page number and offset to some location
+
+364
+00:17:36,850 --> 00:17:39,560
+and then the or could be a tuple data
+
+365
+00:17:39,670 --> 00:17:41,805
+as in the case of an index organized storage,
+
+366
+00:17:41,805 --> 00:17:42,590
+when we talked about before,
+
+367
+00:17:42,610 --> 00:17:45,500
+like SQLite and MySQL do this by default,
+
+368
+00:17:45,760 --> 00:17:47,820
+but in like SQL Server and Oracle,
+
+369
+00:17:47,820 --> 00:17:51,120
+you can say CREATE TABLE and I want to be index organized, right,
+
+370
+00:17:51,120 --> 00:17:54,180
+and it'll, it'll make the, it'll make a B+ tree
+
+371
+00:17:54,180 --> 00:17:56,390
+and then the leaf nodes will be the actual just tuple themselves.
+
+372
+00:17:58,680 --> 00:18:02,465
+You, for the number two, you only do this for the the primary key index,
+
+373
+00:18:02,465 --> 00:18:03,850
+otherwise you're duplicating data,
+
+374
+00:18:03,900 --> 00:18:04,655
+you don't want to do that.
+
+375
+00:18:04,655 --> 00:18:05,675
+Yes.
+
+376
+00:18:10,250 --> 00:18:13,855
+The question, if it's storing record IDs is a leaf node or inner node,
+
+377
+00:18:13,855 --> 00:18:15,000
+it's a leaf node,
+
+378
+00:18:15,350 --> 00:18:15,990
+because again.
+
+379
+00:18:18,820 --> 00:18:19,970
+We bring up an example in a second.
+
+380
+00:18:22,730 --> 00:18:23,700
+Here the,
+
+381
+00:18:25,210 --> 00:18:27,200
+the only really keys that exist,
+
+382
+00:18:27,520 --> 00:18:29,600
+that actually correspond to what's actually in your table
+
+383
+00:18:29,770 --> 00:18:31,340
+are found in the leaf nodes.
+
+384
+00:18:31,840 --> 00:18:33,570
+So we'll see this in our demo,
+
+385
+00:18:33,570 --> 00:18:35,240
+when we delete and insert keys,
+
+386
+00:18:35,830 --> 00:18:41,000
+they the a key that was deleted may actually still exist in in an inner node, right,
+
+387
+00:18:41,230 --> 00:18:42,195
+so you can't have it,
+
+388
+00:18:42,195 --> 00:18:44,565
+like you couldn't have it be a record ID to point to something,
+
+389
+00:18:44,565 --> 00:18:46,760
+because that that record may not exist,
+
+390
+00:18:46,990 --> 00:18:49,760
+in this case, here I have in this inner node here, I have 35,
+
+391
+00:18:50,230 --> 00:18:52,200
+but there's no 35 in the leaf node,
+
+392
+00:18:52,200 --> 00:18:53,360
+meaning at some point,
+
+393
+00:18:53,830 --> 00:18:57,200
+this key got 35 inserted into it and then got deleted,
+
+394
+00:18:57,250 --> 00:18:59,115
+but because the way it it got organized
+
+395
+00:18:59,115 --> 00:19:01,580
+and in the algorithm to maintain the balance of the of the tree,
+
+396
+00:19:01,720 --> 00:19:03,315
+I didn't end up removing 35,
+
+397
+00:19:03,315 --> 00:19:04,035
+so it's still there,
+
+398
+00:19:04,035 --> 00:19:06,410
+so it's the thing like all the Internet guy posts
+
+399
+00:19:06,610 --> 00:19:10,070
+or you know, or traffic signs or street signs
+
+400
+00:19:10,210 --> 00:19:13,430
+to tell you how to get down to where you need to go in in the leaves.
+
+401
+00:19:14,910 --> 00:19:16,630
+Yes.
+
+402
+00:19:23,120 --> 00:19:23,815
+His statement is,
+
+403
+00:19:23,815 --> 00:19:26,550
+is it true to say that every inner node has one key,
+
+404
+00:19:27,320 --> 00:19:28,750
+but every leaf node can have multiple keys?
+
+405
+00:19:30,610 --> 00:19:31,610
+This example here,
+
+406
+00:19:31,630 --> 00:19:33,285
+I'm showing two keys per node,
+
+407
+00:19:33,285 --> 00:19:35,150
+because I got to make it fit on Powerpoint, right,
+
+408
+00:19:36,190 --> 00:19:38,040
+there's nothing about the B+ tree,
+
+409
+00:19:38,040 --> 00:19:39,780
+that says you can only have two keys,
+
+410
+00:19:39,780 --> 00:19:40,700
+you have multiple keys.
+
+411
+00:19:48,970 --> 00:19:49,850
+In this example?
+
+412
+00:19:50,870 --> 00:19:52,680
+In this example, yeah, you only need one,
+
+413
+00:19:53,770 --> 00:19:55,605
+but in a real B+ tree,
+
+414
+00:19:55,605 --> 00:19:58,920
+you wouldn't have one key for index per node, right,
+
+415
+00:20:01,940 --> 00:20:03,340
+you can have unlimited, right,
+
+416
+00:20:03,840 --> 00:20:05,945
+and we'll get this in a second,
+
+417
+00:20:05,945 --> 00:20:08,500
+the slower the disk, actually, the bigger the node you want,
+
+418
+00:20:08,970 --> 00:20:10,270
+because that's more sequential I/O,
+
+419
+00:20:11,150 --> 00:20:12,300
+you could have hundreds of keys,
+
+420
+00:20:15,980 --> 00:20:17,700
+there's a limitation on what I can show on PowerPoint,
+
+421
+00:20:17,900 --> 00:20:20,520
+but we'll bring up the demo in a second.
+
+422
+00:20:22,250 --> 00:20:22,830
+Other questions?
+
+423
+00:20:25,000 --> 00:20:25,700
+Okay, so,
+
+424
+00:20:27,010 --> 00:20:27,915
+I made a big deal,
+
+425
+00:20:27,915 --> 00:20:30,260
+like, okay, we're talking about B+ trees, not B trees,
+
+426
+00:20:31,030 --> 00:20:32,270
+you may not know what a B tree is.
+
+427
+00:20:33,360 --> 00:20:36,220
+So, the original B tree from 1972
+
+428
+00:20:36,750 --> 00:20:40,090
+had all the keys and values stored all throughout the tree,
+
+429
+00:20:40,350 --> 00:20:41,890
+like AVL tree, for example,
+
+430
+00:20:43,090 --> 00:20:44,420
+and it's more space efficient,
+
+431
+00:20:44,500 --> 00:20:46,670
+because you never have keys that are,
+
+432
+00:20:47,620 --> 00:20:50,335
+that don't correspond to actually something in your data set,
+
+433
+00:20:50,335 --> 00:20:50,920
+like I said before,
+
+434
+00:20:50,920 --> 00:20:53,670
+I could delete record 35, key 35
+
+435
+00:20:54,200 --> 00:20:57,610
+and I get it'll get removed from the leaf nodes,
+
+436
+00:20:57,610 --> 00:20:59,580
+but it may end up is still one of the guideposts,
+
+437
+00:21:00,120 --> 00:21:02,535
+or I could have multiple copies of the key
+
+438
+00:21:02,535 --> 00:21:05,390
+going down my inner nodes to the leaf node,
+
+439
+00:21:05,470 --> 00:21:08,840
+and that's potentially wasting data or wasting space.
+
+440
+00:21:09,850 --> 00:21:11,240
+So in a B tree,
+
+441
+00:21:11,380 --> 00:21:14,540
+a key only appears once anywhere in the entire tree,
+
+442
+00:21:15,120 --> 00:21:17,930
+but the problem with that one is the,
+
+443
+00:21:18,190 --> 00:21:21,440
+the values mean, the record pointing to the actual tuples,
+
+444
+00:21:21,550 --> 00:21:23,120
+they can be anywhere in the tree,
+
+445
+00:21:23,470 --> 00:21:25,940
+and so now if I want to scan along sequentially
+
+446
+00:21:26,230 --> 00:21:28,790
+to get all the keys I need in, in, in sort of order,
+
+447
+00:21:29,140 --> 00:21:31,005
+I may have to traverse up, up and down,
+
+448
+00:21:31,005 --> 00:21:33,640
+because I basically have to do breadth-first search, right.
+
+449
+00:21:34,450 --> 00:21:36,195
+And again, we're not going to talk about latching just yet,
+
+450
+00:21:36,195 --> 00:21:38,240
+but think of like, I basically have to latch the entire tree,
+
+451
+00:21:38,560 --> 00:21:39,830
+as I'm going up and down,
+
+452
+00:21:40,420 --> 00:21:41,955
+whereas in a B+ tree,
+
+453
+00:21:41,955 --> 00:21:45,555
+because the leaf nodes are only places where values actually are, right,
+
+454
+00:21:45,555 --> 00:21:48,140
+consider like, that's the, the exact copy of what's in the table,
+
+455
+00:21:48,860 --> 00:21:50,560
+once I get to the leaf nodes,
+
+456
+00:21:50,700 --> 00:21:53,710
+I don't have to maintain any of the latches from upper parts in the tree,
+
+457
+00:21:53,850 --> 00:21:55,780
+and I can just scan along the leaves
+
+458
+00:21:56,190 --> 00:21:59,105
+and let other threads do whatever they want at the top of a []
+
+459
+00:21:59,105 --> 00:22:02,180
+as long as doesn't need for what I'm doing, right.
+
+460
+00:22:02,900 --> 00:22:08,140
+So the advantage for a B+ tree over B trees is that,
+
+461
+00:22:08,160 --> 00:22:09,790
+we're going to have better concurrent access,
+
+462
+00:22:09,990 --> 00:22:11,440
+and again, we're going to maximize,
+
+463
+00:22:12,960 --> 00:22:15,970
+improve the amount of sequential I/O we're doing, over random I/O.
+
+464
+00:22:17,700 --> 00:22:18,100
+Yes.
+
+465
+00:22:24,030 --> 00:22:24,755
+His question is,
+
+466
+00:22:24,755 --> 00:22:29,320
+if the, if the inner nodes only, only guideposts,
+
+467
+00:22:29,320 --> 00:22:32,780
+why do we have, why do we have sibling pointers?
+
+468
+00:22:35,130 --> 00:22:37,120
+Because when you're doing split merges,
+
+469
+00:22:37,320 --> 00:22:41,380
+you may need to do borrow things or emerge with your neighbor,
+
+470
+00:22:42,430 --> 00:22:43,850
+and they may, they may,
+
+471
+00:22:43,870 --> 00:22:45,380
+you know, you have the same parent,
+
+472
+00:22:45,490 --> 00:22:46,260
+instead of going make it parent,
+
+473
+00:22:46,260 --> 00:22:47,120
+you can go across and get them,
+
+474
+00:22:50,385 --> 00:22:52,310
+you don't need it, it's just an optimization.
+
+475
+00:22:54,820 --> 00:22:55,515
+Postgres does it,
+
+476
+00:22:55,515 --> 00:22:57,110
+I actually don't know, I don't know whether MySQL does.
+
+477
+00:23:03,070 --> 00:23:03,310
+So let's see,
+
+478
+00:23:03,310 --> 00:23:04,740
+how we want to do our basic operations.
+
+479
+00:23:05,930 --> 00:23:06,780
+So do an insert,
+
+480
+00:23:07,220 --> 00:23:07,675
+we want to,
+
+481
+00:23:07,675 --> 00:23:09,570
+basically, the goal is to find the correct leaf node,
+
+482
+00:23:11,990 --> 00:23:14,470
+we're gonna basically traverse down, following the guidepost,
+
+483
+00:23:14,470 --> 00:23:15,465
+get to some leaf node,
+
+484
+00:23:15,465 --> 00:23:17,160
+where, where our key should be
+
+485
+00:23:18,530 --> 00:23:19,690
+and if it has enough space,
+
+486
+00:23:19,690 --> 00:23:20,785
+great, we insert it in,
+
+487
+00:23:20,785 --> 00:23:22,165
+sorted, order in in that leaf node
+
+488
+00:23:22,165 --> 00:23:22,680
+and we're done,
+
+489
+00:23:23,340 --> 00:23:24,620
+if there's not enough space,
+
+490
+00:23:25,480 --> 00:23:28,910
+meaning the keys, the number of keys we have is full at the node,
+
+491
+00:23:29,110 --> 00:23:34,580
+then we have to split whatever the leaf node we're trying to insert into into two nodes,
+
+492
+00:23:35,240 --> 00:23:36,120
+divide it in half,
+
+493
+00:23:36,170 --> 00:23:38,730
+but half the keys go on one side, half the keys go on the other side,
+
+494
+00:23:39,170 --> 00:23:44,700
+and then you're gonna copy up whatever the middle key is between in that, in that list of keys up to your parent,
+
+495
+00:23:45,710 --> 00:23:48,235
+and then now we have a new new new guidepost
+
+496
+00:23:48,235 --> 00:23:51,750
+and a new pointer down to the new the new node, you just created,
+
+497
+00:23:51,860 --> 00:23:52,830
+new leaf node.
+
+498
+00:23:53,390 --> 00:23:54,955
+And of course, this happens recursively, right,
+
+499
+00:23:54,955 --> 00:23:59,640
+if I, if I, if I promote up the middle key that I split on to the parent
+
+500
+00:23:59,900 --> 00:24:00,940
+and that parent is full,
+
+501
+00:24:00,940 --> 00:24:02,040
+well, now I gotta split the parent,
+
+502
+00:24:03,070 --> 00:24:05,600
+and that can cascade all the way to the top.
+
+503
+00:24:08,000 --> 00:24:16,300
+So, making, making these slides show this in, in PowerPoint,
+
+504
+00:24:16,300 --> 00:24:17,040
+it's kind of pain,
+
+505
+00:24:17,390 --> 00:24:19,230
+so, I'm going to do,
+
+506
+00:24:19,340 --> 00:24:20,590
+I'm going to bring up this visualization,
+
+507
+00:24:20,590 --> 00:24:21,330
+so this is a,
+
+508
+00:24:23,430 --> 00:24:24,100
+bring it up here,
+
+509
+00:24:25,680 --> 00:24:26,950
+the size, here we go,
+
+510
+00:24:27,240 --> 00:24:28,000
+so this is a website,
+
+511
+00:24:28,560 --> 00:24:31,840
+the link on the slides takes you to the wrong one,
+
+512
+00:24:33,740 --> 00:24:34,735
+I'll update it,
+
+513
+00:24:34,735 --> 00:24:37,720
+but if you search B+ tree visualization,
+
+514
+00:24:37,720 --> 00:24:39,000
+you'll get this.
+
+515
+00:24:39,590 --> 00:24:43,750
+So, I'm going to do a demo of a B+ tree, with degree 2,
+
+516
+00:24:43,750 --> 00:24:45,720
+so the maximum number of keys per node is 2,
+
+517
+00:24:45,830 --> 00:24:47,970
+and maximum of pointers is going to be 3.
+
+518
+00:24:51,080 --> 00:24:52,195
+So the first thing we'll do,
+
+519
+00:24:52,195 --> 00:24:53,520
+we're going to insert 2,
+
+520
+00:24:54,170 --> 00:24:55,560
+that lands in our root node,
+
+521
+00:24:55,880 --> 00:24:56,760
+can I make that bigger,
+
+522
+00:24:58,220 --> 00:25:04,175
+let's try this, height 200
+
+523
+00:25:04,175 --> 00:25:05,650
+and then now I can maybe do this,
+
+524
+00:25:07,120 --> 00:25:07,760
+is that better?
+
+525
+00:25:10,360 --> 00:25:13,070
+All right, so then we're going to insert 6, right,
+
+526
+00:25:13,330 --> 00:25:16,365
+so again, we only have a root node,
+
+527
+00:25:16,365 --> 00:25:17,390
+it can hold two keys,
+
+528
+00:25:17,530 --> 00:25:18,740
+so nothing changes here,
+
+529
+00:25:18,970 --> 00:25:20,300
+so now we're going to insert 4.
+
+530
+00:25:22,680 --> 00:25:23,620
+So in this case here,
+
+531
+00:25:23,820 --> 00:25:25,340
+we try to put three keys in our root,
+
+532
+00:25:25,340 --> 00:25:26,170
+we can't do that,
+
+533
+00:25:26,340 --> 00:25:27,700
+so it decides to split on 4,
+
+534
+00:25:28,080 --> 00:25:30,190
+makes two new, two new leaf nodes
+
+535
+00:25:31,380 --> 00:25:33,160
+and then the middle key is 4,
+
+536
+00:25:34,320 --> 00:25:35,890
+anything less than 4 goes on this side,
+
+537
+00:25:36,090 --> 00:25:37,565
+greater than 4 goes on the other side,
+
+538
+00:25:37,565 --> 00:25:39,400
+so 2 is on this node, over here, this leaf node,
+
+539
+00:25:39,480 --> 00:25:42,400
+and then 4 and 8 on the other side.
+
+540
+00:25:42,600 --> 00:25:43,630
+And in this implementation,
+
+541
+00:25:43,740 --> 00:25:45,760
+they only have the sibling pointer going in one direction,
+
+542
+00:25:46,420 --> 00:25:47,370
+some systems do that,
+
+543
+00:25:47,570 --> 00:25:48,690
+Postgres does both directions,
+
+544
+00:25:50,340 --> 00:25:52,310
+and it's not wrong, it done differently.
+
+545
+00:25:54,410 --> 00:25:56,490
+So now I insert 5, right,
+
+546
+00:25:56,630 --> 00:25:57,630
+so I follow 4,
+
+547
+00:25:58,220 --> 00:26:00,840
+4 is less than 5, is greater, greater than equal to 4,
+
+548
+00:26:01,100 --> 00:26:02,725
+so it would go down to the previous node,
+
+549
+00:26:02,725 --> 00:26:05,065
+but then I have, I had two keys already in there,
+
+550
+00:26:05,065 --> 00:26:08,890
+so I had to split that key and split that leaf node,
+
+551
+00:26:08,890 --> 00:26:09,780
+I made two nodes
+
+552
+00:26:09,830 --> 00:26:11,400
+and then I I put 5 up there.
+
+553
+00:26:12,650 --> 00:26:13,050
+Okay?
+
+554
+00:26:16,800 --> 00:26:17,530
+So first, so good?
+
+555
+00:26:22,730 --> 00:26:24,510
+So, delete is essentially the reverse of this,
+
+556
+00:26:24,800 --> 00:26:27,670
+where we start the root, go down
+
+557
+00:26:27,670 --> 00:26:31,860
+until we find the leaf node where entry, the entry we want remove,
+
+558
+00:26:31,940 --> 00:26:33,690
+if it's not there, then we don't do anything,
+
+559
+00:26:34,010 --> 00:26:35,940
+because we can't delete a key that doesn't exist,
+
+560
+00:26:37,690 --> 00:26:39,470
+if it is there, then we go ahead and delete it,
+
+561
+00:26:39,550 --> 00:26:43,160
+so if the leaf node we just modified is at least half full,
+
+562
+00:26:43,570 --> 00:26:44,240
+then we're done,
+
+563
+00:26:45,220 --> 00:26:47,000
+we pop it out and we don't do anything,
+
+564
+00:26:47,320 --> 00:26:52,540
+but now, but if the leaf node after deleting that key, goes below our threshold, right,
+
+565
+00:26:52,560 --> 00:26:54,520
+M, M/2-1,
+
+566
+00:26:55,380 --> 00:26:56,710
+M is the number of keys per node,
+
+567
+00:26:57,060 --> 00:26:58,540
+then we have to redistribute,
+
+568
+00:26:58,950 --> 00:27:00,695
+the first thing we try to do is redistribute
+
+569
+00:27:00,695 --> 00:27:02,590
+meaning follow the sibling pointers,
+
+570
+00:27:02,880 --> 00:27:06,010
+find a, another node at the same level as us
+
+571
+00:27:06,600 --> 00:27:08,080
+and steal one of their keys,
+
+572
+00:27:08,280 --> 00:27:10,540
+like, as long as they don't become unbalanced, that's okay,
+
+573
+00:27:10,860 --> 00:27:14,230
+we may have to tweak up above the parent node,
+
+574
+00:27:14,660 --> 00:27:18,370
+in the parent node, the the guideposts, the split point,
+
+575
+00:27:19,470 --> 00:27:21,670
+but again, that's's not that expensive,
+
+576
+00:27:21,870 --> 00:27:23,230
+because we would already have the latch for it,
+
+577
+00:27:24,510 --> 00:27:25,330
+we cover next time.
+
+578
+00:27:26,070 --> 00:27:27,370
+If we can't redistribute,
+
+579
+00:27:27,510 --> 00:27:29,890
+then we had to merge L with one of its siblings,
+
+580
+00:27:30,450 --> 00:27:32,110
+combine those two keys, put it together
+
+581
+00:27:32,340 --> 00:27:34,870
+and then update the parent accordingly, right.
+
+582
+00:27:35,340 --> 00:27:36,770
+And again, this is recursive,
+
+583
+00:27:36,770 --> 00:27:41,010
+so if I merge two, two nodes together
+
+584
+00:27:41,300 --> 00:27:43,570
+and then I delete a guidepost key at my parent
+
+585
+00:27:43,570 --> 00:27:45,150
+and now the parent is less than half full,
+
+586
+00:27:45,590 --> 00:27:47,760
+then the merge will cascade up.
+
+587
+00:27:50,050 --> 00:27:50,790
+What does it feel,
+
+588
+00:27:50,790 --> 00:27:55,685
+like if I, if I have two keys,
+
+589
+00:27:55,685 --> 00:27:56,315
+you have one key
+
+590
+00:27:56,315 --> 00:27:57,460
+and you're my, you're my sibling,
+
+591
+00:27:57,600 --> 00:27:58,550
+I delete a key
+
+592
+00:27:58,550 --> 00:27:59,620
+and I less than half full,
+
+593
+00:28:00,030 --> 00:28:00,755
+that's a bad example,
+
+594
+00:28:00,755 --> 00:28:02,800
+because there's say three keys, right,
+
+595
+00:28:03,390 --> 00:28:04,360
+if you have two keys
+
+596
+00:28:04,470 --> 00:28:05,350
+and I have two keys,
+
+597
+00:28:05,700 --> 00:28:06,620
+I delete a key,
+
+598
+00:28:06,620 --> 00:28:08,120
+I'm like oh, I'm less than half full
+
+599
+00:28:08,120 --> 00:28:09,800
+and I go try to steal one of your keys,
+
+600
+00:28:09,800 --> 00:28:11,045
+but if I do that to you,
+
+601
+00:28:11,045 --> 00:28:12,070
+then you're less than half full,
+
+602
+00:28:12,120 --> 00:28:12,850
+so I can't.
+
+603
+00:28:15,380 --> 00:28:16,720
+All right, so let's go back to our demo.
+
+604
+00:28:18,940 --> 00:28:19,760
+All right, so,
+
+605
+00:28:21,930 --> 00:28:22,745
+we can go ahead and delete,
+
+606
+00:28:22,745 --> 00:28:24,340
+so let's go ahead and delete 8,
+
+607
+00:28:25,620 --> 00:28:26,920
+8 at the far end here,
+
+608
+00:28:27,930 --> 00:28:29,470
+it was 6, sorry,
+
+609
+00:28:31,570 --> 00:28:34,820
+6, right, goes over here, delete 6,
+
+610
+00:28:34,990 --> 00:28:36,350
+that's fine, we're still balanced,
+
+611
+00:28:36,700 --> 00:28:40,400
+it's two keys, two keys per node, still half full,
+
+612
+00:28:41,620 --> 00:28:42,560
+in this case, 1,
+
+613
+00:28:43,450 --> 00:28:46,730
+we can go, we can go to degree 4, that look better,
+
+614
+00:28:46,840 --> 00:28:52,420
+but now I say I delete key 4 in the middle, right,
+
+615
+00:28:52,830 --> 00:28:55,930
+it basically propagates up and removes it from above.
+
+616
+00:28:56,760 --> 00:28:57,965
+So let's go to degree 4,
+
+617
+00:28:57,965 --> 00:28:59,890
+because then you can start seeing the stealing better.
+
+618
+00:29:00,600 --> 00:29:02,590
+So let's do the same thing to insert 1,
+
+619
+00:29:04,080 --> 00:29:10,670
+insert 2, 4 5,
+
+620
+00:29:11,860 --> 00:29:12,860
+split, now we got there,
+
+621
+00:29:14,410 --> 00:29:17,890
+6 8,
+
+622
+00:29:24,110 --> 00:29:25,200
+and then we do 9.
+
+623
+00:29:29,030 --> 00:29:32,270
+So we're going to go ahead and delete 5 in the middle here,
+
+624
+00:29:33,040 --> 00:29:34,800
+and again, at this point here,
+
+625
+00:29:34,850 --> 00:29:37,080
+this node, this leaf node will become less than half full,
+
+626
+00:29:37,400 --> 00:29:38,890
+so the first thing we try to do is
+
+627
+00:29:38,890 --> 00:29:42,480
+try to steal from, from when its siblings,
+
+628
+00:29:43,040 --> 00:29:44,220
+so let's go ahead and delete 5,
+
+629
+00:29:49,040 --> 00:29:49,770
+didn't do that,
+
+630
+00:29:54,640 --> 00:29:55,220
+why not?
+
+631
+00:29:58,210 --> 00:29:58,610
+Yeah.
+
+632
+00:30:01,010 --> 00:30:02,005
+What is that.
+
+633
+00:30:03,560 --> 00:30:04,530
+Yeah, I think it's a 4,
+
+634
+00:30:04,970 --> 00:30:06,600
+so I delete 4, see what it does,
+
+635
+00:30:07,040 --> 00:30:08,580
+yeah, there steals.
+
+636
+00:30:09,180 --> 00:30:11,410
+Yeah, so this animation doesn't follow the textbook exactly,
+
+637
+00:30:13,620 --> 00:30:14,810
+but like, it's, it's not wrong,
+
+638
+00:30:14,810 --> 00:30:16,120
+it's just like different ways to do things,
+
+639
+00:30:16,140 --> 00:30:19,420
+like, you know, how aggressive you want to be on certain optimizations,
+
+640
+00:30:19,950 --> 00:30:22,300
+but as long as you get the high level idea, that you could steal.
+
+641
+00:30:24,180 --> 00:30:25,620
+But you still have to update the parent, when you steal,
+
+642
+00:30:25,620 --> 00:30:27,170
+because that's going to change the boundary points.
+
+643
+00:30:28,240 --> 00:30:29,925
+Yes.
+
+644
+00:30:36,550 --> 00:30:37,485
+In this example here,
+
+645
+00:30:37,485 --> 00:30:38,990
+they have siblinginters going one direction,
+
+646
+00:30:39,670 --> 00:30:42,650
+Postgres and other systems go in both directions, double linked list.
+
+647
+00:30:46,230 --> 00:30:47,645
+Yes.
+
+648
+00:30:53,640 --> 00:30:54,430
+Yeah, his question is,
+
+649
+00:30:56,150 --> 00:30:57,780
+actually, I had an example of that,
+
+650
+00:31:02,485 --> 00:31:03,000
+actually, that's a question,
+
+651
+00:31:05,830 --> 00:31:07,095
+actually, I don't have an example of that,
+
+652
+00:31:07,095 --> 00:31:08,510
+well, I know I do in the middle here,
+
+653
+00:31:10,520 --> 00:31:10,990
+these guys,
+
+654
+00:31:11,250 --> 00:31:13,370
+I, yeah, so I think the leaf nodes,
+
+655
+00:31:13,370 --> 00:31:16,040
+you definitely want pointers to your siblings along this,
+
+656
+00:31:16,040 --> 00:31:18,970
+because you need to go along the leaf nodes,
+
+657
+00:31:19,890 --> 00:31:23,140
+if this guy had like, you know, this thing got even bigger,
+
+658
+00:31:23,580 --> 00:31:25,210
+could you have two parents,
+
+659
+00:31:25,290 --> 00:31:28,340
+could two, two, two nodes at the same level had pointed to each other
+
+660
+00:31:28,340 --> 00:31:29,800
+even though they was, you know, have the same parent,
+
+661
+00:31:30,510 --> 00:31:31,685
+you could, I don't know,
+
+662
+00:31:31,685 --> 00:31:33,640
+actually, I don't know what Postgres does or other systems do.
+
+663
+00:31:42,120 --> 00:31:43,390
+To this point, you may not,
+
+664
+00:31:44,560 --> 00:31:47,280
+so if you had the same parent, or.
+
+665
+00:31:52,620 --> 00:31:55,780
+Everyone comes up to the root, like,
+
+666
+00:31:58,440 --> 00:32:01,450
+it may be a case you have to, like, reorganize everything, right,
+
+667
+00:32:01,740 --> 00:32:02,885
+so that may help,
+
+668
+00:32:02,885 --> 00:32:05,410
+but at that point, you're latching the whole tree, so who cares?
+
+669
+00:32:08,430 --> 00:32:10,130
+Yes.
+
+670
+00:32:14,050 --> 00:32:14,745
+This question is,
+
+671
+00:32:14,745 --> 00:32:17,895
+if you don't, if you don't store a pointer to the parent,
+
+672
+00:32:17,895 --> 00:32:18,950
+how do you send data to the parent.
+
+673
+00:32:19,820 --> 00:32:21,030
+We will discuss this next class,
+
+674
+00:32:21,140 --> 00:32:23,245
+because basically, as you're going down,
+
+675
+00:32:23,245 --> 00:32:26,460
+you keep track of the stack of the nodes you visit as you go down,
+
+676
+00:32:26,660 --> 00:32:28,860
+and you keep track of which ones you had the latch for,
+
+677
+00:32:29,480 --> 00:32:30,660
+so I can go down,
+
+678
+00:32:31,190 --> 00:32:33,210
+if I'm traversing down here,
+
+679
+00:32:34,170 --> 00:32:37,270
+and say this guy here, I have to, I gotta split,
+
+680
+00:32:38,460 --> 00:32:41,525
+when I, when I come down, and get here,
+
+681
+00:32:41,525 --> 00:32:42,070
+I would recognize,
+
+682
+00:32:42,090 --> 00:32:43,360
+hey, I'm gonna have to split,
+
+683
+00:32:43,620 --> 00:32:45,125
+don't release the latch of my parent,
+
+684
+00:32:45,125 --> 00:32:46,265
+so I still have a pointer,
+
+685
+00:32:46,265 --> 00:32:47,330
+I still have it on my stack,
+
+686
+00:32:47,330 --> 00:32:48,070
+I can get back to.
+
+687
+00:32:48,720 --> 00:32:50,205
+So it's the internal bookkeeping of the worker
+
+688
+00:32:50,205 --> 00:32:53,000
+as it goes down the threads or goes down the tree.
+
+689
+00:32:56,320 --> 00:32:56,960
+Yes, again.
+
+690
+00:32:58,090 --> 00:33:01,670
+And so we'll talk about it means be safer, unsafe, traversals,
+
+691
+00:33:01,750 --> 00:33:05,955
+like, you know, like, as you go down, if you would know,
+
+692
+00:33:05,955 --> 00:33:07,460
+I'm, I'm trying to delete something,
+
+693
+00:33:07,810 --> 00:33:08,730
+so as I go down,
+
+694
+00:33:08,730 --> 00:33:10,530
+if I know that no matter whether or not,
+
+695
+00:33:10,530 --> 00:33:13,845
+the key m need need below me, whether it's there or not,
+
+696
+00:33:13,845 --> 00:33:18,390
+I know that, there I won't have to do a merge or split on this node,
+
+697
+00:33:18,390 --> 00:33:19,010
+what I'm at right now,
+
+698
+00:33:19,150 --> 00:33:21,710
+so once I go past it, I don't. I can release the latch on it,
+
+699
+00:33:21,760 --> 00:33:23,480
+could it's considered safe, it won't,
+
+700
+00:33:23,530 --> 00:33:25,010
+No matter what happens below you,
+
+701
+00:33:25,090 --> 00:33:26,270
+it'll never get reorganized,
+
+702
+00:33:26,350 --> 00:33:27,800
+so you don't need to maintain the last [word].
+
+703
+00:33:28,210 --> 00:33:29,150
+That will cover next class.
+
+704
+00:33:38,010 --> 00:33:40,990
+All right, so that's the basic operations for splits emerges,
+
+705
+00:33:42,240 --> 00:33:43,210
+so the B+ tree,
+
+706
+00:33:43,770 --> 00:33:44,650
+just trees in general,
+
+707
+00:33:44,910 --> 00:33:47,170
+B+ tree from B+ in, in databases
+
+708
+00:33:47,460 --> 00:33:49,370
+is gonna have a bunch of, do a bunch of other stuff,
+
+709
+00:33:49,370 --> 00:33:52,660
+we can we, we couldn't be able, we couldn't do with a hash table.
+
+710
+00:33:53,520 --> 00:33:56,710
+So a hash table, the only operation we could do is,
+
+711
+00:33:58,150 --> 00:33:59,910
+something equals this key, right,
+
+712
+00:33:59,910 --> 00:34:03,260
+is the, is the hash key equal to my to my key I'm looking up on,
+
+713
+00:34:03,670 --> 00:34:05,750
+we can't do less than, we can't do greater than
+
+714
+00:34:06,160 --> 00:34:07,710
+and we can't do any partial key lookup,
+
+715
+00:34:07,710 --> 00:34:10,025
+you have to have the entire key, right.
+
+716
+00:34:10,025 --> 00:34:10,580
+So if I say,
+
+717
+00:34:10,580 --> 00:34:12,460
+I build an index on columns a b c,
+
+718
+00:34:12,870 --> 00:34:15,940
+I if I only have columns a and b, for my key,
+
+719
+00:34:16,200 --> 00:34:19,265
+I can't hash that and jump to anything meaningful, right,
+
+720
+00:34:19,265 --> 00:34:20,860
+because the hash is completely random.
+
+721
+00:34:21,820 --> 00:34:23,030
+But in B+ tree,
+
+722
+00:34:23,290 --> 00:34:24,390
+we can do a bunch of tricks,
+
+723
+00:34:24,390 --> 00:34:28,640
+where we can potentially only have, or not potentially you can,
+
+724
+00:34:28,810 --> 00:34:30,380
+you can only have parts of the key
+
+725
+00:34:31,270 --> 00:34:34,310
+or a certain number of the attributes, that your key is based on
+
+726
+00:34:34,450 --> 00:34:36,890
+and still use it for queries.
+
+727
+00:34:37,980 --> 00:34:39,640
+So again, say index on a b c,
+
+728
+00:34:40,200 --> 00:34:44,600
+so obviously, I can do a=1, b=2 and c=3,
+
+729
+00:34:44,600 --> 00:34:45,830
+that's the same thing as the hashing,
+
+730
+00:34:45,830 --> 00:34:47,830
+I have the [quality] matching for all of the keys,
+
+731
+00:34:48,120 --> 00:34:50,960
+that are in my, that, that the index is based on.
+
+732
+00:34:51,370 --> 00:34:53,150
+I also can do what's called a prefix search,
+
+733
+00:34:53,470 --> 00:34:57,570
+where I only have a and b and not c, right,
+
+734
+00:34:57,570 --> 00:34:59,700
+and we can do the lookup
+
+735
+00:34:59,700 --> 00:35:02,750
+to define all the matches based on the a and b without c.
+
+736
+00:35:03,720 --> 00:35:05,975
+But we'd also, not all systems do this,
+
+737
+00:35:05,975 --> 00:35:07,150
+because it's trickier to do,
+
+738
+00:35:07,260 --> 00:35:11,825
+but we also can do a suffix look up,
+
+739
+00:35:11,825 --> 00:35:12,905
+where we don't have the prefix,
+
+740
+00:35:12,905 --> 00:35:15,790
+we have the suffix of the keys,
+
+741
+00:35:15,930 --> 00:35:18,340
+so I don't have a, but I have b and c
+
+742
+00:35:18,510 --> 00:35:21,040
+and I can potentially still use my index and do that lookup,
+
+743
+00:35:21,910 --> 00:35:23,535
+very few systems do this, this is hard,
+
+744
+00:35:23,535 --> 00:35:24,560
+Postgres doesn't do this,
+
+745
+00:35:24,910 --> 00:35:27,740
+the Oracle and I think maybe SQL Server can do this.
+
+746
+00:35:28,510 --> 00:35:28,910
+All right?
+
+747
+00:35:29,590 --> 00:35:30,765
+And again, if it was a hash index,
+
+748
+00:35:30,765 --> 00:35:31,970
+we have to have the entire key
+
+749
+00:35:32,350 --> 00:35:34,280
+and it always has to be in [quality predicate].
+
+750
+00:35:37,570 --> 00:35:42,770
+Yeah, because you basically need to have like potentially multiple threads at the same time going down
+
+751
+00:35:42,790 --> 00:35:44,810
+and everyone, everyone coordinating,
+
+752
+00:35:45,820 --> 00:35:47,430
+there might be a patent from Oracle,
+
+753
+00:35:47,430 --> 00:35:48,740
+and that present people from doing this,
+
+754
+00:35:48,940 --> 00:35:50,120
+wouldn't surprise me, I don't know,
+
+755
+00:35:50,560 --> 00:35:52,130
+they're called skip scans at Oracle
+
+756
+00:35:53,350 --> 00:35:56,390
+and that that might be why nobody does. Nobody else does this.
+
+757
+00:35:57,170 --> 00:35:57,930
+Alright, so again,
+
+758
+00:35:58,130 --> 00:36:00,300
+say I have my my index on a and b,
+
+759
+00:36:00,650 --> 00:36:02,250
+if I want to find key 1 and 2,
+
+760
+00:36:03,200 --> 00:36:04,740
+again I use my guide posts
+
+761
+00:36:04,910 --> 00:36:06,870
+and essentially just looking at the keys,
+
+762
+00:36:07,250 --> 00:36:10,230
+the the parts of the key in in sort of sequential order,
+
+763
+00:36:10,400 --> 00:36:13,170
+so first I check is 1 less, less than equal to 1
+
+764
+00:36:13,640 --> 00:36:16,050
+and then I check the second part is 2 less than equal to 3
+
+765
+00:36:16,250 --> 00:36:19,710
+and that tells me that I want to follow down this to this, this node here
+
+766
+00:36:19,820 --> 00:36:21,450
+and then I can find the entry I'm looking for.
+
+767
+00:36:23,320 --> 00:36:24,810
+If I'm doing a prefix search,
+
+768
+00:36:24,810 --> 00:36:27,710
+meaning I have the first part of the key but not the remaining part,
+
+769
+00:36:28,090 --> 00:36:31,860
+so I have key on a, but not b,
+
+770
+00:36:32,770 --> 00:36:34,305
+the way that would work is,
+
+771
+00:36:34,305 --> 00:36:36,230
+you basically look at the part that you do have
+
+772
+00:36:36,430 --> 00:36:37,940
+and see is 1 less equal to 1,
+
+773
+00:36:38,260 --> 00:36:39,440
+yes, follow down here
+
+774
+00:36:39,670 --> 00:36:41,180
+and then now I scan along
+
+775
+00:36:41,500 --> 00:36:44,430
+and keep, keep evaluating my predicate
+
+776
+00:36:44,430 --> 00:36:46,430
+against all the keys that are in the leaf nodes
+
+777
+00:36:46,630 --> 00:36:48,050
+until I have something that violates,
+
+778
+00:36:48,580 --> 00:36:52,400
+or I know that 1 is now is less than 2
+
+779
+00:36:52,510 --> 00:36:54,290
+and I can't, I can't traverse here,
+
+780
+00:36:54,550 --> 00:36:55,380
+because it's a sort of order,
+
+781
+00:36:55,380 --> 00:36:57,195
+I know there will be never, never anything,
+
+782
+00:36:57,195 --> 00:37:01,000
+where you know, with a key, the first part, a equals 1
+
+783
+00:37:01,260 --> 00:37:02,440
+and something else for b,
+
+784
+00:37:02,580 --> 00:37:03,335
+after at this point,
+
+785
+00:37:03,335 --> 00:37:07,390
+because they're sort of first on, on the first part of the key.
+
+786
+00:37:09,940 --> 00:37:11,420
+Again, the last one for the skip scans,
+
+787
+00:37:11,650 --> 00:37:12,830
+basically what happens is
+
+788
+00:37:12,880 --> 00:37:15,380
+you, at every single node you evaluate,
+
+789
+00:37:15,550 --> 00:37:17,360
+okay, what part of the key do I have,
+
+790
+00:37:17,950 --> 00:37:21,470
+and then determine what portion of the trees below you have to look at,
+
+791
+00:37:21,580 --> 00:37:22,700
+and this is an example here,
+
+792
+00:37:22,870 --> 00:37:25,100
+since I don't have the first part of the key,
+
+793
+00:37:25,150 --> 00:37:26,630
+I essentially have to look at everything.
+
+794
+00:37:27,410 --> 00:37:29,200
+And again, I think in Oracle,
+
+795
+00:37:29,200 --> 00:37:30,810
+they can have multiple threads in parallel
+
+796
+00:37:30,890 --> 00:37:32,190
+go down different parts of the tree,
+
+797
+00:37:32,420 --> 00:37:34,560
+and then they combine the results together at the end,
+
+798
+00:37:36,515 --> 00:37:37,990
+it's almost like doing a wild card search,
+
+799
+00:37:38,100 --> 00:37:41,295
+and so, we'll see this a little bit at the demo at the end.
+
+800
+00:37:41,295 --> 00:37:42,855
+There's this trade off between in the data set,
+
+801
+00:37:42,855 --> 00:37:43,940
+it's going to make that like,
+
+802
+00:37:44,600 --> 00:37:45,730
+it could say, all right, well,
+
+803
+00:37:47,110 --> 00:37:51,350
+I know something about the statistics of of the keys that my index is based on,
+
+804
+00:37:51,670 --> 00:37:55,550
+so it probably still is worth me to go look, look in the key, look in the index,
+
+805
+00:37:55,870 --> 00:37:56,685
+but it may decide,
+
+806
+00:37:56,685 --> 00:37:58,730
+okay, well I don't know anything about what you're trying to ask me to do,
+
+807
+00:37:58,960 --> 00:38:00,645
+so I'm, the index is not going to help me,
+
+808
+00:38:00,645 --> 00:38:02,300
+I'm just gonna do a sequential scan across the entire table.
+
+809
+00:38:02,970 --> 00:38:04,400
+And that actually may be faster than
+
+810
+00:38:04,400 --> 00:38:06,550
+trying to do multiple probes down to the index
+
+811
+00:38:06,750 --> 00:38:07,930
+and combine results together.
+
+812
+00:38:09,020 --> 00:38:11,575
+And again, it's not something the programmer has to deal with,
+
+813
+00:38:11,575 --> 00:38:13,090
+this is something we take the SQL query
+
+814
+00:38:13,090 --> 00:38:14,910
+and try to figure this out on our own.
+
+815
+00:38:16,430 --> 00:38:19,350
+Again, we cover this [].
+
+816
+00:38:22,470 --> 00:38:22,870
+Yes.
+
+817
+00:38:25,990 --> 00:38:28,215
+This question, this question is,
+
+818
+00:38:28,215 --> 00:38:30,050
+is it up to the program decide what indexes to make,
+
+819
+00:38:31,180 --> 00:38:32,150
+most systems, yes.
+
+820
+00:38:33,150 --> 00:38:36,070
+So this is, this is an old problem in databases,
+
+821
+00:38:37,350 --> 00:38:40,100
+I talk about how great the abstraction is for relational model,
+
+822
+00:38:40,100 --> 00:38:42,610
+that you don't have to worry about how things are actually physically stored and all that,
+
+823
+00:38:42,960 --> 00:38:44,075
+but the end of the day,
+
+824
+00:38:44,075 --> 00:38:46,330
+someone's got to decide what indexes you actually need,
+
+825
+00:38:46,940 --> 00:38:50,525
+and so there's a long line of research myself here at CMU,
+
+826
+00:38:50,525 --> 00:38:52,400
+but like, going back to the 1970s,
+
+827
+00:38:52,400 --> 00:38:54,910
+of people trying to figure out automatically what index is you need,
+
+828
+00:38:56,420 --> 00:38:59,560
+and so the commercial systems have built in tools
+
+829
+00:38:59,560 --> 00:39:00,600
+that can help you figure this out,
+
+830
+00:39:01,160 --> 00:39:02,700
+MySQL and Postgres do not have that,
+
+831
+00:39:03,390 --> 00:39:06,335
+Postgres will build whatever indexes you tell it you want it,
+
+832
+00:39:06,335 --> 00:39:08,330
+do it for you, right,
+
+833
+00:39:08,330 --> 00:39:08,800
+so you want,
+
+834
+00:39:09,060 --> 00:39:10,535
+if you tell I want a thousand indexes,
+
+835
+00:39:10,535 --> 00:39:12,550
+it do it, right,
+
+836
+00:39:12,840 --> 00:39:17,250
+in, in SQL Server on, on Azure,
+
+837
+00:39:17,510 --> 00:39:18,670
+what they actually do is,
+
+838
+00:39:18,670 --> 00:39:22,500
+they'll spin up a separate instance for your database system,
+
+839
+00:39:23,060 --> 00:39:24,990
+try out basically some kind of machine algorithm
+
+840
+00:39:25,700 --> 00:39:27,300
+to figure out what indexes you actually need
+
+841
+00:39:27,440 --> 00:39:29,660
+and then suggest them to you, right,
+
+842
+00:39:30,430 --> 00:39:32,295
+SQL Server does other other interesting things too,
+
+843
+00:39:32,295 --> 00:39:34,430
+although in the query optimizer,
+
+844
+00:39:35,020 --> 00:39:36,830
+which we'll talk about after midterm,
+
+845
+00:39:37,120 --> 00:39:38,150
+your query shows up,
+
+846
+00:39:38,230 --> 00:39:40,400
+it starts planning it based on whatever indexes you have,
+
+847
+00:39:40,660 --> 00:39:42,020
+but at some point you can also say,
+
+848
+00:39:42,160 --> 00:39:43,455
+man, I'd be really great,
+
+849
+00:39:43,455 --> 00:39:46,310
+if I had, if I had an index on this tree on this table right now,
+
+850
+00:39:46,600 --> 00:39:49,130
+it doesn't can build it for you if potentially,
+
+851
+00:39:49,360 --> 00:39:52,920
+but instead of saying it can potentially build for you just for that query,
+
+852
+00:39:52,920 --> 00:39:54,015
+but it also come back and tell you,
+
+853
+00:39:54,015 --> 00:39:54,650
+hey, by the way,
+
+854
+00:39:54,850 --> 00:39:56,750
+if you gave me this index, I'd run a lot faster.
+
+855
+00:39:57,610 --> 00:39:59,210
+The reason why you may necessarily,
+
+856
+00:39:59,290 --> 00:40:01,640
+you know, you could build it just for the query and then throw it away,
+
+857
+00:40:01,900 --> 00:40:03,290
+because that only affect that query,
+
+858
+00:40:03,550 --> 00:40:06,110
+you may not want to build it and then keep it around,
+
+859
+00:40:06,220 --> 00:40:08,240
+because as I said, you got to maintain it,
+
+860
+00:40:08,260 --> 00:40:09,800
+you got to keep it in sync with the table,
+
+861
+00:40:10,210 --> 00:40:12,945
+so you don't want your database sort of adding like a ton of indexes
+
+862
+00:40:12,945 --> 00:40:15,260
+and now that's gonna make all my insert updates and deletes go slower.
+
+863
+00:40:16,160 --> 00:40:18,990
+Also, too, like, you know, they take storage space, take memory space,
+
+864
+00:40:19,280 --> 00:40:21,090
+there's a cost of physical hardware as well,
+
+865
+00:40:22,270 --> 00:40:25,185
+that's a whole other hornets nest,
+
+866
+00:40:25,185 --> 00:40:25,730
+we can get into.
+
+867
+00:40:29,640 --> 00:40:30,040
+Okay.
+
+868
+00:40:31,950 --> 00:40:33,310
+So the next thing we've got to deal with is,
+
+869
+00:40:33,660 --> 00:40:35,710
+at this point, we know how do inserts, updates, deletes,
+
+870
+00:40:36,090 --> 00:40:37,570
+we know to do inserts and deletes,
+
+871
+00:40:37,830 --> 00:40:39,845
+we know how to do basic lookup
+
+872
+00:40:39,845 --> 00:40:41,015
+to find the keys we're looking for,
+
+873
+00:40:41,015 --> 00:40:43,870
+whether prefix searches, full key searches or the skip scans.
+
+874
+00:40:44,830 --> 00:40:47,720
+The next challenge we got to deal with is how do we handle duplicate keys?
+
+875
+00:40:51,170 --> 00:40:52,980
+So there's two approaches to do this.
+
+876
+00:40:54,250 --> 00:40:55,710
+Again, the issue is going to be like,
+
+877
+00:40:55,710 --> 00:40:57,110
+since I want to be able to,
+
+878
+00:40:58,910 --> 00:41:01,410
+have everything always in log(n), right,
+
+879
+00:41:01,550 --> 00:41:02,550
+how do I actually want to handle,
+
+880
+00:41:03,230 --> 00:41:07,120
+have the capability of inserting keys duplic keys over and over again
+
+881
+00:41:07,120 --> 00:41:09,600
+and not violate that requirement.
+
+882
+00:41:10,450 --> 00:41:11,865
+So the most common approach is
+
+883
+00:41:11,865 --> 00:41:16,850
+to to maintain sort of a hidden column or hidden attribute in the key
+
+884
+00:41:17,410 --> 00:41:19,880
+with the record ID of the tuple that it's pointing to,
+
+885
+00:41:20,970 --> 00:41:25,305
+and then that guarantees that every key ends up being unique, right,
+
+886
+00:41:25,305 --> 00:41:26,520
+if you have a key on 4,
+
+887
+00:41:26,520 --> 00:41:27,500
+and I have a key on 4,
+
+888
+00:41:27,910 --> 00:41:29,385
+but you have a separate tuple, I have a separate tuple,
+
+889
+00:41:29,385 --> 00:41:32,660
+if we put our, our basic, our record ID as part of the key
+
+890
+00:41:33,250 --> 00:41:35,300
+in addition to the column based on their index,
+
+891
+00:41:35,680 --> 00:41:37,820
+then your 4, my 4 end up being unique.
+
+892
+00:41:38,760 --> 00:41:40,690
+And because I can do that prefix search,
+
+893
+00:41:41,220 --> 00:41:44,350
+where I don't have to have all the elements of the key to do lookups,
+
+894
+00:41:44,700 --> 00:41:46,180
+then this scheme still works.
+
+895
+00:41:48,890 --> 00:41:51,930
+The other approach is to overload, overflow leaf nodes
+
+896
+00:41:52,370 --> 00:41:53,640
+and basic idea is that,
+
+897
+00:41:53,990 --> 00:41:55,470
+the the leaf nodes themselves,
+
+898
+00:41:55,550 --> 00:41:56,875
+if I, if I get too full,
+
+899
+00:41:56,875 --> 00:41:58,320
+but I know I'm inserting the same key,
+
+900
+00:41:58,640 --> 00:42:00,630
+then I just potentially keep building a linked list
+
+901
+00:42:01,040 --> 00:42:04,410
+and I sort of go down in in the depth of the tree,
+
+902
+00:42:04,730 --> 00:42:09,430
+again, but that violates our, our log(n) approach, our, log(n) guarantee.
+
+903
+00:42:10,020 --> 00:42:13,870
+All right, so here's how we do the record,
+
+904
+00:42:14,340 --> 00:42:16,450
+so the key now isn't just number 1,
+
+905
+00:42:16,740 --> 00:42:19,690
+it's one, and then followed by the record ID,
+
+906
+00:42:20,160 --> 00:42:21,520
+which is the page number and offset.
+
+907
+00:42:22,440 --> 00:42:23,930
+So now if I want to insert 6
+
+908
+00:42:23,930 --> 00:42:24,910
+and 6 already exists,
+
+909
+00:42:25,380 --> 00:42:29,470
+well, any time, even though you might call in SQL, INSERT 6,
+
+910
+00:42:29,730 --> 00:42:31,865
+where the database is going to do is convert that to
+
+911
+00:42:31,865 --> 00:42:36,310
+insert 6, followed by the page number and slot number.
+
+912
+00:42:37,000 --> 00:42:38,190
+So now when I get down here,
+
+913
+00:42:39,050 --> 00:42:40,110
+since this guy is full,
+
+914
+00:42:41,450 --> 00:42:44,490
+I'll just do a split, slide over and.
+
+915
+00:42:50,370 --> 00:42:51,650
+So things slide over
+
+916
+00:42:51,650 --> 00:42:55,150
+and then now I can insert 6 right here, right.
+
+917
+00:42:55,650 --> 00:42:58,055
+Again, superficially, it looks like it's like a duplicate keys,
+
+918
+00:42:58,055 --> 00:43:00,790
+but again, the actual bits themselves are are unique.
+
+919
+00:43:03,050 --> 00:43:05,610
+Of course, now if I want, if I want to do a delete on 6
+
+920
+00:43:06,350 --> 00:43:07,380
+again, I would have to,
+
+921
+00:43:07,460 --> 00:43:09,520
+you know, internally the database system is gonna know,
+
+922
+00:43:09,520 --> 00:43:14,840
+okay, well, delete on 6, followed by this record ID and offset, the page number offset.
+
+923
+00:43:14,840 --> 00:43:15,220
+Yes.
+
+924
+00:43:19,410 --> 00:43:21,100
+Question, what happens if the key is not a number,
+
+925
+00:43:21,450 --> 00:43:21,970
+what do you mean?
+
+926
+00:43:26,850 --> 00:43:28,420
+So yeah, so 6 is the key.
+
+927
+00:43:36,230 --> 00:43:37,770
+Because I insert into a table
+
+928
+00:43:38,360 --> 00:43:42,180
+and the table has has an index on column foo, column a,
+
+929
+00:43:43,060 --> 00:43:48,300
+and the tuple I'm inserting for that attribute sets the value to 6, right,
+
+930
+00:43:48,350 --> 00:43:50,280
+but instead of just putting 6 in,
+
+931
+00:43:50,660 --> 00:43:52,920
+it's going to say I've already inserted into the table,
+
+932
+00:43:53,150 --> 00:43:54,270
+now I have a record ID,
+
+933
+00:43:54,470 --> 00:43:55,690
+so when I insert into the index,
+
+934
+00:43:55,690 --> 00:43:58,980
+it's the 6, appended by the bits for the record ID,
+
+935
+00:43:59,980 --> 00:44:02,400
+and that guarantees that no, many times I insert 6,
+
+936
+00:44:02,400 --> 00:44:03,770
+it's unique, right
+
+937
+00:44:04,000 --> 00:44:06,885
+now, if if it's a unique index,
+
+938
+00:44:06,885 --> 00:44:08,430
+I, like a primary key index,
+
+939
+00:44:08,430 --> 00:44:09,890
+or I can declare that it's a unique index,
+
+940
+00:44:10,180 --> 00:44:12,230
+then I don't want to do this,
+
+941
+00:44:12,490 --> 00:44:14,330
+but the mechanism still works.
+
+942
+00:44:25,180 --> 00:44:25,940
+His statement is,
+
+943
+00:44:26,140 --> 00:44:26,810
+and he's correct,
+
+944
+00:44:26,860 --> 00:44:28,850
+this is just essentially a hidden attribute,
+
+945
+00:44:29,640 --> 00:44:33,880
+that guarantees that that duplicate keys are physically unique,
+
+946
+00:44:34,650 --> 00:44:35,735
+because it's the record ID,
+
+947
+00:44:35,735 --> 00:44:37,410
+yes, that's the trick.
+
+948
+00:44:42,820 --> 00:44:46,190
+So the overflow, overflow leaf nodes look like this,
+
+949
+00:44:46,420 --> 00:44:47,270
+I insert 6,
+
+950
+00:44:47,440 --> 00:44:50,985
+I recognize it's full in my leaf node,
+
+951
+00:44:50,985 --> 00:44:52,005
+but I also recognize that,
+
+952
+00:44:52,005 --> 00:44:53,955
+the thing you're trying to insert already exists in here
+
+953
+00:44:53,955 --> 00:44:55,040
+and therefore it's a duplicate,
+
+954
+00:44:55,210 --> 00:45:00,000
+so I just make this overflow page and insert it down here, right,
+
+955
+00:45:00,790 --> 00:45:02,640
+and I keep inserting new things
+
+956
+00:45:02,640 --> 00:45:04,220
+and I keep appending it along like this.
+
+957
+00:45:06,510 --> 00:45:10,000
+So this looks similar to the chain hash table before,
+
+958
+00:45:11,120 --> 00:45:11,560
+that like,
+
+959
+00:45:12,670 --> 00:45:16,610
+instead of having a hash function tell me where I land at the start of my linked list,
+
+960
+00:45:17,140 --> 00:45:18,530
+I have a tree structure in front of it,
+
+961
+00:45:18,640 --> 00:45:20,420
+but essentially doing the same thing,
+
+962
+00:45:21,680 --> 00:45:24,330
+of course, now, again, this violates log(n),
+
+963
+00:45:24,710 --> 00:45:25,770
+we have to deal with like,
+
+964
+00:45:26,030 --> 00:45:27,430
+what if we actually want to split and merge,
+
+965
+00:45:27,430 --> 00:45:28,080
+what do we move things,
+
+966
+00:45:28,850 --> 00:45:31,890
+this makes things way more complicated than the record ID approach, very,
+
+967
+00:45:33,235 --> 00:45:34,800
+I don't think any real system actually does this.
+
+968
+00:45:37,260 --> 00:45:38,890
+The question is, what's the benefit of this approach,
+
+969
+00:45:39,030 --> 00:45:40,330
+now I don't need to store the record ID, right,
+
+970
+00:45:41,100 --> 00:45:45,700
+duplicate, store a part in every single key,
+
+971
+00:45:48,530 --> 00:45:50,170
+it's potentially easier engineering,
+
+972
+00:45:51,270 --> 00:45:52,300
+actually, not really, it makes it harder.
+
+973
+00:45:53,330 --> 00:45:54,600
+Yeah, this is a bad idea, don't do this,
+
+974
+00:45:55,610 --> 00:45:56,250
+but you could,
+
+975
+00:45:56,480 --> 00:45:57,960
+and so you have, I'm saying bad.
+
+976
+00:46:05,380 --> 00:46:06,900
+I want to talk about cluster indexes,
+
+977
+00:46:07,125 --> 00:46:07,550
+these aren't,
+
+978
+00:46:08,820 --> 00:46:10,325
+I mean, it's good for you guys at least know this,
+
+979
+00:46:10,325 --> 00:46:10,865
+this exists,
+
+980
+00:46:10,865 --> 00:46:12,190
+but I don't want to spend too much time on it.
+
+981
+00:46:12,270 --> 00:46:13,130
+The basic idea is that,
+
+982
+00:46:13,130 --> 00:46:18,250
+there's some database systems let you define what are called clustered indexes on tables,
+
+983
+00:46:19,740 --> 00:46:23,920
+where you can allow the the actual table itself, the actual tuples themselves,
+
+984
+00:46:24,180 --> 00:46:25,930
+even though the relational models unsorted,
+
+985
+00:46:26,070 --> 00:46:29,345
+you can say I want the physical tuples on disk to be sorted,
+
+986
+00:46:29,345 --> 00:46:32,110
+based on the sort order defined by some index.
+
+987
+00:46:33,630 --> 00:46:34,580
+And in this case here,
+
+988
+00:46:34,580 --> 00:46:36,430
+if I have a true clustered index,
+
+989
+00:46:38,620 --> 00:46:40,670
+that no matter where I insert a new record,
+
+990
+00:46:41,170 --> 00:46:46,910
+the actual heap files themselves will be guaranteed to be in that sort of order,
+
+991
+00:46:47,660 --> 00:46:49,000
+you sort of think of this again,
+
+992
+00:46:49,000 --> 00:46:50,965
+the MySQL SQLite approach,
+
+993
+00:46:50,965 --> 00:46:52,560
+where the leaf nodes are actually stored the tuples,
+
+994
+00:46:52,820 --> 00:46:54,420
+that's automatically clustered index,
+
+995
+00:46:54,890 --> 00:46:56,160
+but in some database systems,
+
+996
+00:46:56,330 --> 00:46:59,430
+where it isn't an in organized table,
+
+997
+00:46:59,600 --> 00:47:05,130
+you can have the sort of be enforced by, by this kind of index, right.
+
+998
+00:47:06,720 --> 00:47:08,450
+And so the advantage of this is that,
+
+999
+00:47:08,450 --> 00:47:09,280
+when I start doing,
+
+1000
+00:47:11,080 --> 00:47:12,240
+when I want to start doing scans,
+
+1001
+00:47:13,430 --> 00:47:14,970
+assuming I'm not doing index, organized storage,
+
+1002
+00:47:15,380 --> 00:47:16,945
+when I scan along the leaf nodes
+
+1003
+00:47:16,945 --> 00:47:18,180
+to find all the tuples I'm looking for,
+
+1004
+00:47:18,440 --> 00:47:21,330
+then I'm guaranteed to get the pages,
+
+1005
+00:47:22,280 --> 00:47:26,430
+in sorted order based as defined on the key order, right.
+
+1006
+00:47:26,840 --> 00:47:30,060
+So again as I scan this going across,
+
+1007
+00:47:30,880 --> 00:47:32,110
+I get all my entries
+
+1008
+00:47:32,110 --> 00:47:32,920
+and I get all my pages
+
+1009
+00:47:32,920 --> 00:47:34,830
+and I [rip] through that sequentially and things go fast.
+
+1010
+00:47:37,250 --> 00:47:38,640
+If you don't have a cluster index,
+
+1011
+00:47:38,690 --> 00:47:41,850
+then you end up sometimes with a bunch of random I/O,
+
+1012
+00:47:42,290 --> 00:47:46,590
+the, again the leaf nodes that could be stored sequentially on disk,
+
+1013
+00:47:46,700 --> 00:47:51,420
+but when I start doing lookups to get the actual data, that the leaf nodes are pointing to,
+
+1014
+00:47:51,940 --> 00:47:55,085
+that could end up being random, right.
+
+1015
+00:47:55,085 --> 00:47:56,555
+And so if I do something really stupid,
+
+1016
+00:47:56,555 --> 00:47:59,110
+like say I have one free frame in my buffer pool
+
+1017
+00:47:59,580 --> 00:48:02,320
+and if I scan along in the order,
+
+1018
+00:48:03,120 --> 00:48:06,040
+if I fetch the page in the order that they come out of the index,
+
+1019
+00:48:06,420 --> 00:48:09,500
+I may end up doing a bunch of the redundant I/O,
+
+1020
+00:48:09,500 --> 00:48:11,960
+where like I fetch the page in, process on it,
+
+1021
+00:48:11,960 --> 00:48:13,295
+because that's the key I'm looking at right now
+
+1022
+00:48:13,295 --> 00:48:15,100
+or that that I got pointed to
+
+1023
+00:48:15,330 --> 00:48:17,410
+and then I throw it away, get the next page,
+
+1024
+00:48:17,610 --> 00:48:19,205
+but then a few few more keys later,
+
+1025
+00:48:19,205 --> 00:48:20,650
+I go fetch the same page I did before.
+
+1026
+00:48:22,810 --> 00:48:25,130
+So a really simple optimization to do this is that,
+
+1027
+00:48:25,480 --> 00:48:31,250
+you don't actually, you don't retrieve the tuples as you scan along the leaf nodes,
+
+1028
+00:48:31,720 --> 00:48:32,630
+as you find them,
+
+1029
+00:48:32,830 --> 00:48:35,210
+you first do the scan the leaf nodes first,
+
+1030
+00:48:35,830 --> 00:48:37,130
+get your list of all your pages,
+
+1031
+00:48:38,070 --> 00:48:41,680
+then sort them in by based on page ID
+
+1032
+00:48:42,000 --> 00:48:43,690
+and then go retrieve them based on this,
+
+1033
+00:48:43,710 --> 00:48:45,215
+now you still have to do the bookkeeping
+
+1034
+00:48:45,215 --> 00:48:47,860
+to make sure that you you're following along the tuples
+
+1035
+00:48:48,240 --> 00:48:49,940
+in the order defined by the index,
+
+1036
+00:48:49,940 --> 00:48:51,190
+that that's what you care about.
+
+1037
+00:48:51,740 --> 00:48:53,510
+But again, this is a way to get more sequencial I/O
+
+1038
+00:48:53,510 --> 00:48:55,120
+and reduce the amount of random access.
+
+1039
+00:49:04,670 --> 00:49:06,480
+And so, so his statement is,
+
+1040
+00:49:06,650 --> 00:49:08,740
+why couldn't I just keep track of what I've already fetched in page,
+
+1041
+00:49:08,740 --> 00:49:09,510
+I don't fetch it again.
+
+1042
+00:49:09,590 --> 00:49:10,765
+I was giving a toy example,
+
+1043
+00:49:10,765 --> 00:49:12,480
+where, like I only have one frame,
+
+1044
+00:49:13,420 --> 00:49:14,805
+so I can only fetch one page,
+
+1045
+00:49:14,805 --> 00:49:16,160
+I throw it out and get the next page,
+
+1046
+00:49:16,540 --> 00:49:17,990
+in this, in this toy example.
+
+1047
+00:49:20,400 --> 00:49:21,790
+But, but think in a real system,
+
+1048
+00:49:22,560 --> 00:49:23,690
+again, don't think of like one page,
+
+1049
+00:49:23,690 --> 00:49:27,220
+think like I can have maybe, you know, 10 gigabytes of space,
+
+1050
+00:49:27,630 --> 00:49:31,130
+but my database is 1 terabyte, table is one terabyte,
+
+1051
+00:49:31,130 --> 00:49:32,980
+and then you're run out of space.
+
+1052
+00:49:35,840 --> 00:49:36,805
+You, you want to sort them
+
+1053
+00:49:36,805 --> 00:49:37,570
+and you want to get them in page,
+
+1054
+00:49:37,570 --> 00:49:41,220
+you, you want to access them in the order that they exist physically on disk
+
+1055
+00:49:41,570 --> 00:49:43,165
+and then still do, but just bookkeeping
+
+1056
+00:49:43,165 --> 00:49:45,240
+to make sure that the order of the results you're generating
+
+1057
+00:49:45,560 --> 00:49:48,340
+match the sort order of the of the index,
+
+1058
+00:49:50,880 --> 00:49:52,630
+again to reduce amount of wasted I/O.
+
+1059
+00:49:57,810 --> 00:49:58,210
+Okay.
+
+1060
+00:49:58,890 --> 00:50:01,270
+So I want to quickly go through some design choices here,
+
+1061
+00:50:02,010 --> 00:50:03,040
+how to handle certain things.
+
+1062
+00:50:03,150 --> 00:50:05,375
+And so a lot of these ideas come from this book,
+
+1063
+00:50:05,375 --> 00:50:07,540
+which is considered the Bible of B+ trees
+
+1064
+00:50:08,760 --> 00:50:10,030
+from this guy Goetz Graefe,
+
+1065
+00:50:11,130 --> 00:50:12,800
+he's invented a bunch of various techniques,
+
+1066
+00:50:12,800 --> 00:50:13,990
+that we'll discuss this semester.
+
+1067
+00:50:15,380 --> 00:50:17,570
+And again, it's called modern B B tree techniques,
+
+1068
+00:50:17,570 --> 00:50:18,860
+and again, he's about B+ trees,
+
+1069
+00:50:18,860 --> 00:50:19,840
+but he calls it a B tree,
+
+1070
+00:50:20,850 --> 00:50:22,790
+and actually, if you just Google this name of this book,
+
+1071
+00:50:22,790 --> 00:50:24,140
+it's came out 2010,
+
+1072
+00:50:24,140 --> 00:50:24,455
+it's a great book,
+
+1073
+00:50:24,455 --> 00:50:26,740
+covers a lot of these techniques and, and even more,
+
+1074
+00:50:27,710 --> 00:50:29,550
+if you just Google, you'll find the PDF,
+
+1075
+00:50:30,500 --> 00:50:31,465
+if you like this kind of stuff,
+
+1076
+00:50:31,465 --> 00:50:32,100
+it's a good read.
+
+1077
+00:50:32,450 --> 00:50:33,930
+Again, because it's theory,
+
+1078
+00:50:33,980 --> 00:50:36,180
+here's how actually you how to implement it in a real system.
+
+1079
+00:50:38,090 --> 00:50:39,010
+All right, the first question is,
+
+1080
+00:50:39,010 --> 00:50:40,050
+what's going to be the node size.
+
+1081
+00:50:40,790 --> 00:50:42,450
+So you can assume,
+
+1082
+00:50:42,500 --> 00:50:43,735
+in all our diagrams here,
+
+1083
+00:50:43,735 --> 00:50:45,480
+one node corresponds to one page
+
+1084
+00:50:46,700 --> 00:50:50,160
+in, in, in, in in our in our database files, in our buffer pool,
+
+1085
+00:50:51,320 --> 00:50:54,150
+but in some systems, like in IBM DB2,
+
+1086
+00:50:54,410 --> 00:50:56,095
+you can actually modify,
+
+1087
+00:50:56,095 --> 00:51:00,240
+you configure the size of a database page for different tables and different indexes.
+
+1088
+00:51:00,830 --> 00:51:03,090
+And so, depending on what your hardware is,
+
+1089
+00:51:03,260 --> 00:51:04,560
+you may want to set the size,
+
+1090
+00:51:04,640 --> 00:51:07,890
+the page size of your B+ tree nodes differently,
+
+1091
+00:51:08,700 --> 00:51:10,770
+and so again, the, the slower your disk,
+
+1092
+00:51:10,770 --> 00:51:12,300
+typically the larger the page you want,
+
+1093
+00:51:12,300 --> 00:51:16,190
+because it's going to be better for maximizing sequential I/O.
+
+1094
+00:51:16,960 --> 00:51:18,890
+So if you're an an old spinning disk hard drive,
+
+1095
+00:51:19,180 --> 00:51:21,080
+you want to page size of like 1 megabyte,
+
+1096
+00:51:21,430 --> 00:51:23,955
+now, the number of keys will be that you can fit on 1 megabyte page,
+
+1097
+00:51:23,955 --> 00:51:26,505
+will be defined the size your keys are, right,
+
+1098
+00:51:26,505 --> 00:51:27,675
+if they're all 8 bit integers,
+
+1099
+00:51:27,675 --> 00:51:29,210
+then you can store a lot of them,
+
+1100
+00:51:30,160 --> 00:51:32,180
+probably more, more than you actually can have.
+
+1101
+00:51:33,570 --> 00:51:35,020
+But for fast SSD,
+
+1102
+00:51:35,310 --> 00:51:38,860
+it's roughly 8 to 10 kilobytes is considered to be the right size,
+
+1103
+00:51:38,910 --> 00:51:40,220
+and then if you're in-memory,
+
+1104
+00:51:40,220 --> 00:51:43,690
+512 -} bytes is, is considered the right sizes
+
+1105
+00:51:43,920 --> 00:51:44,890
+within a cache line,
+
+1106
+00:51:44,970 --> 00:51:47,240
+you keep things very efficient, right.
+
+1107
+00:51:50,720 --> 00:51:51,750
+We talked about that,
+
+1108
+00:51:51,860 --> 00:51:54,415
+that some systems can actually violate that requirement,
+
+1109
+00:51:54,415 --> 00:51:56,070
+that every node has to be half full,
+
+1110
+00:51:56,510 --> 00:51:57,900
+obviously, you can't go to more,
+
+1111
+00:51:58,460 --> 00:51:59,875
+can't have more keys than you actually store,
+
+1112
+00:51:59,875 --> 00:52:00,930
+because you run out of space,
+
+1113
+00:52:02,320 --> 00:52:04,470
+but you can recognize that,
+
+1114
+00:52:04,910 --> 00:52:06,240
+okay, well, most the,
+
+1115
+00:52:07,140 --> 00:52:08,260
+maybe I don't want to split,
+
+1116
+00:52:08,460 --> 00:52:11,050
+or maybe I want to merge my nodes all the time
+
+1117
+00:52:12,360 --> 00:52:16,920
+and I can go below that threshold temporarily,
+
+1118
+00:52:17,920 --> 00:52:20,220
+to see whether something's going to get inserted
+
+1119
+00:52:20,870 --> 00:52:22,570
+to then put me above of that threshold
+
+1120
+00:52:22,570 --> 00:52:24,660
+to avoid having to do this prematurely.
+
+1121
+00:52:26,570 --> 00:52:28,500
+Again, this is why Postgres are going to call their balance,
+
+1122
+00:52:28,970 --> 00:52:32,100
+they call their B+ tree as a non balanceed B+ tree,
+
+1123
+00:52:33,680 --> 00:52:35,880
+because they can violate this, this requirement.
+
+1124
+00:52:38,930 --> 00:52:39,445
+Next question is,
+
+1125
+00:52:39,445 --> 00:52:40,890
+how do you want to handle variable length keys,
+
+1126
+00:52:41,600 --> 00:52:43,020
+I think somebody brought this up.
+
+1127
+00:52:43,460 --> 00:52:44,250
+So the,
+
+1128
+00:52:45,430 --> 00:52:48,435
+we could sort of try to approach it like a, like a column store,
+
+1129
+00:52:48,435 --> 00:52:49,730
+we want everything to be fixed length.
+
+1130
+00:52:51,010 --> 00:52:52,200
+So one way to do that is
+
+1131
+00:52:52,200 --> 00:52:55,160
+actually you don't store the keys themselves in in every node,
+
+1132
+00:52:55,420 --> 00:52:57,860
+you store a pointer to the key, like the record ID,
+
+1133
+00:52:58,810 --> 00:53:03,020
+because that's always going to be either 32 bits or 64 bits, right.
+
+1134
+00:53:03,430 --> 00:53:05,355
+And actually this, this will save space, too,
+
+1135
+00:53:05,355 --> 00:53:07,640
+because you know if my keys are all really big,
+
+1136
+00:53:08,230 --> 00:53:09,180
+I'm not gonna store them,
+
+1137
+00:53:09,180 --> 00:53:12,470
+you know can, again, the B B+ tree is a copy of what's in the table,
+
+1138
+00:53:12,970 --> 00:53:15,380
+I only have to store to just the pointer to the record ID,
+
+1139
+00:53:15,760 --> 00:53:17,900
+in the, in the, in the, the nodes.
+
+1140
+00:53:19,430 --> 00:53:20,970
+Is that a good idea or a bad idea?
+
+1141
+00:53:26,780 --> 00:53:30,325
+He's right, doesn't sound like a good idea,
+
+1142
+00:53:30,325 --> 00:53:32,160
+because it causes a lot of non sequential I/O.
+
+1143
+00:53:32,840 --> 00:53:35,635
+Think I'm traversing down my my nodes
+
+1144
+00:53:35,635 --> 00:53:37,140
+and I gotta figure out whether I go left and right,
+
+1145
+00:53:37,860 --> 00:53:39,735
+I don't have those guideposts in my node,
+
+1146
+00:53:39,735 --> 00:53:43,470
+I got to go follow the pointer to go get that tuple in that page,
+
+1147
+00:53:43,470 --> 00:53:45,740
+then do the lookup to find what I need.
+
+1148
+00:53:46,270 --> 00:53:47,310
+And again, while I'm doing this,
+
+1149
+00:53:47,310 --> 00:53:49,490
+I'm holding latches in my data structure
+
+1150
+00:53:49,750 --> 00:53:50,930
+and that's going to be really slow.
+
+1151
+00:53:51,100 --> 00:53:54,080
+Yeah, so nobody does this in a database system.
+
+1152
+00:53:54,860 --> 00:53:57,300
+The variant of this of B+ tree is called T-Trees,
+
+1153
+00:53:58,850 --> 00:53:59,890
+I figure what the T stands for,
+
+1154
+00:53:59,890 --> 00:54:01,050
+I think it stands for the dude's name,
+
+1155
+00:54:03,640 --> 00:54:06,560
+in the diagrams, the nodes look like [Ts],
+
+1156
+00:54:06,820 --> 00:54:08,130
+but I think the email said,
+
+1157
+00:54:08,130 --> 00:54:09,530
+oh yes, the guy's name, but whatever.
+
+1158
+00:54:10,720 --> 00:54:12,645
+In-memory databases did this in the 80s,
+
+1159
+00:54:12,645 --> 00:54:13,695
+because they wanted to save space,
+
+1160
+00:54:13,695 --> 00:54:15,540
+you want to have duplicate keys in your, in your B+ tree,
+
+1161
+00:54:15,540 --> 00:54:16,430
+because they didn't have a lot of memory.
+
+1162
+00:54:16,630 --> 00:54:19,190
+But again, nobody does this now in a real system,
+
+1163
+00:54:19,210 --> 00:54:21,555
+because it's it's so expensive to do that other lookup,
+
+1164
+00:54:21,555 --> 00:54:23,270
+it's just it's easier to just copy the key.
+
+1165
+00:54:24,340 --> 00:54:26,150
+You could support variable length nodes,
+
+1166
+00:54:27,660 --> 00:54:31,450
+or the size of the node can can vary within the index
+
+1167
+00:54:31,950 --> 00:54:32,810
+and you have to do this,
+
+1168
+00:54:32,810 --> 00:54:34,360
+because you don't know the size of the,
+
+1169
+00:54:35,250 --> 00:54:37,990
+you want to have the same potential number of keys in every single node,
+
+1170
+00:54:38,100 --> 00:54:38,890
+but nobody has,
+
+1171
+00:54:40,320 --> 00:54:44,540
+you know, you may not have enough space to store all those keys within that node.
+
+1172
+00:54:46,160 --> 00:54:48,985
+As far as I know, only academic systems do this,
+
+1173
+00:54:48,985 --> 00:54:50,400
+nobody does this in the real world.
+
+1174
+00:54:51,240 --> 00:54:52,900
+Padding is another approach to handle this,
+
+1175
+00:54:52,950 --> 00:54:55,240
+as we talked before in, in, in column stores,
+
+1176
+00:54:56,160 --> 00:54:57,340
+again, I think this is rare,
+
+1177
+00:54:57,480 --> 00:54:58,730
+what most people do is that,
+
+1178
+00:54:58,730 --> 00:55:02,740
+they would have a essentially a slot array,
+
+1179
+00:55:03,920 --> 00:55:08,100
+a slotted page approach, like we saw in table, table pages,
+
+1180
+00:55:08,510 --> 00:55:10,710
+where you have this array of pointers within
+
+1181
+00:55:11,150 --> 00:55:14,760
+it's also within the page you're looking at or to another overflow page.
+
+1182
+00:55:18,530 --> 00:55:20,425
+And again it's, it's, how do you say this,
+
+1183
+00:55:20,425 --> 00:55:22,975
+it's, it's just like the overflow values we saw before,
+
+1184
+00:55:22,975 --> 00:55:23,520
+where you just,
+
+1185
+00:55:24,120 --> 00:55:26,235
+you know, you know that the thing I'm looking for is not my page,
+
+1186
+00:55:26,235 --> 00:55:27,590
+I got to go somewhere else and go get it.
+
+1187
+00:55:30,610 --> 00:55:32,720
+Now we got to talk about how we actually want to go find the keys,
+
+1188
+00:55:33,580 --> 00:55:35,620
+once you know, once we land on the node,
+
+1189
+00:55:35,620 --> 00:55:36,450
+we bring it in a memory
+
+1190
+00:55:36,530 --> 00:55:38,395
+and we're looking for a key, decide to go left or right,
+
+1191
+00:55:38,395 --> 00:55:41,665
+or whether we have the match we're looking for in our leaf node,
+
+1192
+00:55:41,665 --> 00:55:44,040
+we got decide how we're going do that match.
+
+1193
+00:55:45,030 --> 00:55:47,260
+So the easiest approach is to just do a linear scan.
+
+1194
+00:55:47,880 --> 00:55:48,970
+Just think of an array,
+
+1195
+00:55:49,440 --> 00:55:51,100
+doesn't matter if it's sort of not,
+
+1196
+00:55:51,330 --> 00:55:52,300
+I just start at the beginning
+
+1197
+00:55:52,530 --> 00:55:54,530
+and I scan along until I find the thing I'm looking for,
+
+1198
+00:55:54,530 --> 00:55:55,990
+in this case here, I'm looking for key 8,
+
+1199
+00:55:57,365 --> 00:56:00,070
+it's simple, it's dumb, it works, right?
+
+1200
+00:56:01,260 --> 00:56:02,240
+We can do a little better though,
+
+1201
+00:56:02,240 --> 00:56:02,950
+with SIMD,
+
+1202
+00:56:03,690 --> 00:56:04,355
+actually it,
+
+1203
+00:56:04,355 --> 00:56:06,160
+who here has taken 418/618?
+
+1204
+00:56:07,540 --> 00:56:08,480
+Nobody, okay,
+
+1205
+00:56:09,040 --> 00:56:10,370
+who here doesn't know what SIMD is?
+
+1206
+00:56:12,070 --> 00:56:15,350
+Okay, Okay, SIMD stands for single instruction multiple data,
+
+1207
+00:56:15,550 --> 00:56:18,165
+it's a class of instructions you can have on modern CPU,
+
+1208
+00:56:18,165 --> 00:56:21,560
+that allow you to basically have a vector register,
+
+1209
+00:56:22,030 --> 00:56:23,420
+you put a bunch of values in it
+
+1210
+00:56:23,470 --> 00:56:26,370
+and then there's a single instruction to do, like do something on it,
+
+1211
+00:56:26,370 --> 00:56:28,670
+like you can put a bunch of numbers in one vector,
+
+1212
+00:56:28,780 --> 00:56:29,970
+a bunch of numbers and another vector
+
+1213
+00:56:29,970 --> 00:56:32,630
+and do add them together and the output goes into another vector,
+
+1214
+00:56:33,040 --> 00:56:34,850
+we'll cover this when we talk about query execution,
+
+1215
+00:56:35,020 --> 00:56:37,760
+but this is a very common technique used in modern systems,
+
+1216
+00:56:38,140 --> 00:56:40,710
+this is what made snowflake special, 10 years ago.
+
+1217
+00:56:41,720 --> 00:56:43,975
+All right, so what I can do is,
+
+1218
+00:56:43,975 --> 00:56:49,230
+instead of doing, looking at every single key one after another, try to find 8,
+
+1219
+00:56:49,730 --> 00:56:53,125
+I can instead use a SIMD intrinsic,
+
+1220
+00:56:53,125 --> 00:56:53,710
+in this case here,
+
+1221
+00:56:53,710 --> 00:56:55,090
+this is for x86
+
+1222
+00:56:55,090 --> 00:57:02,650
+to do evaluation 32-bit integers on, 128-bit registers.
+
+1223
+00:57:02,730 --> 00:57:04,240
+So I store, I'm looking for 8,
+
+1224
+00:57:04,440 --> 00:57:05,780
+I store eight copies of 8
+
+1225
+00:57:05,780 --> 00:57:07,420
+and my SIMD register has four lanes,
+
+1226
+00:57:07,740 --> 00:57:09,080
+and then now in a single instruction,
+
+1227
+00:57:09,080 --> 00:57:15,430
+I can do an evaluation of those eight 8 or four 8 with the keys in my array,
+
+1228
+00:57:15,720 --> 00:57:16,820
+and then I'll get a bit mask,
+
+1229
+00:57:16,820 --> 00:57:19,330
+that says 0 if there's no match,
+
+1230
+00:57:19,530 --> 00:57:20,410
+1, if there's a match.
+
+1231
+00:57:20,730 --> 00:57:21,610
+So in this case here,
+
+1232
+00:57:21,630 --> 00:57:23,620
+now it's a single instruction to do that evaluation,
+
+1233
+00:57:24,280 --> 00:57:26,460
+and I can do that way more efficiently than going one after another.
+
+1234
+00:57:26,720 --> 00:57:27,310
+In this case,
+
+1235
+00:57:27,310 --> 00:57:28,780
+and then for this one, I don't have a match,
+
+1236
+00:57:28,780 --> 00:57:29,700
+so I got to slide it over,
+
+1237
+00:57:29,990 --> 00:57:31,410
+do the look at the next one,
+
+1238
+00:57:31,580 --> 00:57:34,465
+I have to recognize that, I only have three keys and not four,
+
+1239
+00:57:34,465 --> 00:57:35,695
+so I gotta play little tricks to make sure,
+
+1240
+00:57:35,695 --> 00:57:37,230
+like I don't end up with a false positive.
+
+1241
+00:57:37,700 --> 00:57:38,560
+But in this case here,
+
+1242
+00:57:38,560 --> 00:57:41,040
+now I have 8 equals 8 in that first lane
+
+1243
+00:57:41,060 --> 00:57:41,760
+and I have a match.
+
+1244
+00:57:42,890 --> 00:57:44,020
+So I can do this more efficiently
+
+1245
+00:57:44,020 --> 00:57:44,700
+and then doing this,
+
+1246
+00:57:45,050 --> 00:57:46,170
+it is still linear,
+
+1247
+00:57:46,460 --> 00:57:47,910
+but I'm doing it in batches
+
+1248
+00:57:48,170 --> 00:57:49,380
+and the hardware can support that.
+
+1249
+00:57:52,220 --> 00:57:53,880
+Next approach to obviously do binary search,
+
+1250
+00:57:54,350 --> 00:57:55,650
+assuming it's sorted, this is easy,
+
+1251
+00:57:55,670 --> 00:57:56,460
+you jump in the middle,
+
+1252
+00:57:56,960 --> 00:57:57,990
+my value is greater than,
+
+1253
+00:57:58,220 --> 00:58:01,590
+the key is greater, less than the one I'm looking for,
+
+1254
+00:58:01,670 --> 00:58:03,160
+I jump to the next side and so forth
+
+1255
+00:58:03,160 --> 00:58:03,900
+until I find my match,
+
+1256
+00:58:04,610 --> 00:58:05,250
+then I'm done.
+
+1257
+00:58:05,760 --> 00:58:07,130
+This is what most systems will do.
+
+1258
+00:58:09,660 --> 00:58:10,810
+It depends on the hardware of,
+
+1259
+00:58:11,460 --> 00:58:14,130
+so in Postgres be 8 kilobytes, right,
+
+1260
+00:58:14,130 --> 00:58:16,890
+but again, the number of keys you can store in that node
+
+1261
+00:58:16,890 --> 00:58:19,130
+is going to depend on the key, what the type of the key is.
+
+1262
+00:58:20,640 --> 00:58:21,070
+All right.
+
+1263
+00:58:22,870 --> 00:58:24,560
+So, binary search is the most common one.
+
+1264
+00:58:25,570 --> 00:58:25,970
+The,
+
+1265
+00:58:27,550 --> 00:58:28,460
+you could do this,
+
+1266
+00:58:28,510 --> 00:58:29,150
+I don't think any,
+
+1267
+00:58:30,190 --> 00:58:31,700
+outside academia, nobody does this.
+
+1268
+00:58:32,230 --> 00:58:33,500
+You can do interpolation search
+
+1269
+00:58:33,850 --> 00:58:34,650
+and this works,
+
+1270
+00:58:34,650 --> 00:58:36,620
+if you know there's no gaps in your keys
+
+1271
+00:58:36,910 --> 00:58:39,110
+and they're always in monotonically increasing order,
+
+1272
+00:58:39,310 --> 00:58:40,695
+like if you have a primary key,
+
+1273
+00:58:40,695 --> 00:58:43,640
+that's a like, like auto increment value,
+
+1274
+00:58:43,810 --> 00:58:45,560
+like plus one, plus one, plus one, plus one,
+
+1275
+00:58:46,150 --> 00:58:47,750
+and again I assume I don't have any gaps,
+
+1276
+00:58:48,130 --> 00:58:49,170
+then it's just simple math
+
+1277
+00:58:49,170 --> 00:58:51,410
+to figure out exactly within my array,
+
+1278
+00:58:51,610 --> 00:58:52,785
+I know the low point,
+
+1279
+00:58:52,785 --> 00:58:54,290
+I know the min value, the max value,
+
+1280
+00:58:54,960 --> 00:58:56,450
+I have know number of keys that I have
+
+1281
+00:58:56,650 --> 00:58:58,185
+and I just do a simple formula like this
+
+1282
+00:58:58,185 --> 00:59:00,380
+to jump exactly to the offset that I need
+
+1283
+00:59:00,610 --> 00:59:01,220
+and I'm done.
+
+1284
+00:59:02,160 --> 00:59:03,320
+This is the fastest approach,
+
+1285
+00:59:03,320 --> 00:59:04,355
+faster than binary search,
+
+1286
+00:59:04,355 --> 00:59:05,320
+faster than SIMD,
+
+1287
+00:59:05,940 --> 00:59:08,080
+but again, you have, you can't have gaps to do this.
+
+1288
+00:59:09,370 --> 00:59:09,930
+So, it's rare.
+
+1289
+00:59:13,160 --> 00:59:16,315
+We have, we have 20 minutes left to get through all these optimizations,
+
+1290
+00:59:16,315 --> 00:59:17,580
+let's see how far we can go, okay.
+
+1291
+00:59:18,470 --> 00:59:19,800
+Some of these should be pretty obvious,
+
+1292
+00:59:21,350 --> 00:59:24,060
+the, the Pointer Swizzling and the Buffered Updates,
+
+1293
+00:59:24,350 --> 00:59:25,380
+those are probably the most important,
+
+1294
+00:59:26,240 --> 00:59:26,640
+Deduplication too.
+
+1295
+00:59:27,810 --> 00:59:31,630
+All right, so just like in a column store,
+
+1296
+00:59:31,800 --> 00:59:32,900
+we should recognize that,
+
+1297
+00:59:32,900 --> 00:59:35,680
+the keys that are going to be in our, in our B+ tree,
+
+1298
+00:59:36,210 --> 00:59:37,990
+they're going to be in the same value domain,
+
+1299
+00:59:39,270 --> 00:59:41,230
+because they're all coming from the same, same attributes,
+
+1300
+00:59:41,670 --> 00:59:43,220
+furthermore, they're sorted,
+
+1301
+00:59:43,220 --> 00:59:45,490
+which is even better for compression, right.
+
+1302
+00:59:45,990 --> 00:59:47,555
+So there's a bunch of things we can take advantage of
+
+1303
+00:59:47,555 --> 00:59:50,860
+recognizing that the values are going to be very similar,
+
+1304
+00:59:51,360 --> 00:59:55,240
+to, to reduce the size of the keys we actually have the store.
+
+1305
+00:59:55,930 --> 00:59:56,835
+So in this case here,
+
+1306
+00:59:56,835 --> 00:59:58,160
+we can do what's called prefix compression,
+
+1307
+00:59:58,600 --> 00:59:59,925
+and we can identify that,
+
+1308
+00:59:59,925 --> 01:00:04,070
+we're going to have a bunch of keys that are going to be very close to each other in leographical ordering
+
+1309
+01:00:04,090 --> 01:00:06,740
+and they're going to have overlapping portions of of data.
+
+1310
+01:00:07,150 --> 01:00:09,170
+So instead of storing complete copies of the keys,
+
+1311
+01:00:09,670 --> 01:00:12,050
+we store the common prefix, in this case here, rob,
+
+1312
+01:00:12,580 --> 01:00:16,780
+and then we store the the remaining suffix that's, that's unique, right.
+
+1313
+01:00:18,160 --> 01:00:19,140
+That's pretty easy, that's nice.
+
+1314
+01:00:21,220 --> 01:00:22,880
+Next technique is to do deduplication
+
+1315
+01:00:23,620 --> 01:00:24,950
+and the idea here is that,
+
+1316
+01:00:25,480 --> 01:00:28,870
+we're going to have a bunch of keys,
+
+1317
+01:00:28,980 --> 01:00:33,490
+that are end up with the same value over and over again
+
+1318
+01:00:33,810 --> 01:00:38,270
+in the, in the, in, in the same nodes
+
+1319
+01:00:38,860 --> 01:00:44,870
+and again ignoring the prefix, or putting the, putting the record ID at the end,
+
+1320
+01:00:45,130 --> 01:00:47,280
+because that one, the system knows that it's doing that,
+
+1321
+01:00:47,280 --> 01:00:48,530
+it can pull that piece, piece out,
+
+1322
+01:00:48,700 --> 01:00:50,235
+but if I have a bunch of non unique keys,
+
+1323
+01:00:50,235 --> 01:00:52,400
+that are that are going to end up in the same node,
+
+1324
+01:00:53,240 --> 01:00:55,440
+it's just like prefix sorting or prefix compression,
+
+1325
+01:00:55,880 --> 01:00:58,440
+I just store the the duplicate key once,
+
+1326
+01:00:58,790 --> 01:01:00,520
+then have a posting list
+
+1327
+01:01:00,520 --> 01:01:03,960
+or a list of all the values that correspond to that key,
+
+1328
+01:01:04,640 --> 01:01:08,720
+and now I'm only storing one copy of that key, right.
+
+1329
+01:01:09,610 --> 01:01:14,840
+Postgres added this in, I think in, Postgres 15,
+
+1330
+01:01:14,840 --> 01:01:15,850
+I think it came out last year,
+
+1331
+01:01:16,200 --> 01:01:19,690
+and it's a pretty significant drop in size your nodes.
+
+1332
+01:01:26,780 --> 01:01:27,575
+Yeah, so his question is,
+
+1333
+01:01:27,575 --> 01:01:29,585
+how, how do we know, How do we know that,
+
+1334
+01:01:29,585 --> 01:01:31,420
+we should interpret what this is,
+
+1335
+01:01:31,950 --> 01:01:32,980
+these are values, not keys,
+
+1336
+01:01:33,450 --> 01:01:34,450
+this is just a mockup,
+
+1337
+01:01:34,530 --> 01:01:37,330
+you wouldn't, you wouldn't sort exactly the page like this,
+
+1338
+01:01:37,500 --> 01:01:40,690
+you would have obviously, lengths of the number of elements you're storing,
+
+1339
+01:01:41,320 --> 01:01:42,140
+just not showing that,
+
+1340
+01:01:42,190 --> 01:01:43,245
+you have additional metadata,
+
+1341
+01:01:43,245 --> 01:01:44,180
+they know where the offsets are.
+
+1342
+01:01:47,960 --> 01:01:49,380
+We can also do suffix truncation
+
+1343
+01:01:50,000 --> 01:01:53,995
+and again, because the inner nodes don't have to be the exact copies of the keys,
+
+1344
+01:01:53,995 --> 01:01:55,920
+because those keys might not exist in the leaf nodes,
+
+1345
+01:01:56,360 --> 01:01:58,350
+we maybe don't have to store the entire key,
+
+1346
+01:01:59,040 --> 01:02:03,830
+we just need enough of the of the key key prefix
+
+1347
+01:02:03,830 --> 01:02:06,040
+to discriminate whether we need to go left or right.
+
+1348
+01:02:07,250 --> 01:02:08,260
+So in this case here,
+
+1349
+01:02:08,260 --> 01:02:10,705
+I have keys abc up to k,
+
+1350
+01:02:10,705 --> 01:02:12,870
+and then lmno up to v,
+
+1351
+01:02:13,690 --> 01:02:17,030
+the only thing that that really matters in this case here is
+
+1352
+01:02:17,410 --> 01:02:20,240
+say just the first three characters of both of these two strings,
+
+1353
+01:02:21,170 --> 01:02:24,570
+so my inner nodes only need to store the minimum prefix,
+
+1354
+01:02:25,100 --> 01:02:27,240
+that we need to decide whether to go left or right.
+
+1355
+01:02:29,780 --> 01:02:31,375
+And of course, now the challenge is like,
+
+1356
+01:02:31,375 --> 01:02:33,150
+if I insert a key,
+
+1357
+01:02:33,890 --> 01:02:35,040
+if I insert a key that,
+
+1358
+01:02:35,930 --> 01:02:37,740
+could you know, could be in between them,
+
+1359
+01:02:37,910 --> 01:02:39,600
+maybe I got to go back and get the original keys
+
+1360
+01:02:39,800 --> 01:02:41,370
+to decide what the prefix should be,
+
+1361
+01:02:43,000 --> 01:02:45,210
+but in some environments, this might be the right thing.
+
+1362
+01:02:48,970 --> 01:02:51,290
+So, Pointer Swizzling is a common technique,
+
+1363
+01:02:51,370 --> 01:02:56,545
+that's going to allow us to minimize the amount of lookup,
+
+1364
+01:02:56,545 --> 01:02:58,530
+we have to do in our buffer pool page table.
+
+1365
+01:02:59,510 --> 01:03:03,090
+Because again, when we are traversing the nodes, or traversing the tree structure,
+
+1366
+01:03:04,910 --> 01:03:06,930
+what I keep calling a, pointers,
+
+1367
+01:03:07,040 --> 01:03:08,370
+they're really page IDs.
+
+1368
+01:03:09,000 --> 01:03:10,275
+So I got to go to the page table and say,
+
+1369
+01:03:10,275 --> 01:03:11,640
+okay, well, if this page exists,
+
+1370
+01:03:11,640 --> 01:03:14,470
+give me, give me the, the pointer to it, right.
+
+1371
+01:03:15,450 --> 01:03:17,830
+So if I want to say find keys greater than 3,
+
+1372
+01:03:18,240 --> 01:03:19,510
+I started my root node here
+
+1373
+01:03:20,400 --> 01:03:21,800
+and I look at the keys
+
+1374
+01:03:21,800 --> 01:03:23,135
+and decide whether I want to go left and right,
+
+1375
+01:03:23,135 --> 01:03:25,660
+in this case here, I want to go left,
+
+1376
+01:03:26,400 --> 01:03:31,200
+but then the, the value in this node here is going to be the page number,
+
+1377
+01:03:31,200 --> 01:03:31,940
+so page #2,
+
+1378
+01:03:32,290 --> 01:03:33,555
+so now I got to go down my buffer pool
+
+1379
+01:03:33,555 --> 01:03:36,440
+and say, okay, give me, give me the pointer to page #2,
+
+1380
+01:03:37,360 --> 01:03:38,940
+likewise on the bottom here,
+
+1381
+01:03:38,940 --> 01:03:40,940
+I want to scan along the sibling nodes,
+
+1382
+01:03:41,380 --> 01:03:42,680
+go from page #2 to page #3,
+
+1383
+01:03:42,730 --> 01:03:43,940
+I got to go back to the buffer pool.
+
+1384
+01:03:45,330 --> 01:03:47,830
+So the technique, the idea of Pointer Swizzling is that,
+
+1385
+01:03:48,500 --> 01:03:50,470
+if you pin the page in the buffer pool,
+
+1386
+01:03:50,820 --> 01:03:53,920
+say this page cannot be cannot be evicted,
+
+1387
+01:03:54,770 --> 01:03:59,280
+then any, any page that points to that page you pinned
+
+1388
+01:03:59,360 --> 01:04:00,330
+you have to be pinned too,
+
+1389
+01:04:01,340 --> 01:04:04,830
+you replace its contents with the actual pointer in memory,
+
+1390
+01:04:06,870 --> 01:04:09,850
+and so now when I'm, when I'm scanning, when I'm, you know, traversing my tree,
+
+1391
+01:04:10,020 --> 01:04:11,465
+I'm not going to the buffer pool to say,
+
+1392
+01:04:11,465 --> 01:04:12,850
+go do this, look up for me, for this page,
+
+1393
+01:04:13,260 --> 01:04:15,130
+I had the thing exactly what I'm looking for.
+
+1394
+01:04:15,700 --> 01:04:17,145
+So, thing like the root node,
+
+1395
+01:04:17,145 --> 01:04:20,370
+everyone's always going to that in your B+ tree and say,
+
+1396
+01:04:20,370 --> 01:04:22,490
+and then they're always going to go down to the the next level,
+
+1397
+01:04:22,990 --> 01:04:25,880
+so instead of having to do page page lookups in the buffer pool,
+
+1398
+01:04:26,560 --> 01:04:27,510
+would get down the next level,
+
+1399
+01:04:27,620 --> 01:04:29,940
+I have the pointer to know where to go directly.
+
+1400
+01:04:31,770 --> 01:04:34,840
+And obviously, you don't want to store this pointer on disk,
+
+1401
+01:04:35,040 --> 01:04:36,425
+you know, if the page gets flushed,
+
+1402
+01:04:36,425 --> 01:04:37,670
+because now you load it back in,
+
+1403
+01:04:37,670 --> 01:04:39,010
+you have this pointer that goes to nowhere,
+
+1404
+01:04:39,620 --> 01:04:40,280
+and that would be bad,
+
+1405
+01:04:40,280 --> 01:04:41,435
+so there's bookkeeping you have to do
+
+1406
+01:04:41,435 --> 01:04:41,915
+to make sure,
+
+1407
+01:04:41,915 --> 01:04:47,410
+okay, you're going to disk undo this swizzle, what got swizzled
+
+1408
+01:04:48,690 --> 01:04:50,080
+to make sure that nobody points to it,
+
+1409
+01:04:50,190 --> 01:04:51,160
+and then also, too,
+
+1410
+01:04:54,200 --> 01:04:57,540
+you don't want, you know, you don't want this page to get evicted,
+
+1411
+01:04:57,830 --> 01:04:59,095
+this thing have a swizzle pointer
+
+1412
+01:04:59,095 --> 01:05:00,480
+and now it's pointing to some other page,
+
+1413
+01:05:00,680 --> 01:05:02,040
+that got swapped in that frame
+
+1414
+01:05:02,450 --> 01:05:04,300
+and does it, and, and it's not part of the B+ tree
+
+1415
+01:05:04,300 --> 01:05:05,280
+and then you would have a seg fault,
+
+1416
+01:05:05,330 --> 01:05:07,530
+because it starts interpreting bytes that that it should,
+
+1417
+01:05:07,640 --> 01:05:09,060
+starts interpreting bytes in a way that it should.
+
+1418
+01:05:10,340 --> 01:05:12,655
+So the reason why I talk about this for the B+ tree
+
+1419
+01:05:12,655 --> 01:05:13,975
+and not for the hash table stuff
+
+1420
+01:05:13,975 --> 01:05:15,670
+or not for the regular heap stuff,
+
+1421
+01:05:15,670 --> 01:05:19,350
+is because we already have this hierarchy in our tree structure here,
+
+1422
+01:05:19,640 --> 01:05:23,220
+we would know that if we swizzle anything below us,
+
+1423
+01:05:23,390 --> 01:05:26,460
+we want to make sure that this thing doesn't get unpinned,
+
+1424
+01:05:26,960 --> 01:05:28,585
+that this thing doesn't get unpinned,
+
+1425
+01:05:28,585 --> 01:05:30,750
+before its children get unpinned,
+
+1426
+01:05:31,140 --> 01:05:32,540
+and that way, the pointers are always valid.
+
+1427
+01:05:37,790 --> 01:05:38,790
+Right, this thing again,
+
+1428
+01:05:38,810 --> 01:05:40,200
+when you you're building project #1,
+
+1429
+01:05:40,460 --> 01:05:43,270
+this thing, all the work you have to go, do to go, go look on the page,
+
+1430
+01:05:43,270 --> 01:05:44,590
+you will go find the thing you're looking for,
+
+1431
+01:05:44,590 --> 01:05:45,385
+the frame, not there,
+
+1432
+01:05:45,385 --> 01:05:46,710
+and then go evict something, right,
+
+1433
+01:05:46,910 --> 01:05:48,030
+you skip all of that,
+
+1434
+01:05:48,660 --> 01:05:51,245
+you update the LRU-K stuff, right,
+
+1435
+01:05:51,245 --> 01:05:51,950
+you skip all of that,
+
+1436
+01:05:51,950 --> 01:05:53,500
+by just going directly through the pointers.
+
+1437
+01:05:54,140 --> 01:05:56,365
+But of course, you lose the metadata of the access patterns
+
+1438
+01:05:56,365 --> 01:05:58,830
+for how these pages are being used,
+
+1439
+01:05:59,060 --> 01:06:01,800
+but again, if it's important enough to pin it and swizzle it,
+
+1440
+01:06:02,060 --> 01:06:03,780
+then you probably should stay in memory.
+
+1441
+01:06:07,890 --> 01:06:09,970
+All right, to do inserts quickly,
+
+1442
+01:06:10,380 --> 01:06:13,145
+the, the most common trick is to pre sort everything,
+
+1443
+01:06:13,145 --> 01:06:15,820
+which we'll cover in next week,
+
+1444
+01:06:16,740 --> 01:06:17,710
+you sort out your keys
+
+1445
+01:06:18,150 --> 01:06:21,025
+and just lay them out as leaf nodes, right,
+
+1446
+01:06:21,025 --> 01:06:21,880
+with your sibling pointers,
+
+1447
+01:06:21,880 --> 01:06:26,560
+and then build the data structure from the bottom to the top, right.
+
+1448
+01:06:27,320 --> 01:06:27,880
+And this is different,
+
+1449
+01:06:27,990 --> 01:06:30,605
+if I just insert the keys one after another,
+
+1450
+01:06:30,605 --> 01:06:32,570
+I would start from the top and go down
+
+1451
+01:06:32,570 --> 01:06:34,540
+and start have to do all the splits and so forth,
+
+1452
+01:06:34,980 --> 01:06:36,640
+I skip all of that, that I just pre sort things,
+
+1453
+01:06:37,350 --> 01:06:38,680
+build the scaffolding on top of it,
+
+1454
+01:06:41,430 --> 01:06:43,630
+and this technique is very common as well.
+
+1455
+01:06:47,210 --> 01:06:49,560
+All right, so the last optimization I want to talk about is,
+
+1456
+01:06:52,440 --> 01:06:55,270
+you know, we make a big deal about how,
+
+1457
+01:06:56,480 --> 01:06:58,210
+the nice thing about the B+ tree is that,
+
+1458
+01:06:58,210 --> 01:06:59,910
+it's balanced, everything's always log(n)
+
+1459
+01:07:01,130 --> 01:07:03,000
+and our lookups can be really fast,
+
+1460
+01:07:03,110 --> 01:07:06,505
+because again, everything is log(n) to get the leaf node
+
+1461
+01:07:06,505 --> 01:07:09,660
+and then we can try to get as much sequential access as, sequential I/O as we can.
+
+1462
+01:07:10,810 --> 01:07:13,150
+But, of course, the challenge is that,
+
+1463
+01:07:13,620 --> 01:07:15,065
+updates are going to be expensive for us,
+
+1464
+01:07:15,065 --> 01:07:18,790
+because we have to maintain this balance, this balance property,
+
+1465
+01:07:19,410 --> 01:07:22,300
+anytime a thread comes along and inserts or deletes,
+
+1466
+01:07:22,500 --> 01:07:23,930
+they may draw the short straw
+
+1467
+01:07:23,930 --> 01:07:26,410
+and be responsible for reorganizing the entire data structure.
+
+1468
+01:07:28,040 --> 01:07:30,160
+And so, ideally, what we want is
+
+1469
+01:07:30,160 --> 01:07:34,320
+a way to delay the updates to the data structure.
+
+1470
+01:07:35,120 --> 01:07:35,690
+In such a way,
+
+1471
+01:07:35,690 --> 01:07:36,980
+that we can accumulate them
+
+1472
+01:07:36,980 --> 01:07:38,045
+and then at some later point
+
+1473
+01:07:38,045 --> 01:07:38,555
+we have enough,
+
+1474
+01:07:38,555 --> 01:07:39,250
+we say, okay,
+
+1475
+01:07:39,300 --> 01:07:41,380
+let me go ahead and apply all my changes in a batch,
+
+1476
+01:07:42,310 --> 01:07:44,150
+and then, yes, I may have to reorganize things,
+
+1477
+01:07:45,130 --> 01:07:46,515
+but I'm doing it all once,
+
+1478
+01:07:46,515 --> 01:07:50,060
+I can amortize the cost, of, of making those changes
+
+1479
+01:07:50,650 --> 01:07:52,490
+and now your writes could potentially be faster,
+
+1480
+01:07:52,510 --> 01:07:54,740
+because you don't, you don't, you don't have to worry about,
+
+1481
+01:07:55,030 --> 01:07:57,080
+I'm gonna have to split every time I insert something new.
+
+1482
+01:07:59,850 --> 01:08:01,460
+So, there's a line of work on
+
+1483
+01:08:01,460 --> 01:08:04,390
+what is called write optimize B trees or B+ trees,
+
+1484
+01:08:05,580 --> 01:08:08,050
+these have sometimes are also called Bε trees,
+
+1485
+01:08:09,030 --> 01:08:11,690
+you'll see it with a little, little ε symbol,
+
+1486
+01:08:12,880 --> 01:08:16,335
+there's a commercial variant from the Tokutek guys called fractal trees,
+
+1487
+01:08:16,335 --> 01:08:17,985
+but it's basically branding,
+
+1488
+01:08:17,985 --> 01:08:19,310
+it's, it's the same idea.
+
+1489
+01:08:20,750 --> 01:08:21,900
+And the idea is basically,
+
+1490
+01:08:21,950 --> 01:08:24,900
+now at every single root node and inner node,
+
+1491
+01:08:25,280 --> 01:08:26,520
+I'm going to have a mod log,
+
+1492
+01:08:27,310 --> 01:08:29,145
+just like MySQL had for their pages,
+
+1493
+01:08:29,145 --> 01:08:30,080
+when they were doing compression,
+
+1494
+01:08:30,980 --> 01:08:32,850
+and anytime a new update comes along,
+
+1495
+01:08:33,380 --> 01:08:36,810
+instead of propagating those changes all the way down to the leaf nodes,
+
+1496
+01:08:37,190 --> 01:08:39,720
+I'm going to violate the property we talked about in the B+ tree,
+
+1497
+01:08:40,400 --> 01:08:42,420
+where the leaf nodes have to be, where the actual values are,
+
+1498
+01:08:42,830 --> 01:08:45,480
+and I can, I can insert my entries into the mod log.
+
+1499
+01:08:46,930 --> 01:08:48,080
+So if I want to insert 7,
+
+1500
+01:08:48,550 --> 01:08:49,965
+again, instead of having traverse down
+
+1501
+01:08:49,965 --> 01:08:51,350
+and figure out where 7 should go,
+
+1502
+01:08:51,760 --> 01:08:53,300
+I just put it in the root,
+
+1503
+01:08:54,760 --> 01:08:56,870
+same thing, I want to delete 10,
+
+1504
+01:08:57,880 --> 01:08:59,690
+Instead of putting it into the,
+
+1505
+01:09:00,160 --> 01:09:03,200
+going down and deleting it and then potentially doing a merge,
+
+1506
+01:09:03,400 --> 01:09:04,850
+I'll just put it in the mod log.
+
+1507
+01:09:06,420 --> 01:09:06,950
+All right?
+
+1508
+01:09:07,960 --> 01:09:10,340
+So now if a query comes up and wants to find 10,
+
+1509
+01:09:11,540 --> 01:09:12,850
+well, as I traverse down,
+
+1510
+01:09:12,850 --> 01:09:15,190
+I look in the mod log and say,
+
+1511
+01:09:15,190 --> 01:09:16,500
+okay, is the thing I'm looking for here.
+
+1512
+01:09:17,180 --> 01:09:17,945
+So in this case here,
+
+1513
+01:09:17,945 --> 01:09:19,810
+I I I deleted 10,
+
+1514
+01:09:20,550 --> 01:09:21,545
+it's in my mod log,
+
+1515
+01:09:21,545 --> 01:09:22,430
+so when I do my lookup,
+
+1516
+01:09:22,430 --> 01:09:24,365
+I would find the entry here and I'm done,
+
+1517
+01:09:24,365 --> 01:09:25,480
+I don't need to go to the bottom,
+
+1518
+01:09:26,350 --> 01:09:29,840
+and to actually see the change.
+
+1519
+01:09:32,490 --> 01:09:33,880
+Of course, what's the obvious problem with this?
+
+1520
+01:09:37,090 --> 01:09:38,660
+The buffers get full, right.
+
+1521
+01:09:39,520 --> 01:09:40,450
+So when that happens,
+
+1522
+01:09:40,450 --> 01:09:43,380
+then you got to cascade down the, the changes,
+
+1523
+01:09:43,550 --> 01:09:44,365
+but the idea is here,
+
+1524
+01:09:44,365 --> 01:09:46,050
+you're doing this incrementally and in batches,
+
+1525
+01:09:46,400 --> 01:09:49,740
+and you basically, you don't have to apply any modifications
+
+1526
+01:09:50,270 --> 01:09:52,530
+until you get to the structure of the data structure
+
+1527
+01:09:53,090 --> 01:09:55,830
+until you get to the, to, to the leaf nodes.
+
+1528
+01:09:56,280 --> 01:09:57,260
+So if I insert 40,
+
+1529
+01:09:57,490 --> 01:09:59,240
+I just move my previous changes,
+
+1530
+01:09:59,980 --> 01:10:01,760
+insert 7, and insert 10 here
+
+1531
+01:10:02,830 --> 01:10:06,460
+and I leave, and you put insert 40 there.
+
+1532
+01:10:07,160 --> 01:10:07,700
+And at some point,
+
+1533
+01:10:07,700 --> 01:10:09,190
+if I keep going this thing,
+
+1534
+01:10:09,510 --> 01:10:10,690
+this thing cascades down
+
+1535
+01:10:11,910 --> 01:10:12,860
+and this thing is full,
+
+1536
+01:10:12,860 --> 01:10:14,680
+then I go ahead and apply my changes.
+
+1537
+01:10:16,410 --> 01:10:16,810
+Yes.
+
+1538
+01:10:17,040 --> 01:10:24,280
+Yeah, so the question is,
+
+1539
+01:10:24,330 --> 01:10:26,090
+could this potentially make reads go really slow,
+
+1540
+01:10:26,090 --> 01:10:29,170
+because, as I'm scanning along here,
+
+1541
+01:10:29,170 --> 01:10:32,230
+I have to do sequential scans within the mod log
+
+1542
+01:10:32,230 --> 01:10:34,530
+to find to see why the thing I'm looking for is in there.
+
+1543
+01:10:35,130 --> 01:10:40,480
+Yes, but then like these, these different implementations of Bε trees,
+
+1544
+01:10:40,710 --> 01:10:43,400
+they have bloom filters in front of these things
+
+1545
+01:10:43,400 --> 01:10:45,125
+to say is the key I'm looking for,
+
+1546
+01:10:45,125 --> 01:10:46,510
+actually, even in my mod log,
+
+1547
+01:10:46,620 --> 01:10:48,550
+if yes, then go look for it,
+
+1548
+01:10:50,370 --> 01:10:52,090
+and bloom filters are cheap to maintain,
+
+1549
+01:10:52,170 --> 01:10:53,440
+and they're not very big.
+
+1550
+01:10:55,990 --> 01:10:59,560
+So this is an old idea, that old, 2003 old,
+
+1551
+01:11:00,720 --> 01:11:01,970
+B+ tree's, 1972,
+
+1552
+01:11:01,970 --> 01:11:03,070
+so maybe that's not that old,
+
+1553
+01:11:03,120 --> 01:11:04,990
+is an old idea,
+
+1554
+01:11:06,660 --> 01:11:07,930
+what does this look also look like,
+
+1555
+01:11:08,160 --> 01:11:09,040
+what we talked about before,
+
+1556
+01:11:09,300 --> 01:11:11,320
+log structure storage, right,
+
+1557
+01:11:11,700 --> 01:11:14,440
+same idea, that we can append these log, log entries
+
+1558
+01:11:15,090 --> 01:11:15,905
+and then batch them up
+
+1559
+01:11:15,905 --> 01:11:17,740
+and apply them at some later point.
+
+1560
+01:11:18,930 --> 01:11:21,670
+So I said, you guys, we've seen this idea over and over again.
+
+1561
+01:11:21,720 --> 01:11:26,230
+So Tokutek, they rebranded their implementation of Bε tree as fractal trees,
+
+1562
+01:11:26,550 --> 01:11:30,460
+and then they had a storage engine for MySQL, that,
+
+1563
+01:11:31,250 --> 01:11:34,065
+I got think up, got bought by Percona
+
+1564
+01:11:34,065 --> 01:11:36,480
+and I think I got deprecated last year,
+
+1565
+01:11:36,480 --> 01:11:40,820
+so, they had probably the most robust implementation from a few years ago,
+
+1566
+01:11:40,960 --> 01:11:42,470
+that's dead,
+
+1567
+01:11:42,850 --> 01:11:47,360
+SplinterDB is a key value store, embedded key value store from VMware,
+
+1568
+01:11:48,550 --> 01:11:50,180
+written, actually, somebody here that was,
+
+1569
+01:11:50,640 --> 01:11:52,220
+he was a researcher at VMware,
+
+1570
+01:11:52,360 --> 01:11:56,420
+but he was getting his MBA here at Tepper at CMU
+
+1571
+01:11:57,340 --> 01:11:58,335
+and another guy working on this,
+
+1572
+01:11:58,335 --> 01:11:59,330
+he's now professor at Cornell,
+
+1573
+01:11:59,470 --> 01:12:05,000
+but this is basically a sort of a super optimized version of this.
+
+1574
+01:12:05,290 --> 01:12:10,260
+And the RelationalAI is a relational knowledge based,
+
+1575
+01:12:11,390 --> 01:12:15,930
+graph [] on top, knowledge graph [] on top of relational database system,
+
+1576
+01:12:16,310 --> 01:12:19,320
+that implements Bε trees do fast updates.
+
+1577
+01:12:20,070 --> 01:12:21,550
+So this is not that common,
+
+1578
+01:12:23,260 --> 01:12:26,130
+but you know, this is something,
+
+1579
+01:12:26,130 --> 01:12:28,700
+I I suspect we'll see more and more of in the future,
+
+1580
+01:12:29,080 --> 01:12:30,570
+I mean, RocksDB doesn't need this,
+
+1581
+01:12:30,570 --> 01:12:32,540
+because RocksDB already is a log structure merge tree,
+
+1582
+01:12:32,920 --> 01:12:37,580
+and you're essentially getting the same idea, the same properties.
+
+1583
+01:12:39,440 --> 01:12:43,140
+All right, so we have six minutes left.
+
+1584
+01:12:44,085 --> 01:12:45,860
+So let's pop up in Postgres,
+
+1585
+01:12:49,230 --> 01:12:50,110
+and do a quick demo.
+
+1586
+01:12:52,040 --> 01:12:54,330
+So here I going to demonstrate the difference between,
+
+1587
+01:12:55,580 --> 01:12:56,290
+I turn the lights off,
+
+1588
+01:12:57,060 --> 01:12:58,580
+demonstrate the difference between MySQL,
+
+1589
+01:12:58,580 --> 01:12:59,470
+oh, sorry, not MySQL.
+
+1590
+01:13:04,870 --> 01:13:05,870
+Nope, sorry,
+
+1591
+01:13:07,290 --> 01:13:07,690
+works.
+
+1592
+01:13:09,350 --> 01:13:11,095
+There we go, I had the light the first time.
+
+1593
+01:13:11,095 --> 01:13:11,845
+So I want to demonstrate
+
+1594
+01:13:11,845 --> 01:13:18,475
+the difference between a hash index and a B+ tree on, on data
+
+1595
+01:13:18,475 --> 01:13:23,730
+and we can see what the database system is going to choose to use to run queries.
+
+1596
+01:13:29,370 --> 01:13:32,290
+So the data set I'm going to use is going to be,
+
+1597
+01:13:35,700 --> 01:13:43,715
+I think it 21 million email addresses from a few years ago, right,
+
+1598
+01:13:43,715 --> 01:13:44,410
+because it's all on,
+
+1599
+01:13:46,290 --> 01:13:49,540
+it's, yeah, so 27 27 million email addresses, right.
+
+1600
+01:13:49,950 --> 01:13:53,465
+And so, I'm not going to run this in real time,
+
+1601
+01:13:53,465 --> 01:13:55,540
+but basically I've created two indexes,
+
+1602
+01:13:57,210 --> 01:13:59,770
+I created one here on a B+ tree on the emails,
+
+1603
+01:14:00,270 --> 01:14:00,670
+sorry,
+
+1604
+01:14:02,600 --> 01:14:03,870
+and the way it works is like,
+
+1605
+01:14:03,950 --> 01:14:08,560
+in Postgres, you say CREATE INDEX, with the name of the index on this table
+
+1606
+01:14:08,560 --> 01:14:11,670
+and then USING, and you can specify what data structure you want,
+
+1607
+01:14:11,900 --> 01:14:14,310
+so by default, if you don't have the USING clause in Postgres,
+
+1608
+01:14:14,810 --> 01:14:16,710
+you, you, you get a B+ tree,
+
+1609
+01:14:16,910 --> 01:14:18,370
+but here I'm explicitly telling,
+
+1610
+01:14:18,370 --> 01:14:19,320
+I want a B+ tree
+
+1611
+01:14:19,430 --> 01:14:21,055
+and the index already exists,
+
+1612
+01:14:21,055 --> 01:14:21,990
+I don't need to do that.
+
+1613
+01:14:23,500 --> 01:14:27,540
+And then I have the build the same thing on on the same column,
+
+1614
+01:14:27,770 --> 01:14:29,730
+I'll build it on on, using a hash table,
+
+1615
+01:14:29,900 --> 01:14:31,170
+and I just say USING HASH,
+
+1616
+01:14:31,190 --> 01:14:32,340
+and again, I already have that.
+
+1617
+01:14:33,600 --> 01:14:36,760
+So let me turn off a bunch of other optimizations in postgres,
+
+1618
+01:14:37,200 --> 01:14:38,410
+that we don't need to worry about just yet,
+
+1619
+01:14:39,240 --> 01:14:41,760
+so I can do queries like this, right,
+
+1620
+01:14:41,760 --> 01:14:43,350
+SELECT MIN(email) FROM emails,
+
+1621
+01:14:43,350 --> 01:14:45,110
+and I get some random thing like this,
+
+1622
+01:14:45,900 --> 01:14:48,340
+but again, if I put the EXPLAIN keyword in front of it,
+
+1623
+01:14:49,710 --> 01:14:52,050
+Postgres will tell me what the query plan is, right,
+
+1624
+01:14:52,490 --> 01:14:53,760
+so here it's going to tell me,
+
+1625
+01:14:53,870 --> 01:14:56,970
+I going to do an index only scan using the B+ tree
+
+1626
+01:14:57,740 --> 01:14:59,730
+and it tells me what the conditional, conditional is,
+
+1627
+01:15:01,070 --> 01:15:03,000
+So we didn't talk about index only scan,
+
+1628
+01:15:03,020 --> 01:15:05,010
+sometimes cover scans or covering indexes,
+
+1629
+01:15:05,180 --> 01:15:07,060
+basically, Postgres recognizes that,
+
+1630
+01:15:07,060 --> 01:15:11,520
+all the data or all the columns I need to answer this query can be found in the index,
+
+1631
+01:15:11,900 --> 01:15:15,510
+so even though they're storing the record IDs in the leaf nodes,
+
+1632
+01:15:15,940 --> 01:15:17,575
+I don't need to actually follow those record ID
+
+1633
+01:15:17,575 --> 01:15:19,230
+to get the data for the actual tuple,
+
+1634
+01:15:19,490 --> 01:15:23,700
+all everything I need for this query can be answered from the index, right,
+
+1635
+01:15:24,140 --> 01:15:25,900
+because again going back to my query,
+
+1636
+01:15:25,900 --> 01:15:31,155
+it was just select the min email from, from the email address
+
+1637
+01:15:31,155 --> 01:15:32,100
+and the index is on email,
+
+1638
+01:15:32,100 --> 01:15:36,920
+so once I go all the way to the right side of the tree or left side of the tree,
+
+1639
+01:15:37,000 --> 01:15:38,300
+that has all the data I'm looking for.
+
+1640
+01:15:39,070 --> 01:15:41,180
+So that's why it told me it can do an index only scan,
+
+1641
+01:15:41,740 --> 01:15:42,440
+so that's fine.
+
+1642
+01:15:43,200 --> 01:15:43,775
+So let's see,
+
+1643
+01:15:43,775 --> 01:15:45,050
+now, if we want to do something like this,
+
+1644
+01:15:45,050 --> 01:15:45,670
+we want to say,
+
+1645
+01:15:46,870 --> 01:15:51,590
+give me, give me all the emails where the first letter is a,
+
+1646
+01:15:51,850 --> 01:15:53,085
+but I'm do a LIMIT 1
+
+1647
+01:15:53,085 --> 01:15:54,440
+and you get somebody like this.
+
+1648
+01:15:57,520 --> 01:15:58,275
+And I can do EXPLAIN
+
+1649
+01:15:58,275 --> 01:16:00,020
+and see what it actually tells me what to do,
+
+1650
+01:16:00,160 --> 01:16:00,975
+so in this case here,
+
+1651
+01:16:00,975 --> 01:16:01,760
+Postgres says,
+
+1652
+01:16:02,470 --> 01:16:05,660
+even though I have, I have that B+ tree index, that is sorted on emails,
+
+1653
+01:16:06,100 --> 01:16:07,940
+Postgres says, it wants to do a sequential scan,
+
+1654
+01:16:08,380 --> 01:16:10,610
+because it recognized that the thing I'm looking for,
+
+1655
+01:16:11,710 --> 01:16:14,360
+you know, I'm looking for all, all emails that start with a,
+
+1656
+01:16:14,860 --> 01:16:17,000
+that's at some middle point in the tree,
+
+1657
+01:16:18,540 --> 01:16:20,240
+and since it's unbounded,
+
+1658
+01:16:20,350 --> 01:16:21,590
+I'm not specifying like,
+
+1659
+01:16:23,500 --> 01:16:24,590
+at least in the scan size,
+
+1660
+01:16:24,700 --> 01:16:26,475
+I'm not specifying the end marker,
+
+1661
+01:16:26,475 --> 01:16:28,700
+it would say, okay, you got to scan to the entire end,
+
+1662
+01:16:28,780 --> 01:16:29,730
+now, it's not smart enough
+
+1663
+01:16:29,730 --> 01:16:31,970
+to recognize I have a limit 1 there, right,
+
+1664
+01:16:32,350 --> 01:16:33,495
+so what it really should have done is
+
+1665
+01:16:33,495 --> 01:16:36,920
+just probe down the index, find the first thing, and then popped out and done,
+
+1666
+01:16:37,090 --> 01:16:37,830
+but in this case here,
+
+1667
+01:16:37,830 --> 01:16:41,090
+Postgres wasn't smart enough to figure that out, right.
+
+1668
+01:16:41,680 --> 01:16:43,670
+And it can't pick the hash index,
+
+1669
+01:16:43,720 --> 01:16:46,320
+because again, I'm doing a wild card search,
+
+1670
+01:16:46,320 --> 01:16:50,300
+I don't have the actual full key, right.
+
+1671
+01:16:51,840 --> 01:16:53,135
+So you can see this in other ways,
+
+1672
+01:16:53,135 --> 01:16:54,400
+so in this case here,
+
+1673
+01:16:54,630 --> 01:16:58,540
+I want to find all emails where it's greater than Andy,
+
+1674
+01:16:58,920 --> 01:17:01,270
+again, I doing sequencial scan,
+
+1675
+01:17:01,530 --> 01:17:02,860
+but now if I do something like this,
+
+1676
+01:17:03,700 --> 01:17:04,920
+find all emails where,
+
+1677
+01:17:05,750 --> 01:17:11,280
+find all emails where the the first letter, the string starts with zzzz,
+
+1678
+01:17:11,570 --> 01:17:13,110
+now I'm on the right side of the tree,
+
+1679
+01:17:13,780 --> 01:17:15,810
+and Postgres recognizes, based on the distribution,
+
+1680
+01:17:15,950 --> 01:17:18,130
+okay, well, you're far enough along the tree,
+
+1681
+01:17:18,130 --> 01:17:19,060
+where I'm going to scan along,
+
+1682
+01:17:19,060 --> 01:17:21,090
+so it's okay for me to do the index scan,
+
+1683
+01:17:21,410 --> 01:17:27,270
+because that's still, that's going to be less data than doing complete sequencial scan, right.
+
+1684
+01:17:28,140 --> 01:17:30,665
+And at no point, did postgres decide to use the hash index,
+
+1685
+01:17:30,665 --> 01:17:33,250
+because again, I'm doing like less than greater than a wildcard matches.
+
+1686
+01:17:34,550 --> 01:17:35,670
+So we can do something like this,
+
+1687
+01:17:37,240 --> 01:17:38,150
+where, now we can say,
+
+1688
+01:17:39,670 --> 01:17:43,280
+you know, find emails where there's exact equality matches using the IN clause,
+
+1689
+01:17:44,430 --> 01:17:45,920
+and now you see Postgres says,
+
+1690
+01:17:45,920 --> 01:17:49,010
+that use the hash index here, right.
+
+1691
+01:17:51,220 --> 01:17:52,260
+the bitmap index scan,
+
+1692
+01:17:52,260 --> 01:17:52,905
+I'll explain that,
+
+1693
+01:17:52,905 --> 01:17:55,220
+it's not what you, not a real bitmap index,
+
+1694
+01:17:57,100 --> 01:17:57,950
+you can see it better,
+
+1695
+01:17:59,200 --> 01:18:00,020
+instead of using IN,
+
+1696
+01:18:00,900 --> 01:18:03,440
+you can use a bunch of ORs, right,
+
+1697
+01:18:03,790 --> 01:18:05,090
+and now what you see is that,
+
+1698
+01:18:05,320 --> 01:18:08,655
+Postgres has multiple entries for the index scan,
+
+1699
+01:18:08,655 --> 01:18:11,445
+where for each of, each of the email addresses,
+
+1700
+01:18:11,445 --> 01:18:13,605
+I had in that in my WHERE clause,
+
+1701
+01:18:13,605 --> 01:18:16,370
+like, you know, something equals something OR something equals something,
+
+1702
+01:18:16,870 --> 01:18:19,340
+each of those are going to be separate probe into the hash index,
+
+1703
+01:18:20,070 --> 01:18:22,690
+and then they maintain a bitmap of the,
+
+1704
+01:18:23,370 --> 01:18:25,570
+I think it's the actual tuple IDs, the tuple offsets,
+
+1705
+01:18:25,890 --> 01:18:27,040
+not the, not the page's,
+
+1706
+01:18:27,210 --> 01:18:30,790
+they maintain a bitmap of the matching values for each of those index probes,
+
+1707
+01:18:30,900 --> 01:18:32,410
+and then they OR them up together,
+
+1708
+01:18:32,700 --> 01:18:35,920
+and then that produces the exact tuples they actually, you actually, you actually would need.
+
+1709
+01:18:36,940 --> 01:18:38,930
+And this is sort of similar to what I was saying before,
+
+1710
+01:18:38,950 --> 01:18:44,060
+you, you figure out what the pages you need from the, from the, from the index first,
+
+1711
+01:18:44,710 --> 01:18:45,990
+then go actually go get them,
+
+1712
+01:18:45,990 --> 01:18:46,830
+so they're doing that here,
+
+1713
+01:18:46,830 --> 01:18:48,320
+they're doing much of probes in the index,
+
+1714
+01:18:48,520 --> 01:18:50,750
+don't actually get the real data from the tables,
+
+1715
+01:18:52,190 --> 01:18:53,430
+doing the OR on the bitmaps,
+
+1716
+01:18:53,510 --> 01:18:58,490
+then you have the list of the indexes, list of the records you actually need to go get, right.
+
+1717
+01:19:00,930 --> 01:19:04,480
+Okay, so the next thing I want to do is talk about clustering tables.
+
+1718
+01:19:04,590 --> 01:19:06,040
+So Postgres doesn't act,
+
+1719
+01:19:06,300 --> 01:19:07,960
+Postgres supports the cluster command,
+
+1720
+01:19:08,520 --> 01:19:09,490
+but it doesn't actually,
+
+1721
+01:19:09,930 --> 01:19:11,260
+and it will sort your table,
+
+1722
+01:19:11,670 --> 01:19:13,490
+but it doesn't actually maintain the sorting,
+
+1723
+01:19:13,490 --> 01:19:15,520
+because it, because it's not gonna be organized,
+
+1724
+01:19:15,870 --> 01:19:16,990
+it's not in index organized,
+
+1725
+01:19:17,250 --> 01:19:18,940
+so you with the cluster command,
+
+1726
+01:19:19,080 --> 01:19:20,290
+Postgres will sort your data,
+
+1727
+01:19:20,490 --> 01:19:21,950
+but as you start modifying the table,
+
+1728
+01:19:21,950 --> 01:19:23,140
+it can get out of sort of order.
+
+1729
+01:19:23,910 --> 01:19:24,935
+So I'm not going to do this live,
+
+1730
+01:19:24,935 --> 01:19:25,840
+because it would take too long,
+
+1731
+01:19:26,070 --> 01:19:27,245
+and I realized we're a little over time,
+
+1732
+01:19:27,245 --> 01:19:28,210
+but the command would be,
+
+1733
+01:19:29,130 --> 01:19:31,545
+basically like this, right,
+
+1734
+01:19:31,545 --> 01:19:34,130
+you would say, CLUSTER the table we want to cluster
+
+1735
+01:19:35,290 --> 01:19:37,640
+and then let the index you have be clustered on,
+
+1736
+01:19:38,260 --> 01:19:40,140
+this takes about a minute to run,
+
+1737
+01:19:40,140 --> 01:19:41,540
+so I've already run it before we class,
+
+1738
+01:19:41,770 --> 01:19:42,680
+so I'm not going to do that,
+
+1739
+01:19:43,030 --> 01:19:44,115
+but we can go look at,
+
+1740
+01:19:44,115 --> 01:19:48,985
+like what's in the first, the first, the first page,
+
+1741
+01:19:48,985 --> 01:19:51,630
+again the ctid is the record ID, the offset in Postgres,
+
+1742
+01:19:52,070 --> 01:19:52,830
+so you do that,
+
+1743
+01:19:53,750 --> 01:19:55,980
+that actually that's the unsorteded one,
+
+1744
+01:19:56,120 --> 01:19:57,150
+so that looks all random,
+
+1745
+01:19:57,800 --> 01:20:00,330
+but if I change the name of the table to clustered,
+
+1746
+01:20:07,680 --> 01:20:08,560
+because of that, sorry,
+
+1747
+01:20:14,050 --> 01:20:15,195
+right, now you see that,
+
+1748
+01:20:15,195 --> 01:20:17,000
+in the first page or the first offsets,
+
+1749
+01:20:17,440 --> 01:20:21,100
+the tuples are actually sorted in that order, right,
+
+1750
+01:20:23,540 --> 01:20:24,565
+based on, based on the index,
+
+1751
+01:20:24,565 --> 01:20:26,430
+so if I go ahead and delete one of these entries,
+
+1752
+01:20:26,510 --> 01:20:29,370
+delete the very first person in their fake email address
+
+1753
+01:20:29,930 --> 01:20:34,620
+and I go back and do the same scan on the table, right,
+
+1754
+01:20:34,880 --> 01:20:37,705
+Postgres didn't fill in that first slot right,
+
+1755
+01:20:37,705 --> 01:20:38,370
+it's empty,
+
+1756
+01:20:38,780 --> 01:20:40,770
+but now if I insert this fake person back in,
+
+1757
+01:20:42,130 --> 01:20:45,150
+and do the same scan, right,
+
+1758
+01:20:45,150 --> 01:20:49,210
+they're still not in that first page, right.
+
+1759
+01:20:50,310 --> 01:20:51,200
+So to go find them,
+
+1760
+01:20:51,200 --> 01:20:57,790
+we do SELECT *, SELECT ctid FROM emails_clustered,
+
+1761
+01:21:01,950 --> 01:21:07,910
+WHERE email = this, right,
+
+1762
+01:21:08,140 --> 01:21:09,740
+now they're on page 299,
+
+1763
+01:21:10,870 --> 01:21:12,285
+I don't know where that is, some random thing,
+
+1764
+01:21:12,285 --> 01:21:13,550
+but again, it's not in sorted order,
+
+1765
+01:21:13,660 --> 01:21:16,370
+because, again, Postgres can't maintain the order,
+
+1766
+01:21:16,960 --> 01:21:18,590
+because it doesn't have true clustered indexes.
+
+1767
+01:21:19,440 --> 01:21:19,840
+Okay.
+
+1768
+01:21:22,430 --> 01:21:26,210
+So, B+ trees are important,
+
+1769
+01:21:26,440 --> 01:21:28,880
+it probably the best choice for your database system,
+
+1770
+01:21:29,020 --> 01:21:29,960
+Tries are pretty good,
+
+1771
+01:21:30,850 --> 01:21:32,810
+you can have B+ trees or Tries, as I said before,
+
+1772
+01:21:33,550 --> 01:21:35,810
+but B+ tree is,
+
+1773
+01:21:36,010 --> 01:21:37,400
+there's a bunch of ways of about faster.
+
+1774
+01:21:37,810 --> 01:21:39,075
+So next class,
+
+1775
+01:21:39,075 --> 01:21:41,510
+we talk about how do you actually make your B+ tree thread safe
+
+1776
+01:21:42,040 --> 01:21:43,140
+by traversing down
+
+1777
+01:21:43,140 --> 01:21:44,870
+and even when you're doing splits and merges,
+
+1778
+01:21:45,160 --> 01:21:45,560
+okay, hit it.
+
