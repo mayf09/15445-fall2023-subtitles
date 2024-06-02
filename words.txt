@@ -21,3 +21,6 @@ vectorized instruction 向量化指令
 
 ## 08
 cluster index 聚集索引
+
+## 10
+early materialization 早期物化
