@@ -1,36 +1,37 @@
 1
 00:00:29,860 --> 00:00:31,940
 0,400 900,1300 1320,1625 1625,1805 1805,2080
-Knew some information on wednesday,
-我周三知道一些消息，所以如果你有空的话。
+{I'll,send,you,guys} some information on Wednesday,|
+我会在周三发布一些信息给你们，|
 
 2
 00:00:32,200 --> 00:00:33,225
 0,245 245,335 335,575 575,800 800,1025
 so if you free come
+所以如果你有空的话。
 
 3
 00:00:33,225 --> 00:00:34,760
 0,305 505,810 810,1115
-down gonna be.|
-|
+down gonna be
 
 4
 00:00:34,930 --> 00:00:36,380
 0,305 305,470 470,730 810,1130 1130,1450
-Eleven to one at night.|
-晚上是11比1。|
+eleven to one, at night.|
+|
 
 5
 00:00:38,010 --> 00:00:40,145
 0,400 690,1090 1410,1745 1745,1970 1970,2135
 Okay. And you, you said
-好吧。而你，你说你有一个保镖，他会忽略身份证，或者你有假身份证，你会把它当做生意来分发。所有这些信息我都不能在这堂课上说出来，好吗？请不要那样做。请不要那样做。
+好吧。而你，你说你有一个保镖，他会忽略身份证，或者你有假身份证，你会把它当做生意来分发。
 
 6
 00:00:40,145 --> 00:00:41,180
 0,135 135,255 255,360 360,750 750,1035
-you have a bouncer that's
+you have a bouncer,| that's
+|
 
 7
 00:00:41,180 --> 00:00:42,620
@@ -40,7 +41,8 @@ gonna ignore the IDs or
 8
 00:00:42,620 --> 00:00:43,625
 0,105 105,225 225,420 420,630 630,1005
-you have like fake IDs
+you have like fake IDs,|
+|
 
 9
 00:00:43,625 --> 00:00:44,120
@@ -55,7 +57,8 @@ out on the side as
 11
 00:00:44,900 --> 00:00:46,670
 0,120 120,380 1060,1395 1395,1605 1605,1770
-a business. And all of
+a business.| And all of
+|所有这些信息我都不能在课上说出来。
 
 12
 00:00:46,670 --> 00:00:47,945
@@ -65,12 +68,13 @@ that information I cannot say
 13
 00:00:47,945 --> 00:00:49,610
 0,135 135,360 360,695 715,1115 1375,1665
-in this class, okay? Please
+in this class.| Okay, please
+|好的，请不要那样做，请不要那样做。
 
 14
 00:00:49,610 --> 00:00:50,585
 0,210 210,315 315,540 540,765 765,975
-don't do that. Please don't
+don't do that, please don't
 
 15
 00:00:50,585 --> 00:00:51,520
@@ -81,8 +85,8 @@ do that.|
 16
 00:00:51,800 --> 00:00:53,335
 0,320 320,640 840,1145 1145,1325 1325,1535
-Okay, great, excellent. And we'll
-好的，很好，很好。我们会为你们中的一些人准备一份旅行报告。就这么办吧。所以啊，好的，很抱歉花了一点时间才开始。我有一大群人在办公时间，但我们今天要讨论的是内涵控制。
+Okay, great, excellent,| and we'll
+好的，很好，|我们会为你们中的一些人准备一份旅行报告，
 
 17
 00:00:53,335 --> 00:00:54,565
@@ -92,17 +96,19 @@ have a trip report for
 18
 00:00:54,565 --> 00:00:55,465
 0,195 195,315 315,465 465,690 690,900
-some of you guys. Make
+some of you guys make
 
 19
 00:00:55,465 --> 00:00:57,030
 0,165 165,300 300,510 510,875 1165,1565
-it to that. So ah,
+it to that,| so. {}|
+|所以。|
 
 20
 00:00:57,410 --> 00:00:58,600
 0,365 365,665 665,875 875,1040 1040,1190
-alright, sorry about taking a
+Alright, sorry about taking a
+好的，很抱歉花了一点时间才开始，
 
 21
 00:00:58,600 --> 00:00:59,365
@@ -112,7 +118,8 @@ little bit of time to
 22
 00:00:59,365 --> 00:01:00,280
 0,195 195,510 510,690 690,765 765,915
-get started. I had a
+get started,| I had a
+|我在办公时间有一大群人，
 
 23
 00:01:00,280 --> 00:01:01,195
@@ -122,12 +129,13 @@ bunch of people at the
 24
 00:01:01,195 --> 00:01:03,385
 0,210 210,485 1555,1875 1875,2085 2085,2190
-office hours, but we're going
+office hours,| but we're going
+|但我们今天要讨论的是并发控制。
 
 25
 00:01:03,385 --> 00:01:05,320
 0,135 135,300 300,605 805,1205 1225,1935
-to talk about the concrency
+to talk about the concurrency
 
 26
 00:01:05,320 --> 00:01:06,480
@@ -139,17 +147,19 @@ control today.|
 00:01:06,480 --> 00:01:08,640
 0,290 1390,1725 1725,1845 1845,1995 1995,2160
 And let's just jump right
-让我们直截了当地开始吧。好了，让我们开始吧。您已经看到了数据库引擎作为不同组件的模块化体系结构的示意图。今天我们将讨论影响这些不同层的一致性控制机制，这在很大程度上影响到操作员执行和访问方法层。
+让我们直截了当地开始吧。
 
 28
 00:01:08,640 --> 00:01:10,515
 0,195 195,500 520,920 1180,1530 1530,1875
-into it. Alright, so let's
+into it.| Alright, so let's
+|好的，让我们开始这个。
 
 29
 00:01:10,515 --> 00:01:12,375
 0,195 195,465 465,815 1345,1695 1695,1860
-get into this. You've seen
+get into this.| You've seen
+|你已经看到了数据库引擎的示意图，
 
 30
 00:01:12,375 --> 00:01:14,370
@@ -159,7 +169,8 @@ this diagram of what a
 31
 00:01:14,370 --> 00:01:16,185
 0,290 400,800 820,1155 1155,1490 1510,1815
-database engine looks like as
+database engine looks like,| as
+|作为不同组件的模块化体系结构。
 
 32
 00:01:16,185 --> 00:01:17,610
@@ -169,22 +180,25 @@ a modular architecture for the
 33
 00:01:17,610 --> 00:01:19,350
 0,260 340,740 1270,1500 1500,1590 1590,1740
-different components. We are going
+different components.| We are going
+|今天我们将讨论并发控制机制，
 
 34
 00:01:19,350 --> 00:01:22,485
 0,165 165,375 375,710 880,1280 2470,3135
-to talk today about concrency
+to talk today about concurrency
 
 35
 00:01:22,485 --> 00:01:24,915
 0,335 535,1355 1465,1815 1815,2115 2115,2430
-control mechanisms that hit across
+control mechanisms,| that hit across
+|影响这些不同层，
 
 36
 00:01:24,915 --> 00:01:26,700
 0,270 270,540 540,1035 1035,1410 1410,1785
-these different layers, which largely
+these different layers,| which largely
+|这在很大程度上影响到操作执行层和访问方法层。
 
 37
 00:01:26,700 --> 00:01:28,110
@@ -200,48 +214,56 @@ the access method layers.|
 39
 00:01:29,800 --> 00:01:30,925
 0,255 255,435 435,690 690,945 945,1125
-In two classes from now,
-从现在开始的两节课中，我们将讨论恢复方法，这是在缓冲池和磁盘管理器层。现在，随着我们深入了解事务管理的含义，所有这些都将变得更加清晰。复苏意味着什么？所以让我们直截了当地说吧。
+In two classes from now,|
+从现在开始的两节课中，|
 
 40
 00:01:30,925 --> 00:01:32,305
 0,225 225,360 360,630 630,990 990,1380
-we'll talk about recovery methods,
+we'll talk about recovery methods,|
+我们将讨论恢复方法，|
 
 41
 00:01:32,305 --> 00:01:33,280
 0,270 270,405 405,540 540,675 675,975
 which is at the buffer
+这在缓冲池层和磁盘管理器层。
 
 42
 00:01:33,280 --> 00:01:34,920
 0,270 270,555 555,840 840,1095 1095,1640
-pool and disk manager layers.
+pool and disk manager layers.|
+|
 
 43
 00:01:35,120 --> 00:01:36,175
 0,305 305,515 515,695 695,860 860,1055
 Now all of this will
+现在，所有这些都将变得更加清晰，
 
 44
 00:01:36,175 --> 00:01:37,135
 0,165 165,285 285,450 450,675 675,960
-become a lot more clear
+become a lot more clear,|
+|
 
 45
 00:01:37,135 --> 00:01:38,515
 0,270 270,495 495,735 735,1050 1050,1380
 as we jump into what
+随着我们深入了解事务管理的含义，
 
 46
 00:01:38,515 --> 00:01:40,765
 0,255 255,575 745,1145 1315,1715 1975,2250
-that transaction management mean. What
+that transaction management mean,| what
+|恢复的含义。
 
 47
 00:01:40,765 --> 00:01:42,480
 0,240 240,570 570,935 1075,1335 1335,1715
-does recovery mean? So let's
+does recovery mean.| So let's
+|所以让我们直接开始吧。
 
 48
 00:01:43,310 --> 00:01:44,720
@@ -253,7 +275,7 @@ go straight to that.|
 00:01:45,370 --> 00:01:48,090
 0,365 365,730 1020,1420 2160,2480 2480,2720
 So transaction management allows us
-因此，事务管理允许我们在同时更新多个内容的情况下，在数据库系统中安全地处理事务。
+所以，事务管理允许我们在数据库系统中安全地做事情，
 
 50
 00:01:48,090 --> 00:01:50,070
@@ -263,7 +285,8 @@ to do things safely in
 51
 00:01:50,070 --> 00:01:52,310
 0,120 120,380 490,890 1510,1875 1875,2240
-a database system in situations
+a database system,| in situations
+|在同时更新多个东西的情况下。
 
 52
 00:01:52,450 --> 00:01:53,810
@@ -297,27 +320,31 @@ example.|
 00:01:59,260 --> 00:02:02,840
 0,400 510,910 1350,1750 2550,3245 3245,3580
 Here is a schematic of
-以下是数据库操作的示意图。这些可以通过一个SQL查询来触发。从事务管理组件的角度来看，我们将在很大程度上查看对象级别发生的操作。想象一下，我们启动了一个事务，最终读取了一个对象。可能是一张唱片，也可能是一页。在这节课中，我们只将它们称为对象。对该值进行一些检查，执行一些操作，如支付，然后通过从a中减去25来更新a，最终将其写入。
+这是一个数据库操作的示意图，
 
 58
 00:02:02,950 --> 00:02:04,650
 0,400 570,970 1110,1400 1400,1550 1550,1700
-database operations. These could be
+database operations,| These could be
+|这些可以通过一个 SQL 查询来触发，
 
 59
 00:02:04,650 --> 00:02:05,900
 0,270 270,480 480,585 585,915 915,1250
-fired through a sql query.
+fired through a SQL query,|
+|
 
 60
 00:02:06,340 --> 00:02:07,515
 0,275 275,545 545,860 860,1040 1040,1175
-From the perspective of the
+from the perspective of the
+从事务管理组件的角度来看，
 
 61
 00:02:07,515 --> 00:02:09,615
 0,275 445,845 1045,1445 1765,1995 1995,2100
-transaction management component, we are
+transaction management component,| we are
+|我们将在很大程度上查看对象级别发生的操作。
 
 62
 00:02:09,615 --> 00:02:10,880
@@ -332,32 +359,38 @@ the operations that happen at
 64
 00:02:12,840 --> 00:02:14,340
 0,255 255,540 540,860 1000,1275 1275,1500
-the object level. So imagine
+the object level.| So imagine
+|想象一下，我们启动了一个事务，
 
 65
 00:02:14,340 --> 00:02:15,260
 0,225 225,390 390,540 540,660 660,920
-we fired up a transaction
+we fired up a transaction|
+|
 
 66
 00:02:15,850 --> 00:02:17,130
 0,275 275,425 425,605 605,910 960,1280
 and that ends up reading
+它最终读取一个对象，
 
 67
 00:02:17,130 --> 00:02:18,420
 0,315 315,710 820,1095 1095,1200 1200,1290
-an object. Could be a
+an object,| could be a
+|可能是一个记录，也可能是一个页面，
 
 68
 00:02:18,420 --> 00:02:19,650
 0,260 460,735 735,855 855,975 975,1230
-record, could be a page.
+record, could be a page,|
+|
 
 69
 00:02:19,650 --> 00:02:20,550
 0,300 300,405 405,555 555,675 675,900
-We're just going to refer
+we're just going to refer
+在这节课中，我们只将它们称为对象，
 
 70
 00:02:20,550 --> 00:02:21,800
@@ -367,44 +400,49 @@ to them as objects here
 71
 00:02:21,940 --> 00:02:23,565
 0,260 260,440 440,760 1020,1340 1340,1625
-in this class. Does some
+in this class,| does some
+|对该值进行一些检查，
 
 72
 00:02:23,565 --> 00:02:25,650
 0,365 475,780 780,975 975,1265 1795,2085
-checking of that value, does
+checking of that value,| does
+|执行一些操作，比如支付，
 
 73
 00:02:25,650 --> 00:02:27,045
 0,150 150,405 405,720 720,1040 1120,1395
-some action like pay and
+some action like pay| and
+|然后通过从 A 中减去 25 来更新它，
 
 74
 00:02:27,045 --> 00:02:28,665
 0,275 385,735 735,990 990,1295 1315,1620
-then updates that a by
+then updates that A by
 
 75
 00:02:28,665 --> 00:02:30,405
 0,585 585,1020 1020,1230 1230,1470 1470,1740
-subtracting 25 from it and
+subtracting 25 from it| and
+|最终将其写入，
 
 76
 00:02:30,405 --> 00:02:32,160
 0,305 685,1080 1080,1475
-eventually writes that.|
+eventually writes that,|
 |
 
 77
 00:02:32,710 --> 00:02:33,870
 0,275 275,425 425,665 665,905 905,1160
-For the purpose of the
-为了讨论事务管理，我们主要关注与这些数据库对象中的每个对象一起发生的读写操作。你可以把它们想象成记录、页面、表格等等。这无关紧要。假设我们关心的是数据库中对象的读取和写入。
+for the purpose of the
+为了讨论事务管理，
 
 78
 00:02:33,870 --> 00:02:35,985
 0,330 330,555 555,830 970,1370 1870,2115
-discussion for transaction management, we
+discussion for transaction management,| we
+|我们主要关注读写操作，
 
 79
 00:02:35,985 --> 00:02:37,725
@@ -414,7 +452,8 @@ are largely concerned with the
 80
 00:02:37,725 --> 00:02:39,810
 0,335 475,855 855,1235 1375,1770 1770,2085
-read and write operations that
+read and write operations,| that
+|这些数据库对象中所发生的，
 
 81
 00:02:39,810 --> 00:02:41,325
@@ -424,7 +463,8 @@ happen with each of these
 82
 00:02:41,325 --> 00:02:43,080
 0,305 565,965 1225,1485 1485,1620 1620,1755
-database objects. You can think
+database objects,| you can think
+|你可以把它们想象成记录、页面、表等，
 
 83
 00:02:43,080 --> 00:02:44,630
@@ -434,12 +474,14 @@ of them as records, pages,
 84
 00:02:44,860 --> 00:02:46,080
 0,400 540,815 815,980 980,1115 1115,1220
-tables, what have you. It
+tables, what have you,| it
+|这无关紧要，
 
 85
 00:02:46,080 --> 00:02:48,285
 0,195 195,440 820,1220 1420,1820 1900,2205
-won't matter. Just assume the
+won't matter,| just assume the
+|只是假设我们关心的是数据库中对象的读取和写入。
 
 86
 00:02:48,285 --> 00:02:49,670
@@ -461,29 +503,29 @@ is what we care about.|
 00:02:52,200 --> 00:02:53,175
 0,195 195,330 330,495 495,720 720,975
 And we want to have
-我们希望有关于这些红色权利的某些属性来确保。
+我们希望有关于这些读写的某些属性。
 
 90
 00:02:53,175 --> 00:02:54,770
 0,315 315,695 835,1110 1110,1290 1290,1595
-certain properties about these red
+certain properties about these {read,and}
 
 91
 00:02:54,820 --> 00:02:56,560
 0,365 365,695 695,1060
-right to ensure.|
-|
+write,| to ensure
+|来确保我们定义的正确性概念，
 
 92
 00:02:56,660 --> 00:02:58,120
 0,455 455,665 665,1085 1085,1235 1235,1460
-Notions of correctness as we
-我们定义的正确性概念，这就是事务管理所做的。
+notions of correctness as we
 
 93
 00:02:58,120 --> 00:02:59,260
 0,225 225,525 525,795 795,1005 1005,1140
-define it, and that's what
+define it,| and that's what
+|这就是事务管理所做的。
 
 94
 00:02:59,260 --> 00:03:01,160
@@ -494,23 +536,26 @@ transaction management does.|
 95
 00:03:01,160 --> 00:03:02,350
 0,210 210,450 450,690 690,885 885,1190
-So what could go wrong?
-那么，可能会出什么问题呢？这是一组简单的操作，它们被呈现给数据库，以响应应用程序可能发送的查询，以及可能出现的几个错误。所以在右边，你可以看到银行余额开始了。
+So what could go wrong,|
+那么，可能会出什么问题，|
 
 96
 00:03:02,430 --> 00:03:04,160
 0,275 275,395 395,545 545,850 1470,1730
-This is a simple set
+this is a simple set
+这是一组简单的操作，
 
 97
 00:03:04,160 --> 00:03:05,320
 0,120 120,380 520,765 765,885 885,1160
-of actions that are presented
+of actions,| that are presented
+|它们被呈现给数据库，
 
 98
 00:03:05,370 --> 00:03:07,150
 0,245 245,350 350,610 990,1385 1385,1780
-to the database in response
+to the database| in response
+|以响应应用程序可能发送的查询，
 
 99
 00:03:07,170 --> 00:03:08,915
@@ -520,7 +565,8 @@ to a query that an
 100
 00:03:08,915 --> 00:03:11,210
 0,395 715,990 990,1185 1185,1505 1915,2295
-application might have sent and
+application might have sent,| and
+|可能出现的几个错误。
 
 101
 00:03:11,210 --> 00:03:12,260
@@ -530,44 +576,49 @@ a couple things could go
 102
 00:03:12,260 --> 00:03:14,015
 0,255 255,620 730,1130 1150,1455 1455,1755
-wrong. So here on the
+wrong.| So here on the
+|所以在右边，
 
 103
 00:03:14,015 --> 00:03:15,140
 0,315 315,540 540,735 735,945 945,1125
-right side, you see the
+right side,| you see the
+|你可以看到银行余额开始的值为 100 ，
 
 104
 00:03:15,140 --> 00:03:16,780
 0,210 210,555 555,855 855,1160
-bank balance starts out.|
-|
+bank balance starts out,
 
 105
 00:03:16,780 --> 00:03:18,360
 0,290 640,915 915,1110 1110,1290 1290,1580
-Has a value of 100
-值为100，发生的第一件事是检查是否一切正常？上面说可以，那张支票就通过了。所以有足够的余额来支付25美元，所以这是你去自动取款机要求取款。
+has a value of 100,|
+|
 
 106
 00:03:18,950 --> 00:03:20,365
 0,290 290,575 575,935 935,1175 1175,1415
 the first thing that happens
+发生的第一件事是检查，
 
 107
 00:03:20,365 --> 00:03:22,080
 0,270 270,480 480,735 735,1085 1315,1715
-is does that check and
+is does that check| and
+|一切看起来是正常的，
 
 108
 00:03:22,160 --> 00:03:23,815
 0,290 290,545 545,910 1170,1460 1460,1655
-everything looks okay? It says
+everything looks okay,| it says
+|它说是的，那个检查通过了，
 
 109
 00:03:23,815 --> 00:03:25,750
 0,305 655,1035 1035,1335 1335,1655 1675,1935
-yes, that check passes. So
+yes, that check passes,| so
+|所以有足够的余额来支付 25 美元，
 
 110
 00:03:25,750 --> 00:03:27,390
@@ -577,7 +628,8 @@ there's sufficient balance to pay
 111
 00:03:27,500 --> 00:03:28,705
 0,470 470,710 710,920 920,1055 1055,1205
-25 dollars, so this is
+25 dollars,| so this is
+|所以这是你去自动取款机要求取款，
 
 112
 00:03:28,705 --> 00:03:30,030
@@ -587,29 +639,32 @@ you going to an ATM
 113
 00:03:30,200 --> 00:03:31,880
 0,380 380,605 605,695 695,1090
-asking for a withdrawal.|
+asking for a withdrawal,|
 |
 
 114
 00:03:32,070 --> 00:03:34,070
 0,400 900,1325 1325,1460 1460,1625 1625,2000
-And pays you that 25
-然后付给你25美元，这样你就有了它，新的余额就计算出来了。现在，这些余额会记入你的银行账户。好吧?在计算出新的余额后，银行余额为75的最后一个操作是您在左侧代码中看到的右操作。
+and pays you that 25
+然后付给你 25 美元，
 
 115
 00:03:34,070 --> 00:03:35,015
 0,270 270,480 480,570 570,735 735,945
-dollars so you now have
+dollars,| so you now have
+|这样你就有了它，
 
 116
 00:03:35,015 --> 00:03:36,770
 0,305 505,905 1135,1410 1410,1545 1545,1755
-it and the new balance
+it| and the new balance
+|新的余额计算出来，
 
 117
 00:03:36,770 --> 00:03:38,705
 0,255 255,920 1240,1515 1515,1665 1665,1935
-is calculated. And that balance
+is calculated,| and that balance
+|现在，这些余额会记入你的银行账户。
 
 118
 00:03:38,705 --> 00:03:39,710
@@ -619,27 +674,31 @@ now gets written to your
 119
 00:03:39,710 --> 00:03:41,090
 0,225 225,590 880,1140 1140,1230 1230,1380
-bank account. Okay? So after
+bank account.| Okay, so after
+|好的，在计算出新的余额后，
 
 120
 00:03:41,090 --> 00:03:42,580
 0,195 195,345 345,585 585,855 855,1490
-the new balance gets calculated,
+the new balance gets calculated,|
+|
 
 121
 00:03:42,750 --> 00:03:44,750
 0,290 290,530 530,880 1440,1760 1760,2000
 that last action of bank
+银行余额为 75 的最后一个操作，
 
 122
 00:03:44,750 --> 00:03:45,995
 0,240 240,450 450,870 870,1035 1035,1245
-balance of 75 is that
+balance of 75| is that
+|是你在左侧代码中看到的写入操作。
 
 123
 00:03:45,995 --> 00:03:47,380
 0,330 330,675 675,900 900,1080 1080,1385
-right operation that you see
+write operation, that you see
 
 124
 00:03:47,580 --> 00:03:49,010
@@ -655,31 +714,32 @@ left side.|
 126
 00:03:50,120 --> 00:03:52,780
 0,320 320,640 1230,1625 1625,2020
-But now what if?|
-但现在如果呢？|
+But now, what if,|
+但是现在，如果，|
 
 127
 00:03:52,780 --> 00:03:54,805
 0,290 520,810 810,1100 1330,1695 1695,2025
-After the ATM machine spitted
-在ATM机吐出25美元后。
+after the ATM machine spitted
+在 ATM 机吐出25美元后，
 
 128
 00:03:54,805 --> 00:03:56,780
 0,150 150,345 345,735 735,1025
-out the 25 dollars.|
+out the 25 dollars,|
 |
 
 129
 00:03:57,650 --> 00:03:58,870
 0,290 290,455 455,650 650,1070 1070,1220
-You went and yanked that
-你去拉了ATM机的电源线，这样它就不能把正确的钱送回来了。
+you went and yanked that
+你去拉了 ATM 机的电源线，
 
 130
 00:03:58,870 --> 00:04:00,295
 0,290 430,735 735,990 990,1260 1260,1425
-ATM machine power cord so
+ATM machine power cord,| so
+|这样它就不能把写入发回了，
 
 131
 00:04:00,295 --> 00:04:00,985
@@ -689,46 +749,50 @@ that it could not send
 132
 00:04:00,985 --> 00:04:02,160
 0,120 120,270 270,575
-the right back.|
+the write back,|
 |
 
 133
 00:04:02,450 --> 00:04:03,520
 0,350 350,635 635,830 830,935 935,1070
-Okay, imagine you were that
-好的，想象一下你跑得那么快，或者是自然停电了，那么疼痛就会发生。
+okay, imagine you were that
+好的，想象一下你那么快，
 
 134
 00:04:03,520 --> 00:04:04,810
 0,195 195,500 580,885 885,1050 1050,1290
-fast or there's a natural
+fast,| or there's a natural
+|或者是自然停电了，
 
 135
 00:04:04,810 --> 00:04:07,260
 0,240 240,590 1060,1460 1840,2145 2145,2450
-power failure, so the pain
+power failure,| so the paying
+|所以支付操作，
 
 136
 00:04:07,580 --> 00:04:08,940
 0,400
-action.|
+action,|
 |
 
 137
 00:04:09,070 --> 00:04:10,410
 0,400 450,785 785,1055 1055,1235 1235,1340
-And the right to the
-而且对数据库的访问权限也不是原子的。它们发生在不同的系统中。它们甚至可能在地理上分布得很广。在这些行动之间，可能会发生糟糕的事情。那么，我们如何确保这笔交易是正确的呢？显然，我们不希望这样。如果数据库系统是这样工作的，你的银行会非常不安，因为他们会赔钱。
+and the write to the
+和对数据库的写入不是原子的，
 
 138
 00:04:10,410 --> 00:04:12,195
 0,255 255,555 555,780 780,1430 1450,1785
-database is not atomic. They're
+database is not atomic,| they're
+|它们发生在不同的系统中，
 
 139
 00:04:12,195 --> 00:04:13,365
 0,180 180,375 375,600 600,945 945,1170
-happening in different systems. They
+happening in different systems,| they
+|它们甚至可能在地理上分布得很广，
 
 140
 00:04:13,365 --> 00:04:14,820
@@ -738,17 +802,20 @@ might even be geographically spread
 141
 00:04:14,820 --> 00:04:16,560
 0,320 580,980 1000,1335 1335,1575 1575,1740
-across. And bad things could
+across,| and bad things could
+|在这些行动之间，可能会发生糟糕的事情。
 
 142
 00:04:16,560 --> 00:04:18,260
 0,180 180,450 450,800 1120,1410 1410,1700
-happen in between those actions.
+happen in between those actions.|
+|
 
 143
 00:04:18,850 --> 00:04:20,085
 0,275 275,545 545,800 800,980 980,1235
 So how do we make
+那么，我们如何确保这笔交易是正确的，
 
 144
 00:04:20,085 --> 00:04:21,495
@@ -758,34 +825,37 @@ sure that this transaction is
 145
 00:04:21,495 --> 00:04:23,070
 0,335 595,960 960,1185 1185,1425 1425,1575
-correct? Obviously, we don't want
+correct,| obviously, we don't want
+|显然，我们不希望这样，
 
 146
 00:04:23,070 --> 00:04:23,910
 0,195 195,375 375,555 555,720 720,840
-that. Your bank would be
+that,| Your bank would be
+|你的银行会非常不安，
 
 147
 00:04:23,910 --> 00:04:25,065
 0,260 280,600 600,795 795,1035 1035,1155
-very upset if that's how
+very upset,| if that's how
+|如果数据库系统是这样工作的，
 
 148
 00:04:25,065 --> 00:04:27,045
 0,270 270,660 660,1055 1435,1785 1785,1980
-database systems work, because they
+database systems work,| because they
+|因为如果发生这个，他们会赔钱。
 
 149
 00:04:27,045 --> 00:04:28,360
 0,120 120,270 270,495 495,845
-would be losing money.|
-|
+would be losing money,
 
 150
 00:04:28,360 --> 00:04:29,800
 0,180 180,360 360,650 1090,1335 1335,1440
-If this happens, so we
-如果发生这种情况，那么我们希望这种类型的东西受到保护，我们将讨论如何保护。
+if this happens.| So we
+|那么我们希望这种类型的东西受到保护，
 
 151
 00:04:29,800 --> 00:04:30,760
@@ -795,7 +865,8 @@ want this type of stuff
 152
 00:04:30,760 --> 00:04:31,855
 0,135 135,330 330,675 675,930 930,1095
-to be protected and we'll
+to be protected| and we'll
+|我们将讨论如何保护。
 
 153
 00:04:31,855 --> 00:04:33,060
@@ -806,20 +877,20 @@ talk about how.|
 154
 00:04:33,130 --> 00:04:34,755
 0,410 410,665 665,1000 1110,1385 1385,1625
-Here's another scenario, a different
-这是另一个场景，一个不同的场景。
+Here's another scenario,| a different
+这是另一个场景，|一个不同的场景，
 
 155
 00:04:34,755 --> 00:04:35,940
 0,365
-scenario.|
+scenario,|
 |
 
 156
 00:04:35,980 --> 00:04:37,185
 0,365 365,605 605,830 830,1055 1055,1205
-Showing a different type of
-展示了一个我们也需要担心的不同类型的问题。因此，这不是停电或诸如此类的事情，而是同时发生的行动。所以想象一下，你和你的另一半都共享这个银行账户，你有个人借记卡，允许你从同一个银行账户借记。
+showing a different type of
+展示了一个我们也需要担心的不同类型的问题。
 
 157
 00:04:37,185 --> 00:04:38,205
@@ -829,7 +900,8 @@ problems that we also need
 158
 00:04:38,205 --> 00:04:39,540
 0,135 135,345 345,695 955,1215 1215,1335
-to worry about. So this
+to worry about.| So this
+|所以，这不是停电或诸如此类的事情，
 
 159
 00:04:39,540 --> 00:04:40,460
@@ -839,32 +911,38 @@ is not a power failure
 160
 00:04:40,750 --> 00:04:42,110
 0,395 395,680 680,845 845,1040 1040,1360
-or things of that sort,
+or things of that sort,|
+|
 
 161
 00:04:42,190 --> 00:04:44,580
 0,365 365,890 890,1150 1860,2135 2135,2390
-but concurrent actions. So imagine
+but concurrent actions.| So imagine,|
+而是同时发生的行动。|所以想象一下，|
 
 162
 00:04:44,580 --> 00:04:45,900
 0,255 255,405 405,555 555,830 940,1320
 you and your significant other
+你和你的另一半都共享这个银行账户，
 
 163
 00:04:45,900 --> 00:04:47,145
 0,330 330,585 585,765 765,1005 1005,1245
-both shared this bank account
+both shared this bank account|
+|
 
 164
 00:04:47,145 --> 00:04:48,840
 0,135 135,270 270,545 1015,1350 1350,1695
 and you have individual debit
+你有个人借记卡，
 
 165
 00:04:48,840 --> 00:04:50,520
 0,290 550,950 1180,1455 1455,1575 1575,1680
-cards that allow you to
+cards,| that allow you to
+|允许你从同一个银行账户借记，
 
 166
 00:04:50,520 --> 00:04:51,525
@@ -874,26 +952,26 @@ debit from that same bank
 167
 00:04:51,525 --> 00:04:52,320
 0,365
-account.|
+account,|
 |
 
 168
 00:04:52,320 --> 00:04:53,670
 0,345 345,615 615,840 840,1140 1140,1350
-And you both go to
-你们两个同时去两个不同的地方。
+and you both go to
+你们两个去两个不同的 ATM 机，
 
 169
 00:04:53,670 --> 00:04:55,790
 0,150 150,405 405,720 720,1065 1065,2120
-two separate at and simultaneously.|
-|
+two separate ATMs| and simultaneously
+|同时执行这笔交易，
 
 170
 00:04:56,600 --> 00:04:58,000
 0,305 305,500 500,790 990,1265 1265,1400
-Run this transaction so both
-运行这笔交易，这样你们两个都在运行取款25美元的操作序列。
+run this transaction,| so both
+|你们两个都在运行取款 25 美元的操作序列，
 
 171
 00:04:58,000 --> 00:04:58,750
@@ -908,40 +986,43 @@ sequence of actions to withdraw
 173
 00:05:01,375 --> 00:05:02,960
 0,465 465,755
-25 dollars.|
+25 dollars,|
 |
 
 174
 00:05:02,960 --> 00:05:04,180
 0,320
-And?|
-然后呢？|
+and,
+余额足够在两边检查通过，
 
 175
 00:05:04,460 --> 00:05:05,680
 0,335 335,620 620,860 860,1040 1040,1220
-Sufficient balance is checked on
-两边都有足够的平衡。你得到了自动取款机的付款，吐出了25美元，你的另一半也得到了付款。但现在，因为他们两人都读取了原始的银行余额，他们都计算出了新的余额为75。
+sufficient balance is checked on
 
 176
 00:05:05,680 --> 00:05:07,530
 0,225 225,560 1120,1395 1395,1560 1560,1850
-both sides. You get paid
+both sides,| you get paid,
+|你得到付款， ATM 吐出了 25 美元，
 
 177
 00:05:07,670 --> 00:05:09,270
 0,395 395,695 695,890 890,1310 1310,1600
-ATM, spits out 25 dollars,
+ATM spits out 25 dollars,|
+|
 
 178
 00:05:09,770 --> 00:05:11,310
 0,320 320,640 660,980 980,1220 1220,1540
-your significant other gets paid.
+your significant other gets paid,|
+你的另一半也得到了付款，
 
 179
 00:05:11,570 --> 00:05:13,015
 0,290 290,580 750,1070 1070,1280 1280,1445
-But now, because both of
+but now, because both of
+但是现在，因为他们两人都读取了原始的银行余额，
 
 180
 00:05:13,015 --> 00:05:14,380
@@ -951,7 +1032,8 @@ them read the original bank
 181
 00:05:14,380 --> 00:05:15,400
 0,300 300,555 555,705 705,855 855,1020
-balance, both of them have
+balance,| both of them have
+|他们都计算出了新的余额为 75 ，
 
 182
 00:05:15,400 --> 00:05:16,660
@@ -961,24 +1043,26 @@ calculated the new balance as
 183
 00:05:16,660 --> 00:05:17,940
 0,180 180,770
-being 75.|
+being 75,|
 |
 
 184
 00:05:18,780 --> 00:05:21,010
 0,400 690,950 950,1160 1160,1510 1830,2230
-Because everything looks correct. And
-因为一切看起来都是对的。然后第一个，第二个覆盖了它，现在银行缺了25美元。
+because everything looks correct,| and
+因为一切看起来都是对的，|然后第一个写入，
 
 185
 00:05:21,420 --> 00:05:23,885
 0,400 840,1100 1100,1265 1265,1570 2190,2465
-then the first one, the
+then the first {one,writes},| the
+|第二个覆盖了它，
 
 186
 00:05:23,885 --> 00:05:25,505
 0,195 195,450 450,1020 1020,1350 1350,1620
-second one overwrites that, and
+second one overwrites that,| and
+|现在银行缺少了 25 美元。
 
 187
 00:05:25,505 --> 00:05:26,465
@@ -994,29 +1078,32 @@ now the bank is short
 189
 00:05:27,870 --> 00:05:29,380
 0,305 305,470 470,620 620,910
-Again, this is not.|
-再说一次，这不是。|
+Again, this is not,
+再说一次，对银行来说，这不是一个理想的局面，
 
 190
 00:05:29,750 --> 00:05:30,960
 0,290 290,580 630,875 875,965 965,1210
-Ideal situation for the banks.
-对银行来说，这是一个理想的局面。银行永远不会使用数据库系统，或者如果允许这种事情发生，企业就不会使用数据库系统。
+ideal situation for the banks,|
+|
 
 191
 00:05:31,100 --> 00:05:32,220
 0,305 305,470 470,635 635,830 830,1120
-Banks would never use database
+banks would never use database
+银行永远不会使用数据库系统，
 
 192
 00:05:32,240 --> 00:05:33,940
 0,365 365,590 590,1120 1140,1535 1535,1700
-systems, or enterprises wouldn't use
+systems,| or enterprises wouldn't use
+|或者企业不会使用数据库系统，
 
 193
 00:05:33,940 --> 00:05:35,635
 0,290 310,710 1000,1290 1290,1485 1485,1695
-database systems if these types
+database systems,| if these types
+|如果允许这种事情发生。
 
 194
 00:05:35,635 --> 00:05:36,535
@@ -1032,23 +1119,26 @@ happen.|
 196
 00:05:37,400 --> 00:05:38,615
 0,195 195,750 750,885 885,1020 1020,1215
-So semantically, what we wanted
-因此，在语义上，我们希望数据库应用程序正在发送这个读写请求，该请求是由一些应用程序代码编写的，这些应用程序代码正在向数据库系统触发SQL查询，现在是通过应用程序代码编写器的低故障。这就是应用程序代码编写者正在做的事情，有效地编写了最终将这些重写操作发送到数据库的代码。它感觉数据库系统只是在破坏数据。因此，这显然不是我们想要的数据库系统。我们希望它表现良好。我们想要最后的余额，在这种情况下是50美元。
+So semantically,| what we wanted
+所以，在语义上，|我们希望的是，
 
 197
 00:05:38,615 --> 00:05:40,570
 0,255 255,555 555,795 795,1055 1555,1955
-is that we wanted the
+is that,| we wanted the
+|我们希望数据库，
 
 198
 00:05:40,710 --> 00:05:43,865
 0,400 1140,1540 2010,2410 2580,2915 2915,3155
-database application was sending this
+database,| application was sending this
+|发送这个读写请求的应用，
 
 199
 00:05:43,865 --> 00:05:45,320
 0,165 165,315 315,605 625,1025 1195,1455
-read and write request that
+read and write request,| that
+|由一些应用程序代码编写的，
 
 200
 00:05:45,320 --> 00:05:46,510
@@ -1058,47 +1148,54 @@ was written by some application
 201
 00:05:46,530 --> 00:05:48,440
 0,400 840,1205 1205,1475 1475,1805 1805,1910
-code that is firing up
+code,| that is firing up
+|向数据库系统发送 SQL 查询，
 
 202
 00:05:48,440 --> 00:05:49,415
 0,165 165,480 480,750 750,870 870,975
-the sql queries to the
+the SQL queries to the
 
 203
 00:05:49,415 --> 00:05:51,425
 0,245 265,665 955,1215 1215,1475 1705,2010
-database system and now through
+database system| and now to
+|现在应用程序代码编写者没有错误，
 
 204
 00:05:51,425 --> 00:05:52,715
 0,240 240,510 510,705 705,945 945,1290
-low fault of the application
+no fault of the application
 
 205
 00:05:52,715 --> 00:05:54,320
 0,285 285,605 925,1275 1275,1380 1380,1605
-code writer. That's what the
+code writer,| that's what the
+|这就是应用程序代码编写者做的事情，
 
 206
 00:05:54,320 --> 00:05:55,570
 0,330 330,600 600,795 795,975 975,1250
-application code writer is doing,
+application code writer is doing,|
+|
 
 207
 00:05:55,770 --> 00:05:57,140
 0,395 395,725 725,935 935,1145 1145,1370
-effectively writing the code that
+effectively writing the code,| that
+有效地编写代码，|最终将这些读写操作发送给数据库，
 
 208
 00:05:57,140 --> 00:05:58,985
 0,195 195,500 700,1035 1035,1350 1350,1845
-ends up sending those rewrite
+ends up,| sending those {read,write}
+|
 
 209
 00:05:58,985 --> 00:06:00,500
 0,300 300,525 525,630 630,875 1225,1515
-operations to the database. It
+operations to the database,| it
+|它感觉是数据库系统在破坏数据，
 
 210
 00:06:00,500 --> 00:06:01,715
@@ -1108,7 +1205,8 @@ feels the database system is
 211
 00:06:01,715 --> 00:06:03,215
 0,165 165,630 630,750 750,995 1225,1500
-just corrupting the data. So
+just corrupting the data,| so
+|这显然不是我们想要的数据库系统，
 
 212
 00:06:03,215 --> 00:06:04,970
@@ -1118,56 +1216,60 @@ that's obviously not what we
 213
 00:06:04,970 --> 00:06:06,155
 0,225 225,465 465,600 600,855 855,1185
-want of a database system.
+want of a database system,|
+|
 
 214
 00:06:06,155 --> 00:06:06,920
 0,195 195,360 360,525 525,645 645,765
-We want it to be
+we want it to be
+我们希望它表现良好，
 
 215
 00:06:06,920 --> 00:06:08,585
 0,210 210,740 880,1140 1140,1395 1395,1665
-well behaved. We want the
+well behaved,| we want the
+|我们想要最后的余额，在这种情况下，是 50 美元。
 
 216
 00:06:08,585 --> 00:06:09,850
 0,240 240,555 555,780 780,960 960,1265
-final balance, in this case
+final balance, in this case,
 
 217
 00:06:09,990 --> 00:06:11,360
 0,245 245,365 365,575 575,910
-to be fifty dollars.|
+to be 50 dollars.|
 |
 
 218
 00:06:11,540 --> 00:06:12,480
 0,260 260,395 395,560 560,695 695,940
 Okay, so how do we
-好的，那么我们如何处理这些糟糕的系统、系统和行为？
+好的，那么我们如何处理这些糟糕的系统行为，
 
 219
 00:06:12,710 --> 00:06:15,180
 0,335 335,670 750,1085 1085,1420 2070,2470
-deal with these bad systems,
+deal with these bad system's,
 
 220
 00:06:15,500 --> 00:06:17,240
 0,400 510,910
-systems, behavior?|
+system's behavior,|
 |
 
 221
 00:06:17,250 --> 00:06:18,995
 0,400 660,995 995,1175 1175,1420 1470,1745
-And have the database be
-并使数据库保持一致，因为最终数据库是记录的保管者。这是你在银行账户中的主副本，尽管有这些不同的故障场景，但它必须保持一致。
+and have the database be
+并使数据库保持一致，
 
 222
 00:06:18,995 --> 00:06:20,495
 0,345 345,675 675,1020 1020,1245 1245,1500
-coherent because ultimately the database
+coherent,| because ultimately the database
+|因为最终数据库是记录的保管者，
 
 223
 00:06:20,495 --> 00:06:21,830
@@ -1177,7 +1279,8 @@ is the keeper of the
 224
 00:06:21,830 --> 00:06:23,750
 0,255 255,675 675,950 1150,1550 1600,1920
-records. That's the master copy
+records,| That's the master copy
+|这是你在银行账户中的主副本，
 
 225
 00:06:23,750 --> 00:06:24,590
@@ -1187,12 +1290,14 @@ of what you have in
 226
 00:06:24,590 --> 00:06:25,625
 0,105 105,315 315,660 660,900 900,1035
-the bank account, and it
+the bank account,| and it
+|它必须保持一致，
 
 227
 00:06:25,625 --> 00:06:27,050
 0,210 210,375 375,555 555,905 1105,1425
-has to be consistent in
+has to be consistent,| in
+|尽管有这些不同的故障场景。
 
 228
 00:06:27,050 --> 00:06:28,040
@@ -1208,8 +1313,8 @@ failure scenarios.|
 230
 00:06:29,820 --> 00:06:31,595
 0,275 275,550 570,965 965,1360 1440,1775
-So one system way, assuming
-因此，一种系统方法，假设你没有断电，是说，好的，我有的第二种选择是并发操作相互破坏。
+So, one system way,| assuming
+所以，一种系统方法，|假设你没有断电，
 
 231
 00:06:31,595 --> 00:06:32,450
@@ -1219,7 +1324,8 @@ that you don't have power
 232
 00:06:32,450 --> 00:06:33,965
 0,350 610,885 885,1035 1035,1260 1260,1515
-failure, is to say, okay,
+failure,| is to say, okay,
+|是说，好的，我有的第二种选择是，
 
 233
 00:06:33,965 --> 00:06:35,470
@@ -1229,19 +1335,20 @@ the second type of option
 234
 00:06:35,610 --> 00:06:37,025
 0,260 260,380 380,545 545,850 930,1415
-that I had where concurrent
+that I had were,| concurrent
+|并发操作相互破坏，
 
 235
 00:06:37,025 --> 00:06:38,350
 0,225 225,480 480,900 900,1035 1035,1325
-actions were corrupting each other.|
+actions were corrupting each other,|
 |
 
 236
 00:06:39,080 --> 00:06:40,100
 0,300 300,495 495,705 705,960 960,1020
-Is to say, I'm going
-就是说，我将拥有一个非常简单的数据库系统。
+is to say,| I'm going
+就是说，|我将拥有一个非常简单的数据库系统，
 
 237
 00:06:40,100 --> 00:06:40,865
@@ -1251,14 +1358,14 @@ to have a very simple
 238
 00:06:40,865 --> 00:06:42,340
 0,335 355,755
-database system.|
+database system,|
 |
 
 239
 00:06:42,350 --> 00:06:43,960
 0,305 305,545 545,770 770,1060 1140,1610
-Even if two people requested
-即使两个人同时请求查询，我一次也只运行一个查询。我将把我收到的所有请求都放入队列，一次只运行一个查询，这样我就可以针对我们刚才讨论的场景获得合理、正确的行为。
+even if two people requested
+即使两个人同时请求查询，
 
 240
 00:06:43,960 --> 00:06:44,710
@@ -1268,7 +1375,8 @@ the queries at the same
 241
 00:06:44,710 --> 00:06:45,820
 0,180 180,360 360,525 525,795 795,1110
-time, I will only run
+time,| I will only run
+|我一次也只运行一个查询，
 
 242
 00:06:45,820 --> 00:06:47,170
@@ -1278,7 +1386,8 @@ the one query at a
 243
 00:06:47,170 --> 00:06:48,115
 0,150 150,360 360,435 435,585 585,945
-time. I'm going to queue
+time,| I'm going to queue
+|我将把我收到的所有请求都放入队列，
 
 244
 00:06:48,115 --> 00:06:49,495
@@ -1288,22 +1397,26 @@ everything up, all the requests
 245
 00:06:49,495 --> 00:06:50,650
 0,195 195,485 625,885 885,1005 1005,1155
-I get, I will run
+I get,| I will run
+|一次只运行一个查询，
 
 246
 00:06:50,650 --> 00:06:51,660
 0,195 195,435 435,600 600,735 735,1010
-one query at a time
+one query at a time|
+|
 
 247
 00:06:51,920 --> 00:06:54,400
 0,400 1350,1625 1625,1805 1805,2110 2130,2480
 and I can get a
+这样我就可以获得合理、正确的行为，
 
 248
 00:06:54,400 --> 00:06:56,485
 0,680 760,1110 1110,1460 1720,1965 1965,2085
-sensible, correct behavior for the
+sensible, correct behavior| for the
+|针对我们刚才讨论的场景。
 
 249
 00:06:56,485 --> 00:06:57,750
@@ -1315,17 +1428,19 @@ scenario we just talked about.|
 00:06:58,140 --> 00:06:59,130
 0,240 240,450 450,690 690,855 855,990
 I can also start to
-我还可以开始做一些事情，比如在事务开始之前，我可以复制整个数据库，在那里进行所有更改，如果事务成功完成，所以没有停电，所有其他类型的事情，我将用新的副本覆盖它。
+我还可以开始做一些事情，
 
 251
 00:06:59,130 --> 00:07:00,030
 0,150 150,345 345,525 525,720 720,900
-do things like before a
+do things,| like before a
+|比如在事务开始之前，
 
 252
 00:07:00,030 --> 00:07:01,410
 0,260 520,840 840,1020 1020,1140 1140,1380
-transaction starts, I can make
+transaction starts,| I can make
+|我可以复制整个数据库，
 
 253
 00:07:01,410 --> 00:07:02,445
@@ -1335,17 +1450,20 @@ a copy of the entire
 254
 00:07:02,445 --> 00:07:04,200
 0,305 865,1155 1155,1335 1335,1500 1500,1755
-database, make all the changes
+database,| make all the changes
+|在那里进行所有更改，
 
 255
 00:07:04,200 --> 00:07:05,810
 0,380 730,1050 1050,1215 1215,1335 1335,1610
-there, and if the transaction
+there,| and if the transaction
+|如果事务成功完成，
 
 256
 00:07:06,400 --> 00:07:08,370
 0,305 305,610 1260,1610 1610,1880 1880,1970
-complete successfully, so didn't have
+complete successfully,| so didn't have
+|所以没有停电，所有其他类型的事情，
 
 257
 00:07:08,370 --> 00:07:09,360
@@ -1355,12 +1473,14 @@ a power failure, all of
 258
 00:07:09,360 --> 00:07:10,340
 0,120 120,285 285,480 480,675 675,980
-that other kinds of stuff,
+that other kinds of stuff,|
+|
 
 259
 00:07:10,780 --> 00:07:11,835
 0,260 260,410 410,815 815,950 950,1055
 I will overwrite it with
+我将用新的副本覆盖它。
 
 260
 00:07:11,835 --> 00:07:12,920
@@ -1372,27 +1492,31 @@ a new copy.|
 00:07:13,020 --> 00:07:13,940
 0,275 275,425 425,575 575,710 710,920
 Both of these are really
-这两种方法都非常糟糕，因为它们将给您提供某种形式的正确性，但从性能角度来看，它们非常糟糕，因为它将是一个非常非常慢的数据库系统，现在您将无法完全正确地使用它。当你去亚马逊，你在检查你的购物车时，你最终会知道一些事情会发生，发布数据库交易记录，从你的借记中扣除，添加到你的购物卡中。最终，另一笔交易被发送到你的信用卡账户，记录下来，这笔金额需要借记，所有这些都正常工作，即使有多个人也是如此。
+这两种方法都非常糟糕，
 
 262
 00:07:13,940 --> 00:07:15,905
 0,350 640,975 975,1185 1185,1460 1690,1965
-bad from they will give
+bad,| from they will give
+|因为它们将给你提供某种形式的正确性，
 
 263
 00:07:15,905 --> 00:07:17,170
 0,180 180,375 375,540 540,750 750,1265
-you some form of correctness,
+you some form of correctness,|
+|
 
 264
 00:07:17,250 --> 00:07:18,230
 0,260 260,410 410,575 575,815 815,980
 but they're really bad from
+但从性能角度来看，它们非常糟糕，
 
 265
 00:07:18,230 --> 00:07:20,705
 0,195 195,530 790,1190 1690,2090 2200,2475
-a performance perspective because it
+a performance perspective,| because it
+|因为它将是一个非常非常慢的数据库系统，
 
 266
 00:07:20,705 --> 00:07:22,870
@@ -1402,7 +1526,8 @@ would be a very, very
 267
 00:07:22,950 --> 00:07:25,780
 0,400 570,970 1020,1420 1770,2170 2430,2830
-slow database system and you
+slow database system| and you
+|你甚至无法使用它。
 
 268
 00:07:25,800 --> 00:07:26,705
@@ -1412,12 +1537,14 @@ won't be able to quite
 269
 00:07:26,705 --> 00:07:27,740
 0,210 210,405 405,585 585,825 825,1035
-use that right today. When
+use that, right.| Today, when
+|今天，当你去亚马逊，
 
 270
 00:07:27,740 --> 00:07:28,745
 0,120 120,255 255,530 550,840 840,1005
-you go to Amazon and
+you go to Amazon| and
+|你在检查你的购物车时，
 
 271
 00:07:28,745 --> 00:07:30,365
@@ -1427,7 +1554,8 @@ you're checking out your shopping
 272
 00:07:30,365 --> 00:07:32,210
 0,365 475,720 720,915 915,1260 1260,1845
-cart, you know ultimately something
+cart,| you know ultimately something
+|最终一些事情会发生，发布数据库事务记录，
 
 273
 00:07:32,210 --> 00:07:34,180
@@ -1437,59 +1565,68 @@ going and issuing database transaction
 274
 00:07:34,320 --> 00:07:35,890
 0,400 420,710 710,1040 1040,1265 1265,1570
-records to debit from your
+records| to debit from your,|
+|从你的借记卡中扣除，|
 
 275
 00:07:36,180 --> 00:07:37,340
 0,320 320,590 590,785 785,905 905,1160
 to add to your shopping
+添加到你的购物车中，
 
 276
 00:07:37,340 --> 00:07:39,305
 0,380 490,890 910,1215 1215,1520 1630,1965
-card. Eventually another transaction gets
+cart,| eventually another transaction gets
+|最终，另一笔交易被发送到那里，
 
 277
 00:07:39,305 --> 00:07:40,505
 0,335 475,765 765,885 885,990 990,1200
-there sent to your credit
+there,| sent to your credit
+|发送给你的信用卡账户，记录下来，
 
 278
 00:07:40,505 --> 00:07:42,185
 0,335 385,705 705,1025 1135,1455 1455,1680
-card account to record that,
+card account to record that,|
+|
 
 279
 00:07:42,185 --> 00:07:43,100
 0,225 225,450 450,660 660,810 810,915
 that amount needs to be
+这笔金额需要借记，
 
 280
 00:07:43,100 --> 00:07:44,420
 0,500 580,870 870,1035 1035,1170 1170,1320
-debted and all of that
+debted| and all of that
+|所有这些工作都是正确的，
 
 281
 00:07:44,420 --> 00:07:45,875
 0,285 285,675 675,975 975,1170 1170,1455
-works correctly, even if multiple
+works correctly,| even if multiple
+|即使有多个人，
 
 282
 00:07:45,875 --> 00:07:46,840
 0,395
-people.|
+people,|
 |
 
 283
 00:07:46,840 --> 00:07:48,100
 0,210 210,500 550,840 840,1140 1140,1260
-Ah, multiple account holders on
-啊，同一张信用卡上的多个账户持有人同时进行交易。正在创建多个购物车。因此，我们真的希望能够规模化地进行这项工作。我们不想一次只做一笔交易。你想要一次处理数千、数万、甚至数百万的交易。
+{} multiple account holders on
+同一张信用卡上的多个账户持有人，
 
 284
 00:07:48,100 --> 00:07:49,570
 0,120 120,285 285,525 525,860 1090,1470
-the same credit card are
+the same credit card| are
+|同时进行交易，
 
 285
 00:07:49,570 --> 00:07:50,755
@@ -1499,12 +1636,14 @@ doing the transactions at the
 286
 00:07:50,755 --> 00:07:52,405
 0,195 195,515 595,995 1015,1365 1365,1650
-same time. Multiple shopping carts
+same time,| multiple shopping carts
+|创建多个购物车。
 
 287
 00:07:52,405 --> 00:07:53,680
 0,105 105,330 330,695 925,1170 1170,1275
-are getting created. So we
+are getting created.| So we
+|所以，我们真的希望能够规模化地进行这项工作，
 
 288
 00:07:53,680 --> 00:07:54,460
@@ -1514,32 +1653,37 @@ really want to be able
 289
 00:07:54,460 --> 00:07:55,410
 0,150 150,270 270,405 405,615 615,950
-to do this at scale.
+to do this at scale,|
+|
 
 290
 00:07:55,640 --> 00:07:56,320
 0,245 245,365 365,425 425,530 530,680
-We don't want to do
+we don't want to do
+我们不想一次只做一笔交易，
 
 291
 00:07:56,320 --> 00:07:57,660
 0,225 225,560 700,960 960,1080 1080,1340
-one transactions at a time.
+one transactions at a time,|
+|
 
 292
 00:07:57,770 --> 00:07:58,680
 0,245 245,365 365,500 500,635 635,910
-You want to be doing
+you want to be doing
+你想要一次处理数千、数万，
 
 293
 00:07:58,700 --> 00:08:00,265
 0,400 570,890 890,1085 1085,1325 1325,1565
-thousands, tens of thousands, if
+thousands, tens of thousands,| if
+|甚至数百万、数十亿的交易。
 
 294
 00:08:00,265 --> 00:08:01,375
 0,210 210,495 495,720 720,975 975,1110
-not millions of billions of
+not millions or billions of
 
 295
 00:08:01,375 --> 00:08:02,740
@@ -1551,17 +1695,19 @@ transactions at a time.|
 00:08:02,870 --> 00:08:03,520
 0,260 260,365 365,470 470,560 560,650
 Okay, so how do we
-好吧，那我们该怎么做呢？这真的是个很难解决的问题，好吗？如果我们希望更好地利用数据库硬件，我们需要更高的吞吐量和更快的响应时间，当然，我们还希望它是正确的。
+好的，那我们该怎么做，
 
 297
 00:08:03,520 --> 00:08:04,420
 0,135 135,315 315,540 540,660 660,900
-do that? That's a really
+do that,| that's a really
+|这是个很难解决的问题。
 
 298
 00:08:04,420 --> 00:08:05,860
 0,270 270,590 1000,1245 1245,1335 1335,1440
-hard problem, okay? If we
+hard problem.| Okay, if we
+|好的，如果我们希望更好地利用数据库硬件，
 
 299
 00:08:05,860 --> 00:08:07,285
@@ -1571,12 +1717,14 @@ want better utilization for the
 300
 00:08:07,285 --> 00:08:09,295
 0,245 595,995 1315,1575 1575,1740 1740,2010
-database hardware, we want higher
+database hardware,| we want higher
+|我们需要更高的吞吐量和更快的响应时间，
 
 301
 00:08:09,295 --> 00:08:11,575
 0,545 715,1115 1165,1515 1515,1865 2035,2280
-throughput, better response times, and
+throughput, better response times,| and
+|当然，我们希望它是正确的，
 
 302
 00:08:11,575 --> 00:08:12,445
@@ -1586,19 +1734,20 @@ of course, we want it
 303
 00:08:12,445 --> 00:08:13,620
 0,90 90,285 285,635
-to be correct.|
+to be correct,|
 |
 
 304
 00:08:13,630 --> 00:08:14,655
 0,260 260,470 470,680 680,845 845,1025
-So that the right thing
-所以正确的事情发生了，我们将定义什么是正确的概念。
+so that the right thing
+让正确的事情发生，
 
 305
 00:08:14,655 --> 00:08:15,780
 0,275 295,570 570,795 795,975 975,1125
-happens, and we'll define what
+happens,| and we'll define what
+|我们将定义正确的概念是什么。
 
 306
 00:08:15,780 --> 00:08:17,150
@@ -1610,7 +1759,7 @@ that notion of correctness is.|
 00:08:18,190 --> 00:08:19,365
 0,305 305,470 470,650 650,905 905,1175
 And in many cases, you
-在许多情况下，你们也希望这是公平的，所以如果同时有多笔交易，你们希望所有的交易都有平等的机会完成，而不是说我会永远把你们中的两个留在后面，让其他人继续前进，对吗？这不公平，你想要有一些公平的概念。
+在许多情况下，你也希望这是公平的，
 
 308
 00:08:19,365 --> 00:08:19,995
@@ -1620,17 +1769,20 @@ also want it to be
 309
 00:08:19,995 --> 00:08:21,950
 0,275 835,1110 1110,1305 1305,1590 1590,1955
-fair, so if multiple transactions
+fair,| so if multiple transactions
+|所以如果同时有多个事务，
 
 310
 00:08:22,120 --> 00:08:23,210
 0,275 275,410 410,545 545,755 755,1090
-come at the same time,
+come at the same time,|
+|
 
 311
 00:08:23,260 --> 00:08:24,285
 0,245 245,410 410,650 650,845 845,1025
 you want all of them
+你希望所有的事务都有平等的机会完成，
 
 312
 00:08:24,285 --> 00:08:25,245
@@ -1640,7 +1792,8 @@ to be given that equal
 313
 00:08:25,245 --> 00:08:26,700
 0,345 345,675 675,1035 1035,1290 1290,1455
-chance to complete and not
+chance to complete| and not
+|而不是说我会永远把你们中的两个留在后面，
 
 314
 00:08:26,700 --> 00:08:27,255
@@ -1655,7 +1808,8 @@ hold two of you in
 316
 00:08:28,455 --> 00:08:29,895
 0,120 120,365 415,815 955,1245 1245,1440
-the back forever and just
+the back forever| and just
+|让其他人继续前进，
 
 317
 00:08:29,895 --> 00:08:31,305
@@ -1665,12 +1819,14 @@ let the other others go
 318
 00:08:31,305 --> 00:08:32,420
 0,240 240,450 450,690 690,825 825,1115
-forward, right? That's not fair,
+forward, right,| that's not fair,|
+|这不公平，|
 
 319
 00:08:32,530 --> 00:08:33,915
 0,260 260,425 425,650 650,970 1110,1385
 you want to have some
+你想要有一些公平的概念。
 
 320
 00:08:33,915 --> 00:08:35,780
@@ -1682,17 +1838,19 @@ notion of fairness.|
 00:08:36,090 --> 00:08:37,355
 0,365 365,620 620,890 890,1130 1130,1265
 And some systems may not
-而有些系统可能不具备这一点。有时你有优先事项，你说我想要高优先级的交易完成。但假设你想要公平，你至少想要拥有公平的能力。在对工作负载进行分区以释放优先级较高的工作负载方面，如何平衡这一点则是另一个问题。但您确实希望将公平机制构建到数据库系统中。
+有些系统可能不具备这一点，
 
 322
 00:08:37,355 --> 00:08:38,300
 0,135 135,270 270,510 510,750 750,945
-have that. Sometimes you have
+have that,| sometimes you have
+|有时你有优先级，
 
 323
 00:08:38,300 --> 00:08:39,530
 0,320 430,675 675,780 780,1005 1005,1230
-priorities where you say I
+priorities,| where you say I
+|你说我想要高优先级的事务完成，
 
 324
 00:08:39,530 --> 00:08:41,060
@@ -1702,12 +1860,14 @@ want high priorities transactions to
 325
 00:08:41,060 --> 00:08:42,560
 0,150 150,300 300,540 540,920 1210,1500
-go through. But assuming you
+go through,| but assuming you
+|但假设你想要公平，
 
 326
 00:08:42,560 --> 00:08:43,415
 0,210 210,555 555,660 660,735 735,855
-want fairness, you at least
+want fairness,| you at least
+|你至少想要拥有公平的能力，
 
 327
 00:08:43,415 --> 00:08:44,585
@@ -1717,27 +1877,31 @@ want the capability of having
 328
 00:08:44,585 --> 00:08:46,205
 0,575 595,855 855,990 990,1265 1315,1620
-fairness. How you balance that
+fairness,| how you balance that,|
+|如何平衡，|
 
 329
 00:08:46,205 --> 00:08:47,285
 0,180 180,345 345,510 510,945 945,1080
 in terms of partitioning your
+对工作负载进行分区，让优先级较高工作负载先执行，
 
 330
 00:08:47,285 --> 00:08:48,970
 0,545 715,990 990,1155 1155,1365 1365,1685
-workload to let higher priority
+workload, to let higher priority
 
 331
 00:08:48,990 --> 00:08:50,705
 0,320 320,640 1110,1385 1385,1520 1520,1715
-stuff go is a different
+stuff go| is a different
+|是另一个问题，
 
 332
 00:08:50,705 --> 00:08:51,890
 0,335 415,675 675,825 825,1005 1005,1185
-issue. But you do want
+issue,| but you do want
+|但你确实希望将公平机制构建到数据库系统中。
 
 333
 00:08:51,890 --> 00:08:53,765
@@ -1758,8 +1922,8 @@ system.|
 336
 00:08:56,870 --> 00:08:58,075
 0,335 335,635 635,875 875,1040 1040,1205
-Okay, questions so far in
-好的，到目前为止，关于我们试图实现的目标的问题。
+Okay, questions so far,| in
+好的，到目前为止有什么问题，|关于我们试图实现的目标。
 
 337
 00:08:58,075 --> 00:08:58,750
@@ -1776,39 +1940,41 @@ trying to achieve.|
 00:09:02,240 --> 00:09:03,300
 0,400
 Yep.|
-是啊。|
+是的。|
 
 340
 00:09:03,310 --> 00:09:04,680
 0,275 275,455 455,760
-Try to follow.|
-试着跟上。|
 
 341
 00:09:05,950 --> 00:09:06,900
 0,260 260,395 395,545 545,755 755,950
-We will try to, we
-我们会努力，我们会解决所有的问题，除了停电问题，停电问题都会解决。我们稍后将介绍所有的解决方案，在电源故障方面有一个非常微妙的问题，这是我们在接下来的几节课中将讨论的所有问题，我们可以确保数据库记录最终处于正确的状态。
+We will try to,| we
+我们试着，|我们会解决所有的问题，
 
 342
 00:09:06,900 --> 00:09:08,240
 0,180 180,500 610,945 945,1110 1110,1340
-will solve all the issues
+will solve all the issues|
+|
 
 343
 00:09:08,290 --> 00:09:09,620
 0,275 275,425 425,665 665,980 980,1330
-except the power failure issue
+except the power failure issue|
+除了停电问题，|
 
 344
 00:09:10,030 --> 00:09:11,480
 0,320 320,515 515,755 755,1085 1085,1450
 and the power failure issue
+停电问题会解决，
 
 345
 00:09:11,740 --> 00:09:13,200
 0,290 290,455 455,725 725,970 1170,1460
-will be solved. And we
+will be solved,| and we
+|我们稍后将介绍所有的解决方案，
 
 346
 00:09:13,200 --> 00:09:13,935
@@ -1818,7 +1984,8 @@ get to all of that
 347
 00:09:13,935 --> 00:09:15,770
 0,275 295,615 615,900 900,1265 1435,1835
-solution later on where the,
+solution later on| where the,
+|在停电方面有一个非常微妙的问题，
 
 348
 00:09:16,420 --> 00:09:17,415
@@ -1828,12 +1995,14 @@ there's a very subtle issue
 349
 00:09:17,415 --> 00:09:18,770
 0,165 165,330 330,585 585,935 955,1355
-in the power failure stuff,
+in the power failure stuff,|
+|
 
 350
 00:09:18,940 --> 00:09:20,370
 0,275 275,550 840,1115 1115,1280 1280,1430
 which is with all the
+在接下来的几节课中将讨论的所有问题，
 
 351
 00:09:20,370 --> 00:09:21,045
@@ -1843,7 +2012,8 @@ stuff we'll talk about in
 352
 00:09:21,045 --> 00:09:21,900
 0,60 60,210 210,375 375,705 705,855
-the next few lectures, we
+the next few lectures,| we
+|我们可以确保数据库记录最终处于正确的状态。
 
 353
 00:09:21,900 --> 00:09:22,710
@@ -1865,57 +2035,67 @@ the right state.|
 00:09:25,860 --> 00:09:26,910
 0,165 165,345 345,525 525,780 780,1050
 But if the bank has
-但如果银行向你支付了25美元，而停电了，就需要采取额外的行动，因为这25美元是身体上的行动。其他一切都是数字化的行动。为了取消他们不应该支付给你的25美元的操作，银行必须在物理空间进行单独的交易，在那里他们会给你发一封信，说，哎呀，我们不小心付给了你25美元，但这是你的银行账户。因此，还有其他方法可以做到这一点。我们不会的。如果我们不希望它们发生，我们将能够撤销所有地区权利。
+但如果银行向你支付了 25 美元，
 
 357
 00:09:26,910 --> 00:09:28,335
 0,210 210,390 390,780 780,1070 1120,1425
-paid you 25 dollars and
+paid you 25 dollars| and
+|然后停电了，
 
 358
 00:09:28,335 --> 00:09:30,360
 0,225 225,330 330,555 555,905 1645,2025
-there's a power failure, there's
+there's a power failure,| there's
+|就需要采取额外的操作，
 
 359
 00:09:30,360 --> 00:09:31,610
 0,255 255,630 630,855 855,975 975,1250
-extra action that is needed
+extra action that is needed,|
+|
 
 360
 00:09:32,080 --> 00:09:33,825
 0,350 350,605 605,1040 1040,1360 1440,1745
 because that 25 dollars has
+因为这 25 美元是物理上的操作，
 
 361
 00:09:33,825 --> 00:09:35,550
 0,180 180,390 390,705 705,1085 1465,1725
-been a physical action. Everything
+been a physical action,| everything
+|其他一切都是数字上的操作，
 
 362
 00:09:35,550 --> 00:09:36,620
 0,135 135,270 270,420 420,690 690,1070
-else is a digital action.
+else is a digital action,|
+|
 
 363
 00:09:36,970 --> 00:09:39,030
 0,305 305,610 840,1460 1460,1745 1745,2060
-And to undo that action
+and to undo that action
+为了取消支付给你的 25 美元的操作，
 
 364
 00:09:39,030 --> 00:09:40,140
 0,225 225,390 390,555 555,885 885,1110
-of paying you 25 dollars
+of paying you 25 dollars,|
+|
 
 365
 00:09:40,140 --> 00:09:40,875
 0,210 210,345 345,480 480,600 600,735
 when they should not have
+他们不应该支付的，
 
 366
 00:09:40,875 --> 00:09:42,255
 0,275 625,885 885,1065 1065,1245 1245,1380
-paid, the bank would have
+paid,| the bank would have
+|银行必须在物理空间进行单独的事务，
 
 367
 00:09:42,255 --> 00:09:43,740
@@ -1925,7 +2105,8 @@ to then do a separate
 368
 00:09:43,740 --> 00:09:45,240
 0,380 460,750 750,1040 1060,1350 1350,1500
-transaction in physical space where
+transaction in physical space| where
+|他们会给你发一封信，说，
 
 369
 00:09:45,240 --> 00:09:45,885
@@ -1935,12 +2116,14 @@ they'll send you a letter
 370
 00:09:45,885 --> 00:09:47,325
 0,225 225,645 645,945 945,1305 1305,1440
-saying, whoops, we accidentally paid
+saying,| whoops, we accidentally paid
+|哎呀，我们不小心付给了你 25 美元，
 
 371
 00:09:47,325 --> 00:09:48,885
 0,150 150,495 495,785 1045,1320 1320,1560
-you 25 dollars, but here's
+you 25 dollars,| but here's
+|但这是你的银行账户。
 
 372
 00:09:48,885 --> 00:09:50,070
@@ -1950,27 +2133,31 @@ what what your bank account
 373
 00:09:50,070 --> 00:09:51,225
 0,290 610,855 855,930 930,990 990,1155
-is. So there are other
+is.| So there are other
+|所以，还有其他方法可以做到这个，
 
 374
 00:09:51,225 --> 00:09:52,410
 0,255 255,435 435,555 555,815 895,1185
-ways to do that. We
+ways to do that,| we
+|我们不会，
 
 375
 00:09:52,410 --> 00:09:53,550
 0,410 490,750 750,870 870,975 975,1140
-won't. We will be able
+won't,| we will be able
+|我们将能够撤销所有读写，
 
 376
 00:09:53,550 --> 00:09:54,945
 0,270 270,765 765,975 975,1155 1155,1395
-to undo all the region
+to undo all the {read,and}
 
 377
 00:09:54,945 --> 00:09:56,640
 0,330 330,570 570,735 735,1175 1405,1695
-rights if we don't want
+writes,| if we don't want
+|如果我们不希望它们发生。
 
 378
 00:09:56,640 --> 00:09:57,600
@@ -1982,22 +2169,25 @@ them to happen.|
 00:09:57,670 --> 00:09:58,800
 0,350 350,560 560,770 770,995 995,1130
 But, you know, if the
-但是，你知道，如果交易是支付25美元是一个实际行动，你不能撤销它。你可以通过在现实世界中做其他物理动作来撤销这一点。好的?同样，如果有一笔交易发射了一枚导弹，你就不能撤销那枚导弹。你不能带那枚导弹，你必须发一封道歉信或其他类似的东西，对吗？所以，或者一些非常糟糕的事情。所以就像是。
+但是，如果事务是，
 
 380
 00:09:58,800 --> 00:10:00,345
 0,260 370,705 705,945 945,1320 1320,1545
-transaction is {pay25 -} dollars
+transaction is,| {pay,25 -} dollars
+|支付 25 美元是一个物理操作，
 
 381
 00:10:00,345 --> 00:10:01,425
 0,195 195,330 330,570 570,870 870,1080
-is a physical actions, you
+is a physical action,| you
+|你不能撤销它，
 
 382
 00:10:01,425 --> 00:10:03,075
 0,210 210,495 495,755 955,1305 1305,1650
-can't undo it. You'll undo
+can't undo it,| you'll undo
+|你可以通过在物理世界中做其他物理操作来撤销这个。
 
 383
 00:10:03,075 --> 00:10:04,140
@@ -2007,32 +2197,38 @@ that by doing other physical
 384
 00:10:04,140 --> 00:10:05,390
 0,300 300,510 510,630 630,870 870,1250
-actions in the physical world.
+actions in the physical world.|
+|
 
 385
 00:10:05,770 --> 00:10:07,050
 0,260 260,665 665,890 890,1190 1190,1280
-OK? Similarly, if there's a
+Okay, similarly,| if there's a
+好的，同样，|如果有一个事务发射了一枚导弹，
 
 386
 00:10:07,050 --> 00:10:08,220
 0,260 280,570 570,765 765,915 915,1170
-transaction that fired a missile,
+transaction that fired a missile,|
+|
 
 387
 00:10:08,220 --> 00:10:09,210
 0,120 120,300 300,510 510,660 660,990
-you can't undo that missile.
+you can't undo that missile,|
+你就不能撤销那枚导弹，|
 
 388
 00:10:09,210 --> 00:10:10,080
 0,150 150,315 315,435 435,585 585,870
-You can't bring that missile
+you can't bring that missile
+你不能撤回那枚导弹，
 
 389
 00:10:10,080 --> 00:10:11,100
 0,290 430,675 675,780 780,900 900,1020
-that you have to send
+back,| you have to send
+|你必须发一封道歉信或其他类似的东西。
 
 390
 00:10:11,100 --> 00:10:12,240
@@ -2042,24 +2238,26 @@ an apology letter or something
 391
 00:10:12,240 --> 00:10:13,550
 0,240 240,450 450,660 660,945 945,1310
-else like that, right? So,
+else like that, right.| So,
+|所以，或者一些非常糟糕的事情，
 
 392
 00:10:14,290 --> 00:10:15,860
 0,320 320,590 590,890 890,1205 1205,1570
-or something really bad. So
+or something really bad,| so
+|所以就像是，
 
 393
 00:10:15,880 --> 00:10:16,880
 0,335 335,580
-it's like.|
+it's like,|
 |
 
 394
 00:10:16,880 --> 00:10:18,550
 0,270 270,735 735,975 975,1290 1290,1670
-The undo for physical actions
-事务中物理操作的撤消将需要在物理世界中撤消，我们不会讨论这一点。而且有一些机制可以做到这一点，那就是与业务相关的行动。你有时会收到公司发来的一封信，信中说，哎呀，我们搞错了，对不起。事情的真相是这样的。哦，顺便说一句，他是一张10美元的礼品卡来弥补错误。但所有读写的数字行为，我们将把它们转换成一个非常严格的结构，以确保我们将通过我们今天讨论的机制和接下来的几节课持有的非常明确的正确性属性。
+the undo for physical actions
+事务中物理操作的撤消将需要在物理世界中撤消，
 
 395
 00:10:18,840 --> 00:10:21,140
@@ -2069,32 +2267,38 @@ in transactions will require undo
 396
 00:10:21,140 --> 00:10:22,805
 0,165 165,345 345,645 645,1040 1390,1665
-in the physical world, which
+in the physical world,| which
+|我们不会讨论这个，
 
 397
 00:10:22,805 --> 00:10:24,080
 0,135 135,375 375,635 895,1170 1170,1275
-we won't cover. And there
+we won't cover,| and there
+|而且有一些机制可以做到这个，
 
 398
 00:10:24,080 --> 00:10:25,145
 0,75 75,510 510,660 660,795 795,1065
-are mechanisms to do that
+are mechanisms to do that,|
+|
 
 399
 00:10:25,145 --> 00:10:26,650
 0,240 240,405 405,725 835,1170 1170,1505
-that are business related actions.
+that are business related actions,|
+那就是与业务相关的操作，|
 
 400
 00:10:26,790 --> 00:10:28,030
 0,380 380,635 635,860 860,980 980,1240
-You'll sometimes get a letter
+you'll sometimes get a letter
+你有时会收到公司发来的一封信，说，
 
 401
 00:10:28,410 --> 00:10:29,585
 0,260 260,395 395,620 620,860 860,1175
-from your company saying whoops,
+from your company saying,| whoops,
+|哎呀，我们搞错了，抱歉，
 
 402
 00:10:29,585 --> 00:10:30,695
@@ -2104,17 +2308,19 @@ we made a mistake, sorry
 403
 00:10:30,695 --> 00:10:32,135
 0,225 225,515 655,1065 1065,1215 1215,1440
-about that. Here's what really
+about that,| here's what really
+|事情的真相是这样的，
 
 404
 00:10:32,135 --> 00:10:33,095
 0,300 300,555 555,720 720,855 855,960
-happened. Oh, and by the
+happened,| oh, and by the
+|哦，顺便说一句，这是一张 10 美元的礼品卡来弥补错误。
 
 405
 00:10:33,095 --> 00:10:33,890
 0,120 120,285 285,405 405,570 570,795
-way, he's a ten dollars
+way, here's a 10 dollars
 
 406
 00:10:33,890 --> 00:10:35,165
@@ -2124,7 +2330,8 @@ gift card to make up
 407
 00:10:35,165 --> 00:10:36,890
 0,120 120,315 315,665 1105,1455 1455,1725
-for a mistake. But all
+for a mistake.| But all
+|但所有读写的数字操作，
 
 408
 00:10:36,890 --> 00:10:38,555
@@ -2134,7 +2341,8 @@ the digital actions that reads
 409
 00:10:38,555 --> 00:10:39,860
 0,135 135,425 625,885 885,1065 1065,1305
-and writes, we will cast
+and writes,| we will cast
+|我们将把它们转换成一个非常严格的结构，
 
 410
 00:10:39,860 --> 00:10:41,150
@@ -2144,7 +2352,8 @@ them into a very strict
 411
 00:10:41,150 --> 00:10:43,235
 0,350 670,930 930,1190 1330,1725 1725,2085
-structure to guarantee very well
+structure| to guarantee very well
+|以确保我们持有非常明确的正确性属性，
 
 412
 00:10:43,235 --> 00:10:45,050
@@ -2154,7 +2363,8 @@ defined properties of correctness that
 413
 00:10:45,050 --> 00:10:46,895
 0,150 150,410 850,1250 1480,1740 1740,1845
-we will hold through the
+we will hold,| through the
+|通过我们将在今天和接下来的几节课讨论的机制。
 
 414
 00:10:46,895 --> 00:10:48,250
@@ -2176,7 +2386,7 @@ few lectures.|
 00:10:50,700 --> 00:10:52,040
 0,320 320,640
 Great question.|
-问得好。|
+好问题。|
 
 418
 00:10:52,770 --> 00:10:54,200
@@ -2193,14 +2403,13 @@ All right.|
 420
 00:10:57,270 --> 00:10:58,460
 0,400
-So.|
-所以。|
+So,
+所以，我们希望这些操作的任意交错是正确的。
 
 421
 00:10:58,560 --> 00:11:01,070
 0,350 350,635 635,920 920,1745 1745,2510
-We want these arbitrary interleaving
-我们希望这些操作的任意交错是正确的。
+we want these arbitrary interleaving
 
 422
 00:11:01,070 --> 00:11:03,250
@@ -2212,12 +2421,13 @@ of operations and be correct.|
 00:11:03,880 --> 00:11:04,810
 0,180 180,450 450,675 675,810 810,930
 So before we go a
-所以在我们更进一步之前，我只想巩固交易的概念，你要执行这些操作，我们刚才谈到的数据库只关心对数据库对象的读写操作，这些物理世界的支付金额的动作，或者你知道的，啊，啊，开始争夺导弹之类的东西。
+所以在我们更进一步之前，
 
 424
 00:11:04,810 --> 00:11:06,445
 0,150 150,330 330,620 1180,1470 1470,1635
-little bit further, just want
+little bit further,| just want
+|只是想要巩固事务的概念，
 
 425
 00:11:06,445 --> 00:11:07,870
@@ -2227,12 +2437,14 @@ to solidify the notion of
 426
 00:11:07,870 --> 00:11:09,565
 0,290 970,1260 1260,1365 1365,1500 1500,1695
-transactions, you're going to carry
+transactions,| you're going to carry
+|你要执行这些操作，
 
 427
 00:11:09,565 --> 00:11:12,190
 0,225 225,495 495,875 1375,1775 2245,2625
-out these operations and the
+out these operations| and the
+|我们刚才谈到的数据库
 
 428
 00:11:12,190 --> 00:11:13,405
@@ -2242,7 +2454,8 @@ database that we just talked
 429
 00:11:13,405 --> 00:11:14,875
 0,210 210,390 390,695 865,1230 1230,1470
-about is only concerned about
+about| is only concerned about
+|只关心对数据库对象的读写操作，
 
 430
 00:11:14,875 --> 00:11:15,970
@@ -2252,71 +2465,78 @@ the read and write operations
 431
 00:11:15,970 --> 00:11:17,580
 0,225 225,330 330,590 820,1215 1215,1610
-to the database objects, these
+to the database objects,| these
+|这些物理世界的操作，
 
 432
 00:11:17,690 --> 00:11:20,010
 0,395 395,755 755,1120 1650,1985 1985,2320
-physical world actions of paying
+physical world actions| of paying
+|支付金额，
 
 433
 00:11:20,270 --> 00:11:22,210
 0,320 320,640 870,1270 1440,1715 1715,1940
-an amount or you know,
+an amount| or you know,
+|或者开始发射导弹之类的东西，
 
 434
 00:11:22,210 --> 00:11:24,895
 0,350 490,890 1060,1460 2140,2475 2475,2685
-ah, ah, starting fighting for
+{ -} starting fighting for
 
 435
 00:11:24,895 --> 00:11:26,670
 0,375 375,615 615,795 795,1085 1375,1775
-missiles, stuff like that those.|
-|
+missiles, stuff like that,| those
+|我们无法修复，
 
 436
 00:11:27,290 --> 00:11:28,470
 0,290 290,560 560,665 665,845 845,1180
-We won't be able to
-如果发生了不好的事情，我们就无法修复了，好吗？
+we won't be able to
 
 437
 00:11:28,550 --> 00:11:30,330
 0,400 630,980 980,1265 1265,1490 1490,1780
-repair if bad things happen,
+repair,| if bad things happen,
+|如果发生了糟糕的事情。
 
 438
 00:11:30,410 --> 00:11:31,300
 0,400
-okay?|
+okay.|
 |
 
 439
 00:11:32,290 --> 00:11:33,510
 0,245 245,550 570,845 845,1010 1010,1220
 And there's in the advanced
-在高级数据库课程中，根据材料的不同，有时我们会谈论这样的事情，以及什么是补偿交易和可能发生的事情，以及人们可能会以其他方式做什么。所以，但为了这门课的目的，我们只会从很多方面来看这一点，范围更有限。
+在高级数据库课程中，
 
 440
 00:11:33,510 --> 00:11:35,205
 0,320 430,830 910,1215 1215,1410 1410,1695
-database class, depending upon the
+database class,| depending upon the
+|根据材料的不同，
 
 441
 00:11:35,205 --> 00:11:36,450
 0,315 315,525 525,690 690,930 930,1245
-material, that says sometimes we'll
+material,| that says sometimes we'll
+|有时我们会谈论这样的事情，
 
 442
 00:11:36,450 --> 00:11:37,530
 0,180 180,465 465,735 735,915 915,1080
-talk about stuff like that
+talk about stuff like that|
+|
 
 443
 00:11:37,530 --> 00:11:38,870
 0,150 150,270 270,420 420,1005 1005,1340
 and what are compensating transactions
+以及什么是补偿事务和可能发生的事情，
 
 444
 00:11:39,070 --> 00:11:40,065
@@ -2326,22 +2546,26 @@ and stuff like that that
 445
 00:11:40,065 --> 00:11:41,445
 0,135 135,395 715,990 990,1155 1155,1380
-might happen and what people
+might happen| and what people
+|以及人们可能会以其他方式做什么。
 
 446
 00:11:41,445 --> 00:11:43,185
 0,210 210,485 985,1275 1275,1485 1485,1740
-might do as other ways.
+might do as other ways.|
+|
 
 447
 00:11:43,185 --> 00:11:44,145
 0,225 225,405 405,570 570,735 735,960
 So, but for the purpose
+所以，但为了这门课的目标，
 
 448
 00:11:44,145 --> 00:11:45,290
 0,210 210,390 390,615 615,885 885,1145
-of this class, we'll just
+of this class,| we'll just
+|我们只会从很多方面来看这个，
 
 449
 00:11:45,490 --> 00:11:46,920
@@ -2351,7 +2575,8 @@ look at in this in
 450
 00:11:46,920 --> 00:11:48,120
 0,150 150,330 330,570 570,915 915,1200
-this many ways, a more
+this many ways,| a more
+|范围更有限。
 
 451
 00:11:48,120 --> 00:11:49,220
@@ -2362,18 +2587,20 @@ limited scope.|
 452
 00:11:49,770 --> 00:11:51,130
 0,530 530,710 710,845 845,1040 1040,1360
-Reiterating what we talked about,
-重申我们所讨论的内容，我们主要考虑读写操作。你注意到，在我的代码中，也有一张支票。有一个减法。有数学之类的东西。从我们今天要讨论的事务管理的角度来看，我们所关心的就是是否编写了对象？有人读了吗？
+Reiterating what we talked about,|
+重申我们所讨论的内容，|
 
 453
 00:11:51,270 --> 00:11:53,465
 0,365 365,730 990,1390 1560,1940 1940,2195
 we think primarily about read
+我们主要考虑读写操作，
 
 454
 00:11:53,465 --> 00:11:55,220
 0,150 150,405 405,785 1225,1500 1500,1755
-and write operations. You notice
+and write operations,| you notice
+|你注意到，在我的代码中，
 
 455
 00:11:55,220 --> 00:11:56,075
@@ -2383,22 +2610,25 @@ that in the code that
 456
 00:11:56,075 --> 00:11:56,855
 0,105 105,255 255,390 390,585 585,780
-I had, there was also
+I had,| there was also
+|有一个检查，有一个减法，
 
 457
 00:11:56,855 --> 00:11:57,875
 0,165 165,485 565,810 810,900 900,1020
-a check. There was a
+a check, there was a
 
 458
 00:11:57,875 --> 00:11:59,180
 0,615 615,720 720,870 870,1080 1080,1305
-subtraction. There was math and
+subtraction,| there was math and
+|有数学之类的东西，
 
 459
 00:11:59,180 --> 00:12:00,755
 0,240 240,450 450,740 1000,1305 1305,1575
-stuff like that. From the
+stuff like that,| from the
+|从我们今天要讨论的事务管理的角度来看，
 
 460
 00:12:00,755 --> 00:12:01,715
@@ -2413,24 +2643,26 @@ to cover today for transaction
 462
 00:12:02,880 --> 00:12:04,505
 0,400 810,1115 1115,1280 1280,1445 1445,1625
-management, all we care about
+management,| all we care about
+|我们所关心的是，
 
 463
 00:12:04,505 --> 00:12:05,390
 0,180 180,345 345,540 540,735 735,885
-is did an object get
+is,| did an object get
+|是否有对象被写入，是否被读取，
 
 464
 00:12:05,390 --> 00:12:06,850
 0,290 580,825 825,945 945,1140 1140,1460
-written? Did it get read?|
+written, did it get read,|
 |
 
 465
 00:12:07,280 --> 00:12:08,465
 0,230 310,585 585,795 795,1065 1065,1185
-And do those reads and
-这些读写操作最终会以不好的方式相互干扰吗？这些不好的方式是什么？我们如何防止这些不好的方式？
+and do those reads and
+是否这些读写操作最终会以不好的方式相互干扰，
 
 466
 00:12:08,465 --> 00:12:09,845
@@ -2440,17 +2672,20 @@ writes end up interfering with
 467
 00:12:09,845 --> 00:12:10,900
 0,180 180,345 345,525 525,735 735,1055
-each other in bad ways?
+each other in bad ways,|
+|
 
 468
 00:12:11,190 --> 00:12:12,140
 0,245 245,350 350,515 515,740 740,950
-What are those bad ways
+what are those bad ways|
+这些不好的方式是什么，|
 
 469
 00:12:12,140 --> 00:12:12,845
 0,165 165,315 315,405 405,495 495,705
 and how do we prevent
+我们如何防止这些不好的方式？
 
 470
 00:12:12,845 --> 00:12:14,200
@@ -2462,12 +2697,13 @@ those bad ways?|
 00:12:15,510 --> 00:12:17,165
 0,400 870,1175 1175,1310 1310,1430 1430,1655
 And how do we prevent
-我们如何在允许最大数量的事务在系统上并发工作的同时防止这些不好的方式？这正是难点。
+我们如何防止这些不好的方式，
 
 472
 00:12:17,165 --> 00:12:18,965
 0,270 270,570 570,935 1105,1470 1470,1800
-those bad ways while allowing
+those bad ways,| while allowing
+|在允许最大数量的事务在系统上并发工作的同时，
 
 473
 00:12:18,965 --> 00:12:20,680
@@ -2482,19 +2718,20 @@ to work on the system
 475
 00:12:21,755 --> 00:12:23,350
 0,720 720,975 975,1080 1080,1260 1260,1595
-concurrently? That's the hard part.|
-|
+concurrently,| that's the hard part.|
+|这正是难点。|
 
 476
 00:12:24,170 --> 00:12:25,120
 0,260 260,410 410,605 605,785 785,950
 Because you already saw there's
-因为你已经看到有一种简单的方法，那就是一次只做一笔交易。
+因为你已经看到有一种简单的方法，
 
 477
 00:12:25,120 --> 00:12:26,215
 0,120 120,375 375,720 720,960 960,1095
-an easy way, which is
+an easy way,| which is
+|那就是一次只做一个事务，
 
 478
 00:12:26,215 --> 00:12:27,090
@@ -2504,34 +2741,37 @@ to just do one transaction
 479
 00:12:27,140 --> 00:12:28,280
 0,260 260,395 395,670
-at a time.|
+at a time,|
 |
 
 480
 00:12:28,280 --> 00:12:29,030
 0,225 225,345 345,450 450,555 555,750
-You want to do better
-你想要做得更好，所以我们只把这些对象称为变量A，B和c，但如果你想有一个简单的模型，你可以把它想象成一个记录。
+you want to do better
+你想要做得更好。
 
 481
 00:12:29,030 --> 00:12:30,980
 0,195 195,470 1390,1605 1605,1755 1755,1950
-than that, so it's only
+than that.| So it's only
+|所以只有这些对象，
 
 482
 00:12:30,980 --> 00:12:32,675
 0,350 880,1200 1200,1395 1395,1590 1590,1695
-these objects which we'll just
+these objects,| which we'll just
+|我们称为变量 A B 和 C ，
 
 483
 00:12:32,675 --> 00:12:33,935
 0,225 225,450 450,615 615,1065 1065,1260
-refer to as variables A
+refer to as variables A,
 
 484
 00:12:33,935 --> 00:12:35,480
 0,150 150,330 330,665 1015,1350 1350,1545
-B and c, but if
+B and C,| but if
+|但如果你想有一个简单的模型，
 
 485
 00:12:35,480 --> 00:12:36,065
@@ -2541,49 +2781,56 @@ you want to have a
 486
 00:12:36,065 --> 00:12:37,010
 0,210 210,480 480,660 660,795 795,945
-simple model, you can think
+simple model,| you can think
+|你可以把它想象成一个记录，
 
 487
 00:12:37,010 --> 00:12:37,810
 0,135 135,255 255,360 360,510 510,800
-of it as a record.|
+of it as a record,|
 |
 
 488
 00:12:38,580 --> 00:12:40,030
 0,395 395,650 650,770 770,1030 1050,1450
-But inside a database system
-但在数据库系统内部，我们在高级数据库类中介绍，a可以是以更精细的粒度执行操作的列，也可以是页，也可以是文件或数据库。一些较早版本的数据库，如mongo，在某一时刻执行并发操作时会锁定整个数据库。他们现在不这么做了。但是那个对象的大小或者啊，ab和c只是指的是数据库应用程序对象，对吗？为了今天的目的，你可以把它们看作是记录。
+but inside a database system,|
+但是在数据库系统内部，|
 
 489
 00:12:40,140 --> 00:12:41,000
 0,275 275,425 425,560 560,710 710,860
 in this we cover in
+我们在高级数据库类中介绍，
 
 490
 00:12:41,000 --> 00:12:42,740
 0,150 150,405 405,770 820,1220 1450,1740
-the advanced database class that
+the advanced database class,| that
+|A 可以是列，
 
 491
 00:12:42,740 --> 00:12:43,660
 0,210 210,390 390,495 495,630 630,920
-a could be a column
+a could be a column,|
+|
 
 492
 00:12:43,890 --> 00:12:45,800
 0,260 260,520 1200,1550 1550,1775 1775,1910
 which is doing things at
+以更精细的粒度执行操作，
 
 493
 00:12:45,800 --> 00:12:47,390
 0,135 135,480 480,630 630,795 795,1590
-a finer level of granularity
+a finer level of granularity|
+|
 
 494
 00:12:47,390 --> 00:12:48,080
 0,225 225,345 345,480 480,570 570,690
 or it could be a
+也可以是页，也可以是文件或数据库，
 
 495
 00:12:48,080 --> 00:12:49,130
@@ -2598,12 +2845,14 @@ a file or it could
 497
 00:12:50,195 --> 00:12:51,650
 0,75 75,165 165,425 895,1200 1200,1455
-be a database. Some earlier
+be a database,| some earlier
+|一些较早版本的数据库，
 
 498
 00:12:51,650 --> 00:12:54,170
 0,315 315,540 540,1250 1840,2145 2145,2520
-versions of databases like mongo
+versions of databases,| like Mongo
+|比如 Mongo ，在某一时刻执行并发操作时会锁住整个数据库，
 
 499
 00:12:54,170 --> 00:12:55,490
@@ -2618,37 +2867,42 @@ concurrency would lock the entire
 501
 00:12:57,125 --> 00:12:58,475
 0,305 655,915 915,1095 1095,1185 1185,1350
-database. They don't do that
+database,| they don't do that
+|他们现在不这么做了，
 
 502
 00:12:58,475 --> 00:13:01,000
 0,305 595,995 1345,1605 1605,1865 2125,2525
-now. But the ah, the,
+now,| but the {} the,
+|但是一组对象，
 
 503
 00:13:01,110 --> 00:13:02,975
 0,400 510,910 1200,1490 1490,1640 1640,1865
-the, the size of that
+the, the set of that
 
 504
 00:13:02,975 --> 00:13:04,640
 0,225 225,360 360,635 745,1145 1285,1665
-object or the ah, ab
+object| or the {} {A,B}
+|或者 A B 和 C 只是指的是数据库对象。
 
 505
 00:13:04,640 --> 00:13:05,795
 0,285 285,525 525,795 795,1020 1020,1155
-and c just referred to
+and C just referred to
 
 506
 00:13:05,795 --> 00:13:07,250
 0,240 240,635 775,1065 1065,1275 1275,1455
-database APP objects right? For
+database {} objects, right.| For
+|对于今天的目的，
 
 507
 00:13:07,250 --> 00:13:08,210
 0,120 120,330 330,585 585,795 795,960
-the purpose of today, you
+the purpose of today,| you
+|你可以把它们看作是记录。
 
 508
 00:13:08,210 --> 00:13:09,130
@@ -2665,7 +2919,7 @@ records.|
 00:13:10,300 --> 00:13:11,515
 0,290 340,690 690,945 945,1110 1110,1215
 And everything today in the
-如果你想选择一个心理模型，接下来两节课的内容会更有意义。
+接下来两节课的内容会更有意义，
 
 511
 00:13:11,515 --> 00:13:12,625
@@ -2675,7 +2929,8 @@ next two classes will make
 512
 00:13:12,625 --> 00:13:13,345
 0,120 120,255 255,420 420,585 585,720
-a lot more sense if
+a lot more sense,| if
+|如果你选择一个[]模型。
 
 513
 00:13:13,345 --> 00:13:14,050
@@ -2685,7 +2940,7 @@ you wanted to pick a
 514
 00:13:14,050 --> 00:13:15,540
 0,210 210,525 525,750 750,1010
-mental model for that.|
+[] model for that.|
 |
 
 515
@@ -2697,8 +2952,6 @@ All right.|
 516
 00:13:18,350 --> 00:13:19,520
 0,400
-Up.|
-向上。|
 
 517
 00:13:19,710 --> 00:13:21,170
@@ -14037,4 +14290,3 @@ weight the ran through every
 0,380 940,1320 1320,1700 2620,3020
 state how living great.|
 |
-
