@@ -2957,7 +2957,7 @@ All right.|
 00:13:19,710 --> 00:13:21,170
 0,305 305,530 530,755 755,1060 1110,1460
 How does the database system
-数据库系统如何知道事务已开始和事务已结束？
+数据库系统如何知道事务开始和事务结束，
 
 518
 00:13:21,170 --> 00:13:22,310
@@ -2967,14 +2967,14 @@ know that a transaction is
 519
 00:13:22,310 --> 00:13:23,920
 0,290 400,690 690,980 1030,1320 1320,1610
-started and transaction is ended?|
+started and transaction is ended,|
 |
 
 520
 00:13:24,930 --> 00:13:26,510
 0,335 335,710 710,815 815,1040 1040,1580
-In sql, you can explicitly
-在SQL中，您可以显式地放置一条BEGIN TRANSACTION语句和一条END TRANSACTION语句，以告诉数据库系统在这两条语句之间发生的所有事情都是一个事务，而这两条语句之间可能是多个SQL查询。
+in SQL, you can explicitly
+在 SQL 中，你可以显式地放置一条开始事务语句和一条结束事务语句，
 
 521
 00:13:26,510 --> 00:13:27,920
@@ -2984,44 +2984,50 @@ put a begin transaction statement
 522
 00:13:27,920 --> 00:13:29,440
 0,240 240,390 390,600 600,920 1120,1520
-and an end transaction statement
+and an end transaction statement|
+|
 
 523
 00:13:29,670 --> 00:13:30,905
 0,275 275,455 455,620 620,875 875,1235
-to tell the database system
+to tell the database system,|
+告诉数据库系统，|
 
 524
 00:13:30,905 --> 00:13:32,015
 0,315 315,570 570,750 750,900 900,1110
 all the stuff that happened
+在这两条语句之间发生的所有事情都是一个事务，
 
 525
 00:13:32,015 --> 00:13:33,730
 0,285 285,635 1015,1290 1290,1440 1440,1715
-in between is a transaction
+in between is a transaction|
+|
 
 526
 00:13:34,170 --> 00:13:35,120
 0,260 260,455 455,695 695,845 845,950
 and in between could be
+而这两条语句之间可能是多个 SQL 查询。
 
 527
 00:13:35,120 --> 00:13:36,720
 0,255 255,675 675,1130
-multiple sql queries.|
+multiple SQL queries.|
 |
 
 528
 00:13:37,890 --> 00:13:38,750
 0,275 275,410 410,620 620,695 695,860
 If you don't have a
-如果您没有开始和结束事务，就像您在作业中隐式启动SQL查询时所做的所有事情一样，数据库系统将在查询的开始处放置一个开始，在查询的末尾放置一个结束。
+如果你没有开始和结束事务，
 
 529
 00:13:38,750 --> 00:13:39,830
 0,180 180,285 285,420 420,710 820,1080
-begin and end transaction, like
+begin and end transaction,| like
+|就像你在作业中所做的事情，
 
 530
 00:13:39,830 --> 00:13:40,745
@@ -3031,32 +3037,37 @@ all the stuff you've been
 531
 00:13:40,745 --> 00:13:42,080
 0,150 150,270 270,405 405,695 1075,1335
-doing in your homework when
+doing in your homework,| when
+|当你启动一个 SQL 查询，
 
 532
 00:13:42,080 --> 00:13:42,920
 0,135 135,300 300,435 435,555 555,840
-you fire up a sql
+you fire up a SQL
 
 533
 00:13:42,920 --> 00:13:44,450
 0,195 195,870 870,990 990,1230 1230,1530
-query implicitly, the database system
+query,| implicitly, the database system
+|数据库系统将隐式地，
 
 534
 00:13:44,450 --> 00:13:45,755
 0,210 210,360 360,570 570,920 1030,1305
-will put a begin at
+will| put a begin at
+|在查询的开始处放置一个开始，
 
 535
 00:13:45,755 --> 00:13:46,610
 0,165 165,330 330,480 480,600 600,855
-the beginning of the query
+the beginning of the query|
+|
 
 536
 00:13:46,610 --> 00:13:47,450
 0,225 225,390 390,555 555,720 720,840
 and an end at the
+在查询的末尾放置一个结束。
 
 537
 00:13:47,450 --> 00:13:48,520
@@ -3068,12 +3079,13 @@ end of the query.|
 00:13:48,520 --> 00:13:49,540
 0,165 165,270 270,530 640,900 900,1020
 But a transaction could be
-但是一个事务可以是多个查询，对吗？你可以显式地把Begin和End放在一起。
+但是一个事务可以是多个查询，
 
 539
 00:13:49,540 --> 00:13:51,190
 0,660 660,855 855,975 975,1170 1170,1650
-multiqueries right? You can explicitly
+{multi,queries}, right,| you can explicitly
+|你可以显式地防止开始和结束。
 
 540
 00:13:51,190 --> 00:13:52,620
@@ -3085,17 +3097,19 @@ put begin and end.|
 00:13:52,620 --> 00:13:53,655
 0,165 165,390 390,645 645,795 795,1035
 You could also put an
-您还可以放置一个显式的bot语句，也就是说，它被称为提交，而不是end。
+你还可以放置一个显式的 ABORT 语句，
 
 542
 00:13:53,655 --> 00:13:55,425
 0,515 565,1050 1050,1365 1365,1620 1620,1770
-explicit bot statement, which is
+explicit ABORT statement,| which is
+|也就是说，
 
 543
 00:13:55,425 --> 00:13:56,655
 0,165 165,450 450,735 735,1005 1005,1230
-to say so, and instead
+to say,| so, and instead
+|不是最终调用 COMMIT ，
 
 544
 00:13:56,655 --> 00:13:57,405
@@ -3105,41 +3119,42 @@ of end, it is called
 545
 00:13:57,405 --> 00:13:58,540
 0,195 195,515
-a commit.|
+a COMMIT,|
 |
 
 546
 00:13:58,950 --> 00:13:59,930
 0,260 260,395 395,545 545,770 770,980
-Which is to say everything
-这就是说，我从一开始到现在所做的一切，请提交并每分钟进行更改。
+which is to say everything
+是说，我从 BEGIN 到这里所做的一切，
 
 547
 00:13:59,930 --> 00:14:01,145
 0,180 180,330 330,630 630,945 945,1215
-I've done from the begin
+I've done from the BEGIN
 
 548
 00:14:01,145 --> 00:14:02,690
 0,210 210,485 805,1185 1185,1425 1425,1545
-to here, please commit it
+to here,| please commit it
+|请提交它，让它的变更持久化，
 
 549
 00:14:02,690 --> 00:14:03,980
 0,165 165,405 405,675 675,1005 1005,1290
-and make its changes per
+and make its changes {permanent
 
 550
 00:14:03,980 --> 00:14:04,900
 0,290
-minute.|
+-},|
 |
 
 551
 00:14:04,900 --> 00:14:05,770
 0,120 120,255 255,435 435,630 630,870
-The other way to end
-结束这笔交易的另一种方式是在国外。
+the other way to end
+结束事务的另一种方式是 ABORT ，
 
 552
 00:14:05,770 --> 00:14:07,000
@@ -3149,29 +3164,32 @@ that transaction is to say
 553
 00:14:07,000 --> 00:14:07,920
 0,320
-abroad.|
+ABORT,|
 |
 
 554
 00:14:07,920 --> 00:14:09,105
 0,105 105,195 195,360 360,650 820,1185
-So it may be I'm
-因此，我可能正在制定度假计划，所以我做了一笔交易来预订机票。然后我在代码中做一点搜索，找到酒店预订和工作，没有酒店。所以我可以说，哦，关于这笔交易，方丈说我做了一些工作，阅读和写作。
+so it may be,| I'm
+所以，它可能是，|我可能正在制定度假计划，
 
 555
 00:14:09,105 --> 00:14:10,365
 0,120 120,240 240,485 505,900 900,1260
-trying to make vacation plans
+trying to make vacation plans,|
+|
 
 556
 00:14:10,365 --> 00:14:11,120
 0,195 195,285 285,390 390,495 495,755
 so I do a transaction
+所以我做了一个事务来预订机票，
 
 557
 00:14:11,620 --> 00:14:13,470
 0,260 260,425 425,650 650,970 1560,1850
-to book flight tickets. Then
+to book flight tickets,| then
+|然后我在代码中做一点搜索，
 
 558
 00:14:13,470 --> 00:14:14,055
@@ -3181,74 +3199,85 @@ I do a little bit
 559
 00:14:14,055 --> 00:14:14,985
 0,180 180,420 420,585 585,720 720,930
-of search in the code
+of search in the code|
+|
 
 560
 00:14:14,985 --> 00:14:16,800
 0,225 225,515 835,1125 1125,1590 1590,1815
-to find hotel reservations and
+to find hotel reservations| and
+找到酒店预订，|发现没有酒店，
 
 561
 00:14:16,800 --> 00:14:17,880
 0,180 180,470 490,825 825,915 915,1080
-find works, don't have a
+find, whoops, don't have a
 
 562
 00:14:17,880 --> 00:14:19,095
 0,320 640,870 870,960 960,1095 1095,1215
-hotel. So I could say,
+hotel,| so I could say,|
+|所以我可以说，|
 
 563
 00:14:19,095 --> 00:14:20,655
 0,240 240,540 540,735 735,1025 1285,1560
-oh, about this transaction and
+oh, ABORT this transaction| and
+哦，取消这个事务，|ABORT 表示，
 
 564
 00:14:20,655 --> 00:14:21,960
 0,330 330,665 685,975 975,1140 1140,1305
-abbot says I did some
+ABORT says,| I did some
+|我做了一些工作，读取和写入，
 
 565
 00:14:21,960 --> 00:14:23,720
 0,290 400,750 750,855 855,1130
-work, reads and writes.|
+work, reads and writes,|
 |
 
 566
 00:14:23,720 --> 00:14:24,890
 0,320 550,825 825,1020 1020,1080 1080,1170
-But I don't think I
-但我不认为我能走得更远。看起来有些不对劲。如果中止此事务，则应用程序可能会再次尝试。您可以显式地中止事务，有时可能是数据库为您中止，因为多个事务同时发生，它检测到一些不安全的条件，并说，哎呀，我要为您中止这个事务，您会得到中止代码。
+but I don't think I
+但我不认为我能走得更远，
 
 567
 00:14:24,890 --> 00:14:26,195
 0,135 135,300 300,590 640,990 990,1305
-can go further. Something doesn't
+can go further,| something doesn't
+|看起来有些不对劲，
 
 568
 00:14:26,195 --> 00:14:27,580
 0,165 165,455 475,930 930,1110 1110,1385
-look right. Abort this transaction
+look right,| ABORT this transaction|
+|取消这个事务，|
 
 569
 00:14:27,630 --> 00:14:29,090
 0,290 290,455 455,730 750,1130 1130,1460
 and you could, the application
+应用程序可以再次尝试。
 
 570
 00:14:29,090 --> 00:14:30,545
 0,195 195,330 330,555 555,890 1210,1455
-could be trying again. You
+could be trying again.| You
+|你可以显式地中止事务，
 
 571
 00:14:30,545 --> 00:14:32,200
 0,210 210,825 825,1200 1200,1380 1380,1655
-could explicitly abort the transaction
+could explicitly abort the transaction|
+|
 
 572
 00:14:32,850 --> 00:14:34,085
 0,305 305,590 590,845 845,1025 1025,1235
 and sometimes it may be
+有时可能是数据库为你中止，
 
 573
 00:14:34,085 --> 00:14:35,420
@@ -3258,22 +3287,26 @@ that the database abort for
 574
 00:14:35,420 --> 00:14:36,950
 0,270 270,540 540,810 810,1190 1270,1530
-you because multiple transactions are
+you,| because multiple transactions are
+|因为多个事务同时发生，
 
 575
 00:14:36,950 --> 00:14:37,960
 0,180 180,360 360,495 495,690 690,1010
-happening at the same time
+happening at the same time,|
+|
 
 576
 00:14:38,190 --> 00:14:40,060
 0,335 335,650 650,800 800,1505 1505,1870
-it detects some unsafe condition
+it detects some unsafe condition|
+它检测到一些不安全的条件，|
 
 577
 00:14:40,320 --> 00:14:41,315
 0,290 290,470 470,740 740,920 920,995
 and says, whoops, I'm going
+并说，我要为你中止这个事务，
 
 578
 00:14:41,315 --> 00:14:42,545
@@ -3283,24 +3316,26 @@ to abort this transaction for
 579
 00:14:42,545 --> 00:14:43,295
 0,105 105,180 180,300 300,525 525,750
-you and you get an
+you| and you get an
+|你会得到 ABORT 代码。
 
 580
 00:14:43,295 --> 00:14:44,380
 0,360 360,725
-abort code.|
+ABORT code.|
 |
 
 581
 00:14:45,000 --> 00:14:47,105
 0,275 275,425 425,700 1050,1805 1805,2105
-From the transaction manager's perspective,
-从事务管理器的角度来看，我们今天试图理解和构建的模块。
+From the transaction manager's perspective,|
+从事务管理器的角度来看，|
 
 582
 00:14:47,105 --> 00:14:48,050
 0,210 210,630 630,765 765,855 855,945
 the module that we are
+我们今天试图理解和构建的模块，
 
 583
 00:14:48,050 --> 00:14:49,535
@@ -3310,41 +3345,43 @@ trying to understand and build
 584
 00:14:49,535 --> 00:14:50,480
 0,305
-today.|
+today,|
 |
 
 585
 00:14:50,990 --> 00:14:52,090
 0,275 275,410 410,545 545,820 840,1100
-It will be presented with
-它将被呈现一个Begin Transaction、一串读写操作，最终它将获得一个Commit或一个bot操作。
+it will be presented with
+它将被呈现一个 BEGIN 事务，
 
 586
 00:14:52,090 --> 00:14:53,635
 0,180 180,390 390,680 1090,1380 1380,1545
-a begin transaction, bunch of
+a BEGIN transaction,| bunch of
+|一串读写操作，
 
 587
 00:14:53,635 --> 00:14:55,410
 0,165 165,330 330,605 1105,1440 1440,1775
-read write actions and eventually
+read write actions| and eventually
+|最终它将获得一个 COMMIT 或一个 ABORT 操作。
 
 588
 00:14:55,430 --> 00:14:56,965
 0,230 230,365 365,670 840,1220 1220,1535
-it will get a commit
+it will get a COMMIT
 
 589
 00:14:56,965 --> 00:14:59,200
 0,195 195,375 375,785 1075,1475
-or an bot action.|
+or an ABORT action.|
 |
 
 590
 00:14:59,200 --> 00:15:00,100
 0,195 195,570 570,705 705,810 810,900
 And that's what we have
-这就是我们必须在系统代码中构建的，以进行事务，以便事务可以通过提交结束，或者可以通过中止ab Boting Means来结束，撤消可能完成的一切。承诺说我做的每一件事都让它成为永久性的。
+这就是我们必须在系统代码中构建的，
 
 591
 00:15:00,100 --> 00:15:01,560
@@ -3354,22 +3391,26 @@ to build in the system
 592
 00:15:01,580 --> 00:15:03,870
 0,400 600,1000 1140,1540 1740,2015 2015,2290
-code to, to do transactions
+code| to, to do transactions,|
+|以进行事务，|
 
 593
 00:15:04,310 --> 00:15:05,635
 0,260 260,520 630,920 920,1115 1115,1325
 so transactions could end by
+所以事务可以通过提交结束，
 
 594
 00:15:05,635 --> 00:15:07,015
 0,395 685,990 990,1140 1140,1245 1245,1380
-committing or they could end
+committing| or they could end
+|或者可以通过中止结束，
 
 595
 00:15:07,015 --> 00:15:08,425
 0,120 120,690 690,945 945,1230 1230,1410
-by abortotting ab botting means
+by aborting,| {aborting -} means
+|中止意味着取消可能完成的一切，
 
 596
 00:15:08,425 --> 00:15:09,490
@@ -3379,7 +3420,8 @@ undo everything that might be
 597
 00:15:09,490 --> 00:15:10,885
 0,260 430,720 720,1010 1030,1275 1275,1395
-done. Commit says everything I
+done,| commit says everything I
+|提交是说我做的每一件事都让它持久化。
 
 598
 00:15:10,885 --> 00:15:12,600
@@ -3402,38 +3444,44 @@ those two ways.|
 601
 00:15:16,300 --> 00:15:17,440
 0,290 340,615 615,855 855,990 990,1140
-And the bot could be
-而机器人可能是自己造成的。正如我们所讨论的，应用程序可能已经显式地放入了bot调用，或者可能是数据库系统由于某种原因而不得不中止，以完成我们所讨论的所有安全保证。在接下来的几节课中，我们将看看在数据库系统中发生的事情的不同方式。
+And the ABORT could be
+ABORT 可能是自己造成的，
 
 602
 00:15:17,440 --> 00:15:18,565
 0,180 180,600 600,795 795,930 930,1125
-self inflicted. As we talked
+self inflicted,| as we talked
+|正如我们所讨论的，
 
 603
 00:15:18,565 --> 00:15:20,680
 0,335 805,1185 1185,1425 1425,1650 1650,2115
-about, application could have explicitly
+about,| application could have explicitly
+|应用程序可以显式地放入 ABORT 调用，
 
 604
 00:15:20,680 --> 00:15:21,510
 0,105 105,195 195,300 300,540 540,830
-put in a bot call,
+put an {ABORT -} call,|
+|
 
 605
 00:15:21,680 --> 00:15:22,480
 0,290 290,440 440,560 560,680 680,800
-or it could be that
+or it could be that,|
+或者可能是，|
 
 606
 00:15:22,480 --> 00:15:23,620
 0,135 135,410 430,780 780,1020 1020,1140
 the database system has to
+数据库系统由于某种原因而不得不中止，
 
 607
 00:15:23,620 --> 00:15:25,285
 0,255 255,435 435,600 600,890 1270,1665
-abort for some reason to
+abort for some reason| to
+|以完成我们所讨论的所有安全保证。
 
 608
 00:15:25,285 --> 00:15:26,670
@@ -3443,22 +3491,26 @@ do all this safety guarantee
 609
 00:15:26,750 --> 00:15:27,895
 0,320 320,515 515,740 740,980 980,1145
-that we talked about. And
+that we talked about.| And
+|我们将看到不同方式，
 
 610
 00:15:27,895 --> 00:15:29,380
 0,365 445,705 705,945 945,1260 1260,1485
-we'll look at different ways
+we'll look at different ways|
+|
 
 611
 00:15:29,380 --> 00:15:30,210
 0,150 150,270 270,390 390,540 540,830
-in which a what happens
+in which {ABORT -} happens
+在数据库系统中发生的 ABORT ，
 
 612
 00:15:30,260 --> 00:15:31,690
 0,260 260,380 380,635 635,1030 1140,1430
-inside a database system over
+inside a database system| over
+|在接下来的几节课中。
 
 613
 00:15:31,690 --> 00:15:32,700
@@ -3470,7 +3522,7 @@ the next couple of lectures.|
 00:15:34,600 --> 00:15:36,135
 0,400 780,1070 1070,1235 1235,1385 1385,1535
 Okay, many of you might
-好了，你们中的很多人可能都听说过一种叫做酸的东西。这是个很酷的首字母缩写。呃，那是。
+好的，你们中的很多人可能都听说过 ACID ，
 
 615
 00:15:36,135 --> 00:15:37,485
@@ -3480,29 +3532,32 @@ have heard of this thing
 616
 00:15:37,485 --> 00:15:39,075
 0,240 240,575 955,1290 1290,1425 1425,1590
-called acid. It's a cool
+called ACID,| it's a cool
+|这是个很酷的首字母缩写，
 
 617
 00:15:39,075 --> 00:15:42,300
 0,605 835,1235 1435,1835 2035,2435
-acronym. Um, that was.|
-|
+acronym,| {} that was,|
+|那是，|
 
 618
 00:15:42,370 --> 00:15:43,455
 0,275 275,455 455,695 695,905 905,1085
-That the community came up
-社区拿出了几个人，他们想出啊，说我们想要这些交易的物业是什么？
+that the community came up,|
+社区想出来的，|
 
 619
 00:15:43,455 --> 00:15:44,610
 0,285 285,540 540,735 735,975 975,1155
 with a couple guys who
+几个人想出来的，
 
 620
 00:15:44,610 --> 00:15:47,840
 0,120 120,270 270,560 670,1070 2830,3230
-came up with ah to
+came up with,| {} to,
+|表示我们想要这些事务的属性是什么。
 
 621
 00:15:48,310 --> 00:15:49,250
@@ -3512,14 +3567,14 @@ say what are the properties
 622
 00:15:49,300 --> 00:15:50,510
 0,275 275,500 500,725 725,905 905,1210
-we want of these transactions?|
+we want of these transactions.|
 |
 
 623
 00:15:52,140 --> 00:15:54,610
 0,400 660,920 920,1180 1200,1535 1535,2470
 And the properties are atomicity
-具有原子性、一致性、隔离性和持久性等特点。
+属性是，原子性、一致性、隔离性和持久性。
 
 624
 00:15:54,690 --> 00:15:57,680
@@ -3531,19 +3586,19 @@ consistency, isolation and durability.|
 00:15:57,750 --> 00:15:59,345
 0,245 245,470 470,730 900,1295 1295,1595
 So let's go through each
-因此，让我们自主地逐一查看这些内容。
+所以，让我们逐一查看这些内容，
 
 626
 00:15:59,345 --> 00:16:01,660
 0,165 165,300 300,575 1135,1965 1965,2315
-one of those autonomously says.|
-|
+one of those,| atomicity says,|
+|原子性表示，|
 
 627
 00:16:02,560 --> 00:16:03,640
 0,120 120,270 270,420 420,680 820,1080
 I have a transaction that
-我有一个事务执行了一大堆读写操作。
+我有一个事务执行一大堆读写操作，
 
 628
 00:16:03,640 --> 00:16:04,450
@@ -3553,20 +3608,20 @@ did a whole bunch of
 629
 00:16:04,450 --> 00:16:05,700
 0,180 180,470
-read writes.|
+read writes,|
 |
 
 630
 00:16:05,700 --> 00:16:07,000
 0,350
-And?|
-然后呢？|
+and,
+当我说 COMMIT 时，
 
 631
 00:16:07,190 --> 00:16:09,010
 0,335 335,590 590,875 875,1240 1530,1820
-When I say commit, everything
-当我说COMMIT时，一切都应该提交到数据库中，或者如果我说b，则不应该发生任何事情。因此，就像我想要这笔交易的全部或全部财产，即使可能发生了许多地区权利。啊，在这个-在这个交易中，对它应该感觉到它是原子的，对吧？所以这非常像你在处理器中看到的原子指令。但现在这是针对多个区域的，写入这些区域可能会将数据溢出到磁盘。所以这是一个更高粒度的问题，所以更难。
+when I say COMMIT,| everything
+|一切都应该提交到数据库中，
 
 632
 00:16:09,010 --> 00:16:10,960
@@ -3576,17 +3631,20 @@ should have committed to the
 633
 00:16:10,960 --> 00:16:12,115
 0,260 490,750 750,855 855,975 975,1155
-database or if I say
+database| or if I say
+|或者如果我说 ABORT ，
 
 634
 00:16:12,115 --> 00:16:13,225
 0,285 285,600 600,780 780,885 885,1110
-b nothing should have happened.
+ABORT,| nothing should have happened.|
+|则不应该发生任何事情。|
 
 635
 00:16:13,225 --> 00:16:14,275
 0,195 195,360 360,605 655,915 915,1050
 So it's like I want
+所以，就像我想要这个事务的全部或没有的属性，
 
 636
 00:16:14,275 --> 00:16:15,550
@@ -3596,22 +3654,25 @@ this all or nothing property
 637
 00:16:15,550 --> 00:16:17,125
 0,240 240,390 390,680 1090,1395 1395,1575
-of this transaction, even though
+of this transaction,| even though
+|即使可能发生了很多读取和写入，
 
 638
 00:16:17,125 --> 00:16:18,190
 0,165 165,345 345,600 600,885 885,1065
-lots of region rights might
+lots of {reads,and} writes might
 
 639
 00:16:18,190 --> 00:16:20,190
 0,120 120,380 820,1220 1360,1680 1680,2000
-have happened. Ah, in this,
+have happened,| {} in this,
+|在这个事务中，
 
 640
 00:16:20,390 --> 00:16:21,940
 0,260 260,395 395,670 780,1175 1175,1550
-in this transaction, right it
+in this transaction, right,| it
+|对它应该感觉到它是原子的，
 
 641
 00:16:21,940 --> 00:16:22,870
@@ -3621,12 +3682,14 @@ it should feel like it's
 642
 00:16:22,870 --> 00:16:24,040
 0,510 510,750 750,900 900,1050 1050,1170
-atomic, right? So it's very
+atomic, right,| so it's very
+|所以这非常像，
 
 643
 00:16:24,040 --> 00:16:25,135
 0,180 180,470 520,795 795,945 945,1095
-much like what you see
+much like,| what you see
+|你在处理器中看到的原子指令，
 
 644
 00:16:25,135 --> 00:16:27,930
@@ -3636,32 +3699,37 @@ with atomic instructions in, in,
 645
 00:16:28,340 --> 00:16:29,980
 0,305 305,935 935,1205 1205,1430 1430,1640
-in processors. But now this
+in processors,| but now this
+|但现在这是针对多个读取和写入的，
 
 646
 00:16:29,980 --> 00:16:30,970
 0,120 120,240 240,500 520,810 810,990
-is for multiple regions and
+is for multiple reads and
 
 647
 00:16:30,970 --> 00:16:32,680
 0,290 400,690 690,980 1090,1455 1455,1710
-writes those regions writes may
+writes,| those {reads,and} writes may
+|这些读写可能会将数据溢出到磁盘，
 
 648
 00:16:32,680 --> 00:16:34,240
 0,290 370,735 735,945 945,1155 1155,1560
-be spilling data to disk.
+be spilling data to disk,|
+|
 
 649
 00:16:34,240 --> 00:16:35,290
 0,150 150,270 270,435 435,735 735,1050
-So it's a much higher
+so it's a much higher
+所以这是一个更高粒度的问题，
 
 650
 00:16:35,290 --> 00:16:36,760
 0,735 735,900 900,1065 1065,1230 1230,1470
-granularity right, so much harder
+granularity, right,| so much harder
+|所以是更难的问题。
 
 651
 00:16:36,760 --> 00:16:37,360
@@ -3672,54 +3740,62 @@ problem.|
 652
 00:16:38,640 --> 00:16:40,480
 0,695 695,1000
-Consistency says.|
-一致性说明。|
+Consistency says,|
+一致性表示，|
 
 653
 00:16:40,910 --> 00:16:42,040
 0,500 500,575 575,665 665,845 845,1130
-Consistency is a little weird
-一致性是一个有点奇怪的问题，我实际上将讨论最后一个问题。让我去隔离，我会回来的一致性。隔离说啊，如果像我们这样的两笔交易发生，从银行账户中为你和你的另一半提取25美元。
+consistency is a little weird
+一致性是一个有点奇怪的问题，
 
 654
 00:16:42,040 --> 00:16:43,345
 0,350 520,750 750,975 975,1170 1170,1305
-one, and I'm actually going
+one,| and I'm actually going
+|我将讨论最后讨论这个问题，
 
 655
 00:16:43,345 --> 00:16:45,090
 0,165 165,485 955,1215 1215,1410 1410,1745
-to go to that last.
+to go to that last,|
+|
 
 656
 00:16:45,140 --> 00:16:46,150
 0,245 245,350 350,470 470,575 575,1010
-Let me go to isolation
+let me go to isolation|
+让我去隔离性，|
 
 657
 00:16:46,150 --> 00:16:46,990
 0,210 210,345 345,435 435,600 600,840
 and I'll come back to
+我会回来一致性。
 
 658
 00:16:46,990 --> 00:16:50,680
 0,710 970,1670 1690,2090 2560,2960 3400,3690
-consistency. Isolation says ah, if
+consistency.| Isolation says,| {} if
+|隔离性表示，|如果两个事务，
 
 659
 00:16:50,680 --> 00:16:51,850
 0,180 180,470 610,885 885,1020 1020,1170
-two transactions like we have
+two transactions,| like we have
+|比如我们有两个借记事务发生，
 
 660
 00:16:51,850 --> 00:16:53,250
 0,210 210,405 405,660 660,920 1000,1400
-those two debit transactions happening,
+those two debit transactions happening,|
+|
 
 661
 00:16:53,810 --> 00:16:55,555
 0,440 440,605 605,920 920,1180 1380,1745
 withdrawal of 25 dollars from
+从你和你的另一半的银行账户中提取 25 美元，
 
 662
 00:16:55,555 --> 00:16:56,635
@@ -3729,19 +3805,20 @@ the bank account for you
 663
 00:16:56,635 --> 00:16:58,180
 0,120 120,285 285,575 595,995
-and your significant other.|
+and your significant other,|
 |
 
 664
 00:16:58,340 --> 00:16:59,695
 0,290 290,580 720,1025 1025,1190 1190,1355
-We want those to not
-我们希望这些不会相互干扰。它应该让人感觉每一笔交易都是自己发生的。
+we want those to not
+我们希望这些不会相互干扰，
 
 665
 00:16:59,695 --> 00:17:00,790
 0,480 480,645 645,780 780,930 930,1095
-interfere with each other. It
+interfere with each other,| it
+|它应该让人感觉每个事务都是自己发生的。
 
 666
 00:17:00,790 --> 00:17:01,920
@@ -3758,7 +3835,7 @@ happened by itself.|
 00:17:03,490 --> 00:17:04,350
 0,245 245,395 395,560 560,680 680,860
 So even though we don't
-因此，即使我们不想一次运行一个事务，我们也希望系统一次运行一个事务的错觉。这应该让我感觉，当我的事务运行时，整个系统都是我自己拥有的。
+所以，即使我们不想一次运行一个事务，
 
 669
 00:17:04,350 --> 00:17:05,300
@@ -3768,7 +3845,8 @@ want to run one transaction
 670
 00:17:05,380 --> 00:17:06,540
 0,245 245,365 365,640 780,1025 1025,1160
-at a time, we want
+at a time,| we want
+|我们也希望系统一次运行一个事务的错觉，
 
 671
 00:17:06,540 --> 00:17:07,850
@@ -3783,12 +3861,14 @@ running one transaction at a
 673
 00:17:09,870 --> 00:17:10,935
 0,225 225,465 465,645 645,855 855,1065
-time. It should feel like
+time,| it should feel like,|
+|这应该让我感觉，|
 
 674
 00:17:10,935 --> 00:17:12,525
 0,195 195,390 390,695 865,1265 1315,1590
-when my transaction ran, I
+when my transaction ran,| I
+当我的事务运行时，|整个系统都是我自己拥有的，
 
 675
 00:17:12,525 --> 00:17:13,485
@@ -3798,13 +3878,13 @@ had the whole system to
 676
 00:17:13,485 --> 00:17:14,340
 0,335
-myself.|
+myself,|
 |
 
 677
 00:17:14,340 --> 00:17:15,675
 0,150 150,360 360,600 600,1125 1125,1335
-And nothing else interfered with
+and nothing else interfered with
 也没有其他东西干扰我。
 
 678
@@ -3816,8 +3896,8 @@ me.|
 679
 00:17:17,310 --> 00:17:18,650
 0,245 245,365 365,515 515,790 1110,1340
-Does that make sense? So
-这说得通吗？所以我应该觉得没有人干扰我的工作。
+Does that make sense?| So
+这能理解吗？|所以我应该觉得没有人干扰我的工作。
 
 680
 00:17:18,650 --> 00:17:19,600
@@ -3838,8 +3918,8 @@ work.|
 683
 00:17:22,620 --> 00:17:24,965
 0,635 635,995 995,1390 1800,2135 2135,2345
-Durability says that if the
-持久性是指，如果数据库返回给我并说，我已经提交了您的事务。
+Durability says that,| if the
+持久性表示，|如果数据库返回给我并说，
 
 684
 00:17:24,965 --> 00:17:26,345
@@ -3849,19 +3929,20 @@ database comes back to me
 685
 00:17:26,345 --> 00:17:27,605
 0,270 270,480 480,840 840,1065 1065,1260
-and says, I've committed your
+and says,| I've committed your
+|我已经提交了你的事务，
 
 686
 00:17:27,605 --> 00:17:28,780
 0,275
-transaction.|
+transaction,|
 |
 
 687
 00:17:29,650 --> 00:17:31,245
 0,380 380,760 930,1220 1220,1370 1370,1595
-After that, even if there's
-之后，即使出现故障、磁盘故障或内存故障，我也应该能够恢复数据库的该状态。
+after that,| even if there's
+在这之后，|即使出现故障，磁盘故障或内存故障，
 
 688
 00:17:31,245 --> 00:17:32,750
@@ -3871,7 +3952,8 @@ some failure, the disk fails
 689
 00:17:32,950 --> 00:17:35,070
 0,335 335,530 530,790 810,1420 1800,2120
-or the memory fails, I
+or the memory fails,| I
+|我也应该能够恢复数据库的该状态，
 
 690
 00:17:35,070 --> 00:17:36,105
@@ -3881,20 +3963,20 @@ should be able to recover
 691
 00:17:36,105 --> 00:17:38,090
 0,395 1195,1470 1470,1605 1605,1725 1725,1985
-that state of the database.|
+that state of the database,|
 |
 
 692
 00:17:39,000 --> 00:17:41,260
 0,400 420,820 870,1250 1250,1630
-With all the commit.|
-带着所有的承诺。|
+with all the commit
+带着其中所有的提交信息。
 
 693
 00:17:42,440 --> 00:17:44,215
 0,400 720,1025 1025,1250 1250,1535 1535,1775
-Information in that. So if
-里面的信息。因此，如果我将银行帐户的最终值更改为75，数据库会说我已经提交了您的事务，对吗？那个提交呼叫返回时发出绿色信号，然后出现停电。当我把机器拿回来时，我应该看到里面有75，而不是它一开始的价值100。
+information in that.| So if
+|所以，如果我将银行帐户的最终值更改为 75 ，
 
 694
 00:17:44,215 --> 00:17:45,385
@@ -3909,42 +3991,50 @@ value of the bank account
 696
 00:17:46,495 --> 00:17:48,625
 0,150 150,755 1255,1515 1515,1775 1795,2130
-to 75 the database said
+to 75,| the database said
+|数据库说我已经提交了你的事务，
 
 697
 00:17:48,625 --> 00:17:50,350
 0,420 420,630 630,795 795,1055 1435,1725
-I've committed your transaction right?
+I've committed your transaction, right,|
+|
 
 698
 00:17:50,350 --> 00:17:51,540
 0,225 225,450 450,675 675,900 900,1190
-That commit call came back
+that commit call came back
+那个提交调用返回时发出绿色信号，
 
 699
 00:17:51,680 --> 00:17:53,320
 0,260 260,380 380,560 560,880 1320,1640
-with a green signal and
+with a green signal| and
+|然后出现停电，
 
 700
 00:17:53,320 --> 00:17:54,360
 0,195 195,375 375,465 465,690 690,1040
-then there's a power failure.
+then there's a power failure,|
+|
 
 701
 00:17:54,920 --> 00:17:56,395
 0,380 380,755 755,1040 1040,1235 1235,1475
-When I bring back the
+when I bring back the
+当我把机器拿回来时，
 
 702
 00:17:56,395 --> 00:17:57,865
 0,270 270,555 555,795 795,990 990,1470
-machine, I should see 75
+machine,| I should see 75
+|我应该看到里面有 75 ，
 
 703
 00:17:57,865 --> 00:17:59,455
 0,180 180,455 595,930 930,1350 1350,1590
-in there, not 100 which
+in there,| not 100 which
+|而不是它一开始的值 100 。
 
 704
 00:17:59,455 --> 00:18:00,355
@@ -3960,23 +4050,26 @@ with.|
 706
 00:18:02,880 --> 00:18:04,760
 0,350 350,590 590,785 785,1085 1085,1880
-Now, going back to consistency,
-现在，回到一致性上来，我一直在等待，因为我只会给我们如何做这样的事情贴上一些标签。一致性是一个奇怪的东西，它说明了。
+Now, going back to consistency,|
+现在，回到一致性上来，|
 
 707
 00:18:04,760 --> 00:18:06,125
 0,210 210,470 610,960 960,1170 1170,1365
-and I waited for that
+and I waited for that,|
+我一直在等待，|
 
 708
 00:18:06,125 --> 00:18:06,905
 0,195 195,375 375,510 510,675 675,780
 because I'll just put a
+因为我会贴上一些标签，
 
 709
 00:18:06,905 --> 00:18:08,390
 0,180 180,585 585,905 1075,1350 1350,1485
-little labels around how we
+little labels around,| how we
+|我们如何做这样的事情。
 
 710
 00:18:08,390 --> 00:18:09,860
@@ -3986,30 +4079,31 @@ go about doing things like
 711
 00:18:09,860 --> 00:18:11,660
 0,290 610,1230 1230,1335 1335,1515 1515,1800
-that. Consistency is this weird
+that.| Consistency is this weird
+|一致性是一个奇怪的东西，它表示，
 
 712
 00:18:11,660 --> 00:18:13,400
 0,285 285,540 540,890
-thing that says.|
+thing, that says,|
 |
 
 713
 00:18:13,400 --> 00:18:15,250
 0,135 135,285 285,560 730,1130 1450,1850
-If the database starts consistent,
-如果数据库开始是一致的，就像某些定义一样。
+if the database starts consistent,
+如果数据库开始是一致的，就像某些定义一样，
 
 714
 00:18:15,450 --> 00:18:17,800
 0,335 335,635 635,935 935,1270
-as for some definition.|
+as for some definition,|
 |
 
 715
 00:18:18,460 --> 00:18:19,845
 0,260 260,410 410,620 620,940 1110,1385
-Then it should end in
+then it should end in
 那么它应该以同样的一致状态结束。
 
 716
@@ -4034,24 +4128,25 @@ right?|
 00:18:24,260 --> 00:18:25,145
 0,225 225,375 375,510 510,675 675,885
 So what does it mean
-那么，数据库开始保持一致意味着什么呢？
+那么，数据库开始保持一致性是什么意思，
 
 720
 00:18:25,145 --> 00:18:26,740
 0,180 180,315 315,575 655,1055 1195,1595
-that the database started consistent?|
+that the database started consistent,|
 |
 
 721
 00:18:27,500 --> 00:18:28,760
 0,240 240,510 510,960 960,1125 1125,1260
-Ah, in sql there are
-啊，在SQL中有这样的东西，可以定义主键，外键，对吗？你已经做到了。SQL也有这些称为约束的东西，其中您完全可以说，以及称为检查的东西。因此，支票上可能会显示价格。我在一张表里有一个价格栏。
+{} in SQL, there are
+在 SQL 中，有一些东西，
 
 722
 00:18:28,760 --> 00:18:29,825
 0,240 240,525 525,720 720,885 885,1065
-things like you can define
+things,| like you can define
+|比如你可以定义主键，外键，
 
 723
 00:18:29,825 --> 00:18:31,055
@@ -4061,32 +4156,37 @@ a primary key, foreign key,
 724
 00:18:31,055 --> 00:18:32,260
 0,270 270,525 525,720 720,915 915,1205
-right? You've already done that.
+right,| you've already done that,|
+|你已经做过了，|
 
 725
 00:18:32,550 --> 00:18:33,860
 0,500 500,725 725,860 860,1070 1070,1310
-Sql also has these things
+SQL also has these things
+SQL 也有这些称为约束的东西，
 
 726
 00:18:33,860 --> 00:18:35,120
 0,225 225,855 855,975 975,1095 1095,1260
-called constraints, where you can
+called constraints,| where you can
+|其中你可以说，称为检查的东西，
 
 727
 00:18:35,120 --> 00:18:38,360
 0,290 340,630 630,920 2320,2720 2920,3240
-say at all and things
+say, at all and things
 
 728
 00:18:38,360 --> 00:18:39,695
 0,255 255,770 850,1065 1065,1155 1155,1335
-called checks. So a check
+called checks,| so a check
+|所以，检查可能会说，
 
 729
 00:18:39,695 --> 00:18:41,705
 0,225 225,545 685,1005 1005,1325 1645,2010
-might say the price. I've
+might say,| the price, I've
+|我在一张表里有一个 price 字段，
 
 730
 00:18:41,705 --> 00:18:42,590
@@ -4096,58 +4196,62 @@ got a price field in
 731
 00:18:42,590 --> 00:18:43,640
 0,135 135,410
-a table.|
+a table,|
 |
 
 732
 00:18:43,640 --> 00:18:44,810
 0,240 240,480 480,735 735,960 960,1170
-And that price should never
-而且这个价格永远不应该超过100。
+and that price should never
+这个 price 永远不应该超过 100 ，
 
 733
 00:18:44,810 --> 00:18:45,850
 0,225 225,465 465,660 660,780 780,1040
-be greater than a hundred.|
+be greater than a hundred,|
 |
 
 734
 00:18:47,470 --> 00:18:48,800
 0,245 245,350 350,605 605,965 965,1330
-And the database is required
-而且，每当数据库系统发生任何更新时，都需要数据库，以确保这些事情保持一致，真的如此。
+and the database is required,|
+数据库需要，|
 
 735
 00:18:49,300 --> 00:18:50,775
 0,290 290,575 575,935 935,1265 1265,1475
 whenever any updates happen to
+每当数据库系统发生任何更新时，
 
 736
 00:18:50,775 --> 00:18:51,765
 0,105 105,345 345,645 645,825 825,990
-the database system to make
+the database system| to make
+|以确保这些东西为真。
 
 737
 00:18:51,765 --> 00:18:53,360
 0,195 195,405 405,725 895,1245 1245,1595
-sure those things hold true
+sure those things hold true.|
+|
 
 738
 00:18:53,650 --> 00:18:56,080
 0,365 365,730 840,1220 1220,1600
-so consistently really says.|
-|
+So consistently really says,|
+所以一致性真正表示，|
 
 739
 00:18:56,080 --> 00:18:57,960
 0,210 210,500 610,960 960,1245 1245,1880
-If the application has specified
-如果应用程序已经在SQL DDL中指定了它们希望数据库正确保存的所有内容？
+if the application has specified
+如果应用程序已经在 SQL DDL 中指定了，
 
 740
 00:18:58,430 --> 00:19:00,700
 0,335 335,575 575,980 980,1570 1950,2270
-in the sql ddl all
+in the SQL DDL,| all
+|它们希望数据库正确保存的所有内容，
 
 741
 00:19:00,700 --> 00:19:01,645
@@ -4157,20 +4261,19 @@ the things that they want
 742
 00:19:01,645 --> 00:19:03,450
 0,165 165,425 535,795 795,1055 1405,1805
-the database to hold correct?|
+the database to hold correct,|
 |
 
 743
 00:19:05,340 --> 00:19:06,440
 0,400
-Then.|
-然后。|
+then,
+然后，数据库事务不应该弄乱这些。
 
 744
 00:19:06,440 --> 00:19:07,970
 0,165 165,440 460,860 1275,1380 1380,1530
-The database transaction shouldn't mess
-数据库事务不应该搞砸这一点。
+the database transaction shouldn't mess
 
 745
 00:19:07,970 --> 00:19:08,940
@@ -4182,7 +4285,7 @@ that up.|
 00:19:09,030 --> 00:19:09,830
 0,245 245,335 335,485 485,665 665,800
 And the main ways in
-而发生这种情况的主要方式是通过检查、主键。而且您还可以定义啊，啊，结账边表等定义约束的方式。你真的希望这一切都能保持下去。
+发生这种情况的主要方式是通过检查，主键，
 
 747
 00:19:09,830 --> 00:19:10,760
@@ -4192,7 +4295,8 @@ which that happens is by
 748
 00:19:10,760 --> 00:19:12,440
 0,450 450,800 820,1220 1330,1575 1575,1680
-checks, primary keys. And you
+checks, primary keys,| and you
+|而且你还可以定义外部检查，
 
 749
 00:19:12,440 --> 00:19:14,410
@@ -4202,17 +4306,20 @@ can also define, ah, ah,
 750
 00:19:14,850 --> 00:19:16,445
 0,365 365,560 560,860 860,1205 1205,1595
-checks out side tables and
+checks {outside -}| tables and
+|表和其他定义约束的方式，
 
 751
 00:19:16,445 --> 00:19:18,790
 0,330 330,570 570,875 1285,1680 1680,2345
-other ways of defining constraints.
+other ways of defining constraints,|
+|
 
 752
 00:19:18,930 --> 00:19:20,285
 0,350 350,575 575,800 800,1115 1115,1355
-And you really want all
+and you really want all
+你真的希望这一切都能保持下去。
 
 753
 00:19:20,285 --> 00:19:21,500
@@ -4223,13 +4330,14 @@ of that to hold.|
 754
 00:19:21,960 --> 00:19:23,030
 0,230 230,470 470,665 665,830 830,1070
-So it's sort of weird,
-所以这有点奇怪，但它表明应用程序是否正确地定义了数据库的结构，并使用了SQL允许的所有这些检查。
+So it's sort of weird,|
+所以这有点奇怪，|
 
 755
 00:19:23,030 --> 00:19:24,010
 0,195 195,345 345,555 555,720 720,980
 but it says if the
+但它表明应用程序正确地定义了数据库的结构，
 
 756
 00:19:24,060 --> 00:19:27,470
@@ -4239,61 +4347,65 @@ application has defined the structure
 757
 00:19:27,470 --> 00:19:28,930
 0,210 210,330 330,590 730,1095 1095,1460
-of the database correctly, using
+of the database correctly,| using
+|并使用了 SQL 允许的所有这些检查，
 
 758
 00:19:29,070 --> 00:19:30,575
 0,275 275,485 485,860 860,1180 1230,1505
-everything that sql allows with
+everything that SQL allows with
 
 759
 00:19:30,575 --> 00:19:31,700
 0,210 210,695
-these checks.|
+these checks,|
 |
 
 760
 00:19:31,700 --> 00:19:34,340
 0,255 255,530 760,1160 2290,2535 2535,2640
-The transaction management, everything that
-交易管理，我们在这里所做的一切都不应该搞砸。如果我说a加b必须总是等于100，有人修改了a。
+the transaction management,| everything that
+事务管理，|我们在这里所做的一切都不应该弄乱。
 
 761
 00:19:34,340 --> 00:19:35,465
 0,135 135,285 285,560 610,960 960,1125
-we do here shouldn't mess
+we do here, shouldn't mess
 
 762
 00:19:35,465 --> 00:19:36,770
 0,165 165,425 595,870 870,1080 1080,1305
-that up. If I said
+that up.| If I said
+|如果我说 A 加上 B 必须总是等于 100 ，
 
 763
 00:19:36,770 --> 00:19:38,015
 0,225 225,480 480,690 690,975 975,1245
-a plus b must always
+A plus B must always
 
 764
 00:19:38,015 --> 00:19:39,440
 0,225 225,390 390,695 925,1215 1215,1425
-equal to 100 and someone
+equal to 100| and someone
+|有人修改了 A ，
 
 765
 00:19:39,440 --> 00:19:40,920
 0,510 510,830
-modified a.|
+modified A,|
 |
 
 766
 00:19:41,270 --> 00:19:42,655
 0,395 395,935 935,1100 1100,1220 1220,1385
-And modified b in the
-并以适当的方式修改B，使得它在单个事务中仍然等于100。该事务不应违反任何内容，并更改该约束。因此，它应该保持这种正确性。
+and modified B in the
+并以适当的方式修改了 B ，
 
 767
 00:19:42,655 --> 00:19:44,725
 0,305 325,725 1555,1800 1800,1935 1935,2070
-appropriate way so that it
+appropriate way,| so that it
+|它在单个事务中仍然等于 100 ，
 
 768
 00:19:44,725 --> 00:19:45,660
@@ -4303,7 +4415,8 @@ is still equal to 100
 769
 00:19:46,190 --> 00:19:47,665
 0,275 275,425 425,620 620,940 1200,1475
-in a single transaction. The
+in a single transaction,| the
+|事务不应违反任何内容，并更改该约束，
 
 770
 00:19:47,665 --> 00:19:50,275
@@ -4313,7 +4426,8 @@ transaction shouldn't violate anything and,
 771
 00:19:50,275 --> 00:19:51,745
 0,375 375,675 675,885 885,1305 1305,1470
-and change that constraint. So
+and change that constraint,| so
+|所以，它应该保持这种正确性。
 
 772
 00:19:51,745 --> 00:19:53,280
@@ -4325,27 +4439,31 @@ it should maintain that correctness.|
 00:19:54,100 --> 00:19:54,960
 0,260 260,425 425,530 530,710 710,860
 And we'll come back to
-我们会回到这个问题上来。这听起来有点含糊，但在很多方面，c都符合ACID的定义，因为数据库真正做的关键事情是辅助。但如果首字母缩写是援助，那么它听起来就没有酸那么好听了。这是在嬉皮士统治湾区和欧洲的时候做的，他们想要到处都是酸。这就是，啊，这就是我对c是如何插入的理解。
+我们会回到这个问题上来，
 
 774
 00:19:54,960 --> 00:19:55,665
 0,75 75,210 210,390 390,540 540,705
-it. It sounds a little
+it,| it sounds a little
+|这听起来有点含糊，
 
 775
 00:19:55,665 --> 00:19:57,720
 0,335 505,905 1375,1665 1665,1860 1860,2055
-vague, but in many ways
+vague,| but in many ways,|
+|但在很多方面，|
 
 776
 00:19:57,720 --> 00:19:58,845
 0,210 210,420 420,645 645,960 960,1125
-that c was fitted into
+that C was fitted into
+C 都符合 ACID 的定义，
 
 777
 00:19:58,845 --> 00:20:00,495
 0,300 300,555 555,815 1225,1500 1500,1650
-that acid definition because the
+that ACID definition,| because the
+|因为数据库真正做的关键事情是 AID ，
 
 778
 00:20:00,495 --> 00:20:01,425
@@ -4355,22 +4473,26 @@ real key things that the
 779
 00:20:01,425 --> 00:20:03,120
 0,245 325,720 720,1020 1020,1455 1455,1695
-database done is aid. But
+database done is AID,| but
+|但是如果首字母缩写是 AID ，
 
 780
 00:20:03,120 --> 00:20:04,500
 0,135 135,405 405,900 900,1080 1080,1380
-if the acronym was aid,
+if the acronym was AID,|
+|
 
 781
 00:20:04,500 --> 00:20:05,445
 0,225 225,345 345,570 570,735 735,945
 then it didn't sound as
+那么它听起来就没有 ACID 那么好听了，
 
 782
 00:20:05,445 --> 00:20:07,095
 0,150 150,300 300,605 1105,1440 1440,1650
-good as acid. And this
+good as ACID,| and this
+|这是在嬉皮士统治湾区和欧洲的时候做的，
 
 783
 00:20:07,095 --> 00:20:08,610
@@ -4380,17 +4502,19 @@ was done when hippies were
 784
 00:20:08,610 --> 00:20:09,930
 0,315 315,465 465,615 615,890 1000,1320
-ruling the bay area and
+ruling the Bay Area and
 
 785
 00:20:09,930 --> 00:20:11,360
 0,285 285,585 585,825 825,1080 1080,1430
-Europe and they wanted acid
+Europe| and they wanted acid
+|他们想要到处都是酸。
 
 786
 00:20:11,590 --> 00:20:14,030
 0,400 720,1120 1170,1640 1640,1960 2040,2440
-everywhere. So that's the, ah,
+everywhere.| So that's the, {}
+|这就是我对 C 是如何插入的理解。
 
 787
 00:20:15,130 --> 00:20:16,490
@@ -4400,19 +4524,20 @@ that's my understanding of how
 788
 00:20:16,540 --> 00:20:18,040
 0,275 275,530 530,875 875,1120
-c was plugged in.|
+C was plugged in.|
 |
 
 789
 00:20:18,580 --> 00:20:20,175
 0,305 305,455 455,635 635,875 875,1595
-We'll talk about different mechanisms,
-我们将讨论不同的机制，这些就是你在蓝色气泡中看到的。
+We'll talk about different mechanisms,|
+我们将讨论不同的机制，|
 
 790
 00:20:20,175 --> 00:20:21,330
 0,195 195,480 480,765 765,945 945,1155
 and those are what you
+这些就是你在蓝色气泡中看到的。
 
 791
 00:20:21,330 --> 00:20:22,790
@@ -4424,7 +4549,7 @@ see in those blue bubble.|
 00:20:23,380 --> 00:20:25,470
 0,725 725,890 890,1420 1440,1805 1805,2090
 Autonomity and durability will require
-自主性和持久性将需要这种机制来重做和撤销东西。哦，我换了a，我把它推到了磁盘上。我已经将它从我的缓冲池推送到磁盘。哦，但我需要取消那笔交易。那么我怎么才能撤销这一切呢？
+自主性和持久性将需要这种机制来重做和撤销东西，
 
 793
 00:20:25,470 --> 00:20:26,985
@@ -4434,17 +4559,19 @@ this mechanism to redo and
 794
 00:20:26,985 --> 00:20:28,980
 0,405 405,725 985,1365 1365,1770 1770,1995
-undo stuff. Oh, I've changed
+undo stuff,| oh, I've changed
+|哦，我修改了 A ，我把它推到了磁盘上，
 
 795
 00:20:28,980 --> 00:20:29,865
 0,255 255,420 420,630 630,765 765,885
-a and I've pushed it
+A and I've pushed it
 
 796
 00:20:29,865 --> 00:20:30,825
 0,150 150,330 330,585 585,810 810,960
-out to disk. I've pushed
+out to disk,| I've pushed
+|我已经将它从我的缓冲池推送到磁盘，
 
 797
 00:20:30,825 --> 00:20:31,605
@@ -4454,7 +4581,8 @@ it out from my buffer
 798
 00:20:31,605 --> 00:20:32,850
 0,165 165,330 330,785 805,1095 1095,1245
-pool to disk. Oh, but
+pool to disk,| oh, but
+|哦，但我需要取消那个事务，
 
 799
 00:20:32,850 --> 00:20:33,980
@@ -4464,7 +4592,8 @@ I need to abort that
 800
 00:20:34,180 --> 00:20:36,195
 0,400 1440,1685 1685,1790 1790,1895 1895,2015
-transaction. So how do I
+transaction,| so how do I
+|那么我怎么才能撤销这个呢？
 
 801
 00:20:36,195 --> 00:20:37,320
@@ -4476,7 +4605,7 @@ undo that?|
 00:20:37,400 --> 00:20:38,670
 0,305 305,560 560,830 830,1010 1010,1270
 Oh, I committed a transaction
-哦，我用新值a提交了一个事务，但它仍然位于我的缓冲池中。它没有被放到磁盘上。我需要重做磁盘复制，以便a和d提供重做和撤消机制。我们将使用今天和下一节课中讨论的内容。
+哦，我用 A 的新值提交了一个事务，
 
 803
 00:20:39,200 --> 00:20:40,150
@@ -4486,17 +4615,20 @@ with a new value of
 804
 00:20:40,150 --> 00:20:41,005
 0,180 180,315 315,510 510,660 660,855
-a, but it's still sitting
+A,| but it's still sitting
+|但它仍然位于我的缓冲池中，
 
 805
 00:20:41,005 --> 00:20:41,950
 0,165 165,450 450,615 615,765 765,945
-my buffer pool. It didn't
+my buffer pool,| it didn't
+|它没有被放到磁盘上，
 
 806
 00:20:41,950 --> 00:20:42,880
 0,105 105,240 240,375 375,735 735,930
-make it to disk. I
+make it to disk,| I
+|我需要重做磁盘复制，
 
 807
 00:20:42,880 --> 00:20:43,900
@@ -4506,7 +4638,8 @@ need to redo the disk
 808
 00:20:43,900 --> 00:20:45,475
 0,260 520,780 780,900 900,1320 1320,1575
-copy so the redo and
+copy,| so the redo and
+|所以 A 和 D 提供了重做和撤消机制，
 
 809
 00:20:45,475 --> 00:20:47,320
@@ -4516,7 +4649,8 @@ undo mechanisms is what the
 810
 00:20:47,320 --> 00:20:48,505
 0,150 150,315 315,540 540,870 870,1185
-a and d provides. We'll
+A and D provides,| we'll
+|我们将使用，今天和下一节课中讨论的内容。
 
 811
 00:20:48,505 --> 00:20:49,615
@@ -4537,8 +4671,8 @@ lecture that cover that.|
 814
 00:20:52,090 --> 00:20:54,270
 0,275 275,425 425,700 1170,1910 1910,2180
-As I said, consistency is
-正如我所说的，一致性是通过确保在您的SQL DDL中定义了完整性约束来提供的，并且事务管理系统应该违反该约束。隔离是通过称为并发控制的东西来完成的，我们也将讨论这一点，锁定和其他机制将在那里发挥作用。因此，我们将深入研究其中的每一个。那么让我们开始吧。
+As I said,| consistency is
+正如我所说的，|一致性是通过确保在你的 SQL DDL 中定义了完整性约束来提供的，
 
 815
 00:20:54,270 --> 00:20:55,350
@@ -4553,22 +4687,25 @@ are integrity constraints defined in
 817
 00:20:57,060 --> 00:20:58,730
 0,150 150,450 450,980 1090,1380 1380,1670
-your sql ddl and the
+your SQL DDL| and the
+|并且事务管理系统不应该违反该约束。
 
 818
 00:20:58,810 --> 00:21:00,780
 0,400 480,880 930,1310 1310,1580 1580,1970
-transaction management system should violate
+transaction management system shouldn't violate
 
 819
 00:21:00,780 --> 00:21:02,730
 0,290 610,1310 1360,1650 1650,1815 1815,1950
-that. Isolation is done by
+that.| Isolation is done by
+|隔离是通过称为并发控制的东西来完成的，
 
 820
 00:21:02,730 --> 00:21:04,560
 0,195 195,435 435,1020 1020,1370 1480,1830
-something called concurrency control, which
+something called concurrency control,| which
+|我们也将讨论这一点，
 
 821
 00:21:04,560 --> 00:21:05,820
@@ -4578,7 +4715,8 @@ we, which we will also
 822
 00:21:05,820 --> 00:21:07,245
 0,135 135,405 405,800 850,1320 1320,1425
-look at, and locking and
+look at,| and locking and
+|锁和其他机制将在那里发挥作用。
 
 823
 00:21:07,245 --> 00:21:08,640
@@ -4588,7 +4726,8 @@ other mechanisms will come into
 824
 00:21:08,640 --> 00:21:09,615
 0,240 240,530 580,795 795,900 900,975
-play there. So we're going
+play there.| So we're going
+|所以，我们将深入研究其中的每一个，
 
 825
 00:21:09,615 --> 00:21:10,650
@@ -4598,7 +4737,8 @@ to dig into each one
 826
 00:21:10,650 --> 00:21:11,490
 0,120 120,300 300,480 480,675 675,840
-of these. So let's get
+of these,| so let's get
+|让我们开始吧。
 
 827
 00:21:11,490 --> 00:21:12,200
@@ -4609,13 +4749,14 @@ started.|
 828
 00:21:12,570 --> 00:21:13,960
 0,400 510,755 755,950 950,1085 1085,1390
-Alright, so that's our agenda.
-好的，这就是我们的议程。深入研究这四个组成部分中的每一个。
+Alright, so that's our agenda,|
+好的，这就是我们的日程，|
 
 829
 00:21:14,460 --> 00:21:15,635
 0,275 275,550 600,860 860,995 995,1175
-Dive into each of these
+dive into each of these
+深入研究这四个组成部分中的每一个。
 
 830
 00:21:15,635 --> 00:21:17,100
@@ -4626,47 +4767,49 @@ four components.|
 831
 00:21:17,500 --> 00:21:20,200
 0,400 480,1220 1220,1325 1325,1600
-So, atomity of transactions.|
-因此，事务的原子性。|
+So, atomicity of transactions,|
+所以，事务的原子性，|
 
 832
 00:21:20,990 --> 00:21:22,280
 0,275 275,550
-There are.|
-确实有。|
+there are
+执行事务有两种可能的结果，
 
 833
 00:21:22,500 --> 00:21:24,035
 0,275 275,550 660,950 950,1205 1205,1535
-Two possible outcomes for executing
-执行事务有两种可能的结果。它要么提交，要么拒绝机器人，对吗？而这些机器人可以明确地。
+two possible outcomes for executing
 
 834
 00:21:24,035 --> 00:21:25,775
 0,105 105,365 865,1125 1125,1320 1320,1740
-a transaction. It either commits
+a transaction,| it either commits
+|它要么提交，要么被中止，
 
 835
 00:21:25,775 --> 00:21:27,065
 0,240 240,360 360,465 465,905 1015,1290
-or it ab bots, right?
+or it {aborts -}, right,|
+|
 
 836
 00:21:27,065 --> 00:21:27,970
 0,120 120,225 225,480 480,630 630,905
-And the bots could be
+and the aborts could be
+中止可以是显示地，
 
 837
 00:21:27,990 --> 00:21:29,260
 0,730
-explicitly.|
+explicitly,|
 |
 
 838
 00:21:29,360 --> 00:21:31,320
 0,410 410,575 575,830 830,1210 1560,1960
-Triggered by the application, or
-由应用程序触发，或者可能是数据库不安全。我需要中止您，然后该事务可以重新启动并重新发出该SQL语句。
+triggered by the application,| or
+由应用程序触发，|或者可能是数据库不安全，
 
 839
 00:21:31,760 --> 00:21:32,890
@@ -4676,34 +4819,37 @@ it could be something that
 840
 00:21:32,890 --> 00:21:34,555
 0,120 120,380 400,795 795,1230 1230,1665
-the database is something unsafe.
+the database is something unsafe,|
+|
 
 841
 00:21:34,555 --> 00:21:35,550
 0,165 165,300 300,405 405,690 690,995
-I need to abort you
+I need to abort you|
+我需要中止你，|
 
 842
 00:21:35,810 --> 00:21:37,285
 0,260 260,395 395,670 750,1150 1200,1475
 and then that transaction could
+然后事务可以重新启动并重新发出该 SQL 语句，
 
 843
 00:21:37,285 --> 00:21:39,175
 0,420 420,615 615,1050 1050,1325 1435,1890
-restart and reissue that sql
+restart and reissue that SQL
 
 844
 00:21:39,175 --> 00:21:39,940
 0,305
-statement.|
+statement,|
 |
 
 845
 00:21:40,070 --> 00:21:41,710
 0,400 450,695 695,1160 1160,1355 1355,1640
-And the dns needs to
-并且DNS需要提供这些事务的这种要么全有要么全不斜杠的原子属性。
+and the DBMS needs to
+DBMS 需要提供这些事务这种全部或没有的原子属性。
 
 846
 00:21:41,710 --> 00:21:42,720
@@ -4713,7 +4859,7 @@ provide this all or nothing
 847
 00:21:42,740 --> 00:21:44,935
 0,395 395,1025 1025,1330 1620,1955 1955,2195
-slash atomic property of these
+[] atomic property of these
 
 848
 00:21:44,935 --> 00:21:46,220
@@ -4725,22 +4871,25 @@ transactions.|
 00:21:46,900 --> 00:21:47,775
 0,335 335,590 590,680 680,785 785,875
 So let's make it a
-所以让我们把它变得更具体一点。我们一直在玩弄例子，所以我们在深入研究这一点时，看看几个场景。我们从一个账户中提取100美元，但在我们转账之前，数据库系统会破坏交易，对吗？所以我们要确保，啊，这是正确反映的。第二种情况是，我们从一个账户中提取了100美元，但随后出现了停电。在我们转移之前，我们已经看到了这两个交易，但只是给你更多的例子来说明应该是什么。而且，你知道，在这两份交易报告之后，我们必须确定账户的正确状态。
+所以让我们把它变得更具体一点，
 
 850
 00:21:47,775 --> 00:21:48,735
 0,135 135,300 300,540 540,780 780,960
-little bit more concrete. We've
+little bit more concrete,| we've
+|我们一直在举这个例子，
 
 851
 00:21:48,735 --> 00:21:49,730
 0,105 105,300 300,480 480,675 675,995
-been playing around with examples,
+been playing around with examples,|
+|
 
 852
 00:21:49,780 --> 00:21:50,850
 0,335 335,545 545,695 695,890 890,1070
 so we look at a
+所以我们在深入研究这个时，看几个场景，
 
 853
 00:21:50,850 --> 00:21:52,290
@@ -4750,17 +4899,20 @@ couple scenarios as we dig
 854
 00:21:52,290 --> 00:21:53,490
 0,195 195,530 610,870 870,990 990,1200
-into this. We take 100
+into this.| We take 100
+|我们从一个账户中提取 100 美元，
 
 855
 00:21:53,490 --> 00:21:54,590
 0,255 255,465 465,600 600,780 780,1100
-dollars out of an account,
+dollars out of an account,|
+|
 
 856
 00:21:55,270 --> 00:21:57,020
 0,290 290,470 470,760 780,1175 1175,1750
-but the database system abots
+but the database system aborts
+但在我们转账之前，数据库系统中止事务，
 
 857
 00:21:57,040 --> 00:21:58,485
@@ -4770,47 +4922,55 @@ the transaction before we transfer
 858
 00:21:58,485 --> 00:22:00,015
 0,395 475,780 780,1085 1135,1395 1395,1530
-it, right. So we want
+it, right,| so we want
+|所以我们要确保这是正确反映的。
 
 859
 00:22:00,015 --> 00:22:02,175
 0,120 120,270 270,575 835,1235 1885,2160
-to make sure, ah, that
+to make sure, {} that
 
 860
 00:22:02,175 --> 00:22:04,250
 0,210 210,495 495,840 840,1235 1675,2075
-that is reflected correctly. Scenario
+that is reflected correctly.| Scenario
+|第二种场景是，
 
 861
 00:22:04,270 --> 00:22:05,160
 0,275 275,425 425,560 560,680 680,890
-two is we take 100
+two is,| we take 100
+|我们从一个账户中提取 100 美元，
 
 862
 00:22:05,160 --> 00:22:06,230
 0,255 255,465 465,600 600,765 765,1070
-dollars out of an account,
+dollars out of an account,|
+|
 
 863
 00:22:06,280 --> 00:22:07,170
 0,260 260,395 395,560 560,665 665,890
 but then there's a power
+但随后出现了停电，
 
 864
 00:22:07,170 --> 00:22:08,570
 0,300 300,570 570,765 765,1020 1020,1400
-failure. Before we transfer that,
+failure,| before we transfer that.|
+|在我们转账之前。|
 
 865
 00:22:08,590 --> 00:22:09,525
 0,320 320,410 410,560 560,755 755,935
-we've kind of seen both
+We've kind of seen both
+我们已经看到了这两个事务，
 
 866
 00:22:09,525 --> 00:22:10,710
 0,135 135,285 285,575 775,1035 1035,1185
-of these transactions, but just
+of these transactions,| but just
+|但只是给你更多的例子来说明应该是什么，
 
 867
 00:22:10,710 --> 00:22:12,470
@@ -4820,7 +4980,8 @@ giving you more examples of
 868
 00:22:12,580 --> 00:22:13,770
 0,395 395,695 695,860 860,965 965,1190
-what that should be. And,
+what that should be,| and,
+|而且我们必须确定账户的正确状态，
 
 869
 00:22:13,770 --> 00:22:14,775
@@ -4835,30 +4996,31 @@ determine what's the correct state
 871
 00:22:15,810 --> 00:22:17,055
 0,135 135,300 300,590 610,975 975,1245
-of the account after both
+of the account| after both
+|在这两个事务中止之后。
 
 872
 00:22:17,055 --> 00:22:18,900
 0,305 535,935 1075,1475
-these transaction reports.|
+these transaction aborts.|
 |
 
 873
 00:22:19,280 --> 00:22:20,420
 0,400
-So.|
-所以。|
+So,
+所以，我们怎么能做一些这样的事情呢，
 
 874
 00:22:20,430 --> 00:22:21,515
 0,290 290,455 455,620 620,875 875,1085
-How can we do some
-我们怎么能做一些这样的事情呢？原子性部分可以通过两种方式之一来完成，即日志记录和跟踪。一种方法是记录我们所做的一切。因此，如果我在更改某个值的那一刻记录我的所有操作。
+how can we do some
 
 875
 00:22:21,515 --> 00:22:23,855
 0,135 135,345 345,665 1495,1725 1725,2340
-of this stuff? The atomity
+of this stuff,| the atomity
+|原子性部分可以通过两种方式之一来完成，
 
 876
 00:22:23,855 --> 00:22:24,815
@@ -4868,12 +5030,14 @@ part can be done in
 877
 00:22:24,815 --> 00:22:26,285
 0,120 120,270 270,435 435,695 985,1470
-one of two ways, logging
+one of two ways,| logging
+|日志和跟踪，
 
 878
 00:22:26,285 --> 00:22:28,235
 0,240 240,815 1225,1515 1515,1725 1725,1950
-and shadowing. One way is
+and shadowing,| one way is
+|一种方法是记录我们所做的一切，
 
 879
 00:22:28,235 --> 00:22:29,585
@@ -4883,24 +5047,25 @@ to log everything that we
 880
 00:22:29,585 --> 00:22:31,480
 0,275 625,945 945,1155 1155,1545 1545,1895
-do. So if I'm recording
+do,| so if I'm recording
+|所以，如果我记录我的所有操作，
 
 881
 00:22:31,710 --> 00:22:33,755
 0,320 320,515 515,790 1620,1880 1880,2045
-all my actions the minute
+all my actions,| the minute
+|我修改某个值从 100 到 75 的那一刻，
 
 882
 00:22:33,755 --> 00:22:35,400
 0,210 210,435 435,630 630,905
-I change a value.|
-|
+I change a value
 
 883
 00:22:35,400 --> 00:22:37,365
 0,210 210,600 600,1400 1480,1755 1755,1965
-From 100 {to,75} I can
-从100到75，我可以记录我的值是100，我把它改成75，我的值是100，值是75。现在我可以获取这些日志，我可以维护这些日志记录，我可以存储这些日志记录。
+from 100 {to,75},| I can
+|我可以记录我的值是 100 ，
 
 884
 00:22:37,365 --> 00:22:38,775
@@ -4910,22 +5075,26 @@ record that my value was
 885
 00:22:38,775 --> 00:22:40,515
 0,795 795,1020 1020,1185 1185,1320 1320,1740
-100 {I,change} it to 75
+100,| {I,change} it to 75,|
+|我把它改成 75 ，|
 
 886
 00:22:40,515 --> 00:22:42,465
 0,275 505,840 840,1050 1050,1385 1555,1950
-my value was 100 after
+my {before,value} was 100, after
+我之前的值是 100 ，之后的值是 75 ，
 
 887
 00:22:42,465 --> 00:22:44,220
 0,300 300,495 495,1115 1405,1650 1650,1755
-value is 75. Now I
+value is 75,| now I
+|现在我可以获取这些日志，
 
 888
 00:22:44,220 --> 00:22:45,630
 0,150 150,345 345,570 570,1130 1150,1410
-can take those logs and
+can take those logs| and
+|我可以维护这些日志记录，
 
 889
 00:22:45,630 --> 00:22:46,800
@@ -4935,19 +5104,19 @@ I can maintain those log
 890
 00:22:46,800 --> 00:22:49,110
 0,320 820,1095 1095,1245 1245,1520 1990,2310
-records and I can store
+records| and I can store
+|我可以在内存中存储这些日志记录，
 
 891
 00:22:49,110 --> 00:22:50,640
 0,225 225,450 450,770
-those log records.|
-|
+those log records
 
 892
 00:22:50,640 --> 00:22:52,670
 0,380 490,890 1150,1440 1440,1680 1680,2030
-In memory and then appropriate
-在内存中，然后适当的点将其移出到磁盘。一旦它移动到磁盘中，我知道它就会在那里。它将在停电后幸存下来。
+in memory| and then appropriate
+|然后适当的点将其移出到磁盘，
 
 893
 00:22:52,720 --> 00:22:53,805
@@ -4957,17 +5126,20 @@ points move it out to
 894
 00:22:53,805 --> 00:22:55,305
 0,545 685,960 960,1110 1110,1275 1275,1500
-disk. Once it moves into
+disk,| once it moves into
+|一旦它移动到磁盘中，
 
 895
 00:22:55,305 --> 00:22:56,595
 0,555 555,825 825,1020 1020,1170 1170,1290
-disk, I know it is
+disk,| I know it is
+|我知道它就会在那里，
 
 896
 00:22:56,595 --> 00:22:57,450
 0,135 135,240 240,375 375,630 630,855
-going to be there. It
+going to be there,| it
+|它将在停电后幸存下来。
 
 897
 00:22:57,450 --> 00:22:58,610
@@ -4979,7 +5151,7 @@ will survive that power failure.|
 00:22:59,280 --> 00:22:59,925
 0,135 135,240 240,435 435,525 525,645
 If I don't think I
-如果我认为我不能信任单个磁盘来保存日志，很多时候人们会使用磁盘镜像。还记得吗，我们在几节课前讨论过磁盘镜像。因此，如果有两个磁盘将具有我写入的同一文件的副本，但实际上它在两个位置被写入两次，因此如果其中一个出现故障，我还有另一个副本，如果两个都出现故障，您将不得不创建第三个副本，以此类推。所以你必须决定你能容忍什么样的失败。但是，一旦日志到达磁盘，您就知道可以从中恢复并重建数据库的状态。
+如果我认为我不能信任单个磁盘来保存日志，
 
 899
 00:22:59,925 --> 00:23:01,275
@@ -4989,7 +5161,8 @@ can trust a single disk
 900
 00:23:01,275 --> 00:23:02,460
 0,255 255,390 390,555 555,845 895,1185
-to hold that log, many
+to hold that log,| many
+|很多时候人们会使用磁盘镜像，
 
 901
 00:23:02,460 --> 00:23:03,780
@@ -4999,7 +5172,8 @@ times people will use disk
 902
 00:23:03,780 --> 00:23:05,385
 0,500 670,975 975,1155 1155,1365 1365,1605
-mirroring. Remember, we talked about
+mirroring,| remember, we talked about
+|还记得，我们在几节课前讨论过磁盘镜像，
 
 903
 00:23:05,385 --> 00:23:06,660
@@ -5009,7 +5183,8 @@ disk mirroring a couple lectures
 904
 00:23:06,660 --> 00:23:07,605
 0,320 430,660 660,750 750,840 840,945
-ago. So if there are
+ago,| so if there are
+|所以，如果有两个磁盘将具有我写入的同一文件的副本，
 
 905
 00:23:07,605 --> 00:23:08,960
@@ -5024,7 +5199,8 @@ a copy of that same
 907
 00:23:10,170 --> 00:23:11,640
 0,240 240,480 480,800 1000,1245 1245,1470
-file I write, but it's
+file I write,| but it's
+|但实际上它在两个位置被写入两次，
 
 908
 00:23:11,640 --> 00:23:12,680
@@ -5034,7 +5210,8 @@ actually being written in twice
 909
 00:23:12,820 --> 00:23:14,175
 0,290 290,470 470,760 1080,1295 1295,1355
-in two places so that
+in two places,| so that
+|所以如果其中一个出现故障，我还有另一个副本，
 
 910
 00:23:14,175 --> 00:23:15,090
@@ -5044,7 +5221,8 @@ if one fails, I still
 911
 00:23:15,090 --> 00:23:16,605
 0,195 195,390 390,615 615,950 1270,1515
-have that other copy that
+have that other copy,| that
+|如果两个都出现故障，你将不得不创建第三个副本，以此类推。
 
 912
 00:23:16,605 --> 00:23:17,865
@@ -5059,7 +5237,8 @@ to make a third copy
 914
 00:23:18,585 --> 00:23:19,170
 0,195 195,345 345,465 465,540 540,585
-and so on. So you
+and so on,| so you
+|所以你必须决定你能容忍什么样的失败。
 
 915
 00:23:19,170 --> 00:23:20,460
@@ -5069,22 +5248,26 @@ have to decide what failure
 916
 00:23:20,460 --> 00:23:21,945
 0,210 210,360 360,860 970,1260 1260,1485
-you can tolerate. But once
+you can tolerate.| But once
+|但是，一旦日志到达磁盘，
 
 917
 00:23:21,945 --> 00:23:23,895
 0,240 240,545 925,1245 1245,1455 1455,1950
-a log hits the disk,
+a log hits the disk,|
+|
 
 918
 00:23:23,895 --> 00:23:24,750
 0,255 255,405 405,540 540,705 705,855
 you kind of know you
+你知道可以从中恢复，
 
 919
 00:23:24,750 --> 00:23:25,875
 0,210 210,495 495,720 720,915 915,1125
-can recover from that and
+can recover from that| and
+|并重建数据库的状态。
 
 920
 00:23:25,875 --> 00:23:27,165
@@ -5101,7 +5284,7 @@ database.|
 00:23:28,300 --> 00:23:29,625
 0,260 260,425 425,605 605,940 1050,1325
 And we'll talk about the
-我们将在接下来的两节课中讨论协议，我们将如何实现这一点。但日志记录是大多数数据库系统将使用的机制。
+我们将在接下来的两节课中讨论协议，
 
 923
 00:23:29,625 --> 00:23:31,830
@@ -5111,17 +5294,20 @@ protocol as, as in two
 924
 00:23:31,830 --> 00:23:33,180
 0,330 330,510 510,800 940,1215 1215,1350
-lectures from now, how we
+lectures from now,| how we
+|我们将如何实现这个。
 
 925
 00:23:33,180 --> 00:23:34,605
 0,260 310,710 730,1005 1005,1170 1170,1425
-go and make that happen.
+go and make that happen.|
+|
 
 926
 00:23:34,605 --> 00:23:35,870
 0,300 300,705 705,840 840,990 990,1265
 But logging is the mechanism
+但是日志是大多数数据库系统将使用的机制，
 
 927
 00:23:36,520 --> 00:23:38,070
@@ -5131,14 +5317,14 @@ that most database systems will
 928
 00:23:38,070 --> 00:23:39,160
 0,290
-use.|
+use,|
 |
 
 929
 00:23:39,160 --> 00:23:40,270
 0,270 270,420 420,630 630,900 900,1110
-To go and record the
-去记录正在发生的变化。
+to go and record the
+去记录发生的变化。
 
 930
 00:23:40,270 --> 00:23:41,920
@@ -5149,45 +5335,40 @@ changes that are happening.|
 931
 00:23:43,710 --> 00:23:44,740
 0,400
-Right.|
-正确的。|
+{All,right}.|
+好的。|
 
 932
 00:23:45,160 --> 00:23:46,220
 0,245 245,365 365,530 530,740 740,1060
-Does that make sense? Questions.|
-这说得通吗？问题。|
+Does that make sense? Questions?|
+这能理解吗？有问题吗？|
 
 933
 00:23:47,270 --> 00:23:48,460
 0,395 395,620 620,710 710,905 905,1190
-Yeah, how does this relate
-是啊，这跟故事有什么关系？就像在存储级别上，您存储基于日志的存储，对吗？所以这不是一种不，不要将其与日志结构文件系统混淆。你认为那样看起来是不一样的吗？所以这个起源很多，起源于七十年代的S和八十年代的S啊。
 
 934
 00:23:48,460 --> 00:23:50,670
 0,315 315,680 880,1280 1660,1935 1935,2210
-to like story? Like like
 
 935
 00:23:50,690 --> 00:23:51,730
 0,260 260,410 410,605 605,830 830,1040
-at the storage level you
 
 936
 00:23:51,730 --> 00:23:53,080
 0,165 165,420 420,705 705,1010 1030,1350
-store a log based storage,
 
 937
 00:23:53,080 --> 00:23:54,415
 0,240 240,560 640,1035 1035,1170 1170,1335
-right? So isn't this sort
 
 938
 00:23:54,415 --> 00:23:55,420
 0,180 180,345 345,480 480,705 705,1005
-of no no, don't confuse
+{ -} No, don't confuse
+不，不要将其与日志结构文件系统混淆，
 
 939
 00:23:55,420 --> 00:23:56,830
@@ -5197,49 +5378,55 @@ this with log structured file
 940
 00:23:56,830 --> 00:23:57,760
 0,330 330,570 570,705 705,840 840,930
-system. Is that what you
+system,| is that what you
+|这是你认为的那样吗，
 
 941
 00:23:57,760 --> 00:23:58,990
 0,90 90,350 640,900 900,1050 1050,1230
-are thinking it will look
+are thinking,| it will look
+|它看起来方式是不同的。
 
 942
 00:23:58,990 --> 00:23:59,820
 0,180 180,330 330,435 435,555 555,830
-like that way is different.
+like, that way is different.|
+|
 
 943
 00:23:59,840 --> 00:24:00,655
 0,305 305,455 455,560 560,680 680,815
 So a lot of this
+所以这个很多起源于 70 和 80 年代，
 
 944
 00:24:00,655 --> 00:24:01,525
 0,120 120,300 300,510 510,675 675,870
-origin, origin in the seventy
+origin, origin in the {70
 
 945
 00:24:01,525 --> 00:24:03,000
 0,165 165,315 315,495 495,785 1075,1475
-s and eighty s ah.|
+-} and {80s -}, {}|
 |
 
 946
 00:24:03,640 --> 00:24:05,460
 0,180 180,300 300,590 1000,1400 1420,1820
-It's a file of records,
-这是一个记录的文件，但记录的长度是可变的，结构将有一组特定的公共字段，但可以将其视为一个包含。
+it's a file of records,|
+这是一个记录的文件，|
 
 947
 00:24:05,930 --> 00:24:06,880
 0,275 275,410 410,605 605,800 800,950
 but the records are going
+但记录的长度是可变的，
 
 948
 00:24:06,880 --> 00:24:08,575
 0,135 135,270 270,560 580,980 1300,1695
-to be variable length and
+to be variable length| and
+|结构将有一组特定的通用字段，
 
 949
 00:24:08,575 --> 00:24:10,585
@@ -5249,24 +5436,26 @@ the structure will have a
 950
 00:24:10,585 --> 00:24:11,730
 0,195 195,360 360,495 495,765 765,1145
-certain set of common fields,
+certain set of common fields,|
+|
 
 951
 00:24:12,650 --> 00:24:13,675
 0,400 420,680 680,800 800,905 905,1025
 but think of it as
+但可以将其视为一个文件，
 
 952
 00:24:13,675 --> 00:24:15,600
 0,275 565,965 985,1385
-a file with.|
-|
+a file,| with
+|包含一堆可变的，
 
 953
 00:24:15,600 --> 00:24:18,015
 0,260 310,615 615,825 825,1130 2110,2415
-A bunch of variable with
-一堆具有固定长度分量的变量和一大堆变量。它位于一个通常被称为日志文件的文件中，基本上它将从头到尾按顺序写入。它将拥有自己的缓冲区管理，因此最近的页面将在特定的时间点位于缓冲池中。我们将不得不说出这一点。
+a bunch of variable,| with
+|具有固定长度[分量]和一大堆变量，
 
 954
 00:24:18,015 --> 00:24:19,725
@@ -5276,12 +5465,14 @@ some fixed length components and
 955
 00:24:19,725 --> 00:24:20,430
 0,105 105,210 210,360 360,495 495,705
-a whole bunch of variable.
+a whole bunch of variable,|
+|
 
 956
 00:24:20,430 --> 00:24:21,360
 0,270 270,570 570,705 705,825 825,930
-And it's sitting in a
+and it's sitting in a
+它位于一个通常被称为日志文件的文件中，
 
 957
 00:24:21,360 --> 00:24:22,365
@@ -5291,7 +5482,8 @@ file that will often be
 958
 00:24:22,365 --> 00:24:24,020
 0,150 150,300 300,540 540,905 1255,1655
-called a log file and
+called a log file| and
+|基本上它将从头到尾按顺序写入，
 
 959
 00:24:24,160 --> 00:24:25,350
@@ -5306,7 +5498,8 @@ written sequentially from first to
 961
 00:24:26,925 --> 00:24:27,900
 0,90 90,330 330,660 660,855 855,975
-the end. And it will
+the end,| and it will
+|它将拥有自己的缓冲区管理，
 
 962
 00:24:27,900 --> 00:24:28,830
@@ -5316,7 +5509,8 @@ be, it will have its
 963
 00:24:28,830 --> 00:24:30,740
 0,165 165,495 495,770 1030,1430 1510,1910
-own buffer management so it
+own buffer management,| so it,
+|所以最近的页面将位于缓冲池中，
 
 964
 00:24:31,330 --> 00:24:32,400
@@ -5326,29 +5520,31 @@ the recent pages will be
 965
 00:24:32,400 --> 00:24:33,540
 0,75 75,165 165,450 450,710 820,1140
-in the buffer pool at
+in the buffer pool,| at
+|在这个点上，我们必须说出这个，
 
 966
 00:24:33,540 --> 00:24:34,740
 0,315 315,660 660,870 870,1020 1020,1200
-certain points. We will have
+certain points, we will have
 
 967
 00:24:34,740 --> 00:24:35,920
 0,165 165,390 390,740
-to tell that.|
+to tell that,|
 |
 
 968
 00:24:35,920 --> 00:24:37,180
 0,255 255,495 495,765 765,1020 1020,1260
-Ah, the buffer pool. To
-啊，缓冲池。也就是说，我不能将此事务提交到内存中需要命中磁盘的页面。
+{} the buffer pool,| to
+缓冲池，|也就是说，
 
 969
 00:24:37,180 --> 00:24:38,485
 0,260 340,630 630,900 900,1155 1155,1305
-say, I cannot commit this
+say,| I cannot commit this
+|我不能将此事务提交到内存中，
 
 970
 00:24:38,485 --> 00:24:40,105
@@ -5358,34 +5554,38 @@ transaction to this page you
 971
 00:24:40,105 --> 00:24:42,100
 0,195 195,515 775,1065 1065,1355 1675,1995
-have here in memory that
+have here in memory,| that
+|它需要命中磁盘，
 
 972
 00:24:42,100 --> 00:24:43,590
 0,240 240,405 405,650 670,960 960,1490
-needs to hit to disk.|
+needs to hit to disk,|
 |
 
 973
 00:24:44,040 --> 00:24:45,630
 0,320 760,1050 1050,1260 1260,1440 1440,1590
-Before I can commit this
-在我可以提交这个事务之前，所以我们可能会保留事务，直到是，我们才会返回它，但是你可以把它想象成一个记录文件，就像一个普通的文件，但它有它特殊的架构结构。但如果你有一个带有日志结构存储的ID S，并且首先有这个逻辑，你就有了很多冗余的信息。
+before I can commit this
+在我可以提交这个事务之前，
 
 974
 00:24:45,630 --> 00:24:46,980
 0,290 430,660 660,750 750,1010 1030,1350
-transaction, so we might hold
+transaction,| so we might hold
+|所以我们可能会保留事务提交，
 
 975
 00:24:46,980 --> 00:24:48,585
 0,195 195,470 700,1155 1155,1335 1335,1605
-the transactions comeit we won't
+the transactions commit,| we won't
+|我们不会返回，直到我们，
 
 976
 00:24:48,585 --> 00:24:49,725
 0,195 195,485 565,840 840,1005 1005,1140
-return it till yeah, but
+return it, utill {we,have},| but
+|但是你可以把它想象成一个记录文件，
 
 977
 00:24:49,725 --> 00:24:50,340
@@ -5395,69 +5595,70 @@ you can think of it
 978
 00:24:50,340 --> 00:24:51,860
 0,180 180,435 435,770 850,1185 1185,1520
-as a file of records,
+as a file of records,|
+|
 
 979
 00:24:52,630 --> 00:24:54,260
 0,320 320,515 515,755 755,1120 1230,1630
-just like a ah, regular
+just like a {} regular
+就像一个普通的文件，
 
 980
 00:24:54,940 --> 00:24:56,430
 0,400 510,725 725,905 905,1130 1130,1490
-file, but it's got its
+file,| but it's got its
+|但它有特殊的结构。
 
 981
 00:24:56,430 --> 00:24:58,425
 0,375 375,770 1150,1440 1440,1800 1800,1995
-special structure to schema. But
+special structure.| { - -}
+|
 
 982
 00:24:58,425 --> 00:24:59,355
 0,105 105,270 270,330 330,575 625,930
-if you've had a ID
 
 983
 00:24:59,355 --> 00:25:00,570
 0,210 210,390 390,570 570,945 945,1215
-s with log structured storage
 
 984
 00:25:00,570 --> 00:25:01,755
 0,255 255,390 390,525 525,930 930,1185
-and with this logia first,
 
 985
 00:25:01,755 --> 00:25:02,340
 0,210 210,300 300,390 390,495 495,585
-you have a lot of
 
 986
 00:25:02,340 --> 00:25:02,980
 0,420 420,600
-redundant information.|
-|
 
 987
 00:25:03,180 --> 00:25:04,390
 0,335 335,530 530,650 650,860 860,1210
-Yeah, so the question is,
-是的，所以问题是，如果我有一个日志结构的文件系统，我是否需要记录一个只对该文件起作用的日志结构文件系统。因此，在一个数据库系统中，我可能有100个表，我们在五个不同的位置更新了一个事务。我需要一个全局日志记录机制来处理这个问题。因此，传统上，我有一个日志文件，它将为所有正在发生的更改保留这些更改，而不仅仅是单个文件。因此，日志结构化文件系统确实有意义。它们具有与您尝试执行的重做和撤消类型的机制类似的元素，但它们的文件基础很差。它们可能不是适合它的结构。他们不一定拥有所有缓冲的东西。因此，它对某些应用程序和文件系统是有好处的。但对于数据库系统，我们需要一些不同的东西，我们需要跨不同的文件，对吗？
+Yeah, so the question is,|
+是的，所以问题是，|
 
 988
 00:25:04,410 --> 00:25:05,410
 0,260 260,395 395,530 530,695 695,1000
 if I have a log
+如果我有一个日志结构的文件系统，
 
 989
 00:25:05,430 --> 00:25:07,760
 0,560 560,910 960,1360 1950,2195 2195,2330
-structured file system, do I
+structured file system,| do I
+|我是否需要日志，
 
 990
 00:25:07,760 --> 00:25:09,530
 0,210 210,740 880,1155 1155,1380 1380,1770
-need logging a log structured
+need logging,| a log structured
+|一个日志结构文件系统只对那个文件有效，
 
 991
 00:25:09,530 --> 00:25:10,595
@@ -5467,17 +5668,20 @@ file system just works for
 992
 00:25:10,595 --> 00:25:11,315
 0,135 135,375 375,555 555,630 630,720
-that file. So in a
+that file,| so in a
+|所以，在一个数据库系统中，
 
 993
 00:25:11,315 --> 00:25:12,290
 0,240 240,570 570,765 765,870 870,975
-database system I may have
+database system,| I may have
+|我可能有 100 个表，
 
 994
 00:25:12,290 --> 00:25:14,000
 0,330 330,680 880,1155 1155,1430 1480,1710
-100 tables, a transaction we
+100 tables,| a transaction we
+|我们在五个不同的位置更新了一个事务，
 
 995
 00:25:14,000 --> 00:25:15,200
@@ -5487,7 +5691,8 @@ have updated in five different
 996
 00:25:15,200 --> 00:25:17,080
 0,350 610,930 930,1230 1230,1545 1545,1880
-places. I need a global
+places,| I need a global
+|我需要一个全局日志机制来处理这个问题。
 
 997
 00:25:17,190 --> 00:25:18,890
@@ -5497,37 +5702,44 @@ log logging mechanism to deal
 998
 00:25:18,890 --> 00:25:20,450
 0,165 165,440 700,1035 1035,1440 1440,1560
-with that. So traditionally what
+with that.| So traditionally what
+|所以，传统上做的，
 
 999
 00:25:20,450 --> 00:25:21,020
 0,105 105,210 210,360 360,495 495,570
-will be done, I have
+will be done,| I have
+|我有一个日志文件，
 
 1000
 00:25:21,020 --> 00:25:22,325
 0,120 120,390 390,770 910,1170 1170,1305
-a log file which is
+a log file,| which is
+|它将保留所有这些变更，
 
 1001
 00:25:22,325 --> 00:25:23,950
 0,150 150,285 285,545 865,1245 1245,1625
-going to keep these changes
+going to keep these changes,|
+|
 
 1002
 00:25:24,060 --> 00:25:25,580
 0,335 335,670 900,1175 1175,1370 1370,1520
 for all the changes that
+为所有发生的更改，
 
 1003
 00:25:25,580 --> 00:25:26,660
 0,90 90,350 400,720 720,915 915,1080
-are happening across, not just
+are happening across,| not just
+|而不仅仅是单个文件。
 
 1004
 00:25:26,660 --> 00:25:28,150
 0,120 120,210 210,420 420,770 1090,1490
-for a single file. So
+for a single file.| So
+|所以，日志结构化文件系统确实有意义，
 
 1005
 00:25:28,170 --> 00:25:29,495
@@ -5537,7 +5749,8 @@ log structured file system does
 1006
 00:25:29,495 --> 00:25:30,515
 0,225 225,450 450,600 600,750 750,1020
-make sense. They have similar
+make sense,| they have similar
+|它们具有类似的元素到机制类型，
 
 1007
 00:25:30,515 --> 00:25:31,940
@@ -5547,32 +5760,37 @@ elements to the types of
 1008
 00:25:31,940 --> 00:25:33,395
 0,650 760,1020 1020,1185 1185,1305 1305,1455
-mechanisms that you're trying to
+mechanisms,| that you're trying to
+|与你尝试执行的重做和撤消类型的东西相比，
 
 1009
 00:25:33,395 --> 00:25:34,595
 0,240 240,615 615,720 720,1050 1050,1200
-do, redo and undo type
+do redo and undo type
 
 1010
 00:25:34,595 --> 00:25:36,005
 0,165 165,455 715,1065 1065,1275 1275,1410
-of things, but they are
+of things,| but they are
+|但它们在的文件基础池中，
 
 1011
 00:25:36,005 --> 00:25:37,060
 0,135 135,270 270,465 465,720 720,1055
-on a poor file basis.
+on a pool file basis,|
+|
 
 1012
 00:25:37,080 --> 00:25:37,880
 0,260 260,365 365,515 515,680 680,800
-They may not be the
+they may not be the
+它们可能不是适合它的结构，
 
 1013
 00:25:37,880 --> 00:25:39,260
 0,195 195,530 550,840 840,1125 1125,1380
-right structure for it. They
+right structure for it,| they
+|它们不一定拥有所有缓冲的东西，
 
 1014
 00:25:39,260 --> 00:25:40,130
@@ -5582,7 +5800,8 @@ don't necessarily have all the
 1015
 00:25:40,130 --> 00:25:41,045
 0,300 300,480 480,600 600,750 750,915
-buffer stuff. So it's good
+buffer stuff,| so it's good
+|所以，它适用于某些应用程序和文件系统，
 
 1016
 00:25:41,045 --> 00:25:42,575
@@ -5592,7 +5811,8 @@ for certain applications and file
 1017
 00:25:42,575 --> 00:25:43,985
 0,335 475,750 750,870 870,1095 1095,1410
-system. But for database systems
+system,| but for database systems,
+|但是对于数据库系统，我们需要一些不同的东西，
 
 1018
 00:25:43,985 --> 00:25:44,795
@@ -5602,24 +5822,26 @@ we're going to need something
 1019
 00:25:44,795 --> 00:25:46,025
 0,335 535,810 810,930 930,1035 1035,1230
-different and we need it
+different| and we need it
+|我们需要跨不同的文件。
 
 1020
 00:25:46,025 --> 00:25:47,780
 0,255 255,525 525,870 870,1265
-across different files, right?|
+across different files, right.|
 |
 
 1021
 00:25:49,200 --> 00:25:50,105
 0,245 245,395 395,575 575,725 725,905
-You might pull all our
-您可能也会取消我们的所有操作，因此我们将在详细讨论时讨论所有这些操作。但这是一个很好的观点。为什么我，你知道，为什么操作系统的人谈论Lockotet文件系统？它们是非常相似的元素。我们能用这个吗？
+You might [pull] all our
+你可能也会取消我们的所有操作，
 
 1022
 00:25:50,105 --> 00:25:51,275
 0,300 300,675 675,900 900,1035 1035,1170
-operations, too, so we'll talk
+operations, too,| so we'll talk
+|所以我们将在详细讨论时讨论所有这些操作，
 
 1023
 00:25:51,275 --> 00:25:51,905
@@ -5629,12 +5851,14 @@ about all of that as
 1024
 00:25:51,905 --> 00:25:52,820
 0,135 135,240 240,465 465,750 750,915
-we go into details. But
+we go into details,| but
+|但这是一个很好的观点，
 
 1025
 00:25:52,820 --> 00:25:53,900
 0,210 210,300 300,450 450,740 820,1080
-that's a good point. Why
+that's a good point,| why
+|为什么我，为什么操作系统的人谈论日志结构文件系统，
 
 1026
 00:25:53,900 --> 00:25:54,875
@@ -5649,24 +5873,26 @@ do the operating systems guys
 1028
 00:25:56,345 --> 00:25:57,820
 0,240 240,435 435,975 975,1170 1170,1475
-talk about lockotet file systems?
+talk about {log,structured} file systems,|
+|
 
 1029
 00:25:57,960 --> 00:25:59,540
 0,365 365,605 605,935 935,1300 1320,1580
-They're very similar elements to
+they're very similar elements to
+它们是非常相似的元素，
 
 1030
 00:25:59,540 --> 00:26:00,580
 0,195 195,420 420,555 555,720 720,1040
-that. Can we use that?|
-|
+that,| can we use that,|
+|我们能用这个吗，|
 
 1031
 00:26:01,860 --> 00:26:03,220
 0,400 450,725 725,845 845,1025 1025,1360
-We need to worry about
-我们需要担心跨多个不同表更新记录的事务，这些表可能位于文件系统中的多个不同文件中，并且这些文件之间仍然是原子的。所以这是不同的。因此，在许多方面，我们必须做一些事情。我们有一个更难解决的问题。
+we need to worry about
+我们需要担心跨多个不同表更新记录的事务，
 
 1032
 00:26:03,510 --> 00:26:05,705
@@ -5676,7 +5902,8 @@ transactions that update records across
 1033
 00:26:05,705 --> 00:26:07,610
 0,335 385,785 1105,1500 1500,1770 1770,1905
-multiple different tables, which may
+multiple different tables,| which may
+|这些表可能位于文件系统中的多个不同文件中，
 
 1034
 00:26:07,610 --> 00:26:08,690
@@ -5686,22 +5913,26 @@ be in multiple different files
 1035
 00:26:08,690 --> 00:26:09,640
 0,255 255,375 375,480 480,645 645,950
-sitting in the file system,
+sitting in the file system,|
+|
 
 1036
 00:26:09,750 --> 00:26:11,240
 0,320 320,515 515,620 620,1145 1145,1490
 and still be atomic across
+并且这些文件之间仍然是原子的，
 
 1037
 00:26:11,240 --> 00:26:12,605
 0,285 285,620 730,960 960,1110 1110,1365
-those files. So it's different.
+those files,| so it's different.|
+|所以这是不同的。|
 
 1038
 00:26:12,605 --> 00:26:13,700
 0,390 390,645 645,810 810,990 990,1095
-So in many ways we
+So in many ways,| we
+所以，在许多方面，|我们必须做一些事情，
 
 1039
 00:26:13,700 --> 00:26:14,180
@@ -5711,7 +5942,8 @@ have to do a little
 1040
 00:26:14,180 --> 00:26:15,080
 0,285 285,525 525,600 600,690 690,900
-bit. We have a harder
+bit,| we have a harder
+|我们有一个更难解决的问题。
 
 1041
 00:26:15,080 --> 00:26:16,320
@@ -5722,14 +5954,14 @@ problem to solve.|
 1042
 00:26:17,110 --> 00:26:18,770
 0,305 305,560 560,910 1020,1340 1340,1660
-Great question, though, other questions.|
-不过，这是个很好的问题，还有其他问题。|
+Great question, though,| other questions?|
+不过，这是个很好的问题，|还有其他问题吗？|
 
 1043
 00:26:21,400 --> 00:26:22,340
 0,400
 Okay.|
-好吧。|
+好的。|
 
 1044
 00:26:22,430 --> 00:26:24,250
