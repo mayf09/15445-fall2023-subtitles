@@ -24,3 +24,5 @@ cluster index 聚集索引
 
 ## 15
 contract 契约
+equivalent schedule 等效调度
+anomalie 异常
