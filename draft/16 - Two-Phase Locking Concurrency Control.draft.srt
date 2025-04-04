@@ -2708,7 +2708,7 @@ manager will do its thing.|
 00:12:42,630 --> 00:12:43,685
 0,275 275,425 425,635 635,860 860,1055
 All right, so today we'll
-好的，那么今天我们将讨论这些不同的锁类型。
+好的，那么今天我们将讨论这些不同的锁类型，
 
 478
 00:12:43,685 --> 00:12:44,645
@@ -2718,26 +2718,26 @@ talk about these different lock
 479
 00:12:44,645 --> 00:12:45,720
 0,305
-types.|
+types,|
 |
 
 480
 00:12:45,720 --> 00:12:46,800
 0,150 150,315 315,480 480,600 600,1080
-We talk about the protocol
-我们讨论称为两相锁定的协议。
+we talk about the protocol
+我们讨论称为两阶段锁的协议，
 
 481
 00:12:46,800 --> 00:12:48,480
 0,225 225,420 420,630 630,1160
-called two phase locking.|
+called {two-phase -} locking,|
 |
 
 482
 00:12:48,480 --> 00:12:50,000
 0,360 360,630 630,945 945,1200 1200,1520
-And then we'll talk about
-然后，我们将讨论在执行称为死锁的锁定时可能发生的一些不好的事情，以及我们如何解决这一问题。如果时间允许，我们将达到分层锁定，即在树、整个数据库、表、页、记录甚至记录中的列的不同级别进行锁定。
+and then we'll talk about
+然后，我们将讨论在加锁时可能发生的一些不好的事情，
 
 483
 00:12:50,020 --> 00:12:50,895
@@ -2752,32 +2752,38 @@ that can happen when you
 485
 00:12:52,065 --> 00:12:53,580
 0,150 150,555 555,795 795,1380 1380,1515
-do locking called deadlocks and
+do locking,| called deadlocks and
+|称为死锁，以及我们如何解决这一问题，
 
 486
 00:12:53,580 --> 00:12:55,070
 0,210 210,530 640,960 960,1185 1185,1490
-how we get around that.
+how we get around that,|
+|
 
 487
 00:12:55,240 --> 00:12:57,015
 0,305 305,610 840,1145 1145,1535 1535,1775
-{And,then -} time permitting, we'll
+{and,then -} time permitting, we'll
+如果时间允许，我们将讨论分层锁，
 
 488
 00:12:57,015 --> 00:12:58,425
 0,120 120,255 255,435 435,1080 1080,1410
-get to the hierarchical locking
+get to the hierarchical locking,|
+|
 
 489
 00:12:58,425 --> 00:12:59,840
 0,165 165,435 435,795 795,1095 1095,1415
 where we lock at different
+我们在树的不同层级加锁，
 
 490
 00:13:00,010 --> 00:13:02,205
 0,400 510,785 785,935 935,1210 1890,2195
-levels in the tree, entire
+levels in the tree,| entire
+|整个数据库，表，页，记录，甚至记录中的列。
 
 491
 00:13:02,205 --> 00:13:04,130
@@ -2798,34 +2804,38 @@ column in a record.|
 494
 00:13:09,000 --> 00:13:10,440
 0,305 305,485 485,760
-Before we go.|
-在我们走之前。|
+Before we go,|
+在我们开始之前，|
 
 495
 00:13:10,700 --> 00:13:11,830
 0,275 275,470 470,620 620,875 875,1130
-If you've taken an operating
-如果你上过操作系统课，你可能会发现这里的术语令人困惑。在这里，当数据库人员谈论锁时，他们谈论的是您为保护对象所做的事情，即位于磁盘上且在内存中的寿命超过其寿命的数据库对象。
+if you've taken an operating
+如果你上过操作系统课，
 
 496
 00:13:11,830 --> 00:13:13,615
 0,300 300,680 940,1335 1335,1530 1530,1785
-system class, you'll probably find
+system class,| you'll probably find
+|你可能会发现这里的术语令人困惑，
 
 497
 00:13:13,615 --> 00:13:15,600
 0,165 165,960 960,1260 1260,1500 1500,1985
-the terminology over here confusing.
+the terminology over here confusing,|
+|
 
 498
 00:13:16,100 --> 00:13:18,070
 0,400 690,995 995,1300 1350,1685 1685,1970
-{Where,when -} database folks talk
+{where,when -} database folks talk
+当数据库人员谈论锁时，
 
 499
 00:13:18,070 --> 00:13:20,100
 0,300 300,980 1120,1485 1485,1680 1680,2030
-about locks, they're talking about
+about locks,| they're talking about
+|他们谈论的是你为保护数据库对象所做的事情，
 
 500
 00:13:20,210 --> 00:13:22,045
@@ -2835,7 +2845,8 @@ things that you're doing to
 501
 00:13:22,045 --> 00:13:24,550
 0,365 565,965 1345,1745 1855,2235 2235,2505
-protect objects, database objects that
+protect objects, database objects,| that
+|即位于磁盘上和超过其寿命的在内存中的数据库对象，
 
 502
 00:13:24,550 --> 00:13:25,750
@@ -2850,20 +2861,18 @@ a lifespan beyond its life
 504
 00:13:28,315 --> 00:13:29,440
 0,195 195,485
-in memory.|
+in memory,|
 |
 
 505
 00:13:29,450 --> 00:13:30,620
 0,400
-Um.|
-恩。|
 
 506
 00:13:30,660 --> 00:13:32,540
 0,290 290,580 660,1430 1430,1715 1715,1880
-We call latches as the
-我们称闩锁为我们想要在内存中保护的东西。好的，所以这个术语非常重要。所以让我们来看看它们的不同之处。在很长一段时间里，数据库人员永远无法与操作系统人员交谈，因为你会进入80岁的S，90岁的S，你会说解锁东西。对他们来说，锁定与闭锁是一样的，术语是相去甚远的，但这是。
+we call latches as the
+我们称 latch 为我们想要在内存中保护的东西。
 
 507
 00:13:32,540 --> 00:13:33,410
@@ -2873,27 +2882,32 @@ things that we want to
 508
 00:13:33,410 --> 00:13:35,420
 0,195 195,345 345,620 1180,1580 1660,2010
-protect in memory. {Okay,,so -}
+protect in memory, okay,| so
+|所以这个术语非常重要。
 
 509
 00:13:35,420 --> 00:13:36,970
 0,240 240,855 855,915 915,1155 1155,1550
-this terminology is super {important.,So
+this terminology is super important.|
+|
 
 510
 00:13:37,740 --> 00:13:38,890
 0,275 275,500 500,620 620,830 830,1150
--} let's just go through
+So let's just go through
+所以让我们来看看它们的不同之处。
 
 511
 00:13:39,060 --> 00:13:40,670
 0,290 290,440 440,700 810,1210 1320,1610
-what the {differences,are. -} And
+what the {differences,are -}.| And
+|在很长一段时间里，
 
 512
 00:13:40,670 --> 00:13:42,020
 0,150 150,270 270,525 525,920 1090,1350
-for the longest time the
+for the longest time,| the
+|数据库人员永远无法与操作系统人员交谈，
 
 513
 00:13:42,020 --> 00:13:43,190
@@ -2903,27 +2917,32 @@ database folks could never talk
 514
 00:13:43,190 --> 00:13:44,345
 0,135 135,285 285,510 510,795 795,1155
-to the operating system folks
+to the operating system folks,|
+|
 
 515
 00:13:44,345 --> 00:13:45,350
 0,255 255,480 480,690 690,900 900,1005
 because you'd get into in
+因为你进入，比如八九十年代，
 
 516
 00:13:45,350 --> 00:13:46,310
 0,105 105,240 240,420 420,825 825,960
-{the,like} 80 s 90 s
+{the\,,like} {80s -}, {90s -}|
+|
 
 517
 00:13:46,310 --> 00:13:47,825
 0,135 135,360 360,615 615,1320 1320,1515
-and you'd {say,unlocking -} stuff.
+and you'd {say,I'm,locking -} stuff,|
+你说对东西加锁，|
 
 518
 00:13:47,825 --> 00:13:48,590
 0,180 180,330 330,480 480,615 615,765
-And for them it was
+and for them it was
+对他们来说， lock 与 latch 是一样的，
 
 519
 00:13:48,590 --> 00:13:49,400
@@ -2933,66 +2952,74 @@ locking is the same as
 520
 00:13:49,400 --> 00:13:51,455
 0,530 580,980 1030,1290 1290,1890 1890,2055
-latching and the terminology was
+latching| and the terminology was
+|术语是相去甚远的，
 
 521
 00:13:51,455 --> 00:13:52,445
 0,210 210,390 390,585 585,810 810,990
-just way off, but this
+just way off,| but this
+|但这是，
 
 522
 00:13:52,445 --> 00:13:53,120
 0,275
-is.|
+is,|
 |
 
 523
 00:13:53,400 --> 00:13:54,335
 0,275 275,395 395,545 545,710 710,935
-Even if you become an
-即使你是操作系统专家，也要尽量用更好的措辞，对吗？因为他们，他们是非常不同的。啊，是这样。
+even if you become an
+即使你是操作系统专家，
 
 524
 00:13:54,335 --> 00:13:55,895
 0,270 270,555 555,935 1135,1425 1425,1560
-operating systems person, try to
+operating systems person,| try to
+|也要尽量用更好的术语，
 
 525
 00:13:55,895 --> 00:13:56,870
 0,120 120,255 255,450 450,720 720,975
-use the better terms, right?
+use the better terms, right,|
+|
 
 526
 00:13:56,870 --> 00:13:58,000
 0,195 195,450 450,705 705,840 840,1130
-Because they're, they're very different.
+because, they're, they're very different.|
+因为它们是非常不同的。|
 
 527
 00:13:58,530 --> 00:14:00,100
 0,395 395,790
-{Ah,,so. -}|
-|
+{} So,
+所以，锁是数据库概念，
 
 528
 00:14:00,100 --> 00:14:02,950
 0,620 880,1170 1170,1460 1480,2270 2500,2850
-Locks are database concepts. {They,try
-锁是数据库概念。他们试图分离用户事务。T1c2，我们正在努力防止所有这些并发事务彼此踩到脚趾。
+locks are database concepts,| {they,try
+|他们试图分离用户事务，
 
 529
 00:14:02,950 --> 00:14:04,470
 0,255 255,435 435,710 760,1140 1140,1520
--} to separate user transactions.
+-} to separate user transactions,|
+|
 
 530
 00:14:04,670 --> 00:14:05,620
 0,260 260,410 410,575 575,755 755,950
-The t 1 c two,
+the {T1 -} {and,T2 -},|
+T1 和 T2 ，|
 
 531
 00:14:05,620 --> 00:14:06,415
 0,210 210,375 375,495 495,660 660,795
 we are trying to keep
+我们努力防止所有这些并发事务彼此[踩到脚趾]，
 
 532
 00:14:06,415 --> 00:14:07,620
@@ -3002,19 +3029,18 @@ all these concurrent transactions from
 533
 00:14:07,730 --> 00:14:08,890
 0,305 305,620 620,740 740,860 860,1160
-stepping on each other's toes.
+stepping on each other's toes,|
+|
 
 534
 00:14:08,890 --> 00:14:09,860
 0,470
-|
-|
 
 535
 00:14:09,860 --> 00:14:11,360
 0,560 760,1050 1050,1230 1230,1365 1365,1500
-Latches are trying to keep
-锁存器正试图防止在内存中的公共数据结构上执行的线程相互踩到对方的门。类似的事情，但在他们试图做的事情上，他们的水平非常不同。
+latches are trying to keep
+latch 试图防止在内存中的公共数据结构上执行的线程，
 
 536
 00:14:11,360 --> 00:14:12,665
@@ -3029,22 +3055,26 @@ on a common data structure
 538
 00:14:13,655 --> 00:14:15,275
 0,210 210,485 865,1170 1170,1500 1500,1620
-in memory from stepping on
+in memory| from stepping on
+|相互踩到对方的[脚趾]。
 
 539
 00:14:15,275 --> 00:14:17,050
 0,135 135,450 450,695 955,1355 1375,1775
-each other's doors. {Similar,things, -}
+each other's toes.| {Similar,things -},|
+|类似的事情，|
 
 540
 00:14:17,220 --> 00:14:19,210
 0,380 380,760 990,1325 1325,1625 1625,1990
-but at very different levels
+but at very different levels|
+但是在不同的级别上，|
 
 541
 00:14:19,500 --> 00:14:20,345
 0,290 290,455 455,605 605,740 740,845
 in terms of what they
+在它们试图做的事情上。
 
 542
 00:14:20,345 --> 00:14:21,480
@@ -3056,12 +3086,13 @@ are trying to do.|
 00:14:21,930 --> 00:14:23,045
 0,395 395,515 515,665 665,875 875,1115
 Locks are trying to protect
-锁试图保护数据库内容。锁存器试图保护内存数据结构中的一些内容。
+lock 试图保护数据库内容，
 
 544
 00:14:23,045 --> 00:14:24,860
 0,165 165,425 475,1085 1195,1695 1695,1815
-the database contents. {Latches,are -}
+the database contents,| {latches,are -}
+|latch 试图保护内存数据结构中的一些内容。
 
 545
 00:14:24,860 --> 00:14:25,700
@@ -3078,12 +3109,13 @@ memory data structure.|
 00:14:27,870 --> 00:14:28,985
 0,275 275,635 635,830 830,950 950,1115
 The duration of a lock
-锁的持续时间是整个事务，而锁存的持续时间只针对程序员写入的临界区。
+lock 的持续时间是整个事务，
 
 548
 00:14:28,985 --> 00:14:31,025
 0,180 180,375 375,645 645,995 1675,2040
-is the entire transaction, whereas
+is the entire transaction,| whereas
+|而 latch 的持续时间只针对程序员写入的临界区。
 
 549
 00:14:31,025 --> 00:14:32,800
@@ -3105,12 +3137,13 @@ sections that the programmer writes.|
 00:14:36,510 --> 00:14:37,535
 0,275 275,455 455,635 635,845 845,1025
 Now you're starting to see
-现在你开始看到一些差异，随着我们进一步深入了解锁的不同模式，这些差异将会出现。通常，锁有几十种不同的模式。今天我们将简要讨论这一点。
+现在你开始看到一些差异，
 
 553
 00:14:37,535 --> 00:14:38,525
 0,180 180,315 315,420 420,665 745,990
-some of the differences that
+some of the differences,| that
+|随着我们进一步深入会出现，
 
 554
 00:14:38,525 --> 00:14:39,245
@@ -3120,22 +3153,26 @@ are going to emerge as
 555
 00:14:39,245 --> 00:14:40,895
 0,135 135,285 285,525 525,875 1375,1650
-we go further down the
+we go further down| the
+|lock 的不同模式，
 
 556
 00:14:40,895 --> 00:14:42,200
 0,240 240,645 645,765 765,885 885,1305
-different modes for the locks.
+different modes for the locks.|
+|
 
 557
 00:14:42,200 --> 00:14:44,195
 0,360 360,765 765,1040 1390,1845 1845,1995
-{Often,locks -} have dozens of
+{often,locks -} have dozens of
+通常， lock 有几十种不同的模式，
 
 558
 00:14:44,195 --> 00:14:45,440
 0,210 210,645 645,900 900,1050 1050,1245
-different {modes.,We'll -} talk about
+different modes,| we'll talk about
+|今天我们将简要讨论这个。
 
 559
 00:14:45,440 --> 00:14:47,220
@@ -3147,12 +3184,13 @@ that briefly today.|
 00:14:47,220 --> 00:14:48,830
 0,405 405,825 825,960 960,1215 1215,1610
 Locks latches are typically simple
-锁存通常是简单的读和写，尽管锁存在许多编程环境中也开始变得更加复杂，除了其中不同级别的用户和写入。
+lock, latch 通常是简单的读和写，
 
 561
 00:14:48,910 --> 00:14:50,475
 0,290 290,470 470,760 900,1205 1205,1565
-read and write, though latches
+read and write,| though latches
+|尽管 latch 在许多编程环境中也开始变得更加复杂，
 
 562
 00:14:50,475 --> 00:14:51,645
@@ -3167,7 +3205,8 @@ more sophisticated in many programming
 564
 00:14:53,650 --> 00:14:55,320
 0,640 870,1160 1160,1325 1325,1490 1490,1670
-environments besides user and writes
+environments,| besides user reads writes
+|除了不同级别的用户读写。
 
 565
 00:14:55,320 --> 00:14:56,480
@@ -3179,17 +3218,19 @@ at different levels in there.|
 00:14:57,100 --> 00:14:58,035
 0,275 275,455 455,590 590,785 785,935
 And we'll talk about that
-在这堂课的最后，我们将在锁的背景下讨论这一点。
+我们将在 lock 的背景下讨论这个，
 
 567
 00:14:58,035 --> 00:14:59,270
 0,180 180,330 330,525 525,765 765,1235
-within the context of locks
+within the context of locks|
+|
 
 568
 00:14:59,440 --> 00:15:00,270
 0,290 290,410 410,515 515,665 665,830
 towards the end of this
+在这节课的最后。
 
 569
 00:15:00,270 --> 00:15:01,260
@@ -3201,37 +3242,42 @@ lecture.|
 00:15:01,660 --> 00:15:03,540
 0,700 810,1100 1100,1310 1310,1670 1670,1880
 Locks end up needing some
-当获得的锁遇到问题时，锁最终需要某种机制，这样就不能取得任何进展。这在锁定场景中称为死锁，我们将讨论处理该问题的机制。
+lock 最终需要某种机制，
 
 571
 00:15:03,540 --> 00:15:05,055
 0,320 700,975 975,1110 1110,1305 1305,1515
-mechanism when you get into
+mechanism,| when you get into
+|当获取 lock 遇到问题时，
 
 572
 00:15:05,055 --> 00:15:06,300
 0,225 225,465 465,885 885,1050 1050,1245
-trouble with locks that are
+trouble with locks, that are
 
 573
 00:15:06,300 --> 00:15:07,365
 0,240 240,420 420,570 570,780 780,1065
-acquired so that no progress
+acquired,| so that no progress
+|这样就不能取得任何进展，
 
 574
 00:15:07,365 --> 00:15:08,445
 0,255 255,390 390,600 600,930 930,1080
-can be made. {It's,called -}
+can be made,| {it's,called -}
+|这在锁的场景中称为死锁，
 
 575
 00:15:08,445 --> 00:15:10,050
 0,675 675,930 930,1050 1050,1350 1350,1605
-deadlocks in the locking scenario,
+deadlocks in the locking scenario,|
+|
 
 576
 00:15:10,050 --> 00:15:11,325
 0,255 255,420 420,555 555,735 735,1275
 and we'll talk about mechanisms
+我们将讨论处理该问题的机制。
 
 577
 00:15:11,325 --> 00:15:12,640
@@ -3243,27 +3289,31 @@ to deal with that.|
 00:15:12,640 --> 00:15:14,110
 0,555 555,720 720,855 855,1110 1110,1470
 Latches the way you avoid
-锁定的方式可以避免出现这样的情况：一个线程抢占了一个资源，另一个线程抢占了另一个资源，现在它们试图请求相反的资源集。他们会陷入困境的。用闩锁避免这种情况的方法是说，作为程序员，我会编写代码，这样它就永远不会发生。
+latch 的方式可以避免出现这样的情况，
 
 579
 00:15:14,110 --> 00:15:15,880
 0,380 460,825 825,1190 1300,1590 1590,1770
-that situation where a thread
+that situation,| where a thread
+|一个线程抢占了一个资源，
 
 580
 00:15:15,880 --> 00:15:17,245
 0,165 165,405 405,600 600,950 1030,1365
-has grabbed a resource, another
+has grabbed a resource,| another
+|另一个线程抢占了另一个资源，
 
 581
 00:15:17,245 --> 00:15:18,720
 0,225 225,420 420,750 750,1055 1075,1475
-thread has grabbed another resource
+thread has grabbed another resource|
+|
 
 582
 00:15:18,890 --> 00:15:19,915
 0,290 290,500 500,725 725,905 905,1025
 and now they try to
+现在它们试图请求相反的资源集，
 
 583
 00:15:19,915 --> 00:15:20,980
@@ -3273,45 +3323,50 @@ ask for the opposite set
 584
 00:15:20,980 --> 00:15:22,690
 0,210 210,560 790,1095 1095,1380 1380,1710
-of resource. {They,will -} get
+of resource,| {they,will -} get
+|它们会陷入困境，
 
 585
 00:15:22,690 --> 00:15:24,120
 0,225 225,500 730,990 990,1140 1140,1430
-into {trouble.,The -} way you
+into trouble,| the way you
+|用 latch 避免这种情况的方法是，
 
 586
 00:15:24,230 --> 00:15:25,945
 0,305 305,575 575,845 845,1420 1440,1715
-avoid that with latches is
+avoid that with latches is,|
+|
 
 587
 00:15:25,945 --> 00:15:26,800
 0,135 135,315 315,540 540,720 720,855
 you say I as a
+作为程序员，我会编写代码，
 
 588
 00:15:26,800 --> 00:15:28,255
 0,465 465,645 645,945 945,1215 1215,1455
-programmer will write the code
+programmer, will write the code,|
+|
 
 589
 00:15:28,255 --> 00:15:29,310
 0,240 240,375 375,525 525,735 735,1055
-so that it never happens.|
-|
+so that it never happens,|
+让它就永远不会发生，|
 
 590
 00:15:29,940 --> 00:15:31,190
 0,195 195,330 330,420 420,945 945,1250
-So it's the programmer's responsibility.|
+so it's the programmer's responsibility.|
 所以这是程序员的责任。|
 
 591
 00:15:32,870 --> 00:15:34,165
 0,380 380,650 650,800 800,1055 1055,1295
-Database guys are nice. {We,actually
-数据库的人都很好。我们实际上投入了系统机制，以便在这种情况发生时，我们可以抓住它并摆脱它。
+Database guys are nice,| {we,actually
+数据库的人都很好，|我们投入了系统机制，
 
 592
 00:15:34,165 --> 00:15:35,110
@@ -3321,34 +3376,37 @@ Database guys are nice. {We,actually
 593
 00:15:35,110 --> 00:15:36,160
 0,350 400,660 660,780 780,915 915,1050
-mechanism so that if that
+mechanism,| so that if that
+|在这种情况发生时，
 
 594
 00:15:36,160 --> 00:15:37,165
 0,210 210,420 420,555 555,735 735,1005
-happens, we can catch it
+happens,| we can catch it
+|我们可以抓住它并摆脱它，
 
 595
 00:15:37,165 --> 00:15:38,220
 0,270 270,450 450,615 615,780 780,1055
-and come out of that.|
+and come out of that,|
 |
 
 596
 00:15:38,720 --> 00:15:39,905
 0,270 270,600 600,840 840,1005 1005,1185
-And typically when you're using
-通常，当你在一些C++代码中使用锁存时，你会说，我会一直遵循一个序列，我会做动作a，然后是b，然后是c，这样你就永远不会陷入这种死锁的情况。但是去做这件事是程序员的责任，对吧。
+and typically when you're using
+通常，当你在一些 C++ 代码中使用 latch 时，
 
 597
 00:15:39,905 --> 00:15:41,075
 0,435 435,585 585,765 765,960 960,1170
-latches in some c plus
+latches in some {C++ -
 
 598
 00:15:41,075 --> 00:15:42,665
 0,225 225,480 480,750 750,1085 1315,1590
-plus code, for example, you
+-} code,| for example, you
+|你会说，我会一直遵循一个序列，
 
 599
 00:15:42,665 --> 00:15:44,150
@@ -3358,17 +3416,19 @@ will say I'll always follow
 600
 00:15:44,150 --> 00:15:45,230
 0,195 195,420 420,735 735,840 840,1080
-a sequence, I'll do action
+a sequence,| I'll do action
+|我会做动作 A ，然后是 B ，然后是 C ，
 
 601
 00:15:45,230 --> 00:15:46,625
 0,330 330,645 645,885 885,1095 1095,1395
-a followed by b, followed
+A, followed by B, followed
 
 602
 00:15:46,625 --> 00:15:47,690
 0,255 255,545 565,825 825,945 945,1065
-by c, so that you
+by C,| so that you
+|这样你就永远不会陷入这种死锁的情况，
 
 603
 00:15:47,690 --> 00:15:48,785
@@ -3378,29 +3438,32 @@ can never end up in
 604
 00:15:48,785 --> 00:15:50,255
 0,270 270,755 805,1125 1125,1290 1290,1470
-this deadlock situation. {But,it's -}
+this deadlock situation,| {but,it's -}
+|但是这是程序员的责任，
 
 605
 00:15:50,255 --> 00:15:52,700
 0,210 210,1005 1005,1325 1975,2250 2250,2445
-the programmer's responsibility to go
+the programmer's responsibility| to go
+|继续并做对这个。
 
 606
 00:15:52,700 --> 00:15:54,060
 0,240 240,435 435,615 615,920
-and do that, right.|
+and do that right.|
 |
 
 607
 00:15:54,870 --> 00:15:56,795
 0,425 425,560 560,785 785,1445 1445,1925
 Locks have these inbuilt deadlock
-锁有这些内置的死锁机制，可以让您在进入死锁时摆脱麻烦。
+lock 有这些内置的死锁机制，
 
 608
 00:15:56,795 --> 00:15:57,995
 0,585 585,780 780,945 945,1080 1080,1200
-mechanisms that allow you to
+mechanisms,| that allow you to
+|可以让你在进入死锁时摆脱困境。
 
 609
 00:15:57,995 --> 00:15:59,090
@@ -3416,18 +3479,20 @@ if you get into that.|
 611
 00:16:00,600 --> 00:16:02,205
 0,225 225,375 375,855 855,1110 1110,1605
-And the mechanisms for deadlocks,
-而死锁的机制，正如我们将看到的，程序员在使用闩锁时必须执行等待和超时机制。
+And the mechanisms for deadlocks,|
+而死锁的机制，|
 
 612
 00:16:02,205 --> 00:16:02,880
 0,120 120,330 330,420 420,525 525,675
-as we'll see, a wait
+as we'll see, a {waits-for
+正如我们将看到的，等待和超时机制，
 
 613
 00:16:02,880 --> 00:16:05,085
 0,210 210,420 420,750 750,1430 1630,2205
-for and timeout mechanisms programmers
+-} and timeout mechanisms,| programmers
+|程序员在在使用 latch 时，必须做这些。
 
 614
 00:16:05,085 --> 00:16:06,740
@@ -3443,13 +3508,14 @@ when they're using latches.|
 616
 00:16:08,900 --> 00:16:10,495
 0,610 630,950 950,1220 1220,1445 1445,1595
-Locks the state for the
-锁住了州里的锁，谁有什么？锁管理器中保存的用户请求的内容。对于锁存，当你在你的c++代码中写它的时候，它会在一些受保护的数据结构中，对吗？您可能会使用一个变量来跟踪该闩锁对象，这就是您要做的。因此，锁存在内存中，可以保护线程不会陷入麻烦。需要大量的程序员纪律来确保您不会陷入麻烦。
+Locks, the state for the
+lock ， lock 的状态，
 
 617
 00:16:10,495 --> 00:16:12,640
 0,525 525,810 810,1065 1065,1415 1735,2145
-locks, who has what? What's
+locks,| who has what, what's
+|谁有什么，谁请求什么，保存在锁管理器中。
 
 618
 00:16:12,640 --> 00:16:13,930
@@ -3459,22 +3525,25 @@ been requested by who is
 619
 00:16:13,930 --> 00:16:14,820
 0,165 165,315 315,435 435,585 585,890
-kept in the lock manager.
+kept in the lock manager.|
+|
 
 620
 00:16:15,380 --> 00:16:16,750
 0,350 350,650 650,1085 1085,1205 1205,1370
-{And,for -} latches when you're
+{And,for -} latches,| when you're
+对于 latch ，|当你在 C++ 代码中使用它的时候，
 
 621
 00:16:16,750 --> 00:16:17,440
 0,135 135,300 300,420 420,540 540,690
-writing that in your c
+writing that in your {C++
 
 622
 00:16:17,440 --> 00:16:18,880
 0,210 210,435 435,740 970,1305 1305,1440
-plus plus code, it's going
+- -} code,| it's going
+|它会在一些受保护的数据结构中，
 
 623
 00:16:18,880 --> 00:16:19,660
@@ -3484,12 +3553,14 @@ to be in some protected
 624
 00:16:19,660 --> 00:16:20,920
 0,345 345,720 720,975 975,1110 1110,1260
-data structure, right? You might
+data structure, right,| you might
+|你可能会使用一个变量，
 
 625
 00:16:20,920 --> 00:16:22,945
 0,290 790,1080 1080,1370 1540,1815 1815,2025
-have a variable that you're
+have a variable,| that you're
+|来跟踪 latch 对象，
 
 626
 00:16:22,945 --> 00:16:24,330
@@ -3499,12 +3570,14 @@ using to keep track of
 627
 00:16:24,680 --> 00:16:27,895
 0,400 600,1030 1980,2380 2700,2990 2990,3215
-that latch object and that's
+that latch object,| and that's
+|这就是你要做的。
 
 628
 00:16:27,895 --> 00:16:29,275
 0,120 120,270 270,420 420,695 835,1380
-what you {do.,So -} latches
+what you do.| So latches
+|所以， latch 在内存中保护线程不会陷入麻烦，
 
 629
 00:16:29,275 --> 00:16:31,105
@@ -3514,7 +3587,8 @@ are in memory protect threads
 630
 00:16:31,105 --> 00:16:32,650
 0,150 150,405 405,660 660,935 1255,1545
-from getting {into,trouble. -} A
+from getting {into,trouble -},| a
+|需要大量的程序员准则，
 
 631
 00:16:32,650 --> 00:16:34,765
@@ -3524,7 +3598,8 @@ lot of programmer discipline is
 632
 00:16:34,765 --> 00:16:35,905
 0,275 475,750 750,900 900,1035 1035,1140
-needed to make sure you
+needed| to make sure you
+|来确保你不会陷入麻烦。
 
 633
 00:16:35,905 --> 00:16:37,160
@@ -3536,12 +3611,13 @@ don't get into trouble.|
 00:16:37,200 --> 00:16:39,515
 0,400 780,1325 1325,1520 1520,1840 1920,2315
 Ah, locks are for things
-啊，锁是为磁盘上的东西设置的，这样它们就可以保持更长的时间。如果你记得这张图，我们有一张图表，根据到达物体所需的时间与内存中的时间，有很多个数量级。因此，锁将被保持更长的时间，并且它们有更多与其关联的机制，例如死锁检测问题。
+lock 是为磁盘上的东西设置的，
 
 635
 00:16:39,515 --> 00:16:40,910
 0,345 345,585 585,765 765,1140 1140,1395
-that are on disk so
+that are on disk,| so
+|这样它们就可以保持更长的时间，
 
 636
 00:16:40,910 --> 00:16:41,795
@@ -3551,17 +3627,20 @@ they get held for a
 637
 00:16:41,795 --> 00:16:43,085
 0,225 225,480 480,630 630,905 1015,1290
-longer amount of time. {If,you
+longer amount of time,| {if,you
+|如果你记得这张图，
 
 638
 00:16:43,085 --> 00:16:45,680
 0,165 165,455 805,1205 1255,1655 2335,2595
--} remember the graph, the
+-} remember the graph,| the
+|我们有一张图表，
 
 639
 00:16:45,680 --> 00:16:46,505
 0,180 180,375 375,510 510,660 660,825
-chart that we had in
+chart that we had| in
+|根据它所需的时间，
 
 640
 00:16:46,505 --> 00:16:47,645
@@ -3571,22 +3650,25 @@ terms of how much time
 641
 00:16:47,645 --> 00:16:49,220
 0,165 165,300 300,465 465,755 1285,1575
-does it take to reach
+does it take| to reach
+|访问一个对象在磁盘与在内存中，
 
 642
 00:16:49,220 --> 00:16:50,345
 0,150 150,375 375,630 630,855 855,1125
-an object on this versus
+an object on disk versus
 
 643
 00:16:50,345 --> 00:16:51,230
 0,210 210,420 420,615 615,735 735,885
-in memory, there were many
+in memory,| there were many
+|有很多个数量级，因此，锁将被保持更长的时间，并且它们有更多与其关联的机制，例如死锁检测问题。
 
 644
 00:16:51,230 --> 00:16:52,925
 0,255 255,495 495,1100 1120,1410 1410,1695
-orders of {magnitude.,So -} locks
+orders of magnitude.| So locks
+|有很多个数量级。|所以， lock 将被保持更长的时间，
 
 645
 00:16:52,925 --> 00:16:53,555
@@ -3596,29 +3678,32 @@ are going to be held
 646
 00:16:53,555 --> 00:16:54,910
 0,225 225,545 565,870 870,1065 1065,1355
-for longer amounts of time
+for longer amounts of time|
+|
 
 647
 00:16:55,140 --> 00:16:56,000
 0,290 290,425 425,530 530,665 665,860
 and they have a lot
+并且它们有更多与其关联的机制，
 
 648
 00:16:56,000 --> 00:16:57,590
 0,225 225,810 810,1155 1155,1425 1425,1590
-more mechanisms associated with them,
+more mechanisms associated with them,|
+|
 
 649
 00:16:57,590 --> 00:16:59,740
 0,180 180,600 600,1160 1180,1580
-like deadlock detection question.|
-|
+like deadlock detection.| Question.|
+例如死锁检测。|问题。|
 
 650
 00:17:06,560 --> 00:17:07,750
 0,335 335,560 560,815 815,1025 1025,1190
-Very good question. {So,what's -}
-问得好。那么，锁管理器和受保护的数据结构有什么不同，我提到的锁管理器，这个哈希表是什么？
+Very good question.| {So\,,what's -}
+好问题。|锁管理器和受保护的数据结构有什么不同，
 
 651
 00:17:07,750 --> 00:17:08,560
@@ -3633,64 +3718,72 @@ manager and the protected data
 653
 00:17:10,795 --> 00:17:12,400
 0,365 685,945 945,1125 1125,1395 1395,1605
-structure, the lock manager that
+structure,| the lock manager that
+|我提到的锁管理器，
 
 654
 00:17:12,400 --> 00:17:13,195
 0,120 120,330 330,540 540,660 660,795
-I mentioned, which is this
+I mentioned,| which is this
+|是这个将被写入并且被 latch 保护的哈希表，
 
 655
 00:17:13,195 --> 00:17:14,420
 0,285 285,545
-hash table?|
-|
+hash table
 
 656
 00:17:14,460 --> 00:17:16,040
 0,320 320,530 530,820 900,1265 1265,1580
-Will be written and protected
-将被写入并由闩锁保护。所以现在他是一个锁管理器，由一个完全兼容的闩锁保护。锁管理器仍在内存中。它是内存中的数据结构。多个事务正在尝试访问它，因此您将使用闩锁来保护锁管理器。
+will be written and protected
 
 657
 00:17:16,040 --> 00:17:17,480
 0,195 195,300 300,590 1030,1305 1305,1440
-by a latch. {So,now -}
+by a latch,| {so,now -}
+|所以现在它是一个锁管理器，
 
 658
 00:17:17,480 --> 00:17:18,695
 0,195 195,315 315,525 525,840 840,1215
-he's the lock manager that's
+it's the lock manager,| that's
+|由一个 latch 保护，
 
 659
 00:17:18,695 --> 00:17:19,670
 0,255 255,450 450,540 540,765 765,975
-protected by a latch which
+protected by a latch,| which
+|仍然是完全兼容的，
 
 660
 00:17:19,670 --> 00:17:21,590
 0,120 120,270 270,870 870,1160 1570,1920
-is all {compatible.,Still, -} lock
+is all {compatible,still -},| lock
+|锁管理器在内存中，
 
 661
 00:17:21,590 --> 00:17:22,840
 0,345 345,600 600,780 780,975 975,1250
-manager is sitting {in,memory. -}
+manager is sitting {in,memory -},
+|
 
 662
 00:17:23,160 --> 00:17:24,785
 0,365 365,610 720,1025 1025,1295 1295,1625
-It's a in {memory,data -}
+it's a in {memory,data -}
+它是内存中的数据结构，
 
 663
 00:17:24,785 --> 00:17:27,365
 0,365 625,1025 1135,1535 1675,2075 2275,2580
-structure. Multiple transactions are trying
+structure,| multiple transactions are trying
+|多个事务尝试访问它，
 
 664
 00:17:27,365 --> 00:17:29,315
 0,305 745,1050 1050,1355 1435,1695 1695,1950
-to access it, so you'll
+to access it,| so you'll
+|所以你使用 latch 来保护锁管理器，
 
 665
 00:17:29,315 --> 00:17:30,910
@@ -3700,49 +3793,56 @@ protect the lock manager by
 666
 00:17:30,990 --> 00:17:32,400
 0,290 290,610
-a latch.|
+a latch,|
 |
 
 667
 00:17:32,580 --> 00:17:33,470
 0,275 275,410 410,530 530,665 665,890
-Which is an in memory
-这是记忆中的东西。所以它们兼容一个锁存器，受保护的数据结构，你知道的。所以这些并不是不相容的。数据库，您将实际看到闩锁。LockMatch就是一个很好的例子，因为它本身是锁定的，而您可能不想在整个锁表上放置一个闩锁。因此，您将在它的一些块上设置闩锁，这样单个请求就不会阻塞所有人，否则锁管理器将成为瓶颈。
+which is an in memory
+这是内存中的东西，
 
 668
 00:17:33,470 --> 00:17:34,910
 0,240 240,405 405,600 600,1200 1200,1440
-stuff. {So,they're -} compatible a
+stuff,| {so,they're -} compatible.| a
+|所以它们是兼容的。|一个 latch ，受保护的数据结构，
 
 669
 00:17:34,910 --> 00:17:36,850
 0,320 610,960 960,1260 1260,1575 1575,1940
-latch, the protected data structure
+latch, the protected data structure,|
+|
 
 670
 00:17:37,080 --> 00:17:38,120
 0,395 395,665 665,800 800,920 920,1040
-the, you {know.,So -} these
+the, you {know\,,so -} these
+所以这些并不是不兼容的，
 
 671
 00:17:38,120 --> 00:17:39,350
 0,135 135,285 285,870 870,990 990,1230
-are {not,incompatible. -} The database
+are {not,incompatible -},| the database
+|数据库中，你将看到 latch ，
 
 672
 00:17:39,350 --> 00:17:41,180
 0,315 315,525 525,765 765,1280 1330,1830
-you'll {actually,see -} latches. Lockmatch
+you'll {actually,see -} latches,| {lock,manager}
+|锁管理器是一个很好的例子，
 
 673
 00:17:41,180 --> 00:17:42,260
 0,150 150,270 270,465 465,800 820,1080
-is a great example because
+is a great example,| because
+|因为它本身是 latch 的，
 
 674
 00:17:42,260 --> 00:17:43,925
 0,195 195,435 435,740 790,1425 1425,1665
-that itself is latched and
+that itself is latched| and
+|你可能不想在整个锁表上放置一个 latch ，
 
 675
 00:17:43,925 --> 00:17:44,765
@@ -3757,7 +3857,8 @@ put a latch on {the,entire
 677
 00:17:45,425 --> 00:17:46,715
 0,225 225,450 450,755 895,1125 1125,1290
--} lock table. So you'll
+-} lock table,| so you'll
+|所以，你将在它的一些块上设置 latch ，
 
 678
 00:17:46,715 --> 00:17:48,815
@@ -3767,17 +3868,20 @@ put latches on some chunks
 679
 00:17:48,815 --> 00:17:50,105
 0,135 135,330 330,510 510,785 1015,1290
-of it so that a
+of it,| so that a
+|这样单个请求就不会阻塞所有人，
 
 680
 00:17:50,105 --> 00:17:51,620
 0,275 385,660 660,945 945,1215 1215,1515
-single request doesn't block everyone
+single request doesn't block everyone,|
+|
 
 681
 00:17:51,620 --> 00:17:52,745
 0,180 180,390 390,600 600,795 795,1125
 because otherwise the lock manager
+否则锁管理器将成为瓶颈。
 
 682
 00:17:52,745 --> 00:17:54,180
@@ -3788,51 +3892,53 @@ will become the bottleneck.|
 683
 00:17:54,940 --> 00:17:56,460
 0,365 365,560 560,910 1110,1385 1385,1520
-What's the difference between the?|
-两者之间有什么不同？|
 
 684
 00:17:59,500 --> 00:18:00,975
 0,275 275,550 600,1025 1025,1205 1205,1475
 They are protecting very different
-他们保护的是截然不同的东西。因此，考虑一下锁管理器。它是在保护记忆中的结构，是的。
+它们保护的是截然不同的东西。
 
 685
 00:18:00,975 --> 00:18:02,430
 0,300 300,635 715,1065 1065,1305 1305,1455
-things. {So,think -} about the
+things.| {So,think -} about the
+|所以，考虑锁管理器，
 
 686
 00:18:02,430 --> 00:18:03,600
 0,165 165,390 390,705 705,1035 1035,1170
-lock {manager.,It's -} protecting an
+lock manager,| it's protecting an
+|它是保护内存中的数据结构，
 
 687
 00:18:03,600 --> 00:18:05,300
 0,180 180,465 465,860 1120,1520
-in memory structure, yeah.|
+{in-memory -} structure, {}|
 |
 
 688
 00:18:05,410 --> 00:18:06,900
 0,365 365,695 695,980 980,1220 1220,1490
-And the lock manager is
-并且锁管理器正在保护记录A和记录B，即在缓冲池中。它可能会被逐出并放在磁盘上，但锁仍被持有。
+and the lock manager is
+锁管理器保护记录 A 和记录 B ，
 
 689
 00:18:06,900 --> 00:18:08,280
 0,405 405,555 555,795 795,1125 1125,1380
-protecting the record a and
+protecting the record A and
 
 690
 00:18:08,280 --> 00:18:10,380
 0,240 240,590 970,1335 1335,1700 1810,2100
-record b that is, in
+record B,| that is, in
+|在缓冲池中，
 
 691
 00:18:10,380 --> 00:18:11,430
 0,135 135,435 435,675 675,915 915,1050
-the buffer pool. {It,may -}
+the buffer pool,| {it,may -}
+|它可能会被逐出并放在磁盘上，
 
 692
 00:18:11,430 --> 00:18:12,405
@@ -3842,46 +3948,50 @@ get evicted and go on
 693
 00:18:12,405 --> 00:18:13,200
 0,255 255,360 360,480 480,615 615,795
-disk, but the lock is
+disk,| but the lock is
+|但锁仍被持有，
 
 694
 00:18:13,200 --> 00:18:14,220
 0,165 165,440
-still held.|
+still held,|
 |
 
 695
 00:18:14,220 --> 00:18:15,470
 0,255 255,405 405,680 700,975 975,1250
-Till the transaction is done.|
-直到交易完成。|
+till the transaction is done.|
+直到事务完成。|
 
 696
 00:18:16,160 --> 00:18:17,140
 0,400
-Okay.|
-好吧。|
+Okay?|
+好的？|
 
 697
 00:18:18,380 --> 00:18:19,480
 0,275 275,425 425,620 620,785 785,1100
 And now there's a related
-现在有一个相关的问题，比如，这些锁什么时候会有闩锁？当你明确地以程序员的身份获得你的时候，你会说，在这种模式下获取这个闩锁吗？
+现在有一个相关的问题，比如，
 
 698
 00:18:19,480 --> 00:18:20,800
 0,330 330,555 555,825 825,1140 1140,1320
-question is like, when do
+question is, like,| when do
+|这些 lock 什么时候获取，
 
 699
 00:18:20,800 --> 00:18:22,450
 0,165 165,495 495,720 720,1070 1360,1650
-these locks get acquired a
+these locks get acquired,| a
+|当你获取 latch 时，
 
 700
 00:18:22,450 --> 00:18:23,640
 0,270 270,480 480,630 630,870 870,1190
-latch? When you acquire you
+latch when you acquire,| you
+|你作为程序员编写代码说，
 
 701
 00:18:23,660 --> 00:18:24,970
@@ -3891,46 +4001,49 @@ explicitly as a programmer writing
 702
 00:18:24,970 --> 00:18:25,930
 0,165 165,360 360,555 555,705 705,960
-a code to say, acquire
+a code to say,| acquire
+|在这种模式下获取这个 latch ，
 
 703
 00:18:25,930 --> 00:18:27,450
 0,225 225,560 760,1035 1035,1215 1215,1520
-this latch in this mode?|
+this latch in this mode,|
 |
 
 704
 00:18:28,210 --> 00:18:29,820
 0,455 455,590 590,845 845,1090 1260,1610
-Locks, as we'll see, get
-正如我们将看到的，锁是被获取的。
+locks, as we'll see, get
+正如我们将看到的， lock 是被获取的，
 
 705
 00:18:29,820 --> 00:18:31,020
 0,350
-acquired.|
+acquired,|
 |
 
 706
 00:18:31,060 --> 00:18:32,870
 0,890 890,1010 1010,1130 1130,1390 1410,1810
-Implicitly by the database system,
-由数据库系统隐式执行，在极少数情况下，您以程序员的身份显式地在SQL中指定Grab This Lock。
+implicitly by the database system,|
+由数据库系统隐式执行，|
 
 707
 00:18:33,340 --> 00:18:35,055
 0,335 335,815 815,1130 1130,1400 1400,1715
 and you're in very rare
+在极少数情况下，
 
 708
 00:18:35,055 --> 00:18:36,960
 0,365 595,1125 1125,1230 1230,1365 1365,1905
-cases, explicitly as a programmer
+cases,| explicitly as a programmer
+|你以程序员的身份显式地在 SQL 中指定获取这个 lock 。
 
 709
 00:18:36,960 --> 00:18:38,550
 0,150 150,585 585,1110 1110,1380 1380,1590
-in sql specifying grab this
+in SQL specifying grab this
 
 710
 00:18:38,550 --> 00:18:39,380
@@ -3942,29 +4055,31 @@ lock.|
 00:18:39,840 --> 00:18:40,865
 0,260 260,380 380,800 800,935 935,1025
 And the simplest way you
-最简单的方法是，如果您在页面级别锁定，则可以理解这一点。
+理解这个最简单的方法是，
 
 712
 00:18:40,865 --> 00:18:42,215
 0,240 240,540 540,845 895,1155 1155,1350
-can understand that if you're
+can understand that,| if you're
+|如果你在页面级别加锁，
 
 713
 00:18:42,215 --> 00:18:43,240
 0,240 240,360 360,480 480,675 675,1025
-locking at the page level.|
+locking at the page level,|
 |
 
 714
 00:18:43,930 --> 00:18:45,555
 0,400 750,1040 1040,1340 1340,1475 1475,1625
-Is your buffer pool that
-你写的缓冲池，想象一下，对缓冲池的调用也说，嘿，请识别你是哪个事务。还有一个参数。顺便说一句，告诉我您是读锁还是排他锁，在这种情况下，调用页面的缓冲区管理器本身就可以代表事务工作向锁管理器发出请求。
+is your buffer pool that
+也就是你写的缓冲池，
 
 715
 00:18:45,555 --> 00:18:47,160
 0,150 150,425 835,1200 1200,1425 1425,1605
-you wrote imagine the call
+you wrote,| imagine the call
+|想象一下，对缓冲池的调用也说，
 
 716
 00:18:47,160 --> 00:18:48,135
@@ -3974,22 +4089,26 @@ to the buffer pool also
 717
 00:18:48,135 --> 00:18:49,830
 0,395 475,795 795,1115 1255,1530 1530,1695
-said, hey, please identify which
+said,| hey, please identify which
+|嘿，请识别你是哪个事务，
 
 718
 00:18:49,830 --> 00:18:51,075
 0,290 370,630 630,855 855,1095 1095,1245
-transaction you are. {One,more -}
+transaction you are,| {one,more -}
+|还有一个参数，
 
 719
 00:18:51,075 --> 00:18:52,590
 0,515 775,1065 1065,1245 1245,1395 1395,1515
-{parameter.,And -} oh by the
+parameter,| and oh by the
+|顺便说一句，
 
 720
 00:18:52,590 --> 00:18:53,505
 0,150 150,345 345,555 555,765 765,915
-way, tell me whether you
+way,| tell me whether you
+|告诉我你是读锁还是排他锁，
 
 721
 00:18:53,505 --> 00:18:54,405
@@ -3999,17 +4118,19 @@ are a read lock or
 722
 00:18:54,405 --> 00:18:56,220
 0,305 325,735 735,1115 1285,1605 1605,1815
-a exclusive lock, in which
+a exclusive lock,| in which
+|在这种情况下，调用页面的缓冲区管理器，
 
 723
 00:18:56,220 --> 00:18:58,515
 0,290 400,690 690,1190 1450,1850 1960,2295
-case the buffer manager called
+case, the buffer manager call
 
 724
 00:18:58,515 --> 00:19:00,000
 0,195 195,300 300,545 685,1085 1135,1485
-to the page can itself
+to the page| can itself
+|本身可以向锁管理器发出请求，
 
 725
 00:19:00,000 --> 00:19:01,185
@@ -4019,7 +4140,8 @@ go and make the request
 726
 00:19:01,185 --> 00:19:02,145
 0,150 150,240 240,390 390,660 660,960
-to the lock manager on
+to the lock manager| on
+|代表事务工作。
 
 727
 00:19:02,145 --> 00:19:03,800
